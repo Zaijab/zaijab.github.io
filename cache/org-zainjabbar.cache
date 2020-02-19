@@ -1,0 +1,4 @@
+(setq org-publish-cache (make-hash-table :test 'equal :weakness nil :size 100))
+(puthash ":project:" "org-zainjabbar" org-publish-cache)
+(puthash ":cache-file:" "/home/zjabbar/code/zaijab.github.io/cache/org-zainjabbar.cache" org-publish-cache)
+(puthash "X74642a267318edc123ab9d2a9ad96e54ac8b92a2" '(24140 53863 164176 578000) org-publish-cache)
