@@ -1,3 +1,0 @@
-(setq org-publish-cache (make-hash-table :test 'equal :weakness nil :size 100))
-(puthash ":project:" "org-static-zain" org-publish-cache)
-(puthash ":cache-file:" "/home/zjabbar/code/zaijab.github.io/cache/org-static-zain.cache" org-publish-cache)
