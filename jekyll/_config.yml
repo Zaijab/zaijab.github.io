@@ -53,8 +53,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-#header_pages:
-#  - index.md
+header_pages:
+  - index.md
 
 style: dark # dark (default) or light
 #listen_for_clients_preferred_style: true # true or false (default)
