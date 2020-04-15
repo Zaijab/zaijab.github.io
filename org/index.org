@@ -1,14 +1,4 @@
-asjodifjaosidjfoasijfdoasjiffdjoaisdjfoasijdfoijfasodifjaosidjfoiasdPoop
-jfladjflskjdfls
-isfjosif
-dfandlkfasnldkfnasllsifjsadifj
-\\|
-asdfasdflaksndflasndflasknksjfnksjdfknsjdflkdCE
-ekfmlakmflak
-oisjfoijsfd
-CEP
-wefjoqwiej
-mlkmdflkj
-sdfnasjdf
-asidjfaosdfijasfd
-lsadjfasdfasdfaiosuhfoasihdufoaishdfZaindaman
+\begin{align*}
+f &= poop \\
+&= 123
+\end{align*}
