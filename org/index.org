@@ -1,4 +1,0 @@
-\begin{align*}
-f &= poop \\
-&= 123
-\end{align*}
