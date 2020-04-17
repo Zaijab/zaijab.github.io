@@ -223,13 +223,33 @@
     /*]]>*///-->
 // @license-end
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <p>
-Topology
-<a href="./topology/definitions/basis.html">Basis</a>
-<a href="./topology/heine_borel.html">Heine Borel Theorem</a>
+Let \(X\) be a set (not a topological space), then \(\mathcal{B} \subseteq \mathcal{P}(X)\) is a basis for a topology on \(X\) if \(\forall x \in X : \exists B \in \mathcal{B} : x \in B\) and \([\forall x \in X : \exists B_1, B_2 \in \mathcal{B} : x \in B_1 \cap B_2] \implies \exists B_3 \in \mathcal{B} : x \in B_3 \subseteq B_1 \cap B_2\)
 </p>
 </div>
 </body>
