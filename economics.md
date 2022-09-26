@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-09-25 Sun 15:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Economics</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<link rel="stylesheet" href="/css/main-dark.css" type="text/css"/>
+<header><div class="menu"><ul>
+<li><a href="/">/</a></li>
+<li><a href="/about.html">/about</a></li>
+<li><a href="/categories.html">/categories</a></li>
+</ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Economics</h1>
+
+<div id="outline-container-orgce6164a" class="outline-2">
+<h2 id="orgce6164a"><span class="section-number-2">1.</span> Macroeconomics</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8550cba" class="outline-3">
+<h3 id="org8550cba"><span class="section-number-3">1.1.</span> CH 1</h3>
+</div>
+
+<div id="outline-container-org08a4f36" class="outline-3">
+<h3 id="org08a4f36"><span class="section-number-3">1.2.</span> CH 2</h3>
+</div>
+
+<div id="outline-container-orgf1dbd91" class="outline-3">
+<h3 id="orgf1dbd91"><span class="section-number-3">1.3.</span> CH 3</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org4ed1f26" class="outline-4">
+<h4 id="org4ed1f26"><span class="section-number-4">1.3.1.</span> Financial Intermediaries</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Institutions the transfer funds between ultimate lenders (savers) and ultimate borrowers.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf5e28d" class="outline-4">
+<h4 id="orgbf5e28d"><span class="section-number-4">1.3.2.</span> EQN</h4>
+<div class="outline-text-4" id="text-1-3-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgac8fdbe"></a>Future Value Problem<br />
+<div class="outline-text-5" id="text-1-3-2-1">
+<p>
+FV = PV(1+i)<sup>n</sup>
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge48cec2"></a>Example<br />
+<div class="outline-text-6" id="text-1-3-2-1-1">
+<p>
+PV = 5000
+i = 3%
+n = 5
+FV = 5796.37 
+</p>
+</div>
+</li>
+</ol>
+</li>
+
+<li><a id="orgb402cf1"></a>Treasury Bond Coupon<br />
+<div class="outline-text-5" id="text-1-3-2-2">
+<p>
+FV = C / (1 + i) + C / (1 + i)<sup>2</sup> + &#x2026; + C / (1 + i)<sup>n</sup> + FV / (1 + i)<sup>n</sup>
+</p>
+</div>
+
+<ol class="org-ol">
+<li><a id="orge5ff4b1"></a>Example<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgb609238" class="outline-3">
+<h3 id="orgb609238"><span class="section-number-3">1.4.</span> CH 5</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-orge859637" class="outline-4">
+<h4 id="orge859637"><span class="section-number-4">1.4.1.</span> Questions</h4>
+<div class="outline-text-4" id="text-1-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org4324c33"></a>A<br />
+<div class="outline-text-5" id="text-1-4-1-1">
+<p>
+With the​ Cobb-Douglas production​ function, ​, if both capital and labor increase by ​%, what will happen to real​ GDP?
+Part 2
+A.
+Real GDP will increase by exactly ​%. 
+Your answer is correct.B.
+Real GDP will also increase by ​%, but only if A takes a value greater than 1.0. 
+C.
+Because the production function exhibits diminishing​ returns, real GDP will increase by less than ​%.
+D.
+Since the average value of the exponents in the production function is​ 1/2, real GDP will only increase by ​%.
+</p>
+</div>
+</li>
+
+<li><a id="orgfe53c5f"></a>C, B<br />
+<div class="outline-text-5" id="text-1-4-1-2">
+<p>
+The​ Cobb-Douglas production function  exhibits​ <span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline"><span class="underline">__</span></span></span></span></span></span> returns to scale.
+A.
+an indeterminate
+B.
+decreasing returns to scale
+C.
+increasing returns to scale
+Your answer is correct.D.
+constant returns to scale
+Part 2
+With the​ Cobb-Douglas production function ​, if  increases by ​% while  and efficiency remain​ unchanged, will real GDP increase by ​%? 
+Part 3
+A.
+No. Real GDP will increase by ​% since only one of three production​ "ingredients" has increased. 
+B.
+No. If  and efficiency remain​ unchanged, real GDP will increase by less than ​%.
+Your answer is correct.C.
+Yes. Whenever any input​ increases, real GDP increases by the same magnitude. 
+D.
+No. Unless  and efficiency also increase by ​%, real GDP will increase by less than ​%.
+</p>
+</div>
+</li>
+
+<li><a id="org72e891b"></a><br /></li>
+</ol>
+</div>
+
+<div id="outline-container-org00dead9" class="outline-4">
+<h4 id="org00dead9"><span class="section-number-4">1.4.2.</span> EQN</h4>
+<div class="outline-text-4" id="text-1-4-2">
+</div>
+<ol class="org-ol">
+<li><a id="org1c6fe98"></a>Cobb-Douglas<br />
+<div class="outline-text-5" id="text-1-4-2-1">
+<p>
+Y = A K<sup>(alpha)</sup> L<sup>(1 - alpha)</sup>
+</p>
+</div>
+</li>
+
+<li><a id="orgdea2d13"></a>MPK &amp; MPL<br />
+<div class="outline-text-5" id="text-1-4-2-2">
+<p>
+MPK = alpha * (Y / K)
+MPL = (1 - alpha) * (Y  / L)
+</p>
+
+<p>
+MP_ is (the exponent of _) times (Y / _)
+</p>
+</div>
+</li>
+
+<li><a id="org1e9444e"></a>Per Worker Production Function<br />
+<div class="outline-text-5" id="text-1-4-2-3">
+<p>
+Y = A f(k) = A k<sup>e</sup>
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgda78cfd" class="outline-3">
+<h3 id="orgda78cfd"><span class="section-number-3">1.5.</span> CH 6</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgc1552fb" class="outline-4">
+<h4 id="orgc1552fb"><span class="section-number-4">1.5.1.</span> Questions</h4>
+<div class="outline-text-4" id="text-1-5-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgf62dfc5"></a>D<br />
+<div class="outline-text-5" id="text-1-5-1-1">
+<p>
+Why does the marginal product of capital decrease as more capital is​ added?
+As more capital is added to a fixed labor​ force, each new unit of capital has relatively
+A.
+more labor to work​ with, so output increases at an increasing rate.
+B.
+less labor to work​ with, so output decreases at a decreasing rate.
+C.
+more labor to work​ with, so output decreases at an increasing rate.
+D.
+less labor to work​ with, so output increases at a decreasing rate.
+</p>
+</div>
+</li>
+
+<li><a id="orgdfd7c57"></a>E, flatter<br />
+<div class="outline-text-5" id="text-1-5-1-2">
+<p>
+What is​ depreciation?
+Part 2
+A.
+It is the reduction in the capital stock that occurs because capital goods​ (machinery, equipment,​ etc.) become obsolete due to technological progress.
+B.
+It is the deliberate downward adjustment to a​ country's official exchange rate relative to other currencies.
+C.
+It is the reduction in the capital stock that occurs because capital goods​ (machinery, equipment,​ etc.) break down or become worn out.
+D.
+All of the above.
+E.
+A and C are correct.
+Your answer is correct.
+Part 3
+When the rate of depreciation ​, the depreciation line becomes flatter.
+</p>
+</div>
+</li>
+
+<li><a id="org5842a34"></a><br />
+<div class="outline-text-5" id="text-1-5-1-3">
+<p>
+The former Soviet​ Union, a planned​ economy, was able to maintain consistently high rates of investment for decades. Use the Solow growth model to explain the limitations of growth through an expansion of the capital stock.
+Part 2
+If the initial​ capital-labor ratio, ​, is below the​ steady-state equilibrium​ ratio, ​, then actual investment is 
+greater than
+ the required investment to approach the​ steady-state equilibrium, which means that labor will grow 
+slower
+ than​ capital, so the​ capital-labor ratio ​(k​) will 
+increase
+ and approach 
+k Subscript e
+.
+Part 3
+The growth through expansion of the capital stock has limitations in the sense that the growth or​ "capital deepening" must stop at  because there are  
+decreasing
+ marginal returns to​ capital, holding the labor force growth rate constant. 
+​Capital-labor ratios greater than ​, such as ​, are not​ sustainable, because at that point the actual investment is 
+less than
+ the required investment to maintain the high​ capital-labor ratio, which means that capital will grow 
+slower
+ than labor.​ Thus, the​ capital-labor ratio ​(k​) will 
+decrease
+ and approach 
+k Subscript e
+.
+</p>
+</div>
+</li>
+
+<li><a id="orga22bc48"></a>D<br />
+<div class="outline-text-5" id="text-1-5-1-4">
+<p>
+An economy accumulates capital when
+Question content area bottom
+Part 1
+A.
+GDP per capita increases.
+B.
+it increases the number of hours worked.
+C.
+labor productivity declines.
+D.
+its capitallabor ratio increases.
+</p>
+</div>
+</li>
+
+<li><a id="orgc5c34f0"></a>A<br />
+<div class="outline-text-5" id="text-1-5-1-5">
+<p>
+An increase in the level of total factor productivity will lead to
+Question content area bottom
+Part 1
+A.
+an increase in the capitallabor ratio and an increase in real GDP worker.
+Your answer is correct.B.
+an upward shift of the breakeven investment line and an increase in the capitallabor ratio.
+C.
+a higher rate of dilution and lower breakeven investment.
+D.
+an increase in investment and a decrease in depreciation.
+</p>
+</div>
+</li>
+
+<li><a id="org1bab189"></a>A<br />
+<div class="outline-text-5" id="text-1-5-1-6">
+<p>
+In the Solow growth​ model, a change in the capitallabor ratio is equal to
+Question content area bottom
+Part 1
+A.
+​(investment  ​depreciation).
+Your answer is correct.B.
+saving​ + depreciation).
+C.
+​(saving  ​investment).
+D.
+​(capital stock  labor​ force).
+</p>
+</div>
+</li>
+
+<li><a id="org9570815"></a>C<br />
+<div class="outline-text-5" id="text-1-5-1-7">
+<p>
+In the Solow growth​ model, the steady state occurs when 
+Question content area bottom
+Part 1
+A.
+saving​ = investment.
+B.
+the capitallabor ratio​ = 1.
+C.
+investment​ = depreciation.
+Your answer is correct.D.
+depreciation​ = 0.
+</p>
+</div>
+</li>
+
+<li><a id="org695cd3c"></a>D<br />
+<div class="outline-text-5" id="text-1-5-1-8">
+<p>
+In the Solow growth​ model, if the level of investment is less than depreciation at the initial capitallabor ratio​ , then k is​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span> and the capitallabor ratio​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span> toward the steadystate capitallabor ratio.
+Question content area bottom
+Part 1
+A.
+greater than​ zero; decreases
+B.
+greater than​ zero; increases
+C.
+less than​ zero; increases
+D.
+less than​ zero; decreases
+</p>
+</div>
+</li>
+
+<li><a id="org279949a"></a>k = 16, y = 4, c = 2.4, i = 1.6<br />
+<div class="outline-text-5" id="text-1-5-1-9">
+<p>
+Suppose y​ = k​1/2​, total factor productivity is constant and equal to​ 1, s​ = 0.40, and d​ = 0.10. When the economy reaches the steady​ state, consumption per worker is​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span>.
+</p>
+</div>
+</li>
+
+<li><a id="org082b43e"></a>C<br />
+<div class="outline-text-5" id="text-1-5-1-10">
+<p>
+Refer to Figure 6.1. Suppose the economy is originally in steady state at k​*1. If the saving rate increases from s1 to s2​,
+Part 2
+A.
+investment becomes greater than saving.
+B.
+saving becomes greater than investment.
+C.
+investment becomes greater than depreciation.
+Your answer is correct.D.
+depreciation becomes greater than investment.
+</p>
+</div>
+</li>
+
+<li><a id="org7bfd4de"></a>D, decreases<br />
+<div class="outline-text-5" id="text-1-5-1-11">
+<p>
+Break-even investment is the
+Part 2
+A.
+investment rate that allows the underwriters of new security issues to recoup their price guarantee. 
+B.
+level of investment that keeps the capital stock constant by offsetting the effect of depreciation. 
+C.
+level of investment that enables a firm to earn a normal profit.
+D.
+investment rate that keeps the capitallabor ratio constant by offsetting the effects of both depreciation and labor force growth.
+Your answer is correct.
+Part 3
+When the growth rate of the labor force ​, the​ break-even level of investment 
+decreases
+.
+</p>
+</div>
+</li>
+
+<li><a id="orgce4a734"></a>C<br />
+<div class="outline-text-5" id="text-1-5-1-12">
+<p>
+As a result of  in the growth rate of the labor​ force, the​ steady-state level of the standard of living will
+Part 2
+A.
+ because the more  growing labor force causes the​ economy's productive capacity to also expand more .
+B.
+ because the more  growing labor force causes the capitallabor ratio to .
+C.
+ because the more  growing labor force causes the capitallabor ratio to .
+Your answer is correct.D.
+ because the more  growing labor force will bring about  in the​ economy's saving rate.
+</p>
+</div>
+</li>
+
+<li><a id="org1c886bd"></a>D<br />
+<div class="outline-text-5" id="text-1-5-1-13">
+<p>
+If d​ = the depreciation​ rate, n​ = the growth rate of the labor​ force, and k​ = the capitallabor ​ratio, which of the following expressions best describes breakeven ​investment?
+Part 2
+A.
+​(d  n​)/k
+B.
+dk  nk
+C.
+dnk
+D.
+​(d​ + n​)k
+</p>
+</div>
+</li>
+
+<li><a id="org6be22ed"></a>A<br />
+<div class="outline-text-5" id="text-1-5-1-14">
+<p>
+Refer to Figure 6.2. Suppose the economy is originally in steady state at k​*2. All else​ equal, if the labor force growth rate increases​ , 
+Part 2
+A.
+breakeven investment will shift from  ​(d​ + n2​)k to ​(d​ + n1​)k​, and the capitallabor ratio will move from k​*2 to k​*1.
+Your answer is correct.B.
+breakeven investment will shift from  ​(d​ + n2​)k to ​(d​ + n1​)k​, and the capitallabor ratio will remain at k​*2.
+C.
+breakeven investment will shift from ​(d​ + n1​)k to ​(d​ + n2​)k​, and the capitallabor ratio will move from k​*2 to k​*1.
+D.
+breakeven investment will shift from  ​(d​ + n1​)k to ​(d​ + n2​)k​, and the capitallabor ratio will remain at k​*2.
+</p>
+</div>
+</li>
+
+<li><a id="org7f47bdc"></a>A<br />
+<div class="outline-text-5" id="text-1-5-1-15">
+<p>
+The Solow growth model predicts that a lower labor force growth rate will lead to
+Question content area bottom
+Part 1
+A.
+higher productivity and a higher standard of living.
+Your answer is correct.B.
+a lower saving rate and decreased investment.
+C.
+a higher rate of dilution and lower breakeven investment.
+D.
+a decreased steady state and higher breakeven investment.
+</p>
+</div>
+</li>
+
+<li><a id="orgd9ccfb6"></a>E<br />
+<div class="outline-text-5" id="text-1-5-1-16">
+<p>
+What is laboraugmenting technological​ change?
+Part 2
+A.
+New​ technology, including new methods of organizing production and improvements in the skill level of the labor​ force, that make workers more productive and so increase the efficiency of labor.
+B.
+Improvements in economic efficiency that increase the productivity of labor but that do not directly make capital goods more efficient.
+C.
+Technological change that brings about the introduction of new goods that use labor intensively.
+D.
+All of the above.
+E.
+A and B are correct.
+Your answer is correct.
+Part 3
+The difference between laboraugmenting technological change and total factor productivity is that the latter assumes that improvements in technology or efficiency affect capital and labor 
+equally
+.
+</p>
+</div>
+</li>
+
+<li><a id="orgea09479"></a>A<br />
+<div class="outline-text-5" id="text-1-5-1-17">
+<p>
+What is the difference between real GDP per worker and real GDP per effective​ worker?
+Part 2
+A.
+Real GDP per effective worker incorporates both the number of workers as well as their productive efficiency while real GDP per worker only considers the number of workers. 
+Your answer is correct.B.
+There is no meaningful difference since all workers are considered​ effective, otherwise they would not be employed.
+C.
+Real GDP per worker includes all workers whereas real GDP per effective worker excludes those workers who are  deemed ineffective​ (i.e., unproductive).
+D.
+None of the above accurately defines the difference.
+</p>
+</div>
+</li>
+
+<li><a id="orgd613da8"></a><br />
+<div class="outline-text-5" id="text-1-5-1-18">
+<p>
+Suppose that the production function for an economy is given by . The depreciation rate is ​%, the saving rate is ​%, the growth rate of the labor force is ​%, and the growth rate of​ labor-augmenting technological change is ​%.
+Part 2
+Given these​ features, this​ economy's steady-state level of capital per effective worker is 
+  
+0.74
+. ​(Enter your response rounded to two decimal places​.)
+Part 3
+The​ steady-state real GDP per effective worker for this economy will be 
+  
+0.90
+. ​(Enter your response rounded to two decimal places​.)
+</p>
+</div>
+</li>
+
+<li><a id="orgf45fba8"></a>A<br />
+<div class="outline-text-5" id="text-1-5-1-19">
+<p>
+Which expression best represents the breakeven level of investment when incorporating laboraugmenting technological change into the Solow growth​ model?
+Question content area bottom
+Part 1
+A.
+​(d​ + n​ + g​)k
+Your answer is correct.B.
+​(d​ + n​)k
+C.
+​(d​ + n​ + k​) ​/ ​(​gk)
+D.
+​(d​ + n​ ) / ​(k​ + g​)
+</p>
+</div>
+</li>
+
+<li><a id="org4e9c5de"></a>B<br />
+<div class="outline-text-5" id="text-1-5-1-20">
+<p>
+Consider the following​ statement:
+​"If the economy is at the steady​ state, it must not be​ growing."
+Is this statement​ true, false, or​ uncertain? Explain.
+The statement is 
+A.
+true because the steady state implies investment in the economy is just enough to offset depreciation and dilution.​ Therefore, the​ capital-labor ratio is constant and the economy as a whole and per capita GDP are not growing.
+B.
+false because the steady state implies that the​ capital-labor ratio and real GDP per hour worked remain​ constant; however, the economy as a whole is growing.
+Your answer is correct.C.
+uncertain because the steady state implies that the​ capital-labor ratio and per capita GDP remain​ constant; however, it does not serve as an indicator of the economy as a whole. Overall. an​ economy's growth is measured by real GDP.
+D.
+uncertain because the steady state implies that the per capita production function and per capita GDP remain​ constant; however, it does not serve as an indicator of the economy as a whole.​ Overall, an​ economy's growth is measured by real GDP.
+</p>
+</div>
+</li>
+
+<li><a id="org1f1dc85"></a>C<br />
+<div class="outline-text-5" id="text-1-5-1-21">
+<p>
+The labor input in the production function can increase
+Question content area bottom
+Part 1
+A.
+only if the number of workers increases.
+B.
+only if the efficiency of the existing workers improves.
+C.
+if the number of workers increases​ and/or the efficiency of the existing workers improves.
+Your answer is correct.D.
+only if both the number of workers increases and the efficiency of the existing workers improves.
+</p>
+</div>
+</li>
+
+<li><a id="org64e274b"></a>B<br />
+<div class="outline-text-5" id="text-1-5-1-22">
+<p>
+In the steady​ state, real GDP per worker​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span>, and real GDP per effective worker​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span>.
+Question content area bottom
+Part 1
+A.
+is​ constant; will grow
+B.
+will​ grow; is constant
+Your answer is correct.C.
+will​ grow; will grow
+D.
+is​ constant; is constant
+</p>
+</div>
+</li>
+
+<li><a id="org6babbb7"></a>B<br />
+<div class="outline-text-5" id="text-1-5-1-23">
+<p>
+Changes in the saving​ rate, laborforce growth​ rate, and depreciation rate will​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span> the steadystate level of real GDP per capita and will​ <span class="underline"><span class="underline"><span class="underline">__</span></span></span> the steadystate growth rate.
+Question content area bottom
+Part 1
+A.
+not​ affect; not affect
+B.
+​affect; not affect
+Your answer is correct.C.
+not​ affect; affect
+D.
+​affect; affect
+</p>
+</div>
+</li>
+
+<li><a id="orgc76b963"></a>B<br />
+<div class="outline-text-5" id="text-1-5-1-24">
+<p>
+Countries that have experienced sustained increases in their standard of living have achieved them because of
+Question content area bottom
+Part 1
+A.
+higher rates of saving and investment.
+B.
+sustained technological change.
+Your answer is correct.C.
+higher rates of population growth.
+D.
+All of the above are correct.
+</p>
+</div>
+</li>
+
+<li><a id="org855ec8a"></a>B,C<br />
+<div class="outline-text-5" id="text-1-5-1-25">
+<p>
+Suppose that an economy is growing at its​ steady-state rate of​ 4% per year when a natural disaster destroys​ one-quarter of its capital​ stock, leaving all other factors of production unchanged.  What will be the immediate effect on the​ capital-labor ratio and real GDP per hour​ worked? 
+The​ capital-labor ratio will 
+fall
+​, which will cause real GDP per hour worked to 
+fall
+. 
+Part 2
+After the​ disaster, will the economy grow at the same​ 4% rate in the short​ run?  Explain.
+In the short​ run, all other things being​ equal, the economy will be
+A.
+above the​ steady-state capital stock and thus will grow at a​ steady-state growth rate greater than​ 4% per year.
+B.
+below the​ steady-state capital stock and thus will grow at a​ steady-state growth rate greater than​ 4% per year.
+Your answer is correct.C.
+above the​ steady-state capital stock and thus will grow at a​ steady-state growth rate of less than​ 4% per year.
+D.
+below the​ steady-state capital stock and thus will grow at a​ steady-state growth rate less than​ 4% per year.
+Part 3
+What will be the​ long-run growth rate of the​ economy?
+In the long​ run, all other things​ equal, the economy would
+A.
+experience a​ steady-state growth rate that is uncertain.
+B.
+have a​ steady-state growth rate greater than​ 4% per year.
+C.
+return to the original​ steady-state growth rate of​ 4% per year.
+Your answer is correct.D.
+have a​ steady-state growth rate of less than​ 4% per year.
+</p>
+</div>
+</li>
+<li><a id="org0a602bb"></a>D<br />
+<div class="outline-text-5" id="text-1-5-1-26">
+<p>
+Suppose that an economy is growing at its​ steady-state rate of​ 4% per year when a natural disaster destroys​ one-quarter of its capital stock and causes a permanent reduction in the growth rate of total factor​ productivity, leaving all other factors of production unchanged. What will be the​ long-run growth rate of the​ economy?
+All other things being​ equal, a permanent reduction in the growth rate of total factor productivity would 
+A.
+not affect the​ steady-state growth rate in the long​ run; growth will return to​ 4%.
+B.
+increase the​ capital-labor ratio​ permanently; growth will now be greater than​ 4%.
+C.
+relatively increase investment and thus the​ capital-labor ratio; growth will now be greater than​ 4%.
+D.
+also reduce the​ steady-state growth rate​ permanently; growth will now be less than​ 4%.
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-orge188c07" class="outline-4">
+<h4 id="orge188c07"><span class="section-number-4">1.5.2.</span> EQN</h4>
+<div class="outline-text-4" id="text-1-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org33e7619"></a>Solow Growth Model<br />
+<div class="outline-text-5" id="text-1-5-2-1">
+<p>
+y = f(k)
+y = c + i
+</p>
+
+<p>
+y - RGDP per worker
+c - consumption per worker
+i - investment per worker
+s - rate of savings
+</p>
+
+<p>
+i = sy
+c = (1 - s)y
+</p>
+
+<p>
+i = s f(k) - production function
+Depreciation = dk + nk + gk
+</p>
+
+<p>
+d - depreciation rate
+</p>
+
+<p>
+delta k = i - dk
+</p>
+
+<p>
+Investment flows into a tub, depreciation flows out of the tub.
+The amount of water in the tub is k, capital-labor ratio.
+</p>
+
+<p>
+n - labor growth rate
+</p>
+
+<p>
+Dilution = nk
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+
+<div id="outline-container-orgf8e3564" class="outline-4">
+<h4 id="orgf8e3564"><span class="section-number-4">1.5.3.</span> Steady State</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<p>
+k = 0, capital-labor ratio does not change
+s f(k*) = dk*
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgec17370" class="outline-3">
+<h3 id="orgec17370"><span class="section-number-3">1.6.</span> </h3>
+</div>
+</div>
+
+<div id="outline-container-org3e5375f" class="outline-2">
+<h2 id="org3e5375f"><span class="section-number-2">2.</span> Microeconomics</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org32a8689" class="outline-3">
+<h3 id="org32a8689"><span class="section-number-3">2.1.</span> Supply Curve</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Relationship between the quantity of a good that producers are willing to sell and the price of the good.
+</p>
+
+<p>
+\(Q_s = Q_s(P)\)
+</p>
+
+<p>
+It is a function of price, however price falls on the vertical axis lmao.
+It is upward sloping, there is a positive correlation between the price of a good and how much quantity a firm would produce.
+</p>
+
+<p>
+Over variable can also affect supply, such as wages, interest, and cost of materials.
+When production costs decrease output increases no matter the output price.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9653288" class="outline-3">
+<h3 id="org9653288"><span class="section-number-3">2.2.</span> Demand Curve</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Relationship between the quantity of a good that consumers are willing to buy and the price of a good.
+\(Q_D = Q_D(P)\)
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
