@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-09-25 Sun 14:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workflow</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<link rel="stylesheet" href="/css/main-dark.css" type="text/css"/>
+<header><div class="menu"><ul>
+<li><a href="/">/</a></li>
+<li><a href="/about.html">/about</a></li>
+<li><a href="/categories.html">/categories</a></li>
+</ul></div></header>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Workflow</h1>
+<p>
+Focus on the <b><b>actions</b></b> I need to do. The technology will then come after the actions.
+Your brain is not going to change its reward system so easily. Keep at it!
+</p>
+
+
+<div id="outline-container-orgbf3141c" class="outline-2">
+<h2 id="orgbf3141c"><span class="section-number-2">1.</span> To-Do List</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8a175a3" class="outline-3">
+<h3 id="org8a175a3"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Fix Pinentry to SSH in Org Mode</h3>
+</div>
+
+
+<div id="outline-container-orgec12945" class="outline-3">
+<h3 id="orgec12945"><span class="section-number-3">1.2.</span> <span class="todo TODO">TODO</span> Generate Calculus expressions in Python to LaTeX</h3>
+</div>
+
+
+<div id="outline-container-org68e1dfc" class="outline-3">
+<h3 id="org68e1dfc"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> Setup fast LaTeX workflow with drawings from Inkscape</h3>
+</div>
+
+
+<div id="outline-container-orge9dc472" class="outline-3">
+<h3 id="orge9dc472"><span class="section-number-3">1.4.</span> <span class="todo TODO">TODO</span> Fix HELM Process list and detaching</h3>
+</div>
+
+
+<div id="outline-container-orgdfddcc5" class="outline-3">
+<h3 id="orgdfddcc5"><span class="section-number-3">1.5.</span> <span class="todo TODO">TODO</span> Use Helm and Evil interaction</h3>
+</div>
+
+
+<div id="outline-container-org6f652bf" class="outline-3">
+<h3 id="org6f652bf"><span class="section-number-3">1.6.</span> <span class="todo TODO">TODO</span> Create more Flash cards</h3>
+</div>
+
+
+<div id="outline-container-orgc4f7976" class="outline-3">
+<h3 id="orgc4f7976"><span class="section-number-3">1.7.</span> <span class="todo TODO">TODO</span> Use a better dictionary service for ISpell</h3>
+</div>
+
+
+<div id="outline-container-org287e50f" class="outline-3">
+<h3 id="org287e50f"><span class="section-number-3">1.8.</span> <span class="todo TODO">TODO</span> Use local dictionary for Japanese</h3>
+</div>
+</div>
+
+
+<div id="outline-container-org69af466" class="outline-2">
+<h2 id="org69af466"><span class="section-number-2">2.</span> Routine</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Tasks that will happen everyday.
+</p>
+</div>
+
+<div id="outline-container-org189cd91" class="outline-3">
+<h3 id="org189cd91"><span class="section-number-3">2.1.</span> Sleep</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Sleep 09:30PM - 06:00AM
+</p>
+</div>
+
+<div id="outline-container-org3537f62" class="outline-4">
+<h4 id="org3537f62"><span class="section-number-4">2.1.1.</span> Theory</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org5dddceb"></a>Why do we sleep<br />
+<div class="outline-text-5" id="text-2-1-1-1">
+<p>
+The desire to sleep is caused by two main forces, adenosine buildup and circadian cycles.
+</p>
+</div>
+</li>
+
+<li><a id="org461d00f"></a>Adenosine and Caffine<br />
+<div class="outline-text-5" id="text-2-1-1-2">
+<p>
+Adenosine is a chemical waste product. Adenosine is produced by cells expending energy. Adenosine buildup causes tiredness.
+Caffine blocks adenosine receptors, halting the tiredness. However adenosine builds up naturally causing a crash after caffine wears off.
+</p>
+</div>
+</li>
+
+<li><a id="org7dec65a"></a>Circadian Cycles and Light<br />
+<div class="outline-text-5" id="text-2-1-1-3">
+<p>
+Upon waking, a cortisol pulse happens causing alertness and starting a timer which will release melatonin.
+These pulses happen all the time, however they become off sync with the 24hr clock. To syncronise these pulses, view low solar angle sunlight at sunrise and sunset.
+</p>
+
+<p>
+Sunrise 
+</p>
+
+<p>
+Sunset helps remove the bad effect of light late at night. 
+</p>
+</div>
+</li>
+
+<li><a id="org268195f"></a>Exercise and Food Intake<br />
+<div class="outline-text-5" id="text-2-1-1-4">
+<p>
+Exercise helps shift the clock earlier in the day, helping one wake up earlier.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org8e85125" class="outline-3">
+<h3 id="org8e85125"><span class="section-number-3">2.2.</span> Food</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Drink Yerba Mate 1.5 - 2 hrs after waking (Start at 8AM)
+Eat a high protein meal during 4PM - 6PM.
+</p>
+</div>
+
+<div id="outline-container-org0c5bf21" class="outline-4">
+<h4 id="org0c5bf21"><span class="section-number-4">2.2.1.</span> Theory</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+It is best to not eat any foods 1 hour after waking up and 3 hours before going to sleep.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orga1ec78f" class="outline-3">
+<h3 id="orga1ec78f"><span class="section-number-3">2.3.</span> Exercise</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+There are 9 parameters that exercise can improve:
+</p>
+<ul class="org-ul">
+<li>Skill</li>
+<li>Speed</li>
+<li>Power</li>
+<li>Strength</li>
+<li>Hypertrophy</li>
+<li>Muscular Endurance</li>
+<li>Anerobic Power</li>
+<li>VO2 Max</li>
+<li>Long Duration Endurance</li>
+</ul>
+
+<p>
+Modifiable Variables:
+</p>
+<ul class="org-ul">
+<li>Choice</li>
+<li>Intensity</li>
+<li>Volume</li>
+<li>Rest Intervals</li>
+<li>Progression</li>
+<li>Frequency</li>
+</ul>
+
+<p>
+Fundemental Laws of Exercise:
+</p>
+<ul class="org-ul">
+<li>Progressive Overload</li>
+<li>Exercises do not determine adaptations</li>
+<li>All joints all range of motions</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org5e0b84c" class="outline-3">
+<h3 id="org5e0b84c"><span class="section-number-3">2.4.</span> Studying</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Pipeline: Important Imformation <b><b>CAPTURED-INTO</b></b> Org Capture <b><b>REFINED-INTO</b></b> Permanant Notes
+</p>
+
+<p>
+Important Information = Papers (Mathematical Textbooks, Research Articles)
+                        Podcasts (Andrew Huberman, David Sinclair, Matt Walker)
+			Explanatory Videos (Lectures, 3B1B)
+</p>
+
+<p>
+Emacs becomes the PDF reader and RSS feed for maintaining information input.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org26a8603" class="outline-2">
+<h2 id="org26a8603"><span class="section-number-2">3.</span> Computer Boot Process</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Write down what software I run on my computer and why.
+The orchistration of the software is taken care of in <a href="file:///home/zjabbar/.config/guix/">Guix Directory</a>.
+</p>
+</div>
+
+<div id="outline-container-orga19e371" class="outline-3">
+<h3 id="orga19e371"><span class="section-number-3">3.1.</span> GNU Guix</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Guix is a functional package manager.
+Define the state of the operating system in the `operating-system` record.
+Define the state of the home environment in the `home-environment` record.
+Define the state of the installed files in the `manifest`.
+</p>
+</div>
+
+<div id="outline-container-org9b12d12" class="outline-4">
+<h4 id="org9b12d12"><span class="section-number-4">3.1.1.</span> Operating System Definition</h4>
+</div>
+
+<div id="outline-container-orgf85a223" class="outline-4">
+<h4 id="orgf85a223"><span class="section-number-4">3.1.2.</span> Home Definition</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+These are userspace configurations.
+</p>
+
+<p>
+Define Everything in the <code>zaijab/z-monad/USER.scm</code> file
+Pull Resources from <code>zaijab/z-monad/features/*.scm</code> files
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdbb1918" class="outline-4">
+<h4 id="orgdbb1918"><span class="section-number-4">3.1.3.</span> Package Management</h4>
+</div>
+
+<div id="outline-container-orge4ee485" class="outline-4">
+<h4 id="orge4ee485"><span class="section-number-4">3.1.4.</span> Features</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+Every package installed will have some configuration associated with it.
+Define configurations using Guile Scheme functions.
+Call on them from Home or System.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8db82c0" class="outline-3">
+<h3 id="org8db82c0"><span class="section-number-3">3.2.</span> GNU Shepherd</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+GNU Shepherd is a system management tool.
+It is PID 1.
+It logs into my account and begins SWAY + Emacs Daemon.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1c8903a" class="outline-3">
+<h3 id="org1c8903a"><span class="section-number-3">3.3.</span> GNU Emacs</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-org717cf3e" class="outline-4">
+<h4 id="org717cf3e"><span class="section-number-4">3.3.1.</span> Helm</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<p>
+Helm can select and search given a list.
+Used to sort through Buffers, Files, and Org-Roam nodes.
+Helm allows searching tags via "#TAG" syntax.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8581f1" class="outline-4">
+<h4 id="orgc8581f1"><span class="section-number-4">3.3.2.</span> Dired</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Directory Editor. For Moving, Renaming, Creating, and Selecting files.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org95e1217" class="outline-4">
+<h4 id="org95e1217"><span class="section-number-4">3.3.3.</span> Evil Mode</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+Modal Editing.
+Rather than straining my fingers by holding a modifyer key + character, I use modes to run functions on one character keys.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf99f31c" class="outline-4">
+<h4 id="orgf99f31c"><span class="section-number-4">3.3.4.</span> Guile Scheme</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<p>
+A small Scheme language to interop between many different languages.
+Used a glue in the GNU Guix operating system.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org294e129" class="outline-4">
+<h4 id="org294e129"><span class="section-number-4">3.3.5.</span> Geiser</h4>
+</div>
+<div id="outline-container-org2c4b476" class="outline-4">
+<h4 id="org2c4b476"><span class="section-number-4">3.3.6.</span> Common Lisp</h4>
+</div>
+<div id="outline-container-org4c535fa" class="outline-4">
+<h4 id="org4c535fa"><span class="section-number-4">3.3.7.</span> Python</h4>
+<div class="outline-text-4" id="text-3-3-7">
+<p>
+The Defacto language for Statistics, Machine learning, and Artificial Intelligence.
+GNU Guix installs packages and the Jupyter Notebook system.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1d6dfd9" class="outline-4">
+<h4 id="org1d6dfd9"><span class="section-number-4">3.3.8.</span> PDF-Tools</h4>
+<div class="outline-text-4" id="text-3-3-8">
+<p>
+To read PDFs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fcbd9a" class="outline-4">
+<h4 id="org0fcbd9a"><span class="section-number-4">3.3.9.</span> Org Roam</h4>
+<div class="outline-text-4" id="text-3-3-9">
+<p>
+A way to organze Org files via a relational database.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0d851b3" class="outline-4">
+<h4 id="org0d851b3"><span class="section-number-4">3.3.10.</span> Org Drill</h4>
+<div class="outline-text-4" id="text-3-3-10">
+<p>
+Create multimedia multisided flashcards with an SRS algorithm.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89741d8" class="outline-4">
+<h4 id="org89741d8"><span class="section-number-4">3.3.11.</span> Org Capture</h4>
+<div class="outline-text-4" id="text-3-3-11">
+<p>
+A quick way to grab information.
+Makes a template for an Org file so that I wouldn't need to edit formatting.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfdb9eee" class="outline-4">
+<h4 id="orgfdb9eee"><span class="section-number-4">3.3.12.</span> Mu4e</h4>
+<div class="outline-text-4" id="text-3-3-12">
+<p>
+An Email client in Emacs. Can store emails locally and search with tags.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd12a2bd" class="outline-3">
+<h3 id="orgd12a2bd"><span class="section-number-3">3.4.</span> GPG</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Creates public key pairs. Used to verify the sender of files and emails as well as encrypt files for security. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5573094" class="outline-3">
+<h3 id="org5573094"><span class="section-number-3">3.5.</span> GNU Jami</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+For communication. A decentralized FOSS varient of Zoom with P2P encryption.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org93f54c7" class="outline-2">
+<h2 id="org93f54c7"><span class="section-number-2">4.</span> Stateless Architecture</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org37028bc" class="outline-3">
+<h3 id="org37028bc"><span class="section-number-3">4.1.</span> LiveCD Guix</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Use EFI Version of GNU Guix on a USB.
+</p>
+
+<p>
+Clone <code>zaijab/z-monad</code> and run MAKE
+</p>
+
+<p>
+<code>Make</code> contains Guile Scheme code to bootstrap the
+</p>
+<ol class="org-ol">
+<li>System</li>
+<li>User Space</li>
+<li>Packages</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6deda66" class="outline-2">
+<h2 id="org6deda66"><span class="section-number-2">5.</span> Information Intake</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The Web at large makes money based on consumer data and on retention time.
+It was designed to take up your time as much as it can.
+</p>
+</div>
+
+<div id="outline-container-org43e1826" class="outline-3">
+<h3 id="org43e1826"><span class="section-number-3">5.1.</span> Sources</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org47e0fdd" class="outline-4">
+<h4 id="org47e0fdd"><span class="section-number-4">5.1.1.</span> Podcasts</h4>
+<div class="outline-text-4" id="text-5-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org985a3c5"></a>Andrew Huberman<br /></li>
+
+<li><a id="org3249f53"></a>Matthew Walker<br /></li>
+
+<li><a id="orgac17dd4"></a>David Sinclair<br /></li>
+
+<li><a id="orgd3fb1f2"></a>3B1B<br /></li>
+
+<li><a id="orgb62706a"></a>Numberphile<br /></li>
+</ol>
+</div>
+
+<div id="outline-container-orgfeb0c18" class="outline-4">
+<h4 id="orgfeb0c18"><span class="section-number-4">5.1.2.</span> Lectures</h4>
+<div class="outline-text-4" id="text-5-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org0529641"></a>Algebraic Topology - Piere Albin<br /></li>
+
+<li><a id="org3999a47"></a>Differential Geometry - Frederic Shuller<br /></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org335c000" class="outline-3">
+<h3 id="org335c000"><span class="section-number-3">5.2.</span> Ingestion</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Online websites such as YouTube are designed to capture and retain attention.
+Download helpful videos to this computer and use MPV to view videos to keep from being distracted. 
+Use Emacs as a video player, audio player, and PDF reader to 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf77c57d" class="outline-3">
+<h3 id="orgf77c57d"><span class="section-number-3">5.3.</span> Retention</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-src-container">
+<pre class="src src-CSS">@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:200,500");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:200,300,400");
+a, a:visited {
+  text-decoration: none;
+  color: #2255bb; }
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #555555;
+  line-height: 1.35em;
+  font-weight: light; }
+
+strong {
+  font-weight: 400; }
+
+div.document {
+  margin: 0 auto;
+  max-width: 720px;
+  margin-top: 7.5%;
+  margin-bottom: 5%; }
+
+div.footer, div.footer a {
+  /*    font-family: "Yanone Kaffeesatz", sans-serif;*/
+  color: #cccccc;
+  font-weight: 200;
+  margin: 0 auto;
+  max-width: 720px;
+  margin-bottom: 5%; }
+
+div.footer hr {
+  display: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 500;
+  margin-top: 2em; }
+
+h1 {
+  font-size: 1.25em;
+  font-weight: 200;
+  margin-bottom: 3em; }
+
+h2 {
+  font-size: 1.25em;
+  margin-top: 3.5em;
+  padding-bottom: 5px;
+  font-weight: 400;
+  margin-left: -2em;
+  padding-left: 2em;
+  width: 75%;
+  /*    border-bottom: 1px solid black; */ }
+
+h3 {
+  font-size: 1.15em;
+  margin-top: 2.5em;
+  margin-bottom: .5em;
+  margin-left: -2em;
+  padding-left: 2em;
+  width: 50%;
+  padding-bottom: 5px;
+  /*    border-bottom: 1px solid black; */ }
+
+h4 {
+  color: #000000;
+  background: #f9f9f9;
+  /*    border-bottom: 1px solid #000000;*/
+  font-size: 100%;
+  /*    margin-top: 1.0em;*/
+  margin-bottom: .5em;
+  margin-left: -2em;
+  padding-left: 2em;
+  width: 100%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  /*    border-bottom: 1px solid black; */ }
+
+ul {
+  /*    font-family: "Roboto Condensed", sans-serif;*/
+  list-style-type: none;
+  padding-left: 0;
+  /*    font-size: 14px;
+      line-height: 1.25em;*/ }
+
+ul li {
+  /*    text-indent: -1.5em;
+      margin-left: 1.5em;*/
+  padding-bottom: 0.5em; }
+
+ul li strong {
+  display: block;
+  /*    font-family: "Roboto Condensed";*/ }
+
+ul li p {
+  margin-top: 0;
+  margin-bottom: 0.5em; }
+
+ol.bibliography li {
+  margin-bottom: .1em; }
+
+ol.bibliography {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.25em;
+  font-size: 15px;
+  list-style: outside;
+  /*    list-style-type: " — ";*/
+  margin-left: 0;
+  padding-left: 0em;
+  /*    font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      line-height: 1.25em;
+      font-weight: 500; */
+  list-style-type: decimal; }
+
+#topalidou\:article\:2018a i:first-of-type,
+#nioche\:article\:2020a i:first-of-type,
+#detorakis\:article\:2020a i:first-of-type,
+#strock\:article\:2020b i:first-of-type,
+#roesch\:article\:2020 i:first-of-type,
+#thompson\:article\:2020a i:first-of-type,
+#hinsen\:correspondence\:2019b i:first-of-type,
+#rougier\:correspondence\:2018a i:first-of-type,
+#bourdenx\:article\:2020a i:first-of-type,
+#nioche\:article\:2019b i:first-of-type,
+#nioche\:article\:2019a i:first-of-type,
+#rougier\:article\:2005a i:first-of-type,
+#rougier\:article\:2021a i:first-of-type,
+#boraud\:article\:2018a i:first-of-type,
+#piron\:article\:2016a i:first-of-type,
+#nature\:external\:2014a i:first-of-type,
+#woolston\:external\:2014a i:first-of-type,
+#hutson\:external\:2018a i:first-of-type,
+#perkel\:article\:2020a i:first-of-type,
+#strock\:article\:2020a i:first-of-type,
+#upegui\:conf\:2018a i:first-of-type,
+#rougier\:conf\:2018b i:first-of-type,
+#rougier\:conf\:2018a i:first-of-type,
+#rougier\:conf\:2019a i:first-of-type,
+#strock\:conf\:2018a i:first-of-type,
+#rougier\:article\:2014b i:first-of-type,
+#rougier\:article\:2011a i:first-of-type,
+#rougier\:article\:2006a i:first-of-type,
+#hutt\:article\:2010a i:first-of-type {
+  color: #F4511E;
+  font-weight: 500;
+  white-space: nowrap;
+    /*
+    background-color: #fffff0;
+    border: 0.5px solid #ddddd0; 
+    border-radius: 2px;
+    padding: 2px 5px 0px 5px;
+    margin: 0;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 95%;
+    font-weight: 500;
+*/
+  /*
+      color: black;
+      background-color: #f0f0f0;
+      border: 0.5px solid #999999; 
+      border-radius: 2px;
+      padding-left:.5em;
+      padding-right:.5em;
+  */ }
+
+ol.bibliography li {
+  padding-bottom: 0.125em; }
+
+ol.bibliography li i {
+  font-style: normal; }
+
+ol.bibliography li b {
+  font-weight: 400; }
+
+a.tag, .tag {
+  color: #000000;
+  background-color: #f0f0f0;
+  /*    border: 0.5px solid #f0f0f0;*/
+  border-radius: 2px;
+  padding: 2px 5px 0px 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-size: 85%;
+  font-weight: 500;
+  transition: 0.25s; }
+
+a.tag:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #555555;
+  /*    border: 0.5px solid #f0f0f0;*/
+  border-radius: 2px;
+  padding: 2px 5px 0px 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  font-size: 85%;
+  font-weight: 500;
+  transition: 0.25s; }
+
+h3 + p {
+  margin-left: 1.5em;
+  margin-top: 0em;
+  padding-top: 0em; }
+
+table {
+  width: 100%;
+  border: collapse; }
+
+td {
+  line-height: 1.1em;
+  padding: 0;
+  padding-bottom: 0; }
+
+blockquote {
+  /*    font-family: "Roboto Condensed", sans-serif;*/
+  font-size: 14px;
+  margin: 0;
+  margin-top: 2em;
+  color: #999999; }
+
+img.small {
+  width: 170px; }
+
+img.medium {
+  width: 32%; }
+
+img.large {
+  width: 40%; }
+
+img.border {
+  border: 0.5px solid black; }
+
+img.right {
+  float: right;
+  margin-left: 10px; }
+
+img.left {
+  float: left;
+  margin-right: 10px; }
+
+span.blue {
+  display: block;
+  color: #2255bb;
+  background-color: #f9f9f9;
+  padding: 0.25em 0.5em 0.25em 1.0em;
+  margin-left: -1.0em;
+  border: .5px solid #e9e9e9; }
+
+p.subtitle {
+  margin-top: -1.25em;
+  padding-bottom: 2em; }
+
+p.justify {
+  text-align: justify;
+  padding-right: 1em; }
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

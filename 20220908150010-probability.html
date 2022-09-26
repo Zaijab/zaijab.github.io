@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-09-25 Sun 14:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Probability</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<link rel="stylesheet" href="/css/main-dark.css" type="text/css"/>
+<header><div class="menu"><ul>
+<li><a href="/">/</a></li>
+<li><a href="/about.html">/about</a></li>
+<li><a href="/categories.html">/categories</a></li>
+</ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Probability</h1>
+<div id="outline-container-org15eb0b1" class="outline-2">
+<h2 id="org15eb0b1"><span class="section-number-2">1.</span> Definitions</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1284a0f" class="outline-3">
+<h3 id="org1284a0f"><span class="section-number-3">1.1.</span> Probability Space</h3>
+</div>
+<div id="outline-container-orgcda6940" class="outline-3">
+<h3 id="orgcda6940"><span class="section-number-3">1.2.</span> Pushforward Measure</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Given \[ X \colon \Omega \to \mathbb{R} \] and \[ g \colon \mathbb{R} \to \mathbb{R} \] both measureable, we have that \[ g \circ X \] is also measureable.
+</p>
+
+<p>
+The pushforward measure is then:
+</p>
+
+\begin{tikzcd}
+\Omega & A & \mathbb{R}_{\geq 0} \\
+& & \mathbb{R}_{\geq 0}
+\arrow["X", from=1-1, to=1-2]
+\arrow["g", from=1-2, to=1-3]
+\arrow["P", from=1-1, to=2-3]
+\arrow["X_*P", from=1-2, to=2-3]
+\arrow["(g \circ X)_* P", from=1-3, to=2-3]
+\end{tikzcd}
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org013768a" class="outline-2">
+<h2 id="org013768a"><span class="section-number-2">2.</span> </h2>
+</div>
+<div id="outline-container-org0a57dbf" class="outline-2">
+<h2 id="org0a57dbf"><span class="section-number-2">3.</span> HMWK 1</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org4f21ff9" class="outline-3">
+<h3 id="org4f21ff9"><span class="section-number-3">3.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+\(\lambda\)
+</p>
+<ul class="org-ul">
+<li>\((\Omega, \mathcal{F}, P)\) be a probability space</li>
+<li>\(|A| \leq \mathbb{N}\)</li>
+<li>\(X \colon \Omega \to A\) be a random variable</li>
+<li>\(g \colon A \to [0, \infty]\)</li>
+</ul>
+
+
+
+<p>
+\(\therefore\)
+</p>
+
+<p>
+Let \(Y=g(X)\), then,
+\[\begin{align*}
+\mathbb{E}[Y]
+&= \sum_{y \in Y} y P(Y = y) \\
+&= \sum_{y \in Y} y \sum_{x \in g^{-1}[y]} P(X = x) \\
+&= \sum_{y \in Y} \sum_{x \in g^{-1}[y]} g(x) P(X = x) \\
+\end{align*}\]  
+Note: \(\{y\}\) is a partition of \(\text{im}(g)\) hence \(g^{-1}(y)\) forms a partition of \(X\).
+Hence: \[ \sum_{y \in Y} \sum_{x \in g^{-1}[y]} \simeq \sum_{x \in X} \]
+So we have the desired result, \[ \sum_{x \in X} g(x) P(X = x) \] 
+</p>
+</div>
+</div>
+<div id="outline-container-org0db3dcd" class="outline-3">
+<h3 id="org0db3dcd"><span class="section-number-3">3.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+\(\lambda\)
+</p>
+<ul class="org-ul">
+<li>\(\{E_n\}_{n=1}^{\infty}\) be a sequence of independent events</li>
+</ul>
+
+<p>
+Note that \(\left\{\bigcap_{n = 1}^{i} E_n \right\}_{i = 1}^{\infty}\)  is a decreasing sequence of events. 
+</p>
+
+<p>
+\[ P(\bigcap_{n = 1}^{\infty} E_n)
+= P(\lim_{i \to \infty} \bigcap_{n = 1}^{i} E_n) \\
+= \lim_{i \to \infty} P( \bigcap_{n = 1}^{i} E_n) \\
+= \lim_{i \to \infty} \prod_{n = 1}^{i} E_n = \prod_{n = 1}^{\infty} P(E_n)\] 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga30912b" class="outline-3">
+<h3 id="orga30912b"><span class="section-number-3">3.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+\(\lambda\)
+</p>
+<ul class="org-ul">
+<li>\(T\) be the text "A Chronicle of Ancient Sunlight", partition \(\mathbb{N}\) by the residue classes \(\mod \ell (T)\) (the length of \(T\))</li>
+<li>\(E_k \in \mathcal{F}\) be the event that $T $begins at position \(k \cdot \ell (T)\)</li>
+</ul>
+
+<p>
+\[ \forall k \in \mathbb{N} . P(E_k) = \frac{1}{K^{\ell(T)}} > 0 \]
+</p>
+
+<p>
+Thus, \[ \sum_{k \in \mathbb{N}} P(E_k) = \infty \] and \[ \{E_k\}_{k \in \mathbb{N}} \] are an independent set of events.
+</p>
+
+<p>
+Hence by Borel-Cantelli we have that \[ P(\{E_k \ \text{i.o.} \}) = 1 \] The chimp will almost surely write the novel.
+(Infinitely many times in fact; what a hard worker!)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3a5afba" class="outline-3">
+<h3 id="org3a5afba"><span class="section-number-3">3.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-3-4">
+\begin{align*}
+
+p \left(\left|\frac{1}{n} \sum_{m = 1}^{n} (X_m - \mathbb{E}(X_m))\right| \geq \delta \right) \\
+&\leq \frac{1}{\delta^2} \mathbb{E}\left[ \left| \frac{1}{n} \sum_{m = 1}^{n} (X_m - \mathbb{E}(X_m)) \right|^2 \right] \\
+&\leq \frac{1}{\delta^2 n^2} \mathbb{E}\left[ \left| \sum_{m = 1}^{n} (X_m - \mathbb{E}(X_m)) \right|^2 \right] \\
+&\leq \frac{1}{\delta^2 n^2} \mathbb{E}\left[ \sum_{m = 1}^{n} (X_m - \mathbb{E}(X_m))^2 \right] \\
+&= \frac{1}{\delta^2 n^2} \sum_{m = 1}^{n} \mathbb{E}\left[  (X_m - \mathbb{E}(X_m))^2 \right] \\
+&= \frac{1}{\delta^2 n^2} \sum_{m = 1}^{n} \right( \mathbb{E}\left[  (X_m - \mathbb{E}(X_m))^2 \right] + \mathbb{E}\left[  (X_m - \mathbb{E}(X_m)) \right]^2 \right) \\
+&= \frac{1}{\delta^2 n^2} \sum_{m=1}^{n} \text{Var}(X_m)
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orga7d13fe" class="outline-3">
+<h3 id="orga7d13fe"><span class="section-number-3">3.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-3-5">
+<ul class="org-ul">
+<li>a</li>
+</ul>
+<p>
+We get that \(Y_n\) is the result of pulling all coins out of the barrel.
+This means that \(P(Y_n = j) = 0\) when \(j\) is not the number of silver coins and \(1\) when \(j\) is the number of silver coins.
+</p>
+
+<p>
+\[ P(Y_n = j) = \sum_{i \in [0 .. n]} P(Y_n = j \vert \ i \text{ Silver Coins}) P(i \text{ Silver Coins}) = \frac{1}{n+1} \] 
+</p>
+
+<ul class="org-ul">
+<li>b</li>
+</ul>
+<p>
+Let us condition on two properties, \[ Y_n = i \] and that the "Next coin is Silver = S" or "Next coin is Gold = G".
+</p>
+
+<p>
+\[\begin{align*}
+P(Y_{n-1} = j)
+&= \sum_{i \in [0 .. n]} P(Y_{n-1} = j \vert S \land \ Y_n = i) P(S \land Y_n = i) \\
+&+ P(Y_{n-1} = j \vert G \land \ Y_n = i) P(G \land Y_n = i) \\
+&= \sum_{i \in [0 .. n]} P(Y_{n-1} = j \vert S \land \ Y_n = i) P(S \vert Y_n = i) P(Y_n = i) \\
+&+ P(Y_{n-1} = j \vert G \land \ Y_n = i) P(G \vert Y_n = i) P(Y_n = i) \\
+\end{align*}\]
+Now we may evaluate some of the expressions.
+\[ P(Y_{n-1} = j \vert S \land \ Y_n = i) = \begin{cases} 1 & j = i-1 \\ 0 & \text{else} \end{cases} \] 
+\[ P(Y_{n-1} = j \vert G \land \ Y_n = i) = \begin{cases} 1 & j = i \\ 0 & \text{else} \end{cases} \] 
+\[ P(S \vert \ Y_n = i) =  \frac{i}{n} \] 
+\[ P(G \vert \ Y_n = i) =  \frac{n - i}{n} \]
+\[ P(Y_n = i) = \frac{1}{n+1} \]
+</p>
+
+<p>
+Due to the first two equations, we get a lot of zero terms. There are only two cases when there are non zero terms. That being when \[ i = j \] and \[ i = j + 1 \] 
+So the sum becomes \[ 1 \cdot \frac{j + 1}{n} \cdot \frac{1}{n + 1} + 1 \cdot \frac{n - j}{n} \cdot \frac{1}{n+1} = \frac{1}{n} \]
+</p>
+
+<ul class="org-ul">
+<li>c</li>
+</ul>
+<p>
+I conjecture:
+\[ P(Y_{k} = i) = \frac{1}{k+1} \] 
+</p>
+
+
+<ul class="org-ul">
+<li>d</li>
+</ul>
+
+<p>
+We can calculate this similarly to part (b) (and by similarly, I mean I literally copy pasted the result and did a search and replace)
+</p>
+
+
+<p>
+Let us condition ok two properties, \[ Y_k = i \] and that the "Next coin is Silver = S" or "Next coin is Gold = G".
+</p>
+
+<p>
+\[ \begin{align*}
+P(Y_{k-1} = j)
+&= \sum_{i \in [0 .. k]} P(Y_{k-1} = j \vert S \land \ Y_k = i) P(S \land Y_k = i)\\ &+ P(Y_{k-1} = j \vert G \land \ Y_k = i) P(G \land Y_k = i) \\
+&= \sum_{i \in [0 .. k]} P(Y_{k-1} = j \vert S \land \ Y_k = i) P(S \vert Y_k = i) P(Y_k = i)\\ &+ P(Y_{k-1} = j \vert G \land \ Y_k = i) P(G \vert Y_k = i) P(Y_k = i) \\
+\end{align*}\]
+Now we may evaluate some of the expressions.
+\[ P(Y_{k-1} = j \vert S \land \ Y_k = i) = \begin{cases} 1 & j = i-1 \\ 0 & \text{else} \end{cases} \] 
+\[ P(Y_{k-1} = j \vert G \land \ Y_k = i) = \begin{cases} 1 & j = i \\ 0 & \text{else} \end{cases} \] 
+\[ P(S \vert \ Y_k = i) =  \frac{i}{k} \] 
+\[ P(G \vert \ Y_k = i) =  \frac{k - i}{k} \]
+\[ P(Y_k = i) = \frac{1}{k+1} \]
+</p>
+
+<p>
+Due to the first two equations, we get a lot of zero terms. There are only two cases when there are non zero terms. That being when \[ i = j \] and \[ i = j + 1 \] 
+So the sum becomes \[ 1 \cdot \frac{j + 1}{k} \cdot \frac{1}{k + 1} + 1 \cdot \frac{k - j}{k} \cdot \frac{1}{k+1} = \frac{1}{k} \]
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgae1009d" class="outline-3">
+<h3 id="orgae1009d"><span class="section-number-3">3.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-3-6">
+<ul class="org-ul">
+<li>a</li>
+</ul>
+<p>
+Let \(P_{n,m} := P(A \text{ is always ahead} \vert \ [A \text{ has } n \text{ votes}] \land [B \text{ has } m \text{ votes}])\)
+</p>
+
+<p>
+Then \(1 - P_{m,n}\) is the probability of the negation; thus \(1 - P_{m,n} = P(A \text{ is not always ahead} \vert \ [A \text{ has } n \text{ votes}] \land [B \text{ has } m \text{ votes}])\)
+If there is a point where \(A\) is not always ahead, then there exists a time where \(A\) is tied with \(B\). Hence, \(1 - P_{m,n} = P(A \text{ is at some point tied with } B \vert \ [A \text{ has } n \text{ votes}] \land [B \text{ has } m \text{ votes}])\)
+</p>
+
+
+<ul class="org-ul">
+<li>b</li>
+</ul>
+<p>
+We know that \(A\) eventually wins due to \(n > m\). Hence any sequence that begins with \(B\) will eventually tie. Also any sequence that begins with \(A\) can be put in put in bijection with a sequence starting with \(B\). This is because any sequence that ties with \(A\) starting can be flipped (A to B and B to A) into a sequence beginning with \(B\) and eventually tying. This is has an inverse, hence bijective.
+</p>
+
+<p>
+Note: \(A\) and \(B\) cannot tie in the first vote because either \(A\) or \(B\) gets one vote and the other has zero. So someone is ahead on the first vote.
+If \(A\) and \(B\) eventually tie, then there is one person who was ahead of the other, then there was one vote that tied them. Call the first such case the \(n\) th vote. Both are tied on the \(n\) th vote.
+If one person was ahead of another, and they tie, that means the person that was behind was the one that got the \(n\) th vote.
+</p>
+
+<p>
+Hence, the one who was ahead gets the first vote and the person who was behind gets the \(n\) th vote.
+</p>
+
+<p>
+By reversing the order of the votes, we get a dual case where the person who was ahead in the original case is now the person who was behind in the dual case. This is a bijection of cases hence it does not matter who gets the first vote.
+</p>
+
+<ul class="org-ul">
+<li>c</li>
+</ul>
+<p>
+We prove this by counting.
+</p>
+
+<p>
+\[ P(T) = \frac{\text{No. of Sequences with Ties}}{\text{No. of Sequences}} \] 
+</p>
+
+<p>
+There are \[  \] 
+</p>
+
+<p>
+Let \(t\) be the number of sequences that end have ties. Each sequence is determined by the places where \(n\) votes for \(A\) are given.  
+</p>
+
+<p>
+The probability of tying is \[ P(T) = P(T \land A) + P(T \land B) = 2 \cdot P(T \land B) \]
+</p>
+
+<p>
+\[ P(T) = 2 \cdot P(T | B) P(B) \] because there is a bijection between tying sequences beginning with \(A\) or \(B\). Because \(A\) always wins we know \(P(T | B) = 1\) hence \(P(T) = 2 \cdot \frac{m}{m + n}\).
+</p>
+
+<p>
+Thus
+\[ \begin{align*}
+P_{n,m}
+&= 1 - P(\text{Sequence eventually ties}) \\
+&= 1 - 2 \cdot P(\text{Sequence begins with }B) \\
+&= 1 - 2 \frac{m}{m+n} \\
+&= \frac{n - m}{m+n} \\
+\end{align*}\] 
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
