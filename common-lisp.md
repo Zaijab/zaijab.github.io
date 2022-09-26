@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 15:17 -->
+<!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Common Lisp</title>
@@ -206,24 +206,24 @@
 <h1 class="title">Common Lisp</h1>
 
 
-<div id="outline-container-orgee8e7fe" class="outline-2">
-<h2 id="orgee8e7fe"><span class="section-number-2">1.</span> Evaluation Loop</h2>
+<div id="outline-container-orgc8e0b3a" class="outline-2">
+<h2 id="orgc8e0b3a"><span class="section-number-2">1.</span> Evaluation Loop</h2>
 </div>
 
-<div id="outline-container-org1c484eb" class="outline-2">
-<h2 id="org1c484eb"><span class="section-number-2">2.</span> Common Lisp as a Shell</h2>
+<div id="outline-container-orgca415f0" class="outline-2">
+<h2 id="orgca415f0"><span class="section-number-2">2.</span> Common Lisp as a Shell</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgefb08ad" class="outline-3">
-<h3 id="orgefb08ad"><span class="section-number-3">2.1.</span> File IO</h3>
+<div id="outline-container-org2b4b6f0" class="outline-3">
+<h3 id="org2b4b6f0"><span class="section-number-3">2.1.</span> File IO</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgd5a9abe" class="outline-4">
-<h4 id="orgd5a9abe"><span class="section-number-4">2.1.1.</span> Creating Files</h4>
+<div id="outline-container-org38e8c12" class="outline-4">
+<h4 id="org38e8c12"><span class="section-number-4">2.1.1.</span> Creating Files</h4>
 </div>
 
-<div id="outline-container-orgd814c61" class="outline-4">
-<h4 id="orgd814c61"><span class="section-number-4">2.1.2.</span> Renaming / Moving Files</h4>
+<div id="outline-container-org1201149" class="outline-4">
+<h4 id="org1201149"><span class="section-number-4">2.1.2.</span> Renaming / Moving Files</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <p>
 Use the `(rename-file old-path new-path)`
@@ -233,24 +233,24 @@ Use the `(rename-file old-path new-path)`
 </div>
 </div>
 
-<div id="outline-container-org80da2cd" class="outline-2">
-<h2 id="org80da2cd"><span class="section-number-2">3.</span> Development Environments</h2>
+<div id="outline-container-orgf4c1da3" class="outline-2">
+<h2 id="orgf4c1da3"><span class="section-number-2">3.</span> Development Environments</h2>
 </div>
 
-<div id="outline-container-org5849f0f" class="outline-2">
-<h2 id="org5849f0f"><span class="section-number-2">4.</span> NYXT</h2>
+<div id="outline-container-org56ee309" class="outline-2">
+<h2 id="org56ee309"><span class="section-number-2">4.</span> NYXT</h2>
 </div>
 
-<div id="outline-container-orgd6a6997" class="outline-2">
-<h2 id="orgd6a6997"><span class="section-number-2">5.</span> Example Programs</h2>
+<div id="outline-container-orga63e5b0" class="outline-2">
+<h2 id="orga63e5b0"><span class="section-number-2">5.</span> Example Programs</h2>
 </div>
 
-<div id="outline-container-orgbf8880c" class="outline-2">
-<h2 id="orgbf8880c"><span class="section-number-2">6.</span> Leetcode</h2>
+<div id="outline-container-org5765843" class="outline-2">
+<h2 id="org5765843"><span class="section-number-2">6.</span> Leetcode</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgb30a7a0" class="outline-3">
-<h3 id="orgb30a7a0"><span class="section-number-3">6.1.</span> Two Sum</h3>
+<div id="outline-container-org9b215fc" class="outline-3">
+<h3 id="org9b215fc"><span class="section-number-3">6.1.</span> Two Sum</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
 <pre class="src src-common-lisp"><span style="color: #000000;">(</span><span style="color: #5317ac;">defparameter</span> <span style="color: #00538b;">*nums*</span> '<span style="color: #a8007f;">(</span>2 7 11 15<span style="color: #a8007f;">)</span><span style="color: #000000;">)</span>
@@ -261,8 +261,8 @@ Use the `(rename-file old-path new-path)`
 </div>
 </div>
 
-<div id="outline-container-orgd49473e" class="outline-4">
-<h4 id="orgd49473e"><span class="section-number-4">6.1.1.</span> Description</h4>
+<div id="outline-container-org561cbe3" class="outline-4">
+<h4 id="org561cbe3"><span class="section-number-4">6.1.1.</span> Description</h4>
 <div class="outline-text-4" id="text-6-1-1">
 <p>
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -278,12 +278,12 @@ You can return the answer in any order.
 </div>
 </div>
 
-<div id="outline-container-org6406983" class="outline-4">
-<h4 id="org6406983"><span class="section-number-4">6.1.2.</span> Examples</h4>
+<div id="outline-container-org7babba0" class="outline-4">
+<h4 id="org7babba0"><span class="section-number-4">6.1.2.</span> Examples</h4>
 <div class="outline-text-4" id="text-6-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="orgb5fcd42"></a>1<br />
+<li><a id="org17fd8b1"></a>1<br />
 <div class="outline-text-5" id="text-6-1-2-1">
 <p>
 Input: nums = [2,7,11,15], target = 9
@@ -293,7 +293,7 @@ Output: Because nums[0] + nums[1] == 9, we return [0, 1].
 </div>
 </li>
 
-<li><a id="org8d327d6"></a>2<br />
+<li><a id="org711ae64"></a>2<br />
 <div class="outline-text-5" id="text-6-1-2-2">
 <p>
 Input: nums = [3,2,4], target = 6
@@ -302,7 +302,7 @@ Output: [1,2]
 </div>
 </li>
 
-<li><a id="orged14c3a"></a>3<br />
+<li><a id="org7916014"></a>3<br />
 <div class="outline-text-5" id="text-6-1-2-3">
 <p>
 Input: nums = [3,3], target = 6
@@ -313,8 +313,8 @@ Output: [0,1]
 </ol>
 </div>
 
-<div id="outline-container-org20ed76e" class="outline-4">
-<h4 id="org20ed76e"><span class="section-number-4">6.1.3.</span> Constraints</h4>
+<div id="outline-container-orga0c8778" class="outline-4">
+<h4 id="orga0c8778"><span class="section-number-4">6.1.3.</span> Constraints</h4>
 <div class="outline-text-4" id="text-6-1-3">
 <p>
 2 &lt;= nums.length &lt;= 104
@@ -325,8 +325,8 @@ Only one valid answer exists.
 </div>
 </div>
 
-<div id="outline-container-orgb507383" class="outline-4">
-<h4 id="orgb507383"><span class="section-number-4">6.1.4.</span> Follow-up</h4>
+<div id="outline-container-org4109b8d" class="outline-4">
+<h4 id="org4109b8d"><span class="section-number-4">6.1.4.</span> Follow-up</h4>
 <div class="outline-text-4" id="text-6-1-4">
 <p>
 Can you come up with an algorithm that is less than O(n2) time complexity?

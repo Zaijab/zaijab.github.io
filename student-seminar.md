@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-09-25 Sun 15:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Seminar</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+<link rel="stylesheet" href="/css/main-dark.css" type="text/css"/>
+<header><div class="menu"><ul>
+<li><a href="/">/</a></li>
+<li><a href="/about.html">/about</a></li>
+<li><a href="/categories.html">/categories</a></li>
+</ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Student Seminar</h1>
+<p>
+Overall Themes are to use formal math from the 400 levels to improve the quality of ones life in some way.
+</p>
+
+<div id="outline-container-org125da27" class="outline-2">
+<h2 id="org125da27"><span class="section-number-2">1.</span> Cryptography</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf82241d" class="outline-3">
+<h3 id="orgf82241d"><span class="section-number-3">1.1.</span> Importance of FOSS software</h3>
+</div>
+
+
+<div id="outline-container-org9811883" class="outline-3">
+<h3 id="org9811883"><span class="section-number-3">1.2.</span> Reproducibility of Software Environments and Science</h3>
+</div>
+
+
+<div id="outline-container-org9866e2b" class="outline-3">
+<h3 id="org9866e2b"><span class="section-number-3">1.3.</span> Creating GPG Keys</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org973fe71" class="outline-4">
+<h4 id="org973fe71"><span class="section-number-4">1.3.1.</span> Master Keys</h4>
+</div>
+
+
+<div id="outline-container-org022f016" class="outline-4">
+<h4 id="org022f016"><span class="section-number-4">1.3.2.</span> Sub Keys</h4>
+</div>
+
+
+<div id="outline-container-org4ab7d52" class="outline-4">
+<h4 id="org4ab7d52"><span class="section-number-4">1.3.3.</span> Permissions</h4>
+<div class="outline-text-4" id="text-1-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org663bf13"></a>Encrypt<br /></li>
+
+<li><a id="org039bf65"></a>Sign<br /></li>
+
+<li><a id="org2d57a68"></a>Authenticate<br /></li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org5b7dad2" class="outline-3">
+<h3 id="org5b7dad2"><span class="section-number-3">1.4.</span> Signing Emails with GPG</h3>
+</div>
+
+
+<div id="outline-container-orgf547be8" class="outline-3">
+<h3 id="orgf547be8"><span class="section-number-3">1.5.</span> Signing Git commits with GPG</h3>
+</div>
+
+
+<div id="outline-container-orgf461a0f" class="outline-3">
+<h3 id="orgf461a0f"><span class="section-number-3">1.6.</span> Logging into a server with GPG</h3>
+</div>
+
+
+<div id="outline-container-org5494ccd" class="outline-3">
+<h3 id="org5494ccd"><span class="section-number-3">1.7.</span> Maintaining Passwords with GPG</h3>
+</div>
+
+
+<div id="outline-container-org5c5c4a3" class="outline-3">
+<h3 id="org5c5c4a3"><span class="section-number-3">1.8.</span> Encrypting Files with GPG</h3>
+</div>
+
+
+<div id="outline-container-orgb6887c4" class="outline-3">
+<h3 id="orgb6887c4"><span class="section-number-3">1.9.</span> Downloading the right programs with SHA-256</h3>
+</div>
+
+
+<div id="outline-container-org84708ea" class="outline-3">
+<h3 id="org84708ea"><span class="section-number-3">1.10.</span> Encrypting Web Traffic using home VPN</h3>
+</div>
+
+
+<div id="outline-container-org2816161" class="outline-3">
+<h3 id="org2816161"><span class="section-number-3">1.11.</span> Secure Messaging (Email + GNU Jami + IRC)</h3>
+</div>
+
+
+<div id="outline-container-org52e6c28" class="outline-3">
+<h3 id="org52e6c28"><span class="section-number-3">1.12.</span> Cryptocurrency as a (purely) secure means of transferring money</h3>
+</div>
+</div>
+
+
+
+<div id="outline-container-org338cafb" class="outline-2">
+<h2 id="org338cafb"><span class="section-number-2">2.</span> Data Science</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orge1f1109" class="outline-3">
+<h3 id="orge1f1109"><span class="section-number-3">2.1.</span> Understanding Biology Papers from PubMed, BioArxiv, and reputable journals</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org746d4ef" class="outline-4">
+<h4 id="org746d4ef"><span class="section-number-4">2.1.1.</span> Sunlight Viewing</h4>
+</div>
+
+<div id="outline-container-orgb6e2c82" class="outline-4">
+<h4 id="orgb6e2c82"><span class="section-number-4">2.1.2.</span> Optimal Sleep Supplements</h4>
+</div>
+
+<div id="outline-container-orge599d65" class="outline-4">
+<h4 id="orge599d65"><span class="section-number-4">2.1.3.</span> Using Cortisol to learn</h4>
+</div>
+
+<div id="outline-container-orgf0363c6" class="outline-4">
+<h4 id="orgf0363c6"><span class="section-number-4">2.1.4.</span> When to Drink Coffee</h4>
+</div>
+
+<div id="outline-container-orgf587b9d" class="outline-4">
+<h4 id="orgf587b9d"><span class="section-number-4">2.1.5.</span> Hypertrophy and Strength</h4>
+</div>
+
+<div id="outline-container-orgb298d63" class="outline-4">
+<h4 id="orgb298d63"><span class="section-number-4">2.1.6.</span> Memory</h4>
+</div>
+</div>
+
+<div id="outline-container-orgebf61bb" class="outline-3">
+<h3 id="orgebf61bb"><span class="section-number-3">2.2.</span> Understanding P-Values</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgf5bab66" class="outline-4">
+<h4 id="orgf5bab66"><span class="section-number-4">2.2.1.</span> Definition of P-Values</h4>
+</div>
+
+<div id="outline-container-org1d647fd" class="outline-4">
+<h4 id="org1d647fd"><span class="section-number-4">2.2.2.</span> P-Hacking</h4>
+</div>
+
+<div id="outline-container-org1bbb4cc" class="outline-4">
+<h4 id="org1bbb4cc"><span class="section-number-4">2.2.3.</span> Seeing which papers were P-Hacked</h4>
+</div>
+
+<div id="outline-container-org8a49bb4" class="outline-4">
+<h4 id="org8a49bb4"><span class="section-number-4">2.2.4.</span> Distinguishing reputable sources from non reputable ones</h4>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org7b676cd" class="outline-2">
+<h2 id="org7b676cd"><span class="section-number-2">3.</span> Formal Verification of Proofs</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org7e09066" class="outline-3">
+<h3 id="org7e09066"><span class="section-number-3">3.1.</span> Introduction to LEAN</h3>
+</div>
+</div>
+
+
+<div id="outline-container-org57ee232" class="outline-2">
+<h2 id="org57ee232"><span class="section-number-2">4.</span> Probability as a Logical Framework</h2>
+</div>
+
+
+<div id="outline-container-org7fb213c" class="outline-2">
+<h2 id="org7fb213c"><span class="section-number-2">5.</span> Lectures</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgd3bd33d" class="outline-3">
+<h3 id="orgd3bd33d"><span class="section-number-3">5.1.</span> Lecture 1 Rigorous Proofs of RSA Algorithm using Modular Arithmetic</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+How does modern cryptography work? Using simple modular arithmetic and properties of working in \[ \mathbb{Z} / n \mathbb{Z} \] we can create an asymmetric key pair which can act like a lock and key.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8d5f590" class="outline-3">
+<h3 id="org8d5f590"><span class="section-number-3">5.2.</span> Lecture 2 Introduction to Package Verification with GNU Guix</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+How do you know that the software running on your computer is the right one you want to run? If we want to download Google Chrome, a program we will use to log into sites and enter credit card information, how do we know that this Google Chrome has not been edited by a third party to be a malicious version. It turns out that there are compiler hackers, when you compile code, the compiler itself can be used to turn normal trusted code into malicious machine code.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-org38ac52e" class="outline-3">
+<h3 id="org38ac52e"><span class="section-number-3">5.3.</span> Lecture 3 Introduction to GPG, Creating Keys and Enabling Privileges</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+A piece of software called GPG implements the algorithm we proved in lecture 1. We will use this to generate key pairs, store them on our computers, synchronize between computers, and import identities of our fellow peers. Also, with the keys come sub keys which can be used to also do encryption but also signing messages.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orge239e60" class="outline-3">
+<h3 id="orge239e60"><span class="section-number-3">5.4.</span> Lecture 4 Introduction to Unix Password Store</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+We need to manage passwords somehow, but most of us keep the information within our head. With how many times we need to enter in our information, we may end up optimizing for the wrong thing and have easy to remember and short passwords. Using the UNIX Password Store, generating long and strong passwords is easy, and remembering them is a thing of the past with clipboard input. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgf5a5d52" class="outline-3">
+<h3 id="orgf5a5d52"><span class="section-number-3">5.5.</span> Lecture 5 Securely Signing into a Server (HPC) with GPG with SSH Emulation</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Everyone should request access to UHM's HPC to both get more familiar with Linux, Data Science, Python, Bash, and secure logins.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org24bd83e" class="outline-3">
+<h3 id="org24bd83e"><span class="section-number-3">5.6.</span> Lecture 6 Signing Email and Git Commits with GPG Keys</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+In spirit with lecture 2, how can we tell others that our emails are really sent by us? Suppose <code>zaijab2000</code> (Zain Jabbar) sends you an email. Do you know if Zain himself sent you that message or did a hacker get into the email account and send it on Zain's behalf? This process of verification can extend to more than Email if we so choose. We can apply the same theory to signing Git messages to verify that the code we are adding to the code base is from the verified user.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org760ca8e" class="outline-3">
+<h3 id="org760ca8e"><span class="section-number-3">5.7.</span> Lecture 7 Secure Communication with GNU Jami and Encrypted Email</h3>
+<div class="outline-text-3" id="text-5-7">
+<p>
+In the olden days, letters with cipher's were used to send secret information between two parties. We can apply the modern analog of this by using secure messaging services like GNU Jami or by encrypting our mail and having our peers decrypt it. Certain mail clients can do this process automatically, meaning we can send and read encrypted content very easily with little risk.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgeaeb14f" class="outline-3">
+<h3 id="orgeaeb14f"><span class="section-number-3">5.8.</span> Lecture 8 Introduction to Cryptocurrencies and Distributed Trust</h3>
+<div class="outline-text-3" id="text-5-8">
+<p>
+So far we have studied cryptography in the setting of sending information between two trusted people in a way that keeps third parties out of the picture. In this lecture we try to understand a different problem statement. What if a group wants to communicate an idea, but we cannot trust any individual within the group? This is a case study in cryptocurrencies, how does the Bitcoin network not allow me to just say "I have a billion Bitcoin.", how does Bitcoin work without a central server? How do Torrents work? How can CAPTCHA's be used to mine information for Neural Networks?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdb5ebdd" class="outline-3">
+<h3 id="orgdb5ebdd"><span class="section-number-3">5.9.</span> Lecture 9 Introduction to Data Science Calculation of a P-Value</h3>
+<div class="outline-text-3" id="text-5-9">
+<p>
+We define the notion of a random variable, distribution, density, hypothesis testing and calculate the p-value in detail of normally distributed data. The verification is done on whiteboard with rigor, and numerically in Python.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10219a9" class="outline-3">
+<h3 id="org10219a9"><span class="section-number-3">5.10.</span> Lecture 10 Analyzing Papers which defy the Status Quo</h3>
+<div class="outline-text-3" id="text-5-10">
+<p>
+With our understanding of P-Values and Statistics, we can analyze real world events with greater levels of scrutiny 
+</p>
+</div>
+
+<div id="outline-container-org5039cbb" class="outline-4">
+<h4 id="org5039cbb"><span class="section-number-4">5.10.1.</span> Learning Styles Do Not Exist</h4>
+</div>
+
+<div id="outline-container-org9cbac88" class="outline-4">
+<h4 id="org9cbac88"><span class="section-number-4">5.10.2.</span> Grading does not help students</h4>
+</div>
+
+<div id="outline-container-orgfeabc8b" class="outline-4">
+<h4 id="orgfeabc8b"><span class="section-number-4">5.10.3.</span> Cold Showers Increases Body Temperature</h4>
+</div>
+
+<div id="outline-container-org54c52ac" class="outline-4">
+<h4 id="org54c52ac"><span class="section-number-4">5.10.4.</span> Aging is not inevitable, it is a disease which we could reverse.</h4>
+</div>
+
+<div id="outline-container-orgd15343e" class="outline-4">
+<h4 id="orgd15343e"><span class="section-number-4">5.10.5.</span> Testosterone does not increase aggression</h4>
+</div>
+</div>
+
+<div id="outline-container-orgce65345" class="outline-3">
+<h3 id="orgce65345"><span class="section-number-3">5.11.</span> Lecture 11 Searching Through Peer-Reviewed Journals for Personal Health</h3>
+<div class="outline-text-3" id="text-5-11">
+</div>
+<div id="outline-container-orge5fba44" class="outline-4">
+<h4 id="orge5fba44"><span class="section-number-4">5.11.1.</span> Sunlight Exposure health benefits</h4>
+</div>
+
+<div id="outline-container-org0832d97" class="outline-4">
+<h4 id="org0832d97"><span class="section-number-4">5.11.2.</span> Muscle Hypertrophy is volume determined</h4>
+</div>
+
+<div id="outline-container-org7d7fca2" class="outline-4">
+<h4 id="org7d7fca2"><span class="section-number-4">5.11.3.</span> 15 minute Meditation on Focus</h4>
+</div>
+
+<div id="outline-container-org0e60a69" class="outline-4">
+<h4 id="org0e60a69"><span class="section-number-4">5.11.4.</span> Effects of Cortisol on Memory</h4>
+</div>
+
+<div id="outline-container-org3cbbbd4" class="outline-4">
+<h4 id="org3cbbbd4"><span class="section-number-4">5.11.5.</span> Load Bearing Exercise on Memory</h4>
+</div>
+</div>
+
+<div id="outline-container-orgf048195" class="outline-3">
+<h3 id="orgf048195"><span class="section-number-3">5.12.</span> Lecture 12 Introduction to Modern Portfolio Analysis</h3>
+<div class="outline-text-3" id="text-5-12">
+<p>
+Here we use mathematical modeling to glean helpful information about a given persons portfolio. How can we apply a study of variance to our portfolios and give us the most ROI on a certain risk threshold.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9b7b625" class="outline-3">
+<h3 id="org9b7b625"><span class="section-number-3">5.13.</span> Lecture 13 Introduction to the LEAN Theorem Prover</h3>
+<div class="outline-text-3" id="text-5-13">
+<p>
+Proofs in math are heavily structured and made to be calculatable. But math majors have never gone in and computationally verified their proofs. Many proofs remain heuristic, and lacking in detail. The fundamental rules of how one proves something are forgotten. Here we introduce the LEAN3 theorem prover and do some basic propositional logical verifications as exercise. Then we prove the infinitude of primes.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

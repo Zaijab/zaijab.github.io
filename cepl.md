@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>CEPL</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -203,21 +203,48 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
-<p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
-</p>
+<h1 class="title">CEPL</h1>
+
+<div id="outline-container-orgc13aaf3" class="outline-2">
+<h2 id="orgc13aaf3"><span class="section-number-2">1.</span> Initializing CEPL</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Create a CEPL Project using quickproject</li>
+<li>Add project to ASDF central registry</li>
+<li>Use ASDF load system then go into package</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org8015482" class="outline-2">
+<h2 id="org8015482"><span class="section-number-2">2.</span> GPU Functions</h2>
+</div>
+
+<div id="outline-container-org37d4681" class="outline-2">
+<h2 id="org37d4681"><span class="section-number-2">3.</span> Display</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>Open up a Host (Defau lt Cepl.SDL2)</li>
+<li>Create a GPU Pipeline</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd51328d" class="outline-2">
+<h2 id="orgd51328d"><span class="section-number-2">4.</span> Triangles</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4b40cd7" class="outline-3">
+<h3 id="org4b40cd7"><span class="section-number-3">4.1.</span> TL;DR</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-lisp">
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

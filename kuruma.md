@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 15:17 -->
+<!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>kuruma</title>
@@ -204,20 +204,20 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">kuruma</h1>
-<div id="outline-container-orgfd62795" class="outline-2">
-<h2 id="orgfd62795"><span class="section-number-2">1.</span> [自動車]&#xa0;&#xa0;&#xa0;<span class="tag"><span class="drill">drill</span>&#xa0;<span class="Japanese">Japanese</span></span></h2>
+<div id="outline-container-org235c6aa" class="outline-2">
+<h2 id="org235c6aa"><span class="section-number-2">1.</span> [自動車]&#xa0;&#xa0;&#xa0;<span class="tag"><span class="drill">drill</span>&#xa0;<span class="Japanese">Japanese</span></span></h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgd35d962" class="outline-3">
-<h3 id="orgd35d962"><span class="section-number-3">1.1.</span> Kanji</h3>
+<div id="outline-container-orgb76b028" class="outline-3">
+<h3 id="orgb76b028"><span class="section-number-3">1.1.</span> Kanji</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 自動車
 </p>
 </div>
 </div>
-<div id="outline-container-orga9fb0f9" class="outline-3">
-<h3 id="orga9fb0f9"><span class="section-number-3">1.2.</span> Kana</h3>
+<div id="outline-container-org9dbc1ad" class="outline-3">
+<h3 id="org9dbc1ad"><span class="section-number-3">1.2.</span> Kana</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 じどうしゃ

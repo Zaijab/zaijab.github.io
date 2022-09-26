@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>Car</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -203,21 +203,32 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">Car</h1>
+<div id="outline-container-orga6dd8f1" class="outline-2">
+<h2 id="orga6dd8f1"><span class="section-number-2">1.</span> [自動車]&#xa0;&#xa0;&#xa0;<span class="tag"><span class="drill">drill</span>&#xa0;<span class="Japanese">Japanese</span></span></h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd00b031" class="outline-3">
+<h3 id="orgd00b031"><span class="section-number-3">1.1.</span> Kanji</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+自動車
+**Picture
 </p>
+</div>
+</div>
+
+<div id="outline-container-orgfade326" class="outline-3">
+<h3 id="orgfade326"><span class="section-number-3">1.2.</span> Kana</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+じどうしゃ
+**English
+car
+</p>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

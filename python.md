@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 15:17 -->
+<!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Python</title>
@@ -205,23 +205,23 @@
 <div id="content" class="content">
 <h1 class="title">Python</h1>
 
-<div id="outline-container-orge61b6bd" class="outline-2">
-<h2 id="orge61b6bd"><span class="section-number-2">1.</span> Language Syntax</h2>
+<div id="outline-container-org2aa7ac7" class="outline-2">
+<h2 id="org2aa7ac7"><span class="section-number-2">1.</span> Language Syntax</h2>
 </div>
-<div id="outline-container-orga350af7" class="outline-2">
-<h2 id="orga350af7"><span class="section-number-2">2.</span> Useful Libraries</h2>
+<div id="outline-container-org3f7a899" class="outline-2">
+<h2 id="org3f7a899"><span class="section-number-2">2.</span> Useful Libraries</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orga3898f6" class="outline-3">
-<h3 id="orga3898f6"><span class="section-number-3">2.1.</span> Pandas</h3>
+<div id="outline-container-org0356531" class="outline-3">
+<h3 id="org0356531"><span class="section-number-3">2.1.</span> Pandas</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org545bbeb" class="outline-4">
-<h4 id="org545bbeb"><span class="section-number-4">2.1.1.</span> Data Structures</h4>
+<div id="outline-container-org7bf004d" class="outline-4">
+<h4 id="org7bf004d"><span class="section-number-4">2.1.1.</span> Data Structures</h4>
 <div class="outline-text-4" id="text-2-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org1349680"></a>Series<br />
+<li><a id="org0d8ef60"></a>Series<br />
 <div class="outline-text-5" id="text-2-1-1-1">
 <p>
 A one-dimensional labelled array holding any data type.
@@ -229,29 +229,29 @@ Axis labels are called the index.
 </p>
 </div>
 </li>
-<li><a id="org9fa19f0"></a>DataFrame<br /></li>
+<li><a id="org7d8743d"></a>DataFrame<br /></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org989943a" class="outline-3">
-<h3 id="org989943a"><span class="section-number-3">2.2.</span> Matplotlib</h3>
+<div id="outline-container-orgcc656e5" class="outline-3">
+<h3 id="orgcc656e5"><span class="section-number-3">2.2.</span> Matplotlib</h3>
 </div>
-<div id="outline-container-org6ed16bd" class="outline-3">
-<h3 id="org6ed16bd"><span class="section-number-3">2.3.</span> Scikit</h3>
+<div id="outline-container-orgbe21c6e" class="outline-3">
+<h3 id="orgbe21c6e"><span class="section-number-3">2.3.</span> Scikit</h3>
 </div>
-<div id="outline-container-orgfdaafa9" class="outline-3">
-<h3 id="orgfdaafa9"><span class="section-number-3">2.4.</span> Numpy</h3>
+<div id="outline-container-org5996158" class="outline-3">
+<h3 id="org5996158"><span class="section-number-3">2.4.</span> Numpy</h3>
 </div>
 </div>
-<div id="outline-container-orgd36e829" class="outline-2">
-<h2 id="orgd36e829"><span class="section-number-2">3.</span> Interview Problems</h2>
+<div id="outline-container-org9f8e84c" class="outline-2">
+<h2 id="org9f8e84c"><span class="section-number-2">3.</span> Interview Problems</h2>
 </div>
-<div id="outline-container-org59d4185" class="outline-2">
-<h2 id="org59d4185"><span class="section-number-2">4.</span> Standard Problems</h2>
+<div id="outline-container-org3e9f1c2" class="outline-2">
+<h2 id="org3e9f1c2"><span class="section-number-2">4.</span> Standard Problems</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgdf231f1" class="outline-3">
-<h3 id="orgdf231f1"><span class="section-number-3">4.1.</span> Load Data</h3>
+<div id="outline-container-org9ae3219" class="outline-3">
+<h3 id="org9ae3219"><span class="section-number-3">4.1.</span> Load Data</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #00538b;">dataframe</span> = pd.read_csv<span style="color: #000000;">(</span><span style="color: #2544bb;">"data/DATA"</span><span style="color: #000000;">)</span>
@@ -259,12 +259,12 @@ Axis labels are called the index.
 </div>
 </div>
 </div>
-<div id="outline-container-org4b0fd3f" class="outline-3">
-<h3 id="org4b0fd3f"><span class="section-number-3">4.2.</span> Display Data</h3>
+<div id="outline-container-org5d40ec7" class="outline-3">
+<h3 id="org5d40ec7"><span class="section-number-3">4.2.</span> Display Data</h3>
 <div class="outline-text-3" id="text-4-2">
 </div>
-<div id="outline-container-orga9b0940" class="outline-4">
-<h4 id="orga9b0940"><span class="section-number-4">4.2.1.</span> Pretty Print</h4>
+<div id="outline-container-org5ae1230" class="outline-4">
+<h4 id="org5ae1230"><span class="section-number-4">4.2.1.</span> Pretty Print</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <div class="org-src-container">
 <pre class="src src-python">dataframe
@@ -272,8 +272,8 @@ Axis labels are called the index.
 </div>
 </div>
 </div>
-<div id="outline-container-org49c5aa2" class="outline-4">
-<h4 id="org49c5aa2"><span class="section-number-4">4.2.2.</span> Begining</h4>
+<div id="outline-container-org1d80fb0" class="outline-4">
+<h4 id="org1d80fb0"><span class="section-number-4">4.2.2.</span> Begining</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <div class="org-src-container">
 <pre class="src src-python">dataframe.head<span style="color: #000000;">(</span>10<span style="color: #000000;">)</span>
@@ -281,8 +281,8 @@ Axis labels are called the index.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc803c47" class="outline-4">
-<h4 id="orgc803c47"><span class="section-number-4">4.2.3.</span> End</h4>
+<div id="outline-container-org7d5659a" class="outline-4">
+<h4 id="org7d5659a"><span class="section-number-4">4.2.3.</span> End</h4>
 <div class="outline-text-4" id="text-4-2-3">
 <div class="org-src-container">
 <pre class="src src-python">dataframe.tail<span style="color: #000000;">(</span>10<span style="color: #000000;">)</span>
@@ -291,8 +291,8 @@ Axis labels are called the index.
 </div>
 </div>
 </div>
-<div id="outline-container-orgb1dc3ac" class="outline-3">
-<h3 id="orgb1dc3ac"><span class="section-number-3">4.3.</span> Rename Columns</h3>
+<div id="outline-container-orga4f3eb8" class="outline-3">
+<h3 id="orga4f3eb8"><span class="section-number-3">4.3.</span> Rename Columns</h3>
 <div class="outline-text-3" id="text-4-3">
 <div class="org-src-container">
 <pre class="src src-python">dataframe.rename<span style="color: #000000;">(</span>columns=FUNCTION, inplace=<span style="color: #0000c0;">True</span><span style="color: #000000;">)</span>

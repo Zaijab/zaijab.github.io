@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>UHM Energy</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -203,21 +203,183 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">UHM Energy</h1>
+
+<div id="outline-container-org152e81b" class="outline-2">
+<h2 id="org152e81b"><span class="section-number-2">1.</span> Technology</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orga5ff746" class="outline-3">
+<h3 id="orga5ff746"><span class="section-number-3">1.1.</span> PostgreSQL</h3>
+</div>
+
+<div id="outline-container-org122ecfd" class="outline-3">
+<h3 id="org122ecfd"><span class="section-number-3">1.2.</span> SSH</h3>
+</div>
+
+<div id="outline-container-org30a73eb" class="outline-3">
+<h3 id="org30a73eb"><span class="section-number-3">1.3.</span> Emacs</h3>
+</div>
+</div>
+
+<div id="outline-container-org0471ec4" class="outline-2">
+<h2 id="org0471ec4"><span class="section-number-2">2.</span> Tutorials</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgda04b41" class="outline-3">
+<h3 id="orgda04b41"><span class="section-number-3">2.1.</span> Accessing UHM Servers From Outside UH</h3>
+</div>
+
+<div id="outline-container-orgfb8278c" class="outline-3">
+<h3 id="orgfb8278c"><span class="section-number-3">2.2.</span> Accessing the server holding the database</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org5a28a4c" class="outline-4">
+<h4 id="org5a28a4c"><span class="section-number-4">2.2.1.</span> Windows</h4>
+<div class="outline-text-4" id="text-2-2-1">
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+Download the following software
 </p>
+
+<ol class="org-ol">
+<li>Putty</li>
+<li>Puttygen</li>
+</ol>
+</div>
+
+<ol class="org-ol">
+<li><a id="org2dc3659"></a>Generate Public and Private Key<br />
+<div class="outline-text-5" id="text-2-2-1-1">
+<p>
+Use Puttygen to generate two files, a public key and a private key
+Send the public key to a server admin (Justin Delp, Zain Jabbar)
+The server admin will add the public key to <i>home/$USER<sub>TO</sub><sub>ADD</sub></i>.ssh/authorized<sub>keys</sub>
+Use the following command to change Puttygen to OpenSSH:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">ssh-keygen -i -f ~/dwn/public_test_key
+</pre>
+</div>
+</div>
+</li>
+
+<li><a id="orgdc24040"></a>Connect via Putty<br />
+<div class="outline-text-5" id="text-2-2-1-2">
+<p>
+Use the registry configuration to edit the Putty configuration
+Then edit private and public keys in settings
+</p>
+</div>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-org350f579" class="outline-4">
+<h4 id="org350f579"><span class="section-number-4">2.2.2.</span> Linux</h4>
+</div>
+</div>
+
+<div id="outline-container-orgd5813bc" class="outline-3">
+<h3 id="orgd5813bc"><span class="section-number-3">2.3.</span> Accessing the database within the server</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+When logged onto the server we 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd26165" class="outline-3">
+<h3 id="orgbd26165"><span class="section-number-3">2.4.</span> Tableau + Database</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Zain Created a Read only user
+</p>
+<div class="org-src-container">
+<pre class="src src-sql"><span style="color: #5317ac;">CREATE</span> <span style="color: #5317ac;">ROLE</span> uhm_campus_energy_readaccess;
+<span style="color: #5317ac;">GRANT</span> <span style="color: #5317ac;">CONNECT</span> <span style="color: #5317ac;">ON</span> DATABASE uhm2022 <span style="color: #5317ac;">TO</span> uhm_campus_energy_readaccess;
+<span style="color: #5317ac;">GRANT</span> <span style="color: #5317ac;">USAGE</span> <span style="color: #5317ac;">ON</span> <span style="color: #5317ac;">SCHEMA</span> <span style="color: #5317ac;">public</span> <span style="color: #5317ac;">to</span> uhm_campus_energy_readaccess;
+<span style="color: #5317ac;">GRANT</span> <span style="color: #5317ac;">SELECT</span> <span style="color: #5317ac;">ON</span> <span style="color: #5317ac;">ALL</span> TABLES <span style="color: #5317ac;">IN</span> <span style="color: #5317ac;">SCHEMA</span> <span style="color: #5317ac;">public</span> <span style="color: #5317ac;">TO</span> uhm_campus_energy_readaccess;
+<span style="color: #5317ac;">CREATE</span> <span style="color: #8f0075;">USER</span> uhm_campus_energy_reader <span style="color: #5317ac;">WITH</span> PASSWORD <span style="color: #2544bb;">'#anew=Sp!SL44pu95ube'</span>;
+<span style="color: #5317ac;">GRANT</span> uhm_campus_energy_readaccess <span style="color: #5317ac;">TO</span> uhm_campus_energy_reader;
+</pre>
+</div>
+
+<p>
+Change PuTTY Information
+Connection &gt; SSH &gt; Tunnels
+Then add
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Option Name</th>
+<th scope="col" class="org-right">Option Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Source Port</td>
+<td class="org-right">5432</td>
+</tr>
+
+<tr>
+<td class="org-left">Destination</td>
+<td class="org-right">128.171.46.101:5432</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Enter into Tableau with the following information
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Option Name</th>
+<th scope="col" class="org-left">Option Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Hostname</td>
+<td class="org-left">localhost:5432</td>
+</tr>
+
+<tr>
+<td class="org-left">Username</td>
+<td class="org-left">uhm<sub>campus</sub><sub>energy</sub><sub>reader</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">Database</td>
+<td class="org-left">uhm2022</td>
+</tr>
+
+<tr>
+<td class="org-left">Password</td>
+<td class="org-left">#anew=Sp!SL44pu95ube</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

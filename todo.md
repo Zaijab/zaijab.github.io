@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 15:17 -->
+<!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Todo</title>
@@ -205,8 +205,8 @@
 <div id="content" class="content">
 <h1 class="title">Todo</h1>
 
-<div id="outline-container-org9498212" class="outline-2">
-<h2 id="org9498212"><span class="section-number-2">1.</span> Goal</h2>
+<div id="outline-container-org59a545d" class="outline-2">
+<h2 id="org59a545d"><span class="section-number-2">1.</span> Goal</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Tomorrow - Only use Youtube via Elfeed.
@@ -214,8 +214,8 @@ Tomorrow - Only use Youtube via Elfeed.
 </div>
 </div>
 
-<div id="outline-container-orgad1969a" class="outline-2">
-<h2 id="orgad1969a"><span class="section-number-2">2.</span> Tomorrow</h2>
+<div id="outline-container-orgb3cd1a9" class="outline-2">
+<h2 id="orgb3cd1a9"><span class="section-number-2">2.</span> Tomorrow</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Download several Andrew Huberman Episodes and PDFs of books to read
@@ -229,17 +229,17 @@ Wake up at 9 at the latest.
 </div>
 </div>
 
-<div id="outline-container-org74fa68a" class="outline-2">
-<h2 id="org74fa68a"><span class="section-number-2">3.</span> School</h2>
+<div id="outline-container-orgc5afd8e" class="outline-2">
+<h2 id="orgc5afd8e"><span class="section-number-2">3.</span> School</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org277c553" class="outline-3">
-<h3 id="org277c553"><span class="section-number-3">3.1.</span> Toric Varieties Seminar</h3>
+<div id="outline-container-org1dc045e" class="outline-3">
+<h3 id="org1dc045e"><span class="section-number-3">3.1.</span> Toric Varieties Seminar</h3>
 </div>
 </div>
 
-<div id="outline-container-org49edba0" class="outline-2">
-<h2 id="org49edba0"><span class="section-number-2">4.</span> Professional</h2>
+<div id="outline-container-orgbdbecdf" class="outline-2">
+<h2 id="orgbdbecdf"><span class="section-number-2">4.</span> Professional</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 I will focus on being a data scientist, someone who will extract meaning and actionable steps from data.
@@ -247,53 +247,53 @@ The tools I will use for this is Python, Numpy, Pandas, TensorFlow, Scikit-learn
 </p>
 </div>
 
-<div id="outline-container-orge20b222" class="outline-3">
-<h3 id="orge20b222"><span class="section-number-3">4.1.</span> Use Org Roam to make a hypertext linked database</h3>
+<div id="outline-container-orgb909583" class="outline-3">
+<h3 id="orgb909583"><span class="section-number-3">4.1.</span> Use Org Roam to make a hypertext linked database</h3>
 </div>
 
-<div id="outline-container-orgbcee4a3" class="outline-3">
-<h3 id="orgbcee4a3"><span class="section-number-3">4.2.</span> Use Org Export to output to a website and to LaTeX document as a book</h3>
+<div id="outline-container-org23ca5a1" class="outline-3">
+<h3 id="org23ca5a1"><span class="section-number-3">4.2.</span> Use Org Export to output to a website and to LaTeX document as a book</h3>
 </div>
 
-<div id="outline-container-org6912deb" class="outline-3">
-<h3 id="org6912deb"><span class="section-number-3">4.3.</span> Use Org Roam UI to display database visually</h3>
+<div id="outline-container-orga2fcf72" class="outline-3">
+<h3 id="orga2fcf72"><span class="section-number-3">4.3.</span> Use Org Roam UI to display database visually</h3>
 </div>
 
-<div id="outline-container-org87640c1" class="outline-3">
-<h3 id="org87640c1"><span class="section-number-3">4.4.</span> Host Publications on Website</h3>
+<div id="outline-container-org869cd21" class="outline-3">
+<h3 id="org869cd21"><span class="section-number-3">4.4.</span> Host Publications on Website</h3>
 </div>
 
-<div id="outline-container-orgf35e5f6" class="outline-3">
-<h3 id="orgf35e5f6"><span class="section-number-3">4.5.</span> Host Static Website using Github.io</h3>
+<div id="outline-container-org5a3418b" class="outline-3">
+<h3 id="org5a3418b"><span class="section-number-3">4.5.</span> Host Static Website using Github.io</h3>
 </div>
 </div>
 
-<div id="outline-container-org5419fa6" class="outline-2">
-<h2 id="org5419fa6"><span class="section-number-2">5.</span> Computer</h2>
+<div id="outline-container-org2d8695e" class="outline-2">
+<h2 id="org2d8695e"><span class="section-number-2">5.</span> Computer</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orgebef4af" class="outline-3">
-<h3 id="orgebef4af"><span class="section-number-3">5.1.</span> Create default audio profile that makes headphones work on Xorg reset</h3>
+<div id="outline-container-org3010231" class="outline-3">
+<h3 id="org3010231"><span class="section-number-3">5.1.</span> Create default audio profile that makes headphones work on Xorg reset</h3>
 </div>
 
-<div id="outline-container-org39fef1a" class="outline-3">
-<h3 id="org39fef1a"><span class="section-number-3">5.2.</span> Use Nix to install Google Chrome, GSUtils (GCP), Discord</h3>
+<div id="outline-container-org1c31a01" class="outline-3">
+<h3 id="org1c31a01"><span class="section-number-3">5.2.</span> Use Nix to install Google Chrome, GSUtils (GCP), Discord</h3>
 </div>
 
-<div id="outline-container-org4ec2475" class="outline-3">
-<h3 id="org4ec2475"><span class="section-number-3">5.3.</span> Implement GTD workflow</h3>
+<div id="outline-container-orgabe0609" class="outline-3">
+<h3 id="orgabe0609"><span class="section-number-3">5.3.</span> Implement GTD workflow</h3>
 </div>
 
-<div id="outline-container-org88fbd11" class="outline-3">
-<h3 id="org88fbd11"><span class="section-number-3">5.4.</span> Use Mu4e for Emails</h3>
+<div id="outline-container-orgbaa0589" class="outline-3">
+<h3 id="orgbaa0589"><span class="section-number-3">5.4.</span> Use Mu4e for Emails</h3>
 </div>
 
-<div id="outline-container-org1993469" class="outline-3">
-<h3 id="org1993469"><span class="section-number-3">5.5.</span> Use YouTube locally to limit information input</h3>
+<div id="outline-container-org8e9a7e8" class="outline-3">
+<h3 id="org8e9a7e8"><span class="section-number-3">5.5.</span> Use YouTube locally to limit information input</h3>
 </div>
 
-<div id="outline-container-orgfcb8956" class="outline-3">
-<h3 id="orgfcb8956"><span class="section-number-3">5.6.</span> Evil Windows Movement</h3>
+<div id="outline-container-orgf76509b" class="outline-3">
+<h3 id="orgf76509b"><span class="section-number-3">5.6.</span> Evil Windows Movement</h3>
 <div class="outline-text-3" id="text-5-6">
 <p>
 Shift HJKL for moving between windows in normal mode
@@ -307,8 +307,8 @@ SPC-P Opens Projects in ~/code
 </div>
 </div>
 
-<div id="outline-container-orge23c49d" class="outline-3">
-<h3 id="orge23c49d"><span class="section-number-3">5.7.</span> Create Polymode for Elisp configuration in Scheme for home-configuration.scm</h3>
+<div id="outline-container-org3f74c4f" class="outline-3">
+<h3 id="org3f74c4f"><span class="section-number-3">5.7.</span> Create Polymode for Elisp configuration in Scheme for home-configuration.scm</h3>
 </div>
 </div>
 </div>

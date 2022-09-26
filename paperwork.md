@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>Paperwork</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -203,21 +203,90 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">Paperwork</h1>
+
+<div id="outline-container-orgadf6d4a" class="outline-2">
+<h2 id="orgadf6d4a"><span class="section-number-2">1.</span> Jane Street Graduate Assistantship</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org520d3d7" class="outline-3">
+<h3 id="org520d3d7"><span class="section-number-3">1.1.</span> Deadlines</h3>
+</div>
+</div>
+
+<div id="outline-container-org10debe7" class="outline-2">
+<h2 id="org10debe7"><span class="section-number-2">2.</span> Graduate Research Fellowship Program (GRFP) (NSF)</h2>
+<div class="outline-text-2" id="text-2">
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+Topological Data Analysis
 </p>
+
+<p>
+Everybody uses logic. Take working knowledge and rules of inference and output some new knowledge deduced from items previously known. Logic is how we interface with the world and all the choices made are inherited from some logical framework.
+</p>
+
+<p>
+That being said, pure logic will not take anyone very far because the method of proof is too stringent. "Will it rain tomorrow? Will the sun rise tomorrow? Can I make it to the meeting tomorrow?", we may never truly prove such claims in the binary system of true and false.
+</p>
+</div>
+
+
+
+<div id="outline-container-orga12bd72" class="outline-3">
+<h3 id="orga12bd72"><span class="section-number-3">2.1.</span> Intellectual Merit</h3>
+</div>
+
+<div id="outline-container-org0df3d3a" class="outline-3">
+<h3 id="org0df3d3a"><span class="section-number-3">2.2.</span> Broader Impacts</h3>
+</div>
+
+<div id="outline-container-orgb156e3a" class="outline-3">
+<h3 id="orgb156e3a"><span class="section-number-3">2.3.</span> Yuri Paper</h3>
+<div class="outline-text-3" id="text-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Reference</th>
+<th scope="col" class="org-left">Paper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">G. Carlsson, T. Ishkhanov, V. De Silva, and A. Zomorodian. On the local behavior of spaces of natural images. International journal of computer vision, 76(1):1–12, 2008.</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">R. Ghrist. Barcodes: the persistent topology of data. Bulletin of the American Mathematical Society, 45(1):61–75, 2008</td>
+</tr>
+
+<tr>
+<td class="org-right">28</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">19</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

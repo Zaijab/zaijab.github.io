@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>Lean</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -203,21 +203,52 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">Lean</h1>
+
+<div id="outline-container-orgf4644c6" class="outline-2">
+<h2 id="orgf4644c6"><span class="section-number-2">1.</span> Propositions Introduction and Elimination Rules</h2>
+<div class="outline-text-2" id="text-1">
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+Every logical symbol has an introduction and elimination rule.
 </p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Symbol</th>
+<th scope="col" class="org-left">Introduction</th>
+<th scope="col" class="org-left">Elimination</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">∧</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org70c5276" class="outline-2">
+<h2 id="org70c5276"><span class="section-number-2">2.</span> How to Write a Proof</h2>
+</div>
 </div>
 </body>
 </html>

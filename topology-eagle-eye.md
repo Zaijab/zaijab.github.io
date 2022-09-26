@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 15:17 -->
+<!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Topology-Eagle-Eye</title>
@@ -205,40 +205,40 @@
 <div id="content" class="content">
 <h1 class="title">Topology-Eagle-Eye</h1>
 
-<div id="outline-container-org6a5b66a" class="outline-2">
-<h2 id="org6a5b66a"><span class="section-number-2">1.</span> Where do we find Topology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span></span></h2>
+<div id="outline-container-org3090bed" class="outline-2">
+<h2 id="org3090bed"><span class="section-number-2">1.</span> Where do we find Topology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span></span></h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org0465eaf" class="outline-3">
-<h3 id="org0465eaf"><span class="section-number-3">1.1.</span> Euler 7 Bridge Problem</h3>
+<div id="outline-container-org658ea56" class="outline-3">
+<h3 id="org658ea56"><span class="section-number-3">1.1.</span> Euler 7 Bridge Problem</h3>
 </div>
 
-<div id="outline-container-org6298909" class="outline-3">
-<h3 id="org6298909"><span class="section-number-3">1.2.</span> Euler Characteristic</h3>
+<div id="outline-container-org062d03b" class="outline-3">
+<h3 id="org062d03b"><span class="section-number-3">1.2.</span> Euler Characteristic</h3>
 </div>
 
-<div id="outline-container-org663aac7" class="outline-3">
-<h3 id="org663aac7"><span class="section-number-3">1.3.</span> Intermediate Value Theorem</h3>
+<div id="outline-container-org22e42f2" class="outline-3">
+<h3 id="org22e42f2"><span class="section-number-3">1.3.</span> Intermediate Value Theorem</h3>
 </div>
 
-<div id="outline-container-org3d85aae" class="outline-3">
-<h3 id="org3d85aae"><span class="section-number-3">1.4.</span> Extreme Value Theorem</h3>
+<div id="outline-container-org80efd54" class="outline-3">
+<h3 id="org80efd54"><span class="section-number-3">1.4.</span> Extreme Value Theorem</h3>
 </div>
 
-<div id="outline-container-org23fc4c9" class="outline-3">
-<h3 id="org23fc4c9"><span class="section-number-3">1.5.</span> Rolle's Theorem</h3>
+<div id="outline-container-orgb8de888" class="outline-3">
+<h3 id="orgb8de888"><span class="section-number-3">1.5.</span> Rolle's Theorem</h3>
 </div>
 
-<div id="outline-container-org1c6e1fb" class="outline-3">
-<h3 id="org1c6e1fb"><span class="section-number-3">1.6.</span> Jordan Curve Theorem</h3>
+<div id="outline-container-orge9977fe" class="outline-3">
+<h3 id="orge9977fe"><span class="section-number-3">1.6.</span> Jordan Curve Theorem</h3>
 </div>
 
-<div id="outline-container-org0d82b00" class="outline-3">
-<h3 id="org0d82b00"><span class="section-number-3">1.7.</span> Inscribed Rectangle Problem (3B1B)</h3>
+<div id="outline-container-org9a657e7" class="outline-3">
+<h3 id="org9a657e7"><span class="section-number-3">1.7.</span> Inscribed Rectangle Problem (3B1B)</h3>
 </div>
 
-<div id="outline-container-org49cde05" class="outline-3">
-<h3 id="org49cde05"><span class="section-number-3">1.8.</span> Necklace Problem (3B1B)</h3>
+<div id="outline-container-org7f5393a" class="outline-3">
+<h3 id="org7f5393a"><span class="section-number-3">1.8.</span> Necklace Problem (3B1B)</h3>
 </div>
 </div>
 </div>

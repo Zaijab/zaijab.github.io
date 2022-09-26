@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>Dynamical Systems</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -200,24 +200,94 @@
 <li><a href="/about.html">/about</a></li>
 <li><a href="/categories.html">/categories</a></li>
 </ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">Dynamical Systems</h1>
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+<a href="file:///home/zjabbar/books/applied_math/perko.pdf">Book: Perko Dynamical Systems</a>
 </p>
+
+<div class="THEOREM" id="orgd82c465">
+<p>
+\(\lambda\) 
+</p>
+<ul class="org-ul">
+<li>\(f : U \opn \mathbb{R}^n \to \mathbb{R}^n\)</li>
+<li>\(f \in C^1(U)\)</li>
+<li>\(x_0 \in U\)</li>
+</ul>
+
+<p>
+\(\implies\) 
+</p>
+<ul class="org-ul">
+<li>\(\exists ! x : t_0 \in I \opn \mathbb{R} \to \mathbb{R}^n \in C^1(I) \mid \dot{x} = f(x) \land x(t_0) = x_0\)</li>
+</ul>
+
+</div>
+
+<p>
+We are then justified in writing \(\dot{x} = f(x)\) when \(f\) satisfies the hypotheses of theorem [Initial Value Problem] and \(\dot{x}\) is the derivative of the solution \(x(t)\).    
+</p>
+
+<p>
+Thus solutions exist to differential equations of the form \(\dot{x} = f(x)\) but in general it is very hard to find analytic solutions and even when we do find a formula for the solution, the algebra required to prove statements about the behavior are non obvious.
+</p>
+
+
+<div id="outline-container-org960a234" class="outline-2">
+<h2 id="org960a234"><span class="section-number-2">1.</span> Linear Systems</h2>
+<div class="outline-text-2" id="text-1">
+<div class="DEFINITION" id="org66fced4">
+<p>
+\(\lambda\)
+</p>
+<ul class="org-ul">
+<li></li>
+</ul>
+
+</div>
+
+<p>
+These are solvable and are completely determined by the Eigenvectors and Eigenvalues of the matrix.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2ca71a9" class="outline-2">
+<h2 id="org2ca71a9"><span class="section-number-2">2.</span> Nonlinear Local Theory</h2>
+<div class="outline-text-2" id="text-2">
+<div class="theorem" id="org04c27a7">
+<p>
+If an integer \(n\) is greater than 2, then the equation \(a^n + b^n = c^n\)
+has no solutions in non-zero integers \(a\), \(b\), and \(c\).
+</p>
+
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>

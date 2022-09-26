@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>Elephant and Tailor</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -203,20 +203,48 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">Elephant and Tailor</h1>
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+Elephants and tailors
+Once upon a time, a tailor was making clothes for his son in his shop. Suddenly a
+baby elephant came. And suddenly he began to speak loudly. The tailor gave him a piece
+of bread. She always came to the tailor shop. One day the elephant came but the tailor
+ran away with the needle instead of bread. The next day the elephant came back but
+its trunk was full of mud. And he threw mud from his trunk on the tailor's clothes.
+All the clothes of the tailor were ruined. The tailor grabbed his head
+and started crying. We learn a lesson from this story that you will do as you
+please.
+</p>
+
+<p>
+dfaa - Occasion
+darzi - tailor
+dukan - store
+duba -
+bathi -
+uncha - tall 
+takata udba
+ke bajae - instead of
+chabadi - chubhai - prick
+keychar - mud 
+pkra 
+phynk - پھینک
+disa bhrdge
+</p>
+
+<p>
+Ek dfaa kaz kar hai ki, ek darzi apni dukan main betha kapre sir duba tha.
+Ki achanak se dba<sup>n</sup> ek bathi ka bacha aa gaya.
+Aur achanak uncha bolne laga.
+darzi ne usko ek roti ka takata udba.
+Voh ba thi hamesha darzi ki dukan par ata tha.
+ek din ba thi aba likan darzi ne us ko roti le bajae sui chabadi.
+bathi bhag gya.
+agle din bathi phar aa gaya likan us ki sundha kychra se bhri hui thi.
+aur us ne apni sondhi se kychra darzi ke kpraon par phynk diya.
+darzi ke sare kapre har ab hoge.
+darzi sar pkra kar rone laga.
+Us kahani se hame sabq malta hai ki jaisa karoge disa bhrd ge.
 </p>
 </div>
 </body>

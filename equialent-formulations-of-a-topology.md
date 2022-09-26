@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 15:17 -->
+<!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Equialent Formulations of a Topology</title>
@@ -226,8 +226,8 @@
 <div id="content" class="content">
 <h1 class="title">Equialent Formulations of a Topology</h1>
 
-<div id="outline-container-org1762262" class="outline-2">
-<h2 id="org1762262"><span class="section-number-2">1.</span> Open Sets</h2>
+<div id="outline-container-org7aaba2f" class="outline-2">
+<h2 id="org7aaba2f"><span class="section-number-2">1.</span> Open Sets</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Rather than look at a set with <b>just</b> elements, we instead look at a set with <b>elements that approximate</b>.
@@ -259,8 +259,8 @@ That is, the every element in an open set can be approximated from within the se
 </p>
 </div>
 </div>
-<div id="outline-container-org1a1c52d" class="outline-2">
-<h2 id="org1a1c52d"><span class="section-number-2">2.</span> Closed Sets</h2>
+<div id="outline-container-orge34cdc2" class="outline-2">
+<h2 id="orge34cdc2"><span class="section-number-2">2.</span> Closed Sets</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Now we have closed sets which have the opposite "leaky" property. Closed sets always have the property that if a point can be approximated from within the set, then the point was already within the set.
@@ -276,8 +276,8 @@ If you cannot escape from two sets, then any sequence would be stuck infinately 
 </div>
 </div>
 
-<div id="outline-container-orga5aaed0" class="outline-2">
-<h2 id="orga5aaed0"><span class="section-number-2">3.</span> Closure Function</h2>
+<div id="outline-container-org1863791" class="outline-2">
+<h2 id="org1863791"><span class="section-number-2">3.</span> Closure Function</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 This next idea of being close does not use distinguished sets. Instead we have a function which takes any set from within X and ouputs all points which are touching the set.
@@ -293,17 +293,17 @@ cl(&empty;) = &empty;, the emptyset does not touch any points.
 </div>
 </div>
 
-<div id="outline-container-orgf4a6fab" class="outline-2">
-<h2 id="orgf4a6fab"><span class="section-number-2">4.</span> Interior Function</h2>
+<div id="outline-container-org6adff96" class="outline-2">
+<h2 id="org6adff96"><span class="section-number-2">4.</span> Interior Function</h2>
 </div>
-<div id="outline-container-org7590ccd" class="outline-2">
-<h2 id="org7590ccd"><span class="section-number-2">5.</span> Neighborhoods</h2>
+<div id="outline-container-org2caba44" class="outline-2">
+<h2 id="org2caba44"><span class="section-number-2">5.</span> Neighborhoods</h2>
 </div>
-<div id="outline-container-org58815e8" class="outline-2">
-<h2 id="org58815e8"><span class="section-number-2">6.</span> Convergence of Nets</h2>
+<div id="outline-container-orge7fc0ae" class="outline-2">
+<h2 id="orge7fc0ae"><span class="section-number-2">6.</span> Convergence of Nets</h2>
 </div>
-<div id="outline-container-org4ea8740" class="outline-2">
-<h2 id="org4ea8740"><span class="section-number-2">7.</span> Convergence of Filters</h2>
+<div id="outline-container-org351c4a9" class="outline-2">
+<h2 id="org351c4a9"><span class="section-number-2">7.</span> Convergence of Filters</h2>
 </div>
 </div>
 </body>

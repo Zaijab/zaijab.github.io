@@ -6,7 +6,7 @@
 <!-- 2022-09-25 Sun 15:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hindi</title>
+<title>PHD QUAL</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -200,24 +200,77 @@
 <li><a href="/about.html">/about</a></li>
 <li><a href="/categories.html">/categories</a></li>
 </ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Hindi</h1>
+<h1 class="title">PHD QUAL</h1>
+
+<div id="outline-container-orgd5fd024" class="outline-2">
+<h2 id="orgd5fd024"><span class="section-number-2">1.</span> Problem&#xa0;&#xa0;&#xa0;<span class="tag"><span class="drill">drill</span></span></h2>
+<div class="outline-text-2" id="text-1">
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+\(\lambda\)
 </p>
+<ul class="org-ul">
+<li>\(A \in \R^{m \times n}\)</li>
+</ul>
+
+<p>
+\(\implies\)
+</p>
+<ul class="org-ul">
+<li>\(\mathcal{N}(A^TA) = \mathcal{N}(A)\)</li>
+<li>\(A^TA\) invertable \(\iff\) \(\mathcal{R}(A) = n\)</li>
+</ul>
+</div>
+<div id="outline-container-orgb9996fc" class="outline-3">
+<h3 id="orgb9996fc"><span class="section-number-3">1.1.</span> Solution</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>\(\mathcal{N}(A^TA) = \mathcal{N}(A)\)
+\(Ax = 0 \implies A^T (A x) = 0 \implies \mathcal{N}(A) \subseteq \mathcal{N}(A^TA)\)
+Sps \(x \in \mathcal{N}(A^TA)\)
+\(A^T A x = 0 \implies x^T A^T A x = 0 \implies (Ax)^T (Ax) = \langle Ax, Ax \rangle = 0 \implies Ax = 0\)</li>
+
+<li>\(A^TA\) invertable \(\iff\) \(\mathcal{R}(A) = n\)
+\(A^TA\) invertable \(\iff\) \(\mathcal{N}(A^TA) = 0 \iff \mathcal{N}(A) = 0 \iff \mathcal{R}(A) = n\)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orged8d6ba" class="outline-2">
+<h2 id="orged8d6ba"><span class="section-number-2">2.</span> Problem</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+\(\lambda\)
+</p>
+<ul class="org-ul">
+<li></li>
+</ul>
+</div>
+</div>
 </div>
 </body>
 </html>
