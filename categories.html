@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-25 Sun 19:50 -->
+<!-- 2022-09-25 Sun 19:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Categories</title>
@@ -205,7 +205,18 @@
 <div id="content" class="content">
 <h1 class="title">Categories</h1>
 <div class="org-src-container">
-<pre class="src src-lean"><span style="color: #5317ac;">#check</span> id
+<pre class="src src-lean"><span style="color: #5317ac;">import</span> data.nat.basic
+
+<span style="color: #5317ac;">variable</span>  U : <span style="color: #005a5f;">Type</span>
+<span style="color: #5317ac;">variables</span> R : U <span style="color: #0000c0;">&#8594;</span> U <span style="color: #0000c0;">&#8594;</span> <span style="color: #005a5f;">Prop</span>
+
+<span style="color: #5317ac;">example</span> : <span style="color: #000000;">(</span><span style="color: #0000c0;">&#8707;</span> x, <span style="color: #0000c0;">&#8704;</span> y, R x y<span style="color: #000000;">)</span> <span style="color: #0000c0;">&#8594;</span> <span style="color: #0000c0;">&#8704;</span> y, <span style="color: #0000c0;">&#8707;</span> x, R x y <span style="color: #0000c0;">:=</span>
+  <span style="color: #5317ac;">assume</span> h : <span style="color: #0000c0;">&#8707;</span> x, <span style="color: #0000c0;">&#8704;</span> y, R x y,
+  exists.elim h <span style="color: #0000c0;">$</span>
+  <span style="color: #5317ac;">assume</span> x <span style="color: #000000;">(</span>h2 : <span style="color: #0000c0;">&#8704;</span> y, R x y<span style="color: #000000;">)</span>,
+  <span style="color: #5317ac;">assume</span> y,
+  <span style="color: #5317ac;">have</span> R x y, <span style="color: #5317ac;">from</span> h2 y,
+  exists.intro x &#8249;R x y&#8250;
 </pre>
 </div>
 </div>
