@@ -203,20 +203,62 @@
 </head>
 <body>
 <div id="content" class="content">
+
+<div id="outline-container-orgf30ad74" class="outline-2">
+<h2 id="orgf30ad74"><span class="section-number-2">1.</span> Guix Functions</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9fb5ba9" class="outline-3">
+<h3 id="org9fb5ba9"><span class="section-number-3">1.1.</span> System Declaration</h3>
+</div>
+
+<div id="outline-container-org160a655" class="outline-3">
+<h3 id="org160a655"><span class="section-number-3">1.2.</span> Home Declaration</h3>
+</div>
+
+<div id="outline-container-orgf8c65af" class="outline-3">
+<h3 id="orgf8c65af"><span class="section-number-3">1.3.</span> Contributing Tutorial</h3>
+<div class="outline-text-3" id="text-1-3">
 <p>
-Freshman sal ki shuruat main, main bohut inspired hua tha.
-Lekin, 2020 se, COVID ki vaje se, main khosh nahi tha.
-har subeh, ek jesi hoti thi, spontenaity nehi thi, motivation nehi tha.
-mujhe pata hai ki, mujhe logon ki validation se khoshi milti hai.
-University main jo mera status hai, us se khoshi milti hai.
-Lekin aaj-kal yeh sab change ho gaya hai.
-Mujhe Covid ki vaje se khoshi redefine karni padi hai.
-Mujhe lagta hai ki abhi mera maqsad result-oriented nehi hai, practice-oriented hai.
-main ne process ke bare main sikha hai.
-Mathematics padna A+ ke bare main nehi hai, khobsurati aur problem solving ke bare main hai.
-Main ye do sal undo nehi karna chahoonga,
-kyonki main ne in do salon main khud ke bare main bohut kuch sikha hai.
+First download <code>Guix</code> using <code>git</code>
 </p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git clone https://git.savannah.gnu.org/git/guix.git
+</pre>
+</div>
+
+<p>
+Set the right environmental variables
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">guix shell -D guix
+</pre>
+</div>
+
+<p>
+Run the following
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">./bootstrap
+./configure --localstatedir=/var
+make
+</pre>
+</div>
+
+<p>
+We may add files however we want now. Then we will add the changes as a commit
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git add -A
+git commit -am <span style="color: #2544bb;">"Making commit."</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 </html>
