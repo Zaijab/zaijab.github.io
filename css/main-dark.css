@@ -5,7 +5,7 @@
 
 /** Style variables */
 /** Global */
-body { background-color: var(--background-color); padding: 0; font-family: "Source Code Pro", monospace; font-size: 2vw; color: var(--text-color); text-align: left; line-height: 1.5 !important; }
+body { background-color: var(--background-color); padding: 0; font-family: "Source Code Pro", fallback 'Noto Nastaliq Urdu'; font-size: 2vw; color: var(--text-color); text-align: left; line-height: 1.5 !important; }
 
 /* @font-face { */
 /*     font-family: 'Scheherazade', serif; */
