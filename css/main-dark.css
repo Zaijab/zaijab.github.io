@@ -14,9 +14,20 @@ body { background-color: var(--background-color); padding: 0; font-family: "Sour
 /* } */
 
 @font-face {
+    font-family: 'Source Code Pro', monospace;
+    src: url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700");
+    unicode-range: U+0000-007F;
+}
+@font-face {
     font-family: 'Noto Nastaliq Urdu', serif;
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Noto+Sans+Devanagari&display=swap');
+    unicode-range: U+0600-06ff;
+}
+@font-face {
     font-family: 'Noto Sans Devanagari', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Noto+Sans+Devanagari&display=swap')
+    src: url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&family=Noto+Sans+Devanagari&display=swap');
+    unicode-range: U+0900-097f;
+    
 }
 
 h1, h2, h3, h4, h5, h6 { font-size: 2vw; margin: 0px; margin-top: 22px; font-weight: bold; color: var(--text-color); }
