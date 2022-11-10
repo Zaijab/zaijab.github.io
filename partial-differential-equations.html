@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-11-10 Thu 11:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maybe, में भि میں بھی, 明媚.</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<title></title><link rel="stylesheet" href="/css/main-dark.css" type="text/css"/>
+<header><div class="menu"><ul>
+<li><a href="/">/</a></li>
+<li><a href="/about">/about</a></li>
+</ul></div></header>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Maybe, में भि میں بھی, 明媚.</h1>
+<p>
+Books:
+</p>
+<ul class="org-ul">
+<li>Partial Differential Equations by Evans</li>
+<li>Functional Analysis and PDEs Brazis</li>
+</ul>
+
+<div id="outline-container-orgddfa026" class="outline-2">
+<h2 id="orgddfa026"><span class="section-number-2">1.</span> First Order Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgad48803" class="outline-3">
+<h3 id="orgad48803"><span class="section-number-3">1.1.</span> Linear</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org2295e43" class="outline-4">
+<h4 id="org2295e43"><span class="section-number-4">1.1.1.</span> <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_e4f957a27480b3a3e13a734f9b13bc012a1003d6.png" alt="20221107072546-partial_differential_equations_e4f957a27480b3a3e13a734f9b13bc012a1003d6.png" /> - Linear Transport Equation</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+First, the name.
+Linear - The equation is linear in the unknown. That is, if the unknown is scaled by <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" alt="20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" /> then we may factor the <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" alt="20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" /> out.
+</p>
+
+<p>
+First order - The highest power of the differential is one.
+</p>
+
+<p>
+Homogeneous - Right hand side is identically <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" alt="20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" />.
+</p>
+
+<p>
+Constant Coefficients - Coefficients are <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_6bd40391ee7364b9ed0b1b28e47dcee9d6a5c72c.png" alt="20221107072546-partial_differential_equations_6bd40391ee7364b9ed0b1b28e47dcee9d6a5c72c.png" /> and <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_fae8326291807f234714ae258cb53e8992e630ea.png" alt="20221107072546-partial_differential_equations_fae8326291807f234714ae258cb53e8992e630ea.png" /> we may write <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_03e2647af3787bc68f8fbcdc5e46981986ff8269.png" alt="20221107072546-partial_differential_equations_03e2647af3787bc68f8fbcdc5e46981986ff8269.png" />
+</p>
+
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li><img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_752488453a8f72dd0edb270a5c46d7396a3b48f0.png" alt="20221107072546-partial_differential_equations_752488453a8f72dd0edb270a5c46d7396a3b48f0.png" /> (be a constant vector)</li>
+<li><img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_3f05677abc132044f388b84189ac9848050eba09.png" alt="20221107072546-partial_differential_equations_3f05677abc132044f388b84189ac9848050eba09.png" />, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_dd426277c5de68acbd1c8cbea9a874110ed91bda.png" alt="20221107072546-partial_differential_equations_dd426277c5de68acbd1c8cbea9a874110ed91bda.png" />, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_e5d4090e66d311f0d7ef113056c0155fbbdb4a88.png" alt="20221107072546-partial_differential_equations_e5d4090e66d311f0d7ef113056c0155fbbdb4a88.png" />, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_a2137c2253121d2b75378152b91597df828b479b.png" alt="20221107072546-partial_differential_equations_a2137c2253121d2b75378152b91597df828b479b.png" /></li>
+</ul>
+
+<p>
+Then consider <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_f63e2c5d63b5ccdc816a28c02c4c7d6fd4f98087.png" alt="20221107072546-partial_differential_equations_f63e2c5d63b5ccdc816a28c02c4c7d6fd4f98087.png" />
+</p>
+
+<p>
+We may write this as <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_a8e36c4c6482d8ada22b634bc4dcc31ed83d9a82.png" alt="20221107072546-partial_differential_equations_a8e36c4c6482d8ada22b634bc4dcc31ed83d9a82.png" /> which is also equivalent to <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_ef9da20caf6e59ca5abed746ca94d5152007aa3f.png" alt="20221107072546-partial_differential_equations_ef9da20caf6e59ca5abed746ca94d5152007aa3f.png" />
+</p>
+
+<p>
+Look for <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_090aec03788b58459fa27a75fc1ef53a42eb3d29.png" alt="20221107072546-partial_differential_equations_090aec03788b58459fa27a75fc1ef53a42eb3d29.png" /> function
+</p>
+
+<p>
+Problem Solving Method
+</p>
+
+<p>
+(1) Look for special solutions (Explicit)
+(2) Existence of Solution in some class (The larger the class the easier)
+    Sobolev Spaces and Distributions
+(3) Uniqueness (The smaller the class the easier)
+(4) Regularity of Solution (Deep)
+</p>
+
+<p>
+Notice that the function <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" alt="20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" /> has a directional derivative equal to <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" alt="20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" /> along <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" alt="20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" />
+</p>
+
+<p>
+<img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_9f24177a0672ad6c6f8e879b6e2850b51f82dc50.png" alt="20221107072546-partial_differential_equations_9f24177a0672ad6c6f8e879b6e2850b51f82dc50.png" />
+</p>
+
+<p>
+Then <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_e039cecedd52787cd49c64a692756a3fb220b59f.png" alt="20221107072546-partial_differential_equations_e039cecedd52787cd49c64a692756a3fb220b59f.png" />
+</p>
+
+<p>
+So <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_67f4b222f3694892c2a8403e770043cfb9a4abc3.png" alt="20221107072546-partial_differential_equations_67f4b222f3694892c2a8403e770043cfb9a4abc3.png" /> is constant. This tells us that <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" alt="20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" /> is constant on the lines parallel to <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" alt="20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" />.
+</p>
+
+<p>
+Denote <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_4172711db88c59324297e742af870d1b43e1902e.png" alt="20221107072546-partial_differential_equations_4172711db88c59324297e742af870d1b43e1902e.png" /> the "<img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_26eae01a1d101cafde52778f7bfee159f2869371.png" alt="20221107072546-partial_differential_equations_26eae01a1d101cafde52778f7bfee159f2869371.png" />" axis, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_8c41e82d57e1f5fca619a32b83dcc5d3001c7615.png" alt="20221107072546-partial_differential_equations_8c41e82d57e1f5fca619a32b83dcc5d3001c7615.png" /> 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26e0c47" class="outline-4">
+<h4 id="org26e0c47"><span class="section-number-4">1.1.2.</span> Method of Characteristics</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+This method finds curves in your space. Along such curves the PDE becomes a system of ODE's.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org648daa0" class="outline-3">
+<h3 id="org648daa0"><span class="section-number-3">1.2.</span> Nonlinear</h3>
+</div>
+</div>
+
+<div id="outline-container-org1455953" class="outline-2">
+<h2 id="org1455953"><span class="section-number-2">2.</span> Second Order Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org2d06e76" class="outline-3">
+<h3 id="org2d06e76"><span class="section-number-3">2.1.</span> Laplace Equation</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgebc980d" class="outline-4">
+<h4 id="orgebc980d"><span class="section-number-4">2.1.1.</span> Elliptic Equation</h4>
+</div>
+
+<div id="outline-container-org3c24597" class="outline-4">
+<h4 id="org3c24597"><span class="section-number-4">2.1.2.</span> Parabolic Equation</h4>
+</div>
+
+<div id="outline-container-orge8277c5" class="outline-4">
+<h4 id="orge8277c5"><span class="section-number-4">2.1.3.</span> Hyperbolic Equation</h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3bb3ead" class="outline-2">
+<h2 id="org3bb3ead"><span class="section-number-2">3.</span> Hilbert Spaces</h2>
+</div>
+
+<div id="outline-container-org9ab45dc" class="outline-2">
+<h2 id="org9ab45dc"><span class="section-number-2">4.</span> Banach Spaces</h2>
+</div>
+
+<div id="outline-container-org1421d5e" class="outline-2">
+<h2 id="org1421d5e"><span class="section-number-2">5.</span> Fourier Transform</h2>
+</div>
+</div>
+</body>
+</html>
