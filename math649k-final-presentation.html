@@ -6,7 +6,7 @@
 <!-- 2022-12-05 Mon 12:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Equialent Formulations of a Topology</title>
+<title>MATH649K Final Presentation</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -222,86 +222,208 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Equialent Formulations of a Topology</h1>
+<h1 class="title">MATH649K Final Presentation</h1>
 
-<div id="outline-container-org49f2880" class="outline-2">
-<h2 id="org49f2880"><span class="section-number-2">1.</span> Open Sets</h2>
+<div id="outline-container-orgfc9d8aa" class="outline-2">
+<h2 id="orgfc9d8aa"><span class="section-number-2">1.</span> Problem Statement</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-Rather than look at a set with <b>just</b> elements, we instead look at a set with <b>elements that approximate</b>.
+Given
 </p>
+<ul class="org-ul">
+<li>A target distribution \( P(x) \)</li>
+<li>A known function \( f(x) = k P(x) \)</li>
+</ul>
 
 <p>
-We now have two rules on what counts at approximating,
+Problem
 </p>
+<ul class="org-ul">
+<li>Is it possible to sample from \( P(x) \)?</li>
+</ul>
 
 <p>
-Approximations can get bigger and still be approximations forall lambda U<sub>lambda</sub>, cup<sub>lambda</sub> U<sub>lambda</sub> in A.
-If we have two approximations we can look at the intersection as another approximation.
+Solution
 </p>
-
-<p>
-Think about it like using a ruler with only cm on one side. Any measurement would look like Xcm +/- 1cm.
-Whenever we measure something there's always a bit of error.
-If we used infinately many approximations to hone in on a precise measurement, we wouldn't really get an approximation now would we? 
-The infinite approximations would lead to a valid set but not a valid approximation.
-</p>
-
-<p>
-Examples: (R, T<sub>euclidean</sub>), (X, T<sub>Cofinite</sub>), (X, T<sub>Discrete</sub>), (X, T<sub>Indiscrete</sub>)
-</p>
-
-<p>
-The sets are called open because given a set which approximates some element, x &isin; U, we can form a sequence a<sub>n</sub> which approximates a \nin U.
-That is, the every element in an open set can be approximated from within the set but the sets are "leaky" in the sense that they can approximate other things.
-</p>
+<ul class="org-ul">
+<li>Yes, it is. We will construct a Markov Chain such that \( \pi_i = P(i) \)</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-org327b259" class="outline-2">
-<h2 id="org327b259"><span class="section-number-2">2.</span> Closed Sets</h2>
+
+
+<div id="outline-container-org9e8576b" class="outline-2">
+<h2 id="org9e8576b"><span class="section-number-2">2.</span> Algorithm</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Now we have closed sets which have the opposite "leaky" property. Closed sets always have the property that if a point can be approximated from within the set, then the point was already within the set.
+Select an initial value for \( x \), call it \( x_0 \).
 </p>
 
 <p>
-If you cannot escape any of the sets F<sub>n</sub> then you cannot escape their intersection. Intersecting will not open a hole to escape frome.
+Then for a large number of iterations, \( i = 1, \cdots, m \) repeat the following
 </p>
 
 <p>
-If you cannot escape from two sets, then any sequence would be stuck infinately in at least one of the sets. The limit would then be from the set it has infinately many points in. 
+Draw a candidate from a proposal distribution \( x^* \sim q( x^* \vert x) \)
+</p>
+
+<p>
+Calculate an acceptance ratio \( \alpha = \frac{f(x^*)}{f(x)} \frac{q(x \vert x^*)}{g(x^* \vert x)} \)
+</p>
+
+<p>
+Then generate a random number uniformly in \( [0,1] \) call it \( u \).
+</p>
+
+<p>
+If \( u \leq \alpha \) then accept the new choice of \( x^* \).
+</p>
+
+<p>
+If \( u > \alpha \) then reject the new choice of \( x^* \).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3c157bb" class="outline-2">
-<h2 id="org3c157bb"><span class="section-number-2">3.</span> Closure Function</h2>
+<div id="outline-container-org271e85f" class="outline-2">
+<h2 id="org271e85f"><span class="section-number-2">3.</span> Implementation</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-This next idea of being close does not use distinguished sets. Instead we have a function which takes any set from within X and ouputs all points which are touching the set.
+Tested on \[ f(x) = e^{\frac{-x^2}{2}} \]
+</p>
+
+
+<div id="orga3f6db5" class="figure">
+<p><img src="./.ob-jupyter/e23ef5b90598223a81d0e81e649fbc2accc6f0bc.png" alt="e23ef5b90598223a81d0e81e649fbc2accc6f0bc.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org77a40e8" class="outline-2">
+<h2 id="org77a40e8"><span class="section-number-2">4.</span> Proof</h2>
+</div>
+<div id="outline-container-orgb62a25c" class="outline-2">
+<h2 id="orgb62a25c"><span class="section-number-2">5.</span> Proof</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org604c14e" class="outline-3">
+<h3 id="org604c14e"><span class="section-number-3">5.1.</span> Detailed Balance</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="DEFINITION" id="org812be9a">
+<p>
+Suppose we have a Markov Chain with:
+</p>
+<ul class="org-ul">
+<li>Transition properties \( P_{ij} \)</li>
+<li>Distribution of states \( \pi_i \)</li>
+</ul>
+
+<p>
+Such that,
 </p>
 
 <p>
-The rules for what touches what are:
-S &sub; cl(S) : S is close to itself
-cl[cl(S)] = cl(S) : The points close to the points close to S is close to S.
-cl(A cup B) = cl(A) cup cl(B) : If a point touches one of two sets, it must have been touching one of the sets.
-cl(&empty;) = &empty;, the emptyset does not touch any points.
+\( \pi_{i} P_{ij} = \pi_{j} P_{ji} \)
 </p>
+
+<p>
+Then \( \pi_i \) satisfies detailed balance with respect to the Markov Chain.
+</p>
+
+</div>
+
+<div class="THEOREM" id="org564ed14">
+<p>
+Suppose we have a Markov Chain with:
+</p>
+<ul class="org-ul">
+<li>Transition properties \( P_{ij} \)</li>
+<li>Distribution of states \( \pi_i \) that satisfies detailed balance.</li>
+</ul>
+
+<p>
+Then \( \pi \) is a stationary distribution of the Markov Chain.
+</p>
+
+</div>
+
+<div class="PROOF" id="orgf7cdfa9">
+\begin{align*}
+\forall j, \sum_{i} \pi_i P_{ij} = \sum_{i} \pi_j P_{ji} = \pi_j \sum_{i} P_{ji} = \pi_{j}
+\end{align*}
+
+</div>
 </div>
 </div>
 
-<div id="outline-container-org500a3cb" class="outline-2">
-<h2 id="org500a3cb"><span class="section-number-2">4.</span> Interior Function</h2>
+
+<div id="outline-container-org9ad5d95" class="outline-3">
+<h3 id="org9ad5d95"><span class="section-number-3">5.2.</span> Aperiodic and Irreducible</h3>
+<div class="outline-text-3" id="text-5-2">
+<div class="THEOREM" id="orga852dad">
+<p>
+An irreducible, aperiodic Markov chain has a unique stationary distribution if it exists.
+</p>
+
 </div>
-<div id="outline-container-orgf0671cc" class="outline-2">
-<h2 id="orgf0671cc"><span class="section-number-2">5.</span> Neighborhoods</h2>
+
+<div class="PROOF" id="org6668dd7">
+<p>
+In the book, Theorem 4.3.3.
+</p>
+
 </div>
-<div id="outline-container-org4c80a7f" class="outline-2">
-<h2 id="org4c80a7f"><span class="section-number-2">6.</span> Convergence of Nets</h2>
 </div>
-<div id="outline-container-org537596d" class="outline-2">
-<h2 id="org537596d"><span class="section-number-2">7.</span> Convergence of Filters</h2>
+</div>
+
+
+<div id="outline-container-org5edf5e7" class="outline-3">
+<h3 id="org5edf5e7"><span class="section-number-3">5.3.</span> Proof</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="PROOF" id="org59e963f">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( S \) be a state space corresponding to the target distribution</li>
+<li>\( g(x^* \vert x) \) have nonzero density for every point in the target distribution</li>
+<li>\( \alpha(x,x^*) = \min \left( 1, \frac{P(x^*) g(x \vert x^*)}{P(x) g(x^* \vert x)} \right) = \min \left( 1, \frac{f(x^*) g(x \vert x^*)}{f(x) g(x^* \vert x)} \right) \)</li>
+<li>\( P_{x x^*} = P(X_n = x^* \vert X_{n-1} = x) = \begin{cases} g(x^* \vert x) \alpha(x,x^*) & x^* \neq x \\ g(x \vert x) + \sum_{x^* \neq x} q(x, x^*)(1 - \alpha(x,x^*)) & x^* = x \end{cases} \)</li>
+</ul>
+
+<p>
+Note that \( \alpha(x,x^*) = \alpha(x^*,x)^{-1} \) so WLOG assume \( a(x^*,x) = 1, a(x,x^*) = \frac{P(x^*) g(x \vert x^*)}{P(x) g(x^* \vert x)} \)
+</p>
+
+\begin{align*}
+&&f(x^*) q(x^* \vert x) &= f(x^*) q(x^* \vert x) \\
+&\implies &\frac{f(x) q(x \vert x^*)}{f(x) q(x \vert x^*)}  f(x^*) q(x^* \vert x) &= f(x^*) q(x^* \vert x) \\
+&\implies &f(x) q(x \vert x^*) \alpha(x,x^*) &= f(x^*) q(x^* \vert x) \alpha(x^*, x) \\
+&\implies &p(x) q(x \vert x^*) \alpha(x,x^*) &= p(x^*) q(x^* \vert x) \alpha(x^*, x) \\
+&\implies &p(x) P_{x,x^*} &= p(x^*) P_{x^*x} \\
+\end{align*}
+
+<p>
+Thus \( p(x) \) satisfies detailed balance and is stationary for the chain with transition probabilities \( P \) described above.
+</p>
+
+<p>
+Uniqueness is determined by the choice of \( q \). Because \( q \) has nonzero density for every state, the chain can transition to any state from any other state, hence the chain is irreducible and aperiodic.
+</p>
+
+<p>
+Thus, the Markov chain will converge to its unique stationary distribution \( \pi(i) \) as \( t \to \infty \) which is equal to \( p(i) \).
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org0b18755" class="outline-2">
+<h2 id="org0b18755"><span class="section-number-2">6.</span> Arbitrary Choices</h2>
 </div>
 </div>
 </body>

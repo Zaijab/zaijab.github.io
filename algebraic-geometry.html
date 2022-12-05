@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-10 Thu 14:20 -->
+<!-- 2022-12-05 Mon 12:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maybe, में भि میں بھی, 明媚.</title>
+<title>Algebraic Geometry</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -198,13 +198,34 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Maybe, में भि میں بھی, 明媚.</h1>
+<h1 class="title">Algebraic Geometry</h1>
 
-<div id="outline-container-org0b61fc3" class="outline-2">
-<h2 id="org0b61fc3"><span class="section-number-2">1.</span> Catagory Theory</h2>
+<div id="outline-container-org3a7b9ae" class="outline-2">
+<h2 id="org3a7b9ae"><span class="section-number-2">1.</span> Catagory Theory</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In math we like to study objects and the functions to and from these objects.
@@ -220,27 +241,27 @@ For example, given a topological space we can define a map that goes from (X, T)
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_5166c903f6962e300e534bbc83da9c9229a2ba12.png" alt="20220408192439-algebraic_geometry_5166c903f6962e300e534bbc83da9c9229a2ba12.png" />
+\(f(x)\)
 </p>
 </div>
 </div>
 
-<div id="outline-container-org65930ab" class="outline-2">
-<h2 id="org65930ab"><span class="section-number-2">2.</span> Motivation</h2>
+<div id="outline-container-org69681a1" class="outline-2">
+<h2 id="org69681a1"><span class="section-number-2">2.</span> Motivation</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org999f45a" class="outline-3">
-<h3 id="org999f45a"><span class="section-number-3">2.1.</span> Litmus Test</h3>
+<div id="outline-container-org834b3c4" class="outline-3">
+<h3 id="org834b3c4"><span class="section-number-3">2.1.</span> Litmus Test</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 In the development of analysis, mathematicians have felt as though the Reimannian Integral of a function was lacking.
-The common story is that the function <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_2f1a3f839560f0763f90cb311312321032b45a73.png" alt="20220408192439-algebraic_geometry_2f1a3f839560f0763f90cb311312321032b45a73.png" /> is not Riemann integrable but it "should be". So we develop a new theory of integration, Lebesgue Integration, where that function is. Another way to justify the development is to notice that the set of Riemann integrable functions do not form a category. There are compositions of functions of Riemann integrable functions which are not integrable. Hence there is no (associative) composition law ascribed to the set. This can make category theory kind of like a preliminary litmus test for a good theory to study.
+The common story is that the function \[ \mathbb{I}_\mathbb{Q} \] is not Riemann integrable but it "should be". So we develop a new theory of integration, Lebesgue Integration, where that function is. Another way to justify the development is to notice that the set of Riemann integrable functions do not form a category. There are compositions of functions of Riemann integrable functions which are not integrable. Hence there is no (associative) composition law ascribed to the set. This can make category theory kind of like a preliminary litmus test for a good theory to study.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org07c4afe" class="outline-3">
-<h3 id="org07c4afe"><span class="section-number-3">2.2.</span> Composition without evaluation is perfectly natural</h3>
+<div id="outline-container-org470dd06" class="outline-3">
+<h3 id="org470dd06"><span class="section-number-3">2.2.</span> Composition without evaluation is perfectly natural</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Sticking with analysis, when dealing with measurable functions we find that we can (almost) put a vector space structure on the set of measureable functions. Doing so would allow us to talk about dimension, inner products, linear transformations, etc. Really any time we introduce linear algebra into our theories we get a lot of really nice results decently easily. I'd argue this is also the main motivation for homological algebra too.
@@ -256,17 +277,17 @@ Homotopy equivalant functions
 </div>
 </div>
 
-<div id="outline-container-orgc51fa17" class="outline-3">
-<h3 id="orgc51fa17"><span class="section-number-3">2.3.</span> Equivalences have already been studied and are very useful</h3>
+<div id="outline-container-org35e45a6" class="outline-3">
+<h3 id="org35e45a6"><span class="section-number-3">2.3.</span> Equivalences have already been studied and are very useful</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
-In linear algebra we had two ways of viewing the same ideas. View the linear transformation as a function between vector spaces, or view it as a matrix between <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_09164cfb8484044e922b17a81d8e7d743b1e20d3.png" alt="20220408192439-algebraic_geometry_09164cfb8484044e922b17a81d8e7d743b1e20d3.png" />. Same idea, different looking presentation. One is far easier to reason about, one is far easier to calculate with. For example, mixing linear algebra with topology we can try and prove that <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_ff3125fc124c5e485ff3560997ea2503a0d8f09e.png" alt="20220408192439-algebraic_geometry_ff3125fc124c5e485ff3560997ea2503a0d8f09e.png" /> has the same eigenvectors as <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_cf53955418cd16f321619a4f7a41ad9a85b75af4.png" alt="20220408192439-algebraic_geometry_cf53955418cd16f321619a4f7a41ad9a85b75af4.png" />. We can take a limit of a sequence of invertable matrices. 
+In linear algebra we had two ways of viewing the same ideas. View the linear transformation as a function between vector spaces, or view it as a matrix between \[ \mathbb{R}^n \to \mathbb{R}^m \]. Same idea, different looking presentation. One is far easier to reason about, one is far easier to calculate with. For example, mixing linear algebra with topology we can try and prove that \[ PQ \] has the same eigenvectors as \[ QP \]. We can take a limit of a sequence of invertable matrices. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6ebac86" class="outline-3">
-<h3 id="org6ebac86"><span class="section-number-3">2.4.</span> Certain theorems are provable in Category theory for many categories</h3>
+<div id="outline-container-orgf1df92e" class="outline-3">
+<h3 id="orgf1df92e"><span class="section-number-3">2.4.</span> Certain theorems are provable in Category theory for many categories</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 In class Dr. Carter proved the first isomorpism theorem for Groups, Rings, Modules, and Algebras using category theory all at the same time because we had a notion of a zero object and kernels in all categories.
@@ -275,53 +296,53 @@ In class Dr. Carter proved the first isomorpism theorem for Groups, Rings, Modul
 </div>
 </div>
 
-<div id="outline-container-org1b04885" class="outline-2">
-<h2 id="org1b04885"><span class="section-number-2">3.</span> Torus</h2>
+<div id="outline-container-orge3cb6f3" class="outline-2">
+<h2 id="orge3cb6f3"><span class="section-number-2">3.</span> Torus</h2>
 </div>
 
 
-<div id="outline-container-org324c976" class="outline-2">
-<h2 id="org324c976"><span class="section-number-2">4.</span> Varieties</h2>
+<div id="outline-container-org9ae5331" class="outline-2">
+<h2 id="org9ae5331"><span class="section-number-2">4.</span> Varieties</h2>
 <div class="outline-text-2" id="text-4">
 <p>
-Let <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_8e2fb839139e5a17c88bca707b09771b7c2f635c.png" alt="20220408192439-algebraic_geometry_8e2fb839139e5a17c88bca707b09771b7c2f635c.png" /> be affine <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_39a13aa1c3ae81c3dcc9900baba4fab1ac50cfd4.png" alt="20220408192439-algebraic_geometry_39a13aa1c3ae81c3dcc9900baba4fab1ac50cfd4.png" /> space over <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_069f939331259d55460ea688a621034bcd60bb9b.png" alt="20220408192439-algebraic_geometry_069f939331259d55460ea688a621034bcd60bb9b.png" /> a field.
+Let \[ A_\mathbb{F}^n \] be affine \[ n \] space over \[ \mathbb{F} \] a field.
 This space has multiplication as the direct product of 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgc9d080e" class="outline-2">
-<h2 id="orgc9d080e"><span class="section-number-2">5.</span> Projective Varieties</h2>
+<div id="outline-container-org3a50228" class="outline-2">
+<h2 id="org3a50228"><span class="section-number-2">5.</span> Projective Varieties</h2>
 </div>
 
-<div id="outline-container-org21371fb" class="outline-2">
-<h2 id="org21371fb"><span class="section-number-2">6.</span> Toric Varieties</h2>
+<div id="outline-container-org47d3c15" class="outline-2">
+<h2 id="org47d3c15"><span class="section-number-2">6.</span> Toric Varieties</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orge88c850" class="outline-3">
-<h3 id="orge88c850"><span class="section-number-3">6.1.</span> Affine Toric Varieties</h3>
+<div id="outline-container-orgd159af0" class="outline-3">
+<h3 id="orgd159af0"><span class="section-number-3">6.1.</span> Affine Toric Varieties</h3>
 <div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-org3906c50" class="outline-4">
-<h4 id="org3906c50"><span class="section-number-4">6.1.1.</span> 1.1</h4>
+<div id="outline-container-org3c0b87c" class="outline-4">
+<h4 id="org3c0b87c"><span class="section-number-4">6.1.1.</span> 1.1</h4>
 <div class="outline-text-4" id="text-6-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="org15d6790"></a>DEFINITION Affine Toric Variety<br />
+<li><a id="org37e6102"></a>DEFINITION Affine Toric Variety<br />
 <div class="outline-text-5" id="text-6-1-1-1">
 <p>
-An affine toric variety is an irreducible affine variety <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" alt="20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" /> containing a torus of dimension <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_8109dbc75126c07455516fc02dcd17a5df5ea907.png" alt="20220408192439-algebraic_geometry_8109dbc75126c07455516fc02dcd17a5df5ea907.png" /> <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_a9e976ebe17952067b5740a1cb246b4cde4ca120.png" alt="20220408192439-algebraic_geometry_a9e976ebe17952067b5740a1cb246b4cde4ca120.png" /> as a Zariski open subset such that the action of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_95d11de8740b8f77f877a37952fcb05c31d433dd.png" alt="20220408192439-algebraic_geometry_95d11de8740b8f77f877a37952fcb05c31d433dd.png" /> on itself extends to an algebraic action of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_95d11de8740b8f77f877a37952fcb05c31d433dd.png" alt="20220408192439-algebraic_geometry_95d11de8740b8f77f877a37952fcb05c31d433dd.png" /> on <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" alt="20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" />.
+An affine toric variety is an irreducible affine variety \[ V \] containing a torus of dimension \[ N \] \[ T_N \simeq (\mathbb{C}^*)^N \] as a Zariski open subset such that the action of \[ T_N \] on itself extends to an algebraic action of \[ T_N \] on \[ V \].
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_7e94e477ccafe3b855a13263c9ce2f98e97d8f48.png" alt="20220408192439-algebraic_geometry_7e94e477ccafe3b855a13263c9ce2f98e97d8f48.png" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" alt="20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" /> be an irreducible affine variety</li>
-<li><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_e32cf73f5fe0318c7580d9335ad290892bcad6c8.png" alt="20220408192439-algebraic_geometry_e32cf73f5fe0318c7580d9335ad290892bcad6c8.png" />be a subset which is isomorphic to <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_68021b51fd9548306fbdbd7acf899a15852ed61d.png" alt="20220408192439-algebraic_geometry_68021b51fd9548306fbdbd7acf899a15852ed61d.png" /></li>
-<li><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_b6fbb2f1744017f05907dd24859ca21a358f9566.png" alt="20220408192439-algebraic_geometry_b6fbb2f1744017f05907dd24859ca21a358f9566.png" /> is the group of nonzero complex numbers under multiplication, <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_3a83498f2f593a64e3cb0b3b00744f3562bd8b64.png" alt="20220408192439-algebraic_geometry_3a83498f2f593a64e3cb0b3b00744f3562bd8b64.png" /> is the direct product of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_8109dbc75126c07455516fc02dcd17a5df5ea907.png" alt="20220408192439-algebraic_geometry_8109dbc75126c07455516fc02dcd17a5df5ea907.png" /> copies of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_7ab5d76cc3b4a058d2c43a83914a4991973bb3a4.png" alt="20220408192439-algebraic_geometry_7ab5d76cc3b4a058d2c43a83914a4991973bb3a4.png" /></li>
+<li>\[ V \] be an irreducible affine variety</li>
+<li>\[ T_N \subseteq V \]be a subset which is isomorphic to \[ (C^*)^N \]</li>
+<li>\[ (C^*) \] is the group of nonzero complex numbers under multiplication, \[ (\mathbb{C}^*)^N \] is the direct product of \[ N \] copies of \[ \mathbb{C}^* \]</li>
 <li>The binary relation of multiplication is a group action of the group onto itself.</li>
-<li>The action on <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" alt="20220408192439-algebraic_geometry_fde24ecaae0bc8069d2e80fa9d066b459ded1f4b.png" /> is <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_ccb6f36a6a5a2370e504e8bd5892453d3d3e468d.png" alt="20220408192439-algebraic_geometry_ccb6f36a6a5a2370e504e8bd5892453d3d3e468d.png" /></li>
+<li>The action on \[ V \] is \[ T_N \ctimes V \to V . (t_1, \ldots, t_n) \cdot (a_1, \ldots, a_n) = (t_1a_1, \ldots, t_na_n) \]</li>
 </ul>
 </div>
 </li>
@@ -330,20 +351,20 @@ An affine toric variety is an irreducible affine variety <img src="file:///home/
 </div>
 
 
-<div id="outline-container-org851c789" class="outline-3">
-<h3 id="org851c789"><span class="section-number-3">6.2.</span> Projective Toric Varieties</h3>
+<div id="outline-container-org8eb378b" class="outline-3">
+<h3 id="org8eb378b"><span class="section-number-3">6.2.</span> Projective Toric Varieties</h3>
 <div class="outline-text-3" id="text-6-2">
 </div>
-<div id="outline-container-org66b6e2e" class="outline-4">
-<h4 id="org66b6e2e"><span class="section-number-4">6.2.1.</span> 2.0 Background</h4>
+<div id="outline-container-orge37ed40" class="outline-4">
+<h4 id="orge37ed40"><span class="section-number-4">6.2.1.</span> 2.0 Background</h4>
 <div class="outline-text-4" id="text-6-2-1">
 </div>
 <ol class="org-ol">
-<li><a id="org86c4e6b"></a>Projective Variety<br />
+<li><a id="orgdb83f69"></a>Projective Variety<br />
 <ol class="org-ol">
-<li><a id="orga53a46a"></a>Projective Space is Affine Space with Perspective<br /></li>
+<li><a id="org9bb9928"></a>Projective Space is Affine Space with Perspective<br /></li>
 
-<li><a id="orge577bba"></a>Projective Varieties are Basically The Same as Affine<br />
+<li><a id="orgf272235"></a>Projective Varieties are Basically The Same as Affine<br />
 <div class="outline-text-6" id="text-6-2-1-1-2">
 <p>
 We will start just like affine space, we will look at polynomials, vanishing sets, and ideals.
@@ -358,7 +379,7 @@ Hence rather than the collection of all polynomials we only look at homogeneous 
 </p>
 
 <p>
-The <b>vanishing set (of points)</b> is <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_6dcd5ab988f57529328b54e2fdda1d262b0f35f3.png" alt="20220408192439-algebraic_geometry_6dcd5ab988f57529328b54e2fdda1d262b0f35f3.png" />
+The <b>vanishing set (of points)</b> is \[ V(f) = \{[x] \in \mathbb{P} \vert f(x) = 0 \} \]
 </p>
 
 <p>
@@ -369,25 +390,25 @@ The
 </ol>
 </li>
 
-<li><a id="org25ee53a"></a>Definition Toric Variety<br />
+<li><a id="org187fcf5"></a>Definition Toric Variety<br />
 <div class="outline-text-5" id="text-6-2-1-2">
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_1d3e7e0ed1192a2331df70ab95ba5ca521392fb9.png" alt="20220408192439-algebraic_geometry_1d3e7e0ed1192a2331df70ab95ba5ca521392fb9.png" /> be an irreducible variety over <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_ab9f5653e01e572fccf804e1eefe0840ccad5efd.png" alt="20220408192439-algebraic_geometry_ab9f5653e01e572fccf804e1eefe0840ccad5efd.png" /> containing a torus <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_e2651e362b82f1efa3e942fb4f8483d9bce86808.png" alt="20220408192439-algebraic_geometry_e2651e362b82f1efa3e942fb4f8483d9bce86808.png" /> as a Zariski Open set
+\[ X \] be an irreducible variety over \[ \mathbb{C} \] containing a torus \[ T_N \simeq (\mathbb{C}^*)^n \] as a Zariski Open set
 </p>
 
 <p>
-Such that the action of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_bda106dd2158bc0d511320af1ef5edf99378e5cb.png" alt="20220408192439-algebraic_geometry_bda106dd2158bc0d511320af1ef5edf99378e5cb.png" /> extends to an action on <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_1d3e7e0ed1192a2331df70ab95ba5ca521392fb9.png" alt="20220408192439-algebraic_geometry_1d3e7e0ed1192a2331df70ab95ba5ca521392fb9.png" />.
+Such that the action of \[ (\mathbb{C}^*)^n \] extends to an action on \[ X \].
 </p>
 </div>
 </li>
 
-<li><a id="org7f10a47"></a>Definition Projective Toric Variety<br /></li>
+<li><a id="orgcc853c1"></a>Definition Projective Toric Variety<br /></li>
 
-<li><a id="orga46b295"></a>Definition Homogeneous Coordinate Rings<br /></li>
+<li><a id="orgcc472f5"></a>Definition Homogeneous Coordinate Rings<br /></li>
 
-<li><a id="org43a7ab5"></a>Theorem: Products of Projective Spaces<br /></li>
+<li><a id="orgca04a64"></a>Theorem: Products of Projective Spaces<br /></li>
 
-<li><a id="orgb8ce466"></a>Projective Variety Metaphors<br />
+<li><a id="orgd7f3ac4"></a>Projective Variety Metaphors<br />
 <div class="outline-text-5" id="text-6-2-1-6">
 <p>
 Projective spaces are the geometers analogue of geometry with perspective.
@@ -416,8 +437,8 @@ This section is an outline of the ideas we need to formalize again for projectiv
 <tbody>
 <tr>
 <td class="org-left">Space</td>
-<td class="org-left"><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_046c050775bee513a68a3f8b8e1db8e43820bd50.png" alt="20220408192439-algebraic_geometry_046c050775bee513a68a3f8b8e1db8e43820bd50.png" /></td>
-<td class="org-left"><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_d2c9c693ce7e7659e2a85df924926dddc121e8e3.png" alt="20220408192439-algebraic_geometry_d2c9c693ce7e7659e2a85df924926dddc121e8e3.png" /></td>
+<td class="org-left">\[ \mathbb{A}_{\mathbb{C}}^n \]</td>
+<td class="org-left">\[ \mathbb{P}^n \simeq \mathbb{C}^{n + 1} / ((x_0, \ldots, x_n) \sim (\lambda x_0, \ldots, \lambda x_n)) \]</td>
 </tr>
 
 <tr>
@@ -458,8 +479,8 @@ This section is an outline of the ideas we need to formalize again for projectiv
 
 <tr>
 <td class="org-left">Hilbert Basis Theorem</td>
-<td class="org-left"><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_298bb346bee238956b6948d8234070fdfa0c4041.png" alt="20220408192439-algebraic_geometry_298bb346bee238956b6948d8234070fdfa0c4041.png" />  ideal is finitely generated</td>
-<td class="org-left"><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_298bb346bee238956b6948d8234070fdfa0c4041.png" alt="20220408192439-algebraic_geometry_298bb346bee238956b6948d8234070fdfa0c4041.png" /> homogeneous ideal is finitely generated</td>
+<td class="org-left">\[ I \trianglelefteq \mathbb{C}[x_1, \ldots, x_n] \]  ideal is finitely generated</td>
+<td class="org-left">\[ I \trianglelefteq \mathbb{C}[x_1, \ldots, x_n] \] homogeneous ideal is finitely generated</td>
 </tr>
 
 <tr>
@@ -470,8 +491,8 @@ This section is an outline of the ideas we need to formalize again for projectiv
 
 <tr>
 <td class="org-left">Cones</td>
-<td class="org-left"><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_06d0915078ccbf9ff94cb98f52ca30d423a01f83.png" alt="20220408192439-algebraic_geometry_06d0915078ccbf9ff94cb98f52ca30d423a01f83.png" /></td>
-<td class="org-left"><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_6962d509ec138f3ce10cb83c28bf42e17962d8fd.png" alt="20220408192439-algebraic_geometry_6962d509ec138f3ce10cb83c28bf42e17962d8fd.png" /></td>
+<td class="org-left">\[ Y_\mathscr{A} \]</td>
+<td class="org-left">\[ X_\mathscr{A} \]</td>
 </tr>
 
 <tr>
@@ -498,23 +519,23 @@ This section is an outline of the ideas we need to formalize again for projectiv
 </ol>
 </div>
 
-<div id="outline-container-org25c318b" class="outline-4">
-<h4 id="org25c318b"><span class="section-number-4">6.2.2.</span> 2.1 Lattice Points and Projective Toric Varieties</h4>
+<div id="outline-container-orgb50d67d" class="outline-4">
+<h4 id="orgb50d67d"><span class="section-number-4">6.2.2.</span> 2.1 Lattice Points and Projective Toric Varieties</h4>
 <div class="outline-text-4" id="text-6-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="org8f00110"></a>Theorem <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_e5b88810217a0b386d8512e82f44a78187bd3eb1.png" alt="20220408192439-algebraic_geometry_e5b88810217a0b386d8512e82f44a78187bd3eb1.png" /> is a toric variety<br />
+<li><a id="org650d01a"></a>Theorem \[ \mathbb{P}^n \] is a toric variety<br />
 <div class="outline-text-5" id="text-6-2-2-1">
 <p>
 A variety the vanishing set of points of a given set of polynomials.
 </p>
 
 <p>
-An algebraic torus is an affine variety isomorphic to <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_bda106dd2158bc0d511320af1ef5edf99378e5cb.png" alt="20220408192439-algebraic_geometry_bda106dd2158bc0d511320af1ef5edf99378e5cb.png" />
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_ecf63e127eee8991da08cf11d742617f3de797f1.png" alt="20220408192439-algebraic_geometry_ecf63e127eee8991da08cf11d742617f3de797f1.png" /> 
-Tori have a character function <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_53e2a326315cc676c7925a82b6eb4f9ad1631067.png" alt="20220408192439-algebraic_geometry_53e2a326315cc676c7925a82b6eb4f9ad1631067.png" /> (every input is multiplied with some power)
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_4ab2e851fbc7ffb04221a253c4e648e81d2f6f5f.png" alt="20220408192439-algebraic_geometry_4ab2e851fbc7ffb04221a253c4e648e81d2f6f5f.png" />
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_742c85b0bad3572038e1f094fc81d22ba1cf0133.png" alt="20220408192439-algebraic_geometry_742c85b0bad3572038e1f094fc81d22ba1cf0133.png" /> 
+An algebraic torus is an affine variety isomorphic to \[ (\mathbb{C}^*)^n \]
+\[ \forall m \in \mathbb{Z}^n \exists \chi^m \colon (\mathbb{C}^*)^n \to \mathbb{C}^* := \chi^m(t_1, \cdots, t_n) = t_1^{a_1} \cdots t_n^{a_n} \] 
+Tori have a character function \[ \chi^m(t_1, \cdots, t_n) = t_1^{a_1} \cdots t_n^{a_n} \] (every input is multiplied with some power)
+\[ \chi^m(z) = \prod t_i^{a_i} \]
+\[ \lambda^m(t) = (t_1^{a_1}, \cdots, t_n^{a_n}) \] 
 </p>
 
 <p>
@@ -527,11 +548,18 @@ A <b>toric</b> variety is a variety which:
 
 
 <p>
-Note: <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_f3f90866e7ebb9f6669647d4e7c0727d751d6927.png" alt="20220408192439-algebraic_geometry_f3f90866e7ebb9f6669647d4e7c0727d751d6927.png" />
+Note: \[ \mathbb{P}^n \supset \mathbb{P}^n \setminus \mathbf{V}(x_0, \cdots, x_n) \]
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_d0ee628b36b38f88e5ddbaccf96b086adeca44c2.png" alt="20220408192439-algebraic_geometry_d0ee628b36b38f88e5ddbaccf96b086adeca44c2.png" /> 
+\[
+\begin{align*}
+T_{\mathbb{P}^n}
+&= \mathbb{P}^n \setminus \mathbf{V}(x_0 \cdots x_n) \\
+&= \{(a_0, \ldots, a_n) \in \mathbb{P}^n \vert a_0 \cdots a_n \neq 0 \} \\
+&= \{ (1, t_1, \ldots, t_n) \in \mathbb{P}^n \vert t_1, \cdots, t_n \in \mathbb{C}^* \} \\
+&\simeq (\mathbb{C}^*)^n
+\end{align*} \] 
 </p>
 
 <p>
@@ -539,70 +567,70 @@ Define the following exact sequence of Tori.
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_7221fee017710aa7c2ca499f9e29495c35958999.png" alt="20220408192439-algebraic_geometry_7221fee017710aa7c2ca499f9e29495c35958999.png" /> 
+\[ 1 \xrightarrow{} \mathbb{C}^* \xrightarrow{} (\mathbb{C}^*)^{n+1} \xrightarrow{\pi} T_{\mathbb{P}^n} \xrightarrow{} 1 \] 
 </p>
 
 
 <p>
-From an <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_f8e02bca7571b9f60a8a432ecd21fd21cc313bcb.png" alt="20220408192439-algebraic_geometry_f8e02bca7571b9f60a8a432ecd21fd21cc313bcb.png" /> dimensional torus, we get a character lattice (a free group <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_64d0bd9cb8b91920f76db310ba71b127e80706ca.png" alt="20220408192439-algebraic_geometry_64d0bd9cb8b91920f76db310ba71b127e80706ca.png" /> ) of all the <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_890322daf10f0f122ef1c81a6fe6b663cd60076d.png" alt="20220408192439-algebraic_geometry_890322daf10f0f122ef1c81a6fe6b663cd60076d.png" />'s.
+From an \[ n+1 \] dimensional torus, we get a character lattice (a free group \[ \mathbb{Z}^n \] ) of all the \[ \chi^m \]'s.
 There is an 'anti'-equivalence of categories between tori and characters.
 </p>
 
 <p>
-So the projection map induced by <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_e5b88810217a0b386d8512e82f44a78187bd3eb1.png" alt="20220408192439-algebraic_geometry_e5b88810217a0b386d8512e82f44a78187bd3eb1.png" /> is also given to the character map.
-This means <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_2213012987c71d09974076d44969e60162c05dc6.png" alt="20220408192439-algebraic_geometry_2213012987c71d09974076d44969e60162c05dc6.png" />
+So the projection map induced by \[ \mathbb{P}^n \] is also given to the character map.
+This means \[ \chi^m \simeq \chi^{\lambda m} \]
 </p>
 
 <p>
-In dimension <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_cafbb9babc21f58e6f47faba5160953fe5886776.png" alt="20220408192439-algebraic_geometry_cafbb9babc21f58e6f47faba5160953fe5886776.png" /> we have that <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_a626c8fe76e67ac5cbfa85514b08b5eefd15b5c8.png" alt="20220408192439-algebraic_geometry_a626c8fe76e67ac5cbfa85514b08b5eefd15b5c8.png" /> 
-The character lattice of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_cc036448329144de6b4af2d98c7487d7ff1c25f8.png" alt="20220408192439-algebraic_geometry_cc036448329144de6b4af2d98c7487d7ff1c25f8.png" /> is <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_932c868c30fa492aac32e47059727fdd929482be.png" alt="20220408192439-algebraic_geometry_932c868c30fa492aac32e47059727fdd929482be.png" />
+In dimension \[ 2 \] we have that \[ (a,b) \mapsto (a,b) = (1,t) \] 
+The character lattice of \[ T_{\mathbb{P}^n}\] is \[ \mathscr{M}_n = \{(a_0, \ldots, a_n) \in \mathbb{Z}^{n+1} \vert \sum_{i=0}^n a_i = 0 \} \]
 </p>
 </div>
 
 <ol class="org-ol">
-<li><a id="org572fde8"></a>Definition: Character Lattice of <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_e50861bf809d9da4ac0815b441eea5f594444c42.png" alt="20220408192439-algebraic_geometry_e50861bf809d9da4ac0815b441eea5f594444c42.png" /><br />
+<li><a id="org7429757"></a>Definition: Character Lattice of \( T_{\mathbb{P}^n} \)<br />
 <div class="outline-text-6" id="text-6-2-2-1-1">
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_571586ca9a8d5bbf1f94267413fc814c77836be1.png" alt="20220408192439-algebraic_geometry_571586ca9a8d5bbf1f94267413fc814c77836be1.png" />
+\( \lambda \)
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_f8a4976eaf661ac2fa8802c75173399423b49940.png" alt="20220408192439-algebraic_geometry_f8a4976eaf661ac2fa8802c75173399423b49940.png" /></li>
+<li>\( \mathscr{M}_n = \{(a_i)_{i=0}^{n} \in \mathbb{Z}^{n+1} \vert \sum_{i=0}^{n} a_i = 0\} \)</li>
 </ul>
 
 <p>
-This is because if we have a point then <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_aad917e861dd9f549a875b5ad27c34f879095d38.png" alt="20220408192439-algebraic_geometry_aad917e861dd9f549a875b5ad27c34f879095d38.png" /> 
-<img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_a63e1cfc945d84fd4cc7a95e817bf6219722f4fb.png" alt="20220408192439-algebraic_geometry_a63e1cfc945d84fd4cc7a95e817bf6219722f4fb.png" />
+This is because if we have a point then \( \exists t_i \neq 0 \) 
+\( [t_0 \colon \ldots \colon t_n] = [\frac{t_0}{t_i} \colon \ldots \colon 1 \colon \ldots \colon \frac{t_n}{t_i}]  \)
 </p>
 
 <p>
-The character evaluated on the point is then <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_054c992cbe549909fcbfe53193ac3ae081994537.png" alt="20220408192439-algebraic_geometry_054c992cbe549909fcbfe53193ac3ae081994537.png" /> 
+The character evaluated on the point is then \( (\frac{t_0}{t_i})^{a_0} \cdots (\frac{t_n}{t_i})^{a_n} = \) 
 </p>
 </div>
 </li>
 
-<li><a id="orgbf38463"></a>Definition: One Parameter Subgroups<br /></li>
+<li><a id="org171302c"></a>Definition: One Parameter Subgroups<br /></li>
 </ol>
 </li>
 
-<li><a id="orgc0e3f0a"></a>Definition: Projective Toric Variety <img src="file:///home/zjabbar/.cache/ltximg/20220408192439-algebraic_geometry_904f8cc0f195dbf7eb6672d8cfaeaa3e6fd392f2.png" alt="20220408192439-algebraic_geometry_904f8cc0f195dbf7eb6672d8cfaeaa3e6fd392f2.png" /><br /></li>
+<li><a id="org03405c1"></a>Definition: Projective Toric Variety \( X_{\mathscr{A}} \)<br /></li>
 
-<li><a id="orgb2020bf"></a>Definition: Affine Cone of a Projective Toric Variety<br /></li>
+<li><a id="orge62d9c2"></a>Definition: Affine Cone of a Projective Toric Variety<br /></li>
 
-<li><a id="org9df844f"></a>Definition: Torus of a Projective Toric Variety<br /></li>
+<li><a id="org1a608b1"></a>Definition: Torus of a Projective Toric Variety<br /></li>
 
-<li><a id="org93f3793"></a>Definition: Affine Pieces of a Projective Toric Variety<br /></li>
+<li><a id="orgb2624df"></a>Definition: Affine Pieces of a Projective Toric Variety<br /></li>
 
-<li><a id="org95ea0ad"></a>Definition: Projective Normality<br /></li>
+<li><a id="orgb8d2bfd"></a>Definition: Projective Normality<br /></li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-orgfb3dfb9" class="outline-3">
-<h3 id="orgfb3dfb9"><span class="section-number-3">6.3.</span> Presentation Notes</h3>
+<div id="outline-container-org0247081" class="outline-3">
+<h3 id="org0247081"><span class="section-number-3">6.3.</span> Presentation Notes</h3>
 </div>
 
-<div id="outline-container-orgf33ad53" class="outline-3">
-<h3 id="orgf33ad53"><span class="section-number-3">6.4.</span> </h3>
+<div id="outline-container-org603f720" class="outline-3">
+<h3 id="org603f720"><span class="section-number-3">6.4.</span> </h3>
 </div>
 </div>
 </div>

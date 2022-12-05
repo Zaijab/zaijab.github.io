@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-10 Thu 14:20 -->
+<!-- 2022-12-05 Mon 12:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Maybe, में भि میں بھی, 明媚.</title>
+<title>Partial Differential Equations</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -198,10 +198,31 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Maybe, में भि میں بھی, 明媚.</h1>
+<h1 class="title">Partial Differential Equations</h1>
 <p>
 Books:
 </p>
@@ -210,52 +231,75 @@ Books:
 <li>Functional Analysis and PDEs Brazis</li>
 </ul>
 
-<div id="outline-container-org45b53e5" class="outline-2">
-<h2 id="org45b53e5"><span class="section-number-2">1.</span> First Order Partial Differential Equations</h2>
+<div id="outline-container-org61167ff" class="outline-2">
+<h2 id="org61167ff"><span class="section-number-2">1.</span> Definitions</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org2215b3a" class="outline-3">
-<h3 id="org2215b3a"><span class="section-number-3">1.1.</span> Linear</h3>
+<div id="outline-container-orga499fd1" class="outline-3">
+<h3 id="orga499fd1"><span class="section-number-3">1.1.</span> Partial Differential Equation</h3>
 <div class="outline-text-3" id="text-1-1">
+<p>
+Given an expression of the form
+</p>
+
+<p>
+\[ F(@(D^k u(x))_{k}, x) = 0 \]
+</p>
+
+<p>
+where
+</p>
+
+<p>
+\[ F \colon \prod_{k} \mathbb{R}^{n^k} \to \mathbb{R} \]
+Then \( F \) is called a partial differential equation.
+</p>
 </div>
-<div id="outline-container-org3dfdb7a" class="outline-4">
-<h4 id="org3dfdb7a"><span class="section-number-4">1.1.1.</span> <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_e4f957a27480b3a3e13a734f9b13bc012a1003d6.png" alt="20221107072546-partial_differential_equations_e4f957a27480b3a3e13a734f9b13bc012a1003d6.png" /> - Linear Transport Equation</h4>
-<div class="outline-text-4" id="text-1-1-1">
+</div>
+
+<div id="outline-container-org7265cb2" class="outline-3">
+<h3 id="org7265cb2"><span class="section-number-3">1.2.</span> Initial Value Problem</h3>
+</div>
+
+<div id="outline-container-org3412e36" class="outline-3">
+<h3 id="org3412e36"><span class="section-number-3">1.3.</span> Boundary Value Problem</h3>
+</div>
+
+<div id="outline-container-orgd5c6878" class="outline-3">
+<h3 id="orgd5c6878"><span class="section-number-3">1.4.</span> Linear Partial Differential Equation</h3>
+</div>
+
+<div id="outline-container-org4e84ac6" class="outline-3">
+<h3 id="org4e84ac6"><span class="section-number-3">1.5.</span> Semilinear Partial Differential Equation</h3>
+</div>
+
+<div id="outline-container-org2e5ed23" class="outline-3">
+<h3 id="org2e5ed23"><span class="section-number-3">1.6.</span> Quasilinear Partial Differential Equation</h3>
+</div>
+
+<div id="outline-container-orgc5cc379" class="outline-3">
+<h3 id="orgc5cc379"><span class="section-number-3">1.7.</span> Characteristic</h3>
+<div class="outline-text-3" id="text-1-7">
 <p>
-First, the name.
-Linear - The equation is linear in the unknown. That is, if the unknown is scaled by <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" alt="20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" /> then we may factor the <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" alt="20221107072546-partial_differential_equations_50705eee6e5ac746077b8d85d3e5e9aa0297018e.png" /> out.
+Let \( \Sigma \) be a \( \mathscr{C}^1(\Omega)  \) hypersurface.
 </p>
 
 <p>
-First order - The highest power of the differential is one.
+We say \( \Sigma \) is characteristic for \( L \) at \( x \in \Sigma \) if one of the two unit normal vectors to Sigma at x has zero dot product with b
 </p>
 
 <p>
-Homogeneous - Right hand side is identically <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" alt="20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" />.
+Equivalently, b(x) is tangent to Sigma
 </p>
+</div>
+</div>
+</div>
 
+<div id="outline-container-orge3a517e" class="outline-2">
+<h2 id="orge3a517e"><span class="section-number-2">2.</span> Problem Solving Methods</h2>
+<div class="outline-text-2" id="text-2">
 <p>
-Constant Coefficients - Coefficients are <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_6bd40391ee7364b9ed0b1b28e47dcee9d6a5c72c.png" alt="20221107072546-partial_differential_equations_6bd40391ee7364b9ed0b1b28e47dcee9d6a5c72c.png" /> and <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_fae8326291807f234714ae258cb53e8992e630ea.png" alt="20221107072546-partial_differential_equations_fae8326291807f234714ae258cb53e8992e630ea.png" /> we may write <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_03e2647af3787bc68f8fbcdc5e46981986ff8269.png" alt="20221107072546-partial_differential_equations_03e2647af3787bc68f8fbcdc5e46981986ff8269.png" />
-</p>
-
-<p>
-Let
-</p>
-<ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_752488453a8f72dd0edb270a5c46d7396a3b48f0.png" alt="20221107072546-partial_differential_equations_752488453a8f72dd0edb270a5c46d7396a3b48f0.png" /> (be a constant vector)</li>
-<li><img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_3f05677abc132044f388b84189ac9848050eba09.png" alt="20221107072546-partial_differential_equations_3f05677abc132044f388b84189ac9848050eba09.png" />, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_dd426277c5de68acbd1c8cbea9a874110ed91bda.png" alt="20221107072546-partial_differential_equations_dd426277c5de68acbd1c8cbea9a874110ed91bda.png" />, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_e5d4090e66d311f0d7ef113056c0155fbbdb4a88.png" alt="20221107072546-partial_differential_equations_e5d4090e66d311f0d7ef113056c0155fbbdb4a88.png" />, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_a2137c2253121d2b75378152b91597df828b479b.png" alt="20221107072546-partial_differential_equations_a2137c2253121d2b75378152b91597df828b479b.png" /></li>
-</ul>
-
-<p>
-Then consider <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_f63e2c5d63b5ccdc816a28c02c4c7d6fd4f98087.png" alt="20221107072546-partial_differential_equations_f63e2c5d63b5ccdc816a28c02c4c7d6fd4f98087.png" />
-</p>
-
-<p>
-We may write this as <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_a8e36c4c6482d8ada22b634bc4dcc31ed83d9a82.png" alt="20221107072546-partial_differential_equations_a8e36c4c6482d8ada22b634bc4dcc31ed83d9a82.png" /> which is also equivalent to <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_ef9da20caf6e59ca5abed746ca94d5152007aa3f.png" alt="20221107072546-partial_differential_equations_ef9da20caf6e59ca5abed746ca94d5152007aa3f.png" />
-</p>
-
-<p>
-Look for <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_090aec03788b58459fa27a75fc1ef53a42eb3d29.png" alt="20221107072546-partial_differential_equations_090aec03788b58459fa27a75fc1ef53a42eb3d29.png" /> function
+Look for \( C^1 \) function
 </p>
 
 <p>
@@ -269,32 +313,106 @@ Problem Solving Method
 (3) Uniqueness (The smaller the class the easier)
 (4) Regularity of Solution (Deep)
 </p>
+</div>
+</div>
+
+<div id="outline-container-org6da3a3d" class="outline-2">
+<h2 id="org6da3a3d"><span class="section-number-2">3.</span> First Order Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org906f412" class="outline-3">
+<h3 id="org906f412"><span class="section-number-3">3.1.</span> Linear</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org518006f" class="outline-4">
+<h4 id="org518006f"><span class="section-number-4">3.1.1.</span> \( u_t + b \cdot \nabla u = 0 \) - Linear Transport Equation</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( b \in \mathbb{R}^n \) (be a constant vector)</li>
+<li>\( u(t,x) \), \( t \geq 0 \), \( x \in \mathbb{R}^n \), \( \nabla = (\frac{\partial}{\partial x_1}, \cdots, \frac{\partial}{\partial x_n}) \)</li>
+</ul>
 
 <p>
-Notice that the function <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" alt="20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" /> has a directional derivative equal to <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" alt="20221107072546-partial_differential_equations_2464411d18c8a288a0d0056326ab172e46c9edff.png" /> along <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" alt="20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" />
+Then consider \( u_t + b \cdot \nabla u = 0 \)
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_9f24177a0672ad6c6f8e879b6e2850b51f82dc50.png" alt="20221107072546-partial_differential_equations_9f24177a0672ad6c6f8e879b6e2850b51f82dc50.png" />
+We may write this as \[ u_t + \sum_{i = 1}^n b_i \frac{\partial u}{\partial x_i} \] which is also equivalent to \( (u_t, \nabla u) \cdot (1, b) = 0 \)
 </p>
 
 <p>
-Then <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_e039cecedd52787cd49c64a692756a3fb220b59f.png" alt="20221107072546-partial_differential_equations_e039cecedd52787cd49c64a692756a3fb220b59f.png" />
+Equation type:
+</p>
+<ul class="org-ul">
+<li>Linear
+The equation is linear in the unknown.</li>
+
+<li>First order
+The highest power of the differential is one.</li>
+
+<li>Homogeneous
+Right hand side is identically \( 0 \).</li>
+
+<li>Constant Coefficients
+Coefficients are \( 1 \) and \( b \) we may write \( (1,b) \in \mathbb{R}^{1 + n} \)</li>
+</ul>
+
+<p>
+Notice that the function \( u \) has a directional derivative equal to \( 0 \) along \( (1,b) \)
 </p>
 
 <p>
-So <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_67f4b222f3694892c2a8403e770043cfb9a4abc3.png" alt="20221107072546-partial_differential_equations_67f4b222f3694892c2a8403e770043cfb9a4abc3.png" /> is constant. This tells us that <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" alt="20221107072546-partial_differential_equations_d33d592c3dd2869e5d7d1485615e3e33576a5d01.png" /> is constant on the lines parallel to <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" alt="20221107072546-partial_differential_equations_5f39c55ea02479a7aef6f595fd0a4d124e717e25.png" />.
+\( z(s) = u(t + s, x+sb) = u( (t,x) + s(1,b)) \)
 </p>
 
 <p>
-Denote <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_4172711db88c59324297e742af870d1b43e1902e.png" alt="20221107072546-partial_differential_equations_4172711db88c59324297e742af870d1b43e1902e.png" /> the "<img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_26eae01a1d101cafde52778f7bfee159f2869371.png" alt="20221107072546-partial_differential_equations_26eae01a1d101cafde52778f7bfee159f2869371.png" />" axis, <img src="file:///home/zjabbar/.cache/ltximg/20221107072546-partial_differential_equations_8c41e82d57e1f5fca619a32b83dcc5d3001c7615.png" alt="20221107072546-partial_differential_equations_8c41e82d57e1f5fca619a32b83dcc5d3001c7615.png" /> 
+Then \( \dot{z}(s) = u_t(t+s, x+sb) + \nabla u(t + s, x + sb) \cdot b = 0 \)
+</p>
+
+<p>
+So \( z \) is constant. This tells us that \( u \) is constant on the lines parallel to \( (1,b) \).
+</p>
+
+<p>
+Denote \( \Sigma = \{ t = 0 \} \subset \mathbb{R}^{1+n} \) the "\( x \)" axis, \( \bar{u} \in C^1(\Sigma) \) 
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgf66d17f" class="outline-4">
-<h4 id="orgf66d17f"><span class="section-number-4">1.1.2.</span> Method of Characteristics</h4>
-<div class="outline-text-4" id="text-1-1-2">
+
+
+<div id="outline-container-org8825e31" class="outline-4">
+<h4 id="org8825e31"><span class="section-number-4">3.1.2.</span> \[ Lu = \sum_{i = 1}^{N} b_i(x) \frac{\partial u}{\partial x_i} \]</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">PDE</td>
+<td class="org-left">\[ Lu = \sum_{i = 1}^{N} b_i(x) \frac{\partial u}{\partial x_i} \]</td>
+</tr>
+
+<tr>
+<td class="org-left">Boundary Condition</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgbdfe89c" class="outline-4">
+<h4 id="orgbdfe89c"><span class="section-number-4">3.1.3.</span> Method of Characteristics</h4>
+<div class="outline-text-4" id="text-3-1-3">
 <p>
 This method finds curves in your space. Along such curves the PDE becomes a system of ODE's.
 </p>
@@ -302,43 +420,45 @@ This method finds curves in your space. Along such curves the PDE becomes a syst
 </div>
 </div>
 
-<div id="outline-container-org994aae6" class="outline-3">
-<h3 id="org994aae6"><span class="section-number-3">1.2.</span> Nonlinear</h3>
+
+<div id="outline-container-org9df57ad" class="outline-3">
+<h3 id="org9df57ad"><span class="section-number-3">3.2.</span> Nonlinear</h3>
 </div>
 </div>
 
-<div id="outline-container-org948bf7b" class="outline-2">
-<h2 id="org948bf7b"><span class="section-number-2">2.</span> Second Order Partial Differential Equations</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-orgb699445" class="outline-2">
+<h2 id="orgb699445"><span class="section-number-2">4.</span> Second Order Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-orgaeb710e" class="outline-3">
-<h3 id="orgaeb710e"><span class="section-number-3">2.1.</span> Laplace Equation</h3>
-<div class="outline-text-3" id="text-2-1">
+<div id="outline-container-org86bb872" class="outline-3">
+<h3 id="org86bb872"><span class="section-number-3">4.1.</span> Laplace Equation</h3>
+<div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org22b2af8" class="outline-4">
-<h4 id="org22b2af8"><span class="section-number-4">2.1.1.</span> Elliptic Equation</h4>
-</div>
-
-<div id="outline-container-org1a98cc9" class="outline-4">
-<h4 id="org1a98cc9"><span class="section-number-4">2.1.2.</span> Parabolic Equation</h4>
+<div id="outline-container-org566994c" class="outline-4">
+<h4 id="org566994c"><span class="section-number-4">4.1.1.</span> Elliptic Equation</h4>
 </div>
 
-<div id="outline-container-org7d22a25" class="outline-4">
-<h4 id="org7d22a25"><span class="section-number-4">2.1.3.</span> Hyperbolic Equation</h4>
+<div id="outline-container-orgafde005" class="outline-4">
+<h4 id="orgafde005"><span class="section-number-4">4.1.2.</span> Parabolic Equation</h4>
+</div>
+
+<div id="outline-container-org67cca30" class="outline-4">
+<h4 id="org67cca30"><span class="section-number-4">4.1.3.</span> Hyperbolic Equation</h4>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org09a4a54" class="outline-2">
-<h2 id="org09a4a54"><span class="section-number-2">3.</span> Hilbert Spaces</h2>
+
+<div id="outline-container-org47f0530" class="outline-2">
+<h2 id="org47f0530"><span class="section-number-2">5.</span> Hilbert Spaces</h2>
 </div>
 
-<div id="outline-container-orga73b4f2" class="outline-2">
-<h2 id="orga73b4f2"><span class="section-number-2">4.</span> Banach Spaces</h2>
+<div id="outline-container-org3c50e50" class="outline-2">
+<h2 id="org3c50e50"><span class="section-number-2">6.</span> Banach Spaces</h2>
 </div>
 
-<div id="outline-container-org30b1bf4" class="outline-2">
-<h2 id="org30b1bf4"><span class="section-number-2">5.</span> Fourier Transform</h2>
+<div id="outline-container-org44b25dd" class="outline-2">
+<h2 id="org44b25dd"><span class="section-number-2">7.</span> Fourier Transform</h2>
 </div>
 </div>
 </body>

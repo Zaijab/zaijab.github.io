@@ -6,7 +6,7 @@
 <!-- 2022-12-05 Mon 12:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Equialent Formulations of a Topology</title>
+<title>Machine Learning Andrew Ng</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -222,86 +222,59 @@
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Equialent Formulations of a Topology</h1>
+<h1 class="title">Machine Learning Andrew Ng</h1>
 
-<div id="outline-container-org49f2880" class="outline-2">
-<h2 id="org49f2880"><span class="section-number-2">1.</span> Open Sets</h2>
+<div id="outline-container-org84e5984" class="outline-2">
+<h2 id="org84e5984"><span class="section-number-2">1.</span> Types of Machine Learning Problems</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1355cda" class="outline-3">
+<h3 id="org1355cda"><span class="section-number-3">1.1.</span> Supervised</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-Rather than look at a set with <b>just</b> elements, we instead look at a set with <b>elements that approximate</b>.
-</p>
-
-<p>
-We now have two rules on what counts at approximating,
-</p>
-
-<p>
-Approximations can get bigger and still be approximations forall lambda U<sub>lambda</sub>, cup<sub>lambda</sub> U<sub>lambda</sub> in A.
-If we have two approximations we can look at the intersection as another approximation.
-</p>
-
-<p>
-Think about it like using a ruler with only cm on one side. Any measurement would look like Xcm +/- 1cm.
-Whenever we measure something there's always a bit of error.
-If we used infinately many approximations to hone in on a precise measurement, we wouldn't really get an approximation now would we? 
-The infinite approximations would lead to a valid set but not a valid approximation.
-</p>
-
-<p>
-Examples: (R, T<sub>euclidean</sub>), (X, T<sub>Cofinite</sub>), (X, T<sub>Discrete</sub>), (X, T<sub>Indiscrete</sub>)
-</p>
-
-<p>
-The sets are called open because given a set which approximates some element, x &isin; U, we can form a sequence a<sub>n</sub> which approximates a \nin U.
-That is, the every element in an open set can be approximated from within the set but the sets are "leaky" in the sense that they can approximate other things.
+Given many pairs \( (x_i,y_i) \) how can we create a function \( x \mapsto y \)
 </p>
 </div>
+
+<div id="outline-container-org68dcb15" class="outline-4">
+<h4 id="org68dcb15"><span class="section-number-4">1.1.1.</span> Breast Cancer</h4>
 </div>
-<div id="outline-container-org327b259" class="outline-2">
-<h2 id="org327b259"><span class="section-number-2">2.</span> Closed Sets</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-Now we have closed sets which have the opposite "leaky" property. Closed sets always have the property that if a point can be approximated from within the set, then the point was already within the set.
-</p>
 
-<p>
-If you cannot escape any of the sets F<sub>n</sub> then you cannot escape their intersection. Intersecting will not open a hole to escape frome.
-</p>
+<div id="outline-container-org2b6aa0c" class="outline-4">
+<h4 id="org2b6aa0c"><span class="section-number-4">1.1.2.</span> Housing Market</h4>
+</div>
 
+<div id="outline-container-org118e61d" class="outline-4">
+<h4 id="org118e61d"><span class="section-number-4">1.1.3.</span> Self Driving Cars</h4>
+</div>
+</div>
+
+<div id="outline-container-org5a77f0b" class="outline-3">
+<h3 id="org5a77f0b"><span class="section-number-3">1.2.</span> Regression</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-If you cannot escape from two sets, then any sequence would be stuck infinately in at least one of the sets. The limit would then be from the set it has infinately many points in. 
+When the \( y \) are in a continuous range of values.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3c157bb" class="outline-2">
-<h2 id="org3c157bb"><span class="section-number-2">3.</span> Closure Function</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org5af4d75" class="outline-3">
+<h3 id="org5af4d75"><span class="section-number-3">1.3.</span> Classification</h3>
+<div class="outline-text-3" id="text-1-3">
 <p>
-This next idea of being close does not use distinguished sets. Instead we have a function which takes any set from within X and ouputs all points which are touching the set.
-</p>
-
-<p>
-The rules for what touches what are:
-S &sub; cl(S) : S is close to itself
-cl[cl(S)] = cl(S) : The points close to the points close to S is close to S.
-cl(A cup B) = cl(A) cup cl(B) : If a point touches one of two sets, it must have been touching one of the sets.
-cl(&empty;) = &empty;, the emptyset does not touch any points.
+When the \( y \) are in a finite range of values.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org500a3cb" class="outline-2">
-<h2 id="org500a3cb"><span class="section-number-2">4.</span> Interior Function</h2>
+<div id="outline-container-org345fd99" class="outline-3">
+<h3 id="org345fd99"><span class="section-number-3">1.4.</span> Unsupervised</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+When the \( y \) are not known.
+</p>
 </div>
-<div id="outline-container-orgf0671cc" class="outline-2">
-<h2 id="orgf0671cc"><span class="section-number-2">5.</span> Neighborhoods</h2>
 </div>
-<div id="outline-container-org4c80a7f" class="outline-2">
-<h2 id="org4c80a7f"><span class="section-number-2">6.</span> Convergence of Nets</h2>
-</div>
-<div id="outline-container-org537596d" class="outline-2">
-<h2 id="org537596d"><span class="section-number-2">7.</span> Convergence of Filters</h2>
 </div>
 </div>
 </body>

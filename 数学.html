@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-05 Mon 12:29 -->
+<!-- 2022-12-05 Mon 12:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Equialent Formulations of a Topology</title>
+<title>数学</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -198,111 +198,11 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Equialent Formulations of a Topology</h1>
+<h1 class="title">数学</h1>
 
-<div id="outline-container-org49f2880" class="outline-2">
-<h2 id="org49f2880"><span class="section-number-2">1.</span> Open Sets</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-Rather than look at a set with <b>just</b> elements, we instead look at a set with <b>elements that approximate</b>.
-</p>
-
-<p>
-We now have two rules on what counts at approximating,
-</p>
-
-<p>
-Approximations can get bigger and still be approximations forall lambda U<sub>lambda</sub>, cup<sub>lambda</sub> U<sub>lambda</sub> in A.
-If we have two approximations we can look at the intersection as another approximation.
-</p>
-
-<p>
-Think about it like using a ruler with only cm on one side. Any measurement would look like Xcm +/- 1cm.
-Whenever we measure something there's always a bit of error.
-If we used infinately many approximations to hone in on a precise measurement, we wouldn't really get an approximation now would we? 
-The infinite approximations would lead to a valid set but not a valid approximation.
-</p>
-
-<p>
-Examples: (R, T<sub>euclidean</sub>), (X, T<sub>Cofinite</sub>), (X, T<sub>Discrete</sub>), (X, T<sub>Indiscrete</sub>)
-</p>
-
-<p>
-The sets are called open because given a set which approximates some element, x &isin; U, we can form a sequence a<sub>n</sub> which approximates a \nin U.
-That is, the every element in an open set can be approximated from within the set but the sets are "leaky" in the sense that they can approximate other things.
-</p>
-</div>
-</div>
-<div id="outline-container-org327b259" class="outline-2">
-<h2 id="org327b259"><span class="section-number-2">2.</span> Closed Sets</h2>
-<div class="outline-text-2" id="text-2">
-<p>
-Now we have closed sets which have the opposite "leaky" property. Closed sets always have the property that if a point can be approximated from within the set, then the point was already within the set.
-</p>
-
-<p>
-If you cannot escape any of the sets F<sub>n</sub> then you cannot escape their intersection. Intersecting will not open a hole to escape frome.
-</p>
-
-<p>
-If you cannot escape from two sets, then any sequence would be stuck infinately in at least one of the sets. The limit would then be from the set it has infinately many points in. 
-</p>
-</div>
-</div>
-
-<div id="outline-container-org3c157bb" class="outline-2">
-<h2 id="org3c157bb"><span class="section-number-2">3.</span> Closure Function</h2>
-<div class="outline-text-2" id="text-3">
-<p>
-This next idea of being close does not use distinguished sets. Instead we have a function which takes any set from within X and ouputs all points which are touching the set.
-</p>
-
-<p>
-The rules for what touches what are:
-S &sub; cl(S) : S is close to itself
-cl[cl(S)] = cl(S) : The points close to the points close to S is close to S.
-cl(A cup B) = cl(A) cup cl(B) : If a point touches one of two sets, it must have been touching one of the sets.
-cl(&empty;) = &empty;, the emptyset does not touch any points.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org500a3cb" class="outline-2">
-<h2 id="org500a3cb"><span class="section-number-2">4.</span> Interior Function</h2>
-</div>
-<div id="outline-container-orgf0671cc" class="outline-2">
-<h2 id="orgf0671cc"><span class="section-number-2">5.</span> Neighborhoods</h2>
-</div>
-<div id="outline-container-org4c80a7f" class="outline-2">
-<h2 id="org4c80a7f"><span class="section-number-2">6.</span> Convergence of Nets</h2>
-</div>
-<div id="outline-container-org537596d" class="outline-2">
-<h2 id="org537596d"><span class="section-number-2">7.</span> Convergence of Filters</h2>
-</div>
 </div>
 </body>
 </html>
