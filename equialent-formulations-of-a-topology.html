@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-05 Mon 12:35 -->
+<!-- 2022-12-05 Mon 14:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Equialent Formulations of a Topology</title>
@@ -198,34 +198,45 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Equialent Formulations of a Topology</h1>
 
-<div id="outline-container-orga2c5984" class="outline-2">
-<h2 id="orga2c5984"><span class="section-number-2">1.</span> Open Sets</h2>
+<div id="outline-container-org6b7a06a" class="outline-2">
+<h2 id="org6b7a06a"><span class="section-number-2">1.</span> Open Sets</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Rather than look at a set with <b>just</b> elements, we instead look at a set with <b>elements that approximate</b>.
@@ -257,8 +268,8 @@ That is, the every element in an open set can be approximated from within the se
 </p>
 </div>
 </div>
-<div id="outline-container-org0a8b8c2" class="outline-2">
-<h2 id="org0a8b8c2"><span class="section-number-2">2.</span> Closed Sets</h2>
+<div id="outline-container-org28428a1" class="outline-2">
+<h2 id="org28428a1"><span class="section-number-2">2.</span> Closed Sets</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Now we have closed sets which have the opposite "leaky" property. Closed sets always have the property that if a point can be approximated from within the set, then the point was already within the set.
@@ -274,8 +285,8 @@ If you cannot escape from two sets, then any sequence would be stuck infinately 
 </div>
 </div>
 
-<div id="outline-container-org21802cb" class="outline-2">
-<h2 id="org21802cb"><span class="section-number-2">3.</span> Closure Function</h2>
+<div id="outline-container-org118d7d9" class="outline-2">
+<h2 id="org118d7d9"><span class="section-number-2">3.</span> Closure Function</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 This next idea of being close does not use distinguished sets. Instead we have a function which takes any set from within X and ouputs all points which are touching the set.
@@ -291,17 +302,17 @@ cl(&empty;) = &empty;, the emptyset does not touch any points.
 </div>
 </div>
 
-<div id="outline-container-org55b3b3c" class="outline-2">
-<h2 id="org55b3b3c"><span class="section-number-2">4.</span> Interior Function</h2>
+<div id="outline-container-orgaba54a6" class="outline-2">
+<h2 id="orgaba54a6"><span class="section-number-2">4.</span> Interior Function</h2>
 </div>
-<div id="outline-container-org45827f2" class="outline-2">
-<h2 id="org45827f2"><span class="section-number-2">5.</span> Neighborhoods</h2>
+<div id="outline-container-org9a1777c" class="outline-2">
+<h2 id="org9a1777c"><span class="section-number-2">5.</span> Neighborhoods</h2>
 </div>
-<div id="outline-container-org99b8c43" class="outline-2">
-<h2 id="org99b8c43"><span class="section-number-2">6.</span> Convergence of Nets</h2>
+<div id="outline-container-org8f8b3b0" class="outline-2">
+<h2 id="org8f8b3b0"><span class="section-number-2">6.</span> Convergence of Nets</h2>
 </div>
-<div id="outline-container-org3610633" class="outline-2">
-<h2 id="org3610633"><span class="section-number-2">7.</span> Convergence of Filters</h2>
+<div id="outline-container-orgba0f642" class="outline-2">
+<h2 id="orgba0f642"><span class="section-number-2">7.</span> Convergence of Filters</h2>
 </div>
 </div>
 </body>

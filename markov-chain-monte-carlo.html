@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-05 Mon 12:35 -->
+<!-- 2022-12-05 Mon 14:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Markov Chain Monte Carlo</title>
@@ -198,34 +198,45 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Markov Chain Monte Carlo</h1>
 
-<div id="outline-container-org3159407" class="outline-2">
-<h2 id="org3159407"><span class="section-number-2">1.</span> Problem Statement</h2>
+<div id="outline-container-org3c17341" class="outline-2">
+<h2 id="org3c17341"><span class="section-number-2">1.</span> Problem Statement</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Given
@@ -252,8 +263,8 @@ Answer
 </div>
 
 
-<div id="outline-container-orgaf9c868" class="outline-2">
-<h2 id="orgaf9c868"><span class="section-number-2">2.</span> Algorithm</h2>
+<div id="outline-container-org3570764" class="outline-2">
+<h2 id="org3570764"><span class="section-number-2">2.</span> Algorithm</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Select an initial value for \( x \), call it \( x_0 \).
@@ -286,15 +297,15 @@ If \( u > \alpha \) then reject the new choice of \( x^* \). Meaning \( x_i = x 
 </div>
 
 
-<div id="outline-container-orgff06ab1" class="outline-2">
-<h2 id="orgff06ab1"><span class="section-number-2">3.</span> Implementation</h2>
+<div id="outline-container-orga78956d" class="outline-2">
+<h2 id="orga78956d"><span class="section-number-2">3.</span> Implementation</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Tested on \[ f(x) = e^{\frac{-x^2}{2}} \]
 </p>
 
 
-<div id="org069a2e7" class="figure">
+<div id="org4989629" class="figure">
 <p><img src="./.ob-jupyter/7ad8711e28d01db4a501ad1aab6914592929ded4.png" alt="7ad8711e28d01db4a501ad1aab6914592929ded4.png" />
 </p>
 </div>
@@ -302,21 +313,21 @@ Tested on \[ f(x) = e^{\frac{-x^2}{2}} \]
 </div>
 
 
-<div id="outline-container-orgfdc9529" class="outline-2">
-<h2 id="orgfdc9529"><span class="section-number-2">4.</span> Proof</h2>
+<div id="outline-container-orge21f134" class="outline-2">
+<h2 id="orge21f134"><span class="section-number-2">4.</span> Proof</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org23403dd" class="outline-3">
-<h3 id="org23403dd"><span class="section-number-3">4.1.</span> Aperiodic and Irreducible</h3>
+<div id="outline-container-org9787e2b" class="outline-3">
+<h3 id="org9787e2b"><span class="section-number-3">4.1.</span> Aperiodic and Irreducible</h3>
 <div class="outline-text-3" id="text-4-1">
-<div class="THEOREM" id="org7601ef9">
+<div class="THEOREM" id="org2a966f6">
 <p>
 An irreducible, aperiodic Markov chain has a unique stationary distribution if it exists.
 </p>
 
 </div>
 
-<div class="PROOF" id="org56c9a0e">
+<div class="PROOF" id="org1e0981c">
 <p>
 In the book, Theorem 4.3.3.
 </p>
@@ -326,10 +337,10 @@ In the book, Theorem 4.3.3.
 </div>
 
 
-<div id="outline-container-org69a7738" class="outline-3">
-<h3 id="org69a7738"><span class="section-number-3">4.2.</span> Detailed Balance</h3>
+<div id="outline-container-org568cc52" class="outline-3">
+<h3 id="org568cc52"><span class="section-number-3">4.2.</span> Detailed Balance</h3>
 <div class="outline-text-3" id="text-4-2">
-<div class="DEFINITION" id="orga5e39d7">
+<div class="DEFINITION" id="orgf880bda">
 <p>
 Suppose we have a Markov Chain with:
 </p>
@@ -352,7 +363,7 @@ Then \( \pi_i \) satisfies detailed balance with respect to the Markov Chain.
 
 </div>
 
-<div class="THEOREM" id="org6f042fa">
+<div class="THEOREM" id="orga39b0d8">
 <p>
 Suppose we have a Markov Chain with:
 </p>
@@ -367,7 +378,7 @@ Then \( \pi \) is a stationary distribution of the Markov Chain.
 
 </div>
 
-<div class="PROOF" id="orgf2cf158">
+<div class="PROOF" id="org9f31801">
 \begin{align*}
 \forall j, \sum_{i} \pi_i P_{ij} = \sum_{i} \pi_j P_{ji} = \pi_j \sum_{i} P_{ji} = \pi_{j}
 \end{align*}
@@ -377,10 +388,10 @@ Then \( \pi \) is a stationary distribution of the Markov Chain.
 </div>
 
 
-<div id="outline-container-orgf9dd629" class="outline-3">
-<h3 id="orgf9dd629"><span class="section-number-3">4.3.</span> Proof</h3>
+<div id="outline-container-orgb008d9a" class="outline-3">
+<h3 id="orgb008d9a"><span class="section-number-3">4.3.</span> Proof</h3>
 <div class="outline-text-3" id="text-4-3">
-<div class="PROOF" id="org3e53951">
+<div class="PROOF" id="orgfa1a163">
 <p>
 Let
 </p>
@@ -421,16 +432,16 @@ Thus, the Markov chain will converge to its unique stationary distribution \( \p
 </div>
 
 
-<div id="outline-container-org917ce7f" class="outline-2">
-<h2 id="org917ce7f"><span class="section-number-2">5.</span> Applications</h2>
+<div id="outline-container-orga021915" class="outline-2">
+<h2 id="orga021915"><span class="section-number-2">5.</span> Applications</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Monte Carlo Markov Chain has many applications.
 </p>
 </div>
 
-<div id="outline-container-org63b717b" class="outline-3">
-<h3 id="org63b717b"><span class="section-number-3">5.1.</span> Bayesian Inference</h3>
+<div id="outline-container-orgc23572a" class="outline-3">
+<h3 id="orgc23572a"><span class="section-number-3">5.1.</span> Bayesian Inference</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Suppose we would like to know how likely parameters \( \theta \) are in a model to data \( X \).
@@ -441,7 +452,7 @@ That is, suppose we are given data from some experiment, and the histogram looks
 </p>
 
 
-<div id="org32cd618" class="figure">
+<div id="org56f54f9" class="figure">
 <p><img src="./.ob-jupyter/0cef4b2d75734729f0e44393017fa22ab5a8bc95.png" alt="0cef4b2d75734729f0e44393017fa22ab5a8bc95.png" />
 </p>
 </div>
@@ -510,12 +521,12 @@ This approach allows for parameter estimation in models. My time with 'Ike Wai w
 </div>
 
 
-<div id="outline-container-org8dee1f8" class="outline-3">
-<h3 id="org8dee1f8"><span class="section-number-3">5.2.</span> Numerical Integration - How to calculate expectation and variance using Markov Chains</h3>
+<div id="outline-container-org9fdec0b" class="outline-3">
+<h3 id="org9fdec0b"><span class="section-number-3">5.2.</span> Numerical Integration - How to calculate expectation and variance using Markov Chains</h3>
 <div class="outline-text-3" id="text-5-2">
 </div>
-<div id="outline-container-orge843f46" class="outline-4">
-<h4 id="orge843f46"><span class="section-number-4">5.2.1.</span> Monte Carlo Integration</h4>
+<div id="outline-container-org77b628c" class="outline-4">
+<h4 id="org77b628c"><span class="section-number-4">5.2.1.</span> Monte Carlo Integration</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <p>
 One way to calculate an integral
@@ -562,8 +573,8 @@ Note the bounds of integration, we only proved this for a bounded domain of inte
 </div>
 
 
-<div id="outline-container-orgb659320" class="outline-4">
-<h4 id="orgb659320"><span class="section-number-4">5.2.2.</span> MCMC Integration</h4>
+<div id="outline-container-org6a7a912" class="outline-4">
+<h4 id="org6a7a912"><span class="section-number-4">5.2.2.</span> MCMC Integration</h4>
 <div class="outline-text-4" id="text-5-2-2">
 <p>
 Suppose we had an absolutely integrable function \( f \in L^1(\mathbb{R}) \).
@@ -607,7 +618,7 @@ Let us apply MCMC to numerically verify
 </pre>
 
 
-<div id="orgb2842ab" class="figure">
+<div id="orga0c11c7" class="figure">
 <p><img src="./.ob-jupyter/14fe7f583716aa4dd8e1e78669d42951caabe2ae.png" alt="14fe7f583716aa4dd8e1e78669d42951caabe2ae.png" />
 </p>
 </div>
@@ -616,8 +627,8 @@ Let us apply MCMC to numerically verify
 </div>
 
 
-<div id="outline-container-orgeceffcd" class="outline-3">
-<h3 id="orgeceffcd"><span class="section-number-3">5.3.</span> Sampling Points on a Cow</h3>
+<div id="outline-container-orgcefb211" class="outline-3">
+<h3 id="orgcefb211"><span class="section-number-3">5.3.</span> Sampling Points on a Cow</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 Here is a non-standard use of MCMC to sample points on a 3D model of a Cow.
@@ -639,8 +650,8 @@ Where \( ||d|| \) is the shortest distance from a point in \( \mathbb{R}^3 \) to
 </div>
 
 
-<div id="outline-container-org1c98d69" class="outline-3">
-<h3 id="org1c98d69"><span class="section-number-3">5.4.</span> Speeding Up Theorem Proving</h3>
+<div id="outline-container-org6e5d94f" class="outline-3">
+<h3 id="org6e5d94f"><span class="section-number-3">5.4.</span> Speeding Up Theorem Proving</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Here is a paper <a href="https://link.springer.com/chapter/10.1007/978-3-031-10769-6_33">Bayesian Ranking for Strategy Scheduling in Automated Theorem Provers</a>.
@@ -650,8 +661,8 @@ Here is a paper <a href="https://link.springer.com/chapter/10.1007/978-3-031-107
 </div>
 
 
-<div id="outline-container-org7b882e0" class="outline-2">
-<h2 id="org7b882e0"><span class="section-number-2">6.</span> References</h2>
+<div id="outline-container-org9b57327" class="outline-2">
+<h2 id="org9b57327"><span class="section-number-2">6.</span> References</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Ross, S. M. (1996). Stochastic processes. India: Wiley.

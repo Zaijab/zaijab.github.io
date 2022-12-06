@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-05 Mon 12:35 -->
+<!-- 2022-12-05 Mon 14:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MATH649K Final Presentation</title>
@@ -198,34 +198,45 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">MATH649K Final Presentation</h1>
 
-<div id="outline-container-orgfd5eb6f" class="outline-2">
-<h2 id="orgfd5eb6f"><span class="section-number-2">1.</span> Problem Statement</h2>
+<div id="outline-container-org7dc08d8" class="outline-2">
+<h2 id="org7dc08d8"><span class="section-number-2">1.</span> Problem Statement</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Given
@@ -252,8 +263,8 @@ Solution
 </div>
 
 
-<div id="outline-container-org1603e05" class="outline-2">
-<h2 id="org1603e05"><span class="section-number-2">2.</span> Algorithm</h2>
+<div id="outline-container-orgca92b11" class="outline-2">
+<h2 id="orgca92b11"><span class="section-number-2">2.</span> Algorithm</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Select an initial value for \( x \), call it \( x_0 \).
@@ -285,32 +296,32 @@ If \( u > \alpha \) then reject the new choice of \( x^* \).
 </div>
 </div>
 
-<div id="outline-container-orgfc63cb2" class="outline-2">
-<h2 id="orgfc63cb2"><span class="section-number-2">3.</span> Implementation</h2>
+<div id="outline-container-orgd390ba4" class="outline-2">
+<h2 id="orgd390ba4"><span class="section-number-2">3.</span> Implementation</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Tested on \[ f(x) = e^{\frac{-x^2}{2}} \]
 </p>
 
 
-<div id="org792d848" class="figure">
-<p><img src="./.ob-jupyter/69a3eef7df4a4dc144001619b13cfdec4ec48cde.png" alt="69a3eef7df4a4dc144001619b13cfdec4ec48cde.png" />
+<div id="org9e7bc88" class="figure">
+<p><img src="./.ob-jupyter/f2fb69427b0c4a3786dd673e155809c0ac329770.png" alt="f2fb69427b0c4a3786dd673e155809c0ac329770.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org2c6917e" class="outline-2">
-<h2 id="org2c6917e"><span class="section-number-2">4.</span> Proof</h2>
+<div id="outline-container-org0d2c20c" class="outline-2">
+<h2 id="org0d2c20c"><span class="section-number-2">4.</span> Proof</h2>
 </div>
-<div id="outline-container-orga5ee8c0" class="outline-2">
-<h2 id="orga5ee8c0"><span class="section-number-2">5.</span> Proof</h2>
+<div id="outline-container-org7d1215e" class="outline-2">
+<h2 id="org7d1215e"><span class="section-number-2">5.</span> Proof</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org986552b" class="outline-3">
-<h3 id="org986552b"><span class="section-number-3">5.1.</span> Detailed Balance</h3>
+<div id="outline-container-org94e4e32" class="outline-3">
+<h3 id="org94e4e32"><span class="section-number-3">5.1.</span> Detailed Balance</h3>
 <div class="outline-text-3" id="text-5-1">
-<div class="DEFINITION" id="orge2714b1">
+<div class="DEFINITION" id="org0d7191f">
 <p>
 Suppose we have a Markov Chain with:
 </p>
@@ -333,7 +344,7 @@ Then \( \pi_i \) satisfies detailed balance with respect to the Markov Chain.
 
 </div>
 
-<div class="THEOREM" id="orgbce38f2">
+<div class="THEOREM" id="org2ff1b85">
 <p>
 Suppose we have a Markov Chain with:
 </p>
@@ -348,7 +359,7 @@ Then \( \pi \) is a stationary distribution of the Markov Chain.
 
 </div>
 
-<div class="PROOF" id="orgda43776">
+<div class="PROOF" id="org51b7021">
 \begin{align*}
 \forall j, \sum_{i} \pi_i P_{ij} = \sum_{i} \pi_j P_{ji} = \pi_j \sum_{i} P_{ji} = \pi_{j}
 \end{align*}
@@ -358,17 +369,17 @@ Then \( \pi \) is a stationary distribution of the Markov Chain.
 </div>
 
 
-<div id="outline-container-org685207c" class="outline-3">
-<h3 id="org685207c"><span class="section-number-3">5.2.</span> Aperiodic and Irreducible</h3>
+<div id="outline-container-orgaf90c68" class="outline-3">
+<h3 id="orgaf90c68"><span class="section-number-3">5.2.</span> Aperiodic and Irreducible</h3>
 <div class="outline-text-3" id="text-5-2">
-<div class="THEOREM" id="orgeffcac6">
+<div class="THEOREM" id="orgf74bb6d">
 <p>
 An irreducible, aperiodic Markov chain has a unique stationary distribution if it exists.
 </p>
 
 </div>
 
-<div class="PROOF" id="orged7c663">
+<div class="PROOF" id="org640847e">
 <p>
 In the book, Theorem 4.3.3.
 </p>
@@ -378,10 +389,10 @@ In the book, Theorem 4.3.3.
 </div>
 
 
-<div id="outline-container-org88d64bd" class="outline-3">
-<h3 id="org88d64bd"><span class="section-number-3">5.3.</span> Proof</h3>
+<div id="outline-container-org2848c4e" class="outline-3">
+<h3 id="org2848c4e"><span class="section-number-3">5.3.</span> Proof</h3>
 <div class="outline-text-3" id="text-5-3">
-<div class="PROOF" id="org6a0c178">
+<div class="PROOF" id="orge9cec5e">
 <p>
 Let
 </p>
@@ -422,8 +433,8 @@ Thus, the Markov chain will converge to its unique stationary distribution \( \p
 </div>
 
 
-<div id="outline-container-org0a0b7fd" class="outline-2">
-<h2 id="org0a0b7fd"><span class="section-number-2">6.</span> Arbitrary Choices</h2>
+<div id="outline-container-org4906499" class="outline-2">
+<h2 id="org4906499"><span class="section-number-2">6.</span> Arbitrary Choices</h2>
 </div>
 </div>
 </body>

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-05 Mon 12:35 -->
+<!-- 2022-12-05 Mon 14:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Topology-Intuition</title>
@@ -198,34 +198,45 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Topology-Intuition</h1>
 
-<div id="outline-container-org41a5730" class="outline-2">
-<h2 id="org41a5730"><span class="section-number-2">1.</span> General Topology Intuition&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span>&#xa0;<span class="Definition">Definition</span></span></h2>
+<div id="outline-container-org4715da0" class="outline-2">
+<h2 id="org4715da0"><span class="section-number-2">1.</span> General Topology Intuition&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span>&#xa0;<span class="Definition">Definition</span></span></h2>
 <div class="outline-text-2" id="text-1">
 <p>
 What is the difference between the line (R) and the plane (R<sup>2</sup>)?

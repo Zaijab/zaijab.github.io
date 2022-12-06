@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-12-05 Mon 12:35 -->
+<!-- 2022-12-05 Mon 14:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Toric Varieties Presentation</title>
@@ -198,47 +198,58 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Toric Varieties Presentation</h1>
 
 
-<div id="outline-container-orgaa48252" class="outline-2">
-<h2 id="orgaa48252"><span class="section-number-2">1.</span> Presentation</h2>
+<div id="outline-container-org2577b3d" class="outline-2">
+<h2 id="org2577b3d"><span class="section-number-2">1.</span> Presentation</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgbc02b2f" class="outline-3">
-<h3 id="orgbc02b2f"><span class="section-number-3">1.1.</span> Geometry with Perspective</h3>
+<div id="outline-container-orga9c4597" class="outline-3">
+<h3 id="orga9c4597"><span class="section-number-3">1.1.</span> Geometry with Perspective</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Slogan: Projective Geometry is geometry with perspective, the good and the bad.
 </p>
 </div>
 
-<div id="outline-container-org1659486" class="outline-4">
-<h4 id="org1659486"><span class="section-number-4">1.1.1.</span> The Good</h4>
+<div id="outline-container-org9bb38b9" class="outline-4">
+<h4 id="org9bb38b9"><span class="section-number-4">1.1.1.</span> The Good</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 Have you ever seen monkeys reacting to <a href="https://www.youtube.com/watch?v=dm8Q4fgv8Qo&amp;t=0s">magic</a>? Or how will we react to this topological puzzle.
@@ -251,8 +262,8 @@ Hopefully one of the angles or the movement itself will let us understand how th
 </div>
 </div>
 
-<div id="outline-container-org52c0846" class="outline-4">
-<h4 id="org52c0846"><span class="section-number-4">1.1.2.</span> The Bad</h4>
+<div id="outline-container-orgb17b9ab" class="outline-4">
+<h4 id="orgb17b9ab"><span class="section-number-4">1.1.2.</span> The Bad</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 Suppose we were watching the night sky and we were looking at the moon. One may ask, how big is the moon? My answer? Very small, I can cover it just using the pencil eraser hence it's smaller than the eraser&#x2026; Right? Of course not.
@@ -264,8 +275,8 @@ Suppose we were watching the night sky and we were looking at the moon. One may 
 </div>
 </div>
 
-<div id="outline-container-orga56e10a" class="outline-4">
-<h4 id="orga56e10a"><span class="section-number-4">1.1.3.</span> Perspective</h4>
+<div id="outline-container-orgee9a4ef" class="outline-4">
+<h4 id="orgee9a4ef"><span class="section-number-4">1.1.3.</span> Perspective</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 How may one capture perspective mathematically?
@@ -291,8 +302,8 @@ Hence, points are equivalent iff they are nonzero scalar multiples of each other
 </div>
 </div>
 
-<div id="outline-container-org4ba7a20" class="outline-4">
-<h4 id="org4ba7a20"><span class="section-number-4">1.1.4.</span> The Cross Ratio</h4>
+<div id="outline-container-org457735c" class="outline-4">
+<h4 id="org457735c"><span class="section-number-4">1.1.4.</span> The Cross Ratio</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <p>
 One thing that is always preserved under a change of perspective is known as the cross ratio.
@@ -320,8 +331,8 @@ We can then compute a lot of ideas related to the horrizon using the cross ratio
 </div>
 </div>
 
-<div id="outline-container-org24fd7ee" class="outline-4">
-<h4 id="org24fd7ee"><span class="section-number-4">1.1.5.</span> Parallel Lines in Projective Space</h4>
+<div id="outline-container-org4ecf3fc" class="outline-4">
+<h4 id="org4ecf3fc"><span class="section-number-4">1.1.5.</span> Parallel Lines in Projective Space</h4>
 <div class="outline-text-4" id="text-1-1-5">
 <p>
 Lemme ask this, are these lines parallel?
@@ -334,7 +345,7 @@ Probably not. But if I were to fill it in (like train tracks) then we would all 
 </p>
 
 
-<div id="org1880531" class="figure">
+<div id="orgc09d407" class="figure">
 <p><img src="file:///home/zjabbar/dwn/800px-Railroad-Tracks-Perspective.jpg" alt="800px-Railroad-Tracks-Perspective.jpg" />
 </p>
 </div>
@@ -357,8 +368,8 @@ Artists use an idea known as the horrizon. That is, all parallel lines should me
 </div>
 </div>
 
-<div id="outline-container-org56c5836" class="outline-4">
-<h4 id="org56c5836"><span class="section-number-4">1.1.6.</span> Constructing a Grid</h4>
+<div id="outline-container-org30129a8" class="outline-4">
+<h4 id="org30129a8"><span class="section-number-4">1.1.6.</span> Constructing a Grid</h4>
 <div class="outline-text-4" id="text-1-1-6">
 <p>
 First start with a line at the origin and a line at infinity.
@@ -370,8 +381,8 @@ Create evenly spaced points on the origin. There are parallel lines which all go
 </div>
 </div>
 
-<div id="outline-container-orgf44a4bd" class="outline-4">
-<h4 id="orgf44a4bd"><span class="section-number-4">1.1.7.</span> Parabola</h4>
+<div id="outline-container-org83ea514" class="outline-4">
+<h4 id="org83ea514"><span class="section-number-4">1.1.7.</span> Parabola</h4>
 <div class="outline-text-4" id="text-1-1-7">
 <p>
 So let's do this with a parabola? I'll plot one using Desmos. What will some person see the parabola as when viewed from it's nose?
@@ -379,20 +390,20 @@ So let's do this with a parabola? I'll plot one using Desmos. What will some per
 </div>
 
 <ol class="org-ol">
-<li><a id="org6f9ce1a"></a>Answer<br />
+<li><a id="org2f5722d"></a>Answer<br />
 <div class="outline-text-5" id="text-1-1-7-1">
 
-<div id="org4df63ab" class="figure">
+<div id="org8de5a50" class="figure">
 <p><img src="file:///home/zjabbar/dwn/PXL_20220910_204206247.jpg" alt="PXL_20220910_204206247.jpg" />
 </p>
 </div>
 </div>
 </li>
 
-<li><a id="orgc8673c6"></a>Better Answer<br />
+<li><a id="org7af9bac"></a>Better Answer<br />
 <div class="outline-text-5" id="text-1-1-7-2">
 
-<div id="orgc08a8e2" class="figure">
+<div id="org9eef6b4" class="figure">
 <p><img src="file:///home/zjabbar/dwn/parabola.png" alt="parabola.png" />
 </p>
 </div>
@@ -401,8 +412,8 @@ So let's do this with a parabola? I'll plot one using Desmos. What will some per
 </ol>
 </div>
 
-<div id="outline-container-orgaf3d5ca" class="outline-4">
-<h4 id="orgaf3d5ca"><span class="section-number-4">1.1.8.</span> Hyperbola</h4>
+<div id="outline-container-org05a6e5e" class="outline-4">
+<h4 id="org05a6e5e"><span class="section-number-4">1.1.8.</span> Hyperbola</h4>
 <div class="outline-text-4" id="text-1-1-8">
 <p>
 What about the hyperbola what will we see?
@@ -410,7 +421,7 @@ What about the hyperbola what will we see?
 </div>
 
 <ol class="org-ol">
-<li><a id="orgad741f3"></a>Answer<br />
+<li><a id="orga57596f"></a>Answer<br />
 <div class="outline-text-5" id="text-1-1-8-1">
 <p>
 Half of an ellipse
@@ -421,8 +432,8 @@ Half of an ellipse
 </ol>
 </div>
 
-<div id="outline-container-orgf7077e2" class="outline-4">
-<h4 id="orgf7077e2"><span class="section-number-4">1.1.9.</span> Calculations</h4>
+<div id="outline-container-org2e7a50a" class="outline-4">
+<h4 id="org2e7a50a"><span class="section-number-4">1.1.9.</span> Calculations</h4>
 <div class="outline-text-4" id="text-1-1-9">
 <p>
 We have said that the parabola and hyperbola intersects the line at infinity. Where does it intersect? How can we calculate it? Also, does the hyperbola extend beyond infinity?
@@ -441,7 +452,7 @@ First let's embed our line into the plane. Note: every point on the line can be 
 </p>
 
 
-<div id="org579f1cf" class="figure">
+<div id="orgc815ff9" class="figure">
 <p><img src="2022-10-12-092202_938x472_scrot.png" alt="2022-10-12-092202_938x472_scrot.png" />
 </p>
 </div>
@@ -458,8 +469,8 @@ First take the lines from the origin going through the plane \( z = 1 \). The li
 </div>
 </div>
 
-<div id="outline-container-org5461516" class="outline-4">
-<h4 id="org5461516"><span class="section-number-4">1.1.10.</span> Homogenization</h4>
+<div id="outline-container-org7b1fbe1" class="outline-4">
+<h4 id="org7b1fbe1"><span class="section-number-4">1.1.10.</span> Homogenization</h4>
 <div class="outline-text-4" id="text-1-1-10">
 <p>
 To calculate where the parabola intersects infinity describe the equation
@@ -486,7 +497,7 @@ Using homogeneous coordinates we now know what happens after infinity. The line 
 </p>
 
 
-<div id="orgf0741e5" class="figure">
+<div id="org74e3818" class="figure">
 <p><img src="2022-10-12-094830_854x451_scrot.png" alt="2022-10-12-094830_854x451_scrot.png" />
 </p>
 </div>
@@ -496,7 +507,7 @@ Again, the hyperbola is just an ellipse with perspective. It looks discontinuous
 </p>
 
 
-<div id="org01f4f5c" class="figure">
+<div id="orgefbf59f" class="figure">
 <p><img src="2022-10-12-094757_869x447_scrot.png" alt="2022-10-12-094757_869x447_scrot.png" />
 </p>
 </div>
@@ -521,8 +532,8 @@ Solve: \( x^2 + y^2 = 0 \implies [x \colon ix \colon 0], [x \colon -ix \colon 0]
 </div>
 </div>
 
-<div id="outline-container-orge2a5550" class="outline-4">
-<h4 id="orge2a5550"><span class="section-number-4">1.1.11.</span> Bezout's Theorem</h4>
+<div id="outline-container-org7ae5c0d" class="outline-4">
+<h4 id="org7ae5c0d"><span class="section-number-4">1.1.11.</span> Bezout's Theorem</h4>
 <div class="outline-text-4" id="text-1-1-11">
 <p>
 If two algebraic curves of degrees \( m \) and \( n \) have no common components. Then it has exactly \( mn \) points of intersection if we use complex numbers, multiplicities, and points at infinity.
@@ -542,8 +553,8 @@ Any two conics will intersect at exactly 4 points.
 </div>
 </div>
 
-<div id="outline-container-org004b080" class="outline-4">
-<h4 id="org004b080"><span class="section-number-4">1.1.12.</span> Foundational Reason why we can extend the real numbers in this way</h4>
+<div id="outline-container-orge707a1e" class="outline-4">
+<h4 id="orge707a1e"><span class="section-number-4">1.1.12.</span> Foundational Reason why we can extend the real numbers in this way</h4>
 <div class="outline-text-4" id="text-1-1-12">
 <p>
 The main reason why we can do an extension logically is because the set of statements
@@ -569,12 +580,12 @@ You can get many such extensions, hyperreals, surreals, extended line (with 2 in
 </div>
 </div>
 
-<div id="outline-container-orgb1ffef9" class="outline-3">
-<h3 id="orgb1ffef9"><span class="section-number-3">1.2.</span> Definitions</h3>
+<div id="outline-container-org590fb4e" class="outline-3">
+<h3 id="org590fb4e"><span class="section-number-3">1.2.</span> Definitions</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orgba1cc16" class="outline-4">
-<h4 id="orgba1cc16"><span class="section-number-4">1.2.1.</span> Projective Space Formally</h4>
+<div id="outline-container-org868842c" class="outline-4">
+<h4 id="org868842c"><span class="section-number-4">1.2.1.</span> Projective Space Formally</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
 The projective space is the set of all linear subspaces of \( \mathbb{C}^{n+1} \).
@@ -590,8 +601,8 @@ This was motivated by having us stand at the origin and having rays of light act
 </div>
 </div>
 
-<div id="outline-container-org037a7ae" class="outline-4">
-<h4 id="org037a7ae"><span class="section-number-4">1.2.2.</span> Homogeneous Polynomials</h4>
+<div id="outline-container-orgadc965f" class="outline-4">
+<h4 id="orgadc965f"><span class="section-number-4">1.2.2.</span> Homogeneous Polynomials</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 Given any polynomial we can define the vanishing set.
@@ -665,8 +676,8 @@ That is,
 </div>
 </div>
 
-<div id="outline-container-orge458aca" class="outline-4">
-<h4 id="orge458aca"><span class="section-number-4">1.2.3.</span> Homogenization</h4>
+<div id="outline-container-orga34da67" class="outline-4">
+<h4 id="orga34da67"><span class="section-number-4">1.2.3.</span> Homogenization</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
 Given any polynomial we have a reversible formula for how one may obtain a homogeneous polynomials
@@ -694,12 +705,12 @@ To get back to the original polynomial, set \( x_0 \) to \( 1 \).
 </div>
 </div>
 
-<div id="outline-container-org94dcfc3" class="outline-4">
-<h4 id="org94dcfc3"><span class="section-number-4">1.2.4.</span> Projective Analogies</h4>
+<div id="outline-container-org32610ae" class="outline-4">
+<h4 id="org32610ae"><span class="section-number-4">1.2.4.</span> Projective Analogies</h4>
 <div class="outline-text-4" id="text-1-2-4">
 </div>
 <ol class="org-ol">
-<li><a id="org9330572"></a>Projective Polynomials<br />
+<li><a id="orga57dee8"></a>Projective Polynomials<br />
 <div class="outline-text-5" id="text-1-2-4-1">
 <p>
 Homogeneous Polynomials
@@ -707,7 +718,7 @@ Homogeneous Polynomials
 </div>
 </li>
 
-<li><a id="org8de4f78"></a>Projective Ideals<br />
+<li><a id="org3d04d9f"></a>Projective Ideals<br />
 <div class="outline-text-5" id="text-1-2-4-2">
 <p>
 Ideals of Homogeneous Polynomials
@@ -715,7 +726,7 @@ Ideals of Homogeneous Polynomials
 </div>
 </li>
 
-<li><a id="orgc608e79"></a>Projective Vanishing Set<br />
+<li><a id="orge8d4219"></a>Projective Vanishing Set<br />
 <div class="outline-text-5" id="text-1-2-4-3">
 <p>
 The vanishing set of homogeneous polynomials
@@ -723,7 +734,7 @@ The vanishing set of homogeneous polynomials
 </div>
 </li>
 
-<li><a id="orga8a32e6"></a>Projective Hilbert Basis Theorem<br />
+<li><a id="org54c7e4c"></a>Projective Hilbert Basis Theorem<br />
 <div class="outline-text-5" id="text-1-2-4-4">
 <p>
 If \( R \) is a Noetherian ring then \( I \subseteq R[x] \) of homogeneous polynomials is Noetherian.
@@ -732,7 +743,7 @@ This should be a short proof, by the Affine Hilbert Basis Theorem we know that \
 </div>
 </li>
 
-<li><a id="orgceedc2b"></a>Projective Nullstellensatz<br />
+<li><a id="orgaa14b18"></a>Projective Nullstellensatz<br />
 <div class="outline-text-5" id="text-1-2-4-5">
 <p>
 Let \( R_+ = \bigoplus_{d \geq 1} R_d \) be the homogeneous ideal.
@@ -758,7 +769,7 @@ Let \( \kappa \) be an infinite cardinal and \( K \) be algebraically closed fie
 </div>
 </li>
 
-<li><a id="orgf0d8b68"></a>Projective Torus<br />
+<li><a id="org97481c2"></a>Projective Torus<br />
 <div class="outline-text-5" id="text-1-2-4-6">
 <p>
 Let \( A \subseteq M \) a finite subset of the character lattice.
@@ -771,7 +782,7 @@ Every projective toric variety is isomorphic to some \( X_\mathscr{A} \).
 </div>
 
 <ol class="org-ol">
-<li><a id="org0e28b0b"></a>Example<br />
+<li><a id="orgee65df5"></a>Example<br />
 <div class="outline-text-6" id="text-1-2-4-6-1">
 <p>
 Let \( \mathscr{A} \subseteq M \)
@@ -790,7 +801,7 @@ d & d - 1 & \cdots & 0  \\
 </ol>
 </li>
 
-<li><a id="org708d1db"></a>Projective Characters<br />
+<li><a id="org6cf8725"></a>Projective Characters<br />
 <div class="outline-text-5" id="text-1-2-4-7">
 <p>
 A character is both a morphism (polynomial) and a homomorphism
@@ -825,21 +836,21 @@ The character matrix is such that the columns have the same sum.
 
 
 
-<li><a id="org144c533"></a>Projective One Parameter Subgroups<br /></li>
+<li><a id="orgb3126de"></a>Projective One Parameter Subgroups<br /></li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-orga3b84d9" class="outline-3">
-<h3 id="orga3b84d9"><span class="section-number-3">1.3.</span> Proofs</h3>
+<div id="outline-container-org2ff7249" class="outline-3">
+<h3 id="org2ff7249"><span class="section-number-3">1.3.</span> Proofs</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org8e0ac58" class="outline-4">
-<h4 id="org8e0ac58"><span class="section-number-4">1.3.1.</span> \( \mathbb{P}^n \) is a Toric Variety</h4>
+<div id="outline-container-org021e5f6" class="outline-4">
+<h4 id="org021e5f6"><span class="section-number-4">1.3.1.</span> \( \mathbb{P}^n \) is a Toric Variety</h4>
 <div class="outline-text-4" id="text-1-3-1">
 </div>
 <ol class="org-ol">
-<li><a id="org27f92ff"></a>Torus<br />
+<li><a id="org187a46d"></a>Torus<br />
 <div class="outline-text-5" id="text-1-3-1-1">
 <p>
 The set,  \( T_{\mathbb{P}^n} = \mathbb{P}^n \setminus \mathbf{V}(x_0 \cdots x_n)  \) (Projective space where no coordinate is 0) is a Torus.
@@ -858,7 +869,7 @@ T_{\mathbb{P}^n}
 </div>
 </li>
 
-<li><a id="orgc1a0e9b"></a>Torus Action<br />
+<li><a id="orgcb39dcf"></a>Torus Action<br />
 <div class="outline-text-5" id="text-1-3-1-2">
 <p>
 \( \mathbb{T}_{\mathbb{P}^n} * \mathbb{P}^n \) is defined via \( [t_0 \colon \ldots \colon t_n][x_0 \colon \ldots \colon x_n] = [t_0 x_0 \colon \ldots t_n x_n] \)
@@ -868,7 +879,7 @@ The action preserves zeros \( x_i = 0 \)
 </div>
 </li>
 
-<li><a id="org47cbecb"></a>Character Lattice of \( T_{\mathbb{P}^n} \)<br />
+<li><a id="org2b4d0d8"></a>Character Lattice of \( T_{\mathbb{P}^n} \)<br />
 <div class="outline-text-5" id="text-1-3-1-3">
 <p>
 Recall: \( \forall m \in \mathscr{M}_n \ \exists \chi_m \colon \mathbb{T}^{N} \to \mathbb{C}^* \) via \( (t_i)_{i = 0}^{n} \mapsto \prod_{i = 0}^{n} t_i^{m_i} \)
@@ -930,7 +941,7 @@ This implies \( t_i^{- \sum_i a_i} = 1 \) hence the sum is \( 0 \).
 </div>
 </li>
 
-<li><a id="orgcc657a9"></a>One Parameter Subgroups<br />
+<li><a id="org45a22db"></a>One Parameter Subgroups<br />
 <div class="outline-text-5" id="text-1-3-1-4">
 <p>
 Recall: \( \forall n \in N \exists \lambda_n \colon \mathbb{C}^* \to \mathbb{T}^N \) via \( \lambda_n(t) = (t^{n_i})_{i = 0}^{N} \)
@@ -957,8 +968,8 @@ Hence we have the following characterization:
 </ol>
 </div>
 
-<div id="outline-container-org0333e8c" class="outline-4">
-<h4 id="org0333e8c"><span class="section-number-4">1.3.2.</span> Projective Toric Varieties \( X_{\mathscr{A}} \)</h4>
+<div id="outline-container-org22318cf" class="outline-4">
+<h4 id="org22318cf"><span class="section-number-4">1.3.2.</span> Projective Toric Varieties \( X_{\mathscr{A}} \)</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 Start with an \( n \)-torus \( (\mathbb{C}^*)^n \) and a subset of the character lattice \( \mathscr{A} \subseteq M \).
@@ -974,7 +985,7 @@ Then the following is a toric variety and characterizes all such toric varieties
 </div>
 
 <ol class="org-ol">
-<li><a id="org4d18a3c"></a>Example<br />
+<li><a id="orgd3ad53f"></a>Example<br />
 <div class="outline-text-5" id="text-1-3-2-1">
 <p>
 Let \( \mathscr{A} \subseteq M \)
@@ -991,7 +1002,7 @@ d & d - 1 & \cdots & 0  \\
 </div>
 </li>
 
-<li><a id="orgea4fa7d"></a>Example<br />
+<li><a id="org3f270cf"></a>Example<br />
 <div class="outline-text-5" id="text-1-3-2-2">
 <p>
 \( A =
@@ -1010,8 +1021,8 @@ d & d - 1 & \cdots & 0  \\
 </ol>
 </div>
 
-<div id="outline-container-org8ca467e" class="outline-4">
-<h4 id="org8ca467e"><span class="section-number-4">1.3.3.</span> \( X_\mathscr{A} \) vs \( Y_\mathscr{A} \)</h4>
+<div id="outline-container-orgad252f8" class="outline-4">
+<h4 id="orgad252f8"><span class="section-number-4">1.3.3.</span> \( X_\mathscr{A} \) vs \( Y_\mathscr{A} \)</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 Given a projective variety \( V \subset \mathbb{P}^{s-1} \) we can take the set of all of the lines going through the origin in the higher dimensional affine space \( \hat{V} \subseteq \mathbb{C}^{s} \)
@@ -1044,14 +1055,14 @@ Another way to say this is that \( uA = (k,k,k,...,k) \) so we need that \( (1,.
 </div>
 
 <ol class="org-ol">
-<li><a id="org6e37fa0"></a>Applications<br /></li>
+<li><a id="orge2c96d6"></a>Applications<br /></li>
 </ol>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7700fbe" class="outline-2">
-<h2 id="org7700fbe"><span class="section-number-2">2.</span> Things On the Board</h2>
+<div id="outline-container-org075ab65" class="outline-2">
+<h2 id="org075ab65"><span class="section-number-2">2.</span> Things On the Board</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Projective Geometry is geometry with perspective, <b>good</b> and <b>bad</b>.
