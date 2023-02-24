@@ -287,3 +287,14 @@ pre { background-color: var(--background-color); border: none; padding: 0; margi
 /* Literal.Number.Integer.Long */
 
 /*# sourceMappingURL=main-dark.css.map */
+mjx-xypic svg > g {
+    stroke: #ebdbb2 !important;
+}
+
+mjx-xypic-object {
+    color: #ebdbb2 !important;
+}
+
+.MJX-TEX{
+    color: #ebdbb2 !important;
+}
