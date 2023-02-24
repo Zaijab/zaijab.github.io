@@ -116,7 +116,7 @@ div.side-note {
     padding-top: 5em;
 }
 #table-of-contents h2:before {
-    content: "âŒ˜";
+    content: "";
 }
 
 
