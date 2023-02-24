@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-23 Thu 16:53 -->
+<!-- 2023-02-23 Thu 16:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Topology</title>
@@ -198,49 +198,62 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
+<script>
+                                    MathJax = {
+                                      loader: {
+                                        load: ['[custom]/xypic.js'],
+                                        paths: {custom: '../static/js/xyjax/'}
+                                      },
+                                      tex: {
+                                        packages: {'[+]': ['xypic']}
+                                      }
+                                    };
+                                  </script>
+                                  <script id="MathJax-script" async src="../static/js/tex-chtml-full.js"></script>
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Topology</h1>
+\begin{equation*}  
+  \begin{xy}
+    \xymatrix{
+      C_*(B\times F) \ar@(ur, ul)[r]^{} & C_*(B) \otimes C_*(F) \ar@(dl, dr)[l]^{}
+    }
+  \end{xy}
+\end{equation*}
 
-<div class="equation-container">
-<span class="equation">
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_4bfbbf6c4eb15d44b75e25bf7c99baf9c313de87.svg" alt="20211210212713-topology_4bfbbf6c4eb15d44b75e25bf7c99baf9c313de87.svg" class="org-svg" />
-</span>
-</div>
 
 
-
-<div id="outline-container-org81b0532" class="outline-2">
-<h2 id="org81b0532"><span class="section-number-2">1.</span> Topology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span>&#xa0;<span class="Definition">Definition</span></span></h2>
+<div id="outline-container-org652ddd2" class="outline-2">
+<h2 id="org652ddd2"><span class="section-number-2">1.</span> Topology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span>&#xa0;<span class="Definition">Definition</span></span></h2>
 <div class="outline-text-2" id="text-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_1b552aab689c69d368d28535824beffe731cc069.svg" alt="20211210212713-topology_1b552aab689c69d368d28535824beffe731cc069.svg" class="org-svg" />
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_f9005fd4162f980559812dba9a36d43e90dae26b.svg" alt="20211210212713-topology_f9005fd4162f980559812dba9a36d43e90dae26b.svg" class="org-svg" />
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_bfe6528919aca88c511e2deb0d58b761de9d2a94.svg" alt="20211210212713-topology_bfe6528919aca88c511e2deb0d58b761de9d2a94.svg" class="org-svg" /> 
+\(\mathcal{T} \subseteq \mathcal{P}(X)\)
+\(\mathcal{U} \subseteq \mathcal{T} \implies \bigcup \mathcal{U} \in \mathcal{T}\)
+\(\mathcal{U} \subseteq \mathcal{T} \land | \mathcal{U} | < \infty \implies \bigcap \mathcal{U} \in \mathcal{T}\) 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org64a1f9e" class="outline-2">
-<h2 id="org64a1f9e"><span class="section-number-2">2.</span> Continuity</h2>
+<div id="outline-container-org2697694" class="outline-2">
+<h2 id="org2697694"><span class="section-number-2">2.</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_eaef8a29b65a3491ef9611e450588d5946f574cc.svg" alt="20211210212713-topology_eaef8a29b65a3491ef9611e450588d5946f574cc.svg" class="org-svg" /> Continuous <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_2ed89dd92b630b46a6999cf9670897d2cf073264.svg" alt="20211210212713-topology_2ed89dd92b630b46a6999cf9670897d2cf073264.svg" class="org-svg" /> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_65ac1ee018fc9eef057418a0e9a471e8e9ec04f2.svg" alt="20211210212713-topology_65ac1ee018fc9eef057418a0e9a471e8e9ec04f2.svg" class="org-svg" /> 
+\[ f \colon X \to Y \] Continuous \[ \iff \] \[ \Forall V \in \mathcal{T}_Y \colon f^{-1}[V] \in \mathcal{T}_X \] 
 </p>
 </div>
 
-<div id="outline-container-orgace49d7" class="outline-3">
-<h3 id="orgace49d7"><span class="section-number-3">2.1.</span> Homeomorphism</h3>
+<div id="outline-container-orgba71731" class="outline-3">
+<h3 id="orgba71731"><span class="section-number-3">2.1.</span> Homeomorphism</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_9c1d7905983f142e9ed1bde8ab3b4c67ba2dd93c.svg" alt="20211210212713-topology_9c1d7905983f142e9ed1bde8ab3b4c67ba2dd93c.svg" class="org-svg" /> homeomorphism <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_bd95c3e844a05852c2ea21e32d55b17790eaaf19.svg" alt="20211210212713-topology_bd95c3e844a05852c2ea21e32d55b17790eaaf19.svg" class="org-svg" /> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_9c1d7905983f142e9ed1bde8ab3b4c67ba2dd93c.svg" alt="20211210212713-topology_9c1d7905983f142e9ed1bde8ab3b4c67ba2dd93c.svg" class="org-svg" />  bijective, continuous, and has bijective inverse
+\[f \colon X \to Y \] homeomorphism \[\iff\] \[f \colon X \to Y \]  bijective, continuous, and has bijective inverse
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3b1d140" class="outline-3">
-<h3 id="org3b1d140"><span class="section-number-3">2.2.</span> Determining Homeomorphism</h3>
+<div id="outline-container-orge93b65c" class="outline-3">
+<h3 id="orge93b65c"><span class="section-number-3">2.2.</span> Determining Homeomorphism</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 To exhibit a homeomorphism we must create a function such that it is bijective, continuous, and has a continuous inverse.
@@ -251,174 +264,174 @@ To show that two spaces are not homeomorphic we must show that one space has an 
 </p>
 
 <p>
-E.g. <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_5e244321ce3928962d403c6c41fc918583e310f2.svg" alt="20211210212713-topology_5e244321ce3928962d403c6c41fc918583e310f2.svg" class="org-svg" /> and <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_2ae2bb2197c19df5a603b72d6f9eff1a37ac35ec.svg" alt="20211210212713-topology_2ae2bb2197c19df5a603b72d6f9eff1a37ac35ec.svg" class="org-svg" /> are not homeomorphic.
-Compactness is preserved under homeomorphism but <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_5e244321ce3928962d403c6c41fc918583e310f2.svg" alt="20211210212713-topology_5e244321ce3928962d403c6c41fc918583e310f2.svg" class="org-svg" /> is not compact and <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_2ae2bb2197c19df5a603b72d6f9eff1a37ac35ec.svg" alt="20211210212713-topology_2ae2bb2197c19df5a603b72d6f9eff1a37ac35ec.svg" class="org-svg" /> is.
+E.g. \[(0,1)\] and \[[0,1]\] are not homeomorphic.
+Compactness is preserved under homeomorphism but \[(0,1)\] is not compact and \[[0,1]\] is.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6795aa6" class="outline-2">
-<h2 id="org6795aa6"><span class="section-number-2">3.</span> Creating New Topologies</h2>
+<div id="outline-container-org98b9714" class="outline-2">
+<h2 id="org98b9714"><span class="section-number-2">3.</span> Creating New Topologies</h2>
 </div>
-<div id="outline-container-org2a3de48" class="outline-2">
-<h2 id="org2a3de48"><span class="section-number-2">4.</span> Compactness</h2>
+<div id="outline-container-org8dabcc3" class="outline-2">
+<h2 id="org8dabcc3"><span class="section-number-2">4.</span> Compactness</h2>
 </div>
-<div id="outline-container-orgeb95699" class="outline-2">
-<h2 id="orgeb95699"><span class="section-number-2">5.</span> Connectedness</h2>
+<div id="outline-container-orgbf474f7" class="outline-2">
+<h2 id="orgbf474f7"><span class="section-number-2">5.</span> Connectedness</h2>
 </div>
-<div id="outline-container-org3cd7d1c" class="outline-2">
-<h2 id="org3cd7d1c"><span class="section-number-2">6.</span> Point Set</h2>
+<div id="outline-container-org337c694" class="outline-2">
+<h2 id="org337c694"><span class="section-number-2">6.</span> Point Set</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org238fda0" class="outline-3">
-<h3 id="org238fda0"><span class="section-number-3">6.1.</span> Generating Topologies</h3>
+<div id="outline-container-org6f2f11f" class="outline-3">
+<h3 id="org6f2f11f"><span class="section-number-3">6.1.</span> Generating Topologies</h3>
 <div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-org9f20969" class="outline-4">
-<h4 id="org9f20969"><span class="section-number-4">6.1.1.</span> Bases &amp; Subbases</h4>
+<div id="outline-container-org44865ef" class="outline-4">
+<h4 id="org44865ef"><span class="section-number-4">6.1.1.</span> Bases &amp; Subbases</h4>
 </div>
 
-<div id="outline-container-orgf0375ef" class="outline-4">
-<h4 id="orgf0375ef"><span class="section-number-4">6.1.2.</span> Subsets</h4>
+<div id="outline-container-orgffaca64" class="outline-4">
+<h4 id="orgffaca64"><span class="section-number-4">6.1.2.</span> Subsets</h4>
 </div>
 
-<div id="outline-container-orge78ddbd" class="outline-4">
-<h4 id="orge78ddbd"><span class="section-number-4">6.1.3.</span> Products</h4>
+<div id="outline-container-orgc7f4ff2" class="outline-4">
+<h4 id="orgc7f4ff2"><span class="section-number-4">6.1.3.</span> Products</h4>
 </div>
 
-<div id="outline-container-orgf4d5316" class="outline-4">
-<h4 id="orgf4d5316"><span class="section-number-4">6.1.4.</span> Quotients</h4>
+<div id="outline-container-org7a96ff5" class="outline-4">
+<h4 id="org7a96ff5"><span class="section-number-4">6.1.4.</span> Quotients</h4>
 </div>
 </div>
 
-<div id="outline-container-orgc14319a" class="outline-3">
-<h3 id="orgc14319a"><span class="section-number-3">6.2.</span> Connectedness</h3>
+<div id="outline-container-org2ba61cf" class="outline-3">
+<h3 id="org2ba61cf"><span class="section-number-3">6.2.</span> Connectedness</h3>
 </div>
-<div id="outline-container-orgdb75806" class="outline-3">
-<h3 id="orgdb75806"><span class="section-number-3">6.3.</span> Compactness</h3>
+<div id="outline-container-orge98357f" class="outline-3">
+<h3 id="orge98357f"><span class="section-number-3">6.3.</span> Compactness</h3>
 </div>
-<div id="outline-container-org5b4066d" class="outline-3">
-<h3 id="org5b4066d"><span class="section-number-3">6.4.</span> Dimension</h3>
+<div id="outline-container-org748f0cc" class="outline-3">
+<h3 id="org748f0cc"><span class="section-number-3">6.4.</span> Dimension</h3>
 </div>
 </div>
-<div id="outline-container-org06930c6" class="outline-2">
-<h2 id="org06930c6"><span class="section-number-2">7.</span> Category Theory</h2>
+<div id="outline-container-org404b1fe" class="outline-2">
+<h2 id="org404b1fe"><span class="section-number-2">7.</span> Category Theory</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgdc223de" class="outline-3">
-<h3 id="orgdc223de"><span class="section-number-3">7.1.</span> Category</h3>
+<div id="outline-container-orgc365559" class="outline-3">
+<h3 id="orgc365559"><span class="section-number-3">7.1.</span> Category</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 Definition of a Category
 </p>
 </div>
-<div id="outline-container-org1372e68" class="outline-4">
-<h4 id="org1372e68"><span class="section-number-4">7.1.1.</span> Definition</h4>
+<div id="outline-container-orge6d8ab8" class="outline-4">
+<h4 id="orge6d8ab8"><span class="section-number-4">7.1.1.</span> Definition</h4>
 <div class="outline-text-4" id="text-7-1-1">
 <p>
-A <b>Category</b> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_654b41077fa79eb991c44efbbe18ccb72e6276a6.svg" alt="20211210212713-topology_654b41077fa79eb991c44efbbe18ccb72e6276a6.svg" class="org-svg" /> consists of a class of <b>objects</b> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_8c81cac64f56fa256f8139052915ef3843b5dc91.svg" alt="20211210212713-topology_8c81cac64f56fa256f8139052915ef3843b5dc91.svg" class="org-svg" /> and <b>Morphisms</b> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_e47cc977cdc2fe680c65cd79ed01e5877c8b2a0d.svg" alt="20211210212713-topology_e47cc977cdc2fe680c65cd79ed01e5877c8b2a0d.svg" class="org-svg" /> for all <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_111cc27429e45625a100e98e66b54fc723951608.svg" alt="20211210212713-topology_111cc27429e45625a100e98e66b54fc723951608.svg" class="org-svg" />
+A <b>Category</b> \[ \mathcal{C} \] consists of a class of <b>objects</b> \[ \text{ob}(\mathcal{C}) \] and <b>Morphisms</b> \[ \text{Hom}_\mathcal{C}(X,Y) \] for all \[X,Y \in \text{ob}(\mathcal{C})\]
 Two morphisms can be composed if the domain and codomain match. Composistion is associative.
 </p>
 </div>
 </div>
-<div id="outline-container-org3669511" class="outline-4">
-<h4 id="org3669511"><span class="section-number-4">7.1.2.</span> Examples</h4>
+<div id="outline-container-orge592fa8" class="outline-4">
+<h4 id="orge592fa8"><span class="section-number-4">7.1.2.</span> Examples</h4>
 </div>
 </div>
-<div id="outline-container-org26b0bff" class="outline-3">
-<h3 id="org26b0bff"><span class="section-number-3">7.2.</span> Monomorphisms</h3>
+<div id="outline-container-org60a22b9" class="outline-3">
+<h3 id="org60a22b9"><span class="section-number-3">7.2.</span> Monomorphisms</h3>
 </div>
-<div id="outline-container-org998c5bf" class="outline-3">
-<h3 id="org998c5bf"><span class="section-number-3">7.3.</span> Epimorphisms</h3>
+<div id="outline-container-org7bf55d2" class="outline-3">
+<h3 id="org7bf55d2"><span class="section-number-3">7.3.</span> Epimorphisms</h3>
 </div>
-<div id="outline-container-orgecd35fc" class="outline-3">
-<h3 id="orgecd35fc"><span class="section-number-3">7.4.</span> Isomorphisms</h3>
+<div id="outline-container-orgc46ebf7" class="outline-3">
+<h3 id="orgc46ebf7"><span class="section-number-3">7.4.</span> Isomorphisms</h3>
 </div>
-<div id="outline-container-org2e9e1d0" class="outline-3">
-<h3 id="org2e9e1d0"><span class="section-number-3">7.5.</span> Endomorphisms</h3>
+<div id="outline-container-org4283f4a" class="outline-3">
+<h3 id="org4283f4a"><span class="section-number-3">7.5.</span> Endomorphisms</h3>
 </div>
-<div id="outline-container-org9521e37" class="outline-3">
-<h3 id="org9521e37"><span class="section-number-3">7.6.</span> Automorphism</h3>
+<div id="outline-container-orgb13632e" class="outline-3">
+<h3 id="orgb13632e"><span class="section-number-3">7.6.</span> Automorphism</h3>
 </div>
 </div>
 
-<div id="outline-container-org02773d9" class="outline-2">
-<h2 id="org02773d9"><span class="section-number-2">8.</span> Homotopy</h2>
+<div id="outline-container-org9d9868b" class="outline-2">
+<h2 id="org9d9868b"><span class="section-number-2">8.</span> Homotopy</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-orge097e65" class="outline-3">
-<h3 id="orge097e65"><span class="section-number-3">8.1.</span> Two Functions</h3>
+<div id="outline-container-org2bbede9" class="outline-3">
+<h3 id="org2bbede9"><span class="section-number-3">8.1.</span> Two Functions</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_a1fd5bb16a6cb4106956fc431a7b4918296cecba.svg" alt="20211210212713-topology_a1fd5bb16a6cb4106956fc431a7b4918296cecba.svg" class="org-svg" /></li>
+<li>\[ f,g \colon X \to Y \]</li>
 </ul>
 
 <p>
 They are called homotopic when
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_82b9eabb172b8b2677cd2d1b606cda1315aa2bae.svg" alt="20211210212713-topology_82b9eabb172b8b2677cd2d1b606cda1315aa2bae.svg" class="org-svg" /> 
+\[ \Exists H \colon X \times I \to Y . H(x,0) = f(x) \land H(x,1) = g(x) \] 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org36ab6f5" class="outline-3">
-<h3 id="org36ab6f5"><span class="section-number-3">8.2.</span> Two Spaces</h3>
+<div id="outline-container-orgbcdc928" class="outline-3">
+<h3 id="orgbcdc928"><span class="section-number-3">8.2.</span> Two Spaces</h3>
 <div class="outline-text-3" id="text-8-2">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_f6cbb7fd0d1c39b79ebb1ccc3827e93a8eecce19.svg" alt="20211210212713-topology_f6cbb7fd0d1c39b79ebb1ccc3827e93a8eecce19.svg" class="org-svg" /></li>
+<li>\[ X,Y \]</li>
 </ul>
 
 <p>
 They are called homotopy equivalant when
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_7a85c1caf79e449dd50b4830eb86a696f240e419.svg" alt="20211210212713-topology_7a85c1caf79e449dd50b4830eb86a696f240e419.svg" class="org-svg" />  
+\[ \Exists f \colon X \to Y \land \Exists g \colon Y \to X . g \circ f \simeq \text{id}_X \land f \circ g \simeq \text{id}_Y \]  
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2c05c8a" class="outline-3">
-<h3 id="org2c05c8a"><span class="section-number-3">8.3.</span> Relative Homotopy</h3>
+<div id="outline-container-orge4ba6ab" class="outline-3">
+<h3 id="orge4ba6ab"><span class="section-number-3">8.3.</span> Relative Homotopy</h3>
 <div class="outline-text-3" id="text-8-3">
 <p>
 If we have a homotopy such that no matter the time, a certain subset is fixed we call it a homotopy relative to that fixed subset.
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_21fd6bdd54b575676428f1093748b768d63e22d8.svg" alt="20211210212713-topology_21fd6bdd54b575676428f1093748b768d63e22d8.svg" class="org-svg" />
+\[\lambda\]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_22f4066f944194d533b2c532f5e10c8ae7b783f1.svg" alt="20211210212713-topology_22f4066f944194d533b2c532f5e10c8ae7b783f1.svg" class="org-svg" /> be a homotopy</li>
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_f77000defdd23568194975c4bf40b279ffe78c0e.svg" alt="20211210212713-topology_f77000defdd23568194975c4bf40b279ffe78c0e.svg" class="org-svg" /></li>
+<li>\[F \colon X \times I \to Y \] be a homotopy</li>
+<li>\[\Forall t \in I . F[A \times I] = F[A \times {t}]\]</li>
 </ul>
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_850d238e57e578774c181bce8eb4205914c8cbcc.svg" alt="20211210212713-topology_850d238e57e578774c181bce8eb4205914c8cbcc.svg" class="org-svg" />
+\[\therefore\]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_df3dfa9f896b1078ecb909f46af4c2d1e797f7db.svg" alt="20211210212713-topology_df3dfa9f896b1078ecb909f46af4c2d1e797f7db.svg" class="org-svg" /> is a homomtopy relative to <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_ab53bc5ebb0175914e9c70377a91dde6947b3ca5.svg" alt="20211210212713-topology_ab53bc5ebb0175914e9c70377a91dde6947b3ca5.svg" class="org-svg" /></li>
+<li>\[F\] is a homomtopy relative to \[A\]</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org30ae07d" class="outline-3">
-<h3 id="org30ae07d"><span class="section-number-3">8.4.</span> Deformation Retract</h3>
+<div id="outline-container-org0171437" class="outline-3">
+<h3 id="org0171437"><span class="section-number-3">8.4.</span> Deformation Retract</h3>
 <div class="outline-text-3" id="text-8-4">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_d58bd7934a65c824cc7fe3ae4b8caf2ba507fbef.svg" alt="20211210212713-topology_d58bd7934a65c824cc7fe3ae4b8caf2ba507fbef.svg" class="org-svg" /></li>
+<li>\[ i \colon X \to X , i^2 = i \]</li>
 </ul>
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_98aad7a9de45de91d67ca6db85c66228fece0259.svg" alt="20211210212713-topology_98aad7a9de45de91d67ca6db85c66228fece0259.svg" class="org-svg" />
+\[ \therefore \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_8761b14ba22d01b8b0c7c8a384bdf23bbf9ae0fd.svg" alt="20211210212713-topology_8761b14ba22d01b8b0c7c8a384bdf23bbf9ae0fd.svg" class="org-svg" /> is a retract</li>
+<li>\[ i \] is a retract</li>
 </ul>
 <p>
-Note that <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_accde72b495792dd2c93a70486c4e3f1335edca6.svg" alt="20211210212713-topology_accde72b495792dd2c93a70486c4e3f1335edca6.svg" class="org-svg" /> hence in a point in the image, <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_8761b14ba22d01b8b0c7c8a384bdf23bbf9ae0fd.svg" alt="20211210212713-topology_8761b14ba22d01b8b0c7c8a384bdf23bbf9ae0fd.svg" class="org-svg" /> acts as the identity.
-Retracts are not special by themselves, every space <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_a8589833d024fb1809925ce625dbc5e90e46b17c.svg" alt="20211210212713-topology_a8589833d024fb1809925ce625dbc5e90e46b17c.svg" class="org-svg" /> has a retract via the constant map.
-That is, Let <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_88b0686e3fba7020755ef4af32c6424a5b62f1ab.svg" alt="20211210212713-topology_88b0686e3fba7020755ef4af32c6424a5b62f1ab.svg" class="org-svg" /> be a map from any space to a constant point <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_9ac73a32e45e1c446856777589f67e75375ca6bb.svg" alt="20211210212713-topology_9ac73a32e45e1c446856777589f67e75375ca6bb.svg" class="org-svg" />.
-Then <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_02d48ab19928b09cda5e63fc64f19dc8a0054fdc.svg" alt="20211210212713-topology_02d48ab19928b09cda5e63fc64f19dc8a0054fdc.svg" class="org-svg" /> hence <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_8981629b8c654cd05fca3f4e42ca7530584ff834.svg" alt="20211210212713-topology_8981629b8c654cd05fca3f4e42ca7530584ff834.svg" class="org-svg" /> is a retract.
+Note that \[ i( i(x)) = i(x) \] hence in a point in the image, \[ i \] acts as the identity.
+Retracts are not special by themselves, every space \[ X \] has a retract via the constant map.
+That is, Let \[ r \colon X \to X, x \mapsto c \] be a map from any space to a constant point \[ c \].
+Then \[ r(r(x)) = r(c) = c = r(x) \] hence \[ r \] is a retract.
 </p>
 
 <p>
@@ -427,80 +440,88 @@ But there is a special notion where the identity of a space can be homotopic to 
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_21fd6bdd54b575676428f1093748b768d63e22d8.svg" alt="20211210212713-topology_21fd6bdd54b575676428f1093748b768d63e22d8.svg" class="org-svg" />
+\[\lambda\]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_3c67fc66814076387bea06c9d6d5d8a31df15aa9.svg" alt="20211210212713-topology_3c67fc66814076387bea06c9d6d5d8a31df15aa9.svg" class="org-svg" /></li>
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_826a44bd5ece03c06217bdc0b1ab404b32d55d32.svg" alt="20211210212713-topology_826a44bd5ece03c06217bdc0b1ab404b32d55d32.svg" class="org-svg" /> be retraction</li>
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_6204bf4e7f58928b11bb3ef51e9da8107a0bb9f7.svg" alt="20211210212713-topology_6204bf4e7f58928b11bb3ef51e9da8107a0bb9f7.svg" class="org-svg" /></li>
+<li>\[X \in \mathbf{Top}\]</li>
+<li>\[r \colon X \to X \] be retraction</li>
+<li>\[\mathbf{id} \simeq r\]</li>
 </ul>
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_850d238e57e578774c181bce8eb4205914c8cbcc.svg" alt="20211210212713-topology_850d238e57e578774c181bce8eb4205914c8cbcc.svg" class="org-svg" />
+\[\therefore\]
 </p>
 <ul class="org-ul">
 <li></li>
 </ul>
 </div>
-<div id="outline-container-orgb3c53eb" class="outline-4">
-<h4 id="orgb3c53eb"><span class="section-number-4">8.4.1.</span> Null Homotopy</h4>
+<div id="outline-container-orgfbdf32b" class="outline-4">
+<h4 id="orgfbdf32b"><span class="section-number-4">8.4.1.</span> Null Homotopy</h4>
 </div>
-<div id="outline-container-org33a6757" class="outline-4">
-<h4 id="org33a6757"><span class="section-number-4">8.4.2.</span> Contractible Spaces</h4>
+<div id="outline-container-org80220ed" class="outline-4">
+<h4 id="org80220ed"><span class="section-number-4">8.4.2.</span> Contractible Spaces</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb33c0fd" class="outline-2">
-<h2 id="orgb33c0fd"><span class="section-number-2">9.</span> Fundamental Group</h2>
+<div id="outline-container-org78fd467" class="outline-2">
+<h2 id="org78fd467"><span class="section-number-2">9.</span> Fundamental Group</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org7ddbaf4" class="outline-3">
-<h3 id="org7ddbaf4"><span class="section-number-3">9.1.</span> Functoriality</h3>
+<div id="outline-container-org9c345a6" class="outline-3">
+<h3 id="org9c345a6"><span class="section-number-3">9.1.</span> Functoriality</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_a0481200aaed6519f38b99155c6f091a8eda1941.svg" alt="20211210212713-topology_a0481200aaed6519f38b99155c6f091a8eda1941.svg" class="org-svg" /></li>
+<li>\[ X \overset{f}{\to} Y \]</li>
 </ul>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_98aad7a9de45de91d67ca6db85c66228fece0259.svg" alt="20211210212713-topology_98aad7a9de45de91d67ca6db85c66228fece0259.svg" class="org-svg" />
+\[ \therefore \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_0376094dd5c1d44a44a5f7165dc6abb361650ae4.svg" alt="20211210212713-topology_0376094dd5c1d44a44a5f7165dc6abb361650ae4.svg" class="org-svg" /></li>
+<li>\[ \pi_1(X,x_0) \overset{f_*}{\to} \pi_1(Y,y_0) \]</li>
 </ul>
 </div>
 
-<div id="outline-container-org4493965" class="outline-4">
-<h4 id="org4493965"><span class="section-number-4">9.1.1.</span> Proof</h4>
+<div id="outline-container-orgbc85e89" class="outline-4">
+<h4 id="orgbc85e89"><span class="section-number-4">9.1.1.</span> Proof</h4>
 <div class="outline-text-4" id="text-9-1-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_a0481200aaed6519f38b99155c6f091a8eda1941.svg" alt="20211210212713-topology_a0481200aaed6519f38b99155c6f091a8eda1941.svg" class="org-svg" /></li>
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_7a872cc61cc882722c1ac5aeb47c6713dad69537.svg" alt="20211210212713-topology_7a872cc61cc882722c1ac5aeb47c6713dad69537.svg" class="org-svg" /></li>
+<li>\[ X \overset{f}{\to} Y \]</li>
+<li>\[ p \in \pi_1(X,x_0) \]</li>
 </ul>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_708669de87444dea83f5227c1d181379450dca3a.svg" alt="20211210212713-topology_708669de87444dea83f5227c1d181379450dca3a.svg" class="org-svg" />
+\[ f_* \coloneqq [f \circ p] \]
 </p>
 
 <p>
-Claim: <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_dca0efbcee6f3499bc8318aa4cfef9d3065e34a8.svg" alt="20211210212713-topology_dca0efbcee6f3499bc8318aa4cfef9d3065e34a8.svg" class="org-svg" /> is a group homomorphism with elements in <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_4c029e0821f00f34fd5da7a28e1ae6f8a9075649.svg" alt="20211210212713-topology_4c029e0821f00f34fd5da7a28e1ae6f8a9075649.svg" class="org-svg" />
+Claim: \[ f_* \] is a group homomorphism with elements in \[ \pi_1(Y,y_0) \]
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_7ca204c5a66502f4e43060f50162184ed4372567.svg" alt="20211210212713-topology_7ca204c5a66502f4e43060f50162184ed4372567.svg" class="org-svg" />
+\[ f_* \circ p \in \pi_1(Y,y_0) \]
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_1e48c73ed40bd86167200374b4960f216cfd5d48.svg" alt="20211210212713-topology_1e48c73ed40bd86167200374b4960f216cfd5d48.svg" class="org-svg" /> Where <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_5cee4445c51b5b3a74c8d39531f9b6847e26e00b.svg" alt="20211210212713-topology_5cee4445c51b5b3a74c8d39531f9b6847e26e00b.svg" class="org-svg" />
-Hence <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_3836fe58a43b827724134cf737ef2a2862f298c2.svg" alt="20211210212713-topology_3836fe58a43b827724134cf737ef2a2862f298c2.svg" class="org-svg" /> with <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_e1671803072a12268a90a629351be2b3c46fa22c.svg" alt="20211210212713-topology_e1671803072a12268a90a629351be2b3c46fa22c.svg" class="org-svg" /> 
+\[ \begin{tikzcd}[ampersand replacement=\&]
+	{I} \& {X} \& {Y}
+	\arrow["p", from=1-1, to=1-2]
+	\arrow["f", from=1-2, to=1-3]
+\end{tikzcd} \] Where \[ p(0) = p(1) \]
+Hence \[ f_*(p(t)) = f(p(t)) \in Y \] with \[ f(p(0)) = y_0 = f(p(1)) \] 
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_43b729a0bc0a2fcbfc5463d6471e25133d85a7e6.svg" alt="20211210212713-topology_43b729a0bc0a2fcbfc5463d6471e25133d85a7e6.svg" class="org-svg" /> 
+\[ f_*(p * q) = f(p * q) =
+\begin{cases}
+f(p(2t)) & t \in [0,\frac{1}{2}] \\
+f(q(2t) & t \in [\frac{1}{2}, 1] 
+\end{cases} = f(p) * f(q) = f_*(p) * f_*(q) \] 
 </p>
 
 <p>
@@ -509,63 +530,81 @@ Claim: If
 </div>
 </div>
 </div>
-<div id="outline-container-orgacb2336" class="outline-3">
-<h3 id="orgacb2336"><span class="section-number-3">9.2.</span> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_925627ab0996704ac71351fb8823d59eebb02da7.svg" alt="20211210212713-topology_925627ab0996704ac71351fb8823d59eebb02da7.svg" class="org-svg" /> &amp; <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_dfae6f2099f9aa22be4a50b5c1cc72e8aa4dde2b.svg" alt="20211210212713-topology_dfae6f2099f9aa22be4a50b5c1cc72e8aa4dde2b.svg" class="org-svg" /> where <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_a1c6be6de239bf921c4a7620396a331afdce0923.svg" alt="20211210212713-topology_a1c6be6de239bf921c4a7620396a331afdce0923.svg" class="org-svg" /></h3>
+<div id="outline-container-org6c2b5ed" class="outline-3">
+<h3 id="org6c2b5ed"><span class="section-number-3">9.2.</span> \[ \pi_1(\mathbb{R}) \] &amp; \[ \pi_1(A) \] where \[ A \subseteq_{\text{convex}} \mathbb{R} \]</h3>
 </div>
-<div id="outline-container-org903bd05" class="outline-3">
-<h3 id="org903bd05"><span class="section-number-3">9.3.</span> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_7a69901c907d79cc75538d89e15f47f6e2e5b756.svg" alt="20211210212713-topology_7a69901c907d79cc75538d89e15f47f6e2e5b756.svg" class="org-svg" /></h3>
+<div id="outline-container-org7483448" class="outline-3">
+<h3 id="org7483448"><span class="section-number-3">9.3.</span> \[ \pi_1(S^1) \]</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_4bde32b17ee08c4bb7c5d3e5a7aeb2f5ef705e27.svg" alt="20211210212713-topology_4bde32b17ee08c4bb7c5d3e5a7aeb2f5ef705e27.svg" class="org-svg" /></li>
+<li>\[ f \in \pi_1(S^1, 1+0i) \]</li>
 </ul>
 
 <p>
-We will show <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_e95e97e90448d2d83156c7e27e050491ed5a3602.svg" alt="20211210212713-topology_e95e97e90448d2d83156c7e27e050491ed5a3602.svg" class="org-svg" /> 
+We will show \[ f \simeq \omega_n \colon s \mapsto e^{2 \pi i s} \] 
 </p>
 
 <p>
-Path Lifting Lemma <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_64a45eeda32491135f96e7c4038759dcf0f50c70.svg" alt="20211210212713-topology_64a45eeda32491135f96e7c4038759dcf0f50c70.svg" class="org-svg" /> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_05c9daae4563d061df5786f9c48845d2a4adf8c0.svg" alt="20211210212713-topology_05c9daae4563d061df5786f9c48845d2a4adf8c0.svg" class="org-svg" />
+Path Lifting Lemma \[ \implies \] \[ \begin{tikzcd}[ampersand replacement=\&] 
+	\& {\mathbb{R}} \\
+	{I} \& {S^1}
+	\arrow["{\exists ! \widetilde{f}}", dashed, from=2-1, to=1-2]
+	\arrow["\pi", from=1-2, to=2-2]
+ 	\arrow["f"', from=2-1, to=2-2] 
+\end{tikzcd} \]
 </p>
 
 
 <p>
-where <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_8c95dbeec37198fade4a717e244bc2b75b4587cd.svg" alt="20211210212713-topology_8c95dbeec37198fade4a717e244bc2b75b4587cd.svg" class="org-svg" /> via <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_fc6dd07d85a390b49c5637cb629ff6734d5e5ba2.svg" alt="20211210212713-topology_fc6dd07d85a390b49c5637cb629ff6734d5e5ba2.svg" class="org-svg" /> and <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_22c30a395f8e32b17165892dab07357198ba30ce.svg" alt="20211210212713-topology_22c30a395f8e32b17165892dab07357198ba30ce.svg" class="org-svg" />
+where \[ \pi \colon \mathbb{R} \to S^1 \] via \[ s \mapsto e^{2 \pi i s} \] and \[ \widetilde{f}(0) = 0 \]
 </p>
 
 
 <p>
 Note:
 </p>
-
-<div class="equation-container">
-<span class="equation">
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_c874a62623cb953aa8ddb6dcfb37ea5339b720f8.svg" alt="20211210212713-topology_c874a62623cb953aa8ddb6dcfb37ea5339b720f8.svg" class="org-svg" />
-</span>
-</div>
+\begin{align*}
+\pi \circ \widetilde{f} &= f \implies \\
+\pi \circ \widetilde{f}(0) &= \pi \circ \widetilde{f}(1) \\
+e^{2 \pi i \widetilde{f}(0)} &= e^{2 \pi i \widetilde{f}(1)} \\
+e^{2 \pi i (\widetilde{f}(0) - \widetilde{f}(1))} &= 1
+\end{align*}
 
 <p>
-So, <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_2b906d40f5c4a778e958270c8c52b46ca7d7ec30.svg" alt="20211210212713-topology_2b906d40f5c4a778e958270c8c52b46ca7d7ec30.svg" class="org-svg" />
+So, \[\widetilde{f}(0) - \widetilde{f}(1) &\in \mathbb{Z}\]
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_438ed2e9926408fbd800bebdfaa6ff53f9fcb0d1.svg" alt="20211210212713-topology_438ed2e9926408fbd800bebdfaa6ff53f9fcb0d1.svg" class="org-svg" /> is convex, so <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_45f4d46a5c01e8af77e6afc6fc29c70bf5b8471f.svg" alt="20211210212713-topology_45f4d46a5c01e8af77e6afc6fc29c70bf5b8471f.svg" class="org-svg" /> defined via <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_86252f778df64e6e5ded4a489e7bd10d7b3fb415.svg" alt="20211210212713-topology_86252f778df64e6e5ded4a489e7bd10d7b3fb415.svg" class="org-svg" /> where <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_9435e6fc48d4fb691be284cb8bffb58fe8bdf6b9.svg" alt="20211210212713-topology_9435e6fc48d4fb691be284cb8bffb58fe8bdf6b9.svg" class="org-svg" /> 
+\[ \mathbb{R} \] is convex, so \[ \widetilde{f} \simeq \widetilde{\omega_{n}} \] defined via \[ s \mapsto ns \] where \[ n = \widetilde{f}(1) \] 
 </p>
 
 <p>
-By commutativity, <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_b967066f735d1b4e5ee4116b0b5d7a25203007c0.svg" alt="20211210212713-topology_b967066f735d1b4e5ee4116b0b5d7a25203007c0.svg" class="org-svg" />
+By commutativity, \[ [f] = [p \circ \widetilde{f}] = [p \circ \widetilde{\omega_n}] = [\omega_n] \]
 </p>
 
 <p>
 We can define the new commutative diagram
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_75c65d7316d8076626638e81b63f6151fc586a8e.svg" alt="20211210212713-topology_75c65d7316d8076626638e81b63f6151fc586a8e.svg" class="org-svg" />
+\[ \begin{tikzcd}[ampersand replacement=\&] 
+	\& {\mathbb{R}} \\
+	{I} \& {S^1}
+	\arrow["{\exists ! \widetilde{f}}", dashed, from=2-1, to=1-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow["f"', from=2-1, to=2-2]
+\end{tikzcd} \simeq \begin{tikzcd}[ampersand replacement=\&]
+	\& {\mathbb{R}} \\
+	{I} \& {S^1}
+	\arrow["{\widetilde{\omega_n}}", from=2-1, to=1-2]
+	\arrow["\pi", from=1-2, to=2-2]
+	\arrow["\omega_n"', from=2-1, to=2-2]
+\end{tikzcd}\]
 </p>
 
 
 <p>
-Now, define a new function <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_0adfbb2b3e165a8d115a0882e319f4a7357ed4b2.svg" alt="20211210212713-topology_0adfbb2b3e165a8d115a0882e319f4a7357ed4b2.svg" class="org-svg" /> via <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_0145e59855b26a9f06488704c49d72507ce5644f.svg" alt="20211210212713-topology_0145e59855b26a9f06488704c49d72507ce5644f.svg" class="org-svg" />
+Now, define a new function \[ \Phi : \mathbb{Z} \to \pi_1(S^1, 1+0i) \] via \[ n \mapsto \omega_n \]
 </p>
 
 <p>
@@ -574,95 +613,97 @@ We will show it is an isomorphism of groups:
 <ul class="org-ul">
 <li><b>Homomorphism</b>:</li>
 </ul>
-
-<div class="equation-container">
-<span class="equation">
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_af7131f7ce035c939cfea0f4ff0ab9ae0d28c829.svg" alt="20211210212713-topology_af7131f7ce035c939cfea0f4ff0ab9ae0d28c829.svg" class="org-svg" />
-</span>
-</div>
+\begin{align*}
+\Phi(n + m) &= [\omega_{n+m}] \\
+&= [\pi \circ \widetilde{\omega_{n + m}}] \\
+&= [\pi \circ (\widetilde{\omega_{n}} * \tau_{n} \widetilde{\omega_{m}})] \\
+&= [\pi (\widetilde{\omega_{n}}) * \pi (\tau_{n} \widetilde{\omega_{m}})] \\
+&= [\omega_{n} * \omega_{m}] \\
+&= [\omega_{n}] * [\omega_{m}] \\
+\end{align*}
 <ul class="org-ul">
 <li><b>Surjective</b>:</li>
 </ul>
 <p>
-Let <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_e0fad8f72eb566fe12abce857c0fd3c441f772bc.svg" alt="20211210212713-topology_e0fad8f72eb566fe12abce857c0fd3c441f772bc.svg" class="org-svg" /> we know <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_0b9f997fad316ef9ea98c60e04a0c11e08bd20d8.svg" alt="20211210212713-topology_0b9f997fad316ef9ea98c60e04a0c11e08bd20d8.svg" class="org-svg" /> hence <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_58ac4f26c24b0757986195713c6a59c90eeb1b25.svg" alt="20211210212713-topology_58ac4f26c24b0757986195713c6a59c90eeb1b25.svg" class="org-svg" />
+Let \[ f \in \pi_1(S_1) \] we know \[ f \simeq \omega_n \] hence \[ f = \Phi(n) \]
 </p>
 
 <ul class="org-ul">
 <li><b>Injective</b>:</li>
 </ul>
 <p>
-Suppose <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_4d8e13eff65fad3fec3332ba32a970fea2d1adc4.svg" alt="20211210212713-topology_4d8e13eff65fad3fec3332ba32a970fea2d1adc4.svg" class="org-svg" /> then <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_d95227a1c3f6007818130e3f3a7cf2b95d5d1fe6.svg" alt="20211210212713-topology_d95227a1c3f6007818130e3f3a7cf2b95d5d1fe6.svg" class="org-svg" />
-So there is a homotopy <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_d656d727deba813d27f0dbcd70d3b4258d9ccafe.svg" alt="20211210212713-topology_d656d727deba813d27f0dbcd70d3b4258d9ccafe.svg" class="org-svg" /> between <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_633470c5aae7d49964b66ec627ff55f2af16b14b.svg" alt="20211210212713-topology_633470c5aae7d49964b66ec627ff55f2af16b14b.svg" class="org-svg" />
-Hence there is a lift <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_6782de94d74d7fce71753e65feba266e1ee87e11.svg" alt="20211210212713-topology_6782de94d74d7fce71753e65feba266e1ee87e11.svg" class="org-svg" /> between <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_31366564dc559370ee100313bc7459bdef1a082d.svg" alt="20211210212713-topology_31366564dc559370ee100313bc7459bdef1a082d.svg" class="org-svg" /> 
-Hence <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_aa0d0af7ee6531f7265bb1a6d3cefb4fe1f021fd.svg" alt="20211210212713-topology_aa0d0af7ee6531f7265bb1a6d3cefb4fe1f021fd.svg" class="org-svg" /> (two paths are path homotopic in <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_438ed2e9926408fbd800bebdfaa6ff53f9fcb0d1.svg" alt="20211210212713-topology_438ed2e9926408fbd800bebdfaa6ff53f9fcb0d1.svg" class="org-svg" /> iff they have the same end points.
+Suppose \[ \Phi(n) = \Phi(m) \] then \[ [\omega_n] = [\omega_m] \]
+So there is a homotopy \[ F_t \] between \[ \omega_n,\omega_m \]
+Hence there is a lift \[ \widetilde{F_t} \] between \[ \widetilde{\omega_n},\widetilde{\omega_m} \] 
+Hence \[ n = m \] (two paths are path homotopic in \[ \mathbb{R} \] iff they have the same end points.
 </p>
 </div>
 </div>
-<div id="outline-container-org45a3198" class="outline-3">
-<h3 id="org45a3198"><span class="section-number-3">9.4.</span> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_1429525364753ed00925ecbe23719c37ec000058.svg" alt="20211210212713-topology_1429525364753ed00925ecbe23719c37ec000058.svg" class="org-svg" /></h3>
+<div id="outline-container-org30d22ea" class="outline-3">
+<h3 id="org30d22ea"><span class="section-number-3">9.4.</span> \[ \pi_1(S^n) . n \geq 2 \]</h3>
 </div>
-<div id="outline-container-org6f380bd" class="outline-3">
-<h3 id="org6f380bd"><span class="section-number-3">9.5.</span> <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_2204dafd67cd48e85d66f3117709061dd55297d1.svg" alt="20211210212713-topology_2204dafd67cd48e85d66f3117709061dd55297d1.svg" class="org-svg" /></h3>
+<div id="outline-container-orge35b581" class="outline-3">
+<h3 id="orge35b581"><span class="section-number-3">9.5.</span> \[ \pi_1(\mathbb{T}^n) \]</h3>
 </div>
-<div id="outline-container-orgdd36bae" class="outline-3">
-<h3 id="orgdd36bae"><span class="section-number-3">9.6.</span> </h3>
+<div id="outline-container-org34cb065" class="outline-3">
+<h3 id="org34cb065"><span class="section-number-3">9.6.</span> </h3>
 </div>
-<div id="outline-container-orga818de6" class="outline-3">
-<h3 id="orga818de6"><span class="section-number-3">9.7.</span> Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</h3>
+<div id="outline-container-orgd7ec8d4" class="outline-3">
+<h3 id="orgd7ec8d4"><span class="section-number-3">9.7.</span> Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</h3>
 </div>
-<div id="outline-container-org24467b1" class="outline-3">
-<h3 id="org24467b1"><span class="section-number-3">9.8.</span> Product Topology is Product of Groups</h3>
+<div id="outline-container-org80d5b13" class="outline-3">
+<h3 id="org80d5b13"><span class="section-number-3">9.8.</span> Product Topology is Product of Groups</h3>
 </div>
-<div id="outline-container-org271d8ea" class="outline-3">
-<h3 id="org271d8ea"><span class="section-number-3">9.9.</span> </h3>
+<div id="outline-container-org589032e" class="outline-3">
+<h3 id="org589032e"><span class="section-number-3">9.9.</span> </h3>
 </div>
 </div>
 
-<div id="outline-container-org420bc83" class="outline-2">
-<h2 id="org420bc83"><span class="section-number-2">10.</span> Homology</h2>
+<div id="outline-container-orgff00a14" class="outline-2">
+<h2 id="orgff00a14"><span class="section-number-2">10.</span> Homology</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-orgd153dd6" class="outline-3">
-<h3 id="orgd153dd6"><span class="section-number-3">10.1.</span> Types of Homology Theories</h3>
+<div id="outline-container-orge60d9b3" class="outline-3">
+<h3 id="orge60d9b3"><span class="section-number-3">10.1.</span> Types of Homology Theories</h3>
 <div class="outline-text-3" id="text-10-1">
 </div>
-<div id="outline-container-org9cd05b3" class="outline-4">
-<h4 id="org9cd05b3"><span class="section-number-4">10.1.1.</span> Homology of Graphs</h4>
+<div id="outline-container-org7ed0a41" class="outline-4">
+<h4 id="org7ed0a41"><span class="section-number-4">10.1.1.</span> Homology of Graphs</h4>
 <div class="outline-text-4" id="text-10-1-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_43fd822c49878a57d62c46089a304b7d94118ab4.svg" alt="20211210212713-topology_43fd822c49878a57d62c46089a304b7d94118ab4.svg" class="org-svg" /></li>
+<li>\[ X \in \textbf{Graph} \]</li>
 </ul>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_5385b2b1130c11d6ad3ad1931cdc5590a9c70f39.svg" alt="20211210212713-topology_5385b2b1130c11d6ad3ad1931cdc5590a9c70f39.svg" class="org-svg" />
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_739936f4c9630286f8463f6ec138f1feb50cef32.svg" alt="20211210212713-topology_739936f4c9630286f8463f6ec138f1feb50cef32.svg" class="org-svg" /> via <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_85e83cd047008f1391b5869485f9843547de876c.svg" alt="20211210212713-topology_85e83cd047008f1391b5869485f9843547de876c.svg" class="org-svg" />
+\[ :\implies \]
+\[ H_1 \colon \textbf{Graph} \to \textbf{Ab} \] via \[ \text{FA}(\textbf{Graph}) \]
 </p>
 
 <p>
-That is, given a graph, we have vertices and edges. Formally add each vertex and edge by a coefficient in <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_0a5903aa9954c65487b861685ad31ae434f1c54f.svg" alt="20211210212713-topology_0a5903aa9954c65487b861685ad31ae434f1c54f.svg" class="org-svg" />.
+That is, given a graph, we have vertices and edges. Formally add each vertex and edge by a coefficient in \[ \mathbb{Z} \].
 </p>
 </div>
 
 <ol class="org-ol">
-<li><a id="orga9b1c97"></a>Examples<br />
+<li><a id="orgae45f10"></a>Examples<br />
 <div class="outline-text-5" id="text-10-1-1-1">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_d9dd264e12d6322c6e3d8f0d7543259081ad9e4d.svg" alt="20211210212713-topology_d9dd264e12d6322c6e3d8f0d7543259081ad9e4d.svg" class="org-svg" /></li>
+<li>\[ X = (a \xrightarrow{e} b) \]</li>
 </ul>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_714bdfb40c3687a5d4f3ef606e08ac3e3c29ccef.svg" alt="20211210212713-topology_714bdfb40c3687a5d4f3ef606e08ac3e3c29ccef.svg" class="org-svg" />
+\[ : \implies \]
 </p>
 
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_6217731833b16134038154bfcd17c9116c795e62.svg" alt="20211210212713-topology_6217731833b16134038154bfcd17c9116c795e62.svg" class="org-svg" />
-A cycle would be a path that begins and ends at the same point, so <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_70de7b2b4bdd9b5645ef76efbe9ab5aa0b6a33cd.svg" alt="20211210212713-topology_70de7b2b4bdd9b5645ef76efbe9ab5aa0b6a33cd.svg" class="org-svg" /> forward, <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_21003fe6737e1e0ff83ee94b0b3a6a9afa8f195f.svg" alt="20211210212713-topology_21003fe6737e1e0ff83ee94b0b3a6a9afa8f195f.svg" class="org-svg" /> back is a path from <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_65c58950afa0db2ac713d6826662360f9f3fd941.svg" alt="20211210212713-topology_65c58950afa0db2ac713d6826662360f9f3fd941.svg" class="org-svg" /> to <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_65c58950afa0db2ac713d6826662360f9f3fd941.svg" alt="20211210212713-topology_65c58950afa0db2ac713d6826662360f9f3fd941.svg" class="org-svg" /> and is a cycle. Cycles in this case are described by having <img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_12569e67db7c33f1705b9a1b58882933e04a025f.svg" alt="20211210212713-topology_12569e67db7c33f1705b9a1b58882933e04a025f.svg" class="org-svg" />.
+\[ \text{FA}(\text{edge}(X)) = ne \]
+A cycle would be a path that begins and ends at the same point, so \[ e \] forward, \[ -e \] back is a path from \[ a \] to \[ a \] and is a cycle. Cycles in this case are described by having \[ ne \implies n = 0 \].
 </p>
 </div>
 </li>
@@ -670,43 +711,43 @@ A cycle would be a path that begins and ends at the same point, so <img src="fil
 </div>
 
 
-<div id="outline-container-orga93e7b5" class="outline-4">
-<h4 id="orga93e7b5"><span class="section-number-4">10.1.2.</span> Simplicial Homology</h4>
+<div id="outline-container-org53e61f3" class="outline-4">
+<h4 id="org53e61f3"><span class="section-number-4">10.1.2.</span> Simplicial Homology</h4>
 </div>
 
-<div id="outline-container-org6b7da0d" class="outline-4">
-<h4 id="org6b7da0d"><span class="section-number-4">10.1.3.</span> Singular Homology</h4>
+<div id="outline-container-org7f34aa4" class="outline-4">
+<h4 id="org7f34aa4"><span class="section-number-4">10.1.3.</span> Singular Homology</h4>
 </div>
 
-<div id="outline-container-org7de617e" class="outline-4">
-<h4 id="org7de617e"><span class="section-number-4">10.1.4.</span> Cellular Homology</h4>
+<div id="outline-container-org6e2bb57" class="outline-4">
+<h4 id="org6e2bb57"><span class="section-number-4">10.1.4.</span> Cellular Homology</h4>
 </div>
 
-<div id="outline-container-orgccbfbff" class="outline-4">
-<h4 id="orgccbfbff"><span class="section-number-4">10.1.5.</span> Axiomatic Homology</h4>
+<div id="outline-container-org5d8c166" class="outline-4">
+<h4 id="org5d8c166"><span class="section-number-4">10.1.5.</span> Axiomatic Homology</h4>
 <div class="outline-text-4" id="text-10-1-5">
 <p>
-<img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" alt="20211210212713-topology_166aaaa2cca101a336a671c871e56aef5a1fb1d8.svg" class="org-svg" />
+\[ \lambda \]
 </p>
 <ul class="org-ul">
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_a8589833d024fb1809925ce625dbc5e90e46b17c.svg" alt="20211210212713-topology_a8589833d024fb1809925ce625dbc5e90e46b17c.svg" class="org-svg" /> CW Complex</li>
-<li><img src="file:///home/zjabbar/.cache/dvisvgm/20211210212713-topology_ba1782d2422552d2d8ef2b867e2c82095fd81ee8.svg" alt="20211210212713-topology_ba1782d2422552d2d8ef2b867e2c82095fd81ee8.svg" class="org-svg" /> Functor</li>
+<li>\[ X \] CW Complex</li>
+<li>\[ H_n \colon \textbf{CW} \to \textbf{Ab} \] Functor</li>
 </ul>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-orgca9e599" class="outline-3">
-<h3 id="orgca9e599"><span class="section-number-3">10.2.</span> Equivalence of Homology Theories</h3>
+<div id="outline-container-org546a715" class="outline-3">
+<h3 id="org546a715"><span class="section-number-3">10.2.</span> Equivalence of Homology Theories</h3>
 </div>
 
-<div id="outline-container-orge230b0a" class="outline-3">
-<h3 id="orge230b0a"><span class="section-number-3">10.3.</span> Homology as the Abelianization of Homotopy</h3>
+<div id="outline-container-org3ca4f0c" class="outline-3">
+<h3 id="org3ca4f0c"><span class="section-number-3">10.3.</span> Homology as the Abelianization of Homotopy</h3>
 </div>
 
-<div id="outline-container-org255ed46" class="outline-3">
-<h3 id="org255ed46"><span class="section-number-3">10.4.</span> Calculations of Homology Complexes</h3>
+<div id="outline-container-org52db1c3" class="outline-3">
+<h3 id="org52db1c3"><span class="section-number-3">10.4.</span> Calculations of Homology Complexes</h3>
 </div>
 </div>
 </div>
