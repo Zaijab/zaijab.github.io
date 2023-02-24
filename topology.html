@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-23 Thu 18:15 -->
+<!-- 2023-02-23 Thu 18:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Topology</title>
@@ -198,19 +198,18 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 </ul></div></header>
-
 <script>
-  MathJax = {
-    loader: {
-      load: ['[custom]/xypic.js'],
-      paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
-    },
-    tex: {
-      packages: {'[+]': ['xypic']}
-    }
-  };
-</script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+                                    MathJax = {
+                                      loader: {
+                                        load: ['[custom]/xypic.js'],
+                                        paths: {custom: 'static/js/xyjax/'}
+                                      },
+                                      tex: {
+                                        packages: {'[+]': ['xypic']}
+                                      }
+                                    };
+                                  </script>
+                                  <script id="MathJax-script" async src="static/js/tex-chtml-full.js"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -225,8 +224,8 @@
 
 
 
-<div id="outline-container-org96acdda" class="outline-2">
-<h2 id="org96acdda"><span class="section-number-2">1.</span> Topology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span>&#xa0;<span class="Definition">Definition</span></span></h2>
+<div id="outline-container-orge87852a" class="outline-2">
+<h2 id="orge87852a"><span class="section-number-2">1.</span> Topology&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Topology">Topology</span>&#xa0;<span class="Definition">Definition</span></span></h2>
 <div class="outline-text-2" id="text-1">
 <p>
 \(\mathcal{T} \subseteq \mathcal{P}(X)\)
@@ -236,16 +235,16 @@
 </div>
 </div>
 
-<div id="outline-container-orgd40380d" class="outline-2">
-<h2 id="orgd40380d"><span class="section-number-2">2.</span> Continuity</h2>
+<div id="outline-container-org62af8d2" class="outline-2">
+<h2 id="org62af8d2"><span class="section-number-2">2.</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 \[ f \colon X \to Y \] Continuous \[ \iff \] \[ \Forall V \in \mathcal{T}_Y \colon f^{-1}[V] \in \mathcal{T}_X \] 
 </p>
 </div>
 
-<div id="outline-container-org7bf7649" class="outline-3">
-<h3 id="org7bf7649"><span class="section-number-3">2.1.</span> Homeomorphism</h3>
+<div id="outline-container-orge19791c" class="outline-3">
+<h3 id="orge19791c"><span class="section-number-3">2.1.</span> Homeomorphism</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 \[f \colon X \to Y \] homeomorphism \[\iff\] \[f \colon X \to Y \]  bijective, continuous, and has bijective inverse
@@ -253,8 +252,8 @@
 </div>
 </div>
 
-<div id="outline-container-org733f287" class="outline-3">
-<h3 id="org733f287"><span class="section-number-3">2.2.</span> Determining Homeomorphism</h3>
+<div id="outline-container-orgff9aae1" class="outline-3">
+<h3 id="orgff9aae1"><span class="section-number-3">2.2.</span> Determining Homeomorphism</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 To exhibit a homeomorphism we must create a function such that it is bijective, continuous, and has a continuous inverse.
@@ -271,63 +270,63 @@ Compactness is preserved under homeomorphism but \[(0,1)\] is not compact and \[
 </div>
 </div>
 </div>
-<div id="outline-container-org20f4e4f" class="outline-2">
-<h2 id="org20f4e4f"><span class="section-number-2">3.</span> Creating New Topologies</h2>
+<div id="outline-container-orgf49d4c7" class="outline-2">
+<h2 id="orgf49d4c7"><span class="section-number-2">3.</span> Creating New Topologies</h2>
 </div>
-<div id="outline-container-orgcfb80fb" class="outline-2">
-<h2 id="orgcfb80fb"><span class="section-number-2">4.</span> Compactness</h2>
+<div id="outline-container-org17b6783" class="outline-2">
+<h2 id="org17b6783"><span class="section-number-2">4.</span> Compactness</h2>
 </div>
-<div id="outline-container-orged90198" class="outline-2">
-<h2 id="orged90198"><span class="section-number-2">5.</span> Connectedness</h2>
+<div id="outline-container-org13d9456" class="outline-2">
+<h2 id="org13d9456"><span class="section-number-2">5.</span> Connectedness</h2>
 </div>
-<div id="outline-container-org55c4d4c" class="outline-2">
-<h2 id="org55c4d4c"><span class="section-number-2">6.</span> Point Set</h2>
+<div id="outline-container-orgcbfdab4" class="outline-2">
+<h2 id="orgcbfdab4"><span class="section-number-2">6.</span> Point Set</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org08abbc6" class="outline-3">
-<h3 id="org08abbc6"><span class="section-number-3">6.1.</span> Generating Topologies</h3>
+<div id="outline-container-orgcca16ab" class="outline-3">
+<h3 id="orgcca16ab"><span class="section-number-3">6.1.</span> Generating Topologies</h3>
 <div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-orgbfa51dc" class="outline-4">
-<h4 id="orgbfa51dc"><span class="section-number-4">6.1.1.</span> Bases &amp; Subbases</h4>
+<div id="outline-container-org50c8ff6" class="outline-4">
+<h4 id="org50c8ff6"><span class="section-number-4">6.1.1.</span> Bases &amp; Subbases</h4>
 </div>
 
-<div id="outline-container-orgaa6c08b" class="outline-4">
-<h4 id="orgaa6c08b"><span class="section-number-4">6.1.2.</span> Subsets</h4>
+<div id="outline-container-org68db20c" class="outline-4">
+<h4 id="org68db20c"><span class="section-number-4">6.1.2.</span> Subsets</h4>
 </div>
 
-<div id="outline-container-orgd767609" class="outline-4">
-<h4 id="orgd767609"><span class="section-number-4">6.1.3.</span> Products</h4>
+<div id="outline-container-orgeb057d9" class="outline-4">
+<h4 id="orgeb057d9"><span class="section-number-4">6.1.3.</span> Products</h4>
 </div>
 
-<div id="outline-container-org5c8aacb" class="outline-4">
-<h4 id="org5c8aacb"><span class="section-number-4">6.1.4.</span> Quotients</h4>
+<div id="outline-container-org6ac3dd3" class="outline-4">
+<h4 id="org6ac3dd3"><span class="section-number-4">6.1.4.</span> Quotients</h4>
 </div>
 </div>
 
-<div id="outline-container-org58814ef" class="outline-3">
-<h3 id="org58814ef"><span class="section-number-3">6.2.</span> Connectedness</h3>
+<div id="outline-container-org0865325" class="outline-3">
+<h3 id="org0865325"><span class="section-number-3">6.2.</span> Connectedness</h3>
 </div>
-<div id="outline-container-org8e409c1" class="outline-3">
-<h3 id="org8e409c1"><span class="section-number-3">6.3.</span> Compactness</h3>
+<div id="outline-container-orga3653b1" class="outline-3">
+<h3 id="orga3653b1"><span class="section-number-3">6.3.</span> Compactness</h3>
 </div>
-<div id="outline-container-org4c8f8cd" class="outline-3">
-<h3 id="org4c8f8cd"><span class="section-number-3">6.4.</span> Dimension</h3>
+<div id="outline-container-org9fb5ae4" class="outline-3">
+<h3 id="org9fb5ae4"><span class="section-number-3">6.4.</span> Dimension</h3>
 </div>
 </div>
-<div id="outline-container-org784b8c8" class="outline-2">
-<h2 id="org784b8c8"><span class="section-number-2">7.</span> Category Theory</h2>
+<div id="outline-container-org91b8665" class="outline-2">
+<h2 id="org91b8665"><span class="section-number-2">7.</span> Category Theory</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org0f8fb75" class="outline-3">
-<h3 id="org0f8fb75"><span class="section-number-3">7.1.</span> Category</h3>
+<div id="outline-container-org71a47af" class="outline-3">
+<h3 id="org71a47af"><span class="section-number-3">7.1.</span> Category</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 Definition of a Category
 </p>
 </div>
-<div id="outline-container-org29e76cb" class="outline-4">
-<h4 id="org29e76cb"><span class="section-number-4">7.1.1.</span> Definition</h4>
+<div id="outline-container-org6885c1c" class="outline-4">
+<h4 id="org6885c1c"><span class="section-number-4">7.1.1.</span> Definition</h4>
 <div class="outline-text-4" id="text-7-1-1">
 <p>
 A <b>Category</b> \[ \mathcal{C} \] consists of a class of <b>objects</b> \[ \text{ob}(\mathcal{C}) \] and <b>Morphisms</b> \[ \text{Hom}_\mathcal{C}(X,Y) \] for all \[X,Y \in \text{ob}(\mathcal{C})\]
@@ -335,33 +334,33 @@ Two morphisms can be composed if the domain and codomain match. Composistion is 
 </p>
 </div>
 </div>
-<div id="outline-container-orgc24155c" class="outline-4">
-<h4 id="orgc24155c"><span class="section-number-4">7.1.2.</span> Examples</h4>
+<div id="outline-container-org8df635c" class="outline-4">
+<h4 id="org8df635c"><span class="section-number-4">7.1.2.</span> Examples</h4>
 </div>
 </div>
-<div id="outline-container-org616898a" class="outline-3">
-<h3 id="org616898a"><span class="section-number-3">7.2.</span> Monomorphisms</h3>
+<div id="outline-container-org0607f59" class="outline-3">
+<h3 id="org0607f59"><span class="section-number-3">7.2.</span> Monomorphisms</h3>
 </div>
-<div id="outline-container-orge0b40b7" class="outline-3">
-<h3 id="orge0b40b7"><span class="section-number-3">7.3.</span> Epimorphisms</h3>
+<div id="outline-container-org1f6d7b5" class="outline-3">
+<h3 id="org1f6d7b5"><span class="section-number-3">7.3.</span> Epimorphisms</h3>
 </div>
-<div id="outline-container-orgd0c339e" class="outline-3">
-<h3 id="orgd0c339e"><span class="section-number-3">7.4.</span> Isomorphisms</h3>
+<div id="outline-container-orge9386cd" class="outline-3">
+<h3 id="orge9386cd"><span class="section-number-3">7.4.</span> Isomorphisms</h3>
 </div>
-<div id="outline-container-orgad10a05" class="outline-3">
-<h3 id="orgad10a05"><span class="section-number-3">7.5.</span> Endomorphisms</h3>
+<div id="outline-container-org982f670" class="outline-3">
+<h3 id="org982f670"><span class="section-number-3">7.5.</span> Endomorphisms</h3>
 </div>
-<div id="outline-container-orgc9ec980" class="outline-3">
-<h3 id="orgc9ec980"><span class="section-number-3">7.6.</span> Automorphism</h3>
+<div id="outline-container-org8f644f6" class="outline-3">
+<h3 id="org8f644f6"><span class="section-number-3">7.6.</span> Automorphism</h3>
 </div>
 </div>
 
-<div id="outline-container-org443ce59" class="outline-2">
-<h2 id="org443ce59"><span class="section-number-2">8.</span> Homotopy</h2>
+<div id="outline-container-orgf36881f" class="outline-2">
+<h2 id="orgf36881f"><span class="section-number-2">8.</span> Homotopy</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-orgf77788a" class="outline-3">
-<h3 id="orgf77788a"><span class="section-number-3">8.1.</span> Two Functions</h3>
+<div id="outline-container-org90a623c" class="outline-3">
+<h3 id="org90a623c"><span class="section-number-3">8.1.</span> Two Functions</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 \[ \lambda \]
@@ -377,8 +376,8 @@ They are called homotopic when
 </div>
 </div>
 
-<div id="outline-container-org775a5cb" class="outline-3">
-<h3 id="org775a5cb"><span class="section-number-3">8.2.</span> Two Spaces</h3>
+<div id="outline-container-org723c6d5" class="outline-3">
+<h3 id="org723c6d5"><span class="section-number-3">8.2.</span> Two Spaces</h3>
 <div class="outline-text-3" id="text-8-2">
 <p>
 \[ \lambda \]
@@ -394,8 +393,8 @@ They are called homotopy equivalant when
 </div>
 </div>
 
-<div id="outline-container-org45e1bec" class="outline-3">
-<h3 id="org45e1bec"><span class="section-number-3">8.3.</span> Relative Homotopy</h3>
+<div id="outline-container-orgd2b70cc" class="outline-3">
+<h3 id="orgd2b70cc"><span class="section-number-3">8.3.</span> Relative Homotopy</h3>
 <div class="outline-text-3" id="text-8-3">
 <p>
 If we have a homotopy such that no matter the time, a certain subset is fixed we call it a homotopy relative to that fixed subset.
@@ -413,8 +412,8 @@ If we have a homotopy such that no matter the time, a certain subset is fixed we
 </ul>
 </div>
 </div>
-<div id="outline-container-org639fa11" class="outline-3">
-<h3 id="org639fa11"><span class="section-number-3">8.4.</span> Deformation Retract</h3>
+<div id="outline-container-org9ab7ccb" class="outline-3">
+<h3 id="org9ab7ccb"><span class="section-number-3">8.4.</span> Deformation Retract</h3>
 <div class="outline-text-3" id="text-8-4">
 <p>
 \[ \lambda \]
@@ -455,20 +454,20 @@ But there is a special notion where the identity of a space can be homotopic to 
 <li></li>
 </ul>
 </div>
-<div id="outline-container-org20337ae" class="outline-4">
-<h4 id="org20337ae"><span class="section-number-4">8.4.1.</span> Null Homotopy</h4>
+<div id="outline-container-org93a841c" class="outline-4">
+<h4 id="org93a841c"><span class="section-number-4">8.4.1.</span> Null Homotopy</h4>
 </div>
-<div id="outline-container-org2dc8630" class="outline-4">
-<h4 id="org2dc8630"><span class="section-number-4">8.4.2.</span> Contractible Spaces</h4>
+<div id="outline-container-org6d343f3" class="outline-4">
+<h4 id="org6d343f3"><span class="section-number-4">8.4.2.</span> Contractible Spaces</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org1ef4802" class="outline-2">
-<h2 id="org1ef4802"><span class="section-number-2">9.</span> Fundamental Group</h2>
+<div id="outline-container-org5b5569a" class="outline-2">
+<h2 id="org5b5569a"><span class="section-number-2">9.</span> Fundamental Group</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org237461f" class="outline-3">
-<h3 id="org237461f"><span class="section-number-3">9.1.</span> Functoriality</h3>
+<div id="outline-container-org3b36786" class="outline-3">
+<h3 id="org3b36786"><span class="section-number-3">9.1.</span> Functoriality</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 \[ \lambda \]
@@ -485,8 +484,8 @@ But there is a special notion where the identity of a space can be homotopic to 
 </ul>
 </div>
 
-<div id="outline-container-org4223071" class="outline-4">
-<h4 id="org4223071"><span class="section-number-4">9.1.1.</span> Proof</h4>
+<div id="outline-container-org5b401e4" class="outline-4">
+<h4 id="org5b401e4"><span class="section-number-4">9.1.1.</span> Proof</h4>
 <div class="outline-text-4" id="text-9-1-1">
 <p>
 \[ \lambda \]
@@ -531,11 +530,11 @@ Claim: If
 </div>
 </div>
 </div>
-<div id="outline-container-org55369c7" class="outline-3">
-<h3 id="org55369c7"><span class="section-number-3">9.2.</span> \[ \pi_1(\mathbb{R}) \] &amp; \[ \pi_1(A) \] where \[ A \subseteq_{\text{convex}} \mathbb{R} \]</h3>
+<div id="outline-container-org5c750d1" class="outline-3">
+<h3 id="org5c750d1"><span class="section-number-3">9.2.</span> \[ \pi_1(\mathbb{R}) \] &amp; \[ \pi_1(A) \] where \[ A \subseteq_{\text{convex}} \mathbb{R} \]</h3>
 </div>
-<div id="outline-container-org061ceec" class="outline-3">
-<h3 id="org061ceec"><span class="section-number-3">9.3.</span> \[ \pi_1(S^1) \]</h3>
+<div id="outline-container-org9ee2d50" class="outline-3">
+<h3 id="org9ee2d50"><span class="section-number-3">9.3.</span> \[ \pi_1(S^1) \]</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
 \[ \lambda \]
@@ -640,36 +639,36 @@ Hence \[ n = m \] (two paths are path homotopic in \[ \mathbb{R} \] iff they hav
 </p>
 </div>
 </div>
-<div id="outline-container-org74eeb63" class="outline-3">
-<h3 id="org74eeb63"><span class="section-number-3">9.4.</span> \[ \pi_1(S^n) . n \geq 2 \]</h3>
+<div id="outline-container-orgd0272b7" class="outline-3">
+<h3 id="orgd0272b7"><span class="section-number-3">9.4.</span> \[ \pi_1(S^n) . n \geq 2 \]</h3>
 </div>
-<div id="outline-container-org9c750a8" class="outline-3">
-<h3 id="org9c750a8"><span class="section-number-3">9.5.</span> \[ \pi_1(\mathbb{T}^n) \]</h3>
+<div id="outline-container-orgd0a0376" class="outline-3">
+<h3 id="orgd0a0376"><span class="section-number-3">9.5.</span> \[ \pi_1(\mathbb{T}^n) \]</h3>
 </div>
-<div id="outline-container-orgcdc7ad7" class="outline-3">
-<h3 id="orgcdc7ad7"><span class="section-number-3">9.6.</span> </h3>
+<div id="outline-container-orgf9d83e0" class="outline-3">
+<h3 id="orgf9d83e0"><span class="section-number-3">9.6.</span> </h3>
 </div>
-<div id="outline-container-org36aecc2" class="outline-3">
-<h3 id="org36aecc2"><span class="section-number-3">9.7.</span> Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</h3>
+<div id="outline-container-org38a139d" class="outline-3">
+<h3 id="org38a139d"><span class="section-number-3">9.7.</span> Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</h3>
 </div>
-<div id="outline-container-orgc43a535" class="outline-3">
-<h3 id="orgc43a535"><span class="section-number-3">9.8.</span> Product Topology is Product of Groups</h3>
+<div id="outline-container-orgc93150c" class="outline-3">
+<h3 id="orgc93150c"><span class="section-number-3">9.8.</span> Product Topology is Product of Groups</h3>
 </div>
-<div id="outline-container-org5e73c75" class="outline-3">
-<h3 id="org5e73c75"><span class="section-number-3">9.9.</span> </h3>
+<div id="outline-container-orgf345091" class="outline-3">
+<h3 id="orgf345091"><span class="section-number-3">9.9.</span> </h3>
 </div>
 </div>
 
-<div id="outline-container-org02a71f7" class="outline-2">
-<h2 id="org02a71f7"><span class="section-number-2">10.</span> Homology</h2>
+<div id="outline-container-orge19f9cf" class="outline-2">
+<h2 id="orge19f9cf"><span class="section-number-2">10.</span> Homology</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-org9ef30c7" class="outline-3">
-<h3 id="org9ef30c7"><span class="section-number-3">10.1.</span> Types of Homology Theories</h3>
+<div id="outline-container-org923c50e" class="outline-3">
+<h3 id="org923c50e"><span class="section-number-3">10.1.</span> Types of Homology Theories</h3>
 <div class="outline-text-3" id="text-10-1">
 </div>
-<div id="outline-container-orgf479d21" class="outline-4">
-<h4 id="orgf479d21"><span class="section-number-4">10.1.1.</span> Homology of Graphs</h4>
+<div id="outline-container-org4c53eca" class="outline-4">
+<h4 id="org4c53eca"><span class="section-number-4">10.1.1.</span> Homology of Graphs</h4>
 <div class="outline-text-4" id="text-10-1-1">
 <p>
 \[ \lambda \]
@@ -689,7 +688,7 @@ That is, given a graph, we have vertices and edges. Formally add each vertex and
 </div>
 
 <ol class="org-ol">
-<li><a id="org43d97e0"></a>Examples<br />
+<li><a id="orgc91e8df"></a>Examples<br />
 <div class="outline-text-5" id="text-10-1-1-1">
 <p>
 \[ \lambda \]
@@ -712,20 +711,20 @@ A cycle would be a path that begins and ends at the same point, so \[ e \] forwa
 </div>
 
 
-<div id="outline-container-org24c1c0a" class="outline-4">
-<h4 id="org24c1c0a"><span class="section-number-4">10.1.2.</span> Simplicial Homology</h4>
+<div id="outline-container-org0efaa96" class="outline-4">
+<h4 id="org0efaa96"><span class="section-number-4">10.1.2.</span> Simplicial Homology</h4>
 </div>
 
-<div id="outline-container-org00c67dc" class="outline-4">
-<h4 id="org00c67dc"><span class="section-number-4">10.1.3.</span> Singular Homology</h4>
+<div id="outline-container-orgcdc8f35" class="outline-4">
+<h4 id="orgcdc8f35"><span class="section-number-4">10.1.3.</span> Singular Homology</h4>
 </div>
 
-<div id="outline-container-org8d757ed" class="outline-4">
-<h4 id="org8d757ed"><span class="section-number-4">10.1.4.</span> Cellular Homology</h4>
+<div id="outline-container-org51a6165" class="outline-4">
+<h4 id="org51a6165"><span class="section-number-4">10.1.4.</span> Cellular Homology</h4>
 </div>
 
-<div id="outline-container-org5f35331" class="outline-4">
-<h4 id="org5f35331"><span class="section-number-4">10.1.5.</span> Axiomatic Homology</h4>
+<div id="outline-container-orgfb67db5" class="outline-4">
+<h4 id="orgfb67db5"><span class="section-number-4">10.1.5.</span> Axiomatic Homology</h4>
 <div class="outline-text-4" id="text-10-1-5">
 <p>
 \[ \lambda \]
@@ -739,16 +738,16 @@ A cycle would be a path that begins and ends at the same point, so \[ e \] forwa
 </div>
 
 
-<div id="outline-container-org2668b8f" class="outline-3">
-<h3 id="org2668b8f"><span class="section-number-3">10.2.</span> Equivalence of Homology Theories</h3>
+<div id="outline-container-org2290ff4" class="outline-3">
+<h3 id="org2290ff4"><span class="section-number-3">10.2.</span> Equivalence of Homology Theories</h3>
 </div>
 
-<div id="outline-container-org73adb50" class="outline-3">
-<h3 id="org73adb50"><span class="section-number-3">10.3.</span> Homology as the Abelianization of Homotopy</h3>
+<div id="outline-container-orga67141d" class="outline-3">
+<h3 id="orga67141d"><span class="section-number-3">10.3.</span> Homology as the Abelianization of Homotopy</h3>
 </div>
 
-<div id="outline-container-org3d4c9e8" class="outline-3">
-<h3 id="org3d4c9e8"><span class="section-number-3">10.4.</span> Calculations of Homology Complexes</h3>
+<div id="outline-container-org29b2e9e" class="outline-3">
+<h3 id="org29b2e9e"><span class="section-number-3">10.4.</span> Calculations of Homology Complexes</h3>
 </div>
 </div>
 </div>
