@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 18:36 -->
+<!-- 2023-02-25 Sat 19:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory</title>
@@ -219,16 +219,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgaabb0eb">Category</a></li>
-<li><a href="#org9ea6e05">Functor</a></li>
-<li><a href="#orgc2c236b">Limits</a></li>
+<li><a href="#orge82226e">Category</a></li>
+<li><a href="#org062df83">Functor</a></li>
+<li><a href="#org67e03aa">Limits</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgaabb0eb" class="outline-2">
-<h2 id="orgaabb0eb">Category</h2>
-<div class="outline-text-2" id="text-orgaabb0eb">
+<div id="outline-container-orge82226e" class="outline-2">
+<h2 id="orge82226e">Category</h2>
+<div class="outline-text-2" id="text-orge82226e">
 <p>
 A <b>category</b> \( \mathcal{C} \) consists of three mathematical entities:
 </p>
@@ -247,30 +247,31 @@ The \( \hom \) set satisfies the following properties:
 <li>Composition</li>
 </ul>
 <p>
-\[ \fcmp \colon  \hom(A, B) \times \hom(B, C) \to \hom(A, C) \]
+\[ \circ \colon  \hom(A, B) \times \hom(B, C) \to \hom(A, C) \]
 </p>
 <ul class="org-ul">
 <li>Existence of Identity</li>
 </ul></li>
 </ul>
 <p>
-\[ \exists 1 \in \hom(A,A) . \forall f \in \hom(A,A) 1 \fcmp f = f = f \fcmp 1 \]
+\[ \exists 1 \in \hom(A,A) . \forall f \in \hom(A,A) 1 \circ f = f = f \circ 1 \]
 </p>
 <ul class="org-ul">
 <li>Associativity</li>
 </ul>
 <p>
-\[ \forall f \in \hom(A,B), \forall g \in \hom(B,C), \forall h \in \hom(C,D),  (f \fcmp g) \fcmp h = f \fcmp (g \fcmp h) \]
+\[ \forall f \in \hom(A,B), \forall g \in \hom(B,C), \forall h \in \hom(C,D),  (f \circ g) \circ h = f \circ (g \circ h) \]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org9ea6e05" class="outline-2">
-<h2 id="org9ea6e05">Functor</h2>
+<div id="outline-container-org062df83" class="outline-2">
+<h2 id="org062df83">Functor</h2>
 </div>
 
-<div id="outline-container-orgc2c236b" class="outline-2">
-<h2 id="orgc2c236b">Limits</h2>
+
+<div id="outline-container-org67e03aa" class="outline-2">
+<h2 id="org67e03aa">Limits</h2>
 </div>
 </div>
 </body>
