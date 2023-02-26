@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 14:35 -->
+<!-- 2023-02-25 Sat 14:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notation</title>
@@ -216,13 +216,47 @@
 <div id="content" class="content">
 <h1 class="title">Notation</h1>
 
-<div id="outline-container-org6606f68" class="outline-2">
-<h2 id="org6606f68"><span class="section-number-2">1.</span> Limits in Analysis</h2>
+<div id="outline-container-orgb843ae1" class="outline-2">
+<h2 id="orgb843ae1"><span class="section-number-2">1.</span> Filling in The Blanks</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+There is a trade off between rigor and clarity. If one gives too many details, the overall picture is obfuscated. At times, the notation in these posts will rely on filling in the proper variables with the right 'type' to make the formulae have any meaning.
+</p>
+</div>
 </div>
 
-<div id="outline-container-org2019de3" class="outline-2">
-<h2 id="org2019de3"><span class="section-number-2">2.</span> Set Builder Notation</h2>
+<div id="outline-container-org59f1fcb" class="outline-2">
+<h2 id="org59f1fcb"><span class="section-number-2">2.</span> Limits in Analysis</h2>
 <div class="outline-text-2" id="text-2">
+<p>
+A sequence is a function \( a \colon \mathbb{N} \to \mathbb{R} \) denoted \( a_n \).
+</p>
+
+<p>
+A sequence has a limit when
+</p>
+
+<p>
+\[ \exists a \in \mathbb{R} \forall \varepsilon > 0 \exists N \in \mathbb{N} \forall n \geq N . | a_n - a | < \varepsilon \]
+</p>
+
+<p>
+We may denote this succinctly as,
+</p>
+
+<p>
+\[ a_n \to a \]
+</p>
+
+<p>
+Building from above, if we do write \( b_n \to b \), we will assume \( b_n \) is a sequence in some space obvious from context, and \( b \) is the limit of the sequence.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1ea198a" class="outline-2">
+<h2 id="org1ea198a"><span class="section-number-2">3.</span> Set Builder Notation</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 Given a predicate \( P \colon U \to 1 \) we may consider the collection of all objects satisfying the predicate, denoted by:
 </p>
