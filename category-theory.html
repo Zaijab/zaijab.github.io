@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-02-25 Sat 19:02 -->
+<!-- 2023-02-26 Sun 15:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory</title>
@@ -219,16 +219,16 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orge82226e">Category</a></li>
-<li><a href="#org062df83">Functor</a></li>
-<li><a href="#org67e03aa">Limits</a></li>
+<li><a href="#org092b632">Category</a></li>
+<li><a href="#org7e5da5e">Functor</a></li>
+<li><a href="#org5327d12">Natural Transformation</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orge82226e" class="outline-2">
-<h2 id="orge82226e">Category</h2>
-<div class="outline-text-2" id="text-orge82226e">
+<div id="outline-container-org092b632" class="outline-2">
+<h2 id="org092b632">Category</h2>
+<div class="outline-text-2" id="text-org092b632">
 <p>
 A <b>category</b> \( \mathcal{C} \) consists of three mathematical entities:
 </p>
@@ -254,24 +254,54 @@ The \( \hom \) set satisfies the following properties:
 </ul></li>
 </ul>
 <p>
-\[ \exists 1 \in \hom(A,A) . \forall f \in \hom(A,A) 1 \circ f = f = f \circ 1 \]
+\[ \exists 1 \in \hom(A,A) . \forall f \in \hom(A,A) . 1 \circ f = f = f \circ 1 \]
 </p>
 <ul class="org-ul">
 <li>Associativity</li>
 </ul>
 <p>
-\[ \forall f \in \hom(A,B), \forall g \in \hom(B,C), \forall h \in \hom(C,D),  (f \circ g) \circ h = f \circ (g \circ h) \]
+\[ \forall f \in \hom(A,B) . \forall g \in \hom(B,C) . \forall h \in \hom(C,D) . (f \circ g) \circ h = f \circ (g \circ h) \]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org062df83" class="outline-2">
-<h2 id="org062df83">Functor</h2>
+<div id="outline-container-org7e5da5e" class="outline-2">
+<h2 id="org7e5da5e">Functor</h2>
+<div class="outline-text-2" id="text-org7e5da5e">
+<p>
+A <b>functor</b> \( \mathcal{F} \) from a category \( \mathcal{C} \) to \( \mathcal{D} \) denoted \( \mathcal{F} \colon \mathcal{C} \to \mathcal{D} \)
+</p>
+
+<p>
+is a map \( \text{ob}(\mathcal{C}) \to \text{ob}(\mathcal{D}) \) and \( \hom(A, B) \to \hom(\mathcal{F}(A), \mathcal{F}(D)) \) such that
+</p>
+
+<ul class="org-ul">
+<li>\( \mathcal{F}(1_A) = 1_{\mathcal{F}(A)} \)</li>
+
+<li>\( \mathcal{F}(f \circ g) = \mathcal{F}(f) \circ \mathcal{F}(g) \)</li>
+</ul>
+</div>
 </div>
 
+<div id="outline-container-org5327d12" class="outline-2">
+<h2 id="org5327d12">Natural Transformation</h2>
+<div class="outline-text-2" id="text-org5327d12">
+<p>
+A <b>natural transformation</b> between two functors \( \mathcal{F} \) and \( \mathcal{G} \) is a system of morphisms
+</p>
 
-<div id="outline-container-org67e03aa" class="outline-2">
-<h2 id="org67e03aa">Limits</h2>
+<p>
+\( \eta(X) \colon \mathcal{F}(X) \to \mathcal{G}(X) \) such that the following diagram commutes
+</p>
+
+<p>
+\[ \begin{xy} \xymatrix{
+\mathcal{F}(X) \ar[d]^{\mathcal{F}(f)} \ar[r]^{\eta(X)} & \mathcal{G}(X) \ar[d]^{\mathcal{G}(f)} \\
+\mathcal{F}(Y) \ar[r]^{\eta(Y)} & \mathcal{G}(Y)
+} \end{xy} \]
+</p>
+</div>
 </div>
 </div>
 </body>
