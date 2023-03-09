@@ -8,6 +8,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500'); 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap');
 
+td:lang(ar) {
+    color: green;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+
 p:lang(ar) {
     color: green;
     font-family: 'Noto Nastaliq Urdu', serif;
