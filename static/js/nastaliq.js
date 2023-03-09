@@ -1,8 +1,8 @@
 var arabicPatt = /[\u0600-\u06ff]/;
-[].forEach.call(document.getElementsByTagName('org-left'), function(p) {
+[].forEach.call(document.getElementsByTagName('body'), function(p) {
     var lang, dir;
     if (arabicPatt.test(p.textContent)) {
-        lang = 'ar'; dir = 'rtl';
+        lang = 'ar'; dir = 'ltr';
     }
     else {
         lang = 'en'; dir = 'ltr';
