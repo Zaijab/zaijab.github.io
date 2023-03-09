@@ -13,6 +13,11 @@ td:lang(ar) {
     font-family: 'Noto Nastaliq Urdu', serif;
 }
 
+body:lang(ar) {
+    color: green;
+    font-family: 'Noto Nastaliq Urdu', serif;
+}
+
 p:lang(ar) {
     color: green;
     font-family: 'Noto Nastaliq Urdu', serif;
