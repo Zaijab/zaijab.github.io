@@ -6,7 +6,7 @@
 <!-- 2023-03-13 Mon 11:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Posts</title>
+<title>Time Series Prediction</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -198,14 +198,177 @@
 <li><a href="/">/</a></li>
 <li><a href="/about">/about</a></li>
 <li><a href="/posts">/posts</a></li></ul></div></header><script src="static/js/nastaliq.js"></script>
+
+<script>
+  MathJax = {
+    loader: {
+      load: ['[custom]/xypic.js'],
+      paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+    },
+    tex: {
+      packages: {'[+]': ['xypic']}
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Posts</h1>
+<h1 class="title">Time Series Prediction</h1>
+<p>
+Here we will use and become familiar with the following Python packages for data science
+</p>
+
 <ul class="org-ul">
-<li><a href="category-theory.html#ID-b351f6f2-aa3f-4602-97dc-c0fd11a597c8">Category Theory</a></li>
-<li><a href="time-series-prediction.html#ID-d8e34765-dc9f-48bc-8206-c20f2f9f3b34">Time Series Prediction</a></li>
+<li>SQLAlchemy</li>
+<li>Pandas</li>
+<li>TensorFlow</li>
 </ul>
+
+<p>
+Here we will learn to use TensorFlow to build a predictive model which can forecast power consumption of a given building.
+</p>
+
+<div id="outline-container-orgcf757cc" class="outline-2">
+<h2 id="orgcf757cc"><span class="section-number-2">1.</span> What We're Building Towards</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I tend to be verbose when explaining. Here is a plug and play version of the code.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #8f0075;">print</span><span style="color: #000000;">(</span><span style="color: #3548cf;">"Hello World"</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+We would like the model to use data from the previous week to predict the next days worth of data.
+</p>
+
+<p>
+From the previous week we will use 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgc1236a4" class="outline-2">
+<h2 id="orgc1236a4"><span class="section-number-2">2.</span> Importing the Dataset</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+In order to train the model, we need something to train <b>on</b>. 
+</p>
+</div>
+
+<div id="outline-container-orgd9a8fc1" class="outline-3">
+<h3 id="orgd9a8fc1"><span class="section-number-3">2.1.</span> Locating the Data in SQL</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+The data is stored on a server
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org95eafa7" class="outline-3">
+<h3 id="org95eafa7"><span class="section-number-3">2.2.</span> Creating a Pandas DataFrame</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+In Python, the easiest way to manipulate data for sake of plotting and wrangling is via Pandas. So far we have created a <code>SQLAlchemy</code> selectable. To execute the query and hold the data in memory, we use <code>pd.read_sql</code>.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgc603834" class="outline-3">
+<h3 id="orgc603834"><span class="section-number-3">2.3.</span> Creating TensorFlow dataset</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Now that we have the data in memory and visualized we will now begin to make the data represented in a manner which is more efficient to train on.
+</p>
+
+<p>
+Firstly, we want the data to be in the form \( X,y \) where \( X = \text{Input}, y = \text{Response} \) where the model will try to learn a function \( \begin{xy} \xymatrix{X \ar[r]^{f} & y} \end{xy} \). Here \( X = \text{Previous Week Data}, y = \text{Tomorrow Kw} \).
+</p>
+
+<p>
+Second, we want the data to be managed in memory in a way that will keep our GPU's at full capacity. We want to avoid data starvation for the GPU.
+</p>
+
+<p>
+Here we will use a <code>TensorFlow</code> dataset using the <code>tf.keras.preprocessing.time_series_dataset_from_array</code> function. The dataset is a Python generator so we may grab elements using a for loop.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org559a28a" class="outline-2">
+<h2 id="org559a28a"><span class="section-number-2">3.</span> Exploring the Dataset</h2>
+</div>
+
+
+<div id="outline-container-orgb65f6b3" class="outline-2">
+<h2 id="orgb65f6b3"><span class="section-number-2">4.</span> Engineering Features for Machine Learning</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+To start doing machine learning, we must first define the model we want to use, then we engineer features based on what the model will do best with.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org94a601c" class="outline-2">
+<h2 id="org94a601c"><span class="section-number-2">5.</span> Representing the Data in TensorFlow</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Currently our data is in a <code>pandas.DataFrame</code> object. TensorFlow wants the dataset to be in a <code>tf.Tensor</code> format. Timeseries are a common enough format for Keras to have a preprocessing function <code>tf.keras.utils.timeseries_dataset_from_array</code>.
+</p>
+</div>
+
+<div id="outline-container-org45abc59" class="outline-3">
+<h3 id="org45abc59"><span class="section-number-3">5.1.</span> Create a</h3>
+</div>
+</div>
+
+<div id="outline-container-org839ae1f" class="outline-2">
+<h2 id="org839ae1f"><span class="section-number-2">6.</span> Predictions</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+The output of a TensorFlow model is, of course, another <code>tf.Tensor</code>. In this model we wish to perform the following steps.
+</p>
+</div>
+
+<div id="outline-container-org48aff30" class="outline-3">
+<h3 id="org48aff30"><span class="section-number-3">6.1.</span> Outputting Predictions</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Given the <code>model</code> of type <code>tf.keras.sequential</code>, we have access to the <code>*.predict</code> method. Recall that we <b>standardized</b> our dataset by subtracting off the mean and dividing by the standard deviation of the training set. This means that the input and output will use standardized features. That is, our model has the following behavior
+</p>
+
+<p>
+\[ \text{Standardized Inputs} \to \text{Model} \to \text{Standardized Outputs} \]
+</p>
+
+<p>
+We may write a function which uses this model but has the inputs and outputs be in the original representation.
+</p>
+
+<p>
+\[ \text{Regular Inputs} \to \left[ \text{Standardized Inputs} \to \text{Model} \to \text{Standardized Outputs} \right] \to \text{Regular Outputs} \]
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">inverse_</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge6fa107" class="outline-3">
+<h3 id="orge6fa107"><span class="section-number-3">6.2.</span> Matching Date &amp; Time</h3>
+</div>
+</div>
 </div>
 </body>
 </html>
