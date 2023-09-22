@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-07-03 Mon 11:30 -->
+<!-- 2023-09-22 Fri 01:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notation</title>
@@ -216,8 +216,8 @@
 <div id="content" class="content">
 <h1 class="title">Notation</h1>
 
-<div id="outline-container-org7aee139" class="outline-2">
-<h2 id="org7aee139"><span class="section-number-2">1.</span> Filling in The Blanks</h2>
+<div id="outline-container-orgd952265" class="outline-2">
+<h2 id="orgd952265"><span class="section-number-2">1.</span> Filling in The Blanks</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 There is a trade off between rigor and clarity. If one gives too many details, the overall picture is obfuscated. At times, the notation in these posts will rely on filling in the proper variables with the right 'type' to make the formulae have any meaning. What this accomplishes in my notes is a form of <b>multiple dispatch</b>.
@@ -226,8 +226,8 @@ There is a trade off between rigor and clarity. If one gives too many details, t
 </div>
 
 
-<div id="outline-container-org5300479" class="outline-2">
-<h2 id="org5300479"><span class="section-number-2">2.</span> Limits in Analysis</h2>
+<div id="outline-container-orgafb079f" class="outline-2">
+<h2 id="orgafb079f"><span class="section-number-2">2.</span> Limits in Analysis</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A sequence is a function \( a \colon \mathbb{N} \to \mathbb{R} \) denoted \( a_n \).
@@ -256,8 +256,8 @@ Building from above, if we do write \( b_n \to b \), we will assume \( b_n \) is
 </div>
 
 
-<div id="outline-container-orge07df7d" class="outline-2">
-<h2 id="orge07df7d"><span class="section-number-2">3.</span> Set Builder Notation</h2>
+<div id="outline-container-orgdbcd2c8" class="outline-2">
+<h2 id="orgdbcd2c8"><span class="section-number-2">3.</span> Set Builder Notation</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Given a predicate \( P \colon U \to 1 \) we may consider the collection of all objects satisfying the predicate, denoted by:
@@ -282,8 +282,8 @@ When obvious from context we will omit the superset \( X \).
 </div>
 
 
-<div id="outline-container-org0b733e3" class="outline-2">
-<h2 id="org0b733e3"><span class="section-number-2">4.</span> Open Subsets</h2>
+<div id="outline-container-org735bb6f" class="outline-2">
+<h2 id="org735bb6f"><span class="section-number-2">4.</span> Open Subsets</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 \( U \) is an open subset of a space \( X \) is denoted \( U \opn X \) 
@@ -292,8 +292,81 @@ When obvious from context we will omit the superset \( X \).
 </div>
 
 
-<div id="outline-container-org0683526" class="outline-2">
-<h2 id="org0683526"><span class="section-number-2">5.</span> Logical Formulae Quantifiers</h2>
+<div id="outline-container-org65603a9" class="outline-2">
+<h2 id="org65603a9"><span class="section-number-2">5.</span> Logical Formulae Quantifiers</h2>
+</div>
+
+
+<div id="outline-container-orge9dd2b9" class="outline-2">
+<h2 id="orge9dd2b9"><span class="section-number-2">6.</span> Style Guide</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+I really enjoy the intuitive feel for why a subject ought to be true. Reading and doing math is a portal to understanding the universe at a more fundamental level. Part of Math's power is the ability to rigorously check every statement for correctness. This is also part of the difficulty in teaching math. People, especially authors and Math StackExchange users, feel the need for every single statement ever made should be a correct one.
+</p>
+
+<p>
+Pure mathematicians dislike the treatment of derivatives as fractions. But the notation is very suggestive and creates many mnemonics for rules pertaining to calculations. (See separation of variables, total derivatives, parameterizations, inverse function theorem). Of course there is a balance that needs to be attained. In my writing, I will keep a lot of the intuition and build up the ideas for the definitions, theorems, and examples. Each line will be justified in two ways, intuitive and rigorously. Intuitive and short arguments will be kept in the main text. Whereas the rigorous (perhaps unhelpful) proofs will be put in the summary section along with the rigorous definitions.
+</p>
+
+<p>
+To this end, there will be two sections outlining the material. 1. Prose, in which I detail how the material fits into a larger narrative and its current applications. 2. Summary, the end of the section will have a summary of part 1. This section, when viewed as an Org mode file, will have each definition and theorem marked as a Flashcard and you may then review using an SRS system within Emacs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgec99615" class="outline-2">
+<h2 id="orgec99615"><span class="section-number-2">7.</span> Non Formal Sentences</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+The writing that takes place in mathematics is
+</p>
+
+<p>
+Mathematical proofs are designed to be written in a way that is so precise that a computer may verify the proof. We humans are not computers, and perhaps it is unhelpful from a pedagogical point of view to humans as such. Here is a sentence that would not fly in modern writing:
+</p>
+
+<p>
+\( f \colon s(f) \to t(f) \) 
+</p>
+
+<p>
+The reason for this definition not making sense is because we are defining \( f \) in terms of its own source and target. That is, the definition is self referential without any base case. The "true" way to write out such an object is,
+</p>
+
+<p>
+\[ f \colon X \to Y \]
+</p>
+
+<p>
+where \( X = s(f) \) and \( Y \supseteq t(f) \).
+</p>
+
+<p>
+Another
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org4ebdfeb" class="outline-2">
+<h2 id="org4ebdfeb"><span class="section-number-2">8.</span> Set Theory</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgf283c3a" class="outline-3">
+<h3 id="orgf283c3a"><span class="section-number-3">8.1.</span> Images of Unions</h3>
+<div class="outline-text-3" id="text-8-1">
+<div class="THEOREM" id="org625dad5">
+<p>
+
+</p>
+
+</div>
+
+\begin{align}
+sadf
+\end{align}
+</div>
+</div>
 </div>
 </div>
 </body>
