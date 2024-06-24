@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-10-11 Wed 12:48 -->
+<!-- 2024-06-23 Sun 22:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Applied Qualifying Exam</title>
 <meta name="author" content="Zain Jabbar" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -207,6 +207,10 @@
     },
     tex: {
       packages: {'[+]': ['xypic']}
+      Macros: {
+      RR: "{\bf R}",
+      bold: ["{\bf #1}",1]
+      }
     }
   };
 </script>
@@ -215,9 +219,8 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Applied Qualifying Exam</h1>
-
-<div id="outline-container-orgb924deb" class="outline-2">
-<h2 id="orgb924deb"><span class="section-number-2">1.</span> Overview of the Subject</h2>
+<div id="outline-container-org43a72b9" class="outline-2">
+<h2 id="org43a72b9"><span class="section-number-2">1.</span> Overview of the Subject</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The applied qualifying exam at UH is designed for students to display mastery over the methods of mathematics that appear in the natural sciences. This part of math finds itself on the intersection of intuition, rigor, and results. That is, every problem will have its inspiration derived from some scientific question.
@@ -233,37 +236,120 @@ The applied qualifying exam at UH is designed for students to display mastery ov
 <li>How can I model an outbreak of diesease or insects?</li>
 </ul>
 
-
 <p>
 Solving these questions will have an important consequence in the world. We also believe in, "perfect is the enemy of good". If our analysis gets us most of the way to an answer, we can at least start implementing solutions based on the approximately correct response. 
 </p>
 </div>
+<div id="outline-container-org2bb069d" class="outline-3">
+<h3 id="org2bb069d"><span class="section-number-3">1.1.</span> Linear Algebra</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Linear algebra concerns itself with the theory of vector spaces, a space with enough information to hold linear combinations of elements. For the most part, the theory of vector spaces is "solved" in which we may classify their behavior by its basis. That is,
+</p>
+
+<div class="THEOREM" id="org9154612">
+<p>
+If \( V \) and \( W \) are vector spaces, with \( \{ v_{n} \} \) and \( \{ w_{n} \} \) bases for \( V \) and \( W \) respectively, then
+</p>
+
+<p>
+\[ V \simeq W \iff | \left\{ v_{n} \right\} | = \left| \left\{ w_{n} \right\} \right| \]
+</p>
+
 </div>
 
-<div id="outline-container-orga4af012" class="outline-2">
-<h2 id="orga4af012"><span class="section-number-2">2.</span> Problem Solving Strategies</h2>
+<p>
+In a sense, the study of vector spaces is just the study of cardinal numbers. What is way more interesting is the study of vector spaces and the maps between them.
+</p>
+</div>
+<div id="outline-container-org09dae4d" class="outline-4">
+<h4 id="org09dae4d"><span class="section-number-4">1.1.1.</span> Subspaces of Vector Spaces</h4>
+</div>
+
+<div id="outline-container-orgdf62ff4" class="outline-4">
+<h4 id="orgdf62ff4"><span class="section-number-4">1.1.2.</span> Relations Between Vector Subspaces</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org86c40e3"></a>\( \mathcal{N}(A) = \mathcal{R}(A^{\ast})^{\perp} \)<br />
+<div class="outline-text-5" id="text-1-1-2-1">
+<p>
+Proof:
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org807940d" class="outline-4">
+<h4 id="org807940d"><span class="section-number-4">1.1.3.</span> Compact Subsets</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Theorem:
+</p>
+
+<p>
+A 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org57d5415" class="outline-3">
+<h3 id="org57d5415"><span class="section-number-3">1.2.</span> Dynamical Systems</h3>
+</div>
+
+<div id="outline-container-orgf2b83cc" class="outline-3">
+<h3 id="orgf2b83cc"><span class="section-number-3">1.3.</span> Partial Differential Equations</h3>
+</div>
+</div>
+<div id="outline-container-orgebc1ebe" class="outline-2">
+<h2 id="orgebc1ebe"><span class="section-number-2">2.</span> Resources</h2>
 <div class="outline-text-2" id="text-2">
-<p>
-When you see a matrix, ALWAYS look to see if the matrix is a part of a well known family. For example, is the matrix symmetric, skew symmetric, hermitian, etc. That will inform you of the eigenvalues, eigenvectors, determinant, etc. and it will help you immensely with the calculations.
-</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Author</td>
+<td class="org-left">Title</td>
+<td class="org-left">Pages</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 
 <p>
-In dynamics, linearization is key. Take the Jacobian around any fixed point and see what you get.
-</p>
-
-<p>
-In PDEs, study the Gauss Green theorems. To prove uniqueness, try taking the integral of a positive value and show it must be zero. (Likely this is done by showing it is less than or equal to a negative value). To solve PDEs on bounded intervals, use Fourier series. To solve PDEs on unbounded domains, use fundamental solutions.
+Friedberg Insel, Linear Algebra (612)
+Roman, Advanced Linear Algebra (528)
+Cheney, Analysis for Applied Mathetmatics (456)
+Perko, Differential Equations and Dynamical Systems (571)
+Strogatz, Nonlinear Dynamics and Chaos (935)
+Hirsh, Smale, Devaney, Differential Equations, Dynamical Systems, and an Introduction to Chaos (433)
+Teschle, Ordinaty Differential Equations and Dynamical Systems (370)
+Bleecker, Csordas Basic Partial Differential Equations (766)
+Evans, Partial Differential Equations (758)
+Haberman, Applied Partial Differential Equations with Fourier Serieries (782)
+Olver, Introduction to Partial Differential Equations (655)
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-orgec96e72" class="outline-2">
-<h2 id="orgec96e72"><span class="section-number-2">3.</span> Important Facts</h2>
+<div id="outline-container-org3f0e94b" class="outline-2">
+<h2 id="org3f0e94b"><span class="section-number-2">3.</span> Important Facts</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orged46b1a" class="outline-3">
-<h3 id="orged46b1a"><span class="section-number-3">3.1.</span> Rank 1 Matrices</h3>
+<div id="outline-container-org9eb392d" class="outline-3">
+<h3 id="org9eb392d"><span class="section-number-3">3.1.</span> Rank 1 Matrices</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Rank 1 Matrices are the outer product of two vectors.
@@ -273,9 +359,8 @@ Rank 1 Matrices are the outer product of two vectors.
 If \( A \) is such that \( \rank(A) = 1 \) then \( A = uv^{T} \).
 </p>
 </div>
-
-<div id="outline-container-orgf319d22" class="outline-4">
-<h4 id="orgf319d22"><span class="section-number-4">3.1.1.</span> Eigenspaces</h4>
+<div id="outline-container-orge92c821" class="outline-4">
+<h4 id="orge92c821"><span class="section-number-4">3.1.1.</span> Eigenspaces</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 The eigenvalues are
@@ -296,33 +381,30 @@ The eigenvectors are \( u \) (the leading vector) and it has \( n - 1 \) vectors
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org022a85a" class="outline-3">
-<h3 id="org022a85a"><span class="section-number-3">3.2.</span> Closed Subspaces of Hilbert Spaces</h3>
+<div id="outline-container-orgb05c6c3" class="outline-3">
+<h3 id="orgb05c6c3"><span class="section-number-3">3.2.</span> Closed Subspaces of Hilbert Spaces</h3>
 </div>
 
 
-<div id="outline-container-orge94082b" class="outline-3">
-<h3 id="orge94082b"><span class="section-number-3">3.3.</span> Normal Matrices</h3>
+<div id="outline-container-org927bc00" class="outline-3">
+<h3 id="org927bc00"><span class="section-number-3">3.3.</span> Normal Matrices</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Normal Matrices
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgbfd9b13" class="outline-3">
-<h3 id="orgbfd9b13"><span class="section-number-3">3.4.</span> Symmetric Matrices</h3>
+<div id="outline-container-org6fd3cdd" class="outline-3">
+<h3 id="org6fd3cdd"><span class="section-number-3">3.4.</span> Symmetric Matrices</h3>
 </div>
 
 
-<div id="outline-container-org107a37b" class="outline-3">
-<h3 id="org107a37b"><span class="section-number-3">3.5.</span> Skew Symmetric Matrices</h3>
+<div id="outline-container-org5cc4a04" class="outline-3">
+<h3 id="org5cc4a04"><span class="section-number-3">3.5.</span> Skew Symmetric Matrices</h3>
 <div class="outline-text-3" id="text-3-5">
 </div>
-<div id="outline-container-orgc95d440" class="outline-4">
-<h4 id="orgc95d440"><span class="section-number-4">3.5.1.</span> Definition</h4>
+<div id="outline-container-org97a0235" class="outline-4">
+<h4 id="org97a0235"><span class="section-number-4">3.5.1.</span> Definition</h4>
 <div class="outline-text-4" id="text-3-5-1">
 <p>
 Matrix \( A \) is skew symmetric if
@@ -333,9 +415,8 @@ Matrix \( A \) is skew symmetric if
 </p>
 </div>
 </div>
-
-<div id="outline-container-orge1c2b2b" class="outline-4">
-<h4 id="orge1c2b2b"><span class="section-number-4">3.5.2.</span> Eigenspaces</h4>
+<div id="outline-container-org771597c" class="outline-4">
+<h4 id="org771597c"><span class="section-number-4">3.5.2.</span> Eigenspaces</h4>
 <div class="outline-text-4" id="text-3-5-2">
 <p>
 All eigenvalues are complex. Contrast this to symmetric matrices in which the eigenvalues are real.
@@ -346,28 +427,26 @@ The eigenvectors are
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgd92f8ab" class="outline-4">
-<h4 id="orgd92f8ab"><span class="section-number-4">3.5.3.</span> Invertibility</h4>
+<div id="outline-container-org55bf8a1" class="outline-4">
+<h4 id="org55bf8a1"><span class="section-number-4">3.5.3.</span> Invertibility</h4>
 </div>
 
-<div id="outline-container-org6191a98" class="outline-4">
-<h4 id="org6191a98"><span class="section-number-4">3.5.4.</span> Diagonalizability</h4>
+<div id="outline-container-org16ca13d" class="outline-4">
+<h4 id="org16ca13d"><span class="section-number-4">3.5.4.</span> Diagonalizability</h4>
 </div>
 </div>
-
-<div id="outline-container-orgb5b5905" class="outline-3">
-<h3 id="orgb5b5905"><span class="section-number-3">3.6.</span> Vandermonde Matrices</h3>
+<div id="outline-container-orgc1ea1ca" class="outline-3">
+<h3 id="orgc1ea1ca"><span class="section-number-3">3.6.</span> Vandermonde Matrices</h3>
 </div>
 
 
 
-<div id="outline-container-orgbb8f4a8" class="outline-3">
-<h3 id="orgbb8f4a8"><span class="section-number-3">3.7.</span> Circulant Matrices</h3>
+<div id="outline-container-org298f60d" class="outline-3">
+<h3 id="org298f60d"><span class="section-number-3">3.7.</span> Circulant Matrices</h3>
 </div>
 
-<div id="outline-container-orgcb4cce3" class="outline-3">
-<h3 id="orgcb4cce3"><span class="section-number-3">3.8.</span> Orthogonal Matrices</h3>
+<div id="outline-container-orgb1527a0" class="outline-3">
+<h3 id="orgb1527a0"><span class="section-number-3">3.8.</span> Orthogonal Matrices</h3>
 <div class="outline-text-3" id="text-3-8">
 <p>
 Orthogonal Matrices are defined as
@@ -377,9 +456,8 @@ Orthogonal Matrices are defined as
 \[ Q Q^{T} = I \]
 </p>
 </div>
-
-<div id="outline-container-org8f680c4" class="outline-4">
-<h4 id="org8f680c4"><span class="section-number-4">3.8.1.</span> Eigenspaces</h4>
+<div id="outline-container-org51f9df0" class="outline-4">
+<h4 id="org51f9df0"><span class="section-number-4">3.8.1.</span> Eigenspaces</h4>
 <div class="outline-text-4" id="text-3-8-1">
 <p>
 The governing relation states that each of the columns creating the matrix is orthogonal to each other (inner product zero). This means that each of them are linearly independent.
@@ -387,10 +465,8 @@ The governing relation states that each of the columns creating the matrix is or
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org0fa32d3" class="outline-3">
-<h3 id="org0fa32d3"><span class="section-number-3">3.9.</span> Spectral Theorem</h3>
+<div id="outline-container-orgb6fab79" class="outline-3">
+<h3 id="orgb6fab79"><span class="section-number-3">3.9.</span> Spectral Theorem</h3>
 <div class="outline-text-3" id="text-3-9">
 <p>
 There are two generalizations of spectral theorems:
@@ -410,10 +486,8 @@ The spectral theorem for normal matrices states that any normal matrix has an or
 </ul>
 </div>
 </div>
-
-
-<div id="outline-container-orgefcaa3f" class="outline-3">
-<h3 id="orgefcaa3f"><span class="section-number-3">3.10.</span> Attracting Sets Contain Unstable Manifolds</h3>
+<div id="outline-container-org6feadfa" class="outline-3">
+<h3 id="org6feadfa"><span class="section-number-3">3.10.</span> Attracting Sets Contain Unstable Manifolds</h3>
 <div class="outline-text-3" id="text-3-10">
 <p>
 Let \( E \) be a trapping region.
@@ -435,18 +509,16 @@ Then
 </p>
 </div>
 </div>
-
-<div id="outline-container-org1dec457" class="outline-3">
-<h3 id="org1dec457"><span class="section-number-3">3.11.</span> Gauss Green Theorem</h3>
+<div id="outline-container-orgc2339d2" class="outline-3">
+<h3 id="orgc2339d2"><span class="section-number-3">3.11.</span> Gauss Green Theorem</h3>
 <div class="outline-text-3" id="text-3-11">
 <p>
 \[ \int_{U} \frac{ \partial u}{ \partial x_{i}} dx = \int_{\partial U} u v^{i} dS \]
 </p>
 </div>
 </div>
-
-<div id="outline-container-org9e60c6c" class="outline-3">
-<h3 id="org9e60c6c"><span class="section-number-3">3.12.</span> Fundamental Solutions</h3>
+<div id="outline-container-orgfed6a81" class="outline-3">
+<h3 id="orgfed6a81"><span class="section-number-3">3.12.</span> Fundamental Solutions</h3>
 <div class="outline-text-3" id="text-3-12">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -475,40 +547,56 @@ Then
 </table>
 </div>
 </div>
-
-<div id="outline-container-org65b82c9" class="outline-3">
-<h3 id="org65b82c9"><span class="section-number-3">3.13.</span> Variational Derivatives</h3>
-</div>
+<div id="outline-container-org3043f0a" class="outline-3">
+<h3 id="org3043f0a"><span class="section-number-3">3.13.</span> Variational Derivatives</h3>
 </div>
 
-<div id="outline-container-org54089dc" class="outline-2">
-<h2 id="org54089dc"><span class="section-number-2">4.</span> Problem Inventory</h2>
+<div id="outline-container-orgf21e507" class="outline-3">
+<h3 id="orgf21e507"><span class="section-number-3">3.14.</span> Null Space, Image, and Transposes</h3>
+</div>
+</div>
+<div id="outline-container-orgcbf2dd7" class="outline-2">
+<h2 id="orgcbf2dd7"><span class="section-number-2">4.</span> Problem Solving Strategies</h2>
 <div class="outline-text-2" id="text-4">
+<p>
+When you see a matrix, ALWAYS look to see if the matrix is a part of a well known family. For example, is the matrix symmetric, skew symmetric, hermitian, etc. That will inform you of the eigenvalues, eigenvectors, determinant, etc. and it will help you immensely with the calculations.
+</p>
+
+<p>
+In dynamics, linearization is key. Take the Jacobian around any fixed point and see what you get.
+</p>
+
+<p>
+In PDEs, study the Gauss Green theorems. To prove uniqueness, try taking the integral of a positive value and show it must be zero. (Likely this is done by showing it is less than or equal to a negative value). To solve PDEs on bounded intervals, use Fourier series. To solve PDEs on unbounded domains, use fundamental solutions.
+</p>
 </div>
-<div id="outline-container-orgc75aa4f" class="outline-3">
-<h3 id="orgc75aa4f"><span class="section-number-3">4.1.</span> Linear Algebra</h3>
-<div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org3a47ed0" class="outline-4">
-<h4 id="org3a47ed0"><span class="section-number-4">4.1.1.</span> Solutions to Linear Equations&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_September_2016">Problem_5_September_2016</span></span></h4>
-<div class="outline-text-4" id="text-4-1-1">
+<div id="outline-container-orgeb8c6f4" class="outline-2">
+<h2 id="orgeb8c6f4"><span class="section-number-2">5.</span> Problem Inventory</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgb005dcb" class="outline-3">
+<h3 id="orgb005dcb"><span class="section-number-3">5.1.</span> Linear Algebra</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-org66d4f4a" class="outline-4">
+<h4 id="org66d4f4a"><span class="section-number-4">5.1.1.</span> Solutions to Linear Equations&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_September_2016">Problem_5_September_2016</span></span></h4>
+<div class="outline-text-4" id="text-5-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgc297c49"></a>If \( A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times m}, n < m \) then \( AB \) is singular&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_A_September_2016">Problem_5_A_September_2016</span></span><br /></li>
+<li><a id="org8f64f21"></a>If \( A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times m}, n < m \) then \( AB \) is singular&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_A_September_2016">Problem_5_A_September_2016</span></span><br /></li>
 
 
-<li><a id="org3df3b47"></a>At most one system has a solution, i. \( Ax = b \), ii. \( A^{T}y = 0, b^{T}y = 1 \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_B_September_2016">Problem_5_B_September_2016</span></span><br /></li>
+<li><a id="org3a676d5"></a>At most one system has a solution, i. \( Ax = b \), ii. \( A^{T}y = 0, b^{T}y = 1 \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_B_September_2016">Problem_5_B_September_2016</span></span><br /></li>
 </ol>
 </div>
-
-
-<div id="outline-container-org8eec83b" class="outline-4">
-<h4 id="org8eec83b"><span class="section-number-4">4.1.2.</span> Anti-Diagonal Matrix&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_August_2017">Problem_6_August_2017</span></span></h4>
-<div class="outline-text-4" id="text-4-1-2">
+<div id="outline-container-org32d5f63" class="outline-4">
+<h4 id="org32d5f63"><span class="section-number-4">5.1.2.</span> Anti-Diagonal Matrix&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_August_2017">Problem_6_August_2017</span></span></h4>
+<div class="outline-text-4" id="text-5-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="org06eda0f"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-2-1">
+<li><a id="org22eaf23"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-2-1">
 <p>
 Let \( A \in \mathbb{C}^{n \times n} \) be an anti diagonal matrix.
 </p>
@@ -523,10 +611,8 @@ Under what conditions on \( a_{1}, \ldots, a_{n} \) is \( A \) unitarily diagona
 </p>
 </div>
 </li>
-
-
-<li><a id="org36597ea"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-2-2">
+<li><a id="orgaa294c1"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-2-2">
 <p>
 By the spectral theorem, a complex matrix is unitarily diagonalizable iff it is normal.
 Hence, we compute the following products:
@@ -544,15 +630,13 @@ Thus, \( A \) is unitarily diagonalizable over \( \mathbb{C} \) iff \( A \) is n
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org1c8d524" class="outline-4">
-<h4 id="org1c8d524"><span class="section-number-4">4.1.3.</span> \( \left( \frac{\left\langle x , Ax \right\rangle}{\left\langle x , x \right\rangle} \right)^{m} \leq \frac{\left\langle x , A^{m}x \right\rangle}{\left\langle x , x \right\rangle} \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_August_2020">Problem_6_August_2020</span></span></h4>
-<div class="outline-text-4" id="text-4-1-3">
+<div id="outline-container-org4bb0935" class="outline-4">
+<h4 id="org4bb0935"><span class="section-number-4">5.1.3.</span> \( \left( \frac{\left\langle x , Ax \right\rangle}{\left\langle x , x \right\rangle} \right)^{m} \leq \frac{\left\langle x , A^{m}x \right\rangle}{\left\langle x , x \right\rangle} \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_August_2020">Problem_6_August_2020</span></span></h4>
+<div class="outline-text-4" id="text-5-1-3">
 </div>
 <ol class="org-ol">
-<li><a id="org7088ac3"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-3-1">
+<li><a id="org7cabb3c"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-3-1">
 <p>
 Let \( A \) be a symmetric \( n \times n \) matrix with non negative elements.
 </p>
@@ -566,10 +650,8 @@ Prove for any \( x \in \mathbb{R}^{n} \) we have the following inequality:
 </p>
 </div>
 </li>
-
-
-<li><a id="orgd4688ca"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-3-2">
+<li><a id="org8ade85f"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-3-2">
 <p>
 Too hard. Partial Solution.
 </p>
@@ -636,24 +718,20 @@ SHOW INEQUALITY FOR INCREASING N INSIDE INNER PRODUCT
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgf26c2fb" class="outline-4">
-<h4 id="orgf26c2fb"><span class="section-number-4">4.1.4.</span> \( \rank(A - B) = \rank(A) - 1 \iff B = \frac{Ax y^T A}{y^T A x} \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_August_2021">Problem_6_August_2021</span></span></h4>
-<div class="outline-text-4" id="text-4-1-4">
+<div id="outline-container-orga7f3537" class="outline-4">
+<h4 id="orga7f3537"><span class="section-number-4">5.1.4.</span> \( \rank(A - B) = \rank(A) - 1 \iff B = \frac{Ax y^T A}{y^T A x} \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_August_2021">Problem_6_August_2021</span></span></h4>
+<div class="outline-text-4" id="text-5-1-4">
 </div>
 <ol class="org-ol">
-<li><a id="orge14c43d"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-4-1">
+<li><a id="orgff2aed1"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-4-1">
 <p>
 If \( A, B \in \mathbb{R}^{m \times n} \) and \( \rank(B) = 1 \), then show that \( \rank(A - B) = \rank(A) - 1 \) iff \( B = \frac{Ax y^T A}{y^T A x} \)   
 </p>
 </div>
 </li>
-
-
-<li><a id="org661b01e"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-4-2">
+<li><a id="org33fbdc4"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-4-2">
 <p>
 Because \( \rank(B) = 1 \) we have \( B = vw^T \) for vectors \( v,w \).
 </p>
@@ -793,15 +871,13 @@ Hence \( \rank(A - B) = \rank(A) - 1 \)
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org33252a9" class="outline-4">
-<h4 id="org33252a9"><span class="section-number-4">4.1.5.</span> \( A \) invertible integer matrix&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_January_2018">Problem_6_January_2018</span></span></h4>
-<div class="outline-text-4" id="text-4-1-5">
+<div id="outline-container-org51a3de1" class="outline-4">
+<h4 id="org51a3de1"><span class="section-number-4">5.1.5.</span> \( A \) invertible integer matrix&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_January_2018">Problem_6_January_2018</span></span></h4>
+<div class="outline-text-4" id="text-5-1-5">
 </div>
 <ol class="org-ol">
-<li><a id="orgd432de1"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-5-1">
+<li><a id="orgefa5c7f"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-5-1">
 <p>
 Let \( A \) be an invertible \( n \times n \) matrix with integer entries. 
 </p>
@@ -811,9 +887,8 @@ Prove that if \( A^{-1} \) has integer entries iff \( | \det(A) | = 1 \)
 </p>
 </div>
 </li>
-
-<li><a id="orgdd6a16a"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-5-2">
+<li><a id="org50ae694"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-5-2">
 <p>
 Suppose that \( A^{-1} \) has integer entries
 Then \( \det(A^{-1}) \det(A) = \det(A^{-1} A) = \det(I) = 1 \)
@@ -831,24 +906,21 @@ This means that \( A^{-1} \) is the product of a scalar integer times a matrix w
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org168d2dc" class="outline-4">
-<h4 id="org168d2dc"><span class="section-number-4">4.1.6.</span> Rank 1 Update Determinant Formula&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_January_2019">Problem_6_January_2019</span></span></h4>
-<div class="outline-text-4" id="text-4-1-6">
+<div id="outline-container-org2f7160d" class="outline-4">
+<h4 id="org2f7160d"><span class="section-number-4">5.1.6.</span> Rank 1 Update Determinant Formula&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_January_2019">Problem_6_January_2019</span></span></h4>
+<div class="outline-text-4" id="text-5-1-6">
 </div>
 <ol class="org-ol">
-<li><a id="org99c9061"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-6-1">
+<li><a id="orgea42e6a"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-6-1">
 <p>
 Suppose \( A, B \in \mathbb{R}^{n \times n} \) and \( \rank(B) = 1 \).
 Show that the function \( f(t) = \det(A + tB) \) is a line.
 </p>
 </div>
 </li>
-
-<li><a id="orge53038e"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-6-2">
+<li><a id="org982a373"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-6-2">
 <p>
 Write \( B = vu^{T} \)
 </p>
@@ -868,15 +940,13 @@ Which is a line.
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org069c578" class="outline-4">
-<h4 id="org069c578"><span class="section-number-4">4.1.7.</span> \( A = \frac{v v^{*}}{v^{*} v} \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_January_2020">Problem_5_January_2020</span></span></h4>
-<div class="outline-text-4" id="text-4-1-7">
+<div id="outline-container-org5acafca" class="outline-4">
+<h4 id="org5acafca"><span class="section-number-4">5.1.7.</span> \( A = \frac{v v^{*}}{v^{*} v} \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_January_2020">Problem_5_January_2020</span></span></h4>
+<div class="outline-text-4" id="text-5-1-7">
 </div>
 <ol class="org-ol">
-<li><a id="orgb8c1e93"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-7-1">
+<li><a id="orgba4528f"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-7-1">
 <p>
 Suppose \( 0 \neq v \in \mathbb{C}^{n} \) and \( A = \frac{vv^{*}}{v^{*}v} \)  
 </p>
@@ -889,10 +959,8 @@ Suppose \( 0 \neq v \in \mathbb{C}^{n} \) and \( A = \frac{vv^{*}}{v^{*}v} \)
 </dl>
 </div>
 </li>
-
-
-<li><a id="orgf707b86"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-7-2">
+<li><a id="orgf295761"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-7-2">
 <p>
 A has eigenvalues \( 1 \) with eigenvector \( v \).
 By calculation
@@ -936,15 +1004,13 @@ By inspection, notice that \( A^{2} = \frac{vv^{*}}{v^{*}v} \frac{vv^{*}}{v^{*}v
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orge7d5280" class="outline-4">
-<h4 id="orge7d5280"><span class="section-number-4">4.1.8.</span> Show \( RR^{*} + S^{*} S \) is invertible&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_January_2022">Problem_6_January_2022</span></span></h4>
-<div class="outline-text-4" id="text-4-1-8">
+<div id="outline-container-org00e12cb" class="outline-4">
+<h4 id="org00e12cb"><span class="section-number-4">5.1.8.</span> Show \( RR^{*} + S^{*} S \) is invertible&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_January_2022">Problem_6_January_2022</span></span></h4>
+<div class="outline-text-4" id="text-5-1-8">
 </div>
 <ol class="org-ol">
-<li><a id="orgd9dc7e6"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-8-1">
+<li><a id="org93e9d3e"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-8-1">
 <p>
 Suppose we have the exact sequence
 </p>
@@ -958,10 +1024,8 @@ Show that \( T = RR^{*} + S^{*} S \) is an invertible linear transformation.
 </p>
 </div>
 </li>
-
-
-<li><a id="org87373f8"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-8-2">
+<li><a id="org5d19043"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-8-2">
 <p>
 Given,
 </p>
@@ -1050,24 +1114,21 @@ We may proceed similarly for the isomorphism of \( S^{\ast} S \).
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgcaac14f" class="outline-4">
-<h4 id="orgcaac14f"><span class="section-number-4">4.1.9.</span> Transposes and Ranks of \( m \times n \) matrix&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_Sample_Exam_1">Problem_6_Sample_Exam_1</span></span></h4>
-<div class="outline-text-4" id="text-4-1-9">
+<div id="outline-container-orga80eba4" class="outline-4">
+<h4 id="orga80eba4"><span class="section-number-4">5.1.9.</span> Transposes and Ranks of \( m \times n \) matrix&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_Sample_Exam_1">Problem_6_Sample_Exam_1</span></span></h4>
+<div class="outline-text-4" id="text-5-1-9">
 </div>
 <ol class="org-ol">
-<li><a id="org85d1f36"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-9-1">
+<li><a id="orgedc3d85"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-9-1">
 <dl class="org-dl">
 <dt>Part A</dt><dd>Show \( \mathcal{N}(A^{T} A) = \mathcal{N}(A)  \)</dd>
 <dt>Part B</dt><dd>Show \( A^{T} A \) is invertible iff \( \rank(A) = n \)</dd>
 </dl>
 </div>
 </li>
-
-<li><a id="orga5b8ad4"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-9-2">
+<li><a id="org9786ffb"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-9-2">
 <dl class="org-dl">
 <dt>Part A</dt><dd></dd>
 </dl>
@@ -1110,23 +1171,20 @@ If \( A^T A \) is invertible, then it has full rank. Hence by part A, A has full
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgddf3546" class="outline-4">
-<h4 id="orgddf3546"><span class="section-number-4">4.1.10.</span> Discretization of Derivative&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_7_Sample_Exam_2">Problem_7_Sample_Exam_2</span></span></h4>
-<div class="outline-text-4" id="text-4-1-10">
+<div id="outline-container-org67d5b5a" class="outline-4">
+<h4 id="org67d5b5a"><span class="section-number-4">5.1.10.</span> Discretization of Derivative&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_7_Sample_Exam_2">Problem_7_Sample_Exam_2</span></span></h4>
+<div class="outline-text-4" id="text-5-1-10">
 </div>
 <ol class="org-ol">
-<li><a id="org554ed9d"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-10-1">
+<li><a id="org13ffd02"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-10-1">
 <p>
 Consider an \( n \times n \) matrix \( A \in \mathbb{R}^{n \times n} \) obtained by discretizing \( \frac{d}{dx} \) over \( [0,1] \) with central differences.  
 </p>
 </div>
 </li>
-
-<li><a id="org02a16ba"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-10-2">
+<li><a id="org742feba"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-10-2">
 <p>
 Note that the matrix is a skew symmetric matrix. That implies that it is singular iff \( n \) is odd. This also implies the eigenvalues are purely imaginary with eigenvalues \( \frac{1}{2(n + 1)} \) 
 </p>
@@ -1134,15 +1192,13 @@ Note that the matrix is a skew symmetric matrix. That implies that it is singula
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orga052f4c" class="outline-4">
-<h4 id="orga052f4c"><span class="section-number-4">4.1.11.</span> Constructing an Invertible Matrix With Certain Properties&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_Sample_Exam_3">Problem_5_Sample_Exam_3</span></span></h4>
-<div class="outline-text-4" id="text-4-1-11">
+<div id="outline-container-orgc86c2fa" class="outline-4">
+<h4 id="orgc86c2fa"><span class="section-number-4">5.1.11.</span> Constructing an Invertible Matrix With Certain Properties&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_Sample_Exam_3">Problem_5_Sample_Exam_3</span></span></h4>
+<div class="outline-text-4" id="text-5-1-11">
 </div>
 <ol class="org-ol">
-<li><a id="org867f55b"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-11-1">
+<li><a id="org76abc4b"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-11-1">
 <p>
 Consider the Vector
 </p>
@@ -1168,31 +1224,26 @@ Construct a matrix such that
 </p>
 </div>
 </li>
-
-<li><a id="orga6b0fa6"></a>Solution<br /></li>
+<li><a id="org56cd1b7"></a>Solution<br /></li>
 </ol>
 </div>
-
-
-<div id="outline-container-org2b88b75" class="outline-4">
-<h4 id="org2b88b75"><span class="section-number-4">4.1.12.</span> Projection onto Intersection&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_Sample_Exam_4">Problem_6_Sample_Exam_4</span></span></h4>
-<div class="outline-text-4" id="text-4-1-12">
+<div id="outline-container-org9a17f2e" class="outline-4">
+<h4 id="org9a17f2e"><span class="section-number-4">5.1.12.</span> Projection onto Intersection&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_Sample_Exam_4">Problem_6_Sample_Exam_4</span></span></h4>
+<div class="outline-text-4" id="text-5-1-12">
 </div>
 <ol class="org-ol">
-<li><a id="org661dc96"></a>Problem<br /></li>
+<li><a id="org572b0b7"></a>Problem<br /></li>
 
-<li><a id="orgcd42fe1"></a>Solution<br /></li>
+<li><a id="orgd2fac5f"></a>Solution<br /></li>
 </ol>
 </div>
-
-
-<div id="outline-container-org49f8703" class="outline-4">
-<h4 id="org49f8703"><span class="section-number-4">4.1.13.</span> Common Complement</h4>
-<div class="outline-text-4" id="text-4-1-13">
+<div id="outline-container-org3d1ad0c" class="outline-4">
+<h4 id="org3d1ad0c"><span class="section-number-4">5.1.13.</span> Common Complement</h4>
+<div class="outline-text-4" id="text-5-1-13">
 </div>
 <ol class="org-ol">
-<li><a id="org09b9ffb"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-13-1">
+<li><a id="org21800fc"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-13-1">
 <p>
 Let \( V \)be a finite-dimensional vector space over an infinite field \( F \).
 </p>
@@ -1202,9 +1253,8 @@ Prove that if \( S_{1}, \ldots, S_{k} \) are subspaces of \( V \) of equal dimen
 </p>
 </div>
 </li>
-
-<li><a id="orgb0c1190"></a>Solution<br />
-<div class="outline-text-5" id="text-4-1-13-2">
+<li><a id="orgcb37547"></a>Solution<br />
+<div class="outline-text-5" id="text-5-1-13-2">
 <p>
 Let \( V \) be finite dimensional, then there is a basis \( \left\{ v_{i} \right\}_{i = 0}^{\dim(V)} \)  
 </p>
@@ -1245,14 +1295,13 @@ a_{11} \hat{s}_{1, \dim(S_{i}) + 1} + \cdots + a_{1, \dim(V)} \hat{s}_{1, \dim(V
 </li>
 </ol>
 </div>
-
-<div id="outline-container-orgf0e0367" class="outline-4">
-<h4 id="orgf0e0367"><span class="section-number-4">4.1.14.</span> Supremum of Trace of Compact Self Adjoint Positive Definite Operator</h4>
-<div class="outline-text-4" id="text-4-1-14">
+<div id="outline-container-org8356c51" class="outline-4">
+<h4 id="org8356c51"><span class="section-number-4">5.1.14.</span> Supremum of Trace of Compact Self Adjoint Positive Definite Operator</h4>
+<div class="outline-text-4" id="text-5-1-14">
 </div>
 <ol class="org-ol">
-<li><a id="org1824d2c"></a>Problem<br />
-<div class="outline-text-5" id="text-4-1-14-1">
+<li><a id="orga6e1a8f"></a>Problem<br />
+<div class="outline-text-5" id="text-5-1-14-1">
 <p>
 Suppose \( A \) is a compact, self adjoint, positive definite linear operator on an infinite dimensional Hilbert Space \( H \). For any finite dimensional subspace \( V \), denote \( P_{V} \) to be the orthogonal projection onto \( V \). Call \( A_{V} = P_{V} \circ A \).   
 </p>
@@ -1270,23 +1319,46 @@ Where \( \lambda_{1} \geq \lambda_{2} \geq \cdots \)
 </p>
 </div>
 </li>
-
-<li><a id="org35a3bd4"></a>Solution<br /></li>
+<li><a id="org5c57518"></a>Solution<br /></li>
 </ol>
 </div>
+<div id="outline-container-org70070be" class="outline-4">
+<h4 id="org70070be"><span class="section-number-4">5.1.15.</span> Orthogonal Projection Theorem</h4>
 </div>
 
-<div id="outline-container-org3769a82" class="outline-3">
-<h3 id="org3769a82"><span class="section-number-3">4.2.</span> Dynamical Systems</h3>
-<div class="outline-text-3" id="text-4-2">
+
+<div id="outline-container-org3d226f4" class="outline-4">
+<h4 id="org3d226f4"><span class="section-number-4">5.1.16.</span> Symmetric Commuting Matrices with Distinct Eigenvalues</h4>
+<div class="outline-text-4" id="text-5-1-16">
+<p>
+Let \( A \) and \( B \) be matrices such that \( AB = BA \) and both \( A \) and \( B \) have \( n \) distinct eigenvalues.
+</p>
+
+<p>
+Because \( A \) and \( B \) have \( n \) distinct eigenvalues,
+</p>
+
+<p>
+\[ A = P_{A} D_{A} P_{A}^{-1}, B = P_{B} D_{B} P_{B}^{-1}  \]
+</p>
+
+<p>
+If \( q \) 
+</p>
 </div>
-<div id="outline-container-orgb2a9f68" class="outline-4">
-<h4 id="orgb2a9f68"><span class="section-number-4">4.2.1.</span> Predator Prey Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_September_2016">Problem_1_September_2016</span></span></h4>
-<div class="outline-text-4" id="text-4-2-1">
+</div>
+</div>
+<div id="outline-container-org0e50aa6" class="outline-3">
+<h3 id="org0e50aa6"><span class="section-number-3">5.2.</span> Dynamical Systems</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgc4d61ae" class="outline-4">
+<h4 id="orgc4d61ae"><span class="section-number-4">5.2.1.</span> Predator Prey Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_September_2016">Problem_1_September_2016</span></span></h4>
+<div class="outline-text-4" id="text-5-2-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgb47c0d7"></a>Problem<br />
-<div class="outline-text-5" id="text-4-2-1-1">
+<li><a id="org29fb397"></a>Problem<br />
+<div class="outline-text-5" id="text-5-2-1-1">
 <p>
 Consider a system with \( n \) species, where the \( k \)-th species predates on species \( k - 1 \). This is modeled by the system:
 </p>
@@ -1311,10 +1383,8 @@ If \( i = j \) then this is inter species competition. If \( i \neq j \) then th
 </ul>
 </div>
 </li>
-
-
-<li><a id="org764c93b"></a>Solution<br />
-<div class="outline-text-5" id="text-4-2-1-2">
+<li><a id="org175cf92"></a>Solution<br />
+<div class="outline-text-5" id="text-5-2-1-2">
 <p>
 Suppose that the system has an equilibrium point in the positive orthant.
 That means every \( x_{i} > 0 \) and \( \dot{x}_{i} = 0 \).
@@ -1366,70 +1436,63 @@ Then the
 </li>
 </ol>
 </div>
-
-<div id="outline-container-orga0536e2" class="outline-4">
-<h4 id="orga0536e2"><span class="section-number-4">4.2.2.</span> Poincare–Bendixson Monotone Intersections of Transversal Arc&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_September_2016">Problem_2_September_2016</span></span></h4>
-<div class="outline-text-4" id="text-4-2-2">
+<div id="outline-container-orgeae9e92" class="outline-4">
+<h4 id="orgeae9e92"><span class="section-number-4">5.2.2.</span> Poincare–Bendixson Monotone Intersections of Transversal Arc&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_September_2016">Problem_2_September_2016</span></span></h4>
+<div class="outline-text-4" id="text-5-2-2">
 </div>
 <ol class="org-ol">
-<li><a id="orgd1152f0"></a>Closed Orbit \( \gamma \) bounding an open Region contains an Equilibrium point or a limit cycle&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_A_September_2016">Problem_2_A_September_2016</span></span><br />
+<li><a id="org9d157bf"></a>Closed Orbit \( \gamma \) bounding an open Region contains an Equilibrium point or a limit cycle&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_A_September_2016">Problem_2_A_September_2016</span></span><br />
 <ol class="org-ol">
-<li><a id="orgaa0588a"></a>Problem<br /></li>
+<li><a id="orgae10018"></a>Problem<br /></li>
 
 
-<li><a id="org1d16f15"></a>Solution<br /></li>
+<li><a id="org0df0774"></a>Solution<br /></li>
 </ol>
 </li>
-
-
-<li><a id="org203e9c4"></a>System in \( \mathbb{R}^{3} \) Possessing a single closed orbit and having no equilibrium points&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_B_September_2016">Problem_2_B_September_2016</span></span><br />
+<li><a id="org711ee2c"></a>System in \( \mathbb{R}^{3} \) Possessing a single closed orbit and having no equilibrium points&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_B_September_2016">Problem_2_B_September_2016</span></span><br />
 <ol class="org-ol">
-<li><a id="org82215e2"></a>Problem<br /></li>
+<li><a id="org506525d"></a>Problem<br /></li>
 
 
-<li><a id="org8018090"></a>Solution<br /></li>
+<li><a id="org8db4646"></a>Solution<br /></li>
 </ol>
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orge89e0e5" class="outline-4">
-<h4 id="orge89e0e5"><span class="section-number-4">4.2.3.</span> Bifurcations of \( \dot{r} = \alpha r - r^{3}, \dot{\theta} = \sin(\theta) + \beta \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_September_2016">Problem_3_September_2016</span></span></h4>
-<div class="outline-text-4" id="text-4-2-3">
+<div id="outline-container-orgf3ab902" class="outline-4">
+<h4 id="orgf3ab902"><span class="section-number-4">5.2.3.</span> Bifurcations of \( \dot{r} = \alpha r - r^{3}, \dot{\theta} = \sin(\theta) + \beta \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_September_2016">Problem_3_September_2016</span></span></h4>
+<div class="outline-text-4" id="text-5-2-3">
 </div>
 <ol class="org-ol">
-<li><a id="org145cf59"></a>Equilibrium Points&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_A_September_2016">Problem_3_A_September_2016</span></span><br /></li>
+<li><a id="org4105aa6"></a>Equilibrium Points&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_A_September_2016">Problem_3_A_September_2016</span></span><br /></li>
 
-<li><a id="org20eba66"></a>Hopf-Bifurcation wrt \( \alpha \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_B_September_2016">Problem_3_B_September_2016</span></span><br /></li>
+<li><a id="orge852346"></a>Hopf-Bifurcation wrt \( \alpha \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_B_September_2016">Problem_3_B_September_2016</span></span><br /></li>
 
 
-<li><a id="orgd132a55"></a>Bifurcations wrt \( \beta \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_C_September_2016">Problem_3_C_September_2016</span></span><br /></li>
+<li><a id="org7fad36d"></a>Bifurcations wrt \( \beta \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_C_September_2016">Problem_3_C_September_2016</span></span><br /></li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgd371808" class="outline-4">
-<h4 id="orgd371808"><span class="section-number-4">4.2.4.</span> Poincare-Bendixson Theorem Annulus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_August_2017">Problem_1_August_2017</span></span></h4>
+<div id="outline-container-org5423389" class="outline-4">
+<h4 id="org5423389"><span class="section-number-4">5.2.4.</span> Poincare-Bendixson Theorem Annulus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_August_2017">Problem_1_August_2017</span></span></h4>
 </div>
 
 
-<div id="outline-container-orgdcf1a36" class="outline-4">
-<h4 id="orgdcf1a36"><span class="section-number-4">4.2.5.</span> Laser Model Bifurcation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_August_2017">Problem_2_August_2017</span></span></h4>
+<div id="outline-container-org4b6add3" class="outline-4">
+<h4 id="org4b6add3"><span class="section-number-4">5.2.5.</span> Laser Model Bifurcation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_August_2017">Problem_2_August_2017</span></span></h4>
 </div>
 
 
-<div id="outline-container-org59cee88" class="outline-4">
-<h4 id="org59cee88"><span class="section-number-4">4.2.6.</span> Fixed Points of \( \dot{x} = x(1 - x - y), \dot{y} = y(1 - x - y) \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_August_2017">Problem_3_August_2017</span></span></h4>
-<div class="outline-text-4" id="text-4-2-6">
+<div id="outline-container-orgd836d13" class="outline-4">
+<h4 id="orgd836d13"><span class="section-number-4">5.2.6.</span> Fixed Points of \( \dot{x} = x(1 - x - y), \dot{y} = y(1 - x - y) \)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_August_2017">Problem_3_August_2017</span></span></h4>
+<div class="outline-text-4" id="text-5-2-6">
 </div>
 <ol class="org-ol">
-<li><a id="orgb4ae09e"></a>Problem<br /></li>
+<li><a id="orgfe4ba46"></a>Problem<br /></li>
 
-<li><a id="orgaac78ab"></a>Solution<br />
+<li><a id="orgad5aefd"></a>Solution<br />
 <ol class="org-ol">
-<li><a id="orga0695ae"></a>Part A<br />
-<div class="outline-text-6" id="text-4-2-6-2-1">
+<li><a id="org5134147"></a>Part A<br />
+<div class="outline-text-6" id="text-5-2-6-2-1">
 <p>
 We calculate the fixed points
 </p>
@@ -1448,16 +1511,15 @@ So the fixed points are the point \( (0,0) \) or the line \( 1 - x - y = 0 \)
 </li>
 </ol>
 </div>
-
-<div id="outline-container-org407da0b" class="outline-4">
-<h4 id="org407da0b"><span class="section-number-4">4.2.7.</span> Positive Inner Product With Inner Normal Trapping</h4>
-<div class="outline-text-4" id="text-4-2-7">
+<div id="outline-container-org9e8881a" class="outline-4">
+<h4 id="org9e8881a"><span class="section-number-4">5.2.7.</span> Positive Inner Product With Inner Normal Trapping</h4>
+<div class="outline-text-4" id="text-5-2-7">
 </div>
 <ol class="org-ol">
-<li><a id="org54ee959"></a>Problem<br /></li>
+<li><a id="org174e766"></a>Problem<br /></li>
 
-<li><a id="org67d82eb"></a>Solution<br />
-<div class="outline-text-5" id="text-4-2-7-2">
+<li><a id="org10b80dd"></a>Solution<br />
+<div class="outline-text-5" id="text-5-2-7-2">
 <p>
 Consider the system
 </p>
@@ -1482,49 +1544,45 @@ The inner product with the normal is
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgdeb0887" class="outline-4">
-<h4 id="orgdeb0887"><span class="section-number-4">4.2.8.</span> General Predator Prey System&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_August_2020">Problem_1_August_2020</span></span></h4>
+<div id="outline-container-orgb67faca" class="outline-4">
+<h4 id="orgb67faca"><span class="section-number-4">5.2.8.</span> General Predator Prey System&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_August_2020">Problem_1_August_2020</span></span></h4>
 </div>
 
 
-<div id="outline-container-orge710ba2" class="outline-4">
-<h4 id="orge710ba2"><span class="section-number-4">4.2.9.</span> Predator Prey Limit Cycle Bifurcation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_August_2020">Problem_2_August_2020</span></span></h4>
+<div id="outline-container-org0d7b95c" class="outline-4">
+<h4 id="org0d7b95c"><span class="section-number-4">5.2.9.</span> Predator Prey Limit Cycle Bifurcation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_August_2020">Problem_2_August_2020</span></span></h4>
 </div>
 
 
-<div id="outline-container-org533da2c" class="outline-4">
-<h4 id="org533da2c"><span class="section-number-4">4.2.10.</span> Planar Hopf Bifurcation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_August_2020">Problem_3_August_2020</span></span></h4>
+<div id="outline-container-org36d7a4c" class="outline-4">
+<h4 id="org36d7a4c"><span class="section-number-4">5.2.10.</span> Planar Hopf Bifurcation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_August_2020">Problem_3_August_2020</span></span></h4>
 </div>
 
 
-<div id="outline-container-org54138c2" class="outline-4">
-<h4 id="org54138c2"><span class="section-number-4">4.2.11.</span> Homoclinic Orbit of Discrete Dynamical System&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_4_August_2020">Problem_4_August_2020</span></span></h4>
+<div id="outline-container-org4df2800" class="outline-4">
+<h4 id="org4df2800"><span class="section-number-4">5.2.11.</span> Homoclinic Orbit of Discrete Dynamical System&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_4_August_2020">Problem_4_August_2020</span></span></h4>
 </div>
 
 
-<div id="outline-container-orgcaf1bd6" class="outline-4">
-<h4 id="orgcaf1bd6"><span class="section-number-4">4.2.12.</span> SEIR COVID Epidemiology Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_January_2022">Problem_1_January_2022</span>&#xa0;<span class="model">model</span></span></h4>
-<div class="outline-text-4" id="text-4-2-12">
+<div id="outline-container-org933dc8c" class="outline-4">
+<h4 id="org933dc8c"><span class="section-number-4">5.2.12.</span> SEIR COVID Epidemiology Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_1_January_2022">Problem_1_January_2022</span>&#xa0;<span class="model">model</span></span></h4>
+<div class="outline-text-4" id="text-5-2-12">
 </div>
 <ol class="org-ol">
-<li><a id="orgdb4db48"></a>Problem<br /></li>
+<li><a id="org041f04a"></a>Problem<br /></li>
 
 
 
-<li><a id="orgcec56f7"></a>Solution<br /></li>
+<li><a id="orgf5d4f06"></a>Solution<br /></li>
 </ol>
 </div>
-
-
-<div id="outline-container-orga72e6fb" class="outline-4">
-<h4 id="orga72e6fb"><span class="section-number-4">4.2.13.</span> Chemical Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_January_2022">Problem_2_January_2022</span>&#xa0;<span class="model">model</span></span></h4>
-<div class="outline-text-4" id="text-4-2-13">
+<div id="outline-container-orgeae48d6" class="outline-4">
+<h4 id="orgeae48d6"><span class="section-number-4">5.2.13.</span> Chemical Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_2_January_2022">Problem_2_January_2022</span>&#xa0;<span class="model">model</span></span></h4>
+<div class="outline-text-4" id="text-5-2-13">
 </div>
 <ol class="org-ol">
-<li><a id="orgcd1a7c7"></a>Problem<br />
-<div class="outline-text-5" id="text-4-2-13-1">
+<li><a id="org176da0d"></a>Problem<br />
+<div class="outline-text-5" id="text-5-2-13-1">
 <p>
 A model that is used to analyze a class of experimental systems known as chemical oscillator is given by
 </p>
@@ -1535,9 +1593,8 @@ A model that is used to analyze a class of experimental systems known as chemica
 \end{align*}
 </div>
 </li>
-
-<li><a id="org0f8aa32"></a>Solution<br />
-<div class="outline-text-5" id="text-4-2-13-2">
+<li><a id="orgdfbd483"></a>Solution<br />
+<div class="outline-text-5" id="text-5-2-13-2">
 <p>
 The Jacobian is:
 </p>
@@ -1552,69 +1609,235 @@ Df =
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgb977f3e" class="outline-4">
-<h4 id="orgb977f3e"><span class="section-number-4">4.2.14.</span> Fundamental Neighborhood&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_January_2022">Problem_3_January_2022</span></span></h4>
-<div class="outline-text-4" id="text-4-2-14">
+<div id="outline-container-orgb24a74c" class="outline-4">
+<h4 id="orgb24a74c"><span class="section-number-4">5.2.14.</span> Fundamental Neighborhood&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_3_January_2022">Problem_3_January_2022</span></span></h4>
+<div class="outline-text-4" id="text-5-2-14">
 </div>
 <ol class="org-ol">
-<li><a id="org0419993"></a>Problem<br /></li>
+<li><a id="org0d2c300"></a>Problem<br /></li>
 
-<li><a id="orgfc36f41"></a>Solution<br /></li>
+<li><a id="orgbc6577d"></a>Solution<br /></li>
 </ol>
 </div>
-
-
-
-<div id="outline-container-org1baa5ff" class="outline-4">
-<h4 id="org1baa5ff"><span class="section-number-4">4.2.15.</span> Nicholson–Bailey host-parasitoid Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_4_January_2022">Problem_4_January_2022</span>&#xa0;<span class="model">model</span></span></h4>
-<div class="outline-text-4" id="text-4-2-15">
+<div id="outline-container-org1fda227" class="outline-4">
+<h4 id="org1fda227"><span class="section-number-4">5.2.15.</span> Nicholson–Bailey host-parasitoid Model&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_4_January_2022">Problem_4_January_2022</span>&#xa0;<span class="model">model</span></span></h4>
+<div class="outline-text-4" id="text-5-2-15">
 </div>
 <ol class="org-ol">
-<li><a id="org19695b0"></a>Problem<br /></li>
+<li><a id="org20545d2"></a>Problem<br /></li>
 
-<li><a id="orgd7e2d56"></a>Solution<br /></li>
+<li><a id="org3e5728e"></a>Solution<br /></li>
 </ol>
 </div>
-
-<div id="outline-container-org4683667" class="outline-4">
-<h4 id="org4683667"><span class="section-number-4">4.2.16.</span> Chatev Instability Theorem</h4>
-<div class="outline-text-4" id="text-4-2-16">
-<div class="PROBLEM" id="org6b2c8c7">
+<div id="outline-container-orgfb58942" class="outline-4">
+<h4 id="orgfb58942"><span class="section-number-4">5.2.16.</span> Chatev Instability Theorem</h4>
+<div class="outline-text-4" id="text-5-2-16">
+<div class="PROBLEM" id="orgda21286">
 <p>
 
 </p>
 
 </div>
 
-<div class="SOLUTION" id="orgb5be7f0">
+<div class="SOLUTION" id="org1f3a8a6">
 <p>
 
 </p>
 
 </div>
 </div>
-
 <ol class="org-ol">
-<li><a id="org9dd78b3"></a>Problem<br /></li>
+<li><a id="orgbc78aca"></a>Problem<br /></li>
 
-<li><a id="org7db3a39"></a>Solution<br /></li>
+<li><a id="org5f79921"></a>Solution<br /></li>
+</ol>
+</div>
+<div id="outline-container-org6aa5831" class="outline-4">
+<h4 id="org6aa5831"><span class="section-number-4">5.2.17.</span> Cross Section of the Flow</h4>
+<div class="outline-text-4" id="text-5-2-17">
+</div>
+<ol class="org-ol">
+<li><a id="org3a87cbf"></a>Statement<br />
+<div class="outline-text-5" id="text-5-2-17-1">
+<p>
+Let \( \mu > 0 \). Consider the following system in \( \mathbb{R}^{2} \).
+</p>
+
+\begin{align}
+\dot{x} &= \mu x - y - x (x^{2} + y^{2}) \\
+\dot{y} &= x + \mu y - y (x^{2} + y^{2})
+\end{align}
+</div>
+<ol class="org-ol">
+<li><a id="orgf4f40c6"></a>A<br />
+<div class="outline-text-6" id="text-5-2-17-1-1">
+<p>
+Show that this system has a periodic orbit given in polar coordinates given by \( \phi_{t}(\sqrt{\mu}, \theta_{0}) \) where \( \phi_{t} \) denotes the flow of the system.  
+</p>
+</div>
+</li>
+<li><a id="orgc4931a5"></a>B<br /></li>
+</ol>
+</li>
+<li><a id="org271b349"></a>Solution<br />
+<ol class="org-ol">
+<li><a id="org27b2727"></a>A<br />
+<div class="outline-text-6" id="text-5-2-17-2-1">
+<p>
+We may use a change of coordinates,
+</p>
+
+
+\begin{align}
+&&r^{2} &= x^{2} + y^{2} \\
+&\implies &2 r \dot{r} &= 2 x \dot{x} + 2 y \dot{y} \\
+&\implies & \dot{r} &= \frac{x \dot{x} + y \dot{y}}{r} \\
+&\implies & \dot{r} &= \frac{x \left( \mu x - y - x r^{2} \right) + y \left( x + \mu y - y r^{2} \right)}{r} \\
+&\implies & \dot{r} &= \frac{ \mu r^{2} - r^{3}}{r} \\
+&\implies & \dot{r} &= \mu r - r^{2}
+\end{align}
+
+\begin{align}
+&         &\theta       &= \tan^{-1} \left( \frac{y}{x} \right) \\
+&\implies &\dot{\theta} &= \frac{1}{1 + \left( \frac{y}{x} \right)^{2}} \left( \frac{\dot{y} x - y \dot{x}}{x^{2}} \right) \\
+&\implies &\dot{\theta} &= \frac{\dot{y} x - y \dot{x}}{x^{2} + y^{2}} \\
+&\implies &\dot{\theta} &= \frac{\left( x + \mu y - y (x^{2} + y^{2}) \right) x - y (\mu x - y - x (x^{2} + y^{2}))}{x^{2} + y^{2}} \\
+&\implies &\dot{\theta} &= 1
+\end{align}
+</div>
+</li>
+<li><a id="orgdeb1969"></a>B<br /></li>
+</ol>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5c85bc7" class="outline-4">
+<h4 id="org5c85bc7"><span class="section-number-4">5.2.18.</span> Derivative is Product With Skew Symmetric Matrix</h4>
+<div class="outline-text-4" id="text-5-2-18">
+</div>
+<ol class="org-ol">
+<li><a id="orgaf6bf9d"></a>Statement<br />
+<div class="outline-text-5" id="text-5-2-18-1">
+<p>
+Let \( A(t) \) be an \( n \times n \) real matrix whose entries depend smoothly on \( t \). Suppose that there exists a skew-symmetric matrix \( K(t) \) such that
+</p>
+
+<p>
+\[ \forall t \colon \dot{A}(t) = A(t)K(t) \]
+</p>
+
+<p>
+Show that \( A(0) \) is orthogonal, then \( A(t) \) is orthogonal for all \( t \).   
+</p>
+</div>
+</li>
+<li><a id="org9f7e4bb"></a>Solution<br />
+<div class="outline-text-5" id="text-5-2-18-2">
+\begin{align}
+\frac{ d }{ d t} \left( A(t) A(t)^{\dagger} \right)
+&= \dot{A}(t) A(t)^{\dagger} + A(t) \dot{A}(t)^{\dagger} \\
+&= A(t) K(t) A(t)^{\dagger} + A(t) K(t)^{\dagger} A(t)^{\dagger} \\
+&= A(t) (K(t) + K(t)^{\dagger}) A(t)^{\dagger} \\
+&= A(t) (K(t) - K(t)) A(t)^{\dagger} \\
+&= 0
+\end{align}
+
+<p>
+Hence, we see that the value of \( A(t) A(t)^{\dagger} \) does not change. Thus, it will be the same value as it is at time \( t = 0 \) which is the identity (by hypothesis).
+</p>
+
+<p>
+Because \( A(t) \) is of size \( n \times n \) we need only check this one case.   
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org2d1ed91" class="outline-4">
+<h4 id="org2d1ed91"><span class="section-number-4">5.2.19.</span> Linear Stability Analysis</h4>
+<div class="outline-text-4" id="text-5-2-19">
+</div>
+<ol class="org-ol">
+<li><a id="orgec2404b"></a>Statement<br /></li>
+
+<li><a id="orga8af290"></a>Solution<br /></li>
+</ol>
+</div>
+<div id="outline-container-orge4b90d7" class="outline-4">
+<h4 id="orge4b90d7"><span class="section-number-4">5.2.20.</span> Differential Operator Eigenvalue</h4>
+<div class="outline-text-4" id="text-5-2-20">
+</div>
+<ol class="org-ol">
+<li><a id="orgf1a9b8b"></a>Statement<br />
+<div class="outline-text-5" id="text-5-2-20-1">
+<p>
+Consider the differential operator
+</p>
+
+<p>
+\[ K = - \frac{ d^{2}}{ d t^{2}} + \frac{t^{2}}{4} \]
+</p>
+
+<p>
+acting on \( C^{\infty}\left( \left( -\infty,\infty \right) \right) \). Show that if \( \lambda \in \mathbb{R} \) is an eigenvalue of \( K \) then so are \( \lambda + 1 \) and \( \lambda - 1 \).     
+</p>
+</div>
+</li>
+<li><a id="orgb5c0c56"></a>Solution<br />
+<div class="outline-text-5" id="text-5-2-20-2">
+<p>
+We note that \( K \) can be factored 
+</p>
+
+<p>
+\[ K = \frac{t^{2}}{4} - \frac{ d^{2}}{ d t^{2}} = \left( \frac{t}{2} - \frac{ d }{ d t} \right) \left( \frac{t}{2} + \frac{ d }{ d t} \right) =\colon LR \]
+</p>
+
+<p>
+\[ LR = \frac{t^{2}}{4} + \frac{t}{2} \frac{ d }{ d t} - \frac{1}{2} - \frac{ d^{2}}{ d t^{2}} = K + \frac{t}{2} \frac{ d }{ d t} - \frac{1}{2}  \]
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org404259c" class="outline-4">
+<h4 id="org404259c"><span class="section-number-4">5.2.21.</span> Bounded Sequence</h4>
+<div class="outline-text-4" id="text-5-2-21">
+</div>
+<ol class="org-ol">
+<li><a id="org1a456fa"></a>Statement<br /></li>
+
+<li><a id="orgb3440a2"></a>Solution<br />
+<div class="outline-text-5" id="text-5-2-21-2">
+<p>
+Suppose that \( \| x \| = 1 \).
+</p>
+
+<p>
+By Bessel's Inequality:
+</p>
+
+\begin{align}
+\| Ax \|
+&\leq \sqrt{ \sum_{n = 1}^{\infty} \lambda_{n}^{2} \left\langle x , e_{n} \right\rangle^{2}} \\
+&\leq \sqrt{ \sum_{n = 1}^{\infty} M^{2} \left\langle x , e_{n} \right\rangle^{2}} \\
+\end{align}
+</div>
+</li>
 </ol>
 </div>
 </div>
-
-<div id="outline-container-orga7f8e16" class="outline-3">
-<h3 id="orga7f8e16"><span class="section-number-3">4.3.</span> Partial Differential Equations</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-orgce1f61a" class="outline-3">
+<h3 id="orgce1f61a"><span class="section-number-3">5.3.</span> Partial Differential Equations</h3>
+<div class="outline-text-3" id="text-5-3">
 </div>
-<div id="outline-container-org5563582" class="outline-4">
-<h4 id="org5563582"><span class="section-number-4">4.3.1.</span> Semi-Infinite Rod Time Dependent Neumann Boundary Condition&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_September_2016">Problem_6_September_2016</span></span></h4>
-<div class="outline-text-4" id="text-4-3-1">
+<div id="outline-container-org16e1317" class="outline-4">
+<h4 id="org16e1317"><span class="section-number-4">5.3.1.</span> Semi-Infinite Rod Time Dependent Neumann Boundary Condition&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_6_September_2016">Problem_6_September_2016</span></span></h4>
+<div class="outline-text-4" id="text-5-3-1">
 </div>
 <ol class="org-ol">
-<li><a id="org482c91b"></a>Problem<br />
-<div class="outline-text-5" id="text-4-3-1-1">
+<li><a id="org409c5ed"></a>Problem<br />
+<div class="outline-text-5" id="text-5-3-1-1">
 <p>
 Solve the Initial Boundary Value Problem for the Heat Equation:
 </p>
@@ -1634,10 +1857,8 @@ Show there is a \( T > 0 \) such that
 </p>
 </div>
 </li>
-
-
-<li><a id="orgaf91988"></a>Solution<br />
-<div class="outline-text-5" id="text-4-3-1-2">
+<li><a id="org7009e0f"></a>Solution<br />
+<div class="outline-text-5" id="text-5-3-1-2">
 <p>
 Try a separable solution of the form
 </p>
@@ -1674,15 +1895,13 @@ Where the positive root grows exponentially as \( x \to \infty \) so we go with 
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgfc51b37" class="outline-4">
-<h4 id="orgfc51b37"><span class="section-number-4">4.3.2.</span> Integration By Parts Energy Function&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_January_2022">Problem_5_January_2022</span></span></h4>
-<div class="outline-text-4" id="text-4-3-2">
+<div id="outline-container-org21e7837" class="outline-4">
+<h4 id="org21e7837"><span class="section-number-4">5.3.2.</span> Integration By Parts Energy Function&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_January_2022">Problem_5_January_2022</span></span></h4>
+<div class="outline-text-4" id="text-5-3-2">
 </div>
 <ol class="org-ol">
-<li><a id="org37a926e"></a>Problem<br />
-<div class="outline-text-5" id="text-4-3-2-1">
+<li><a id="org9c33079"></a>Problem<br />
+<div class="outline-text-5" id="text-5-3-2-1">
 <p>
 Let \( \Omega \subset \mathbb{R}^n \) be open and bounded.
 </p>
@@ -1705,21 +1924,16 @@ Where \( f \colon \Omega \to \mathbb{R} \) and \( g \colon \partial \Omega \to \
 </p>
 </div>
 </li>
-
-
-
-<li><a id="orgc372fb2"></a>Solution<br /></li>
+<li><a id="org2c89cba"></a>Solution<br /></li>
 </ol>
 </div>
-
-
-<div id="outline-container-org5009869" class="outline-4">
-<h4 id="org5009869"><span class="section-number-4">4.3.3.</span> Human Population Density&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_August_2017">Problem_5_August_2017</span></span></h4>
-<div class="outline-text-4" id="text-4-3-3">
+<div id="outline-container-orge85f364" class="outline-4">
+<h4 id="orge85f364"><span class="section-number-4">5.3.3.</span> Human Population Density&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_August_2017">Problem_5_August_2017</span></span></h4>
+<div class="outline-text-4" id="text-5-3-3">
 </div>
 <ol class="org-ol">
-<li><a id="org1763152"></a>Problem<br />
-<div class="outline-text-5" id="text-4-3-3-1">
+<li><a id="orge73e476"></a>Problem<br />
+<div class="outline-text-5" id="text-5-3-3-1">
 <p>
 Solve the PDE:
 </p>
@@ -1732,13 +1946,9 @@ Solve the PDE:
 With boundary condition \( P(t,0) = B(t) \) where \( B(t) \) and \( D(t,y) \) respectively represent the birth and death rates.   
 </p>
 </div>
-
-
-
-
 <ol class="org-ol">
-<li><a id="org682a805"></a>Part A<br />
-<div class="outline-text-6" id="text-4-3-3-1-1">
+<li><a id="orgc50f028"></a>Part A<br />
+<div class="outline-text-6" id="text-5-3-3-1-1">
 <p>
 Using the method of characteristics, reduce the PDE to an ODE by making a suitable change of variables, and then find the general solution
 </p>
@@ -1746,11 +1956,10 @@ Using the method of characteristics, reduce the PDE to an ODE by making a suitab
 </li>
 </ol>
 </li>
-
-<li><a id="orga787100"></a>Solution<br />
+<li><a id="orgf783cee"></a>Solution<br />
 <ol class="org-ol">
-<li><a id="orgd5cb210"></a>Part A<br />
-<div class="outline-text-6" id="text-4-3-3-2-1">
+<li><a id="orgb42cc49"></a>Part A<br />
+<div class="outline-text-6" id="text-5-3-3-2-1">
 <p>
 Let
 </p>
@@ -1804,10 +2013,8 @@ Hence the general solution is
 </p>
 </div>
 </li>
-
-
-<li><a id="org1974a62"></a>Part B<br />
-<div class="outline-text-6" id="text-4-3-3-2-2">
+<li><a id="org740c02e"></a>Part B<br />
+<div class="outline-text-6" id="text-5-3-3-2-2">
 <p>
 Assuming
 </p>
@@ -1829,15 +2036,13 @@ This turns the general solution into the form:
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgb05610b" class="outline-4">
-<h4 id="orgb05610b"><span class="section-number-4">4.3.4.</span> Collection of Particles with Unit Total Mass (Heat Equation)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_August_2020">Problem_5_August_2020</span></span></h4>
-<div class="outline-text-4" id="text-4-3-4">
+<div id="outline-container-orgf3529b4" class="outline-4">
+<h4 id="orgf3529b4"><span class="section-number-4">5.3.4.</span> Collection of Particles with Unit Total Mass (Heat Equation)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_August_2020">Problem_5_August_2020</span></span></h4>
+<div class="outline-text-4" id="text-5-3-4">
 </div>
 <ol class="org-ol">
-<li><a id="orgba1f947"></a>Problem<br />
-<div class="outline-text-5" id="text-4-3-4-1">
+<li><a id="org3885031"></a>Problem<br />
+<div class="outline-text-5" id="text-5-3-4-1">
 <p>
 Suppose that a collection of Particles with unit total mass diffuse according to the equation
 </p>
@@ -1859,10 +2064,8 @@ Where \( u(x,t) \) represents the density of the particles \( a > 0 \). Assume a
 </dl>
 </div>
 </li>
-
-
-<li><a id="org97ea89c"></a>Solution<br />
-<div class="outline-text-5" id="text-4-3-4-2">
+<li><a id="orge38f3b9"></a>Solution<br />
+<div class="outline-text-5" id="text-5-3-4-2">
 <dl class="org-dl">
 <dt>Part A</dt><dd><p>
 Fundamental Solution for any \( a > 0 \) 
@@ -1900,56 +2103,49 @@ Hence \( k = a \). This means the fundamental solution for \( a > 0 \) is
 </dl>
 </div>
 </li>
-
-
-<li><a id="org33a2cb3"></a>Rescale Time For Fundamental Solution<br />
+<li><a id="org5e03e15"></a>Rescale Time For Fundamental Solution<br />
 <ol class="org-ol">
-<li><a id="org4eed612"></a>Problem<br /></li>
+<li><a id="orgb71fdb9"></a>Problem<br /></li>
 
 
 
-<li><a id="org4bed452"></a>Solution<br /></li>
+<li><a id="orgf2df461"></a>Solution<br /></li>
 </ol>
 </li>
-
-<li><a id="org454e142"></a>First Moment is Constant in Time<br />
+<li><a id="org29673a9"></a>First Moment is Constant in Time<br />
 <ol class="org-ol">
-<li><a id="org4916e17"></a>Problem<br /></li>
+<li><a id="org9dc8c25"></a>Problem<br /></li>
 
-<li><a id="org9b34dba"></a>Solution<br /></li>
+<li><a id="orgcc4635c"></a>Solution<br /></li>
 </ol>
 </li>
-
-<li><a id="org3f84509"></a>Second Moment Linear in Time<br />
+<li><a id="orgb707e37"></a>Second Moment Linear in Time<br />
 <ol class="org-ol">
-<li><a id="org3e0a46c"></a>Problem<br /></li>
+<li><a id="org4019ff4"></a>Problem<br /></li>
 
-<li><a id="orgf4da90d"></a>Solution<br /></li>
+<li><a id="orgd1beb87"></a>Solution<br /></li>
 </ol>
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orga2aed34" class="outline-4">
-<h4 id="orga2aed34"><span class="section-number-4">4.3.5.</span> Variational Method of PDE</h4>
+<div id="outline-container-orgc4918e9" class="outline-4">
+<h4 id="orgc4918e9"><span class="section-number-4">5.3.5.</span> Variational Method of PDE</h4>
 </div>
 
-<div id="outline-container-org4b363ab" class="outline-4">
-<h4 id="org4b363ab"><span class="section-number-4">4.3.6.</span> Energy of Heat Equation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_January_2023">Problem_5_January_2023</span></span></h4>
-<div class="outline-text-4" id="text-4-3-6">
+<div id="outline-container-org505058e" class="outline-4">
+<h4 id="org505058e"><span class="section-number-4">5.3.6.</span> Energy of Heat Equation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Problem_5_January_2023">Problem_5_January_2023</span></span></h4>
+<div class="outline-text-4" id="text-5-3-6">
 </div>
 <ol class="org-ol">
-<li><a id="org7f2597c"></a>Problem<br />
-<div class="outline-text-5" id="text-4-3-6-1">
+<li><a id="orga7131f2"></a>Problem<br />
+<div class="outline-text-5" id="text-5-3-6-1">
 <p>
 Let \( c, L \) be positive numbers, \( u_{0} \) be a smooth, nonnegative function that vanishes at \( 0 \) and \( L \).
 </p>
 </div>
 </li>
-
-<li><a id="org36551f5"></a>Solution<br />
-<div class="outline-text-5" id="text-4-3-6-2">
+<li><a id="orgf571f0d"></a>Solution<br />
+<div class="outline-text-5" id="text-5-3-6-2">
 \begin{align}
 E'(t)
 &= \int_{0}^{L} u_{t}(x,t) \phi(x) dx \\
@@ -1960,12 +2156,298 @@ E'(t)
 </li>
 </ol>
 </div>
+<div id="outline-container-orgbc4f9e5" class="outline-4">
+<h4 id="orgbc4f9e5"><span class="section-number-4">5.3.7.</span> Eigenvalues and Eigenfunctions of L</h4>
+<div class="outline-text-4" id="text-5-3-7">
+<p>
+Let \( V = \left\{ v \in C^{2}\left( \left[ 0,1 \right] \right) \vert v(0) = 0, v(1) = v'(1) \right\} \) 
+</p>
+
+<p>
+\( Lv = -v'' \) 
+</p>
+
+<p>
+The eigenvalues and eigenfunctions of \( L \) satisfy
+</p>
+
+<p>
+\[ L v = \lambda v \iff - v'' = \lambda v \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ 0 = v'' + \lambda v \implies 0 = r^{2} + \lambda \implies r = \pm i \sqrt{\lambda} \]
+</p>
+
+<p>
+Hence solutions are:
+</p>
+
+<p>
+\[ v \in \spn(e^{i \sqrt{\lambda} x}, e^{-i \sqrt{\lambda} x}) \]
+</p>
+
+<p>
+We may simplify this,
+</p>
+
+\begin{align}
+v
+&= a_{1} e^{i \sqrt{\lambda} x} + a_{2} e^{- i \sqrt{\lambda} x} \\
+&= a_{1} ( \cos(\sqrt{\lambda}x) + i \sin(\sqrt{\lambda}x)) + a_{2} (\cos(-\sqrt{\lambda}x) + i \sin(-\sqrt{\lambda}x)) \\
+&= a_{1} ( \cos(\sqrt{\lambda}x) + i \sin(\sqrt{\lambda}x)) + a_{2} (\cos(\sqrt{\lambda}x) - i \sin(\sqrt{\lambda}x)) \\
+&= (a_{1} + a_{2}) \cos(\sqrt{\lambda}x) + (a_{1} - a_{2}) i \sin(\sqrt{\lambda}x) \\
+&= c_{1} \cos(\sqrt{\lambda}x) + c_{2} \sin(\sqrt{\lambda}x)
+\end{align}
+
+<p>
+With the boundary conditions
+</p>
+
+<p>
+\[ 0 = v(0) = c_{1} \cos(\sqrt{\lambda}) \implies c_{1} = 0 \]
+</p>
+
+<p>
+\[ v(1) = c_{2} \sin(\sqrt{\lambda}) = c_{2} \sqrt{\lambda} \cos(\sqrt{\lambda}) = v'(1) \]
+</p>
+
+<p>
+In other words,
+</p>
+
+<p>
+\[ \tan(\sqrt{\lambda}) = \sqrt{\lambda} \]
+</p>
+
+<p>
+This equation has a countably infinite number of solutions, \( \lambda_{n} > 0 \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgfcf4c40" class="outline-4">
+<h4 id="orgfcf4c40"><span class="section-number-4">5.3.8.</span> Average Value of Wave Equation</h4>
 </div>
 
 
-<div id="outline-container-orge1e9430" class="outline-3">
-<h3 id="orge1e9430"><span class="section-number-3">4.4.</span> Problems Not Included</h3>
-<div class="outline-text-3" id="text-4-4">
+<div id="outline-container-org122a68d" class="outline-4">
+<h4 id="org122a68d"><span class="section-number-4">5.3.9.</span> Separation of Variables Temperature Dependent Sink</h4>
+<div class="outline-text-4" id="text-5-3-9">
+</div>
+<ol class="org-ol">
+<li><a id="org95bf70e"></a>Statement<br />
+<div class="outline-text-5" id="text-5-3-9-1">
+<p>
+Find the product solutions of
+</p>
+
+<p>
+\[ u_{t} - u_{xx} = -u \]
+</p>
+</div>
+</li>
+<li><a id="org8b72c9f"></a>Solution<br />
+<div class="outline-text-5" id="text-5-3-9-2">
+<p>
+Product solutions are
+</p>
+
+<p>
+\[ u(x,t) = X(x) T(t) \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ X(x)T'(t) - X''(x) T(t) = -X(x) T(t) \]
+</p>
+
+<p>
+Rearranging,
+</p>
+
+<p>
+\[ X(x) T'(t) + X(x) T(t) = X''(x)T(t) \implies X(x) (T'(t) + T(t)) = X''(x) T(t) \]
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ \frac{X''(x)}{X(x)} = \frac{T'(t) + T(t)}{T(t)} \]
+</p>
+
+<p>
+We conclude that the two sides are equal to a constant \( \lambda \). Thus, we have two linear ODEs,
+</p>
+
+<p>
+\[ X''(x) = \lambda X(x) \]
+</p>
+
+<p>
+\[ T'(t) = -T(t) + \lambda T(t) \]
+</p>
+
+<p>
+Because these are linear, we may express the solution using characteristic polynomials,
+</p>
+
+\begin{align}
+r^{2} = \lambda \\
+r = - 1 + \lambda
+\end{align}
+
+\begin{align}
+X &= C_{1} e^{\sqrt{\lambda}x} + C_{2} e^{-\sqrt{\lambda}x} \\
+T &= C_{3} e^{(-1 + \lambda)t}
+\end{align}
+
+<p>
+We may solve for \( C_{1}, C_{2}, C_{3} \) using the boundary conditions. 
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org662e5a6" class="outline-4">
+<h4 id="org662e5a6"><span class="section-number-4">5.3.10.</span> First Order PDE with no C1 Solution</h4>
+<div class="outline-text-4" id="text-5-3-10">
+</div>
+<ol class="org-ol">
+<li><a id="org32b6c7d"></a>Statement<br />
+<div class="outline-text-5" id="text-5-3-10-1">
+<p>
+Show that the problem
+</p>
+
+\begin{align}
+-t \frac{ \partial u}{ \partial x} + x \frac{ \partial u}{ \partial t} = 0 \\
+u(x, 0) = 3x
+\end{align}
+
+<p>
+Has no \( C^{1} \) solution 
+</p>
+</div>
+</li>
+<li><a id="org16d0795"></a>Solution<br />
+<div class="outline-text-5" id="text-5-3-10-2">
+<p>
+The trick for "no solutions" is to find the characteristic lines which intersect the initial conditions in two places. 
+</p>
+
+<p>
+By the method of characteristics, we may consider a change of variables,
+</p>
+
+<p>
+\[ \hat{x}(x,t), \hat{t}(x,t) \]
+</p>
+
+<p>
+Then,
+</p>
+
+\begin{align}
+\frac{ \partial u}{ \partial \hat{x}} \frac{ \partial \hat{x}}{ \partial x} + \frac{ \partial u}{ \partial \hat{x}} \frac{ \partial \hat{x}}{ \partial t} + \frac{ \partial u}{ \partial \hat{t}} \frac{ \partial \hat{t}}{ \partial x} + \frac{ \partial u}{ \partial \hat{t}} \frac{ \partial \hat{t}}{ \partial t} 
+\end{align}
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orga86c82f" class="outline-4">
+<h4 id="orga86c82f"><span class="section-number-4">5.3.11.</span> Eigenvalues and Eigenfunctions of 1D BVP</h4>
+<div class="outline-text-4" id="text-5-3-11">
+</div>
+<ol class="org-ol">
+<li><a id="org007f363"></a>Statement<br />
+<div class="outline-text-5" id="text-5-3-11-1">
+<p>
+Let
+</p>
+
+<ul class="org-ul">
+<li>\( V = \left\{ v \in C^{2} \left( \left[ 0,1 \right] \right) \mid v(0) = 0, v(1) = v'(1) \right\} \)</li>
+<li>\( Lv = -v'' \)</li>
+</ul>
+
+
+<p>
+Find the eigenvalues and eigenfunctions of \( L \).
+</p>
+</div>
+</li>
+<li><a id="orgce8a755"></a>Solution<br />
+<div class="outline-text-5" id="text-5-3-11-2">
+<p>
+Eigenvalues and Eigenfunctions are functions satisfying
+</p>
+
+<p>
+\[ -v'' = Lv = \lambda v \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ v'' + \lambda v = 0 \]
+</p>
+
+<p>
+The solutions are,
+</p>
+
+<p>
+\[ v(x) = C_{1} e^{\sqrt{\lambda} x} + C_{2} e^{- \sqrt{\lambda} x}   \]
+\[ v'(x) = C_{1} \sqrt{\lambda} e^{\sqrt{\lambda} x} - C_{2} \sqrt{\lambda} e^{- \sqrt{\lambda} x}   \]
+</p>
+
+<p>
+We note that \( v(0) = 0 \) hence,
+</p>
+
+<p>
+\[ v(0) = C_{1} + C_{2} = 0 \implies C_{1} = -C_{2} \]
+</p>
+
+
+<p>
+\[ v'(1) = C_{1} \sqrt{\lambda} e^{\sqrt{\lambda}} + C_{1} \sqrt{\lambda} e^{- \sqrt{\lambda}} = C_{1} e^{\sqrt{\lambda}} - C_{1} e^{- \sqrt{\lambda}} = v(1) \]
+</p>
+
+<p>
+\[ C_{1} \left( (-1 + \sqrt{\lambda}) e^{\sqrt{\lambda}} + (1 + \sqrt{\lambda}) e^{-\sqrt{\lambda}} \right) = 0 \]
+</p>
+
+<p>
+We note that \( C_{1} \neq 0 \) as that implies \( C_{2} = 0 \) hence giving a trivial solution (not an eigenfunction).
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ lr \]
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0ce0f90" class="outline-3">
+<h3 id="org0ce0f90"><span class="section-number-3">5.4.</span> Problems Not Included</h3>
+<div class="outline-text-3" id="text-5-4">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -2012,23 +2494,21 @@ E'(t)
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org3fee9eb" class="outline-2">
-<h2 id="org3fee9eb"><span class="section-number-2">5.</span> Linear Algebra</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-org25c498d" class="outline-2">
+<h2 id="org25c498d"><span class="section-number-2">6.</span> Linear Algebra</h2>
+<div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org33cd457" class="outline-3">
-<h3 id="org33cd457"><span class="section-number-3">5.1.</span> Cheney Applied Analysis</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-orgcf26598" class="outline-3">
+<h3 id="orgcf26598"><span class="section-number-3">6.1.</span> Cheney Applied Analysis</h3>
+<div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-org5b4e15d" class="outline-4">
-<h4 id="org5b4e15d"><span class="section-number-4">5.1.1.</span> Chapter 1</h4>
-<div class="outline-text-4" id="text-5-1-1">
+<div id="outline-container-orgd6142e1" class="outline-4">
+<h4 id="orgd6142e1"><span class="section-number-4">6.1.1.</span> Chapter 1</h4>
+<div class="outline-text-4" id="text-6-1-1">
 </div>
 <ol class="org-ol">
-<li><a id="orgf1cd73e"></a>Definitions<br />
-<div class="outline-text-5" id="text-5-1-1-1">
+<li><a id="org686a167"></a>Definitions<br />
+<div class="outline-text-5" id="text-6-1-1-1">
 <ul class="org-ul">
 <li>Vector Space</li>
 <li>Normed Linear Space</li>
@@ -2042,30 +2522,24 @@ E'(t)
 </ul>
 </div>
 </li>
-
-
-<li><a id="orgcdf1616"></a>Theorems<br />
-<div class="outline-text-5" id="text-5-1-1-2">
+<li><a id="orgecc48f8"></a>Theorems<br />
+<div class="outline-text-5" id="text-6-1-1-2">
 <ul class="org-ul">
 <li>\( C[a,b] \) with norm \( ||x|| = \max_s|x(s)| \) is a Banach Space</li>
 </ul>
 </div>
 </li>
-
-
-<li><a id="org3cba0f8"></a>Problems<br /></li>
+<li><a id="org679e4d1"></a>Problems<br /></li>
 </ol>
 </div>
 </div>
-
-
-<div id="outline-container-org4f73360" class="outline-3">
-<h3 id="org4f73360"><span class="section-number-3">5.2.</span> Problem Solving Methods</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-org5d9bc9d" class="outline-3">
+<h3 id="org5d9bc9d"><span class="section-number-3">6.2.</span> Problem Solving Methods</h3>
+<div class="outline-text-3" id="text-6-2">
 </div>
-<div id="outline-container-org762d4de" class="outline-4">
-<h4 id="org762d4de"><span class="section-number-4">5.2.1.</span> Rank 1 Matrices</h4>
-<div class="outline-text-4" id="text-5-2-1">
+<div id="outline-container-org18b34bb" class="outline-4">
+<h4 id="org18b34bb"><span class="section-number-4">6.2.1.</span> Rank 1 Matrices</h4>
+<div class="outline-text-4" id="text-6-2-1">
 <p>
 Remember that rank 1 matrices are of the form
 </p>
@@ -2076,19 +2550,17 @@ Remember that rank 1 matrices are of the form
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org4c34498" class="outline-3">
-<h3 id="org4c34498"><span class="section-number-3">5.3.</span> Spaces</h3>
-<div class="outline-text-3" id="text-5-3">
+<div id="outline-container-orgd935158" class="outline-3">
+<h3 id="orgd935158"><span class="section-number-3">6.3.</span> Spaces</h3>
+<div class="outline-text-3" id="text-6-3">
 </div>
-<div id="outline-container-orgce281e4" class="outline-4">
-<h4 id="orgce281e4"><span class="section-number-4">5.3.1.</span> Linear Spaces</h4>
-<div class="outline-text-4" id="text-5-3-1">
+<div id="outline-container-org0f5e489" class="outline-4">
+<h4 id="org0f5e489"><span class="section-number-4">6.3.1.</span> Linear Spaces</h4>
+<div class="outline-text-4" id="text-6-3-1">
 </div>
 <ol class="org-ol">
-<li><a id="org7447ed7"></a>Definition<br />
-<div class="outline-text-5" id="text-5-3-1-1">
+<li><a id="org15bb0c4"></a>Definition<br />
+<div class="outline-text-5" id="text-6-3-1-1">
 <p>
 A Linear space is a triple \( (V, +, \cdot) \) satisfying CIA and DIA
 </p>
@@ -2096,15 +2568,13 @@ A Linear space is a triple \( (V, +, \cdot) \) satisfying CIA and DIA
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org28eae5d" class="outline-4">
-<h4 id="org28eae5d"><span class="section-number-4">5.3.2.</span> Normed Spaces</h4>
-<div class="outline-text-4" id="text-5-3-2">
+<div id="outline-container-orgb2a72ef" class="outline-4">
+<h4 id="orgb2a72ef"><span class="section-number-4">6.3.2.</span> Normed Spaces</h4>
+<div class="outline-text-4" id="text-6-3-2">
 </div>
 <ol class="org-ol">
-<li><a id="org923b5ff"></a>Definition<br />
-<div class="outline-text-5" id="text-5-3-2-1">
+<li><a id="org304103c"></a>Definition<br />
+<div class="outline-text-5" id="text-6-3-2-1">
 <p>
 A normed space is a linear space with a norm.
 </p>
@@ -2116,9 +2586,8 @@ A normed space is a linear space with a norm.
 </p>
 </div>
 </li>
-
-<li><a id="org710f268"></a>Example 1<br />
-<div class="outline-text-5" id="text-5-3-2-2">
+<li><a id="org131d33c"></a>Example 1<br />
+<div class="outline-text-5" id="text-6-3-2-2">
 <p>
 \( \mathbb{R}^{n} \) with norm \( || \cdot || = \sqrt{\sum_{i = 1}^{n} x^{2}_{i}} \)  
 </p>
@@ -2126,10 +2595,9 @@ A normed space is a linear space with a norm.
 </li>
 </ol>
 </div>
-
-<div id="outline-container-org2c4ff52" class="outline-4">
-<h4 id="org2c4ff52"><span class="section-number-4">5.3.3.</span> Inner Product Spaces</h4>
-<div class="outline-text-4" id="text-5-3-3">
+<div id="outline-container-orgf59ef22" class="outline-4">
+<h4 id="orgf59ef22"><span class="section-number-4">6.3.3.</span> Inner Product Spaces</h4>
+<div class="outline-text-4" id="text-6-3-3">
 <p>
 An inner product space is a linear space with an inner product.
 </p>
@@ -2145,15 +2613,13 @@ An inner product space is a linear space with an inner product.
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-orgf3de46e" class="outline-4">
-<h4 id="orgf3de46e"><span class="section-number-4">5.3.4.</span> Dual Spaces</h4>
-<div class="outline-text-4" id="text-5-3-4">
+<div id="outline-container-orga183c07" class="outline-4">
+<h4 id="orga183c07"><span class="section-number-4">6.3.4.</span> Dual Spaces</h4>
+<div class="outline-text-4" id="text-6-3-4">
 </div>
 <ol class="org-ol">
-<li><a id="orgf874711"></a>Definition<br />
-<div class="outline-text-5" id="text-5-3-4-1">
+<li><a id="org05d5ae7"></a>Definition<br />
+<div class="outline-text-5" id="text-6-3-4-1">
 <p>
 Given a linear space \( V \), the dual space \( V^{*} \) is the set of all linear maps from the space to its base field \( V \to \mathbb{F} \).
 </p>
@@ -2161,15 +2627,13 @@ Given a linear space \( V \), the dual space \( V^{*} \) is the set of all linea
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org9247afe" class="outline-4">
-<h4 id="org9247afe"><span class="section-number-4">5.3.5.</span> Fundamental Subspaces</h4>
-<div class="outline-text-4" id="text-5-3-5">
+<div id="outline-container-org78742bd" class="outline-4">
+<h4 id="org78742bd"><span class="section-number-4">6.3.5.</span> Fundamental Subspaces</h4>
+<div class="outline-text-4" id="text-6-3-5">
 </div>
 <ol class="org-ol">
-<li><a id="org2dd0242"></a>Definition<br />
-<div class="outline-text-5" id="text-5-3-5-1">
+<li><a id="org6118f0d"></a>Definition<br />
+<div class="outline-text-5" id="text-6-3-5-1">
 <p>
 A subset \( Z \subseteq V \) is said to be fundamental if \( \overline{\spn{Z}} = V \)
 </p>
@@ -2177,32 +2641,30 @@ A subset \( Z \subseteq V \) is said to be fundamental if \( \overline{\spn{Z}} 
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org74ef4d5" class="outline-4">
-<h4 id="org74ef4d5"><span class="section-number-4">5.3.6.</span> Rank Nullity Theorem</h4>
+<div id="outline-container-orgd48fb7d" class="outline-4">
+<h4 id="orgd48fb7d"><span class="section-number-4">6.3.6.</span> Rank Nullity Theorem</h4>
 </div>
 
 
-<div id="outline-container-org38c62a1" class="outline-4">
-<h4 id="org38c62a1"><span class="section-number-4">5.3.7.</span> Direct Sums</h4>
+<div id="outline-container-org6a4ce0d" class="outline-4">
+<h4 id="org6a4ce0d"><span class="section-number-4">6.3.7.</span> Direct Sums</h4>
 </div>
 
 
-<div id="outline-container-orgc872f64" class="outline-4">
-<h4 id="orgc872f64"><span class="section-number-4">5.3.8.</span> Banach Spaces</h4>
+<div id="outline-container-org36cbd4c" class="outline-4">
+<h4 id="org36cbd4c"><span class="section-number-4">6.3.8.</span> Banach Spaces</h4>
 </div>
 
 
-<div id="outline-container-orgdd2de96" class="outline-4">
-<h4 id="orgdd2de96"><span class="section-number-4">5.3.9.</span> Hilbert Spaces</h4>
-<div class="outline-text-4" id="text-5-3-9">
+<div id="outline-container-org6caf0b5" class="outline-4">
+<h4 id="org6caf0b5"><span class="section-number-4">6.3.9.</span> Hilbert Spaces</h4>
+<div class="outline-text-4" id="text-6-3-9">
 </div>
 <ol class="org-ol">
-<li><a id="org506a501"></a>Examples<br />
+<li><a id="orgde739a9"></a>Examples<br />
 <ol class="org-ol">
-<li><a id="orgffb927e"></a>\( L^{2}[0,1] \)<br />
-<div class="outline-text-6" id="text-5-3-9-1-1">
+<li><a id="orga3d5090"></a>\( L^{2}[0,1] \)<br />
+<div class="outline-text-6" id="text-6-3-9-1-1">
 <p>
 The space of square Lebesgue measurable functions where two functions are equivalent when they only differ on a null set. This is a Hilbert space by the Riesz-Fischer Theorem (1906).
 </p>
@@ -2210,12 +2672,10 @@ The space of square Lebesgue measurable functions where two functions are equiva
 </li>
 </ol>
 </li>
-
-
-<li><a id="org511fb74"></a>Counter Examples<br />
+<li><a id="org18d25c6"></a>Counter Examples<br />
 <ol class="org-ol">
-<li><a id="orgb89c45a"></a>\( C[0,1] \)<br />
-<div class="outline-text-6" id="text-5-3-9-2-1">
+<li><a id="org2cbe059"></a>\( C[0,1] \)<br />
+<div class="outline-text-6" id="text-6-3-9-2-1">
 <p>
 The functions
 </p>
@@ -2235,11 +2695,10 @@ And linear interpolate between 0 and 1 where \( x \) wasn't defined forms a sequ
 </li>
 </ol>
 </li>
+<li><a id="orge384a98"></a>Completeness<br /></li>
 
-<li><a id="org9a4a9bb"></a>Completeness<br /></li>
-
-<li><a id="org5ee2622"></a>Riesz Representation Theorem<br />
-<div class="outline-text-5" id="text-5-3-9-4">
+<li><a id="org2a03a9c"></a>Riesz Representation Theorem<br />
+<div class="outline-text-5" id="text-6-3-9-4">
 <p>
 Every continuous linear functional on a Hilbert space is of the form
 </p>
@@ -2253,10 +2712,8 @@ for some fixed \( v \) determined by the functional.
 </p>
 </div>
 </li>
-
-
-<li><a id="org233c069"></a>Parseval's Identity<br />
-<div class="outline-text-5" id="text-5-3-9-5">
+<li><a id="org477ef5a"></a>Parseval's Identity<br />
+<div class="outline-text-5" id="text-6-3-9-5">
 <p>
 A generalization of the Pythagorean theorem for Separable Hilbert Spaces.
 </p>
@@ -2273,28 +2730,25 @@ Given an orthonormal basis \( \{e_{n}\}_{n \in \mathbb{N}} \) of a separable Hil
 </ol>
 </div>
 </div>
-
-
-<div id="outline-container-org6a978a7" class="outline-3">
-<h3 id="org6a978a7"><span class="section-number-3">5.4.</span> Matrices</h3>
-<div class="outline-text-3" id="text-5-4">
+<div id="outline-container-org9f12183" class="outline-3">
+<h3 id="org9f12183"><span class="section-number-3">6.4.</span> Matrices</h3>
+<div class="outline-text-3" id="text-6-4">
 </div>
-<div id="outline-container-org18aa5a3" class="outline-4">
-<h4 id="org18aa5a3"><span class="section-number-4">5.4.1.</span> Rank of a Matrix</h4>
-<div class="outline-text-4" id="text-5-4-1">
+<div id="outline-container-org8c8832d" class="outline-4">
+<h4 id="org8c8832d"><span class="section-number-4">6.4.1.</span> Rank of a Matrix</h4>
+<div class="outline-text-4" id="text-6-4-1">
 </div>
 <ol class="org-ol">
-<li><a id="org793829c"></a>Sub additivity of Rank<br /></li>
+<li><a id="org2d9fe24"></a>Sub additivity of Rank<br /></li>
 </ol>
 </div>
-
-<div id="outline-container-orgb373675" class="outline-4">
-<h4 id="orgb373675"><span class="section-number-4">5.4.2.</span> Rank 1 Matrices</h4>
-<div class="outline-text-4" id="text-5-4-2">
+<div id="outline-container-org3cad570" class="outline-4">
+<h4 id="org3cad570"><span class="section-number-4">6.4.2.</span> Rank 1 Matrices</h4>
+<div class="outline-text-4" id="text-6-4-2">
 </div>
 <ol class="org-ol">
-<li><a id="org96159c4"></a>Simple Form<br />
-<div class="outline-text-5" id="text-5-4-2-1">
+<li><a id="orgd0ec81f"></a>Simple Form<br />
+<div class="outline-text-5" id="text-6-4-2-1">
 <p>
 A rank 1 matrix \( A \) has the form:
 </p>
@@ -2304,10 +2758,8 @@ A rank 1 matrix \( A \) has the form:
 </p>
 </div>
 </li>
-
-
-<li><a id="org2f5880a"></a>Eigenspaces<br />
-<div class="outline-text-5" id="text-5-4-2-2">
+<li><a id="orgd6351b5"></a>Eigenspaces<br />
+<div class="outline-text-5" id="text-6-4-2-2">
 <p>
 The eigenvectors of \( A \) are \( v \).
 </p>
@@ -2325,19 +2777,17 @@ Hence \( x = v, \lambda = u^{*} x = u^{*} v \)
 </p>
 </div>
 </li>
-
-<li><a id="org3f55060"></a>Determinant<br />
-<div class="outline-text-5" id="text-5-4-2-3">
+<li><a id="orgb1fe9d3"></a>Determinant<br />
+<div class="outline-text-5" id="text-6-4-2-3">
 <p>
 If \( n > 1 \) and \( A \) has rank 1 then \( \det(A) = 0 \). Otherwise \( \det(A) = vu \).
 </p>
 </div>
 </li>
-
-<li><a id="org6e00b85"></a>Relation to Other Matrixes<br />
+<li><a id="org5d91f01"></a>Relation to Other Matrixes<br />
 <ol class="org-ol">
-<li><a id="org94a71ee"></a>Rank 1 Update Lemma<br />
-<div class="outline-text-6" id="text-5-4-2-4-1">
+<li><a id="orgad15493"></a>Rank 1 Update Lemma<br />
+<div class="outline-text-6" id="text-6-4-2-4-1">
 <p>
 \[ \det(M + A) = \det(M) + u^{*} \adj(M) vl \]
 </p>
@@ -2347,14 +2797,13 @@ If \( n > 1 \) and \( A \) has rank 1 then \( \det(A) = 0 \). Otherwise \( \det(
 </li>
 </ol>
 </div>
-
-<div id="outline-container-org703020d" class="outline-4">
-<h4 id="org703020d"><span class="section-number-4">5.4.3.</span> Determinant Lemmas</h4>
-<div class="outline-text-4" id="text-5-4-3">
+<div id="outline-container-org1f4be29" class="outline-4">
+<h4 id="org1f4be29"><span class="section-number-4">6.4.3.</span> Determinant Lemmas</h4>
+<div class="outline-text-4" id="text-6-4-3">
 </div>
 <ol class="org-ol">
-<li><a id="org3642a81"></a>General Matrix Determinant Lemma<br />
-<div class="outline-text-5" id="text-5-4-3-1">
+<li><a id="org37539e3"></a>General Matrix Determinant Lemma<br />
+<div class="outline-text-5" id="text-6-4-3-1">
 <p>
 \[ \det(M + AB^{T}) = \det(M) + B^{T} \adj(M) A \]
 </p>
@@ -2364,26 +2813,23 @@ Remember: Only permute the order of the multiplication. Matrices \( A \) and \( 
 </p>
 </div>
 </li>
+<li><a id="orga4c8c35"></a>Binomial Inverse Theorem<br /></li>
 
-<li><a id="org369fdff"></a>Binomial Inverse Theorem<br /></li>
+<li><a id="org0bd723b"></a>Woodbury Formula<br /></li>
 
-<li><a id="orge9916c5"></a>Woodbury Formula<br /></li>
-
-<li><a id="org664426a"></a>Sherman-Morrison Formula<br /></li>
+<li><a id="org9b4d2b9"></a>Sherman-Morrison Formula<br /></li>
 </ol>
 </div>
-
-<div id="outline-container-org6d57b10" class="outline-4">
-<h4 id="org6d57b10"><span class="section-number-4">5.4.4.</span> Nilpotent Matrices</h4>
-<div class="outline-text-4" id="text-5-4-4">
+<div id="outline-container-org4065986" class="outline-4">
+<h4 id="org4065986"><span class="section-number-4">6.4.4.</span> Nilpotent Matrices</h4>
+<div class="outline-text-4" id="text-6-4-4">
 <p>
 Let \( N \) be an \( n \times n \) nilpotent matrix. That means that for some \( k \), \( N^{k} = 0 \). 
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="orgfcb40b5"></a>Eigenspaces<br />
-<div class="outline-text-5" id="text-5-4-4-1">
+<li><a id="org7567045"></a>Eigenspaces<br />
+<div class="outline-text-5" id="text-6-4-4-1">
 <p>
 All the eigenvalues are \( 0 \). In fact, any matrix with all eigenvalues \( 0 \) are nilpotent.
 </p>
@@ -2410,20 +2856,17 @@ For eigenvector \( x \), \( N^{k}x = \lambda^{k} x = 0 x \) so \( \lambda^{k} = 
 </p>
 </div>
 </li>
-
-
-<li><a id="orgcdebd8f"></a>Determinant<br />
-<div class="outline-text-5" id="text-5-4-4-2">
+<li><a id="orge16ec05"></a>Determinant<br />
+<div class="outline-text-5" id="text-6-4-4-2">
 <p>
 Because the eigenvalues are zero, the determinant (the product of the eigenvalues) is also zero
 </p>
 </div>
 </li>
-
-<li><a id="orgc72b76f"></a>Other Facts<br />
+<li><a id="org88e193b"></a>Other Facts<br />
 <ol class="org-ol">
-<li><a id="org364b428"></a>\( I + N \) is invertible<br />
-<div class="outline-text-6" id="text-5-4-4-3-1">
+<li><a id="orgd3b9c21"></a>\( I + N \) is invertible<br />
+<div class="outline-text-6" id="text-6-4-4-3-1">
 <p>
 We may prove it is invertible by finding the inverse.
 </p>
@@ -2441,10 +2884,8 @@ Is it the inverse?
 </p>
 </div>
 </li>
-
-
-<li><a id="orgef53ce3"></a>\( k \leq n \)<br />
-<div class="outline-text-6" id="text-5-4-4-3-2">
+<li><a id="org6dc4bbd"></a>\( k \leq n \)<br />
+<div class="outline-text-6" id="text-6-4-4-3-2">
 <p>
 A nilpotent matrix is \( 0 \) after some \( k \). We may prove that the smallest such \( k \) is bounded by \( n \).
 Stated another way: If you want to check if a matrix is nilpotent, take the \( n \)-th power and check if it is \( 0 \).
@@ -2461,10 +2902,6 @@ Theorem: A matrix is nilpotent iff \( N^{n} = 0 \)
 <p>
 Suppose \( N \) is nilpotent, then \( N = P^{-1} D P \). Where \( D \) is upper triangular with zeros along the diagonal (Jordan Form). \( N^{n} = P^{-1} D^{n} P = 0 \) so \( k \leq n \). 
 </p>
-
-<p>
-One fact we used was that a 
-</p>
 </div>
 </li>
 </ol>
@@ -2472,19 +2909,17 @@ One fact we used was that a
 </ol>
 </div>
 </div>
-
-
-<div id="outline-container-org9550b64" class="outline-3">
-<h3 id="org9550b64"><span class="section-number-3">5.5.</span> Operators</h3>
-<div class="outline-text-3" id="text-5-5">
+<div id="outline-container-org4b858c3" class="outline-3">
+<h3 id="org4b858c3"><span class="section-number-3">6.5.</span> Operators</h3>
+<div class="outline-text-3" id="text-6-5">
 </div>
-<div id="outline-container-orgf37e192" class="outline-4">
-<h4 id="orgf37e192"><span class="section-number-4">5.5.1.</span> Linear Operators</h4>
-<div class="outline-text-4" id="text-5-5-1">
+<div id="outline-container-orgd38bfb8" class="outline-4">
+<h4 id="orgd38bfb8"><span class="section-number-4">6.5.1.</span> Linear Operators</h4>
+<div class="outline-text-4" id="text-6-5-1">
 </div>
 <ol class="org-ol">
-<li><a id="org108cf8d"></a>Definition<br />
-<div class="outline-text-5" id="text-5-5-1-1">
+<li><a id="org0ef1019"></a>Definition<br />
+<div class="outline-text-5" id="text-6-5-1-1">
 <p>
 A Linear operator is
 </p>
@@ -2502,11 +2937,9 @@ A Map such that
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org45a6ff4" class="outline-4">
-<h4 id="org45a6ff4"><span class="section-number-4">5.5.2.</span> Bounded Operators</h4>
-<div class="outline-text-4" id="text-5-5-2">
+<div id="outline-container-org3799d2d" class="outline-4">
+<h4 id="org3799d2d"><span class="section-number-4">6.5.2.</span> Bounded Operators</h4>
+<div class="outline-text-4" id="text-6-5-2">
 <p>
 A bounded operator sends the unit ball to a bounded set.
 </p>
@@ -2520,11 +2953,9 @@ IMPORTANT FACT: An operator is bounded iff it is continuous
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-org291e16a" class="outline-4">
-<h4 id="org291e16a"><span class="section-number-4">5.5.3.</span> Self Adjoint Operators</h4>
-<div class="outline-text-4" id="text-5-5-3">
+<div id="outline-container-org8286fbb" class="outline-4">
+<h4 id="org8286fbb"><span class="section-number-4">6.5.3.</span> Self Adjoint Operators</h4>
+<div class="outline-text-4" id="text-6-5-3">
 <p>
 An operator is self-adjoint if it is equal to its adjoint.
 </p>
@@ -2533,20 +2964,17 @@ An operator is self-adjoint if it is equal to its adjoint.
 \[ L = L^{*} \]
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="org2fd4382"></a>Examples<br />
+<li><a id="org872cac1"></a>Examples<br />
 <ol class="org-ol">
-<li><a id="orge56129d"></a>Sturm-Liouville<br /></li>
+<li><a id="org6ba0ce6"></a>Sturm-Liouville<br /></li>
 </ol>
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgfc294db" class="outline-4">
-<h4 id="orgfc294db"><span class="section-number-4">5.5.4.</span> Adjoint of an Operator</h4>
-<div class="outline-text-4" id="text-5-5-4">
+<div id="outline-container-org929fa70" class="outline-4">
+<h4 id="org929fa70"><span class="section-number-4">6.5.4.</span> Adjoint of an Operator</h4>
+<div class="outline-text-4" id="text-6-5-4">
 <p>
 Given two Hilbert Spaces \( V, W \) then the adjoint of a linear operator \( L \colon V \to W \) is an operator such that
 </p>
@@ -2556,16 +2984,14 @@ Given two Hilbert Spaces \( V, W \) then the adjoint of a linear operator \( L \
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-org0515c24" class="outline-4">
-<h4 id="org0515c24"><span class="section-number-4">5.5.5.</span> Unitary Operators</h4>
+<div id="outline-container-org65d8111" class="outline-4">
+<h4 id="org65d8111"><span class="section-number-4">6.5.5.</span> Unitary Operators</h4>
 </div>
 
 
-<div id="outline-container-org83e5a5b" class="outline-4">
-<h4 id="org83e5a5b"><span class="section-number-4">5.5.6.</span> Normal Operators</h4>
-<div class="outline-text-4" id="text-5-5-6">
+<div id="outline-container-org63677b4" class="outline-4">
+<h4 id="org63677b4"><span class="section-number-4">6.5.6.</span> Normal Operators</h4>
+<div class="outline-text-4" id="text-6-5-6">
 <p>
 An operator is normal if it commutes with its adjoint
 </p>
@@ -2596,15 +3022,13 @@ Complex
 <li>Unitary</li>
 </ul>
 </div>
-
 <ol class="org-ol">
-<li><a id="org0a6a407"></a>Examples<br /></li>
+<li><a id="orgde524d0"></a>Examples<br /></li>
 </ol>
 </div>
-
-<div id="outline-container-orgb2b0826" class="outline-4">
-<h4 id="orgb2b0826"><span class="section-number-4">5.5.7.</span> Positive Definite Operators</h4>
-<div class="outline-text-4" id="text-5-5-7">
+<div id="outline-container-org4da90f3" class="outline-4">
+<h4 id="org4da90f3"><span class="section-number-4">6.5.7.</span> Positive Definite Operators</h4>
+<div class="outline-text-4" id="text-6-5-7">
 <p>
 An operator is positive definite if the inner product of the operator and its input is always positive. Also it is \( 0 \) iff the input is zero.
 </p>
@@ -2622,26 +3046,22 @@ and
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-org6819885" class="outline-4">
-<h4 id="org6819885"><span class="section-number-4">5.5.8.</span> Compact Operators</h4>
-<div class="outline-text-4" id="text-5-5-8">
+<div id="outline-container-orgbb696fd" class="outline-4">
+<h4 id="orgbb696fd"><span class="section-number-4">6.5.8.</span> Compact Operators</h4>
+<div class="outline-text-4" id="text-6-5-8">
 <p>
 An operator is compact if it maps the unit ball to a set whose image has compact closure.
 </p>
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-orga6a31b1" class="outline-3">
-<h3 id="orga6a31b1"><span class="section-number-3">5.6.</span> Spectra</h3>
-<div class="outline-text-3" id="text-5-6">
+<div id="outline-container-org64d6bb9" class="outline-3">
+<h3 id="org64d6bb9"><span class="section-number-3">6.6.</span> Spectra</h3>
+<div class="outline-text-3" id="text-6-6">
 </div>
-<div id="outline-container-orgb342964" class="outline-4">
-<h4 id="orgb342964"><span class="section-number-4">5.6.1.</span> Eigenvalues &amp; Eigenvectors</h4>
-<div class="outline-text-4" id="text-5-6-1">
+<div id="outline-container-org6c2f6d0" class="outline-4">
+<h4 id="org6c2f6d0"><span class="section-number-4">6.6.1.</span> Eigenvalues &amp; Eigenvectors</h4>
+<div class="outline-text-4" id="text-6-6-1">
 <p>
 An eigenvalue and eigenvector pair is a complex number and vector respectively such that
 </p>
@@ -2651,11 +3071,9 @@ An eigenvalue and eigenvector pair is a complex number and vector respectively s
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-org45e5a4c" class="outline-4">
-<h4 id="org45e5a4c"><span class="section-number-4">5.6.2.</span> Rayleigh Quotient</h4>
-<div class="outline-text-4" id="text-5-6-2">
+<div id="outline-container-orgf60b525" class="outline-4">
+<h4 id="orgf60b525"><span class="section-number-4">6.6.2.</span> Rayleigh Quotient</h4>
+<div class="outline-text-4" id="text-6-6-2">
 <p>
 Given a self-adjoint operator \( S \) the Rayleigh quotient is:
 </p>
@@ -2687,15 +3105,13 @@ Theorem: If \( S \) is self-adjoint. The minimal value of the Rayleigh quotient 
 \end{align*}
 </div>
 </div>
-
-
-<div id="outline-container-org10608e6" class="outline-4">
-<h4 id="org10608e6"><span class="section-number-4">5.6.3.</span> Eigendecomposition</h4>
+<div id="outline-container-org16b7176" class="outline-4">
+<h4 id="org16b7176"><span class="section-number-4">6.6.3.</span> Eigendecomposition</h4>
 </div>
 
-<div id="outline-container-org55d4b38" class="outline-4">
-<h4 id="org55d4b38"><span class="section-number-4">5.6.4.</span> Spectral Theorem</h4>
-<div class="outline-text-4" id="text-5-6-4">
+<div id="outline-container-org72d6b2a" class="outline-4">
+<h4 id="org72d6b2a"><span class="section-number-4">6.6.4.</span> Spectral Theorem</h4>
+<div class="outline-text-4" id="text-6-6-4">
 <p>
 There are two main theorems named spectral theorem. Both state that "nice" operators have orthogonal eigenbases. That implies that each of the operators are diagonalizable in a sense.
 </p>
@@ -2738,55 +3154,50 @@ Then there exists countably many orthogonal eigenvectors
 </p>
 </div>
 </div>
-
-<div id="outline-container-org82379ef" class="outline-4">
-<h4 id="org82379ef"><span class="section-number-4">5.6.5.</span> Singular Value Decomposition</h4>
+<div id="outline-container-orgb6b5ef0" class="outline-4">
+<h4 id="orgb6b5ef0"><span class="section-number-4">6.6.5.</span> Singular Value Decomposition</h4>
 </div>
 
 
-<div id="outline-container-org0023db6" class="outline-4">
-<h4 id="org0023db6"><span class="section-number-4">5.6.6.</span> Schur Decomposition</h4>
+<div id="outline-container-org507b959" class="outline-4">
+<h4 id="org507b959"><span class="section-number-4">6.6.6.</span> Schur Decomposition</h4>
 </div>
 
-<div id="outline-container-org5a4bd03" class="outline-4">
-<h4 id="org5a4bd03"><span class="section-number-4">5.6.7.</span> Generalized Eigenvectors</h4>
+<div id="outline-container-orga5b6c72" class="outline-4">
+<h4 id="orga5b6c72"><span class="section-number-4">6.6.7.</span> Generalized Eigenvectors</h4>
 </div>
 </div>
-
-
-<div id="outline-container-orgf30fff6" class="outline-3">
-<h3 id="orgf30fff6"><span class="section-number-3">5.7.</span> Orthogonality</h3>
+<div id="outline-container-org5ebda8f" class="outline-3">
+<h3 id="org5ebda8f"><span class="section-number-3">6.7.</span> Orthogonality</h3>
 </div>
 </div>
-
-
-<div id="outline-container-orgac727dd" class="outline-2">
-<h2 id="orgac727dd"><span class="section-number-2">6.</span> Dynamical Systems</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org871fd7c" class="outline-2">
+<h2 id="org871fd7c"><span class="section-number-2">7.</span> Dynamical Systems</h2>
+<div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org9683e2c" class="outline-3">
-<h3 id="org9683e2c"><span class="section-number-3">6.1.</span> ODE Theory</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-org9e015a0" class="outline-3">
+<h3 id="org9e015a0"><span class="section-number-3">7.1.</span> ODE Theory</h3>
+<div class="outline-text-3" id="text-7-1">
 </div>
-<div id="outline-container-org35bca10" class="outline-4">
-<h4 id="org35bca10"><span class="section-number-4">6.1.1.</span> Local Existence and Uniqueness of Solutions</h4>
+<div id="outline-container-org92ecb61" class="outline-4">
+<h4 id="org92ecb61"><span class="section-number-4">7.1.1.</span> Local Existence and Uniqueness of Solutions</h4>
 </div>
 
-<div id="outline-container-orgbf522bb" class="outline-4">
-<h4 id="orgbf522bb"><span class="section-number-4">6.1.2.</span> Continuous Dependence on Initial Conditions</h4>
+<div id="outline-container-orge2c49a4" class="outline-4">
+<h4 id="orge2c49a4"><span class="section-number-4">7.1.2.</span> Continuous Dependence on Initial Conditions</h4>
 </div>
 
-<div id="outline-container-org38f7b23" class="outline-4">
-<h4 id="org38f7b23"><span class="section-number-4">6.1.3.</span> Continuous Dependence on Parameters</h4>
+<div id="outline-container-orgff9ad63" class="outline-4">
+<h4 id="orgff9ad63"><span class="section-number-4">7.1.3.</span> Continuous Dependence on Parameters</h4>
 </div>
 
-<div id="outline-container-org65ff024" class="outline-4">
-<h4 id="org65ff024"><span class="section-number-4">6.1.4.</span> Sturm-Liouville Theory for 1D Boundary Value Problems</h4>
-<div class="outline-text-4" id="text-6-1-4">
+<div id="outline-container-orgfdbe35a" class="outline-4">
+<h4 id="orgfdbe35a"><span class="section-number-4">7.1.4.</span> Sturm-Liouville Theory for 1D Boundary Value Problems</h4>
+<div class="outline-text-4" id="text-7-1-4">
 </div>
 <ol class="org-ol">
-<li><a id="org013caaa"></a>Problem<br />
-<div class="outline-text-5" id="text-6-1-4-1">
+<li><a id="org6c6583a"></a>Problem<br />
+<div class="outline-text-5" id="text-7-1-4-1">
 <p>
 The Sturm Liouville problem in 1D is the following:
 </p>
@@ -2814,26 +3225,23 @@ Then an important theorem is that this differential equation, given mixed homoge
 </ol>
 </div>
 </li>
-
-<li><a id="orgf0cdee1"></a>Applications<br />
+<li><a id="org15de3f6"></a>Applications<br />
 <ol class="org-ol">
-<li><a id="org3561a1b"></a>Bessel Problem<br /></li>
+<li><a id="org89bfc7f"></a>Bessel Problem<br /></li>
 
-<li><a id="org297f306"></a><br /></li>
+<li><a id="org398a535"></a><br /></li>
 </ol>
 </li>
 </ol>
 </div>
 </div>
-
-
-<div id="outline-container-orgaad821c" class="outline-3">
-<h3 id="orgaad821c"><span class="section-number-3">6.2.</span> Dynamical Systems</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-org84843c2" class="outline-3">
+<h3 id="org84843c2"><span class="section-number-3">7.2.</span> Dynamical Systems</h3>
+<div class="outline-text-3" id="text-7-2">
 </div>
-<div id="outline-container-orgf254fcb" class="outline-4">
-<h4 id="orgf254fcb"><span class="section-number-4">6.2.1.</span> Poincare-Bendixson Theory</h4>
-<div class="outline-text-4" id="text-6-2-1">
+<div id="outline-container-org9f4a462" class="outline-4">
+<h4 id="org9f4a462"><span class="section-number-4">7.2.1.</span> Poincare-Bendixson Theory</h4>
+<div class="outline-text-4" id="text-7-2-1">
 <p>
 In 2D systems, there is only 2 results for orbits.
 </p>
@@ -2846,12 +3254,11 @@ Either it goes to a fixed point, off to infinity, or trapped in a limit cycle.
 So if an annulus contains no fixed points and is a trapping region, then PB Theory states that any orbit tends to a limit cycle. 
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="org84965b8"></a>Proof of Theorem<br />
+<li><a id="org2c4aadb"></a>Proof of Theorem<br />
 <ol class="org-ol">
-<li><a id="orgee92e8a"></a>Lemma<br />
-<div class="outline-text-6" id="text-6-2-1-1-1">
+<li><a id="orgbedd0d6"></a>Lemma<br />
+<div class="outline-text-6" id="text-7-2-1-1-1">
 <p>
 Suppose \( x \in M \), \( T \in I_{x} \). Let \( \Sigma \) be a sub manifold of codimension 1 transversal to \( f \) such that \( \phi(T,x) \in \Sigma \). Then there exists a neighborhood \( U \) of \( x \) and \( \tau \in C^{k}(U) \) such that \( \tau(x) = T \) and \( \forall y \in U \colon \phi(\tau(y), y) \in \Sigma \).
 </p>
@@ -2865,11 +3272,9 @@ The idea: If \( x \) eventually flows past a hypersurface in a non tangential wa
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org86a1fa4" class="outline-4">
-<h4 id="org86a1fa4"><span class="section-number-4">6.2.2.</span> Gradient Systems</h4>
-<div class="outline-text-4" id="text-6-2-2">
+<div id="outline-container-orgfba84a6" class="outline-4">
+<h4 id="orgfba84a6"><span class="section-number-4">7.2.2.</span> Gradient Systems</h4>
+<div class="outline-text-4" id="text-7-2-2">
 <p>
 Suppose \( \dot{x} = - \nabla V(x) \) what is the stability of a fixed point?
 </p>
@@ -2891,11 +3296,9 @@ Because the Lie derivative is always positive, and \( 0 \) only at a fixed point
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-orge5c6414" class="outline-4">
-<h4 id="orge5c6414"><span class="section-number-4">6.2.3.</span> Liapunov Methods</h4>
-<div class="outline-text-4" id="text-6-2-3">
+<div id="outline-container-orgabbbe79" class="outline-4">
+<h4 id="orgabbbe79"><span class="section-number-4">7.2.3.</span> Liapunov Methods</h4>
+<div class="outline-text-4" id="text-7-2-3">
 <p>
 A Liapunov function is a continuous function (likely differentiable) such that
 </p>
@@ -2908,12 +3311,11 @@ A Liapunov function is a continuous function (likely differentiable) such that
 So Liapunov functions go from a neighborhood of a fixed point to the real numbers, and are decreasing. The sublevel sets (the sets containing all points smaller than some value \( c \)) are invariant. That is because if you take a point with some value \( L(p) \leq c \), then the flow will also be less than \( c \).    
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="org53198fe"></a>Closed Connected Component of Sublevel Set<br /></li>
+<li><a id="orgfc7d822"></a>Closed Connected Component of Sublevel Set<br /></li>
 
-<li><a id="org5d1e070"></a>Liapunov Function Proof<br />
-<div class="outline-text-5" id="text-6-2-3-2">
+<li><a id="orgff92106"></a>Liapunov Function Proof<br />
+<div class="outline-text-5" id="text-7-2-3-2">
 <p>
 Let \( x_{0} \in E \subseteq R^{n} \) be a fixed point contained in an open set \( E \)  
 </p>
@@ -2921,11 +3323,9 @@ Let \( x_{0} \in E \subseteq R^{n} \) be a fixed point contained in an open set 
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgb341982" class="outline-4">
-<h4 id="orgb341982"><span class="section-number-4">6.2.4.</span> Definitions</h4>
-<div class="outline-text-4" id="text-6-2-4">
+<div id="outline-container-orge33f163" class="outline-4">
+<h4 id="orge33f163"><span class="section-number-4">7.2.4.</span> Definitions</h4>
+<div class="outline-text-4" id="text-7-2-4">
 <p>
 Given an ODE \( \dot{x} = f(x) \), we know by existence and uniqueness theorem that there is a solution \( x(t) \colon I_{x_{0}} \to \mathbb{R}^{n} \) starting at \( x_{0} \). Because \( f(x) \) might not have bounded lipschiz constant, the interval of existance may not be be all of \( \mathbb{R} \). That is, the set of inputs to the solution is a proper open interval of \( \mathbb{R} \).
 </p>
@@ -2944,27 +3344,23 @@ We may subdivide \( \gamma \) into the forward and backwards parts of the orbit.
 We know that all of these sets exist, but they might not have an analytic form (a form that is easy to compute)
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="orge42457e"></a>Flow<br />
-<div class="outline-text-5" id="text-6-2-4-1">
+<li><a id="orgac93ccb"></a>Flow<br />
+<div class="outline-text-5" id="text-7-2-4-1">
 <p>
 From the existence and uniqueness theorem of ODEs, we have local existence of solutions to ODEs.
 </p>
 </div>
 </li>
-
-
-<li><a id="orgf382ee8"></a>Orbit<br />
-<div class="outline-text-5" id="text-6-2-4-2">
+<li><a id="org3eaed68"></a>Orbit<br />
+<div class="outline-text-5" id="text-7-2-4-2">
 <p>
 An Orbit of a point is the image of the flow from the point.  
 </p>
 </div>
 </li>
-
-<li><a id="orga76d371"></a>Limit Set<br />
-<div class="outline-text-5" id="text-6-2-4-3">
+<li><a id="org13a8c1f"></a>Limit Set<br />
+<div class="outline-text-5" id="text-7-2-4-3">
 <p>
 The limit set of a point is the accumulation points of the orbits.
 </p>
@@ -2974,36 +3370,30 @@ This means that there is a sequence of times going to infinity such that the flo
 </p>
 </div>
 </li>
-
-<li><a id="org1d0f63c"></a>Attracting Set<br />
-<div class="outline-text-5" id="text-6-2-4-4">
+<li><a id="orgea5b821"></a>Attracting Set<br />
+<div class="outline-text-5" id="text-7-2-4-4">
 <p>
 An attracting set, \( A \) is the limit set of the Orbit of a set
 </p>
 </div>
 </li>
-
-<li><a id="orgc11ae2b"></a>Example Decoupled Equations<br />
-<div class="outline-text-5" id="text-6-2-4-5">
+<li><a id="org0e264f3"></a>Example Decoupled Equations<br />
+<div class="outline-text-5" id="text-7-2-4-5">
 \begin{align}
 \dot{x} = x(1 - x^{2}) \\
 \dot{y} = -y \\
 \end{align}
 </div>
 </li>
-
-
-
-<li><a id="orgdf71441"></a>Orbit of a Set<br />
-<div class="outline-text-5" id="text-6-2-4-6">
+<li><a id="orgbb99bec"></a>Orbit of a Set<br />
+<div class="outline-text-5" id="text-7-2-4-6">
 <p>
 \[ \gamma_{\pm}(X) = \bigcup_{\pm t \geq 0} \Phi(t, X) = \bigcup_{x \in X} \gamma_{\pm}(x) \]
 </p>
 </div>
 </li>
-
-<li><a id="org1ff32e5"></a>Limit of a Set<br />
-<div class="outline-text-5" id="text-6-2-4-7">
+<li><a id="org597fdef"></a>Limit of a Set<br />
+<div class="outline-text-5" id="text-7-2-4-7">
 <p>
 The \( \omega(X) \) 
 \[ \limsup \gamma(X) \]
@@ -3012,15 +3402,14 @@ The \( \omega(X) \)
 </li>
 </ol>
 </div>
-
-<div id="outline-container-orga4cab6c" class="outline-4">
-<h4 id="orga4cab6c"><span class="section-number-4">6.2.5.</span> <span class="todo TODO">TODO</span> Straightening out the Vector Field</h4>
-<div class="outline-text-4" id="text-6-2-5">
+<div id="outline-container-orgd3c8a2a" class="outline-4">
+<h4 id="orgd3c8a2a"><span class="section-number-4">7.2.5.</span> <span class="todo TODO">TODO</span> Straightening out the Vector Field</h4>
+<div class="outline-text-4" id="text-7-2-5">
 <p>
 Around any non-fixed point, one may locally change coordinates to a vector field which is constant.
 </p>
 
-<div class="PROOF" id="orgbd5f367">
+<div class="PROOF" id="org420f64e">
 <p>
 
 </p>
@@ -3028,38 +3417,37 @@ Around any non-fixed point, one may locally change coordinates to a vector field
 </div>
 </div>
 </div>
-
-<div id="outline-container-org9843259" class="outline-4">
-<h4 id="org9843259"><span class="section-number-4">6.2.6.</span> <span class="todo TODO">TODO</span> Forward Orbit in Compact Set is Complete</h4>
+<div id="outline-container-org3878d2b" class="outline-4">
+<h4 id="org3878d2b"><span class="section-number-4">7.2.6.</span> <span class="todo TODO">TODO</span> Forward Orbit in Compact Set is Complete</h4>
 </div>
 
-<div id="outline-container-org89b3152" class="outline-4">
-<h4 id="org89b3152"><span class="section-number-4">6.2.7.</span> <span class="todo TODO">TODO</span> Arbitrary Intersections, Unions, and Closures of Invariant sets are Invariant</h4>
+<div id="outline-container-org89643f5" class="outline-4">
+<h4 id="org89643f5"><span class="section-number-4">7.2.7.</span> <span class="todo TODO">TODO</span> Arbitrary Intersections, Unions, and Closures of Invariant sets are Invariant</h4>
 </div>
 
-<div id="outline-container-org7c8fde7" class="outline-4">
-<h4 id="org7c8fde7"><span class="section-number-4">6.2.8.</span> <span class="todo TODO">TODO</span> Limit Sets are Invariant and Closed</h4>
+<div id="outline-container-orgca17e5e" class="outline-4">
+<h4 id="orgca17e5e"><span class="section-number-4">7.2.8.</span> <span class="todo TODO">TODO</span> Limit Sets are Invariant and Closed</h4>
 </div>
 
-<div id="outline-container-org301fced" class="outline-4">
-<h4 id="org301fced"><span class="section-number-4">6.2.9.</span> <span class="todo TODO">TODO</span> Orbits are Invariant</h4>
+<div id="outline-container-orgeaedc22" class="outline-4">
+<h4 id="orgeaedc22"><span class="section-number-4">7.2.9.</span> <span class="todo TODO">TODO</span> Orbits are Invariant</h4>
 </div>
 
-<div id="outline-container-org7107a95" class="outline-4">
-<h4 id="org7107a95"><span class="section-number-4">6.2.10.</span> <span class="todo TODO">TODO</span> Orbits Contained in a Compact Set have Non-Empty Compact Connected Limit Sets</h4>
+<div id="outline-container-org4265dd4" class="outline-4">
+<h4 id="org4265dd4"><span class="section-number-4">7.2.10.</span> <span class="todo TODO">TODO</span> Orbits Contained in a Compact Set have Non-Empty Compact Connected Limit Sets</h4>
 </div>
 
-<div id="outline-container-org84d4d1e" class="outline-4">
-<h4 id="org84d4d1e"><span class="section-number-4">6.2.11.</span> <span class="todo TODO">TODO</span> Orbits in Compact Sets Tend to a Limit Point</h4>
+<div id="outline-container-org472e748" class="outline-4">
+<h4 id="org472e748"><span class="section-number-4">7.2.11.</span> <span class="todo TODO">TODO</span> Orbits in Compact Sets Tend to a Limit Point</h4>
 </div>
 
-<div id="outline-container-org85d3219" class="outline-4">
-<h4 id="org85d3219"><span class="section-number-4">6.2.12.</span> <span class="todo TODO">TODO</span> Non Empty Compact Invariant Sets Contain Minimal Invariant Set</h4>
+<div id="outline-container-org191177d" class="outline-4">
+<h4 id="org191177d"><span class="section-number-4">7.2.12.</span> <span class="todo TODO">TODO</span> Non Empty Compact Invariant Sets Contain Minimal Invariant Set</h4>
 </div>
 
-<div id="outline-container-org93a3259" class="outline-4">
-<h4 id="org93a3259"><span class="section-number-4">6.2.13.</span> If \( \gamma_{\sigma}(x) \) is contained  in a compact set \( C \), then \( \omega_{\sigma}(x) \) is non empty, compact, and connected</h4>
-<div class="outline-text-4" id="text-6-2-13">
+<div id="outline-container-orgf144279" class="outline-4">
+<h4 id="orgf144279"><span class="section-number-4">7.2.13.</span> If \( \gamma_{\sigma}(x) \) is contained  in a compact set \( C \), then \( \omega_{\sigma}(x) \) is non empty, compact, and connected</h4>
+<div class="outline-text-4" id="text-7-2-13">
 <p>
 First, what is this theorem saying? We have a point \( x \in M \) which can be pushed using the flow. If the flow in &sigma; time remains in a compact set then we have a nice set of properties on the &sigma; time limit set.
 </p>
@@ -3085,73 +3473,69 @@ Then \(  \)
 </p>
 </div>
 </div>
-
-<div id="outline-container-org269c9c8" class="outline-4">
-<h4 id="org269c9c8"><span class="section-number-4">6.2.14.</span> </h4>
+<div id="outline-container-orgc4383f5" class="outline-4">
+<h4 id="orgc4383f5"><span class="section-number-4">7.2.14.</span> </h4>
 </div>
 </div>
-
-<div id="outline-container-org9c02fde" class="outline-3">
-<h3 id="org9c02fde"><span class="section-number-3">6.3.</span> Bifurcation Theory</h3>
-<div class="outline-text-3" id="text-6-3">
+<div id="outline-container-org0a8ecac" class="outline-3">
+<h3 id="org0a8ecac"><span class="section-number-3">7.3.</span> Bifurcation Theory</h3>
+<div class="outline-text-3" id="text-7-3">
 </div>
-<div id="outline-container-org73ad180" class="outline-4">
-<h4 id="org73ad180"><span class="section-number-4">6.3.1.</span> Structural Stability</h4>
+<div id="outline-container-orgf5b4d66" class="outline-4">
+<h4 id="orgf5b4d66"><span class="section-number-4">7.3.1.</span> Structural Stability</h4>
 </div>
 
 
-<div id="outline-container-org4d336a9" class="outline-4">
-<h4 id="org4d336a9"><span class="section-number-4">6.3.2.</span> Local Bifurcations of Equilibrium States</h4>
+<div id="outline-container-orgcd065e4" class="outline-4">
+<h4 id="orgcd065e4"><span class="section-number-4">7.3.2.</span> Local Bifurcations of Equilibrium States</h4>
 </div>
 
 
-<div id="outline-container-orgfbc0a9f" class="outline-4">
-<h4 id="orgfbc0a9f"><span class="section-number-4">6.3.3.</span> Genericity</h4>
+<div id="outline-container-org5517ca1" class="outline-4">
+<h4 id="org5517ca1"><span class="section-number-4">7.3.3.</span> Genericity</h4>
 </div>
 
 
-<div id="outline-container-orgcd387e5" class="outline-4">
-<h4 id="orgcd387e5"><span class="section-number-4">6.3.4.</span> Codimension</h4>
+<div id="outline-container-orga159bf1" class="outline-4">
+<h4 id="orga159bf1"><span class="section-number-4">7.3.4.</span> Codimension</h4>
 </div>
 
 
-<div id="outline-container-org8522110" class="outline-4">
-<h4 id="org8522110"><span class="section-number-4">6.3.5.</span> Center Manifold Theory</h4>
+<div id="outline-container-org8369a14" class="outline-4">
+<h4 id="org8369a14"><span class="section-number-4">7.3.5.</span> Center Manifold Theory</h4>
 </div>
 
 
-<div id="outline-container-orgf9e8a03" class="outline-4">
-<h4 id="orgf9e8a03"><span class="section-number-4">6.3.6.</span> Global Bifurcations</h4>
+<div id="outline-container-orgfd7c585" class="outline-4">
+<h4 id="orgfd7c585"><span class="section-number-4">7.3.6.</span> Global Bifurcations</h4>
 </div>
 
 
-<div id="outline-container-org119ea97" class="outline-4">
-<h4 id="org119ea97"><span class="section-number-4">6.3.7.</span> Bifurcations in 1D Maps</h4>
-<div class="outline-text-4" id="text-6-3-7">
+<div id="outline-container-orgafd2812" class="outline-4">
+<h4 id="orgafd2812"><span class="section-number-4">7.3.7.</span> Bifurcations in 1D Maps</h4>
+<div class="outline-text-4" id="text-7-3-7">
 </div>
 <ol class="org-ol">
-<li><a id="org7b06583"></a>Saddle Node Bifurcation<br />
+<li><a id="org70735a1"></a>Saddle Node Bifurcation<br />
 <ol class="org-ol">
-<li><a id="org03b1ef4"></a>Definition<br />
-<div class="outline-text-6" id="text-6-3-7-1-1">
+<li><a id="org4f132e7"></a>Definition<br />
+<div class="outline-text-6" id="text-7-3-7-1-1">
 <p>
 When an unstable and stable equilibrium point cancel each other out.
 </p>
 </div>
 </li>
-
-<li><a id="orgaf4ba80"></a>Examples<br />
+<li><a id="org3a8a1df"></a>Examples<br />
 <ol class="org-ol">
-<li><a id="orgfe5d3c5"></a>Normal Form<br />
-<div class="outline-text-7" id="text-6-3-7-1-2-1">
+<li><a id="orgcd12824"></a>Normal Form<br />
+<div class="outline-text-7" id="text-7-3-7-1-2-1">
 <p>
 \[ \frac{ d x}{ d t} = x^{2} + \mu \]
 </p>
 </div>
 </li>
-
-<li><a id="org6cd50f3"></a>Exponential and Line<br />
-<div class="outline-text-7" id="text-6-3-7-1-2-2">
+<li><a id="org66fa65b"></a>Exponential and Line<br />
+<div class="outline-text-7" id="text-7-3-7-1-2-2">
 <p>
 \[ \frac{ d x}{ d t} = \mu - x - e^{-x} \]
 </p>
@@ -3161,30 +3545,26 @@ When an unstable and stable equilibrium point cancel each other out.
 </li>
 </ol>
 </li>
-
-
-<li><a id="org4174b17"></a>Transcritical Bifurcation<br />
+<li><a id="org2f4ebbe"></a>Transcritical Bifurcation<br />
 <ol class="org-ol">
-<li><a id="org97a0052"></a>Definition<br />
-<div class="outline-text-6" id="text-6-3-7-2-1">
+<li><a id="org94424eb"></a>Definition<br />
+<div class="outline-text-6" id="text-7-3-7-2-1">
 <p>
 Exchange of stability of fixed points
 </p>
 </div>
 </li>
-
-<li><a id="org83e8aa5"></a>Examples<br />
+<li><a id="org31b30d4"></a>Examples<br />
 <ol class="org-ol">
-<li><a id="org5de50d4"></a>Normal Form<br />
-<div class="outline-text-7" id="text-6-3-7-2-2-1">
+<li><a id="orge331e31"></a>Normal Form<br />
+<div class="outline-text-7" id="text-7-3-7-2-2-1">
 <p>
 \[ \frac{ d x}{ d t} = \mu x - x^{2} \]
 </p>
 </div>
 </li>
-
-<li><a id="org3cb39e5"></a>Logarithm &amp; Line<br />
-<div class="outline-text-7" id="text-6-3-7-2-2-2">
+<li><a id="org3f4facd"></a>Logarithm &amp; Line<br />
+<div class="outline-text-7" id="text-7-3-7-2-2-2">
 <p>
 \[ \frac{ d x}{ d t} = \mu \log(x) + x - 1 \]
 </p>
@@ -3194,12 +3574,10 @@ Exchange of stability of fixed points
 </li>
 </ol>
 </li>
-
-
-<li><a id="org25579e1"></a>Pitchfork Bifurcations<br />
+<li><a id="orgfe08f9a"></a>Pitchfork Bifurcations<br />
 <ol class="org-ol">
-<li><a id="org61f23f9"></a>Definition<br />
-<div class="outline-text-6" id="text-6-3-7-3-1">
+<li><a id="orgb1ed125"></a>Definition<br />
+<div class="outline-text-6" id="text-7-3-7-3-1">
 <p>
 Both are bifurcations with one fixed point swapping stability and spawning two other fixed points of the original stability.
 </p>
@@ -3221,74 +3599,64 @@ Subcritical Bifurcation -
 </p>
 </div>
 </li>
-
-<li><a id="orgbb42341"></a>Examples<br />
+<li><a id="org59298f5"></a>Examples<br />
 <ol class="org-ol">
-<li><a id="org1a0dd42"></a>Normal Form<br />
-<div class="outline-text-7" id="text-6-3-7-3-2-1">
+<li><a id="orga0d1dd0"></a>Normal Form<br />
+<div class="outline-text-7" id="text-7-3-7-3-2-1">
 <p>
 \[ \frac{ d x}{ d t} = \mu x - x^{3} \]
 </p>
 </div>
 </li>
-
-
-<li><a id="org868dabf"></a><br /></li>
+<li><a id="org44bd0c3"></a><br /></li>
 </ol>
 </li>
 </ol>
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-org1fd39ea" class="outline-4">
-<h4 id="org1fd39ea"><span class="section-number-4">6.3.8.</span> Hopf Bifurcations</h4>
-<div class="outline-text-4" id="text-6-3-8">
+<div id="outline-container-org822d5e9" class="outline-4">
+<h4 id="org822d5e9"><span class="section-number-4">7.3.8.</span> Hopf Bifurcations</h4>
+<div class="outline-text-4" id="text-7-3-8">
 <p>
 A Hopf bifurcation occurs between the transition from fixed point to closed orbit.
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="org4425cb1"></a>Example - Glycolysis<br /></li>
+<li><a id="org17acbf3"></a>Example - Glycolysis<br /></li>
 </ol>
 </div>
 </div>
 </div>
-
-
-
-<div id="outline-container-org4a23707" class="outline-2">
-<h2 id="org4a23707"><span class="section-number-2">7.</span> Partial Differential Equations</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgadb75fb" class="outline-2">
+<h2 id="orgadb75fb"><span class="section-number-2">8.</span> Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-org9be245e" class="outline-3">
-<h3 id="org9be245e"><span class="section-number-3">7.1.</span> Olver PDE</h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-org0529533" class="outline-3">
+<h3 id="org0529533"><span class="section-number-3">8.1.</span> Olver PDE</h3>
+<div class="outline-text-3" id="text-8-1">
 </div>
-<div id="outline-container-orgc59a134" class="outline-4">
-<h4 id="orgc59a134"><span class="section-number-4">7.1.1.</span> Chapter 9</h4>
+<div id="outline-container-org6e71d1e" class="outline-4">
+<h4 id="org6e71d1e"><span class="section-number-4">8.1.1.</span> Chapter 9</h4>
 </div>
 </div>
-
-<div id="outline-container-org5acd15d" class="outline-3">
-<h3 id="org5acd15d"><span class="section-number-3">7.2.</span> PDE Theory</h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-org4eeefe6" class="outline-3">
+<h3 id="org4eeefe6"><span class="section-number-3">8.2.</span> PDE Theory</h3>
+<div class="outline-text-3" id="text-8-2">
 </div>
-<div id="outline-container-orge171597" class="outline-4">
-<h4 id="orge171597"><span class="section-number-4">7.2.1.</span> Classification of PDEs</h4>
+<div id="outline-container-org09336de" class="outline-4">
+<h4 id="org09336de"><span class="section-number-4">8.2.1.</span> Classification of PDEs</h4>
 </div>
 
 
-<div id="outline-container-org3c70dd5" class="outline-4">
-<h4 id="org3c70dd5"><span class="section-number-4">7.2.2.</span> Uniqueness of Solutions</h4>
+<div id="outline-container-orgdc29f65" class="outline-4">
+<h4 id="orgdc29f65"><span class="section-number-4">8.2.2.</span> Uniqueness of Solutions</h4>
 </div>
 
 
-<div id="outline-container-org2f7d70a" class="outline-4">
-<h4 id="org2f7d70a"><span class="section-number-4">7.2.3.</span> Energy Estimates</h4>
-<div class="outline-text-4" id="text-7-2-3">
+<div id="outline-container-org9ce8fc4" class="outline-4">
+<h4 id="org9ce8fc4"><span class="section-number-4">8.2.3.</span> Energy Estimates</h4>
+<div class="outline-text-4" id="text-8-2-3">
 <p>
 Energy is a fundamental idea in PDEs. Three main uses are:
 </p>
@@ -3300,73 +3668,69 @@ Energy is a fundamental idea in PDEs. Three main uses are:
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org33683ba" class="outline-3">
-<h3 id="org33683ba"><span class="section-number-3">7.3.</span> Initial Value Problems</h3>
-<div class="outline-text-3" id="text-7-3">
+<div id="outline-container-org35d49ed" class="outline-3">
+<h3 id="org35d49ed"><span class="section-number-3">8.3.</span> Initial Value Problems</h3>
+<div class="outline-text-3" id="text-8-3">
 </div>
-<div id="outline-container-org9e18031" class="outline-4">
-<h4 id="org9e18031"><span class="section-number-4">7.3.1.</span> First-Order Linear and Quasilinear PDEs</h4>
+<div id="outline-container-org4aa6d97" class="outline-4">
+<h4 id="org4aa6d97"><span class="section-number-4">8.3.1.</span> First-Order Linear and Quasilinear PDEs</h4>
 </div>
 
-<div id="outline-container-orgc077507" class="outline-4">
-<h4 id="orgc077507"><span class="section-number-4">7.3.2.</span> Method of Characteristics</h4>
+<div id="outline-container-orge795b3a" class="outline-4">
+<h4 id="orge795b3a"><span class="section-number-4">8.3.2.</span> Method of Characteristics</h4>
 </div>
 
-<div id="outline-container-org0deeebc" class="outline-4">
-<h4 id="org0deeebc"><span class="section-number-4">7.3.3.</span> Heat Equation</h4>
+<div id="outline-container-org6f54fb6" class="outline-4">
+<h4 id="org6f54fb6"><span class="section-number-4">8.3.3.</span> Heat Equation</h4>
 </div>
 
-<div id="outline-container-org0ed7e32" class="outline-4">
-<h4 id="org0ed7e32"><span class="section-number-4">7.3.4.</span> Wave Equation</h4>
+<div id="outline-container-orgd74d575" class="outline-4">
+<h4 id="orgd74d575"><span class="section-number-4">8.3.4.</span> Wave Equation</h4>
 </div>
 
-<div id="outline-container-org3cdef89" class="outline-4">
-<h4 id="org3cdef89"><span class="section-number-4">7.3.5.</span> Separation of Variables</h4>
+<div id="outline-container-orgae6ef00" class="outline-4">
+<h4 id="orgae6ef00"><span class="section-number-4">8.3.5.</span> Separation of Variables</h4>
 </div>
 
-<div id="outline-container-org4762658" class="outline-4">
-<h4 id="org4762658"><span class="section-number-4">7.3.6.</span> Series Solutions</h4>
+<div id="outline-container-orgd0731c9" class="outline-4">
+<h4 id="orgd0731c9"><span class="section-number-4">8.3.6.</span> Series Solutions</h4>
 </div>
 
-<div id="outline-container-orgbcb7797" class="outline-4">
-<h4 id="orgbcb7797"><span class="section-number-4">7.3.7.</span> Fourier Transform</h4>
+<div id="outline-container-org45efb3c" class="outline-4">
+<h4 id="org45efb3c"><span class="section-number-4">8.3.7.</span> Fourier Transform</h4>
 </div>
 </div>
-
-
-<div id="outline-container-org0515163" class="outline-3">
-<h3 id="org0515163"><span class="section-number-3">7.4.</span> Boundary Value Problems</h3>
-<div class="outline-text-3" id="text-7-4">
+<div id="outline-container-orgd83ec7a" class="outline-3">
+<h3 id="orgd83ec7a"><span class="section-number-3">8.4.</span> Boundary Value Problems</h3>
+<div class="outline-text-3" id="text-8-4">
 </div>
-<div id="outline-container-org27d87f4" class="outline-4">
-<h4 id="org27d87f4"><span class="section-number-4">7.4.1.</span> Laplace Equation</h4>
+<div id="outline-container-orgb66fe56" class="outline-4">
+<h4 id="orgb66fe56"><span class="section-number-4">8.4.1.</span> Laplace Equation</h4>
 </div>
 
-<div id="outline-container-org79a6d84" class="outline-4">
-<h4 id="org79a6d84"><span class="section-number-4">7.4.2.</span> Poisson Equation</h4>
+<div id="outline-container-org4040395" class="outline-4">
+<h4 id="org4040395"><span class="section-number-4">8.4.2.</span> Poisson Equation</h4>
 </div>
 
-<div id="outline-container-org69fcacb" class="outline-4">
-<h4 id="org69fcacb"><span class="section-number-4">7.4.3.</span> Sturm-Liouville Theory</h4>
+<div id="outline-container-org4b7d3fd" class="outline-4">
+<h4 id="org4b7d3fd"><span class="section-number-4">8.4.3.</span> Sturm-Liouville Theory</h4>
 </div>
 
-<div id="outline-container-org25c8cb1" class="outline-4">
-<h4 id="org25c8cb1"><span class="section-number-4">7.4.4.</span> Green's Functions</h4>
+<div id="outline-container-org634c6de" class="outline-4">
+<h4 id="org634c6de"><span class="section-number-4">8.4.4.</span> Green's Functions</h4>
 </div>
 
-<div id="outline-container-org0a6fe4b" class="outline-4">
-<h4 id="org0a6fe4b"><span class="section-number-4">7.4.5.</span> Fundamental Solutions</h4>
+<div id="outline-container-orgc8c70d9" class="outline-4">
+<h4 id="orgc8c70d9"><span class="section-number-4">8.4.5.</span> Fundamental Solutions</h4>
 </div>
 
-<div id="outline-container-orgb4fd6ca" class="outline-4">
-<h4 id="orgb4fd6ca"><span class="section-number-4">7.4.6.</span> Dirichlet and Neumann Boundary Conditions</h4>
+<div id="outline-container-org6f2f542" class="outline-4">
+<h4 id="org6f2f542"><span class="section-number-4">8.4.6.</span> Dirichlet and Neumann Boundary Conditions</h4>
 </div>
 
-<div id="outline-container-org1c5e316" class="outline-4">
-<h4 id="org1c5e316"><span class="section-number-4">7.4.7.</span> Variational Formulations of Boundary Value Problems</h4>
-<div class="outline-text-4" id="text-7-4-7">
+<div id="outline-container-orge6fbdae" class="outline-4">
+<h4 id="orge6fbdae"><span class="section-number-4">8.4.7.</span> Variational Formulations of Boundary Value Problems</h4>
+<div class="outline-text-4" id="text-8-4-7">
 <p>
 A Variational formulation of a Boundary value problem is also known as the <b>weak</b> formulation.
 </p>
@@ -3375,17 +3739,14 @@ A Variational formulation of a Boundary value problem is also known as the <b>we
 This entails one to rewrite the PDE in terms of an integral equation. This is important because when the theory generalizes from continuously differentiable functions to elements of a Sobolev space, we do not have a notion of differentiability in the standard sense. Recall, differentiability implies continuity and functions in \( L^2[0,1] \) are not defined pointwise. This means that \( 0 \) is equivalent to \( \chi_{\{0\}}(x) \) (the characteristic function of the set containing only \( 0 \).
 </p>
 </div>
-
 <ol class="org-ol">
-<li><a id="orgdb4bd60"></a>Laplace Equation<br /></li>
+<li><a id="orge77a46a"></a>Laplace Equation<br /></li>
 </ol>
 </div>
 </div>
-
-
-<div id="outline-container-org70f35fb" class="outline-3">
-<h3 id="org70f35fb"><span class="section-number-3">7.5.</span> General Solving Strategies</h3>
-<div class="outline-text-3" id="text-7-5">
+<div id="outline-container-orgc07644c" class="outline-3">
+<h3 id="orgc07644c"><span class="section-number-3">8.5.</span> General Solving Strategies</h3>
+<div class="outline-text-3" id="text-8-5">
 <ol class="org-ol">
 <li><p>
 If the Boundary Conditions are inhomogeneous, then surmise a solution
@@ -3416,16 +3777,14 @@ Wave on Real Line - Duhammel
 </p></li>
 </ol>
 </div>
-
-
-<div id="outline-container-org3901caf" class="outline-4">
-<h4 id="org3901caf"><span class="section-number-4">7.5.1.</span> Inhomogeneous Boundary Conditions</h4>
+<div id="outline-container-org72b1787" class="outline-4">
+<h4 id="org72b1787"><span class="section-number-4">8.5.1.</span> Inhomogeneous Boundary Conditions</h4>
 </div>
 
 
-<div id="outline-container-org1df2658" class="outline-4">
-<h4 id="org1df2658"><span class="section-number-4">7.5.2.</span> Inhomogeneous PDE</h4>
-<div class="outline-text-4" id="text-7-5-2">
+<div id="outline-container-orgc25582f" class="outline-4">
+<h4 id="orgc25582f"><span class="section-number-4">8.5.2.</span> Inhomogeneous PDE</h4>
+<div class="outline-text-4" id="text-8-5-2">
 <p>
 Use Fundamental Solution
 </p>
@@ -3444,15 +3803,13 @@ Use Fundamental Solution
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org6b69a65" class="outline-3">
-<h3 id="org6b69a65"><span class="section-number-3">7.6.</span> Transport Wave Equation</h3>
-<div class="outline-text-3" id="text-7-6">
+<div id="outline-container-orgc66b745" class="outline-3">
+<h3 id="orgc66b745"><span class="section-number-3">8.6.</span> Transport Wave Equation</h3>
+<div class="outline-text-3" id="text-8-6">
 </div>
-<div id="outline-container-org7d643dd" class="outline-4">
-<h4 id="org7d643dd"><span class="section-number-4">7.6.1.</span> Stationary Waves</h4>
-<div class="outline-text-4" id="text-7-6-1">
+<div id="outline-container-orge388ff7" class="outline-4">
+<h4 id="orge388ff7"><span class="section-number-4">8.6.1.</span> Stationary Waves</h4>
+<div class="outline-text-4" id="text-8-6-1">
 <p>
 Given an equation
 </p>
@@ -3474,10 +3831,9 @@ This implies \( u(x,t) = u(x,0) = f(x) \).
 </p>
 </div>
 </div>
-
-<div id="outline-container-org9153b96" class="outline-4">
-<h4 id="org9153b96"><span class="section-number-4">7.6.2.</span> Transport Waves</h4>
-<div class="outline-text-4" id="text-7-6-2">
+<div id="outline-container-org36c6496" class="outline-4">
+<h4 id="org36c6496"><span class="section-number-4">8.6.2.</span> Transport Waves</h4>
+<div class="outline-text-4" id="text-8-6-2">
 <p>
 Suppose instead we are looking at the PDE
 \[ \frac{ \partial u}{ \partial t} + c \frac{ \partial u}{ \partial x} = 0 \]
@@ -3486,29 +3842,29 @@ Suppose instead we are looking at the PDE
 <p>
 By a change of variables,
 </p>
-
+\begin{align}
 \begin{cases}
 t \to t \\
 x \to x - ct
 \end{cases}
+\end{align}
 </div>
 </div>
-
-<div id="outline-container-orgbfa0723" class="outline-4">
-<h4 id="orgbfa0723"><span class="section-number-4">7.6.3.</span> Transport with Decay</h4>
-</div>
-
-<div id="outline-container-orgdac18f5" class="outline-4">
-<h4 id="orgdac18f5"><span class="section-number-4">7.6.4.</span> Nonuniform Transport</h4>
+<div id="outline-container-org26a4a37" class="outline-4">
+<h4 id="org26a4a37"><span class="section-number-4">8.6.3.</span> Transport with Decay</h4>
 </div>
 
-<div id="outline-container-org28f1a64" class="outline-4">
-<h4 id="org28f1a64"><span class="section-number-4">7.6.5.</span> Nonlinear Transport &amp; Shocks</h4>
+<div id="outline-container-orgd1c4528" class="outline-4">
+<h4 id="orgd1c4528"><span class="section-number-4">8.6.4.</span> Nonuniform Transport</h4>
 </div>
 
-<div id="outline-container-org358a6ed" class="outline-4">
-<h4 id="org358a6ed"><span class="section-number-4">7.6.6.</span> \( u_{t} + b \cdot \nabla u = 0 \)</h4>
-<div class="outline-text-4" id="text-7-6-6">
+<div id="outline-container-org59ad960" class="outline-4">
+<h4 id="org59ad960"><span class="section-number-4">8.6.5.</span> Nonlinear Transport &amp; Shocks</h4>
+</div>
+
+<div id="outline-container-org21086a7" class="outline-4">
+<h4 id="org21086a7"><span class="section-number-4">8.6.6.</span> \( u_{t} + b \cdot \nabla u = 0 \)</h4>
+<div class="outline-text-4" id="text-8-6-6">
 <p>
 Suppose we have the Initial Value Problem
 </p>
@@ -3547,30 +3903,25 @@ This function is the values of the unknown function \( u \) along the lines span
 </p>
 </div>
 </div>
-
-<div id="outline-container-org3234318" class="outline-4">
-<h4 id="org3234318"><span class="section-number-4">7.6.7.</span> d'Alembert's Solution</h4>
+<div id="outline-container-org5e6d726" class="outline-4">
+<h4 id="org5e6d726"><span class="section-number-4">8.6.7.</span> d'Alembert's Solution</h4>
 </div>
 </div>
-
-
-
-<div id="outline-container-orgaa465f0" class="outline-3">
-<h3 id="orgaa465f0"><span class="section-number-3">7.7.</span> Wave Equation</h3>
-<div class="outline-text-3" id="text-7-7">
+<div id="outline-container-orgd053ccd" class="outline-3">
+<h3 id="orgd053ccd"><span class="section-number-3">8.7.</span> Wave Equation</h3>
+<div class="outline-text-3" id="text-8-7">
 </div>
-<div id="outline-container-org85fce74" class="outline-4">
-<h4 id="org85fce74"><span class="section-number-4">7.7.1.</span> Problem 1</h4>
-<div class="outline-text-4" id="text-7-7-1">
+<div id="outline-container-org889848e" class="outline-4">
+<h4 id="org889848e"><span class="section-number-4">8.7.1.</span> Problem 1</h4>
+<div class="outline-text-4" id="text-8-7-1">
 \begin{align}
 \tag{PDE}
 \end{align}
 </div>
 </div>
-
-<div id="outline-container-org5793ab0" class="outline-4">
-<h4 id="org5793ab0"><span class="section-number-4">7.7.2.</span> d'Alambert Solution</h4>
-<div class="outline-text-4" id="text-7-7-2">
+<div id="outline-container-orgb015cee" class="outline-4">
+<h4 id="orgb015cee"><span class="section-number-4">8.7.2.</span> d'Alambert Solution</h4>
+<div class="outline-text-4" id="text-8-7-2">
 \begin{align}
 u_{tt} - c^{2} u_{xx} = 0 \tag{PDE} \\
 u(x, 0) = f(x) \tag{IC 1} \\
@@ -3585,10 +3936,9 @@ Implies that
 </p>
 </div>
 </div>
-
-<div id="outline-container-org1b980fc" class="outline-4">
-<h4 id="org1b980fc"><span class="section-number-4">7.7.3.</span> Duhammel's Principle</h4>
-<div class="outline-text-4" id="text-7-7-3">
+<div id="outline-container-orgc53ac69" class="outline-4">
+<h4 id="orgc53ac69"><span class="section-number-4">8.7.3.</span> Duhammel's Principle</h4>
+<div class="outline-text-4" id="text-8-7-3">
 <p>
 Duhammel's Principle States that we may transform an in Homogeneous PDE of the form
 </p>
@@ -3606,30 +3956,26 @@ The general solution is
 </p>
 </div>
 </div>
-
-
-<div id="outline-container-orgc0c343e" class="outline-4">
-<h4 id="orgc0c343e"><span class="section-number-4">7.7.4.</span> </h4>
+<div id="outline-container-org8766bd1" class="outline-4">
+<h4 id="org8766bd1"><span class="section-number-4">8.7.4.</span> </h4>
 </div>
 </div>
-
-<div id="outline-container-orga6e8e9f" class="outline-3">
-<h3 id="orga6e8e9f"><span class="section-number-3">7.8.</span> Heat Equation</h3>
-<div class="outline-text-3" id="text-7-8">
+<div id="outline-container-org3a7b58c" class="outline-3">
+<h3 id="org3a7b58c"><span class="section-number-3">8.8.</span> Heat Equation</h3>
+<div class="outline-text-3" id="text-8-8">
 <p>
 In the case where the domain is bounded, use Fourier series. In the case of the real line, use the fundamental solution. In the semi-infinite case, extend to the real line (using even or odd extension) then use fundamental solution.
 </p>
 </div>
-
-<div id="outline-container-orgceb40a0" class="outline-4">
-<h4 id="orgceb40a0"><span class="section-number-4">7.8.1.</span> Rod</h4>
-<div class="outline-text-4" id="text-7-8-1">
+<div id="outline-container-orgeaf73a1" class="outline-4">
+<h4 id="orgeaf73a1"><span class="section-number-4">8.8.1.</span> Rod</h4>
+<div class="outline-text-4" id="text-8-8-1">
 </div>
 <ol class="org-ol">
-<li><a id="org9a3c6ca"></a>Time Independent<br />
+<li><a id="org4fbdfba"></a>Time Independent<br />
 <ol class="org-ol">
-<li><a id="org046c026"></a>Dirichlet Homogeneous<br />
-<div class="outline-text-6" id="text-7-8-1-1-1">
+<li><a id="org1a10abe"></a>Dirichlet Homogeneous<br />
+<div class="outline-text-6" id="text-8-8-1-1-1">
 <p>
 Suppose 
 </p>
@@ -3722,11 +4068,8 @@ In the case where the conditions are Neumann, we have a cosine series instead.
 </p>
 </div>
 </li>
-
-
-
-<li><a id="org4896beb"></a>Neumann Homogeneous<br />
-<div class="outline-text-6" id="text-7-8-1-1-2">
+<li><a id="orgf14976a"></a>Neumann Homogeneous<br />
+<div class="outline-text-6" id="text-8-8-1-1-2">
 <p>
 Suppose 
 </p>
@@ -3821,11 +4164,8 @@ In the case where the conditions are Neumann, we have a cosine series instead.
 </li>
 </ol>
 </li>
-
-
-
-<li><a id="org602077c"></a>Time Dependent<br />
-<div class="outline-text-5" id="text-7-8-1-2">
+<li><a id="orgcb6a117"></a>Time Dependent<br />
+<div class="outline-text-5" id="text-8-8-1-2">
 <p>
 Here is our problem:
 </p>
@@ -3874,39 +4214,33 @@ Now we use Duhammel's Principle:
 </li>
 </ol>
 </div>
-
-
-<div id="outline-container-orgfbed0e8" class="outline-4">
-<h4 id="orgfbed0e8"><span class="section-number-4">7.8.2.</span> Duhammel's Principle</h4>
-<div class="outline-text-4" id="text-7-8-2">
+<div id="outline-container-orgf745a50" class="outline-4">
+<h4 id="orgf745a50"><span class="section-number-4">8.8.2.</span> Duhammel's Principle</h4>
+<div class="outline-text-4" id="text-8-8-2">
 <p>
 \[ f \]
 </p>
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org969933b" class="outline-3">
-<h3 id="org969933b"><span class="section-number-3">7.9.</span> Laplace Equation</h3>
-<div class="outline-text-3" id="text-7-9">
+<div id="outline-container-orgbdd36ab" class="outline-3">
+<h3 id="orgbdd36ab"><span class="section-number-3">8.9.</span> Laplace Equation</h3>
+<div class="outline-text-3" id="text-8-9">
 <p>
 \[ \Delta u = 0 \]
 </p>
 </div>
-
-
-<div id="outline-container-org11b1d41" class="outline-4">
-<h4 id="org11b1d41"><span class="section-number-4">7.9.1.</span> Fundamental Solution</h4>
+<div id="outline-container-org1efecef" class="outline-4">
+<h4 id="org1efecef"><span class="section-number-4">8.9.1.</span> Fundamental Solution</h4>
 </div>
 
-<div id="outline-container-org2019d29" class="outline-4">
-<h4 id="org2019d29"><span class="section-number-4">7.9.2.</span> Weak Formulation</h4>
+<div id="outline-container-org274bb3a" class="outline-4">
+<h4 id="org274bb3a"><span class="section-number-4">8.9.2.</span> Weak Formulation</h4>
 </div>
 
-<div id="outline-container-org7547b2e" class="outline-4">
-<h4 id="org7547b2e"><span class="section-number-4">7.9.3.</span> Mean Value Theorem</h4>
-<div class="outline-text-4" id="text-7-9-3">
+<div id="outline-container-org25525b9" class="outline-4">
+<h4 id="org25525b9"><span class="section-number-4">8.9.3.</span> Mean Value Theorem</h4>
+<div class="outline-text-4" id="text-8-9-3">
 <p>
 Let \( u \) satisfy Laplace's Equation. Then
 </p>
@@ -3919,7 +4253,7 @@ Let \( u \) satisfy Laplace's Equation. Then
 This states that the average value over the ball around a point is just the function evaluated at the center of the ball. We note, for continuous functions, if you take the limit of the integral as \( r \to 0 \) then this is true. For harmonic functions, it is special that you do not need the limit.
 </p>
 
-<div class="PROOF" id="orgebdc26c">
+<div class="PROOF" id="org491931d">
 <p>
 We will show that the average value does not change as we vary \( r \) (that is, the partial derivative with respect to \( r \) of the expression is \( 0 \)). Thus, we may take the limit as \( r \to 0 \) and note that the theorem is true for continuous functions. 
 Consider
@@ -3932,39 +4266,35 @@ Consider
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org01032bc" class="outline-4">
-<h4 id="org01032bc"><span class="section-number-4">7.9.4.</span> Maximum Principal</h4>
+<div id="outline-container-org8502617" class="outline-4">
+<h4 id="org8502617"><span class="section-number-4">8.9.4.</span> Maximum Principal</h4>
 </div>
 
-<div id="outline-container-orgdb50be5" class="outline-4">
-<h4 id="orgdb50be5"><span class="section-number-4">7.9.5.</span> Solution</h4>
+<div id="outline-container-org8f52d92" class="outline-4">
+<h4 id="org8f52d92"><span class="section-number-4">8.9.5.</span> Solution</h4>
 </div>
 </div>
-
-
-<div id="outline-container-org982adaa" class="outline-3">
-<h3 id="org982adaa"><span class="section-number-3">7.10.</span> Methods</h3>
-<div class="outline-text-3" id="text-7-10">
+<div id="outline-container-orge0883ab" class="outline-3">
+<h3 id="orge0883ab"><span class="section-number-3">8.10.</span> Methods</h3>
+<div class="outline-text-3" id="text-8-10">
 </div>
-<div id="outline-container-org1fcc1ba" class="outline-4">
-<h4 id="org1fcc1ba"><span class="section-number-4">7.10.1.</span> Characteristics</h4>
+<div id="outline-container-orgcce7b38" class="outline-4">
+<h4 id="orgcce7b38"><span class="section-number-4">8.10.1.</span> Characteristics</h4>
 </div>
 
 
-<div id="outline-container-orgf7d66b5" class="outline-4">
-<h4 id="orgf7d66b5"><span class="section-number-4">7.10.2.</span> Separation of Variables</h4>
+<div id="outline-container-org43b8eb8" class="outline-4">
+<h4 id="org43b8eb8"><span class="section-number-4">8.10.2.</span> Separation of Variables</h4>
 </div>
 
 
-<div id="outline-container-org4b81309" class="outline-4">
-<h4 id="org4b81309"><span class="section-number-4">7.10.3.</span> Fourier Series</h4>
-<div class="outline-text-4" id="text-7-10-3">
+<div id="outline-container-org8982217" class="outline-4">
+<h4 id="org8982217"><span class="section-number-4">8.10.3.</span> Fourier Series</h4>
+<div class="outline-text-4" id="text-8-10-3">
 </div>
 <ol class="org-ol">
-<li><a id="orgdbbe4f3"></a>Rod<br />
-<div class="outline-text-5" id="text-7-10-3-1">
+<li><a id="org8962e5e"></a>Rod<br />
+<div class="outline-text-5" id="text-8-10-3-1">
 <p>
 \[ f(x) = \frac{a_{0}}{2} + \sum_{k = 1}^{\infty} \left[ a_{k} \cos(kx) + b_{k} \sin(kx) \right] \]
 </p>
@@ -3979,14 +4309,12 @@ b_{k} &= \left\langle f , \sin(kx) \right\rangle = \frac{1}{\pi} \int_{-\pi}^{\p
 \end{align}
 </div>
 </li>
-
-<li><a id="org5d9f473"></a>Semi Infinite Plane<br /></li>
+<li><a id="org3951989"></a>Semi Infinite Plane<br /></li>
 </ol>
 </div>
-
-<div id="outline-container-org489a2f1" class="outline-4">
-<h4 id="org489a2f1"><span class="section-number-4">7.10.4.</span> Duhamel's Principle</h4>
-<div class="outline-text-4" id="text-7-10-4">
+<div id="outline-container-org1f9ebed" class="outline-4">
+<h4 id="org1f9ebed"><span class="section-number-4">8.10.4.</span> Duhamel's Principle</h4>
+<div class="outline-text-4" id="text-8-10-4">
 <p>
 Duhamel's Principle states:
 </p>
@@ -4049,19 +4377,17 @@ Remember this is a sin series because of the homogeneous Dirichlet BC.
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgeba8c7d" class="outline-3">
-<h3 id="orgeba8c7d"><span class="section-number-3">7.11.</span> Variational Methods</h3>
-<div class="outline-text-3" id="text-7-11">
+<div id="outline-container-org7aa4ca8" class="outline-3">
+<h3 id="org7aa4ca8"><span class="section-number-3">8.11.</span> Variational Methods</h3>
+<div class="outline-text-3" id="text-8-11">
 <p>
 \[  \]
 </p>
 </div>
 </div>
-
-<div id="outline-container-org01b3444" class="outline-3">
-<h3 id="org01b3444"><span class="section-number-3">7.12.</span> Euler Lagrange Equation</h3>
-<div class="outline-text-3" id="text-7-12">
+<div id="outline-container-orgaf9b1e6" class="outline-3">
+<h3 id="orgaf9b1e6"><span class="section-number-3">8.12.</span> Euler Lagrange Equation</h3>
+<div class="outline-text-3" id="text-8-12">
 <p>
 \[ \frac{ \partial L}{ \partial u} - \frac{ d }{ d x} \frac{ \partial L}{ \partial u'} = 0  \]
 </p>
@@ -4078,6 +4404,81 @@ In the context of my qual problem
 <p>
 \[ - e^{2x} - \frac{ d }{ d x} e^{x} u' = -e^{2x} - e^{x} u' - e^{x} u'' = 0 \]
 </p>
+</div>
+</div>
+<div id="outline-container-org2d6bdfd" class="outline-3">
+<h3 id="org2d6bdfd"><span class="section-number-3">8.13.</span> Duhammel's Principle</h3>
+<div class="outline-text-3" id="text-8-13">
+<p>
+Duhammel's Principle states:
+</p>
+
+<p>
+Given an IBVP
+</p>
+
+\begin{align}
+u_{t}(x,t) - L[u](x,t) &= f(x,t) \tag{PDE} \\
+u \vert_{\partial \Omega} &= 0 \tag{BC} \\
+u(x,0) &= 0 \tag{IC}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org14b5c4f" class="outline-3">
+<h3 id="org14b5c4f"><span class="section-number-3">8.14.</span> Lax-Milgram Theorem</h3>
+<div class="outline-text-3" id="text-8-14">
+<p>
+Given a
+</p>
+
+<ul class="org-ul">
+<li>bilinear (linear in each argument)</li>
+
+<li>symmetric (\( a(u,v) = a(v,u) \))</li>
+</ul>
+
+<p>
+-continuous (\( | a(u,v) | \leq C \| u \| \| v \| \))
+</p>
+
+<ul class="org-ul">
+<li><p>
+coercive form (\( a(u,u) \geq \alpha \| u \|^{2} \))
+</p>
+
+<p>
+\( a \colon V \times V \to \mathbb{R} \) then,
+</p></li>
+</ul>
+
+<p>
+\[ \argmin_{v \in V} \frac{1}{2} a(v,v) - \ell(v) \]
+</p>
+
+<p>
+has a unique solution.
+</p>
+</div>
+</div>
+<div id="outline-container-org2760830" class="outline-3">
+<h3 id="org2760830"><span class="section-number-3">8.15.</span> \( S[u] = f \) has a Unique solution when \( S \) is self adjoint</h3>
+</div>
+
+<div id="outline-container-orgf7c4f48" class="outline-3">
+<h3 id="orgf7c4f48"><span class="section-number-3">8.16.</span> Self Adjoint Operators</h3>
+<div class="outline-text-3" id="text-8-16">
+<p>
+The adjoint of the derivative operator
+</p>
+
+<p>
+\[ \left\langle L[u], v \right\rangle = \int_{\Omega} u' v dx = \int_{\partial \Omega} u v dx - \int_{\Omega} u v' dx = \int_{\Omega} u (- v') dx = \left\langle u, L^{\ast}[v] \right\rangle \]
+</p>
+
+
+\begin{align}
+\int_{\Omega} -u'' v
+\end{align}
 </div>
 </div>
 </div>
