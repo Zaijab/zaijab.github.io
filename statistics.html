@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-06-23 Sun 23:43 -->
+<!-- 2024-06-24 Mon 00:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Statistics</title>
@@ -208,8 +208,7 @@
     tex: {
       packages: {'[+]': ['xypic']},
       macros: {
-        RR: "{\bf R}",
-        bold: ["{\bf #1}",1]
+        R: "{\\bf R}",
       }
     }
   };
@@ -218,16 +217,16 @@
 </head>
 <body>
 <div id="content" class="content">
-<div id="outline-container-org5518df1" class="outline-2">
-<h2 id="org5518df1"><span class="section-number-2">1.</span> Probability</h2>
+<div id="outline-container-orgbfa8ea4" class="outline-2">
+<h2 id="orgbfa8ea4"><span class="section-number-2">1.</span> Probability</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org89dd03f" class="outline-3">
-<h3 id="org89dd03f"><span class="section-number-3">1.1.</span> Intuition</h3>
+<div id="outline-container-orgc1b5bea" class="outline-3">
+<h3 id="orgc1b5bea"><span class="section-number-3">1.1.</span> Intuition</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-org901a54f" class="outline-4">
-<h4 id="org901a54f"><span class="section-number-4">1.1.1.</span> Logic of the Real World</h4>
+<div id="outline-container-org4ebce9d" class="outline-4">
+<h4 id="org4ebce9d"><span class="section-number-4">1.1.1.</span> Logic of the Real World</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 Mathematics takes place in a deterministic framework. Theorems are not true "sometimes", they have been true since the inception of their axioms and definitions. They were true by the time you outline what it means to be true. To logically deduce something, one must begin with a base collection of axioms and use rules of inference which produce statements which are as true as the axioms. This approach is useful for mathematics, however this framework of deduction is almost never used in the real world. We cannot answer the following questions using logical deductions:
@@ -248,8 +247,8 @@ We
 </p>
 </div>
 </div>
-<div id="outline-container-orgfece933" class="outline-4">
-<h4 id="orgfece933"><span class="section-number-4">1.1.2.</span> Formalism</h4>
+<div id="outline-container-orga7e417d" class="outline-4">
+<h4 id="orga7e417d"><span class="section-number-4">1.1.2.</span> Formalism</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 Now that we have a collection of rules by which we want our system of logic to follow, we may begin to formalize the process of using them mathematically. This formalism will give us multiple benefits:
@@ -267,23 +266,23 @@ Let us begin by looking at some problems in which this formalism would be useful
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org0b59014"></a>Bertrand's Circle Paradox<br /></li>
+<li><a id="orgcf121b7"></a>Bertrand's Circle Paradox<br /></li>
 
 
-<li><a id="orgfeaa962"></a>Random Variables which are Neither Discrete nor Continuous<br />
+<li><a id="org658f379"></a>Random Variables which are Neither Discrete nor Continuous<br />
 <div class="outline-text-5" id="text-1-1-2-2">
 <p>
 Let us consider a simple random process
 </p>
 </div>
 </li>
-<li><a id="org5d5b30a"></a>Probabilities over Tricky Sets<br /></li>
+<li><a id="org9314b35"></a>Probabilities over Tricky Sets<br /></li>
 
 
-<li><a id="orgdb26041"></a>Distribution Functions<br /></li>
+<li><a id="org5bf279b"></a>Distribution Functions<br /></li>
 
 
-<li><a id="orgd163ad7"></a>Strong Law of Large Numbers<br />
+<li><a id="org7a2250f"></a>Strong Law of Large Numbers<br />
 <div class="outline-text-5" id="text-1-1-2-5">
 <p>
 One of the most intuitive ways to think about probability is that of frequentism. That is, if one were to perform a process a number of times, then the long run results will "tend" towards something. In truth, convergence is a tricky subject and we will revisit it. However, we will try to intuitively feel what these statements mean.
@@ -355,14 +354,14 @@ These sorts of sequences can’t converge*, and if the possible sequences of  X
 </p>
 </div>
 </li>
-<li><a id="org56800d7"></a>Convergence<br /></li>
+<li><a id="orge2f8bf4"></a>Convergence<br /></li>
 
 
 
-<li><a id="org55ce682"></a>Random Vectors<br /></li>
+<li><a id="org0bd815f"></a>Random Vectors<br /></li>
 
 
-<li><a id="org4974b57"></a>Brownian Motion<br />
+<li><a id="org849c269"></a>Brownian Motion<br />
 <div class="outline-text-5" id="text-1-1-2-8">
 <p>
 While observing pollen under a microscope, Dr. Brown noticed that they tend to jiggle in a seemingly random way.
@@ -373,78 +372,78 @@ In order to justify how one
 </p>
 </div>
 </li>
-<li><a id="org04d618e"></a>Stochastic Differential Equations<br /></li>
+<li><a id="org4913199"></a>Stochastic Differential Equations<br /></li>
 
 
-<li><a id="org159261e"></a>Equivalent Systems<br /></li>
+<li><a id="org506a1c0"></a>Equivalent Systems<br /></li>
 </ol>
 </div>
-<div id="outline-container-orgc682c70" class="outline-4">
-<h4 id="orgc682c70"><span class="section-number-4">1.1.3.</span> Parameterized Models</h4>
+<div id="outline-container-org0a4f084" class="outline-4">
+<h4 id="org0a4f084"><span class="section-number-4">1.1.3.</span> Parameterized Models</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 There are many examples of probability spaces. We may even collect some related spaces as an infinite family. 
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org47b49c0"></a>Normal Distribution<br /></li>
+<li><a id="orga05483d"></a>Normal Distribution<br /></li>
 
-<li><a id="org4af3e8a"></a>Exponential Distribution<br /></li>
+<li><a id="org3c8abc7"></a>Exponential Distribution<br /></li>
 
-<li><a id="org917e811"></a><br /></li>
+<li><a id="org0cf8eca"></a><br /></li>
 </ol>
 </div>
-<div id="outline-container-orgef5e7c6" class="outline-4">
-<h4 id="orgef5e7c6"><span class="section-number-4">1.1.4.</span> Random Variables</h4>
+<div id="outline-container-org3209448" class="outline-4">
+<h4 id="org3209448"><span class="section-number-4">1.1.4.</span> Random Variables</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <p>
 Given 
 </p>
 </div>
 </div>
-<div id="outline-container-org20ebb02" class="outline-4">
-<h4 id="org20ebb02"><span class="section-number-4">1.1.5.</span> Probability Inequalities</h4>
+<div id="outline-container-orgd9bea2c" class="outline-4">
+<h4 id="orgd9bea2c"><span class="section-number-4">1.1.5.</span> Probability Inequalities</h4>
 <div class="outline-text-4" id="text-1-1-5">
 </div>
 <ol class="org-ol">
-<li><a id="org477995b"></a>Jensen's Inequality<br /></li>
+<li><a id="orgcdd99bd"></a>Jensen's Inequality<br /></li>
 
-<li><a id="orge1c0104"></a>Chebychev's Inequality<br /></li>
+<li><a id="org46504ed"></a>Chebychev's Inequality<br /></li>
 
-<li><a id="org37ec240"></a>Cantelli's Inequality<br /></li>
+<li><a id="org10b5d4e"></a>Cantelli's Inequality<br /></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org59ae6a9" class="outline-3">
-<h3 id="org59ae6a9"><span class="section-number-3">1.2.</span> Parametric Models</h3>
+<div id="outline-container-orgd901f29" class="outline-3">
+<h3 id="orgd901f29"><span class="section-number-3">1.2.</span> Parametric Models</h3>
 </div>
 
 
 
-<div id="outline-container-orge734906" class="outline-3">
-<h3 id="orge734906"><span class="section-number-3">1.3.</span> Summary</h3>
+<div id="outline-container-orgd4ce1a4" class="outline-3">
+<h3 id="orgd4ce1a4"><span class="section-number-3">1.3.</span> Summary</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org2486c45" class="outline-4">
-<h4 id="org2486c45"><span class="section-number-4">1.3.1.</span> Sample Space</h4>
+<div id="outline-container-orga604987" class="outline-4">
+<h4 id="orga604987"><span class="section-number-4">1.3.1.</span> Sample Space</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 The sample space is a set, normally denoted \( \Omega \). There are no restrictions associated with the set other than that it is a set. We will not dive too deep into the notions of set theory. However we may display some of the second order logical underpinnings of the theory.
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="org7189f48"></a>Theorems of Set Theory<br />
+<li><a id="orga9b1317"></a>Theorems of Set Theory<br />
 <ol class="org-ol">
-<li><a id="org2ab6cf3"></a>There Exists an Empty Set<br />
+<li><a id="orgbf22bb0"></a>There Exists an Empty Set<br />
 <div class="outline-text-6" id="text-1-3-1-1-1">
-<div class="THEOREM" id="org12433f9">
+<div class="THEOREM" id="orgcfc2ae9">
 <p>
 \[ \exists! \emptyset \colon \forall x \colon x \not \in \emptyset \]
 </p>
 
 </div>
 
-<div class="PROOF" id="org4791597">
+<div class="PROOF" id="orga4933cb">
 \begin{lflalign}
 \exists N \tag{Axiom of Infinity} \\
 \exists x \colon \{ x \in N \mid x \neq x \} \tag{Axiom Schema of Comprehension}
@@ -453,9 +452,9 @@ The sample space is a set, normally denoted \( \Omega \). There are no restricti
 </div>
 </div>
 </li>
-<li><a id="org711d43c"></a>The Cartesian Product Exists<br /></li>
+<li><a id="org8e4ce2a"></a>The Cartesian Product Exists<br /></li>
 
-<li><a id="orgda7a3f4"></a>Axioms of Set Theory<br />
+<li><a id="org8a7feaa"></a>Axioms of Set Theory<br />
 <div class="outline-text-6" id="text-1-3-1-1-3">
 <ul class="org-ul">
 <li>Axiom of Extensionality</li>
@@ -482,12 +481,12 @@ The sample space is a set, normally denoted \( \Omega \). There are no restricti
 </li>
 </ol>
 </div>
-<div id="outline-container-orgb113ebb" class="outline-4">
-<h4 id="orgb113ebb"><span class="section-number-4">1.3.2.</span> Event Space</h4>
+<div id="outline-container-org1cdfa02" class="outline-4">
+<h4 id="org1cdfa02"><span class="section-number-4">1.3.2.</span> Event Space</h4>
 </div>
 
-<div id="outline-container-orgc0af5e3" class="outline-4">
-<h4 id="orgc0af5e3"><span class="section-number-4">1.3.3.</span> Probability Measure</h4>
+<div id="outline-container-orga495a1a" class="outline-4">
+<h4 id="orga495a1a"><span class="section-number-4">1.3.3.</span> Probability Measure</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <p>
 A <b>probability measure</b> \( \mathbb{P} \colon \mathcal{F} \to \mathbb{R}_{\geq 0} \) 
@@ -506,8 +505,8 @@ is a function from an event space to the positive real number such that
 </p>
 </div>
 </div>
-<div id="outline-container-orgf3a0c75" class="outline-4">
-<h4 id="orgf3a0c75"><span class="section-number-4">1.3.4.</span> Random Variable</h4>
+<div id="outline-container-orgfd77e08" class="outline-4">
+<h4 id="orgfd77e08"><span class="section-number-4">1.3.4.</span> Random Variable</h4>
 <div class="outline-text-4" id="text-1-3-4">
 <p>
 A random variable is a measurable function to \( \mathbb{R} \).
@@ -537,43 +536,43 @@ X_{\ast}(\mathbb{P}) \colon
 \end{align*}
 </div>
 <ol class="org-ol">
-<li><a id="orga3b2551"></a>Normal Random Variables<br /></li>
+<li><a id="org689887b"></a>Normal Random Variables<br /></li>
 
-<li><a id="orgac7861d"></a>Bernouli Random Variables<br /></li>
+<li><a id="org1c5e06f"></a>Bernouli Random Variables<br /></li>
 </ol>
 </div>
-<div id="outline-container-org94d1da8" class="outline-4">
-<h4 id="org94d1da8"><span class="section-number-4">1.3.5.</span> Expectation of Random Variables</h4>
+<div id="outline-container-org1f9603a" class="outline-4">
+<h4 id="org1f9603a"><span class="section-number-4">1.3.5.</span> Expectation of Random Variables</h4>
 </div>
 
-<div id="outline-container-org0ff0bf1" class="outline-4">
-<h4 id="org0ff0bf1"><span class="section-number-4">1.3.6.</span> Variance of Random Variables</h4>
+<div id="outline-container-org6ef8afc" class="outline-4">
+<h4 id="org6ef8afc"><span class="section-number-4">1.3.6.</span> Variance of Random Variables</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org5f677ac" class="outline-2">
-<h2 id="org5f677ac"><span class="section-number-2">2.</span> Parametric Models</h2>
+<div id="outline-container-orga34a9c5" class="outline-2">
+<h2 id="orga34a9c5"><span class="section-number-2">2.</span> Parametric Models</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgc4681be" class="outline-3">
-<h3 id="orgc4681be"><span class="section-number-3">2.1.</span> Summary</h3>
+<div id="outline-container-org7bb9801" class="outline-3">
+<h3 id="org7bb9801"><span class="section-number-3">2.1.</span> Summary</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgc4fb5fd" class="outline-4">
-<h4 id="orgc4fb5fd"><span class="section-number-4">2.1.1.</span> Normal Random Variable</h4>
+<div id="outline-container-org4c1a6ec" class="outline-4">
+<h4 id="org4c1a6ec"><span class="section-number-4">2.1.1.</span> Normal Random Variable</h4>
 </div>
 
-<div id="outline-container-org4ae4e3b" class="outline-4">
-<h4 id="org4ae4e3b"><span class="section-number-4">2.1.2.</span> Exponential Random Variable</h4>
+<div id="outline-container-org316fe83" class="outline-4">
+<h4 id="org316fe83"><span class="section-number-4">2.1.2.</span> Exponential Random Variable</h4>
 </div>
 
-<div id="outline-container-org4968241" class="outline-4">
-<h4 id="org4968241"><span class="section-number-4">2.1.3.</span> Geometric Random Variable</h4>
+<div id="outline-container-org9ef16e9" class="outline-4">
+<h4 id="org9ef16e9"><span class="section-number-4">2.1.3.</span> Geometric Random Variable</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org046d335" class="outline-2">
-<h2 id="org046d335"><span class="section-number-2">3.</span> Classical Statistics</h2>
+<div id="outline-container-org630e2fe" class="outline-2">
+<h2 id="org630e2fe"><span class="section-number-2">3.</span> Classical Statistics</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The world changes, the world <b>happens</b>. We as humans wish to understand what happens inside of the world. The most successful methods of understanding has been to seek an underlying principle by which the world operates:
@@ -628,8 +627,8 @@ Statistics is concerned with collecting, analyzing, interpreting, and presenting
 Probability allows for a generalized logical system pertaining to real world events. For the most part, the field starts off with the problem solver already knowing all of the ins and outs of the hypotheses of the problem. Probabilists need not concern themselves with the probability of flipping a coin. They may call the chance of heads, \( p \), and move on with what counting exercise they so wish.
 </p>
 </div>
-<div id="outline-container-orgae82be3" class="outline-3">
-<h3 id="orgae82be3"><span class="section-number-3">3.1.</span> Dataset Size on Accuracy</h3>
+<div id="outline-container-orgf32449b" class="outline-3">
+<h3 id="orgf32449b"><span class="section-number-3">3.1.</span> Dataset Size on Accuracy</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 If \( X_{i} \) are iid \( Uniform(\text{Classes}) \)  
@@ -645,14 +644,14 @@ plt.plot(points)
 </div>
 </div>
 </div>
-<div id="outline-container-org16224ea" class="outline-3">
-<h3 id="org16224ea"><span class="section-number-3">3.2.</span> Cramer-Rao Bound</h3>
+<div id="outline-container-org182e823" class="outline-3">
+<h3 id="org182e823"><span class="section-number-3">3.2.</span> Cramer-Rao Bound</h3>
 </div>
 
 
 
-<div id="outline-container-org31a97a4" class="outline-3">
-<h3 id="org31a97a4"><span class="section-number-3">3.3.</span> Estimation</h3>
+<div id="outline-container-orge090acf" class="outline-3">
+<h3 id="orge090acf"><span class="section-number-3">3.3.</span> Estimation</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 In statistics, we are often concerned with the estimation of certain quantities in the absence of a precise formulation of said quantity.
@@ -663,8 +662,8 @@ For example, we like living longer and healthier, right? We have an <b>intuition
 </p>
 </div>
 </div>
-<div id="outline-container-org32359ae" class="outline-3">
-<h3 id="org32359ae"><span class="section-number-3">3.4.</span> Estimation of Parameters - General Problem Setup</h3>
+<div id="outline-container-orgffb3ce0" class="outline-3">
+<h3 id="orgffb3ce0"><span class="section-number-3">3.4.</span> Estimation of Parameters - General Problem Setup</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 In statistics, we assume that a population can be modeled by some general class of functions. Our task is then to specify which function in the class has the "closest" behavior in some sense to our data.
@@ -679,47 +678,47 @@ We are concerned with families of the form
 </p>
 </div>
 </div>
-<div id="outline-container-org4fe8c47" class="outline-3">
-<h3 id="org4fe8c47"><span class="section-number-3">3.5.</span> Given Data Estimate the Mean</h3>
+<div id="outline-container-org6f203a9" class="outline-3">
+<h3 id="org6f203a9"><span class="section-number-3">3.5.</span> Given Data Estimate the Mean</h3>
 </div>
 
-<div id="outline-container-org9785a1f" class="outline-3">
-<h3 id="org9785a1f"><span class="section-number-3">3.6.</span> Given Data Estimate the Variance</h3>
+<div id="outline-container-org3570af6" class="outline-3">
+<h3 id="org3570af6"><span class="section-number-3">3.6.</span> Given Data Estimate the Variance</h3>
 </div>
 
-<div id="outline-container-org02b8f20" class="outline-3">
-<h3 id="org02b8f20"><span class="section-number-3">3.7.</span> Given conditional distributions estimate the total population</h3>
-</div>
-
-
-<div id="outline-container-org17c062f" class="outline-3">
-<h3 id="org17c062f"><span class="section-number-3">3.8.</span> Given Data Estimate the Total Gradient</h3>
-</div>
-
-<div id="outline-container-orgf7ab14f" class="outline-3">
-<h3 id="orgf7ab14f"><span class="section-number-3">3.9.</span> Given Data Estimate the Natural Gradient</h3>
+<div id="outline-container-org87a980c" class="outline-3">
+<h3 id="org87a980c"><span class="section-number-3">3.7.</span> Given conditional distributions estimate the total population</h3>
 </div>
 
 
-<div id="outline-container-orga6b8d73" class="outline-3">
-<h3 id="orga6b8d73"><span class="section-number-3">3.10.</span> Summary</h3>
+<div id="outline-container-orga14c1bb" class="outline-3">
+<h3 id="orga14c1bb"><span class="section-number-3">3.8.</span> Given Data Estimate the Total Gradient</h3>
+</div>
+
+<div id="outline-container-org639ac7b" class="outline-3">
+<h3 id="org639ac7b"><span class="section-number-3">3.9.</span> Given Data Estimate the Natural Gradient</h3>
+</div>
+
+
+<div id="outline-container-org378241d" class="outline-3">
+<h3 id="org378241d"><span class="section-number-3">3.10.</span> Summary</h3>
 <div class="outline-text-3" id="text-3-10">
 </div>
-<div id="outline-container-orgd341e7d" class="outline-4">
-<h4 id="orgd341e7d"><span class="section-number-4">3.10.1.</span> Cramer-Rao Bound</h4>
+<div id="outline-container-org16a977c" class="outline-4">
+<h4 id="org16a977c"><span class="section-number-4">3.10.1.</span> Cramer-Rao Bound</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org36bc57d" class="outline-2">
-<h2 id="org36bc57d"><span class="section-number-2">4.</span> Information Theory</h2>
+<div id="outline-container-org292f055" class="outline-2">
+<h2 id="org292f055"><span class="section-number-2">4.</span> Information Theory</h2>
 </div>
 
-<div id="outline-container-org96008a8" class="outline-2">
-<h2 id="org96008a8"><span class="section-number-2">5.</span> Statistical Learning Theory</h2>
+<div id="outline-container-org1fdc4cc" class="outline-2">
+<h2 id="org1fdc4cc"><span class="section-number-2">5.</span> Statistical Learning Theory</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org5c55535" class="outline-3">
-<h3 id="org5c55535"><span class="section-number-3">5.1.</span> The PAC Learning Framework</h3>
+<div id="outline-container-orgbb1e510" class="outline-3">
+<h3 id="orgbb1e510"><span class="section-number-3">5.1.</span> The PAC Learning Framework</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 PAC - Probably Approximately Correct
@@ -730,14 +729,14 @@ The PAC framework specifies a class of learnable concepts by specifying the numb
 </p>
 </div>
 </div>
-<div id="outline-container-org3bedb86" class="outline-3">
-<h3 id="org3bedb86"><span class="section-number-3">5.2.</span> Active Learning</h3>
+<div id="outline-container-org71925d5" class="outline-3">
+<h3 id="org71925d5"><span class="section-number-3">5.2.</span> Active Learning</h3>
 </div>
 
 
 
-<div id="outline-container-org89fc149" class="outline-3">
-<h3 id="org89fc149"><span class="section-number-3">5.3.</span> Model Evaluation</h3>
+<div id="outline-container-org77c3f40" class="outline-3">
+<h3 id="org77c3f40"><span class="section-number-3">5.3.</span> Model Evaluation</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 Recall that a model is defined very broadly to mean a function.
@@ -752,8 +751,8 @@ Typically this function comes from a parameterized set such that it is able to a
 </p>
 </div>
 </div>
-<div id="outline-container-orge0db362" class="outline-3">
-<h3 id="orge0db362"><span class="section-number-3">5.4.</span> Classification</h3>
+<div id="outline-container-org9c780f5" class="outline-3">
+<h3 id="org9c780f5"><span class="section-number-3">5.4.</span> Classification</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 In the task of classification, we have input features \( X \in \mathbb{R}^{n \times m} \) and output \( y \in \{ g \}_{g = 1}^{c} \).
@@ -763,102 +762,102 @@ In the task of classification, we have input features \( X \in \mathbb{R}^{n \ti
 We would like our models to be "correct" a lot of the time. However, there are subtleties involved with using only one metric for evaluation.
 </p>
 </div>
-<div id="outline-container-orgdf98161" class="outline-4">
-<h4 id="orgdf98161"><span class="section-number-4">5.4.1.</span> Accuracy</h4>
+<div id="outline-container-orgc29980c" class="outline-4">
+<h4 id="orgc29980c"><span class="section-number-4">5.4.1.</span> Accuracy</h4>
 </div>
 
 
 
-<div id="outline-container-org7560d2c" class="outline-4">
-<h4 id="org7560d2c"><span class="section-number-4">5.4.2.</span> Precision</h4>
+<div id="outline-container-org24f3a99" class="outline-4">
+<h4 id="org24f3a99"><span class="section-number-4">5.4.2.</span> Precision</h4>
 </div>
 
 
-<div id="outline-container-org56ea56b" class="outline-4">
-<h4 id="org56ea56b"><span class="section-number-4">5.4.3.</span> Recall</h4>
+<div id="outline-container-org781f52a" class="outline-4">
+<h4 id="org781f52a"><span class="section-number-4">5.4.3.</span> Recall</h4>
 </div>
 
-<div id="outline-container-orgce140c9" class="outline-4">
-<h4 id="orgce140c9"><span class="section-number-4">5.4.4.</span> Specificity</h4>
+<div id="outline-container-orgd8734b7" class="outline-4">
+<h4 id="orgd8734b7"><span class="section-number-4">5.4.4.</span> Specificity</h4>
 </div>
 
-<div id="outline-container-org5c92ed2" class="outline-4">
-<h4 id="org5c92ed2"><span class="section-number-4">5.4.5.</span> Sensitivity</h4>
+<div id="outline-container-orgc6e1123" class="outline-4">
+<h4 id="orgc6e1123"><span class="section-number-4">5.4.5.</span> Sensitivity</h4>
 </div>
 
-<div id="outline-container-org1459fb9" class="outline-4">
-<h4 id="org1459fb9"><span class="section-number-4">5.4.6.</span> ROC Curve</h4>
+<div id="outline-container-org5ad6c65" class="outline-4">
+<h4 id="org5ad6c65"><span class="section-number-4">5.4.6.</span> ROC Curve</h4>
 </div>
 </div>
-<div id="outline-container-org20ff121" class="outline-3">
-<h3 id="org20ff121"><span class="section-number-3">5.5.</span> Model Fairness and Bias</h3>
+<div id="outline-container-orga8ba915" class="outline-3">
+<h3 id="orga8ba915"><span class="section-number-3">5.5.</span> Model Fairness and Bias</h3>
 </div>
 
 
 
-<div id="outline-container-org87bdb83" class="outline-3">
-<h3 id="org87bdb83"><span class="section-number-3">5.6.</span> Summary</h3>
+<div id="outline-container-org1aa9651" class="outline-3">
+<h3 id="org1aa9651"><span class="section-number-3">5.6.</span> Summary</h3>
 <div class="outline-text-3" id="text-5-6">
 </div>
-<div id="outline-container-orgd325440" class="outline-4">
-<h4 id="orgd325440"><span class="section-number-4">5.6.1.</span> Confusion Matrix</h4>
+<div id="outline-container-orgba9843a" class="outline-4">
+<h4 id="orgba9843a"><span class="section-number-4">5.6.1.</span> Confusion Matrix</h4>
 </div>
 
-<div id="outline-container-org8e523b4" class="outline-4">
-<h4 id="org8e523b4"><span class="section-number-4">5.6.2.</span> True Positive Rate</h4>
+<div id="outline-container-orgf0d4f40" class="outline-4">
+<h4 id="orgf0d4f40"><span class="section-number-4">5.6.2.</span> True Positive Rate</h4>
 </div>
 
-<div id="outline-container-orgc227bce" class="outline-4">
-<h4 id="orgc227bce"><span class="section-number-4">5.6.3.</span> False Positive Rate</h4>
+<div id="outline-container-orgcf31c50" class="outline-4">
+<h4 id="orgcf31c50"><span class="section-number-4">5.6.3.</span> False Positive Rate</h4>
 </div>
 
-<div id="outline-container-orgf31a074" class="outline-4">
-<h4 id="orgf31a074"><span class="section-number-4">5.6.4.</span> Sensitivity</h4>
+<div id="outline-container-orge322a7b" class="outline-4">
+<h4 id="orge322a7b"><span class="section-number-4">5.6.4.</span> Sensitivity</h4>
 </div>
 
-<div id="outline-container-org4920d37" class="outline-4">
-<h4 id="org4920d37"><span class="section-number-4">5.6.5.</span> Specificity</h4>
+<div id="outline-container-org11ff053" class="outline-4">
+<h4 id="org11ff053"><span class="section-number-4">5.6.5.</span> Specificity</h4>
 </div>
 
-<div id="outline-container-org6f44e6a" class="outline-4">
-<h4 id="org6f44e6a"><span class="section-number-4">5.6.6.</span> Recall</h4>
+<div id="outline-container-orgc216c4d" class="outline-4">
+<h4 id="orgc216c4d"><span class="section-number-4">5.6.6.</span> Recall</h4>
 </div>
 
-<div id="outline-container-org5a43ccf" class="outline-4">
-<h4 id="org5a43ccf"><span class="section-number-4">5.6.7.</span> Precision</h4>
+<div id="outline-container-orgfc97539" class="outline-4">
+<h4 id="orgfc97539"><span class="section-number-4">5.6.7.</span> Precision</h4>
 </div>
 
-<div id="outline-container-org871ad87" class="outline-4">
-<h4 id="org871ad87"><span class="section-number-4">5.6.8.</span> Accuracy</h4>
+<div id="outline-container-orgbe61ca2" class="outline-4">
+<h4 id="orgbe61ca2"><span class="section-number-4">5.6.8.</span> Accuracy</h4>
 </div>
 
-<div id="outline-container-org617b813" class="outline-4">
-<h4 id="org617b813"><span class="section-number-4">5.6.9.</span> F-Score</h4>
+<div id="outline-container-org056ffae" class="outline-4">
+<h4 id="org056ffae"><span class="section-number-4">5.6.9.</span> F-Score</h4>
 </div>
 
-<div id="outline-container-org89ad631" class="outline-4">
-<h4 id="org89ad631"><span class="section-number-4">5.6.10.</span> AUROC</h4>
+<div id="outline-container-org7131985" class="outline-4">
+<h4 id="org7131985"><span class="section-number-4">5.6.10.</span> AUROC</h4>
 </div>
 
-<div id="outline-container-org30e44d6" class="outline-4">
-<h4 id="org30e44d6"><span class="section-number-4">5.6.11.</span> ROC</h4>
+<div id="outline-container-org8a9d7ff" class="outline-4">
+<h4 id="org8a9d7ff"><span class="section-number-4">5.6.11.</span> ROC</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-org665a546" class="outline-2">
-<h2 id="org665a546"><span class="section-number-2">6.</span> Information Geometry</h2>
+<div id="outline-container-org48cfb88" class="outline-2">
+<h2 id="org48cfb88"><span class="section-number-2">6.</span> Information Geometry</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 A cross section of Riemannian geometry, information theory, and statistics.
 A quite intimidating but rewarding field. There are tons of definitions.
 </p>
 </div>
-<div id="outline-container-org99763bd" class="outline-3">
-<h3 id="org99763bd"><span class="section-number-3">6.1.</span> Motivation</h3>
+<div id="outline-container-org866fe66" class="outline-3">
+<h3 id="org866fe66"><span class="section-number-3">6.1.</span> Motivation</h3>
 <div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-org381104b" class="outline-4">
-<h4 id="org381104b"><span class="section-number-4">6.1.1.</span> A Simple Generalization</h4>
+<div id="outline-container-orgbc2ed11" class="outline-4">
+<h4 id="orgbc2ed11"><span class="section-number-4">6.1.1.</span> A Simple Generalization</h4>
 <div class="outline-text-4" id="text-6-1-1">
 <p>
 For real world applications, we would like to find the "best" \( \theta \) (with best changing based on context). This lends itself to an optimization problem over the set of \( \theta \). Naturally we would like to use calculus. A very general setting for calculus ends up being a differentiable manifold.
@@ -877,12 +876,12 @@ The introduction of geometry gives several useful notions:
 </ul>
 </div>
 </div>
-<div id="outline-container-org5264b94" class="outline-4">
-<h4 id="org5264b94"><span class="section-number-4">6.1.2.</span> Key Terms</h4>
+<div id="outline-container-org0bbdd65" class="outline-4">
+<h4 id="org0bbdd65"><span class="section-number-4">6.1.2.</span> Key Terms</h4>
 <div class="outline-text-4" id="text-6-1-2">
 </div>
 <ol class="org-ol">
-<li><a id="org86bd2b1"></a>Statistical Model<br />
+<li><a id="org5ac02f4"></a>Statistical Model<br />
 <div class="outline-text-5" id="text-6-1-2-1">
 <p>
 A statistical model is a pair \( \left( \Omega , \mathbb{P} \right) \) where \( \Omega \) is the "sample space" (all possible observations) and \( \mathbb{P} \) is the set of probability distributions on \( \Omega \).
@@ -1005,7 +1004,7 @@ Hence we have \( 3 \) epsilons (\( 1 \) per each row)
 </ul>
 </div>
 </li>
-<li><a id="orga0086ff"></a>Likelihood<br />
+<li><a id="org0d4677b"></a>Likelihood<br />
 <div class="outline-text-5" id="text-6-1-2-2">
 <p>
 Probabilities (mostly) appear in two ways:
@@ -1049,7 +1048,7 @@ Again, the likelihood is a function of the parameters of a family of distributio
 </p>
 </div>
 </li>
-<li><a id="org7ed7862"></a>Score<br />
+<li><a id="orgfbc24b7"></a>Score<br />
 <div class="outline-text-5" id="text-6-1-2-3">
 <p>
 The score (or informant) of  is the partial derivative of the log of the likelihood.
@@ -1084,7 +1083,7 @@ We may note that the expected score with a known true parameter is zero. \( \mat
 </p>
 </div>
 </li>
-<li><a id="orgfabac83"></a>Fisher Information<br />
+<li><a id="org46d2ecf"></a>Fisher Information<br />
 <div class="outline-text-5" id="text-6-1-2-4">
 <p>
 A way of measuring the amount of "information" that an observable "\( X \)" carries about an unknown parameter \( \theta \).
@@ -1108,7 +1107,7 @@ It can be shown that this matrix is positive semi-definite.
 </p>
 </div>
 </li>
-<li><a id="org899f8df"></a>Differentiable Manifold<br />
+<li><a id="org09d18f0"></a>Differentiable Manifold<br />
 <div class="outline-text-5" id="text-6-1-2-5">
 <p>
 A differentiable manifold is a Hausdorff Second Countable topological space which is locally Euclidean. The main idea is that at every point we can express formulae in a local coordinate system, but the results are normally held without coordinates.
@@ -1119,7 +1118,7 @@ In physics, you can only measure temperature in some units (Fahrenheit Celsius o
 </p>
 </div>
 </li>
-<li><a id="orgd0b3977"></a>Metric<br />
+<li><a id="org43d9458"></a>Metric<br />
 <div class="outline-text-5" id="text-6-1-2-6">
 <p>
 On a Riemannian manifold, we have the introduction of a Riemannian metric \( g \).
@@ -1130,7 +1129,7 @@ For each tangent space, \( g \) allows one to measure vector lengths, angles, an
 </p>
 </div>
 </li>
-<li><a id="org5c498b3"></a>Connection<br />
+<li><a id="orgae17e66"></a>Connection<br />
 <div class="outline-text-5" id="text-6-1-2-7">
 <p>
 An affine connection is a differential operator which allows:
@@ -1160,12 +1159,12 @@ There is an important connection called the Levi-Civita connection which is:
 </li>
 </ol>
 </div>
-<div id="outline-container-orgdace1f6" class="outline-4">
-<h4 id="orgdace1f6"><span class="section-number-4">6.1.3.</span> New Data Structures</h4>
+<div id="outline-container-org49f02a6" class="outline-4">
+<h4 id="org49f02a6"><span class="section-number-4">6.1.3.</span> New Data Structures</h4>
 <div class="outline-text-4" id="text-6-1-3">
 </div>
 <ol class="org-ol">
-<li><a id="orgb1352b8"></a>Divergence<br />
+<li><a id="org3f62231"></a>Divergence<br />
 <div class="outline-text-5" id="text-6-1-3-1">
 <p>
 A divergence is a real valued smooth function
@@ -1222,7 +1221,7 @@ It is known that minimizing the KL-Divergence is equivalent to Maximum likelihoo
 </p>
 </div>
 </li>
-<li><a id="orgc9dc08a"></a>Conjugate Connection Manifolds<br />
+<li><a id="org889b8ce"></a>Conjugate Connection Manifolds<br />
 <div class="outline-text-5" id="text-6-1-3-2">
 <p>
 A conjugate connection manifold (CCM) is a quadruple \( (M, g, \nabla, \nabla^{\ast}) \) 
@@ -1271,7 +1270,7 @@ The mean connection is the Levi-Civita connection
 </ol>
 </div>
 </li>
-<li><a id="org193368b"></a>Statistical Manifolds<br />
+<li><a id="orgf659b21"></a>Statistical Manifolds<br />
 <div class="outline-text-5" id="text-6-1-3-3">
 <p>
 Let \( C \) be a totally symmetric three tensor, 
@@ -1294,9 +1293,9 @@ It can be shown that \( C_{ijk} \) is invariant under sufficient statistics.
 </p>
 </div>
 </li>
-<li><a id="orge2ea4ae"></a>Interesting Papers<br />
+<li><a id="org817a8bd"></a>Interesting Papers<br />
 <ol class="org-ol">
-<li><a id="org9ca4b2d"></a>Cheap Control<br />
+<li><a id="org481c276"></a>Cheap Control<br />
 <div class="outline-text-6" id="text-6-1-3-4-1">
 <p>
 <a href="https://arxiv.org/pdf/1407.6836.pdf">https://arxiv.org/pdf/1407.6836.pdf</a>
@@ -1312,8 +1311,8 @@ Using IG, authors find a good upper bound on the number of parameters necessary 
 </ol>
 </div>
 </div>
-<div id="outline-container-orge2e2d7b" class="outline-3">
-<h3 id="orge2e2d7b"><span class="section-number-3">6.2.</span> Manifolds</h3>
+<div id="outline-container-org5dc61ab" class="outline-3">
+<h3 id="org5dc61ab"><span class="section-number-3">6.2.</span> Manifolds</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 #+BEGIN<sub>DEFINITION</sub>[Manifold]
@@ -1353,12 +1352,12 @@ Manifold Creation:
 </ul>
 </div>
 </div>
-<div id="outline-container-orga523bf9" class="outline-3">
-<h3 id="orga523bf9"><span class="section-number-3">6.3.</span> Examples of Manifolds</h3>
+<div id="outline-container-org475e454" class="outline-3">
+<h3 id="org475e454"><span class="section-number-3">6.3.</span> Examples of Manifolds</h3>
 <div class="outline-text-3" id="text-6-3">
 </div>
-<div id="outline-container-org6aab169" class="outline-4">
-<h4 id="org6aab169"><span class="section-number-4">6.3.1.</span> Euclidean Space</h4>
+<div id="outline-container-org592b0de" class="outline-4">
+<h4 id="org592b0de"><span class="section-number-4">6.3.1.</span> Euclidean Space</h4>
 <div class="outline-text-4" id="text-6-3-1">
 <p>
 \( \mathbb{R}^{n} \) is an \( n \)-manifold.
@@ -1370,16 +1369,16 @@ Around every point, \( p \in \mathbb{R}^{n} \) we note that \( p \in U = \mathbb
 </p>
 </div>
 </div>
-<div id="outline-container-org2fd7844" class="outline-4">
-<h4 id="org2fd7844"><span class="section-number-4">6.3.2.</span> Open Sets</h4>
+<div id="outline-container-org58372ed" class="outline-4">
+<h4 id="org58372ed"><span class="section-number-4">6.3.2.</span> Open Sets</h4>
 <div class="outline-text-4" id="text-6-3-2">
 <p>
 Similarly any open set is homeomorphic to itself via the identity
 </p>
 </div>
 </div>
-<div id="outline-container-orgf4c1bb7" class="outline-4">
-<h4 id="orgf4c1bb7"><span class="section-number-4">6.3.3.</span> Spheres</h4>
+<div id="outline-container-org321bf4a" class="outline-4">
+<h4 id="org321bf4a"><span class="section-number-4">6.3.3.</span> Spheres</h4>
 <div class="outline-text-4" id="text-6-3-3">
 <p>
 An \( n \)-sphere is a subset of \( \mathbb{R}^{n + 1} \) whose points satisfy, \( \sqrt{\sum_{i = 1}^{n + 1} x_{i}^{2}} = 1 \)   
@@ -1387,36 +1386,36 @@ An \( n \)-sphere is a subset of \( \mathbb{R}^{n + 1} \) whose points satisfy, 
 </div>
 </div>
 </div>
-<div id="outline-container-orgc6ac12c" class="outline-3">
-<h3 id="orgc6ac12c"><span class="section-number-3">6.4.</span> Manifolds of Probability Distributions</h3>
+<div id="outline-container-orgeeb0fa9" class="outline-3">
+<h3 id="orgeeb0fa9"><span class="section-number-3">6.4.</span> Manifolds of Probability Distributions</h3>
 </div>
 
 
 
 
-<div id="outline-container-org24754c9" class="outline-3">
-<h3 id="org24754c9"><span class="section-number-3">6.5.</span> Parameterized Distributions</h3>
+<div id="outline-container-org33248d4" class="outline-3">
+<h3 id="org33248d4"><span class="section-number-3">6.5.</span> Parameterized Distributions</h3>
 <div class="outline-text-3" id="text-6-5">
 <p>
 Oftentimes, we are interested in understanding how the real world works. We may "ask" nicely about what happens in the real world (that is, to gather data). We may only ask a finite number of times, however, we may attempt to "interpolate" in between the known data points. That is, we may attempt to answer what would happen 
 </p>
 </div>
 </div>
-<div id="outline-container-org151337e" class="outline-3">
-<h3 id="org151337e"><span class="section-number-3">6.6.</span> Problems Information Geometry Solves</h3>
+<div id="outline-container-orgdbded94" class="outline-3">
+<h3 id="orgdbded94"><span class="section-number-3">6.6.</span> Problems Information Geometry Solves</h3>
 <div class="outline-text-3" id="text-6-6">
 </div>
-<div id="outline-container-org6386198" class="outline-4">
-<h4 id="org6386198"><span class="section-number-4">6.6.1.</span> New Quantities of Interest</h4>
+<div id="outline-container-org8e36071" class="outline-4">
+<h4 id="org8e36071"><span class="section-number-4">6.6.1.</span> New Quantities of Interest</h4>
 </div>
 
-<div id="outline-container-org59a3303" class="outline-4">
-<h4 id="org59a3303"><span class="section-number-4">6.6.2.</span> New Algorithms</h4>
+<div id="outline-container-org53671dd" class="outline-4">
+<h4 id="org53671dd"><span class="section-number-4">6.6.2.</span> New Algorithms</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb06f0bf" class="outline-2">
-<h2 id="orgb06f0bf"><span class="section-number-2">7.</span> Hessian of Log Likelihood</h2>
+<div id="outline-container-org1df1124" class="outline-2">
+<h2 id="org1df1124"><span class="section-number-2">7.</span> Hessian of Log Likelihood</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Suppose we observe some datum \( x \), and we have a parameterized distribution \( H(\theta) \) with parameter vector \( \theta = [\theta_{i}]_{i} \).
@@ -1437,7 +1436,7 @@ H_{\log(p(x \vert \theta))}
 \end{align}
 
 
-<div class="REMARK" id="orge3b1e06">
+<div class="REMARK" id="org336967f">
 <p>
 Note that I have used \( \nabla \) to mean the gradient with respect to our parameters \( \theta \). In statistics, we are often trying to model the real world using a probability distribution from a family of distributions. In other words, the universe gives us our data and we attempt to model it. Thus, it is very uncommon to take the gradient with respect to \( x \). Hence, we may omit the variables we are differentiating, and implicitly assume we are taking the gradient with respect to \( \theta \).    
 </p>
@@ -1483,8 +1482,8 @@ H_{f} = \begin{bmatrix} \frac{ \partial^{2} f}{ \partial x_{i} \partial x_{j}} \
 \end{align}
 </div>
 </div>
-<div id="outline-container-orga60b78f" class="outline-2">
-<h2 id="orga60b78f"><span class="section-number-2">8.</span> Measurement Mnemonic</h2>
+<div id="outline-container-orgc776964" class="outline-2">
+<h2 id="orgc776964"><span class="section-number-2">8.</span> Measurement Mnemonic</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 All measurements for comparing classifiers (accuracy, precision, recall, etc) are a ratio of
@@ -1543,24 +1542,24 @@ Recall =
 </table>
 </div>
 </div>
-<div id="outline-container-org742deab" class="outline-2">
-<h2 id="org742deab"><span class="section-number-2">9.</span> Neural Networks</h2>
+<div id="outline-container-org62514a9" class="outline-2">
+<h2 id="org62514a9"><span class="section-number-2">9.</span> Neural Networks</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org17a7eab" class="outline-3">
-<h3 id="org17a7eab"><span class="section-number-3">9.1.</span> Summary</h3>
+<div id="outline-container-orgf7632c8" class="outline-3">
+<h3 id="orgf7632c8"><span class="section-number-3">9.1.</span> Summary</h3>
 <div class="outline-text-3" id="text-9-1">
 </div>
-<div id="outline-container-org7125aa0" class="outline-4">
-<h4 id="org7125aa0"><span class="section-number-4">9.1.1.</span> Convolutional Neural Network</h4>
+<div id="outline-container-org4eb76ec" class="outline-4">
+<h4 id="org4eb76ec"><span class="section-number-4">9.1.1.</span> Convolutional Neural Network</h4>
 </div>
 
-<div id="outline-container-orgc71e710" class="outline-4">
-<h4 id="orgc71e710"><span class="section-number-4">9.1.2.</span> Graph Neural Network</h4>
+<div id="outline-container-org0cbd1a1" class="outline-4">
+<h4 id="org0cbd1a1"><span class="section-number-4">9.1.2.</span> Graph Neural Network</h4>
 </div>
 
-<div id="outline-container-org0638d96" class="outline-4">
-<h4 id="org0638d96"><span class="section-number-4">9.1.3.</span> Bayesian Neural Network</h4>
+<div id="outline-container-org2d7c30c" class="outline-4">
+<h4 id="org2d7c30c"><span class="section-number-4">9.1.3.</span> Bayesian Neural Network</h4>
 </div>
 </div>
 </div>
