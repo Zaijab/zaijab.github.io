@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-26 Thu 12:26 -->
+<!-- 2024-09-26 Thu 12:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Posts</title>
@@ -194,20 +194,26 @@
   .org-svg { }
 </style>
 <title></title>
- <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
- <header><div class="menu"><ul>
- <li><a href="/">/</a></li>
- <li><a href="/about">/about</a></li>
- <li><a href="/posts">/posts</a></li></ul></div></header>
- <script src="static/js/nastaliq.js"></script>
- <script src="static/js/stacking.js"></script>
- <script>
- document.addEventListener('DOMContentLoaded', function() {
-   initializePreviews(document.querySelector('.page'));
- });
- </script>
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
 </head>
 <body>
+<div id="preamble" class="status">
+<div class="page">
+</div>
 <div id="content" class="content">
 <h1 class="title">Posts</h1>
 <ul class="org-ul">
