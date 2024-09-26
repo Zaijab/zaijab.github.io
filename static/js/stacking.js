@@ -127,6 +127,7 @@ function createPreview(link, html, overrideOptions) {
 }
 
 function initializePreviews(page, level) {
+    console.log("InitializePreviews called")
   level = level || pages.length;
 
   links = Array.prototype.slice.call(page.querySelectorAll("a:not(.rooter)"));
