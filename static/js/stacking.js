@@ -126,6 +126,17 @@ function createPreview(link, html, overrideOptions) {
   );
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  let page = document.querySelector('.page');
+  if (page) {
+    console.log("Page element found:", page);
+    initializePreviews(page);
+  } else {
+    console.log("Page element not found.");
+  }
+});
+
+
 function initializePreviews(page, level) {
     console.log("InitializePreviews called")
   level = level || pages.length;
