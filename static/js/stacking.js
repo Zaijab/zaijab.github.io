@@ -126,19 +126,18 @@ function createPreview(link, html, overrideOptions) {
   );
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  let page = document.querySelector('.page');
-  if (page) {
-    console.log("Page element found:", page);
-    initializePreviews(page);
-  } else {
-    console.log("Page element not found.");
-  }
-});
-
-
 function initializePreviews(page, level) {
-    console.log("InitializePreviews called")
+
+      console.log("initializePreviews called", page);
+  
+  // Add logging to trace if column creation or content updates happen
+  let newColumn = document.createElement('div');
+  newColumn.className = 'new-column';
+  console.log("New column created:", newColumn);
+
+  page.appendChild(newColumn);
+  console.log("New column appended to page");
+    
   level = level || pages.length;
 
   links = Array.prototype.slice.call(page.querySelectorAll("a:not(.rooter)"));
