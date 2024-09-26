@@ -395,3 +395,14 @@ div.back a {
 .menu ul li a { text-decoration: none; color: var(--text-color); }
 
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+
+.ds-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.page {
+    min-width: 100vw;
+    scroll-snap-align: start;
+}
