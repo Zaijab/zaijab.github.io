@@ -1,0 +1,43 @@
+<html>
+<head>
+  <style>
+    .grid-container {
+      display: flex;
+      overflow-x: auto;
+      width: 100%;
+      height: 100vh;
+    }
+    .page {
+      display: inline-block;
+      width: 625px;
+      height: 100vh;
+      background-color: lightgray;
+      margin-right: 10px;
+    }
+    .new-column {
+      display: inline-block;
+      width: 300px;
+      height: 100vh;
+      background-color: lightblue;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="page">
+      <h1>Test Page</h1>
+      <a href="#" id="add-column">Add New Column</a>
+    </div>
+  </div>
+  <script>
+    document.getElementById('add-column').addEventListener('click', function(event) {
+      event.preventDefault();
+      let container = document.querySelector('.grid-container');
+      let newColumn = document.createElement('div');
+      newColumn.className = 'new-column';
+      container.appendChild(newColumn);
+    });
+  </script>
+</body>
+</html>

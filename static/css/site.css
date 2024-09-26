@@ -406,3 +406,16 @@ div.back a {
     min-width: 100vw;
     scroll-snap-align: start;
 }
+
+#preamble {
+  display: flex;
+  overflow-x: auto; /* Ensure horizontal scrolling */
+}
+
+.page, .content {
+  flex-shrink: 0; /* Prevent the columns from shrinking */
+  width: 100vw; /* Take up full screen width */
+  height: 100vh; /* Full height */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  border-right: 1px solid #ccc; /* Visible border for columns */
+}
