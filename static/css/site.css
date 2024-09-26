@@ -402,17 +402,21 @@ div.back a {
     scroll-snap-type: x mandatory;
 }
 
-.page {
-    min-width: 100vw;
-    scroll-snap-align: start;
+#preamble {
+    display: flex;
+    flex-direction: column; /* For small screens, stack vertically */
+    overflow-x: auto;
 }
 
-#preamble {
-  display: flex;
-  overflow-x: scroll; /* Ensure horizontal scrolling */
+.grid-container {
+    display: flex;
+    flex-wrap: nowrap; /* Ensure no wrapping for horizontal scroll */
+    overflow-x: auto;
 }
 
 .page, .content {
-  flex-shrink: 0 0 100%; /* Prevent the columns from shrinking */
-  height: 100vh; /* Full height */
+    flex-shrink: 0; /* Ensure content does not shrink */
+    width: 100vw; /* Take up full screen width */
+    box-sizing: border-box; /* Ensure padding does not affect size */
 }
+
