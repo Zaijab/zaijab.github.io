@@ -128,15 +128,12 @@ function createPreview(link, html, overrideOptions) {
 
 function initializePreviews(page, level) {
 
-      console.log("initializePreviews called", page);
   
   // Add logging to trace if column creation or content updates happen
   let newColumn = document.createElement('div');
   newColumn.className = 'new-column';
-  console.log("New column created:", newColumn);
-
+  
   page.appendChild(newColumn);
-  console.log("New column appended to page");
     
   level = level || pages.length;
 
