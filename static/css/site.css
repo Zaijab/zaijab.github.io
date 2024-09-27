@@ -1828,3 +1828,7 @@ div.back a {
   vertical-align: top;
   box-sizing: border-box;
 }
+
+.div-ds {
+    overflow-x: auto;
+}
