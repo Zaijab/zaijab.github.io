@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-26 Thu 14:35 -->
+<!-- 2024-09-26 Thu 14:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory</title>
@@ -201,6 +201,8 @@
           <li><a href="/posts">/posts</a></li></ul></div></header>
           <script src="static/js/nastaliq.js"></script>
           <script src="static/js/stacking.js"></script>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
           <script>
           document.addEventListener('DOMContentLoaded', function() {
             let page = document.querySelector('.page');
@@ -221,9 +223,9 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org8901000">Category</a></li>
-<li><a href="#orgea15ad9">Functor</a></li>
-<li><a href="#org2575765">Natural Transformation</a></li>
+<li><a href="#orge8f1516">Category</a></li>
+<li><a href="#org11a430f">Functor</a></li>
+<li><a href="#org7fc9cd0">Natural Transformation</a></li>
 </ul>
 </div>
 </div>
@@ -238,9 +240,9 @@ Setup using usual <a href="notation.html#ID-ebb26ba4-7130-4734-af01-21f711dd4fdd
 <p>
 <a href="notation.html">notation.html</a>
 </p>
-<div id="outline-container-org8901000" class="outline-2">
-<h2 id="org8901000">Category</h2>
-<div class="outline-text-2" id="text-org8901000">
+<div id="outline-container-orge8f1516" class="outline-2">
+<h2 id="orge8f1516">Category</h2>
+<div class="outline-text-2" id="text-orge8f1516">
 <p>
 A <b>category</b> \( \mathcal{C} \) consists of three mathematical entities:
 </p>
@@ -276,9 +278,9 @@ The \( \hom \) set satisfies the following properties:
 </p>
 </div>
 </div>
-<div id="outline-container-orgea15ad9" class="outline-2">
-<h2 id="orgea15ad9">Functor</h2>
-<div class="outline-text-2" id="text-orgea15ad9">
+<div id="outline-container-org11a430f" class="outline-2">
+<h2 id="org11a430f">Functor</h2>
+<div class="outline-text-2" id="text-org11a430f">
 <p>
 A <b>functor</b> \( \mathcal{F} \) from a category \( \mathcal{C} \) to \( \mathcal{D} \) denoted \( \mathcal{F} \colon \mathcal{C} \to \mathcal{D} \)
 </p>
@@ -294,9 +296,9 @@ is a map \( \text{ob}(\mathcal{C}) \to \text{ob}(\mathcal{D}) \) and \( \hom(A, 
 </ul>
 </div>
 </div>
-<div id="outline-container-org2575765" class="outline-2">
-<h2 id="org2575765">Natural Transformation</h2>
-<div class="outline-text-2" id="text-org2575765">
+<div id="outline-container-org7fc9cd0" class="outline-2">
+<h2 id="org7fc9cd0">Natural Transformation</h2>
+<div class="outline-text-2" id="text-org7fc9cd0">
 <p>
 A <b>natural transformation</b> between two functors \( \mathcal{F} \) and \( \mathcal{G} \) is a system of morphisms
 </p>
