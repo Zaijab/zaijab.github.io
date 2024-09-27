@@ -1830,5 +1830,5 @@ div.back a {
 }
 
 .ds-grid {
-    overflow-x: scroll;
+    overflow-x: visible;
 }
