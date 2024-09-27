@@ -411,3 +411,12 @@ div.back a {
   vertical-align: top;
   box-sizing: border-box;
 }
+.grid-container, .ds-grid {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
