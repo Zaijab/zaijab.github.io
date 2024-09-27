@@ -117,7 +117,7 @@ div.side-note {
 }
 #table-of-contents ul li ul,
 #table-of-contents ul li ul li {
-    display: static;
+    display: block;
     width: 100%;
     padding-left: 0;
     line-height: 1.35em;
