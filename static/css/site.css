@@ -395,3 +395,13 @@ div.back a {
 .menu ul li a { text-decoration: none; color: var(--text-color); }
 
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
+
+.page {
+  display: flex;               /* Enable Flexbox */
+  flex-direction: row;         /* Arrange children in a row */
+  overflow-x: auto;            /* Enable horizontal scrolling */
+  overflow-y: hidden;          /* Hide vertical scrollbar if not needed */
+  white-space: nowrap;         /* Prevent wrapping to next line */
+  padding: 10px;               /* Optional: Add some padding */
+  box-sizing: border-box;      /* Ensure padding doesn't affect width */
+}
