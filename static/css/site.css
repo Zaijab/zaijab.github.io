@@ -398,6 +398,9 @@ div.back a {
 
 
 .page {
+    display: flex;
+     flex-direction: row;
+
   white-space: normal;
   padding: 10px 10px;
   padding-left: 0;
@@ -409,14 +412,5 @@ div.back a {
   max-height: 100%;
   overflow-y: auto;
   vertical-align: top;
-  box-sizing: border-box;
-}
-.grid-container, .ds-grid {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
   box-sizing: border-box;
 }
