@@ -1829,6 +1829,10 @@ div.back a {
   box-sizing: border-box;
 }
 
-.ds-grid {
-    overflow-x: visible;
+/* .ds-grid { */
+/*     overflow-x: visible; */
+/* } */
+
+.grid-container {
+    overflow-x: scroll;
 }
