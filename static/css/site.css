@@ -1833,6 +1833,11 @@ div.back a {
 /*     overflow-x: visible; */
 /* } */
 
+
 .grid-container {
-    overflow-x: scroll;
+  flex: 1;
+  display: flex;
+  overflow-x: auto !important;
+  white-space: nowrap;
+  flex-grow: 1;
 }
