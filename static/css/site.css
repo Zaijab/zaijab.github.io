@@ -396,11 +396,20 @@ div.back a {
 
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
 
+.grid-container {
+  flex: 1;
+  display: flex;
+  overflow-x: auto !important;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.ds-grid {
+  max-width: 100%;
+  flex-grow: 1;
+}
 
 .page {
-    display: flex;
-     flex-direction: row;
-
   white-space: normal;
   padding: 10px 10px;
   padding-left: 0;
