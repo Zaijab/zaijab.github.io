@@ -399,5 +399,5 @@ div.back a {
 
 .page {
   display: flex;                  /* Enable Flexbox */
-  flex-direction: column;            /* Arrange */
+  flex-direction: row;            /* Arrange */
 }
