@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:12 -->
+<!-- 2024-10-03 Thu 14:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Topology</title>
@@ -223,133 +223,133 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgaab5c1d">Topology</a>
+<li><a href="#orge5b4bc9">Topology</a>
 <ul>
-<li><a href="#orgb23a8e3">Problems</a>
+<li><a href="#orgc3df9e8">Problems</a>
 <ul>
-<li><a href="#org89c63b6">Bridges of Konig (Euler)</a></li>
-<li><a href="#orgef04542">Index Theory in Dynamical Systems (Homotopy)</a></li>
-<li><a href="#org814d5d8">Computing Integrals (Homotopy)</a></li>
-<li><a href="#orgad5f4b2">General Relativity (Manifolds)</a></li>
-<li><a href="#orga75ebb9">Y-Combinator (Scott Continuity)</a></li>
-<li><a href="#orgaf1804a">Compactness Theorem (Topological Model Theory)</a></li>
+<li><a href="#org35dc7a6">Bridges of Konig (Euler)</a></li>
+<li><a href="#org33a63c9">Index Theory in Dynamical Systems (Homotopy)</a></li>
+<li><a href="#org44357a0">Computing Integrals (Homotopy)</a></li>
+<li><a href="#org1a5c0e9">General Relativity (Manifolds)</a></li>
+<li><a href="#orgeafdfff">Y-Combinator (Scott Continuity)</a></li>
+<li><a href="#orga49a159">Compactness Theorem (Topological Model Theory)</a></li>
 </ul>
 </li>
-<li><a href="#orgb71557e">Nearness Without Metrics?</a>
+<li><a href="#orgaa3d051">Nearness Without Metrics?</a>
 <ul>
-<li><a href="#org12f2d56">Real Numbers</a></li>
-<li><a href="#orgdd64a83">Symmetry</a></li>
-<li><a href="#org7b5e003">Positivity</a></li>
-<li><a href="#org6904ec8">Not Qualitative</a></li>
+<li><a href="#org6966e93">Real Numbers</a></li>
+<li><a href="#org95cde28">Symmetry</a></li>
+<li><a href="#org245376f">Positivity</a></li>
+<li><a href="#orgec6fb43">Not Qualitative</a></li>
 </ul>
 </li>
-<li><a href="#org0ad86ae">Equivalent Notions</a>
+<li><a href="#org5a8d29e">Equivalent Notions</a>
 <ul>
-<li><a href="#orgd7b1c49">Open Sets</a></li>
-<li><a href="#org0ac2371">Closed Sets</a></li>
-<li><a href="#orgde910e5">Neighborhoods</a></li>
-<li><a href="#org9ec5360">Interior Operators</a></li>
-<li><a href="#org3188319">Closure Operators</a></li>
-<li><a href="#orge90da11">Convergence of Nets</a></li>
-<li><a href="#org4bfa44d">Convergence of Filters</a></li>
+<li><a href="#org9b976a7">Open Sets</a></li>
+<li><a href="#orgb34e3e9">Closed Sets</a></li>
+<li><a href="#orgdc5dd4c">Neighborhoods</a></li>
+<li><a href="#orgf2c3255">Interior Operators</a></li>
+<li><a href="#orgf961549">Closure Operators</a></li>
+<li><a href="#orgf86a99a">Convergence of Nets</a></li>
+<li><a href="#org986983e">Convergence of Filters</a></li>
 </ul>
 </li>
-<li><a href="#org313798b">Rigor</a></li>
+<li><a href="#org48e7bba">Rigor</a></li>
 </ul>
 </li>
-<li><a href="#org6cbd5d8">Continuity</a>
+<li><a href="#orgecda7d2">Continuity</a>
 <ul>
-<li><a href="#org0ebdd01">Building a Discontinuity Detector</a></li>
-<li><a href="#org179a940">Homeomorphism</a></li>
-<li><a href="#org80f51f5">Determining Homeomorphism</a></li>
+<li><a href="#org3394016">Building a Discontinuity Detector</a></li>
+<li><a href="#orge2976e2">Homeomorphism</a></li>
+<li><a href="#org7b8e38b">Determining Homeomorphism</a></li>
 </ul>
 </li>
-<li><a href="#org0703b1a">Creating New Topologies</a></li>
-<li><a href="#orga52ea0e">Compactness</a></li>
-<li><a href="#orga4179fd">Connectedness</a></li>
-<li><a href="#org26b7ba2">Point Set</a>
+<li><a href="#org68ce86a">Creating New Topologies</a></li>
+<li><a href="#org035721e">Compactness</a></li>
+<li><a href="#org3c91aab">Connectedness</a></li>
+<li><a href="#orgc56c814">Point Set</a>
 <ul>
-<li><a href="#org7edef9e">Generating Topologies</a>
+<li><a href="#orgae0a252">Generating Topologies</a>
 <ul>
-<li><a href="#org419aafd">Bases &amp; Subbases</a></li>
-<li><a href="#org31c8a91">Subsets</a></li>
-<li><a href="#org5ec1d6d">Products</a></li>
-<li><a href="#org45ff23d">Quotients</a></li>
+<li><a href="#org6eacaae">Bases &amp; Subbases</a></li>
+<li><a href="#org1971b21">Subsets</a></li>
+<li><a href="#org252b6b6">Products</a></li>
+<li><a href="#org906ca67">Quotients</a></li>
 </ul>
 </li>
-<li><a href="#org5210fd1">Connectedness</a></li>
-<li><a href="#org832efbc">Compactness</a></li>
-<li><a href="#org049b231">Dimension</a></li>
+<li><a href="#org1a7f8fb">Connectedness</a></li>
+<li><a href="#orgc9ae047">Compactness</a></li>
+<li><a href="#org172185a">Dimension</a></li>
 </ul>
 </li>
-<li><a href="#orgff08cb1">Category Theory</a>
+<li><a href="#orgf23c066">Category Theory</a>
 <ul>
-<li><a href="#orgbb05c5f">Category</a>
+<li><a href="#org8fbc79a">Category</a>
 <ul>
-<li><a href="#org47e75e9">Definition</a></li>
-<li><a href="#org01b60f2">Examples</a></li>
+<li><a href="#org268e4cb">Definition</a></li>
+<li><a href="#orgdf23e7e">Examples</a></li>
 </ul>
 </li>
-<li><a href="#org299b445">Monomorphisms</a></li>
-<li><a href="#org8953780">Epimorphisms</a></li>
-<li><a href="#org2c95dae">Isomorphisms</a></li>
-<li><a href="#org261e246">Endomorphisms</a></li>
-<li><a href="#org11bdfe2">Automorphism</a></li>
+<li><a href="#org3362a52">Monomorphisms</a></li>
+<li><a href="#org6be46ac">Epimorphisms</a></li>
+<li><a href="#orge416def">Isomorphisms</a></li>
+<li><a href="#org059f87f">Endomorphisms</a></li>
+<li><a href="#org69f77ef">Automorphism</a></li>
 </ul>
 </li>
-<li><a href="#org5039175">Homotopy</a>
+<li><a href="#org50acbfe">Homotopy</a>
 <ul>
-<li><a href="#org111214d">Two Functions</a></li>
-<li><a href="#org26fd06f">Two Spaces</a></li>
-<li><a href="#org032af10">Relative Homotopy</a></li>
-<li><a href="#orgf5b58ff">Deformation Retract</a>
+<li><a href="#org2aa197a">Two Functions</a></li>
+<li><a href="#org22da980">Two Spaces</a></li>
+<li><a href="#orgdd3e9e6">Relative Homotopy</a></li>
+<li><a href="#org4b9cad7">Deformation Retract</a>
 <ul>
-<li><a href="#orgcc2c61e">Null Homotopy</a></li>
-<li><a href="#orgeefce32">Contractible Spaces</a></li>
+<li><a href="#org4a8e65b">Null Homotopy</a></li>
+<li><a href="#org223723d">Contractible Spaces</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgce7cd12">Fundamental Group</a>
+<li><a href="#orgabee5cc">Fundamental Group</a>
 <ul>
-<li><a href="#org025edd6">Functoriality</a></li>
-<li><a href="#org52d639c">\( \pi_1(A) \) where \( A \subseteq_{\text{convex}} \mathbb{R} \)</a></li>
-<li><a href="#org35bf8a9">\( \pi_1(S^1) \)</a></li>
-<li><a href="#org187b736">\( \pi_1(S^n) . n \geq 2 \)</a></li>
-<li><a href="#org48bb03f">\( \pi_1(\mathbb{T}^n) \)</a></li>
-<li><a href="#org3efe84d">Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</a></li>
-<li><a href="#org3ea6097">Product Topology is Product of Groups</a></li>
+<li><a href="#org067920b">Functoriality</a></li>
+<li><a href="#orgf552afb">\( \pi_1(A) \) where \( A \subseteq_{\text{convex}} \mathbb{R} \)</a></li>
+<li><a href="#org8525052">\( \pi_1(S^1) \)</a></li>
+<li><a href="#orga140648">\( \pi_1(S^n) . n \geq 2 \)</a></li>
+<li><a href="#org8ebfb19">\( \pi_1(\mathbb{T}^n) \)</a></li>
+<li><a href="#org1fbc79b">Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</a></li>
+<li><a href="#org9e40f96">Product Topology is Product of Groups</a></li>
 </ul>
 </li>
-<li><a href="#orgb17e5f1">Homology</a>
+<li><a href="#orgf87ce7c">Homology</a>
 <ul>
-<li><a href="#org7b802b3">Types of Homology Theories</a>
+<li><a href="#org4bd1efb">Types of Homology Theories</a>
 <ul>
-<li><a href="#org4c3e0d8">Homology of Graphs</a></li>
-<li><a href="#orgbb5a506">Simplicial Homology</a></li>
-<li><a href="#org47dc52e">Singular Homology</a></li>
-<li><a href="#org1861551">Cellular Homology</a></li>
-<li><a href="#orgdf7229f">Axiomatic Homology</a></li>
+<li><a href="#org4c7908b">Homology of Graphs</a></li>
+<li><a href="#org0b2b8da">Simplicial Homology</a></li>
+<li><a href="#org8ea161f">Singular Homology</a></li>
+<li><a href="#org980165f">Cellular Homology</a></li>
+<li><a href="#org9315370">Axiomatic Homology</a></li>
 </ul>
 </li>
-<li><a href="#org391d4dc">Equivalence of Homology Theories</a></li>
-<li><a href="#org11cef9d">Homology as the Abelianization of Homotopy</a></li>
-<li><a href="#org2de5a79">Calculations of Homology Complexes</a></li>
-<li><a href="#org946d411">Geometric Simplices</a></li>
-<li><a href="#org35244ff">Geometric Simplicial Complex</a></li>
-<li><a href="#org3305552">Abstract Simplices</a></li>
-<li><a href="#org19272a4">Abstract Complex</a></li>
-<li><a href="#orgaf033af">General Position of Points</a></li>
-<li><a href="#orgb73b7f6">Barycentric Coordinates</a></li>
-<li><a href="#org61a644f">Barycentric Subdivision</a></li>
+<li><a href="#org7b23401">Equivalence of Homology Theories</a></li>
+<li><a href="#org14a2b73">Homology as the Abelianization of Homotopy</a></li>
+<li><a href="#org81e5b90">Calculations of Homology Complexes</a></li>
+<li><a href="#org3223561">Geometric Simplices</a></li>
+<li><a href="#org5dc807b">Geometric Simplicial Complex</a></li>
+<li><a href="#orgaaff816">Abstract Simplices</a></li>
+<li><a href="#org2f33edb">Abstract Complex</a></li>
+<li><a href="#org2653c42">General Position of Points</a></li>
+<li><a href="#org673dce4">Barycentric Coordinates</a></li>
+<li><a href="#org02346b9">Barycentric Subdivision</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaab5c1d" class="outline-2">
-<h2 id="orgaab5c1d">Topology</h2>
-<div class="outline-text-2" id="text-orgaab5c1d">
+<div id="outline-container-orge5b4bc9" class="outline-2">
+<h2 id="orge5b4bc9">Topology</h2>
+<div class="outline-text-2" id="text-orge5b4bc9">
 <p>
 A topology is a way to describe the "nearness" of points. In the real world, paths in space are smooth. But what does it mean to travel in a smooth way? Also, what "things" can move smoothly? 
 </p>
@@ -392,37 +392,37 @@ Sets like \( \mathbb{R} \) and \( \mathbb{R}^{2} \) have the same number of poin
 <li></li>
 </ul>
 </div>
-<div id="outline-container-orgb23a8e3" class="outline-3">
-<h3 id="orgb23a8e3">Problems</h3>
-<div class="outline-text-3" id="text-orgb23a8e3">
+<div id="outline-container-orgc3df9e8" class="outline-3">
+<h3 id="orgc3df9e8">Problems</h3>
+<div class="outline-text-3" id="text-orgc3df9e8">
 </div>
-<div id="outline-container-org89c63b6" class="outline-4">
-<h4 id="org89c63b6">Bridges of Konig (Euler)</h4>
-</div>
-
-<div id="outline-container-orgef04542" class="outline-4">
-<h4 id="orgef04542">Index Theory in Dynamical Systems (Homotopy)</h4>
+<div id="outline-container-org35dc7a6" class="outline-4">
+<h4 id="org35dc7a6">Bridges of Konig (Euler)</h4>
 </div>
 
-<div id="outline-container-org814d5d8" class="outline-4">
-<h4 id="org814d5d8">Computing Integrals (Homotopy)</h4>
+<div id="outline-container-org33a63c9" class="outline-4">
+<h4 id="org33a63c9">Index Theory in Dynamical Systems (Homotopy)</h4>
 </div>
 
-<div id="outline-container-orgad5f4b2" class="outline-4">
-<h4 id="orgad5f4b2">General Relativity (Manifolds)</h4>
+<div id="outline-container-org44357a0" class="outline-4">
+<h4 id="org44357a0">Computing Integrals (Homotopy)</h4>
 </div>
 
-<div id="outline-container-orga75ebb9" class="outline-4">
-<h4 id="orga75ebb9">Y-Combinator (Scott Continuity)</h4>
+<div id="outline-container-org1a5c0e9" class="outline-4">
+<h4 id="org1a5c0e9">General Relativity (Manifolds)</h4>
 </div>
 
-<div id="outline-container-orgaf1804a" class="outline-4">
-<h4 id="orgaf1804a">Compactness Theorem (Topological Model Theory)</h4>
+<div id="outline-container-orgeafdfff" class="outline-4">
+<h4 id="orgeafdfff">Y-Combinator (Scott Continuity)</h4>
+</div>
+
+<div id="outline-container-orga49a159" class="outline-4">
+<h4 id="orga49a159">Compactness Theorem (Topological Model Theory)</h4>
 </div>
 </div>
-<div id="outline-container-orgb71557e" class="outline-3">
-<h3 id="orgb71557e">Nearness Without Metrics?</h3>
-<div class="outline-text-3" id="text-orgb71557e">
+<div id="outline-container-orgaa3d051" class="outline-3">
+<h3 id="orgaa3d051">Nearness Without Metrics?</h3>
+<div class="outline-text-3" id="text-orgaa3d051">
 <p>
 A metric is a method by which we may describe how far apart two objects are using a real number.
 </p>
@@ -446,9 +446,9 @@ Though, in this discussion about distances, we are caught up in assigning a real
 There are unfortunately many issues with these distances.
 </p>
 </div>
-<div id="outline-container-org12f2d56" class="outline-4">
-<h4 id="org12f2d56">Real Numbers</h4>
-<div class="outline-text-4" id="text-org12f2d56">
+<div id="outline-container-org6966e93" class="outline-4">
+<h4 id="org6966e93">Real Numbers</h4>
+<div class="outline-text-4" id="text-org6966e93">
 <p>
 Our imaginations are unbelievably rich with the amount of spaces we can play around in. We can imagine walking around on the real numbers. Skipping around going from one point to the next. I can imagine running on the plane going from my house to my neighbors. But what about spaces in which the distances can become infinite? Mathematically we may describe this space as
 </p>
@@ -466,9 +466,9 @@ The distances can become so unbelievably large that a simple real number could n
 </p>
 </div>
 </div>
-<div id="outline-container-orgdd64a83" class="outline-4">
-<h4 id="orgdd64a83">Symmetry</h4>
-<div class="outline-text-4" id="text-orgdd64a83">
+<div id="outline-container-org95cde28" class="outline-4">
+<h4 id="org95cde28">Symmetry</h4>
+<div class="outline-text-4" id="text-org95cde28">
 <p>
 Imagine that I was riding on a train that only moved in one direction.
 </p>
@@ -486,33 +486,33 @@ We can talk about what are the places I can actually stop at in my current posit
 </p>
 </div>
 </div>
-<div id="outline-container-org7b5e003" class="outline-4">
-<h4 id="org7b5e003">Positivity</h4>
-<div class="outline-text-4" id="text-org7b5e003">
+<div id="outline-container-org245376f" class="outline-4">
+<h4 id="org245376f">Positivity</h4>
+<div class="outline-text-4" id="text-org245376f">
 <p>
 Time has a negative metric signature. A surprising fact is that time runs in a different distance away from us.
 </p>
 </div>
 </div>
-<div id="outline-container-org6904ec8" class="outline-4">
-<h4 id="org6904ec8">Not Qualitative</h4>
-<div class="outline-text-4" id="text-org6904ec8">
+<div id="outline-container-orgec6fb43" class="outline-4">
+<h4 id="orgec6fb43">Not Qualitative</h4>
+<div class="outline-text-4" id="text-orgec6fb43">
 <p>
 Even when we do have a metric to work with, the types of spaces we would encounter and the types of operations we would perform would not play well with the metric. We can imagine a strip of paper. The distance between the two points would be the standard Euclidean distance. Imagine we glued the ends of the strip together. We would get a cylinder. The distance between the two points would be the closest path between them. However, for points close to the glue, their distance between two points would be extremely different. In fact, there is no way to predict using metrics alone that would tell us what two points would be close by each other.
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org0ad86ae" class="outline-3">
-<h3 id="org0ad86ae">Equivalent Notions</h3>
-<div class="outline-text-3" id="text-org0ad86ae">
+<div id="outline-container-org5a8d29e" class="outline-3">
+<h3 id="org5a8d29e">Equivalent Notions</h3>
+<div class="outline-text-3" id="text-org5a8d29e">
 <p>
 Like any deep notion, a topology can be described in a number of equivalent ways. 
 </p>
 </div>
-<div id="outline-container-orgd7b1c49" class="outline-4">
-<h4 id="orgd7b1c49">Open Sets</h4>
-<div class="outline-text-4" id="text-orgd7b1c49">
+<div id="outline-container-org9b976a7" class="outline-4">
+<h4 id="org9b976a7">Open Sets</h4>
+<div class="outline-text-4" id="text-org9b976a7">
 <p>
 Given a set \( X \) we may prescribe what points are close to each other by subsets we claim have some "wiggle-room" around each point. Every point \( p \in X \) can wiggle in \( X \). Every point of the empty set \( p \in \emptyset \) can wiggle vacuously. Then we have relations of wiggle sets with each other.
 </p>
@@ -522,33 +522,33 @@ If you can wiggle in two sets
 </p>
 </div>
 </div>
-<div id="outline-container-org0ac2371" class="outline-4">
-<h4 id="org0ac2371">Closed Sets</h4>
+<div id="outline-container-orgb34e3e9" class="outline-4">
+<h4 id="orgb34e3e9">Closed Sets</h4>
 </div>
 
-<div id="outline-container-orgde910e5" class="outline-4">
-<h4 id="orgde910e5">Neighborhoods</h4>
+<div id="outline-container-orgdc5dd4c" class="outline-4">
+<h4 id="orgdc5dd4c">Neighborhoods</h4>
 </div>
 
-<div id="outline-container-org9ec5360" class="outline-4">
-<h4 id="org9ec5360">Interior Operators</h4>
+<div id="outline-container-orgf2c3255" class="outline-4">
+<h4 id="orgf2c3255">Interior Operators</h4>
 </div>
 
-<div id="outline-container-org3188319" class="outline-4">
-<h4 id="org3188319">Closure Operators</h4>
+<div id="outline-container-orgf961549" class="outline-4">
+<h4 id="orgf961549">Closure Operators</h4>
 </div>
 
-<div id="outline-container-orge90da11" class="outline-4">
-<h4 id="orge90da11">Convergence of Nets</h4>
+<div id="outline-container-orgf86a99a" class="outline-4">
+<h4 id="orgf86a99a">Convergence of Nets</h4>
 </div>
 
-<div id="outline-container-org4bfa44d" class="outline-4">
-<h4 id="org4bfa44d">Convergence of Filters</h4>
+<div id="outline-container-org986983e" class="outline-4">
+<h4 id="org986983e">Convergence of Filters</h4>
 </div>
 </div>
-<div id="outline-container-org313798b" class="outline-3">
-<h3 id="org313798b">Rigor</h3>
-<div class="outline-text-3" id="text-org313798b">
+<div id="outline-container-org48e7bba" class="outline-3">
+<h3 id="org48e7bba">Rigor</h3>
+<div class="outline-text-3" id="text-org48e7bba">
 <p>
 A topology \( \mathcal{T} \) on a set \( X \) is such that, 
 \(\mathcal{T} \subseteq \mathcal{P}(X)\)
@@ -558,16 +558,16 @@ A topology \( \mathcal{T} \) on a set \( X \) is such that,
 </div>
 </div>
 </div>
-<div id="outline-container-org6cbd5d8" class="outline-2">
-<h2 id="org6cbd5d8">Continuity</h2>
-<div class="outline-text-2" id="text-org6cbd5d8">
+<div id="outline-container-orgecda7d2" class="outline-2">
+<h2 id="orgecda7d2">Continuity</h2>
+<div class="outline-text-2" id="text-orgecda7d2">
 <p>
 \[ f \colon X \to Y \text{ Continuous} \iff \forall V \in \mathcal{T}_Y \colon f^{-1}[V] \in \mathcal{T}_X \] 
 </p>
 </div>
-<div id="outline-container-org0ebdd01" class="outline-3">
-<h3 id="org0ebdd01">Building a Discontinuity Detector</h3>
-<div class="outline-text-3" id="text-org0ebdd01">
+<div id="outline-container-org3394016" class="outline-3">
+<h3 id="org3394016">Building a Discontinuity Detector</h3>
+<div class="outline-text-3" id="text-org3394016">
 <p>
 Imagine we have a function which "jumps"
 </p>
@@ -585,17 +585,17 @@ Here are some examples:
 </ul>
 </div>
 </div>
-<div id="outline-container-org179a940" class="outline-3">
-<h3 id="org179a940">Homeomorphism</h3>
-<div class="outline-text-3" id="text-org179a940">
+<div id="outline-container-orge2976e2" class="outline-3">
+<h3 id="orge2976e2">Homeomorphism</h3>
+<div class="outline-text-3" id="text-orge2976e2">
 <p>
 \[f \colon X \to Y \] homeomorphism \[\iff\] \[f \colon X \to Y \]  bijective, continuous, and has bijective inverse
 </p>
 </div>
 </div>
-<div id="outline-container-org80f51f5" class="outline-3">
-<h3 id="org80f51f5">Determining Homeomorphism</h3>
-<div class="outline-text-3" id="text-org80f51f5">
+<div id="outline-container-org7b8e38b" class="outline-3">
+<h3 id="org7b8e38b">Determining Homeomorphism</h3>
+<div class="outline-text-3" id="text-org7b8e38b">
 <p>
 To exhibit a homeomorphism we must create a function such that it is bijective, continuous, and has a continuous inverse.
 </p>
@@ -611,102 +611,102 @@ Compactness is preserved under homeomorphism but \[(0,1)\] is not compact and \[
 </div>
 </div>
 </div>
-<div id="outline-container-org0703b1a" class="outline-2">
-<h2 id="org0703b1a">Creating New Topologies</h2>
+<div id="outline-container-org68ce86a" class="outline-2">
+<h2 id="org68ce86a">Creating New Topologies</h2>
 </div>
 
 
-<div id="outline-container-orga52ea0e" class="outline-2">
-<h2 id="orga52ea0e">Compactness</h2>
+<div id="outline-container-org035721e" class="outline-2">
+<h2 id="org035721e">Compactness</h2>
 </div>
 
 
-<div id="outline-container-orga4179fd" class="outline-2">
-<h2 id="orga4179fd">Connectedness</h2>
+<div id="outline-container-org3c91aab" class="outline-2">
+<h2 id="org3c91aab">Connectedness</h2>
 </div>
 
 
-<div id="outline-container-org26b7ba2" class="outline-2">
-<h2 id="org26b7ba2">Point Set</h2>
-<div class="outline-text-2" id="text-org26b7ba2">
+<div id="outline-container-orgc56c814" class="outline-2">
+<h2 id="orgc56c814">Point Set</h2>
+<div class="outline-text-2" id="text-orgc56c814">
 </div>
-<div id="outline-container-org7edef9e" class="outline-3">
-<h3 id="org7edef9e">Generating Topologies</h3>
-<div class="outline-text-3" id="text-org7edef9e">
+<div id="outline-container-orgae0a252" class="outline-3">
+<h3 id="orgae0a252">Generating Topologies</h3>
+<div class="outline-text-3" id="text-orgae0a252">
 </div>
-<div id="outline-container-org419aafd" class="outline-4">
-<h4 id="org419aafd">Bases &amp; Subbases</h4>
-</div>
-
-<div id="outline-container-org31c8a91" class="outline-4">
-<h4 id="org31c8a91">Subsets</h4>
+<div id="outline-container-org6eacaae" class="outline-4">
+<h4 id="org6eacaae">Bases &amp; Subbases</h4>
 </div>
 
-<div id="outline-container-org5ec1d6d" class="outline-4">
-<h4 id="org5ec1d6d">Products</h4>
+<div id="outline-container-org1971b21" class="outline-4">
+<h4 id="org1971b21">Subsets</h4>
 </div>
 
-<div id="outline-container-org45ff23d" class="outline-4">
-<h4 id="org45ff23d">Quotients</h4>
+<div id="outline-container-org252b6b6" class="outline-4">
+<h4 id="org252b6b6">Products</h4>
+</div>
+
+<div id="outline-container-org906ca67" class="outline-4">
+<h4 id="org906ca67">Quotients</h4>
 </div>
 </div>
-<div id="outline-container-org5210fd1" class="outline-3">
-<h3 id="org5210fd1">Connectedness</h3>
+<div id="outline-container-org1a7f8fb" class="outline-3">
+<h3 id="org1a7f8fb">Connectedness</h3>
 </div>
-<div id="outline-container-org832efbc" class="outline-3">
-<h3 id="org832efbc">Compactness</h3>
+<div id="outline-container-orgc9ae047" class="outline-3">
+<h3 id="orgc9ae047">Compactness</h3>
 </div>
-<div id="outline-container-org049b231" class="outline-3">
-<h3 id="org049b231">Dimension</h3>
+<div id="outline-container-org172185a" class="outline-3">
+<h3 id="org172185a">Dimension</h3>
 </div>
 </div>
-<div id="outline-container-orgff08cb1" class="outline-2">
-<h2 id="orgff08cb1">Category Theory</h2>
-<div class="outline-text-2" id="text-orgff08cb1">
+<div id="outline-container-orgf23c066" class="outline-2">
+<h2 id="orgf23c066">Category Theory</h2>
+<div class="outline-text-2" id="text-orgf23c066">
 </div>
-<div id="outline-container-orgbb05c5f" class="outline-3">
-<h3 id="orgbb05c5f">Category</h3>
-<div class="outline-text-3" id="text-orgbb05c5f">
+<div id="outline-container-org8fbc79a" class="outline-3">
+<h3 id="org8fbc79a">Category</h3>
+<div class="outline-text-3" id="text-org8fbc79a">
 <p>
 Definition of a Category
 </p>
 </div>
-<div id="outline-container-org47e75e9" class="outline-4">
-<h4 id="org47e75e9">Definition</h4>
-<div class="outline-text-4" id="text-org47e75e9">
+<div id="outline-container-org268e4cb" class="outline-4">
+<h4 id="org268e4cb">Definition</h4>
+<div class="outline-text-4" id="text-org268e4cb">
 <p>
 A <b>Category</b> \[ \mathcal{C} \] consists of a class of <b>objects</b> \[ \text{ob}(\mathcal{C}) \] and <b>Morphisms</b> \[ \text{Hom}_\mathcal{C}(X,Y) \] for all \[X,Y \in \text{ob}(\mathcal{C})\]
 Two morphisms can be composed if the domain and codomain match. Composistion is associative.
 </p>
 </div>
 </div>
-<div id="outline-container-org01b60f2" class="outline-4">
-<h4 id="org01b60f2">Examples</h4>
+<div id="outline-container-orgdf23e7e" class="outline-4">
+<h4 id="orgdf23e7e">Examples</h4>
 </div>
 </div>
-<div id="outline-container-org299b445" class="outline-3">
-<h3 id="org299b445">Monomorphisms</h3>
+<div id="outline-container-org3362a52" class="outline-3">
+<h3 id="org3362a52">Monomorphisms</h3>
 </div>
-<div id="outline-container-org8953780" class="outline-3">
-<h3 id="org8953780">Epimorphisms</h3>
+<div id="outline-container-org6be46ac" class="outline-3">
+<h3 id="org6be46ac">Epimorphisms</h3>
 </div>
-<div id="outline-container-org2c95dae" class="outline-3">
-<h3 id="org2c95dae">Isomorphisms</h3>
+<div id="outline-container-orge416def" class="outline-3">
+<h3 id="orge416def">Isomorphisms</h3>
 </div>
-<div id="outline-container-org261e246" class="outline-3">
-<h3 id="org261e246">Endomorphisms</h3>
+<div id="outline-container-org059f87f" class="outline-3">
+<h3 id="org059f87f">Endomorphisms</h3>
 </div>
-<div id="outline-container-org11bdfe2" class="outline-3">
-<h3 id="org11bdfe2">Automorphism</h3>
+<div id="outline-container-org69f77ef" class="outline-3">
+<h3 id="org69f77ef">Automorphism</h3>
 </div>
 </div>
-<div id="outline-container-org5039175" class="outline-2">
-<h2 id="org5039175">Homotopy</h2>
-<div class="outline-text-2" id="text-org5039175">
+<div id="outline-container-org50acbfe" class="outline-2">
+<h2 id="org50acbfe">Homotopy</h2>
+<div class="outline-text-2" id="text-org50acbfe">
 </div>
-<div id="outline-container-org111214d" class="outline-3">
-<h3 id="org111214d">Two Functions</h3>
-<div class="outline-text-3" id="text-org111214d">
+<div id="outline-container-org2aa197a" class="outline-3">
+<h3 id="org2aa197a">Two Functions</h3>
+<div class="outline-text-3" id="text-org2aa197a">
 <ul class="org-ul">
 <li>\[ f,g \colon X \to Y \]</li>
 </ul>
@@ -717,9 +717,9 @@ They are called homotopic when
 </p>
 </div>
 </div>
-<div id="outline-container-org26fd06f" class="outline-3">
-<h3 id="org26fd06f">Two Spaces</h3>
-<div class="outline-text-3" id="text-org26fd06f">
+<div id="outline-container-org22da980" class="outline-3">
+<h3 id="org22da980">Two Spaces</h3>
+<div class="outline-text-3" id="text-org22da980">
 <ul class="org-ul">
 <li>\[ X,Y \]</li>
 </ul>
@@ -730,9 +730,9 @@ They are called homotopy equivalant when
 </p>
 </div>
 </div>
-<div id="outline-container-org032af10" class="outline-3">
-<h3 id="org032af10">Relative Homotopy</h3>
-<div class="outline-text-3" id="text-org032af10">
+<div id="outline-container-orgdd3e9e6" class="outline-3">
+<h3 id="orgdd3e9e6">Relative Homotopy</h3>
+<div class="outline-text-3" id="text-orgdd3e9e6">
 <p>
 If we have a homotopy such that no matter the time, a certain subset is fixed we call it a homotopy relative to that fixed subset.
 </p>
@@ -748,9 +748,9 @@ If we have a homotopy such that no matter the time, a certain subset is fixed we
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf5b58ff" class="outline-3">
-<h3 id="orgf5b58ff">Deformation Retract</h3>
-<div class="outline-text-3" id="text-orgf5b58ff">
+<div id="outline-container-org4b9cad7" class="outline-3">
+<h3 id="org4b9cad7">Deformation Retract</h3>
+<div class="outline-text-3" id="text-org4b9cad7">
 <ul class="org-ul">
 <li>\[ i \colon X \to X , i^2 = i \]</li>
 </ul>
@@ -784,21 +784,21 @@ But there is a special notion where the identity of a space can be homotopic to 
 <li></li>
 </ul>
 </div>
-<div id="outline-container-orgcc2c61e" class="outline-4">
-<h4 id="orgcc2c61e">Null Homotopy</h4>
+<div id="outline-container-org4a8e65b" class="outline-4">
+<h4 id="org4a8e65b">Null Homotopy</h4>
 </div>
-<div id="outline-container-orgeefce32" class="outline-4">
-<h4 id="orgeefce32">Contractible Spaces</h4>
+<div id="outline-container-org223723d" class="outline-4">
+<h4 id="org223723d">Contractible Spaces</h4>
 </div>
 </div>
 </div>
-<div id="outline-container-orgce7cd12" class="outline-2">
-<h2 id="orgce7cd12">Fundamental Group</h2>
-<div class="outline-text-2" id="text-orgce7cd12">
+<div id="outline-container-orgabee5cc" class="outline-2">
+<h2 id="orgabee5cc">Fundamental Group</h2>
+<div class="outline-text-2" id="text-orgabee5cc">
 </div>
-<div id="outline-container-org025edd6" class="outline-3">
-<h3 id="org025edd6">Functoriality</h3>
-<div class="outline-text-3" id="text-org025edd6">
+<div id="outline-container-org067920b" class="outline-3">
+<h3 id="org067920b">Functoriality</h3>
+<div class="outline-text-3" id="text-org067920b">
 <ul class="org-ul">
 <li>\[ X \overset{f}{\to} Y \]</li>
 </ul>
@@ -850,12 +850,12 @@ Claim: If
 </p>
 </div>
 </div>
-<div id="outline-container-org52d639c" class="outline-3">
-<h3 id="org52d639c">\( \pi_1(A) \) where \( A \subseteq_{\text{convex}} \mathbb{R} \)</h3>
+<div id="outline-container-orgf552afb" class="outline-3">
+<h3 id="orgf552afb">\( \pi_1(A) \) where \( A \subseteq_{\text{convex}} \mathbb{R} \)</h3>
 </div>
-<div id="outline-container-org35bf8a9" class="outline-3">
-<h3 id="org35bf8a9">\( \pi_1(S^1) \)</h3>
-<div class="outline-text-3" id="text-org35bf8a9">
+<div id="outline-container-org8525052" class="outline-3">
+<h3 id="org8525052">\( \pi_1(S^1) \)</h3>
+<div class="outline-text-3" id="text-org8525052">
 <ul class="org-ul">
 <li>\[ f \in \pi_1(S^1, 1+0i) \]</li>
 </ul>
@@ -950,30 +950,30 @@ Hence \[ n = m \] (two paths are path homotopic in \[ \mathbb{R} \] iff they hav
 </p>
 </div>
 </div>
-<div id="outline-container-org187b736" class="outline-3">
-<h3 id="org187b736">\( \pi_1(S^n) . n \geq 2 \)</h3>
+<div id="outline-container-orga140648" class="outline-3">
+<h3 id="orga140648">\( \pi_1(S^n) . n \geq 2 \)</h3>
 </div>
-<div id="outline-container-org48bb03f" class="outline-3">
-<h3 id="org48bb03f">\( \pi_1(\mathbb{T}^n) \)</h3>
+<div id="outline-container-org8ebfb19" class="outline-3">
+<h3 id="org8ebfb19">\( \pi_1(\mathbb{T}^n) \)</h3>
 </div>
-<div id="outline-container-org3efe84d" class="outline-3">
-<h3 id="org3efe84d">Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</h3>
+<div id="outline-container-org1fbc79b" class="outline-3">
+<h3 id="org1fbc79b">Homotopy Equivalant Spaces Have Isomorphic Fundemental Groups</h3>
 </div>
-<div id="outline-container-org3ea6097" class="outline-3">
-<h3 id="org3ea6097">Product Topology is Product of Groups</h3>
+<div id="outline-container-org9e40f96" class="outline-3">
+<h3 id="org9e40f96">Product Topology is Product of Groups</h3>
 </div>
 </div>
-<div id="outline-container-orgb17e5f1" class="outline-2">
-<h2 id="orgb17e5f1">Homology</h2>
-<div class="outline-text-2" id="text-orgb17e5f1">
+<div id="outline-container-orgf87ce7c" class="outline-2">
+<h2 id="orgf87ce7c">Homology</h2>
+<div class="outline-text-2" id="text-orgf87ce7c">
 </div>
-<div id="outline-container-org7b802b3" class="outline-3">
-<h3 id="org7b802b3">Types of Homology Theories</h3>
-<div class="outline-text-3" id="text-org7b802b3">
+<div id="outline-container-org4bd1efb" class="outline-3">
+<h3 id="org4bd1efb">Types of Homology Theories</h3>
+<div class="outline-text-3" id="text-org4bd1efb">
 </div>
-<div id="outline-container-org4c3e0d8" class="outline-4">
-<h4 id="org4c3e0d8">Homology of Graphs</h4>
-<div class="outline-text-4" id="text-org4c3e0d8">
+<div id="outline-container-org4c7908b" class="outline-4">
+<h4 id="org4c7908b">Homology of Graphs</h4>
+<div class="outline-text-4" id="text-org4c7908b">
 <ul class="org-ul">
 <li>\[ X \in \textbf{Graph} \]</li>
 </ul>
@@ -988,8 +988,8 @@ That is, given a graph, we have vertices and edges. Formally add each vertex and
 </p>
 </div>
 <ul class="org-ul">
-<li><a id="orga2bba3f"></a>Examples<br />
-<div class="outline-text-5" id="text-orga2bba3f">
+<li><a id="orgebcc464"></a>Examples<br />
+<div class="outline-text-5" id="text-orgebcc464">
 <ul class="org-ul">
 <li>\[ X = (a \xrightarrow{e} b) \]</li>
 </ul>
@@ -1006,21 +1006,21 @@ A cycle would be a path that begins and ends at the same point, so \[ e \] forwa
 </li>
 </ul>
 </div>
-<div id="outline-container-orgbb5a506" class="outline-4">
-<h4 id="orgbb5a506">Simplicial Homology</h4>
+<div id="outline-container-org0b2b8da" class="outline-4">
+<h4 id="org0b2b8da">Simplicial Homology</h4>
 </div>
 
-<div id="outline-container-org47dc52e" class="outline-4">
-<h4 id="org47dc52e">Singular Homology</h4>
+<div id="outline-container-org8ea161f" class="outline-4">
+<h4 id="org8ea161f">Singular Homology</h4>
 </div>
 
-<div id="outline-container-org1861551" class="outline-4">
-<h4 id="org1861551">Cellular Homology</h4>
+<div id="outline-container-org980165f" class="outline-4">
+<h4 id="org980165f">Cellular Homology</h4>
 </div>
 
-<div id="outline-container-orgdf7229f" class="outline-4">
-<h4 id="orgdf7229f">Axiomatic Homology</h4>
-<div class="outline-text-4" id="text-orgdf7229f">
+<div id="outline-container-org9315370" class="outline-4">
+<h4 id="org9315370">Axiomatic Homology</h4>
+<div class="outline-text-4" id="text-org9315370">
 <ul class="org-ul">
 <li>\[ X \] CW Complex</li>
 <li>\[ H_n \colon \textbf{CW} \to \textbf{Ab} \] Functor</li>
@@ -1028,21 +1028,21 @@ A cycle would be a path that begins and ends at the same point, so \[ e \] forwa
 </div>
 </div>
 </div>
-<div id="outline-container-org391d4dc" class="outline-3">
-<h3 id="org391d4dc">Equivalence of Homology Theories</h3>
+<div id="outline-container-org7b23401" class="outline-3">
+<h3 id="org7b23401">Equivalence of Homology Theories</h3>
 </div>
 
-<div id="outline-container-org11cef9d" class="outline-3">
-<h3 id="org11cef9d">Homology as the Abelianization of Homotopy</h3>
+<div id="outline-container-org14a2b73" class="outline-3">
+<h3 id="org14a2b73">Homology as the Abelianization of Homotopy</h3>
 </div>
 
-<div id="outline-container-org2de5a79" class="outline-3">
-<h3 id="org2de5a79">Calculations of Homology Complexes</h3>
+<div id="outline-container-org81e5b90" class="outline-3">
+<h3 id="org81e5b90">Calculations of Homology Complexes</h3>
 </div>
 
-<div id="outline-container-org946d411" class="outline-3">
-<h3 id="org946d411">Geometric Simplices</h3>
-<div class="outline-text-3" id="text-org946d411">
+<div id="outline-container-org3223561" class="outline-3">
+<h3 id="org3223561">Geometric Simplices</h3>
+<div class="outline-text-3" id="text-org3223561">
 <p>
 A geometric simplex is the convex hull of a collection of given points \( \left\{ p_{i} \right\} \) 
 </p>
@@ -1056,33 +1056,33 @@ Where \( x \in \sigma \iff x = \sum_{i} \lambda_{i} p_{i}, \sum_{i} \lambda_{i} 
 </p>
 </div>
 </div>
-<div id="outline-container-org35244ff" class="outline-3">
-<h3 id="org35244ff">Geometric Simplicial Complex</h3>
-<div class="outline-text-3" id="text-org35244ff">
+<div id="outline-container-org5dc807b" class="outline-3">
+<h3 id="org5dc807b">Geometric Simplicial Complex</h3>
+<div class="outline-text-3" id="text-org5dc807b">
 <p>
 A Geometric Simplicial Complex is a collection of simplices where intersection happens at a face.
 </p>
 </div>
 </div>
-<div id="outline-container-org3305552" class="outline-3">
-<h3 id="org3305552">Abstract Simplices</h3>
-<div class="outline-text-3" id="text-org3305552">
+<div id="outline-container-orgaaff816" class="outline-3">
+<h3 id="orgaaff816">Abstract Simplices</h3>
+<div class="outline-text-3" id="text-orgaaff816">
 <p>
 An abstract simplex is a finite collection of points.
 </p>
 </div>
 </div>
-<div id="outline-container-org19272a4" class="outline-3">
-<h3 id="org19272a4">Abstract Complex</h3>
-<div class="outline-text-3" id="text-org19272a4">
+<div id="outline-container-org2f33edb" class="outline-3">
+<h3 id="org2f33edb">Abstract Complex</h3>
+<div class="outline-text-3" id="text-org2f33edb">
 <p>
 An abstract simplicial complex is a collection of simplices such that their intersection is in the complex.
 </p>
 </div>
 </div>
-<div id="outline-container-orgaf033af" class="outline-3">
-<h3 id="orgaf033af">General Position of Points</h3>
-<div class="outline-text-3" id="text-orgaf033af">
+<div id="outline-container-org2653c42" class="outline-3">
+<h3 id="org2653c42">General Position of Points</h3>
+<div class="outline-text-3" id="text-org2653c42">
 <p>
 A collection of points \( \{ p_{i} \} \) are in general position if they are affinely independent.
 </p>
@@ -1108,9 +1108,9 @@ If \( \{ p_{i} \}_{i \in [1 \ldots n]} \) are a collection of distinct points, t
 </p>
 </div>
 </div>
-<div id="outline-container-orgb73b7f6" class="outline-3">
-<h3 id="orgb73b7f6">Barycentric Coordinates</h3>
-<div class="outline-text-3" id="text-orgb73b7f6">
+<div id="outline-container-org673dce4" class="outline-3">
+<h3 id="org673dce4">Barycentric Coordinates</h3>
+<div class="outline-text-3" id="text-org673dce4">
 <p>
 Given a point \( x \in \sigma = [p_{i}] \)
 </p>
@@ -1120,9 +1120,9 @@ Then \( x = \sum_{i} \lambda_{i} p_{i} \), we call \( (\lambda_{i})_{i} \) the b
 </p>
 </div>
 </div>
-<div id="outline-container-org61a644f" class="outline-3">
-<h3 id="org61a644f">Barycentric Subdivision</h3>
-<div class="outline-text-3" id="text-org61a644f">
+<div id="outline-container-org02346b9" class="outline-3">
+<h3 id="org02346b9">Barycentric Subdivision</h3>
+<div class="outline-text-3" id="text-org02346b9">
 <p>
 Given a geometric simplicial complex \( K \), a simplicial complex \( K' \) is said to be a subdivision of \( K \) if:
 </p>

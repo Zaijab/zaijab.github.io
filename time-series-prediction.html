@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:12 -->
+<!-- 2024-10-03 Thu 14:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Time Series Prediction</title>
@@ -232,8 +232,8 @@ Here we will use and become familiar with the following <a href="python.html#ID-
 <p>
 Here we will learn to use TensorFlow to build a predictive model which can forecast power consumption of a given building.
 </p>
-<div id="outline-container-org7e1de78" class="outline-2">
-<h2 id="org7e1de78"><span class="section-number-2">1.</span> What We're Building Towards</h2>
+<div id="outline-container-orgd3975bb" class="outline-2">
+<h2 id="orgd3975bb"><span class="section-number-2">1.</span> What We're Building Towards</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 I tend to be verbose when explaining. Here is a plug and play version of the code.
@@ -253,31 +253,31 @@ From the previous week we will use
 </p>
 </div>
 </div>
-<div id="outline-container-orge3de590" class="outline-2">
-<h2 id="orge3de590"><span class="section-number-2">2.</span> Importing the Dataset</h2>
+<div id="outline-container-org7648fb3" class="outline-2">
+<h2 id="org7648fb3"><span class="section-number-2">2.</span> Importing the Dataset</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In order to train the model, we need something to train <b>on</b>. 
 </p>
 </div>
-<div id="outline-container-org6dd8c63" class="outline-3">
-<h3 id="org6dd8c63"><span class="section-number-3">2.1.</span> Locating the Data in SQL</h3>
+<div id="outline-container-orgcac71be" class="outline-3">
+<h3 id="orgcac71be"><span class="section-number-3">2.1.</span> Locating the Data in SQL</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 The data is stored on a server
 </p>
 </div>
 </div>
-<div id="outline-container-org6973080" class="outline-3">
-<h3 id="org6973080"><span class="section-number-3">2.2.</span> Creating a Pandas DataFrame</h3>
+<div id="outline-container-org767475c" class="outline-3">
+<h3 id="org767475c"><span class="section-number-3">2.2.</span> Creating a Pandas DataFrame</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 In Python, the easiest way to manipulate data for sake of plotting and wrangling is via Pandas. So far we have created a <code>SQLAlchemy</code> selectable. To execute the query and hold the data in memory, we use <code>pd.read_sql</code>.
 </p>
 </div>
 </div>
-<div id="outline-container-org0d0b90c" class="outline-3">
-<h3 id="org0d0b90c"><span class="section-number-3">2.3.</span> Creating TensorFlow dataset</h3>
+<div id="outline-container-orgd46dd60" class="outline-3">
+<h3 id="orgd46dd60"><span class="section-number-3">2.3.</span> Creating TensorFlow dataset</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Now that we have the data in memory and visualized we will now begin to make the data represented in a manner which is more efficient to train on.
@@ -297,45 +297,45 @@ Here we will use a <code>TensorFlow</code> dataset using the <code>tf.keras.prep
 </div>
 </div>
 </div>
-<div id="outline-container-org50dcfd5" class="outline-2">
-<h2 id="org50dcfd5"><span class="section-number-2">3.</span> Exploring the Dataset</h2>
+<div id="outline-container-org5cfd9bf" class="outline-2">
+<h2 id="org5cfd9bf"><span class="section-number-2">3.</span> Exploring the Dataset</h2>
 </div>
 
 
-<div id="outline-container-orgee6d01c" class="outline-2">
-<h2 id="orgee6d01c"><span class="section-number-2">4.</span> Baseline Model ARIMA</h2>
+<div id="outline-container-orgb132d3d" class="outline-2">
+<h2 id="orgb132d3d"><span class="section-number-2">4.</span> Baseline Model ARIMA</h2>
 </div>
 
 
 
-<div id="outline-container-orga1bf13f" class="outline-2">
-<h2 id="orga1bf13f"><span class="section-number-2">5.</span> Engineering Features for Machine Learning</h2>
+<div id="outline-container-org75bed51" class="outline-2">
+<h2 id="org75bed51"><span class="section-number-2">5.</span> Engineering Features for Machine Learning</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 To start doing machine learning, we must first define the model we want to use, then we engineer features based on what the model will do best with.
 </p>
 </div>
 </div>
-<div id="outline-container-org94d8427" class="outline-2">
-<h2 id="org94d8427"><span class="section-number-2">6.</span> Representing the Data in TensorFlow</h2>
+<div id="outline-container-org3837d57" class="outline-2">
+<h2 id="org3837d57"><span class="section-number-2">6.</span> Representing the Data in TensorFlow</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Currently our data is in a <code>pandas.DataFrame</code> object. TensorFlow wants the dataset to be in a <code>tf.Tensor</code> format. Timeseries are a common enough format for Keras to have a preprocessing function <code>tf.keras.utils.timeseries_dataset_from_array</code>.
 </p>
 </div>
-<div id="outline-container-org163473c" class="outline-3">
-<h3 id="org163473c"><span class="section-number-3">6.1.</span> Create a</h3>
+<div id="outline-container-orgb9362a7" class="outline-3">
+<h3 id="orgb9362a7"><span class="section-number-3">6.1.</span> Create a</h3>
 </div>
 </div>
-<div id="outline-container-org6569abc" class="outline-2">
-<h2 id="org6569abc"><span class="section-number-2">7.</span> Predictions</h2>
+<div id="outline-container-org332f1f7" class="outline-2">
+<h2 id="org332f1f7"><span class="section-number-2">7.</span> Predictions</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 The output of a TensorFlow model is, of course, another <code>tf.Tensor</code>. In this model we wish to perform the following steps.
 </p>
 </div>
-<div id="outline-container-org7056c76" class="outline-3">
-<h3 id="org7056c76"><span class="section-number-3">7.1.</span> Outputting Predictions</h3>
+<div id="outline-container-org0818cc9" class="outline-3">
+<h3 id="org0818cc9"><span class="section-number-3">7.1.</span> Outputting Predictions</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 Given the <code>model</code> of type <code>tf.keras.sequential</code>, we have access to the <code>*.predict</code> method. Recall that we <b>standardized</b> our dataset by subtracting off the mean and dividing by the standard deviation of the training set. This means that the input and output will use standardized features. That is, our model has the following behavior
@@ -359,8 +359,8 @@ We may write a function which uses this model but has the inputs and outputs be 
 </div>
 </div>
 </div>
-<div id="outline-container-orgf51a29f" class="outline-3">
-<h3 id="orgf51a29f"><span class="section-number-3">7.2.</span> Matching Date &amp; Time</h3>
+<div id="outline-container-orgb027e5b" class="outline-3">
+<h3 id="orgb027e5b"><span class="section-number-3">7.2.</span> Matching Date &amp; Time</h3>
 </div>
 </div>
 </div>

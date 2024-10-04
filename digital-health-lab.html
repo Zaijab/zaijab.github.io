@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:13 -->
+<!-- 2024-10-03 Thu 14:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Digital Health Lab</title>
@@ -219,45 +219,45 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Digital Health Lab</h1>
-<div id="outline-container-org8a6b9d2" class="outline-2">
-<h2 id="org8a6b9d2"><span class="section-number-2">1.</span> Todo</h2>
+<div id="outline-container-orgfc392c2" class="outline-2">
+<h2 id="orgfc392c2"><span class="section-number-2">1.</span> Todo</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org74ce840" class="outline-3">
-<h3 id="org74ce840"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Travel Grant</h3>
+<div id="outline-container-org013a481" class="outline-3">
+<h3 id="org013a481"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Travel Grant</h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
 </div>
-<div id="outline-container-org74dce54" class="outline-3">
-<h3 id="org74dce54"><span class="section-number-3">1.2.</span> Use Race as Sensitive Attribute</h3>
+<div id="outline-container-orgbe65c2e" class="outline-3">
+<h3 id="orgbe65c2e"><span class="section-number-3">1.2.</span> Use Race as Sensitive Attribute</h3>
 </div>
 
-<div id="outline-container-org8928a8a" class="outline-3">
-<h3 id="org8928a8a"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> HIPIMR Dataset</h3>
+<div id="outline-container-org81c0054" class="outline-3">
+<h3 id="org81c0054"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> HIPIMR Dataset</h3>
 </div>
 
-<div id="outline-container-org4b9852a" class="outline-3">
-<h3 id="org4b9852a"><span class="section-number-3">1.4.</span> <span class="done DONE">DONE</span> Find 3 Datasets which exhibit bias</h3>
+<div id="outline-container-org0265f7c" class="outline-3">
+<h3 id="org0265f7c"><span class="section-number-3">1.4.</span> <span class="done DONE">DONE</span> Find 3 Datasets which exhibit bias</h3>
 </div>
 
-<div id="outline-container-org0ebab64" class="outline-3">
-<h3 id="org0ebab64"><span class="section-number-3">1.5.</span> <span class="done DONE">DONE</span> Evaluate Differentiable Fairness</h3>
+<div id="outline-container-org6ed3cc1" class="outline-3">
+<h3 id="org6ed3cc1"><span class="section-number-3">1.5.</span> <span class="done DONE">DONE</span> Evaluate Differentiable Fairness</h3>
 </div>
 
-<div id="outline-container-org08a7db1" class="outline-3">
-<h3 id="org08a7db1"><span class="section-number-3">1.6.</span> Fairness Experiments</h3>
+<div id="outline-container-org138bc98" class="outline-3">
+<h3 id="org138bc98"><span class="section-number-3">1.6.</span> Fairness Experiments</h3>
 </div>
 
-<div id="outline-container-orgca5825b" class="outline-3">
-<h3 id="orgca5825b"><span class="section-number-3">1.7.</span> AoU Dataset Access</h3>
+<div id="outline-container-orgec68d2c" class="outline-3">
+<h3 id="orgec68d2c"><span class="section-number-3">1.7.</span> AoU Dataset Access</h3>
 </div>
 </div>
-<div id="outline-container-org3f678d5" class="outline-2">
-<h2 id="org3f678d5"><span class="section-number-2">2.</span> All of Us Diabetes Dataset</h2>
+<div id="outline-container-org26ca98e" class="outline-2">
+<h2 id="org26ca98e"><span class="section-number-2">2.</span> All of Us Diabetes Dataset</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgf82f8eb" class="outline-3">
-<h3 id="orgf82f8eb"><span class="section-number-3">2.1.</span> Dataset Description</h3>
+<div id="outline-container-orgd92244f" class="outline-3">
+<h3 id="orgd92244f"><span class="section-number-3">2.1.</span> Dataset Description</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 There are 6 different tables associated to the dataset.
@@ -280,8 +280,8 @@ These all have a <code>person_id</code> which outlines the specific person who w
 For measuring conditions, sometimes the <code>condition_end_datetime</code> is <code>pd.NaT</code>. There are no values for which <code>condition_start_datetime</code> is <code>pd.NaT</code>. Hence I will sort by <code>condition_start_datetime</code> and group by and get the last known measurement. Perhaps I should apply <code>1</code> if the person has ever had diabetes?
 </p>
 </div>
-<div id="outline-container-orgaede40f" class="outline-4">
-<h4 id="orgaede40f"><span class="section-number-4">2.1.1.</span> Getting the Targets</h4>
+<div id="outline-container-org025d3f5" class="outline-4">
+<h4 id="org025d3f5"><span class="section-number-4">2.1.1.</span> Getting the Targets</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 We are predicting people who have diabetes. Some people have gone to the hospital for multiple conditions.
@@ -295,8 +295,8 @@ Some people have gotten a condition measured multiple times.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org3f711a8" class="outline-3">
-<h3 id="org3f711a8"><span class="section-number-3">2.2.</span> Model Description</h3>
+<div id="outline-container-orgea40199" class="outline-3">
+<h3 id="orgea40199"><span class="section-number-3">2.2.</span> Model Description</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Currently the model is logistic regression (<code>sklearn.linear_model.LogisticRegression</code>).
@@ -311,20 +311,20 @@ The columns are the <code>concept_id</code>'s associated with the measurements:
 </p>
 </div>
 </div>
-<div id="outline-container-org061b608" class="outline-3">
-<h3 id="org061b608"><span class="section-number-3">2.3.</span> Code Organization</h3>
+<div id="outline-container-orge63ab8c" class="outline-3">
+<h3 id="orge63ab8c"><span class="section-number-3">2.3.</span> Code Organization</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-orgf844d1f" class="outline-4">
-<h4 id="orgf844d1f"><span class="section-number-4">2.3.1.</span> Download Data</h4>
+<div id="outline-container-org0ed0d27" class="outline-4">
+<h4 id="org0ed0d27"><span class="section-number-4">2.3.1.</span> Download Data</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 The data is accessed using Google Big Query queries. 
 </p>
 </div>
 </div>
-<div id="outline-container-org0504dcb" class="outline-4">
-<h4 id="org0504dcb"><span class="section-number-4">2.3.2.</span> Train Model</h4>
+<div id="outline-container-org743cabd" class="outline-4">
+<h4 id="org743cabd"><span class="section-number-4">2.3.2.</span> Train Model</h4>
 <div class="outline-text-4" id="text-2-3-2">
 <p>
 Randomly sample within each race
@@ -364,8 +364,8 @@ Here is a <a href="https://colab.research.google.com/drive/1p9DpqPiXXOpkMzulKL6M
 </p>
 </div>
 </div>
-<div id="outline-container-org52f58d1" class="outline-4">
-<h4 id="org52f58d1"><span class="section-number-4">2.3.3.</span> Evaluate Model</h4>
+<div id="outline-container-org6bfb686" class="outline-4">
+<h4 id="org6bfb686"><span class="section-number-4">2.3.3.</span> Evaluate Model</h4>
 <div class="outline-text-4" id="text-2-3-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -469,36 +469,36 @@ Stratify the populations by Race
 </div>
 </div>
 </div>
-<div id="outline-container-orge35a097" class="outline-2">
-<h2 id="orge35a097"><span class="section-number-2">3.</span> Breast Cancer Detection</h2>
+<div id="outline-container-orgbd4a8fb" class="outline-2">
+<h2 id="orgbd4a8fb"><span class="section-number-2">3.</span> Breast Cancer Detection</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org3a4d9f6" class="outline-3">
-<h3 id="org3a4d9f6"><span class="section-number-3">3.1.</span> Dataset</h3>
+<div id="outline-container-org0ac2237" class="outline-3">
+<h3 id="org0ac2237"><span class="section-number-3">3.1.</span> Dataset</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The dataset contains whole slide images from 1,000 biopsies in 842 patients from 2014 to 2020. 
 </p>
 </div>
 </div>
-<div id="outline-container-org03ba185" class="outline-3">
-<h3 id="org03ba185"><span class="section-number-3">3.2.</span> The Model</h3>
+<div id="outline-container-orge376bcb" class="outline-3">
+<h3 id="orge376bcb"><span class="section-number-3">3.2.</span> The Model</h3>
 </div>
 </div>
-<div id="outline-container-org9e64b4a" class="outline-2">
-<h2 id="org9e64b4a"><span class="section-number-2">4.</span> OMAP Table</h2>
+<div id="outline-container-orgd570ab6" class="outline-2">
+<h2 id="orgd570ab6"><span class="section-number-2">4.</span> OMAP Table</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM)
 </p>
 </div>
 </div>
-<div id="outline-container-org432ff7d" class="outline-2">
-<h2 id="org432ff7d"><span class="section-number-2">5.</span> All of Us Heteroskedasticity Paper</h2>
+<div id="outline-container-org81d82af" class="outline-2">
+<h2 id="org81d82af"><span class="section-number-2">5.</span> All of Us Heteroskedasticity Paper</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org74093e6" class="outline-3">
-<h3 id="org74093e6"><span class="section-number-3">5.1.</span> Abstract</h3>
+<div id="outline-container-org7c5787a" class="outline-3">
+<h3 id="org7c5787a"><span class="section-number-3">5.1.</span> Abstract</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Electronic Health Records (EHRs) provide a vast amount of patient data important to patient outcomes.
@@ -508,8 +508,8 @@ By testing a number of data imputation techniques we find that the AUROC, accura
 </div>
 </div>
 </div>
-<div id="outline-container-org927af50" class="outline-2">
-<h2 id="org927af50"><span class="section-number-2">6.</span> Classifier Evaluation</h2>
+<div id="outline-container-orgc50d012" class="outline-2">
+<h2 id="orgc50d012"><span class="section-number-2">6.</span> Classifier Evaluation</h2>
 <div class="outline-text-2" id="text-6">
 <div class="org-src-container">
 <pre class="src src-jupyter-python3">print("Hi")
@@ -521,12 +521,12 @@ Hi
 </pre>
 </div>
 </div>
-<div id="outline-container-orgf2584ec" class="outline-2">
-<h2 id="orgf2584ec"><span class="section-number-2">7.</span> Fair Active Learning</h2>
+<div id="outline-container-org049a247" class="outline-2">
+<h2 id="org049a247"><span class="section-number-2">7.</span> Fair Active Learning</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org318b169" class="outline-3">
-<h3 id="org318b169"><span class="section-number-3">7.1.</span> Notes on FAL Code</h3>
+<div id="outline-container-org3e2f26b" class="outline-3">
+<h3 id="org3e2f26b"><span class="section-number-3">7.1.</span> Notes on FAL Code</h3>
 <div class="outline-text-3" id="text-7-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">RL</span><span style="color: #000000;">(</span>path,response,sensitive,atr,demo_option,r,b,alpha,rnd,data_option,flag_demo<span style="color: #000000;">)</span>:
@@ -535,8 +535,8 @@ Hi
 </div>
 </div>
 </div>
-<div id="outline-container-org389e503" class="outline-2">
-<h2 id="org389e503"><span class="section-number-2">8.</span> Conferences</h2>
+<div id="outline-container-orgb418978" class="outline-2">
+<h2 id="orgb418978"><span class="section-number-2">8.</span> Conferences</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>AISTATS
@@ -562,8 +562,8 @@ Hi
 </ul>
 </div>
 </div>
-<div id="outline-container-org652ee53" class="outline-2">
-<h2 id="org652ee53"><span class="section-number-2">9.</span> N by M Study</h2>
+<div id="outline-container-org9f18b9d" class="outline-2">
+<h2 id="org9f18b9d"><span class="section-number-2">9.</span> N by M Study</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Create Table of N by M study and Bar Plot by Tonight
@@ -649,8 +649,8 @@ Create Table of N by M study and Bar Plot by Tonight
 </table>
 </div>
 </div>
-<div id="outline-container-org8b55b1e" class="outline-2">
-<h2 id="org8b55b1e"><span class="section-number-2">10.</span> TikTok Hashtags</h2>
+<div id="outline-container-orgf23ed66" class="outline-2">
+<h2 id="orgf23ed66"><span class="section-number-2">10.</span> TikTok Hashtags</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 174 - 274
@@ -1979,8 +1979,8 @@ Create Table of N by M study and Bar Plot by Tonight
 </p>
 </div>
 </div>
-<div id="outline-container-orga22a7c8" class="outline-2">
-<h2 id="orga22a7c8"><span class="section-number-2">11.</span> Lab Meeting Notes</h2>
+<div id="outline-container-orgea000a4" class="outline-2">
+<h2 id="orgea000a4"><span class="section-number-2">11.</span> Lab Meeting Notes</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Hello, my name is Zain Jabbar. I am a Mathematics Ph.D. student working with you all. Here we may present on the work I perform in this lab and in the Mathematics department.
@@ -1990,15 +1990,15 @@ Hello, my name is Zain Jabbar. I am a Mathematics Ph.D. student working with you
 My interests are broad, anything scientific would keep me happy. 
 </p>
 </div>
-<div id="outline-container-org00a832c" class="outline-3">
-<h3 id="org00a832c"><span class="section-number-3">11.1.</span> Model Fairness</h3>
+<div id="outline-container-org418c84b" class="outline-3">
+<h3 id="org418c84b"><span class="section-number-3">11.1.</span> Model Fairness</h3>
 <div class="outline-text-3" id="text-11-1">
 <p>
 My first work is in model fairness.
 </p>
 </div>
-<div id="outline-container-org77a9b9d" class="outline-4">
-<h4 id="org77a9b9d"><span class="section-number-4">11.1.1.</span> Intuition</h4>
+<div id="outline-container-orgdd718f1" class="outline-4">
+<h4 id="orgdd718f1"><span class="section-number-4">11.1.1.</span> Intuition</h4>
 <div class="outline-text-4" id="text-11-1-1">
 <p>
 Given a dataset \( X \) partitioned by \( G \) (think of any <code>Pandas.DataFrame</code> and <code>Pandas.Grouper</code>)
@@ -2089,16 +2089,16 @@ If \( G = \{ [0, 10], (10, \infty) \} \) is an indicator of age above exclusive 
 </p>
 </div>
 </div>
-<div id="outline-container-orge024baa" class="outline-4">
-<h4 id="orge024baa"><span class="section-number-4">11.1.2.</span> Approaches</h4>
+<div id="outline-container-org4a0d9d1" class="outline-4">
+<h4 id="org4a0d9d1"><span class="section-number-4">11.1.2.</span> Approaches</h4>
 <div class="outline-text-4" id="text-11-1-2">
 <p>
 Armin gave a great overview on the areas in which bias can occur in the ML pipeline. With the way I 
 </p>
 </div>
 </div>
-<div id="outline-container-org011c9cb" class="outline-4">
-<h4 id="org011c9cb"><span class="section-number-4">11.1.3.</span> All of Us</h4>
+<div id="outline-container-org70afd1a" class="outline-4">
+<h4 id="org70afd1a"><span class="section-number-4">11.1.3.</span> All of Us</h4>
 <div class="outline-text-4" id="text-11-1-3">
 <p>
 The All of Us database, created by the National Institutes of Health, contains healthcare data from over 400 thousand participants.
@@ -2106,15 +2106,15 @@ The All of Us database, created by the National Institutes of Health, contains h
 </div>
 </div>
 </div>
-<div id="outline-container-org9fc876a" class="outline-3">
-<h3 id="org9fc876a"><span class="section-number-3">11.2.</span> Active Learning</h3>
+<div id="outline-container-org4304ae8" class="outline-3">
+<h3 id="org4304ae8"><span class="section-number-3">11.2.</span> Active Learning</h3>
 <div class="outline-text-3" id="text-11-2">
 <p>
 I also do work in active learning.
 </p>
 </div>
-<div id="outline-container-org2ea5d0c" class="outline-4">
-<h4 id="org2ea5d0c"><span class="section-number-4">11.2.1.</span> Intuition</h4>
+<div id="outline-container-org0fe32a3" class="outline-4">
+<h4 id="org0fe32a3"><span class="section-number-4">11.2.1.</span> Intuition</h4>
 <div class="outline-text-4" id="text-11-2-1">
 <p>
 In many ML approaches, the saying is that more data is often better. However there are barriers to data aquisition.
@@ -2125,25 +2125,25 @@ In many ML approaches, the saying is that more data is often better. However the
 </p>
 </div>
 </div>
-<div id="outline-container-org05388b7" class="outline-4">
-<h4 id="org05388b7"><span class="section-number-4">11.2.2.</span> Approaches</h4>
+<div id="outline-container-org0eb1703" class="outline-4">
+<h4 id="org0eb1703"><span class="section-number-4">11.2.2.</span> Approaches</h4>
 </div>
 </div>
-<div id="outline-container-org6864cce" class="outline-3">
-<h3 id="org6864cce"><span class="section-number-3">11.3.</span> Fair Active Learning</h3>
+<div id="outline-container-orgc4e5044" class="outline-3">
+<h3 id="orgc4e5044"><span class="section-number-3">11.3.</span> Fair Active Learning</h3>
 </div>
 
 
 
-<div id="outline-container-org6135806" class="outline-3">
-<h3 id="org6135806"><span class="section-number-3">11.4.</span> Information Geometry</h3>
+<div id="outline-container-org696d3da" class="outline-3">
+<h3 id="org696d3da"><span class="section-number-3">11.4.</span> Information Geometry</h3>
 <div class="outline-text-3" id="text-11-4">
 <p>
 In all of our ML projects, we are trying to fit a model to some dataset. In most circumstances, this entails solving an optimization problem (that is, doing calculus) over a set of parameters for a family of distributions. We may then apply principles of a more generalized calculus in higher dimensional spaces.
 </p>
 </div>
-<div id="outline-container-org2b486d5" class="outline-4">
-<h4 id="org2b486d5"><span class="section-number-4">11.4.1.</span> Gradient Methods</h4>
+<div id="outline-container-orge2ef192" class="outline-4">
+<h4 id="orge2ef192"><span class="section-number-4">11.4.1.</span> Gradient Methods</h4>
 <div class="outline-text-4" id="text-11-4-1">
 <p>
 One very useful method to fit a distribution uses gradient descent methods. The rule we are all familiar with is:
@@ -2247,8 +2247,8 @@ This natural gradient has a lot of nice properties (and some not so nice).
 </ul>
 </div>
 </div>
-<div id="outline-container-org4435677" class="outline-4">
-<h4 id="org4435677"><span class="section-number-4">11.4.2.</span> Case Study</h4>
+<div id="outline-container-orga53e9c4" class="outline-4">
+<h4 id="orga53e9c4"><span class="section-number-4">11.4.2.</span> Case Study</h4>
 <div class="outline-text-4" id="text-11-4-2">
 <p>
 <a href="https://link.springer.com/article/10.1007/s13218-015-0382-z">https://link.springer.com/article/10.1007/s13218-015-0382-z</a>
@@ -2277,17 +2277,17 @@ For a mechanical robot with \( 48 \) input states and \( 48 \) output states
 </div>
 </div>
 </div>
-<div id="outline-container-orga61e5b5" class="outline-2">
-<h2 id="orga61e5b5"><span class="section-number-2">12.</span> AI PHI Meeting</h2>
+<div id="outline-container-orgf716bba" class="outline-2">
+<h2 id="orgf716bba"><span class="section-number-2">12.</span> AI PHI Meeting</h2>
 </div>
 
 
-<div id="outline-container-org3d2d1bb" class="outline-2">
-<h2 id="org3d2d1bb"><span class="section-number-2">13.</span> CHI 2024 Peer Review</h2>
+<div id="outline-container-orgf804fb2" class="outline-2">
+<h2 id="orgf804fb2"><span class="section-number-2">13.</span> CHI 2024 Peer Review</h2>
 <div class="outline-text-2" id="text-13">
 </div>
-<div id="outline-container-orgf4eed28" class="outline-3">
-<h3 id="orgf4eed28"><span class="section-number-3">13.1.</span> Originality</h3>
+<div id="outline-container-org8fd0a96" class="outline-3">
+<h3 id="org8fd0a96"><span class="section-number-3">13.1.</span> Originality</h3>
 <div class="outline-text-3" id="text-13-1">
 <p>
 The paper introduces an interactive computational model that measures behavior quantitatively. The originality is due to the amalgamation of multiple ability tests for the purpose of prediction. The paper also constructs a score for the behavior of a patient.
@@ -2298,32 +2298,32 @@ This might not be very original, there are many results to "autism diagnosis ML 
 </p>
 </div>
 </div>
-<div id="outline-container-org26de1a8" class="outline-3">
-<h3 id="org26de1a8"><span class="section-number-3">13.2.</span> Significance</h3>
+<div id="outline-container-org0d0a8d3" class="outline-3">
+<h3 id="org0d0a8d3"><span class="section-number-3">13.2.</span> Significance</h3>
 <div class="outline-text-3" id="text-13-2">
 <p>
 The paper does have a good emphasis on integrating machine learning models into an existing framework and the importance of iterating on results. Many papers outline a "one-and-done" approach. This could be an example for other HCI papers to use a continuously evolving project. However the paper is very weak in many areas that would give it substance. This means that the significance is completely gone.
 </p>
 </div>
 </div>
-<div id="outline-container-org66c4244" class="outline-3">
-<h3 id="org66c4244"><span class="section-number-3">13.3.</span> Research Quality</h3>
+<div id="outline-container-orgdf10014" class="outline-3">
+<h3 id="orgdf10014"><span class="section-number-3">13.3.</span> Research Quality</h3>
 <div class="outline-text-3" id="text-13-3">
 <p>
 The research quality would be easier to comment on if the presentation was clearer. The description of the models are based on "experts conducting assessments" with no quotations or action-able steps to implement the same said assessments. This creates an irreproducible paper with no code and no dataset. The metrics displayed are incorrect, done with no confidence intervals, incomplete (No AUROC, no unweighted average recall), and done on a small sample size (less than 30 people).
 </p>
 </div>
 </div>
-<div id="outline-container-org8d21fe9" class="outline-3">
-<h3 id="org8d21fe9"><span class="section-number-3">13.4.</span> Previous Work</h3>
+<div id="outline-container-org980cff8" class="outline-3">
+<h3 id="org980cff8"><span class="section-number-3">13.4.</span> Previous Work</h3>
 <div class="outline-text-3" id="text-13-4">
 <p>
 There is an enormous literature on machine learning bases ASD diagnosis. For some reason the paper cites sources much less frequently after the first paragraph of its introduction. The paper does no service to itself to display its own original insight or how the previous papers cited contribute to the formation of the current work. The paper needs to compare apples to apples. The previous work cited do not use much of the same data or methodology. Hence, the placement of how much this work builds on those are unclear.
 </p>
 </div>
 </div>
-<div id="outline-container-org6f508ea" class="outline-3">
-<h3 id="org6f508ea"><span class="section-number-3">13.5.</span> Presentation Clarity</h3>
+<div id="outline-container-orgbde595e" class="outline-3">
+<h3 id="orgbde595e"><span class="section-number-3">13.5.</span> Presentation Clarity</h3>
 <div class="outline-text-3" id="text-13-5">
 <p>
 Almost every sentence has an issue, due to its placement within the paper or in its content. Critiquing every sentence would be overboard. We may start with the abstract and hopefully the point is made.
@@ -2359,8 +2359,8 @@ We also note that this paper seems to be written in part by an AI. The first par
 </div>
 </div>
 </div>
-<div id="outline-container-org26dcb6c" class="outline-2">
-<h2 id="org26dcb6c"><span class="section-number-2">14.</span> ITM</h2>
+<div id="outline-container-orgb3ff2f1" class="outline-2">
+<h2 id="orgb3ff2f1"><span class="section-number-2">14.</span> ITM</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 Title:
@@ -2376,20 +2376,20 @@ With recent advances in machine learning, many high stakes tasks are being done 
 "Fairness" is a catch all term describing the plethora of fairness metrics like "Statistical Parity", "Equalized Odds", and "Predictive Parity". "Active Learning" is an optimization problem to create a curious machine learning model, capable of requesting data to be labeled. Fair active learning is an approach which combines the two notions, creating a model subject to a budget on dataset size which maximizes fairness.
 </p>
 </div>
-<div id="outline-container-org666ff95" class="outline-3">
-<h3 id="org666ff95"><span class="section-number-3">14.1.</span> Fairness in Machine Learning</h3>
+<div id="outline-container-org6384156" class="outline-3">
+<h3 id="org6384156"><span class="section-number-3">14.1.</span> Fairness in Machine Learning</h3>
 </div>
 </div>
-<div id="outline-container-org1e961a5" class="outline-2">
-<h2 id="org1e961a5"><span class="section-number-2">15.</span> 1-1s</h2>
+<div id="outline-container-orgbf3e853" class="outline-2">
+<h2 id="orgbf3e853"><span class="section-number-2">15.</span> 1-1s</h2>
 <div class="outline-text-2" id="text-15">
 </div>
-<div id="outline-container-orge854008" class="outline-3">
-<h3 id="orge854008"><span class="section-number-3">15.1.</span> Wed Feb 28 2024</h3>
+<div id="outline-container-org0527200" class="outline-3">
+<h3 id="org0527200"><span class="section-number-3">15.1.</span> Wed Feb 28 2024</h3>
 <div class="outline-text-3" id="text-15-1">
 </div>
-<div id="outline-container-org146f92c" class="outline-4">
-<h4 id="org146f92c"><span class="section-number-4">15.1.1.</span> Fair Active Learning</h4>
+<div id="outline-container-org991a273" class="outline-4">
+<h4 id="org991a273"><span class="section-number-4">15.1.1.</span> Fair Active Learning</h4>
 <div class="outline-text-4" id="text-15-1-1">
 <p>
 There are 6 approaches to FAL in the paper by Anahideh: <a href="https://arxiv.org/pdf/2001.01796.pdf">https://arxiv.org/pdf/2001.01796.pdf</a>
@@ -2423,43 +2423,43 @@ Here we compare these 6 approaches to active learning and random labeling.
 </p>
 </div>
 </div>
-<div id="outline-container-orge729676" class="outline-4">
-<h4 id="orge729676"><span class="section-number-4">15.1.2.</span> <span class="todo TODO">TODO</span> Measure Fairness / More metrics than Accuracy</h4>
+<div id="outline-container-orgfa5a5ff" class="outline-4">
+<h4 id="orgfa5a5ff"><span class="section-number-4">15.1.2.</span> <span class="todo TODO">TODO</span> Measure Fairness / More metrics than Accuracy</h4>
 </div>
 
-<div id="outline-container-orge8f6b19" class="outline-4">
-<h4 id="orge8f6b19"><span class="section-number-4">15.1.3.</span> <span class="todo TODO">TODO</span> Estimate the inflection point</h4>
+<div id="outline-container-orgf620d36" class="outline-4">
+<h4 id="orgf620d36"><span class="section-number-4">15.1.3.</span> <span class="todo TODO">TODO</span> Estimate the inflection point</h4>
 </div>
 
-<div id="outline-container-org8dec011" class="outline-4">
-<h4 id="org8dec011"><span class="section-number-4">15.1.4.</span> <span class="todo TODO">TODO</span> Do Isotonic Regression of Values</h4>
+<div id="outline-container-org7d7cfa7" class="outline-4">
+<h4 id="org7d7cfa7"><span class="section-number-4">15.1.4.</span> <span class="todo TODO">TODO</span> Do Isotonic Regression of Values</h4>
 </div>
 
-<div id="outline-container-orgb5c73a7" class="outline-4">
-<h4 id="orgb5c73a7"><span class="section-number-4">15.1.5.</span> <span class="todo TODO">TODO</span> Bootstrap the curves by calculating the curves 50 times</h4>
+<div id="outline-container-orgc75088d" class="outline-4">
+<h4 id="orgc75088d"><span class="section-number-4">15.1.5.</span> <span class="todo TODO">TODO</span> Bootstrap the curves by calculating the curves 50 times</h4>
 </div>
 
-<div id="outline-container-org0096301" class="outline-4">
-<h4 id="org0096301"><span class="section-number-4">15.1.6.</span> <span class="todo TODO">TODO</span> Compare Known calibrated models (Baysian NN / Logistic Regression) to uncalibrated models (SVM, Random Forest, XGBoost)</h4>
+<div id="outline-container-orgead3f43" class="outline-4">
+<h4 id="orgead3f43"><span class="section-number-4">15.1.6.</span> <span class="todo TODO">TODO</span> Compare Known calibrated models (Baysian NN / Logistic Regression) to uncalibrated models (SVM, Random Forest, XGBoost)</h4>
 </div>
 
-<div id="outline-container-org67b6c56" class="outline-4">
-<h4 id="org67b6c56"><span class="section-number-4">15.1.7.</span> <span class="todo TODO">TODO</span> Compare calibration methods (Platt, Isotonic) to see if it increases accuracy</h4>
+<div id="outline-container-orga079c33" class="outline-4">
+<h4 id="orga079c33"><span class="section-number-4">15.1.7.</span> <span class="todo TODO">TODO</span> Compare calibration methods (Platt, Isotonic) to see if it increases accuracy</h4>
 </div>
 
-<div id="outline-container-orga88d970" class="outline-4">
-<h4 id="orga88d970"><span class="section-number-4">15.1.8.</span> <span class="todo TODO">TODO</span> Convex Combination of Fairness Metrics</h4>
+<div id="outline-container-orge77861d" class="outline-4">
+<h4 id="orge77861d"><span class="section-number-4">15.1.8.</span> <span class="todo TODO">TODO</span> Convex Combination of Fairness Metrics</h4>
 </div>
 </div>
-<div id="outline-container-org7979ebe" class="outline-3">
-<h3 id="org7979ebe"><span class="section-number-3">15.2.</span> Wed Apr 10</h3>
+<div id="outline-container-orgd5c7aa8" class="outline-3">
+<h3 id="orgd5c7aa8"><span class="section-number-3">15.2.</span> Wed Apr 10</h3>
 <div class="outline-text-3" id="text-15-2">
 <p>
 Still need to do FAL code updates from last time:
 </p>
 </div>
-<div id="outline-container-org0e89519" class="outline-4">
-<h4 id="org0e89519"><span class="section-number-4">15.2.1.</span> Fair Active Learning</h4>
+<div id="outline-container-org676c450" class="outline-4">
+<h4 id="org676c450"><span class="section-number-4">15.2.1.</span> Fair Active Learning</h4>
 <div class="outline-text-4" id="text-15-2-1">
 <p>
 There are 6 approaches to FAL in the paper by Anahideh: <a href="https://arxiv.org/pdf/2001.01796.pdf">https://arxiv.org/pdf/2001.01796.pdf</a>
@@ -2493,57 +2493,57 @@ Here we compare these 6 approaches to active learning and random labeling.
 </p>
 </div>
 </div>
-<div id="outline-container-org66d228c" class="outline-4">
-<h4 id="org66d228c"><span class="section-number-4">15.2.2.</span> <span class="todo TODO">TODO</span> Measure Fairness / More metrics than Accuracy</h4>
+<div id="outline-container-orga45d89c" class="outline-4">
+<h4 id="orga45d89c"><span class="section-number-4">15.2.2.</span> <span class="todo TODO">TODO</span> Measure Fairness / More metrics than Accuracy</h4>
 </div>
 
-<div id="outline-container-orgc4b8c36" class="outline-4">
-<h4 id="orgc4b8c36"><span class="section-number-4">15.2.3.</span> <span class="todo TODO">TODO</span> Estimate the inflection point</h4>
+<div id="outline-container-orgaf04e99" class="outline-4">
+<h4 id="orgaf04e99"><span class="section-number-4">15.2.3.</span> <span class="todo TODO">TODO</span> Estimate the inflection point</h4>
 </div>
 
-<div id="outline-container-org02bca91" class="outline-4">
-<h4 id="org02bca91"><span class="section-number-4">15.2.4.</span> <span class="todo TODO">TODO</span> Do Isotonic Regression of Values</h4>
+<div id="outline-container-orga7c16da" class="outline-4">
+<h4 id="orga7c16da"><span class="section-number-4">15.2.4.</span> <span class="todo TODO">TODO</span> Do Isotonic Regression of Values</h4>
 </div>
 
-<div id="outline-container-orgb56bc6f" class="outline-4">
-<h4 id="orgb56bc6f"><span class="section-number-4">15.2.5.</span> <span class="todo TODO">TODO</span> Bootstrap the curves by calculating the curves 50 times</h4>
+<div id="outline-container-org73f87d6" class="outline-4">
+<h4 id="org73f87d6"><span class="section-number-4">15.2.5.</span> <span class="todo TODO">TODO</span> Bootstrap the curves by calculating the curves 50 times</h4>
 </div>
 
-<div id="outline-container-org6c4387e" class="outline-4">
-<h4 id="org6c4387e"><span class="section-number-4">15.2.6.</span> <span class="todo TODO">TODO</span> Compare Known calibrated models (Baysian NN / Logistic Regression) to uncalibrated models (SVM, Random Forest, XGBoost)</h4>
+<div id="outline-container-org44fac77" class="outline-4">
+<h4 id="org44fac77"><span class="section-number-4">15.2.6.</span> <span class="todo TODO">TODO</span> Compare Known calibrated models (Baysian NN / Logistic Regression) to uncalibrated models (SVM, Random Forest, XGBoost)</h4>
 </div>
 
-<div id="outline-container-org4715767" class="outline-4">
-<h4 id="org4715767"><span class="section-number-4">15.2.7.</span> <span class="todo TODO">TODO</span> Compare calibration methods (Platt, Isotonic) to see if it increases accuracy</h4>
+<div id="outline-container-orgdeba271" class="outline-4">
+<h4 id="orgdeba271"><span class="section-number-4">15.2.7.</span> <span class="todo TODO">TODO</span> Compare calibration methods (Platt, Isotonic) to see if it increases accuracy</h4>
 </div>
 
-<div id="outline-container-org9b18086" class="outline-4">
-<h4 id="org9b18086"><span class="section-number-4">15.2.8.</span> <span class="todo TODO">TODO</span> Convex Combination of Fairness Metrics</h4>
+<div id="outline-container-org3cfad07" class="outline-4">
+<h4 id="org3cfad07"><span class="section-number-4">15.2.8.</span> <span class="todo TODO">TODO</span> Convex Combination of Fairness Metrics</h4>
 </div>
 
 
-<div id="outline-container-org1b4aef1" class="outline-4">
-<h4 id="org1b4aef1"><span class="section-number-4">15.2.9.</span> New Career Path</h4>
+<div id="outline-container-orgb23e846" class="outline-4">
+<h4 id="orgb23e846"><span class="section-number-4">15.2.9.</span> New Career Path</h4>
 </div>
 
-<div id="outline-container-org0c3ea4b" class="outline-4">
-<h4 id="org0c3ea4b"><span class="section-number-4">15.2.10.</span> Understanding Pay trajectories</h4>
+<div id="outline-container-org98eb84a" class="outline-4">
+<h4 id="org98eb84a"><span class="section-number-4">15.2.10.</span> Understanding Pay trajectories</h4>
 </div>
 
-<div id="outline-container-org8690c6e" class="outline-4">
-<h4 id="org8690c6e"><span class="section-number-4">15.2.11.</span> Location based Fairness and Regression Fairness</h4>
+<div id="outline-container-org07f62b4" class="outline-4">
+<h4 id="org07f62b4"><span class="section-number-4">15.2.11.</span> Location based Fairness and Regression Fairness</h4>
 </div>
 
-<div id="outline-container-org6192b96" class="outline-4">
-<h4 id="org6192b96"><span class="section-number-4">15.2.12.</span> Fair Active Simulation</h4>
+<div id="outline-container-org35b16fe" class="outline-4">
+<h4 id="org35b16fe"><span class="section-number-4">15.2.12.</span> Fair Active Simulation</h4>
 </div>
 
-<div id="outline-container-orgb19bbc3" class="outline-4">
-<h4 id="orgb19bbc3"><span class="section-number-4">15.2.13.</span> New Research ideas vs Review Paper</h4>
+<div id="outline-container-org598992c" class="outline-4">
+<h4 id="org598992c"><span class="section-number-4">15.2.13.</span> New Research ideas vs Review Paper</h4>
 </div>
 </div>
-<div id="outline-container-orga011a79" class="outline-3">
-<h3 id="orga011a79"><span class="section-number-3">15.3.</span> New Paper Ideas</h3>
+<div id="outline-container-org98c5dea" class="outline-3">
+<h3 id="org98c5dea"><span class="section-number-3">15.3.</span> New Paper Ideas</h3>
 <div class="outline-text-3" id="text-15-3">
 <ol class="org-ol">
 <li>Compas</li>
@@ -2553,12 +2553,12 @@ Here we compare these 6 approaches to active learning and random labeling.
 <li>Applications to AoU look for large dataset and expensive tests</li>
 </ol>
 </div>
-<div id="outline-container-orgaeaff6c" class="outline-4">
-<h4 id="orgaeaff6c"><span class="section-number-4">15.3.1.</span> Calibration -&gt; More Fairness</h4>
+<div id="outline-container-orgecf64fd" class="outline-4">
+<h4 id="orgecf64fd"><span class="section-number-4">15.3.1.</span> Calibration -&gt; More Fairness</h4>
 </div>
 </div>
-<div id="outline-container-orgdbb5da2" class="outline-3">
-<h3 id="orgdbb5da2"><span class="section-number-3">15.4.</span> Wed Jun 24</h3>
+<div id="outline-container-org0c113ed" class="outline-3">
+<h3 id="org0c113ed"><span class="section-number-3">15.4.</span> Wed Jun 24</h3>
 <div class="outline-text-3" id="text-15-4">
 <p>
 Added to the review paper
@@ -2570,16 +2570,16 @@ Searched papers from Science Direct, IEEE, Wiley Online Library, Arxiv
 </div>
 </div>
 </div>
-<div id="outline-container-org02837b8" class="outline-2">
-<h2 id="org02837b8"><span class="section-number-2">16.</span> Zerin Code</h2>
+<div id="outline-container-org278e638" class="outline-2">
+<h2 id="org278e638"><span class="section-number-2">16.</span> Zerin Code</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 Parkinson's prediction model is performing better on underrepresented groups.
 </p>
 </div>
 </div>
-<div id="outline-container-org8a7044c" class="outline-2">
-<h2 id="org8a7044c"><span class="section-number-2">17.</span> Differentiable Fairness</h2>
+<div id="outline-container-orgf38b075" class="outline-2">
+<h2 id="orgf38b075"><span class="section-number-2">17.</span> Differentiable Fairness</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 In Fairret: A Framework for Differentiable Fairness Regularization Terms, Buyl et al. introduces fairness evaluation within Pytorch, an autodiff environment. This allows users to incorporate fairness metrics within the loss function within a model during training and evaluating fairness metrics using probabilities.

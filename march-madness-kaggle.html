@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:12 -->
+<!-- 2024-10-03 Thu 14:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>March Madness Kaggle</title>
@@ -219,8 +219,8 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">March Madness Kaggle</h1>
-<div id="outline-container-org1d28751" class="outline-2">
-<h2 id="org1d28751"><span class="section-number-2">1.</span> Import Data and Display Files</h2>
+<div id="outline-container-orgfb58f73" class="outline-2">
+<h2 id="orgfb58f73"><span class="section-number-2">1.</span> Import Data and Display Files</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
@@ -240,8 +240,8 @@
 </pre>
 </div>
 </div>
-<div id="outline-container-orga5dcd84" class="outline-3">
-<h3 id="orga5dcd84"><span class="section-number-3">1.1.</span> Importing Previous Tournament Results</h3>
+<div id="outline-container-orga9a1ed6" class="outline-3">
+<h3 id="orga9a1ed6"><span class="section-number-3">1.1.</span> Importing Previous Tournament Results</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #005e8b;">tourney_result</span> = pd.read_csv<span style="color: #000000;">(</span>data_dir + <span style="color: #3548cf;">'MNCAATourneyCompactResults.csv'</span><span style="color: #000000;">)</span>
@@ -250,8 +250,8 @@ tourney_result
 </div>
 </div>
 </div>
-<div id="outline-container-orgeefe946" class="outline-3">
-<h3 id="orgeefe946"><span class="section-number-3">1.2.</span> Importing Previous and Current Seeds</h3>
+<div id="outline-container-orge759623" class="outline-3">
+<h3 id="orge759623"><span class="section-number-3">1.2.</span> Importing Previous and Current Seeds</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #005e8b;">tourney_seed</span> = pd.read_csv<span style="color: #000000;">(</span>data_dir + <span style="color: #3548cf;">'MNCAATourneySeeds.csv'</span><span style="color: #000000;">)</span>
@@ -264,8 +264,8 @@ Our results are scored based on how well we predict a team in the tournament to 
 </p>
 </div>
 </div>
-<div id="outline-container-orgde2ce0c" class="outline-3">
-<h3 id="orgde2ce0c"><span class="section-number-3">1.3.</span> Feature Engineering</h3>
+<div id="outline-container-org34df0d3" class="outline-3">
+<h3 id="org34df0d3"><span class="section-number-3">1.3.</span> Feature Engineering</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 With all of the data at our disposal, let us decide on what shall be out inputs.

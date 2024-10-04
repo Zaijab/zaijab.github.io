@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:12 -->
+<!-- 2024-10-03 Thu 14:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Predicting Building Power Usage</title>
@@ -221,20 +221,20 @@
 <p>
 Let us build an end to end building usage data pipeline. The end result is a model that can predict the next 24 hours of data given the previous week. We may use this prediction algorithm to define outliers in the data by giving a day and comparing the prediction to the actual value. Outliers will then be defined as data points with a three percent chance of occurring.
 </p>
-<div id="outline-container-orga9afa73" class="outline-2">
-<h2 id="orga9afa73"><span class="section-number-2">1.</span> Data Sources</h2>
+<div id="outline-container-org361d981" class="outline-2">
+<h2 id="org361d981"><span class="section-number-2">1.</span> Data Sources</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org3746cb4" class="outline-3">
-<h3 id="org3746cb4"><span class="section-number-3">1.1.</span> ARC GIS Location and Weather</h3>
+<div id="outline-container-org552c997" class="outline-3">
+<h3 id="org552c997"><span class="section-number-3">1.1.</span> ARC GIS Location and Weather</h3>
 </div>
 
-<div id="outline-container-orgc0acdb3" class="outline-3">
-<h3 id="orgc0acdb3"><span class="section-number-3">1.2.</span> Building Demand and Usage</h3>
+<div id="outline-container-org5bfe590" class="outline-3">
+<h3 id="org5bfe590"><span class="section-number-3">1.2.</span> Building Demand and Usage</h3>
 </div>
 </div>
-<div id="outline-container-org2036726" class="outline-2">
-<h2 id="org2036726"><span class="section-number-2">2.</span> Feature Engineering</h2>
+<div id="outline-container-org6beeb05" class="outline-2">
+<h2 id="org6beeb05"><span class="section-number-2">2.</span> Feature Engineering</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Thus far, we have the following data inputs.
@@ -252,16 +252,16 @@ To the computer, dates will appear as a discrete index with no further context. 
 </p>
 </div>
 </div>
-<div id="outline-container-orgcbbe861" class="outline-2">
-<h2 id="orgcbbe861"><span class="section-number-2">3.</span> Model Creation</h2>
+<div id="outline-container-org87d44e1" class="outline-2">
+<h2 id="org87d44e1"><span class="section-number-2">3.</span> Model Creation</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 TensorFlow and Keras has a very nice method of generating models. In this tutorial we will create an auto regressive recurrent neural network.
 </p>
 </div>
 </div>
-<div id="outline-container-org61c559a" class="outline-2">
-<h2 id="org61c559a"><span class="section-number-2">4.</span> Outlier Detection</h2>
+<div id="outline-container-orgd473ff7" class="outline-2">
+<h2 id="orgd473ff7"><span class="section-number-2">4.</span> Outlier Detection</h2>
 </div>
 </div>
 </body>
