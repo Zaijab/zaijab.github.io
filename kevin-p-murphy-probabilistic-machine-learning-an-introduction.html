@@ -1,0 +1,1864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kevin P. Murphy :: Probabilistic Machine Learning: An introduction</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Kevin P. Murphy :: Probabilistic Machine Learning: An introduction</h1>
+<div id="outline-container-orgeef83fb" class="outline-2">
+<h2 id="orgeef83fb"><span class="section-number-2">1.</span> Preface (27)</h2>
+</div>
+<div id="outline-container-orgf409937" class="outline-2">
+<h2 id="orgf409937"><span class="section-number-2">2.</span> Introduction (31)</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org3732dea" class="outline-3">
+<h3 id="org3732dea"><span class="section-number-3">2.1.</span> What is machine learning? (31)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+A computer program is said to learn from experience E with respect to some class of tasks T,
+and performance measure P, if its performance at tasks in T, as measured by P, improves with
+experience E.
+</p>
+</div>
+</div>
+<div id="outline-container-org5e9ace0" class="outline-3">
+<h3 id="org5e9ace0"><span class="section-number-3">2.2.</span> Supervised learning (31)</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orga52f714" class="outline-4">
+<h4 id="orga52f714"><span class="section-number-4">2.2.1.</span> Classification (32)</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+T: Predict a label from {0, &#x2026;, n}
+P: Cross Entropy
+E: More Data
+</p>
+</div>
+</div>
+<div id="outline-container-org2f0625b" class="outline-4">
+<h4 id="org2f0625b"><span class="section-number-4">2.2.2.</span> Regression (38)</h4>
+</div>
+<div id="outline-container-orgf01f29e" class="outline-4">
+<h4 id="orgf01f29e"><span class="section-number-4">2.2.3.</span> Overfitting and generalization (42)</h4>
+</div>
+<div id="outline-container-orgf394bc0" class="outline-4">
+<h4 id="orgf394bc0"><span class="section-number-4">2.2.4.</span> No free lunch theorem (43)</h4>
+</div>
+</div>
+<div id="outline-container-org0a8ffa6" class="outline-3">
+<h3 id="org0a8ffa6"><span class="section-number-3">2.3.</span> Unsupervised learning (44)</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-org193f62a" class="outline-4">
+<h4 id="org193f62a"><span class="section-number-4">2.3.1.</span> Clustering (44)</h4>
+</div>
+<div id="outline-container-orgcfae9a7" class="outline-4">
+<h4 id="orgcfae9a7"><span class="section-number-4">2.3.2.</span> Discovering latent ``factors of variation'' (45)</h4>
+</div>
+<div id="outline-container-org0054675" class="outline-4">
+<h4 id="org0054675"><span class="section-number-4">2.3.3.</span> Self-supervised learning (46)</h4>
+</div>
+<div id="outline-container-orgf14c8b8" class="outline-4">
+<h4 id="orgf14c8b8"><span class="section-number-4">2.3.4.</span> Evaluating unsupervised learning (46)</h4>
+</div>
+</div>
+<div id="outline-container-org088e29f" class="outline-3">
+<h3 id="org088e29f"><span class="section-number-3">2.4.</span> Reinforcement learning (47)</h3>
+</div>
+<div id="outline-container-orgd4b3bab" class="outline-3">
+<h3 id="orgd4b3bab"><span class="section-number-3">2.5.</span> Data (49)</h3>
+<div class="outline-text-3" id="text-2-5">
+</div>
+<div id="outline-container-orgf13f5c6" class="outline-4">
+<h4 id="orgf13f5c6"><span class="section-number-4">2.5.1.</span> Some common image datasets (49)</h4>
+</div>
+<div id="outline-container-orgb9885ae" class="outline-4">
+<h4 id="orgb9885ae"><span class="section-number-4">2.5.2.</span> Some common text datasets (52)</h4>
+</div>
+<div id="outline-container-org82b9eb3" class="outline-4">
+<h4 id="org82b9eb3"><span class="section-number-4">2.5.3.</span> Preprocessing discrete input data (53)</h4>
+</div>
+<div id="outline-container-orgeeceac9" class="outline-4">
+<h4 id="orgeeceac9"><span class="section-number-4">2.5.4.</span> Preprocessing text data (54)</h4>
+</div>
+<div id="outline-container-org4b8ecb1" class="outline-4">
+<h4 id="org4b8ecb1"><span class="section-number-4">2.5.5.</span> Handling missing data (57)</h4>
+</div>
+</div>
+<div id="outline-container-orgd45bc0a" class="outline-3">
+<h3 id="orgd45bc0a"><span class="section-number-3">2.6.</span> Discussion (57)</h3>
+<div class="outline-text-3" id="text-2-6">
+</div>
+<div id="outline-container-orgd68a5f7" class="outline-4">
+<h4 id="orgd68a5f7"><span class="section-number-4">2.6.1.</span> The relationship between ML and other fields (57)</h4>
+</div>
+<div id="outline-container-orgbb84887" class="outline-4">
+<h4 id="orgbb84887"><span class="section-number-4">2.6.2.</span> Structure of the book (58)</h4>
+</div>
+<div id="outline-container-org3f0a068" class="outline-4">
+<h4 id="org3f0a068"><span class="section-number-4">2.6.3.</span> Caveats (58)</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f9adf0" class="outline-2">
+<h2 id="org4f9adf0"><span class="section-number-2">3.</span> I Foundations (61)</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3c40886" class="outline-3">
+<h3 id="org3c40886"><span class="section-number-3">3.1.</span> Probability: Univariate Models (63)</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org9f95967" class="outline-4">
+<h4 id="org9f95967"><span class="section-number-4">3.1.1.</span> Introduction (63)</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+What is probability? (63)
+Types of uncertainty (63)
+Probability as an extension of logic (64)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb058bf9" class="outline-4">
+<h4 id="orgb058bf9"><span class="section-number-4">3.1.2.</span> Random variables (65)</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+Discrete random variables (65)
+Continuous random variables (66)
+Sets of related random variables (68)
+Independence and conditional independence (69)
+Moments of a distribution (70)
+Limitations of summary statistics * (73)
+</p>
+</div>
+</div>
+<div id="outline-container-org110d5ab" class="outline-4">
+<h4 id="org110d5ab"><span class="section-number-4">3.1.3.</span> Bayes' rule (74)</h4>
+<div class="outline-text-4" id="text-3-1-3">
+<p>
+Example: Testing for COVID-19 (76)
+Example: The Monty Hall problem (77)
+Inverse problems * (79)
+</p>
+</div>
+</div>
+<div id="outline-container-orgdc3fec3" class="outline-4">
+<h4 id="orgdc3fec3"><span class="section-number-4">3.1.4.</span> Bernoulli and binomial distributions (79)</h4>
+<div class="outline-text-4" id="text-3-1-4">
+<p>
+Definition (79)
+Sigmoid (logistic) function (80)
+Binary logistic regression (82)
+</p>
+</div>
+</div>
+<div id="outline-container-orgcbb6cdc" class="outline-4">
+<h4 id="orgcbb6cdc"><span class="section-number-4">3.1.5.</span> Categorical and multinomial distributions (83)</h4>
+<div class="outline-text-4" id="text-3-1-5">
+<p>
+Definition (83)
+Softmax function (84)
+Multiclass logistic regression (85)
+Log-sum-exp trick (86)
+</p>
+</div>
+</div>
+<div id="outline-container-orgc1adf46" class="outline-4">
+<h4 id="orgc1adf46"><span class="section-number-4">3.1.6.</span> Univariate Gaussian (normal) distribution (87)</h4>
+<div class="outline-text-4" id="text-3-1-6">
+<p>
+Cumulative distribution function (87)
+Probability density function (88)
+Regression (89)
+Why is the Gaussian distribution so widely used? (90)
+Dirac delta function as a limiting case (90)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb4d8463" class="outline-4">
+<h4 id="orgb4d8463"><span class="section-number-4">3.1.7.</span> Some other common univariate distributions * (91)</h4>
+<div class="outline-text-4" id="text-3-1-7">
+<p>
+Student t distribution (91)
+Cauchy distribution (92)
+Laplace distribution (93)
+Beta distribution (93)
+Gamma distribution (94)
+Empirical distribution (95)
+</p>
+</div>
+</div>
+<div id="outline-container-org565f1c0" class="outline-4">
+<h4 id="org565f1c0"><span class="section-number-4">3.1.8.</span> Transformations of random variables * (96)</h4>
+<div class="outline-text-4" id="text-3-1-8">
+<p>
+Discrete case (96)
+Continuous case (96)
+Invertible transformations (bijections) (96)
+Moments of a linear transformation (99)
+The convolution theorem (100)
+Central limit theorem (101)
+Monte Carlo approximation (102)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb77ae81" class="outline-4">
+<h4 id="orgb77ae81"><span class="section-number-4">3.1.9.</span> Exercises (103)</h4>
+</div>
+</div>
+<div id="outline-container-org354c53b" class="outline-3">
+<h3 id="org354c53b"><span class="section-number-3">3.2.</span> Probability: Multivariate Models (107)</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-orga0579ec" class="outline-4">
+<h4 id="orga0579ec"><span class="section-number-4">3.2.1.</span> Joint distributions for multiple random variables (107)</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Covariance (107)
+Correlation (108)
+Uncorrelated does not imply independent (109)
+Correlation does not imply causation (109)
+Simpson's paradox (110)
+</p>
+</div>
+</div>
+<div id="outline-container-org9602050" class="outline-4">
+<h4 id="org9602050"><span class="section-number-4">3.2.2.</span> The multivariate Gaussian (normal) distribution (110)</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Definition (111)
+Mahalanobis distance (113)
+Marginals and conditionals of an MVN * (114)
+Example: conditioning a 2d Gaussian (115)
+Example: Imputing missing values * (115)
+</p>
+</div>
+</div>
+<div id="outline-container-org7dd9f61" class="outline-4">
+<h4 id="org7dd9f61"><span class="section-number-4">3.2.3.</span> Linear Gaussian systems * (116)</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<p>
+Bayes rule for Gaussians (117)
+Derivation * (117)
+Example: Inferring an unknown scalar (118)
+Example: inferring an unknown vector (120)
+Example: sensor fusion (120)
+</p>
+</div>
+</div>
+<div id="outline-container-org66cd1ce" class="outline-4">
+<h4 id="org66cd1ce"><span class="section-number-4">3.2.4.</span> The exponential family * (121)</h4>
+<div class="outline-text-4" id="text-3-2-4">
+<p>
+Definition (122)
+Example (123)
+Log partition function is cumulant generating function (123)
+Maximum entropy derivation of the exponential family (124)
+</p>
+</div>
+</div>
+<div id="outline-container-orgfb2ba48" class="outline-4">
+<h4 id="orgfb2ba48"><span class="section-number-4">3.2.5.</span> Mixture models (125)</h4>
+<div class="outline-text-4" id="text-3-2-5">
+<p>
+Gaussian mixture models (125)
+Bernoulli mixture models (127)
+</p>
+</div>
+</div>
+<div id="outline-container-orga6dec54" class="outline-4">
+<h4 id="orga6dec54"><span class="section-number-4">3.2.6.</span> Probabilistic graphical models * (128)</h4>
+<div class="outline-text-4" id="text-3-2-6">
+<p>
+Representation (128)
+Inference (131)
+Learning (131)
+</p>
+</div>
+</div>
+<div id="outline-container-org4a0a70b" class="outline-4">
+<h4 id="org4a0a70b"><span class="section-number-4">3.2.7.</span> Exercises (132)</h4>
+</div>
+</div>
+<div id="outline-container-org6c87719" class="outline-3">
+<h3 id="org6c87719"><span class="section-number-3">3.3.</span> Statistics (135)</h3>
+<div class="outline-text-3" id="text-3-3">
+</div>
+<div id="outline-container-orgcc98408" class="outline-4">
+<h4 id="orgcc98408"><span class="section-number-4">3.3.1.</span> Introduction (135)</h4>
+</div>
+<div id="outline-container-orgf1b27b8" class="outline-4">
+<h4 id="orgf1b27b8"><span class="section-number-4">3.3.2.</span> Maximum likelihood estimation (MLE) (135)</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Definition (135)
+Justification for MLE (136)
+Example: MLE for the Bernoulli distribution (138)
+Example: MLE for the categorical distribution (139)
+Example: MLE for the univariate Gaussian (139)
+Example: MLE for the multivariate Gaussian (140)
+Example: MLE for linear regression (142)
+</p>
+</div>
+</div>
+<div id="outline-container-org4a12c34" class="outline-4">
+<h4 id="org4a12c34"><span class="section-number-4">3.3.3.</span> Empirical risk minimization (ERM) (143)</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+Example: minimizing the misclassification rate (144)
+Surrogate loss (144)
+</p>
+</div>
+</div>
+<div id="outline-container-orgfc4a616" class="outline-4">
+<h4 id="orgfc4a616"><span class="section-number-4">3.3.4.</span> Other estimation methods * (145)</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<p>
+The method of moments (145)
+Online (recursive) estimation (147)
+</p>
+</div>
+</div>
+<div id="outline-container-org5fc64ed" class="outline-4">
+<h4 id="org5fc64ed"><span class="section-number-4">3.3.5.</span> Regularization (148)</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<p>
+Example: MAP estimation for the Bernoulli distribution (149)
+Example: MAP estimation for the multivariate Gaussian * (150)
+Example: weight decay (151)
+Picking the regularizer using a validation set (152)
+Cross-validation (153)
+Early stopping (154)
+Using more data (155)
+</p>
+</div>
+</div>
+<div id="outline-container-orgcf80f7c" class="outline-4">
+<h4 id="orgcf80f7c"><span class="section-number-4">3.3.6.</span> Bayesian statistics * (157)</h4>
+<div class="outline-text-4" id="text-3-3-6">
+<p>
+Conjugate priors (157)
+The beta-binomial model (158)
+The Dirichlet-multinomial model (166)
+The Gaussian-Gaussian model (169)
+Beyond conjugate priors (172)
+Credible intervals (174)
+Bayesian machine learning (175)
+Computational issues (180)
+</p>
+</div>
+</div>
+<div id="outline-container-org3efb618" class="outline-4">
+<h4 id="org3efb618"><span class="section-number-4">3.3.7.</span> Frequentist statistics * (182)</h4>
+<div class="outline-text-4" id="text-3-3-7">
+<p>
+Sampling distributions (183)
+Gaussian approximation of the sampling distribution of the MLE (183)
+Bootstrap approximation of the sampling distribution of any estimator (184)
+Confidence intervals (185)
+Caution: Confidence intervals are not credible (186)
+The bias-variance tradeoff (187)
+</p>
+</div>
+</div>
+<div id="outline-container-org05edf0d" class="outline-4">
+<h4 id="org05edf0d"><span class="section-number-4">3.3.8.</span> Exercises (192)</h4>
+</div>
+</div>
+<div id="outline-container-org9777b5a" class="outline-3">
+<h3 id="org9777b5a"><span class="section-number-3">3.4.</span> Decision Theory (195)</h3>
+<div class="outline-text-3" id="text-3-4">
+</div>
+<div id="outline-container-org3b8593d" class="outline-4">
+<h4 id="org3b8593d"><span class="section-number-4">3.4.1.</span> Bayesian decision theory (195)</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+Basics (195)
+Classification problems (197)
+ROC curves (199)
+Precision-recall curves (201)
+Regression problems (204)
+Probabilistic prediction problems (205)
+</p>
+</div>
+</div>
+<div id="outline-container-org0db295e" class="outline-4">
+<h4 id="org0db295e"><span class="section-number-4">3.4.2.</span> Choosing the ``right'' model (207)</h4>
+<div class="outline-text-4" id="text-3-4-2">
+<p>
+Bayesian hypothesis testing (207)
+Bayesian model selection (209)
+Occam's razor (209)
+Connection between cross validation and marginal likelihood (211)
+Information criteria (212)
+Posterior inference over effect sizes and Bayesian significance testing (214)
+</p>
+</div>
+</div>
+<div id="outline-container-org40078eb" class="outline-4">
+<h4 id="org40078eb"><span class="section-number-4">3.4.3.</span> Frequentist decision theory (216)</h4>
+<div class="outline-text-4" id="text-3-4-3">
+<p>
+Computing the risk of an estimator (216)
+Consistent estimators (219)
+Admissible estimators (219)
+</p>
+</div>
+</div>
+<div id="outline-container-org081c397" class="outline-4">
+<h4 id="org081c397"><span class="section-number-4">3.4.4.</span> Empirical risk minimization (220)</h4>
+<div class="outline-text-4" id="text-3-4-4">
+<p>
+Empirical risk (220)
+Structural risk (222)
+Cross-validation (222)
+Statistical learning theory * (223)
+</p>
+</div>
+</div>
+<div id="outline-container-orgba0fe2b" class="outline-4">
+<h4 id="orgba0fe2b"><span class="section-number-4">3.4.5.</span> Frequentist hypothesis testing * (224)</h4>
+<div class="outline-text-4" id="text-3-4-5">
+<p>
+Likelihood ratio test (225)
+Null hypothesis significance testing (NHST) (226)
+p-values (226)
+p-values considered harmful (227)
+Why isn't everyone a Bayesian? (228)
+</p>
+</div>
+</div>
+<div id="outline-container-org8b999c4" class="outline-4">
+<h4 id="org8b999c4"><span class="section-number-4">3.4.6.</span> Exercises (230)</h4>
+</div>
+</div>
+<div id="outline-container-org44969f5" class="outline-3">
+<h3 id="org44969f5"><span class="section-number-3">3.5.</span> Information Theory (233)</h3>
+<div class="outline-text-3" id="text-3-5">
+</div>
+<div id="outline-container-orgbcc8ab8" class="outline-4">
+<h4 id="orgbcc8ab8"><span class="section-number-4">3.5.1.</span> Entropy (233)</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+Entropy for discrete random variables (233)
+Cross entropy (235)
+Joint entropy (235)
+Conditional entropy (236)
+Perplexity (237)
+Differential entropy for continuous random variables * (238)
+</p>
+</div>
+</div>
+<div id="outline-container-org561cb00" class="outline-4">
+<h4 id="org561cb00"><span class="section-number-4">3.5.2.</span> Relative entropy (KL divergence) * (239)</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<p>
+Definition (239)
+Interpretation (239)
+Example: KL divergence between two Gaussians (240)
+Non-negativity of KL (240)
+KL divergence and MLE (241)
+Forward vs reverse KL (242)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf5a31d5" class="outline-4">
+<h4 id="orgf5a31d5"><span class="section-number-4">3.5.3.</span> Mutual information * (242)</h4>
+<div class="outline-text-4" id="text-3-5-3">
+<p>
+Definition (243)
+Interpretation (243)
+Example (244)
+Conditional mutual information (245)
+MI as a ``generalized correlation coefficient'' (245)
+Normalized mutual information (246)
+Maximal information coefficient (247)
+Data processing inequality (249)
+Sufficient Statistics (250)
+Fano's inequality * (250)
+</p>
+</div>
+</div>
+<div id="outline-container-org9cb56b3" class="outline-4">
+<h4 id="org9cb56b3"><span class="section-number-4">3.5.4.</span> Exercises (251)</h4>
+</div>
+</div>
+<div id="outline-container-org3fa9a53" class="outline-3">
+<h3 id="org3fa9a53"><span class="section-number-3">3.6.</span> Linear Algebra (255)</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org82ef31b" class="outline-4">
+<h4 id="org82ef31b"><span class="section-number-4">3.6.1.</span> Introduction (255)</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<p>
+Notation (255)
+Vector spaces (258)
+Norms of a vector and matrix (260)
+Properties of a matrix (262)
+Special types of matrices (265)
+</p>
+</div>
+</div>
+<div id="outline-container-org24b494c" class="outline-4">
+<h4 id="org24b494c"><span class="section-number-4">3.6.2.</span> Matrix multiplication (268)</h4>
+<div class="outline-text-4" id="text-3-6-2">
+<p>
+Vector–vector products (268)
+Matrix–vector products (269)
+Matrix–matrix products (269)
+Application: manipulating data matrices (271)
+Kronecker products * (274)
+Einstein summation * (274)
+</p>
+</div>
+</div>
+<div id="outline-container-org81102af" class="outline-4">
+<h4 id="org81102af"><span class="section-number-4">3.6.3.</span> Matrix inversion (275)</h4>
+<div class="outline-text-4" id="text-3-6-3">
+<p>
+The inverse of a square matrix (275)
+Schur complements * (276)
+The matrix inversion lemma * (277)
+Matrix determinant lemma * (277)
+Application: deriving the conditionals of an MVN * (278)
+</p>
+</div>
+</div>
+<div id="outline-container-org109431d" class="outline-4">
+<h4 id="org109431d"><span class="section-number-4">3.6.4.</span> Eigenvalue decomposition (EVD) (279)</h4>
+<div class="outline-text-4" id="text-3-6-4">
+<p>
+Basics (279)
+Diagonalization (280)
+Eigenvalues and eigenvectors of symmetric matrices (281)
+Geometry of quadratic forms (282)
+Standardizing and whitening data (282)
+Power method (284)
+Deflation (285)
+Eigenvectors optimize quadratic forms (285)
+</p>
+</div>
+</div>
+<div id="outline-container-org585381b" class="outline-4">
+<h4 id="org585381b"><span class="section-number-4">3.6.5.</span> Singular value decomposition (SVD) (285)</h4>
+<div class="outline-text-4" id="text-3-6-5">
+<p>
+Basics (285)
+Connection between SVD and EVD (286)
+Pseudo inverse (287)
+SVD and the range and null space of a matrix * (288)
+Truncated SVD (290)
+</p>
+</div>
+</div>
+<div id="outline-container-org10dc122" class="outline-4">
+<h4 id="org10dc122"><span class="section-number-4">3.6.6.</span> Other matrix decompositions * (290)</h4>
+<div class="outline-text-4" id="text-3-6-6">
+<p>
+LU factorization (290)
+QR decomposition (291)
+Cholesky decomposition (292)
+</p>
+</div>
+</div>
+<div id="outline-container-org96d9def" class="outline-4">
+<h4 id="org96d9def"><span class="section-number-4">3.6.7.</span> Solving systems of linear equations * (292)</h4>
+<div class="outline-text-4" id="text-3-6-7">
+<p>
+Solving square systems (293)
+Solving underconstrained systems (least norm estimation) (293)
+Solving overconstrained systems (least squares estimation) (294)
+</p>
+</div>
+</div>
+<div id="outline-container-org4f7be9a" class="outline-4">
+<h4 id="org4f7be9a"><span class="section-number-4">3.6.8.</span> Matrix calculus (295)</h4>
+<div class="outline-text-4" id="text-3-6-8">
+<p>
+Derivatives (295)
+Gradients (296)
+Directional derivative (296)
+Total derivative * (297)
+Jacobian (297)
+Hessian (298)
+Gradients of commonly used functions (298)
+</p>
+</div>
+</div>
+<div id="outline-container-orge61afc6" class="outline-4">
+<h4 id="orge61afc6"><span class="section-number-4">3.6.9.</span> Exercises (300)</h4>
+</div>
+</div>
+<div id="outline-container-orga2e8c33" class="outline-3">
+<h3 id="orga2e8c33"><span class="section-number-3">3.7.</span> Optimization (301)</h3>
+<div class="outline-text-3" id="text-3-7">
+</div>
+<div id="outline-container-org0381e09" class="outline-4">
+<h4 id="org0381e09"><span class="section-number-4">3.7.1.</span> Introduction (301)</h4>
+<div class="outline-text-4" id="text-3-7-1">
+<p>
+Local vs global optimization (301)
+Constrained vs unconstrained optimization (303)
+Convex vs nonconvex optimization (303)
+Smooth vs nonsmooth optimization (307)
+</p>
+</div>
+</div>
+<div id="outline-container-orgc087e69" class="outline-4">
+<h4 id="orgc087e69"><span class="section-number-4">3.7.2.</span> First-order methods (308)</h4>
+<div class="outline-text-4" id="text-3-7-2">
+<p>
+Descent direction (310)
+Step size (learning rate) (310)
+Convergence rates (312)
+Momentum methods (313)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb428b69" class="outline-4">
+<h4 id="orgb428b69"><span class="section-number-4">3.7.3.</span> Second-order methods (315)</h4>
+<div class="outline-text-4" id="text-3-7-3">
+<p>
+Newton's method (315)
+BFGS and other quasi-Newton methods (316)
+Trust region methods (317)
+</p>
+</div>
+</div>
+<div id="outline-container-org3a73e0e" class="outline-4">
+<h4 id="org3a73e0e"><span class="section-number-4">3.7.4.</span> Stochastic gradient descent (318)</h4>
+<div class="outline-text-4" id="text-3-7-4">
+<p>
+Application to finite sum problems (319)
+Example: SGD for fitting linear regression (319)
+Choosing the step size (learning rate) (320)
+Iterate averaging (323)
+Variance reduction * (323)
+Preconditioned SGD (324)
+</p>
+</div>
+</div>
+<div id="outline-container-org9f397f4" class="outline-4">
+<h4 id="org9f397f4"><span class="section-number-4">3.7.5.</span> Constrained optimization (327)</h4>
+<div class="outline-text-4" id="text-3-7-5">
+<p>
+Lagrange multipliers (328)
+The KKT conditions (329)
+Linear programming (331)
+Quadratic programming (332)
+Mixed integer linear programming * (333)
+</p>
+</div>
+</div>
+<div id="outline-container-orgbac3693" class="outline-4">
+<h4 id="orgbac3693"><span class="section-number-4">3.7.6.</span> Proximal gradient method * (333)</h4>
+<div class="outline-text-4" id="text-3-7-6">
+<p>
+Projected gradient descent (334)
+Proximal operator for 1-norm regularizer (335)
+Proximal operator for quantization (336)
+Incremental (online) proximal methods (337)
+</p>
+</div>
+</div>
+<div id="outline-container-org945caa0" class="outline-4">
+<h4 id="org945caa0"><span class="section-number-4">3.7.7.</span> Bound optimization * (338)</h4>
+<div class="outline-text-4" id="text-3-7-7">
+<p>
+The general algorithm (338)
+The EM algorithm (338)
+Example: EM for a GMM (341)
+</p>
+</div>
+</div>
+<div id="outline-container-org9f01d4f" class="outline-4">
+<h4 id="org9f01d4f"><span class="section-number-4">3.7.8.</span> Blackbox and derivative free optimization (345)</h4>
+</div>
+<div id="outline-container-orgaa20d05" class="outline-4">
+<h4 id="orgaa20d05"><span class="section-number-4">3.7.9.</span> Exercises (346)</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org6578359" class="outline-2">
+<h2 id="org6578359"><span class="section-number-2">4.</span> II Linear Models (347)</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org310b756" class="outline-3">
+<h3 id="org310b756"><span class="section-number-3">4.1.</span> Linear Discriminant Analysis (349)</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-orgdbcec99" class="outline-4">
+<h4 id="orgdbcec99"><span class="section-number-4">4.1.1.</span> Introduction (349)</h4>
+</div>
+<div id="outline-container-org8ed5f4c" class="outline-4">
+<h4 id="org8ed5f4c"><span class="section-number-4">4.1.2.</span> Gaussian discriminant analysis (349)</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+Quadratic decision boundaries (350)
+Linear decision boundaries (351)
+The connection between LDA and logistic regression (351)
+Model fitting (352)
+Nearest centroid classifier (354)
+Fisher's linear discriminant analysis * (354)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf67093c" class="outline-4">
+<h4 id="orgf67093c"><span class="section-number-4">4.1.3.</span> Naive Bayes classifiers (358)</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+Example models (358)
+Model fitting (359)
+Bayesian naive Bayes (360)
+The connection between naive Bayes and logistic regression (361)
+</p>
+</div>
+</div>
+<div id="outline-container-orgcea4f58" class="outline-4">
+<h4 id="orgcea4f58"><span class="section-number-4">4.1.4.</span> Generative vs discriminative classifiers (362)</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<p>
+Advantages of discriminative classifiers (362)
+Advantages of generative classifiers (363)
+Handling missing features (363)
+</p>
+</div>
+</div>
+<div id="outline-container-org5afc39a" class="outline-4">
+<h4 id="org5afc39a"><span class="section-number-4">4.1.5.</span> Exercises (364)</h4>
+</div>
+</div>
+<div id="outline-container-org694a05d" class="outline-3">
+<h3 id="org694a05d"><span class="section-number-3">4.2.</span> Logistic Regression (365)</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org10910e9" class="outline-4">
+<h4 id="org10910e9"><span class="section-number-4">4.2.1.</span> Introduction (365)</h4>
+</div>
+<div id="outline-container-org7938891" class="outline-4">
+<h4 id="org7938891"><span class="section-number-4">4.2.2.</span> Binary logistic regression (365)</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+Linear classifiers (365)
+Nonlinear classifiers (366)
+Maximum likelihood estimation (368)
+Stochastic gradient descent (371)
+Perceptron algorithm (372)
+Iteratively reweighted least squares (372)
+MAP estimation (374)
+Standardization (375)
+</p>
+</div>
+</div>
+<div id="outline-container-org0597108" class="outline-4">
+<h4 id="org0597108"><span class="section-number-4">4.2.3.</span> Multinomial logistic regression (376)</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+Linear and nonlinear classifiers (377)
+Maximum likelihood estimation (377)
+Gradient-based optimization (379)
+Bound optimization (379)
+MAP estimation (381)
+Maximum entropy classifiers (382)
+Hierarchical classification (383)
+Handling large numbers of classes (384)
+</p>
+</div>
+</div>
+<div id="outline-container-orgc042d00" class="outline-4">
+<h4 id="orgc042d00"><span class="section-number-4">4.2.4.</span> Robust logistic regression * (385)</h4>
+<div class="outline-text-4" id="text-4-2-4">
+<p>
+Mixture model for the likelihood (385)
+Bi-tempered loss (386)
+</p>
+</div>
+</div>
+<div id="outline-container-org35c4976" class="outline-4">
+<h4 id="org35c4976"><span class="section-number-4">4.2.5.</span> Bayesian logistic regression * (389)</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+Laplace approximation (389)
+Approximating the posterior predictive (390)
+</p>
+</div>
+</div>
+<div id="outline-container-org34a47b7" class="outline-4">
+<h4 id="org34a47b7"><span class="section-number-4">4.2.6.</span> Exercises (393)</h4>
+</div>
+</div>
+<div id="outline-container-org9f5f132" class="outline-3">
+<h3 id="org9f5f132"><span class="section-number-3">4.3.</span> Linear Regression (397)</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orge379346" class="outline-4">
+<h4 id="orge379346"><span class="section-number-4">4.3.1.</span> Introduction (397)</h4>
+</div>
+<div id="outline-container-orgb1900f4" class="outline-4">
+<h4 id="orgb1900f4"><span class="section-number-4">4.3.2.</span> Least squares linear regression (397)</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+Terminology (397)
+Least squares estimation (398)
+Other approaches to computing the MLE (402)
+Measuring goodness of fit (406)
+</p>
+</div>
+</div>
+<div id="outline-container-orged46934" class="outline-4">
+<h4 id="orged46934"><span class="section-number-4">4.3.3.</span> Ridge regression (407)</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+Computing the MAP estimate (408)
+Connection between ridge regression and PCA (409)
+Choosing the strength of the regularizer (410)
+</p>
+</div>
+</div>
+<div id="outline-container-org5aac551" class="outline-4">
+<h4 id="org5aac551"><span class="section-number-4">4.3.4.</span> Lasso regression (411)</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+MAP estimation with a Laplace prior (1 regularization) (411)
+Why does 1 regularization yield sparse solutions? (412)
+Hard vs soft thresholding (413)
+Regularization path (415)
+Comparison of least squares, lasso, ridge and subset selection (416)
+Variable selection consistency (418)
+Group lasso (419)
+Elastic net (ridge and lasso combined) (422)
+Optimization algorithms (423)
+</p>
+</div>
+</div>
+<div id="outline-container-org1915c71" class="outline-4">
+<h4 id="org1915c71"><span class="section-number-4">4.3.5.</span> Regression splines * (425)</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<p>
+B-spline basis functions (425)
+Fitting a linear model using a spline basis (427)
+Smoothing splines (427)
+Generalized additive models (427)
+</p>
+</div>
+</div>
+<div id="outline-container-org2a2ff92" class="outline-4">
+<h4 id="org2a2ff92"><span class="section-number-4">4.3.6.</span> Robust linear regression * (428)</h4>
+<div class="outline-text-4" id="text-4-3-6">
+<p>
+Laplace likelihood (428)
+Student-t likelihood (430)
+Huber loss (430)
+RANSAC (430)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb5ddcc6" class="outline-4">
+<h4 id="orgb5ddcc6"><span class="section-number-4">4.3.7.</span> Bayesian linear regression * (431)</h4>
+<div class="outline-text-4" id="text-4-3-7">
+<p>
+Priors (431)
+Posteriors (431)
+Example (432)
+Computing the posterior predictive (432)
+The advantage of centering (434)
+Dealing with multicollinearity (435)
+Automatic relevancy determination (ARD) * (436)
+</p>
+</div>
+</div>
+<div id="outline-container-orgbd35c6f" class="outline-4">
+<h4 id="orgbd35c6f"><span class="section-number-4">4.3.8.</span> Exercises (437)</h4>
+</div>
+</div>
+<div id="outline-container-org3d94fad" class="outline-3">
+<h3 id="org3d94fad"><span class="section-number-3">4.4.</span> Generalized Linear Models * (441)</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-org628b9ea" class="outline-4">
+<h4 id="org628b9ea"><span class="section-number-4">4.4.1.</span> Introduction (441)</h4>
+</div>
+<div id="outline-container-orga0042da" class="outline-4">
+<h4 id="orga0042da"><span class="section-number-4">4.4.2.</span> Examples (441)</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+Linear regression (442)
+Binomial regression (442)
+Poisson regression (443)
+</p>
+</div>
+</div>
+<div id="outline-container-orgc875549" class="outline-4">
+<h4 id="orgc875549"><span class="section-number-4">4.4.3.</span> GLMs with non-canonical link functions (443)</h4>
+</div>
+<div id="outline-container-orgbc514c8" class="outline-4">
+<h4 id="orgbc514c8"><span class="section-number-4">4.4.4.</span> Maximum likelihood estimation (444)</h4>
+</div>
+<div id="outline-container-org6c7d2d8" class="outline-4">
+<h4 id="org6c7d2d8"><span class="section-number-4">4.4.5.</span> Worked example: predicting insurance claims (445)</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org0384a5e" class="outline-2">
+<h2 id="org0384a5e"><span class="section-number-2">5.</span> III Deep Neural Networks (449)</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org10b157d" class="outline-3">
+<h3 id="org10b157d"><span class="section-number-3">5.1.</span> Neural Networks for Tabular Data (451)</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgc47f222" class="outline-4">
+<h4 id="orgc47f222"><span class="section-number-4">5.1.1.</span> Introduction (451)</h4>
+</div>
+<div id="outline-container-org68988f1" class="outline-4">
+<h4 id="org68988f1"><span class="section-number-4">5.1.2.</span> Multilayer perceptrons (MLPs) (452)</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+The XOR problem (453)
+Differentiable MLPs (454)
+Activation functions (454)
+Example models (455)
+The importance of depth (460)
+The ``deep learning revolution'' (461)
+Connections with biology (461)
+</p>
+</div>
+</div>
+<div id="outline-container-orgeab24ab" class="outline-4">
+<h4 id="orgeab24ab"><span class="section-number-4">5.1.3.</span> Backpropagation (464)</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+Forward vs reverse mode differentiation (464)
+Reverse mode differentiation for multilayer perceptrons (466)
+Vector-Jacobian product for common layers (468)
+Computation graphs (470)
+</p>
+</div>
+</div>
+<div id="outline-container-orgafe6ede" class="outline-4">
+<h4 id="orgafe6ede"><span class="section-number-4">5.1.4.</span> Training neural networks (472)</h4>
+<div class="outline-text-4" id="text-5-1-4">
+<p>
+Tuning the learning rate (473)
+Vanishing and exploding gradients (473)
+Non-saturating activation functions (474)
+Residual connections (477)
+Parameter initialization (478)
+Parallel training (479)
+</p>
+</div>
+</div>
+<div id="outline-container-orgbbc1d14" class="outline-4">
+<h4 id="orgbbc1d14"><span class="section-number-4">5.1.5.</span> Regularization (480)</h4>
+<div class="outline-text-4" id="text-5-1-5">
+<p>
+Early stopping (480)
+Weight decay (481)
+Sparse DNNs (481)
+Dropout (481)
+Bayesian neural networks (483)
+Regularization effects of (stochastic) gradient descent * (483)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf610e84" class="outline-4">
+<h4 id="orgf610e84"><span class="section-number-4">5.1.6.</span> Other kinds of feedforward networks * (485)</h4>
+<div class="outline-text-4" id="text-5-1-6">
+<p>
+Radial basis function networks (485)
+Mixtures of experts (486)
+</p>
+</div>
+</div>
+<div id="outline-container-orgaa720e9" class="outline-4">
+<h4 id="orgaa720e9"><span class="section-number-4">5.1.7.</span> Exercises (489)</h4>
+</div>
+</div>
+<div id="outline-container-org9a61d16" class="outline-3">
+<h3 id="org9a61d16"><span class="section-number-3">5.2.</span> Neural Networks for Images (493)</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgdc49ab3" class="outline-4">
+<h4 id="orgdc49ab3"><span class="section-number-4">5.2.1.</span> Introduction (493)</h4>
+</div>
+<div id="outline-container-orgece4a1d" class="outline-4">
+<h4 id="orgece4a1d"><span class="section-number-4">5.2.2.</span> Common layers (494)</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+Convolutional layers (494)
+Pooling layers (501)
+Putting it all together (502)
+Normalization layers (502)
+</p>
+</div>
+</div>
+<div id="outline-container-org73312a1" class="outline-4">
+<h4 id="org73312a1"><span class="section-number-4">5.2.3.</span> Common architectures for image classification (505)</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<p>
+LeNet (505)
+AlexNet (507)
+GoogLeNet (Inception) (508)
+ResNet (509)
+DenseNet (510)
+Neural architecture search (511)
+</p>
+</div>
+</div>
+<div id="outline-container-orgdcf01be" class="outline-4">
+<h4 id="orgdcf01be"><span class="section-number-4">5.2.4.</span> Other forms of convolution * (512)</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<p>
+Dilated convolution (512)
+Transposed convolution (512)
+Depthwise separable convolution (514)
+</p>
+</div>
+</div>
+<div id="outline-container-org57caf3e" class="outline-4">
+<h4 id="org57caf3e"><span class="section-number-4">5.2.5.</span> Solving other discriminative vision tasks with CNNs * (514)</h4>
+<div class="outline-text-4" id="text-5-2-5">
+<p>
+Image tagging (514)
+Object detection (515)
+Instance segmentation (516)
+Semantic segmentation (517)
+Human pose estimation (518)
+</p>
+</div>
+</div>
+<div id="outline-container-org8ceffe0" class="outline-4">
+<h4 id="org8ceffe0"><span class="section-number-4">5.2.6.</span> Generating images by inverting CNNs * (519)</h4>
+<div class="outline-text-4" id="text-5-2-6">
+<p>
+Converting a trained classifier into a generative model (519)
+Image priors (520)
+Visualizing the features learned by a CNN (521)
+Deep Dream (522)
+Neural style transfer (523)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgce30976" class="outline-3">
+<h3 id="orgce30976"><span class="section-number-3">5.3.</span> Neural Networks for Sequences (529)</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-orge169357" class="outline-4">
+<h4 id="orge169357"><span class="section-number-4">5.3.1.</span> Introduction (529)</h4>
+</div>
+<div id="outline-container-org6b9a7a7" class="outline-4">
+<h4 id="org6b9a7a7"><span class="section-number-4">5.3.2.</span> Recurrent neural networks (RNNs) (529)</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<p>
+Vec2Seq (sequence generation) (529)
+Seq2Vec (sequence classification) (531)
+Seq2Seq (sequence translation) (533)
+Teacher forcing (535)
+Backpropagation through time (536)
+Vanishing and exploding gradients (537)
+Gating and long term memory (538)
+Beam search (541)
+</p>
+</div>
+</div>
+<div id="outline-container-org3ebc861" class="outline-4">
+<h4 id="org3ebc861"><span class="section-number-4">5.3.3.</span> 1d CNNs (542)</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<p>
+1d CNNs for sequence classification (542)
+Causal 1d CNNs for sequence generation (543)
+</p>
+</div>
+</div>
+<div id="outline-container-org28663c6" class="outline-4">
+<h4 id="org28663c6"><span class="section-number-4">5.3.4.</span> Attention (544)</h4>
+<div class="outline-text-4" id="text-5-3-4">
+<p>
+Attention as soft dictionary lookup (545)
+Kernel regression as non-parametric attention (546)
+Parametric attention (546)
+Seq2Seq with attention (547)
+Seq2vec with attention (text classification) (550)
+Seq+Seq2Vec with attention (text pair classification) (550)
+Soft vs hard attention (551)
+</p>
+</div>
+</div>
+<div id="outline-container-org9f5cf61" class="outline-4">
+<h4 id="org9f5cf61"><span class="section-number-4">5.3.5.</span> Transformers (552)</h4>
+<div class="outline-text-4" id="text-5-3-5">
+<p>
+Self-attention (552)
+Multi-headed attention (553)
+Positional encoding (554)
+Putting it all together (555)
+Comparing transformers, CNNs and RNNs (557)
+Transformers for images * (558)
+Other transformer variants * (559)
+</p>
+</div>
+</div>
+<div id="outline-container-orga35d64a" class="outline-4">
+<h4 id="orga35d64a"><span class="section-number-4">5.3.6.</span> Efficient transformers * (559)</h4>
+<div class="outline-text-4" id="text-5-3-6">
+<p>
+Fixed non-learnable localized attention patterns (559)
+Learnable sparse attention patterns (560)
+Memory and recurrence methods (561)
+Low-rank and kernel methods (561)
+</p>
+</div>
+</div>
+<div id="outline-container-org1bcedf0" class="outline-4">
+<h4 id="org1bcedf0"><span class="section-number-4">5.3.7.</span> Language models and unsupervised representation learning (562)</h4>
+<div class="outline-text-4" id="text-5-3-7">
+<p>
+ELMo (563)
+BERT (564)
+GPT (568)
+T5 (568)
+Discussion (569)
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaf602d6" class="outline-2">
+<h2 id="orgaf602d6"><span class="section-number-2">6.</span> IV Nonparametric Models (571)</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgf34c0bb" class="outline-3">
+<h3 id="orgf34c0bb"><span class="section-number-3">6.1.</span> Exemplar-based Methods (573)</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-org3711afe" class="outline-4">
+<h4 id="org3711afe"><span class="section-number-4">6.1.1.</span> K nearest neighbor (KNN) classification (573)</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+Example (574)
+The curse of dimensionality (574)
+Reducing the speed and memory requirements (576)
+Open set recognition (576)
+</p>
+</div>
+</div>
+<div id="outline-container-orgb741405" class="outline-4">
+<h4 id="orgb741405"><span class="section-number-4">6.1.2.</span> Learning distance metrics (577)</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+Linear and convex methods (578)
+Deep metric learning (580)
+Classification losses (580)
+Ranking losses (581)
+Speeding up ranking loss optimization (582)
+Other training tricks for DML (585)
+</p>
+</div>
+</div>
+<div id="outline-container-orga76f36f" class="outline-4">
+<h4 id="orga76f36f"><span class="section-number-4">6.1.3.</span> Kernel density estimation (KDE) (586)</h4>
+<div class="outline-text-4" id="text-6-1-3">
+<p>
+Density kernels (586)
+Parzen window density estimator (587)
+How to choose the bandwidth parameter (588)
+From KDE to KNN classification (589)
+Kernel regression (589)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaaef32f" class="outline-3">
+<h3 id="orgaaef32f"><span class="section-number-3">6.2.</span> Kernel Methods * (593)</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org885c091" class="outline-4">
+<h4 id="org885c091"><span class="section-number-4">6.2.1.</span> Mercer kernels (593)</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+Mercer's theorem (594)
+Some popular Mercer kernels (595)
+</p>
+</div>
+</div>
+<div id="outline-container-org28b393c" class="outline-4">
+<h4 id="org28b393c"><span class="section-number-4">6.2.2.</span> Gaussian processes (600)</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<p>
+Noise-free observations (600)
+Noisy observations (601)
+Comparison to kernel regression (602)
+Weight space vs function space (603)
+Numerical issues (603)
+Estimating the kernel (604)
+GPs for classification (607)
+Connections with deep learning (608)
+Scaling GPs to large datasets (608)
+</p>
+</div>
+</div>
+<div id="outline-container-orge8097c3" class="outline-4">
+<h4 id="orge8097c3"><span class="section-number-4">6.2.3.</span> Support vector machines (SVMs) (611)</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<p>
+Large margin classifiers (611)
+The dual problem (613)
+Soft margin classifiers (615)
+The kernel trick (616)
+Converting SVM outputs into probabilities (617)
+Connection with logistic regression (617)
+Multi-class classification with SVMs (618)
+How to choose the regularizer C (619)
+Kernel ridge regression (620)
+SVMs for regression (621)
+</p>
+</div>
+</div>
+<div id="outline-container-org18f4887" class="outline-4">
+<h4 id="org18f4887"><span class="section-number-4">6.2.4.</span> Sparse vector machines (623)</h4>
+<div class="outline-text-4" id="text-6-2-4">
+<p>
+Relevance vector machines (RVMs) (624)
+Comparison of sparse and dense kernel methods (624)
+</p>
+</div>
+</div>
+<div id="outline-container-org7e7b764" class="outline-4">
+<h4 id="org7e7b764"><span class="section-number-4">6.2.5.</span> Exercises (627)</h4>
+</div>
+</div>
+<div id="outline-container-orgd57dec9" class="outline-3">
+<h3 id="orgd57dec9"><span class="section-number-3">6.3.</span> Trees, Forests, Bagging, and Boosting (629)</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org4060315" class="outline-4">
+<h4 id="org4060315"><span class="section-number-4">6.3.1.</span> Classification and regression trees (CART) (629)</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<p>
+Model definition (629)
+Model fitting (631)
+Regularization (632)
+Handling missing input features (632)
+Pros and cons (632)
+</p>
+</div>
+</div>
+<div id="outline-container-orgea5f2bc" class="outline-4">
+<h4 id="orgea5f2bc"><span class="section-number-4">6.3.2.</span> Ensemble learning (634)</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+Stacking (634)
+Ensembling is not Bayes model averaging (635)
+</p>
+</div>
+</div>
+<div id="outline-container-org162c36e" class="outline-4">
+<h4 id="org162c36e"><span class="section-number-4">6.3.3.</span> Bagging (635)</h4>
+</div>
+<div id="outline-container-org25b9468" class="outline-4">
+<h4 id="org25b9468"><span class="section-number-4">6.3.4.</span> Random forests (636)</h4>
+</div>
+<div id="outline-container-orgc274413" class="outline-4">
+<h4 id="orgc274413"><span class="section-number-4">6.3.5.</span> Boosting (637)</h4>
+<div class="outline-text-4" id="text-6-3-5">
+<p>
+Forward stagewise additive modeling (638)
+Quadratic loss and least squares boosting (638)
+Exponential loss and AdaBoost (639)
+LogitBoost (642)
+Gradient boosting (642)
+</p>
+</div>
+</div>
+<div id="outline-container-org429a930" class="outline-4">
+<h4 id="org429a930"><span class="section-number-4">6.3.6.</span> Interpreting tree ensembles (646)</h4>
+<div class="outline-text-4" id="text-6-3-6">
+<p>
+Feature importance (647)
+Partial dependency plots (649)
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org395c560" class="outline-2">
+<h2 id="org395c560"><span class="section-number-2">7.</span> V Beyond Supervised Learning (651)</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orge053b7f" class="outline-3">
+<h3 id="orge053b7f"><span class="section-number-3">7.1.</span> Learning with Fewer Labeled Examples (653)</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgb9a7392" class="outline-4">
+<h4 id="orgb9a7392"><span class="section-number-4">7.1.1.</span> Data augmentation (653)</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+Examples (653)
+Theoretical justification (654)
+</p>
+</div>
+</div>
+<div id="outline-container-org626998e" class="outline-4">
+<h4 id="org626998e"><span class="section-number-4">7.1.2.</span> Transfer learning (654)</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<p>
+Fine-tuning (655)
+Adapters (656)
+Supervised pre-training (657)
+Unsupervised pre-training (self-supervised learning) (658)
+Domain adaptation (663)
+</p>
+</div>
+</div>
+<div id="outline-container-org4747ca5" class="outline-4">
+<h4 id="org4747ca5"><span class="section-number-4">7.1.3.</span> Semi-supervised learning (664)</h4>
+<div class="outline-text-4" id="text-7-1-3">
+<p>
+Self-training and pseudo-labeling (664)
+Entropy minimization (665)
+Co-training (668)
+Label propagation on graphs (669)
+Consistency regularization (670)
+Deep generative models * (672)
+Combining self-supervised and semi-supervised learning (675)
+</p>
+</div>
+</div>
+<div id="outline-container-org01f4ffb" class="outline-4">
+<h4 id="org01f4ffb"><span class="section-number-4">7.1.4.</span> Active learning (676)</h4>
+<div class="outline-text-4" id="text-7-1-4">
+<p>
+Decision-theoretic approach (676)
+Information-theoretic approach (676)
+Batch active learning (677)
+</p>
+</div>
+</div>
+<div id="outline-container-org13afa59" class="outline-4">
+<h4 id="org13afa59"><span class="section-number-4">7.1.5.</span> Meta-learning (677)</h4>
+<div class="outline-text-4" id="text-7-1-5">
+<p>
+Model-agnostic meta-learning (MAML) (678)
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc5e083" class="outline-4">
+<h4 id="orgcc5e083"><span class="section-number-4">7.1.6.</span> Few-shot learning (679)</h4>
+<div class="outline-text-4" id="text-7-1-6">
+<p>
+Matching networks (679)
+</p>
+</div>
+</div>
+<div id="outline-container-org611e04e" class="outline-4">
+<h4 id="org611e04e"><span class="section-number-4">7.1.7.</span> Weakly supervised learning (681)</h4>
+</div>
+<div id="outline-container-orgcc2f760" class="outline-4">
+<h4 id="orgcc2f760"><span class="section-number-4">7.1.8.</span> Exercises (681)</h4>
+</div>
+</div>
+<div id="outline-container-org9bf4e45" class="outline-3">
+<h3 id="org9bf4e45"><span class="section-number-3">7.2.</span> Dimensionality Reduction (683)</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org008e82d" class="outline-4">
+<h4 id="org008e82d"><span class="section-number-4">7.2.1.</span> Principal components analysis (PCA) (683)</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<p>
+Examples (683)
+Derivation of the algorithm (685)
+Computational issues (688)
+Choosing the number of latent dimensions (690)
+</p>
+</div>
+</div>
+<div id="outline-container-orgea1340a" class="outline-4">
+<h4 id="orgea1340a"><span class="section-number-4">7.2.2.</span> Factor analysis * (692)</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<p>
+Generative model (693)
+Probabilistic PCA (694)
+EM algorithm for FA/PPCA (695)
+Unidentifiability of the parameters (697)
+Nonlinear factor analysis (699)
+Mixtures of factor analysers (700)
+Exponential family factor analysis (701)
+Factor analysis models for paired data (703)
+</p>
+</div>
+</div>
+<div id="outline-container-org1669bea" class="outline-4">
+<h4 id="org1669bea"><span class="section-number-4">7.2.3.</span> Autoencoders (705)</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<p>
+Bottleneck autoencoders (706)
+Denoising autoencoders (707)
+Contractive autoencoders (708)
+Sparse autoencoders (709)
+Variational autoencoders (709)
+</p>
+</div>
+</div>
+<div id="outline-container-org4417903" class="outline-4">
+<h4 id="org4417903"><span class="section-number-4">7.2.4.</span> Manifold learning * (715)</h4>
+<div class="outline-text-4" id="text-7-2-4">
+<p>
+What are manifolds? (715)
+The manifold hypothesis (715)
+Approaches to manifold learning (716)
+Multi-dimensional scaling (MDS) (717)
+Isomap (720)
+Kernel PCA (720)
+Maximum variance unfolding (MVU) (722)
+Local linear embedding (LLE) (723)
+Laplacian eigenmaps (724)
+t-SNE (727)
+</p>
+</div>
+</div>
+<div id="outline-container-org8148e2e" class="outline-4">
+<h4 id="org8148e2e"><span class="section-number-4">7.2.5.</span> Word embeddings (731)</h4>
+<div class="outline-text-4" id="text-7-2-5">
+<p>
+Latent semantic analysis / indexing (731)
+Word2vec (733)
+GloVE (735)
+Word analogies (736)
+RAND-WALK model of word embeddings (737)
+Contextual word embeddings (738)
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa1ed4f" class="outline-4">
+<h4 id="orgfa1ed4f"><span class="section-number-4">7.2.6.</span> Exercises (738)</h4>
+</div>
+</div>
+<div id="outline-container-org9590d7a" class="outline-3">
+<h3 id="org9590d7a"><span class="section-number-3">7.3.</span> Clustering (741)</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-org7cc4be3" class="outline-4">
+<h4 id="org7cc4be3"><span class="section-number-4">7.3.1.</span> Introduction (741)</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<p>
+Evaluating the output of clustering methods (741)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf0ecab1" class="outline-4">
+<h4 id="orgf0ecab1"><span class="section-number-4">7.3.2.</span> Hierarchical agglomerative clustering (743)</h4>
+<div class="outline-text-4" id="text-7-3-2">
+<p>
+The algorithm (744)
+Example (746)
+Extensions (747)
+</p>
+</div>
+</div>
+<div id="outline-container-org7d70025" class="outline-4">
+<h4 id="org7d70025"><span class="section-number-4">7.3.3.</span> K means clustering (748)</h4>
+<div class="outline-text-4" id="text-7-3-3">
+<p>
+The algorithm (748)
+Examples (748)
+Vector quantization (750)
+The K-means++ algorithm (751)
+The K-medoids algorithm (751)
+Speedup tricks (752)
+Choosing the number of clusters K (752)
+</p>
+</div>
+</div>
+<div id="outline-container-org97c2d38" class="outline-4">
+<h4 id="org97c2d38"><span class="section-number-4">7.3.4.</span> Clustering using mixture models (755)</h4>
+<div class="outline-text-4" id="text-7-3-4">
+<p>
+Mixtures of Gaussians (756)
+Mixtures of Bernoullis (759)
+</p>
+</div>
+</div>
+<div id="outline-container-orga7ef4ae" class="outline-4">
+<h4 id="orga7ef4ae"><span class="section-number-4">7.3.5.</span> Spectral clustering * (760)</h4>
+<div class="outline-text-4" id="text-7-3-5">
+<p>
+Normalized cuts (760)
+Eigenvectors of the graph Laplacian encode the clustering (761)
+Example (762)
+Connection with other methods (763)
+</p>
+</div>
+</div>
+<div id="outline-container-org24a1a94" class="outline-4">
+<h4 id="org24a1a94"><span class="section-number-4">7.3.6.</span> Biclustering * (763)</h4>
+<div class="outline-text-4" id="text-7-3-6">
+<p>
+Basic biclustering (764)
+Nested partition models (Crosscat) (764)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org602398d" class="outline-3">
+<h3 id="org602398d"><span class="section-number-3">7.4.</span> Recommender Systems (767)</h3>
+<div class="outline-text-3" id="text-7-4">
+</div>
+<div id="outline-container-orgffb5a13" class="outline-4">
+<h4 id="orgffb5a13"><span class="section-number-4">7.4.1.</span> Explicit feedback (767)</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<p>
+Datasets (767)
+Collaborative filtering (768)
+Matrix factorization (769)
+Autoencoders (771)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf7dbd91" class="outline-4">
+<h4 id="orgf7dbd91"><span class="section-number-4">7.4.2.</span> Implicit feedback (773)</h4>
+<div class="outline-text-4" id="text-7-4-2">
+<p>
+Bayesian personalized ranking (773)
+Factorization machines (774)
+Neural matrix factorization (775)
+</p>
+</div>
+</div>
+<div id="outline-container-org5af67e7" class="outline-4">
+<h4 id="org5af67e7"><span class="section-number-4">7.4.3.</span> Leveraging side information (775)</h4>
+</div>
+<div id="outline-container-orgdb11ebd" class="outline-4">
+<h4 id="orgdb11ebd"><span class="section-number-4">7.4.4.</span> Exploration-exploitation tradeoff (776)</h4>
+</div>
+</div>
+<div id="outline-container-orgbf5cba4" class="outline-3">
+<h3 id="orgbf5cba4"><span class="section-number-3">7.5.</span> Graph Embeddings * (779)</h3>
+<div class="outline-text-3" id="text-7-5">
+</div>
+<div id="outline-container-org1cd8edd" class="outline-4">
+<h4 id="org1cd8edd"><span class="section-number-4">7.5.1.</span> Introduction (779)</h4>
+</div>
+<div id="outline-container-org9c1f559" class="outline-4">
+<h4 id="org9c1f559"><span class="section-number-4">7.5.2.</span> Graph Embedding as an Encoder/Decoder Problem (780)</h4>
+</div>
+<div id="outline-container-org1cb3998" class="outline-4">
+<h4 id="org1cb3998"><span class="section-number-4">7.5.3.</span> Shallow graph embeddings (782)</h4>
+<div class="outline-text-4" id="text-7-5-3">
+<p>
+Unsupervised embeddings (783)
+Distance-based: Euclidean methods (783)
+Distance-based: non-Euclidean methods (784)
+Outer product-based: Matrix factorization methods (784)
+Outer product-based: Skip-gram methods (785)
+Supervised embeddings (787)
+</p>
+</div>
+</div>
+<div id="outline-container-org5b48dd2" class="outline-4">
+<h4 id="org5b48dd2"><span class="section-number-4">7.5.4.</span> Graph Neural Networks (788)</h4>
+<div class="outline-text-4" id="text-7-5-4">
+<p>
+Message passing GNNs (788)
+Spectral Graph Convolutions (789)
+Spatial Graph Convolutions (789)
+Non-Euclidean Graph Convolutions (791)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf820f4a" class="outline-4">
+<h4 id="orgf820f4a"><span class="section-number-4">7.5.5.</span> Deep graph embeddings (791)</h4>
+<div class="outline-text-4" id="text-7-5-5">
+<p>
+Unsupervised embeddings (792)
+Semi-supervised embeddings (794)
+</p>
+</div>
+</div>
+<div id="outline-container-orgf5e8c31" class="outline-4">
+<h4 id="orgf5e8c31"><span class="section-number-4">7.5.6.</span> Applications (795)</h4>
+<div class="outline-text-4" id="text-7-5-6">
+<p>
+Unsupervised applications (795)
+Supervised applications (797)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcbb231f" class="outline-3">
+<h3 id="orgcbb231f"><span class="section-number-3">7.6.</span> Notation (799)</h3>
+<div class="outline-text-3" id="text-7-6">
+</div>
+<div id="outline-container-orgd66ff5a" class="outline-4">
+<h4 id="orgd66ff5a"><span class="section-number-4">7.6.1.</span> Introduction (799)</h4>
+</div>
+<div id="outline-container-orgf69122f" class="outline-4">
+<h4 id="orgf69122f"><span class="section-number-4">7.6.2.</span> Common mathematical symbols (799)</h4>
+</div>
+<div id="outline-container-org77602ba" class="outline-4">
+<h4 id="org77602ba"><span class="section-number-4">7.6.3.</span> Functions (800)</h4>
+<div class="outline-text-4" id="text-7-6-3">
+<p>
+Common functions of one argument (800)
+Common functions of two arguments (800)
+Common functions of &gt;2 arguments (800)
+</p>
+</div>
+</div>
+<div id="outline-container-org4f04dae" class="outline-4">
+<h4 id="org4f04dae"><span class="section-number-4">7.6.4.</span> Linear algebra (801)</h4>
+<div class="outline-text-4" id="text-7-6-4">
+<p>
+General notation (801)
+Vectors (801)
+Matrices (801)
+Matrix calculus (802)
+</p>
+</div>
+</div>
+<div id="outline-container-orgd66ff42" class="outline-4">
+<h4 id="orgd66ff42"><span class="section-number-4">7.6.5.</span> Optimization (802)</h4>
+</div>
+<div id="outline-container-org6619ea4" class="outline-4">
+<h4 id="org6619ea4"><span class="section-number-4">7.6.6.</span> Probability (803)</h4>
+</div>
+<div id="outline-container-org8aaf4c2" class="outline-4">
+<h4 id="org8aaf4c2"><span class="section-number-4">7.6.7.</span> Information theory (803)</h4>
+</div>
+<div id="outline-container-org75e8c67" class="outline-4">
+<h4 id="org75e8c67"><span class="section-number-4">7.6.8.</span> Statistics and machine learning (804)</h4>
+<div class="outline-text-4" id="text-7-6-8">
+<p>
+Supervised learning (804)
+Unsupervised learning and generative models (804)
+Bayesian inference (804)
+</p>
+</div>
+</div>
+<div id="outline-container-org942a28c" class="outline-4">
+<h4 id="org942a28c"><span class="section-number-4">7.6.9.</span> Abbreviations (805)</h4>
+</div>
+</div>
+<div id="outline-container-orgb315e65" class="outline-3">
+<h3 id="orgb315e65"><span class="section-number-3">7.7.</span> Index (805)</h3>
+</div>
+<div id="outline-container-org0b1f7e2" class="outline-3">
+<h3 id="org0b1f7e2"><span class="section-number-3">7.8.</span> Bibliography (805)</h3>
+</div>
+</div>
+</div>
+</body>
+</html>

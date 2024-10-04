@@ -1,0 +1,2616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Digital Health Lab</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Digital Health Lab</h1>
+<div id="outline-container-org8a6b9d2" class="outline-2">
+<h2 id="org8a6b9d2"><span class="section-number-2">1.</span> Todo</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org74ce840" class="outline-3">
+<h3 id="org74ce840"><span class="section-number-3">1.1.</span> <span class="todo TODO">TODO</span> Travel Grant</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+</div>
+<div id="outline-container-org74dce54" class="outline-3">
+<h3 id="org74dce54"><span class="section-number-3">1.2.</span> Use Race as Sensitive Attribute</h3>
+</div>
+
+<div id="outline-container-org8928a8a" class="outline-3">
+<h3 id="org8928a8a"><span class="section-number-3">1.3.</span> <span class="todo TODO">TODO</span> HIPIMR Dataset</h3>
+</div>
+
+<div id="outline-container-org4b9852a" class="outline-3">
+<h3 id="org4b9852a"><span class="section-number-3">1.4.</span> <span class="done DONE">DONE</span> Find 3 Datasets which exhibit bias</h3>
+</div>
+
+<div id="outline-container-org0ebab64" class="outline-3">
+<h3 id="org0ebab64"><span class="section-number-3">1.5.</span> <span class="done DONE">DONE</span> Evaluate Differentiable Fairness</h3>
+</div>
+
+<div id="outline-container-org08a7db1" class="outline-3">
+<h3 id="org08a7db1"><span class="section-number-3">1.6.</span> Fairness Experiments</h3>
+</div>
+
+<div id="outline-container-orgca5825b" class="outline-3">
+<h3 id="orgca5825b"><span class="section-number-3">1.7.</span> AoU Dataset Access</h3>
+</div>
+</div>
+<div id="outline-container-org3f678d5" class="outline-2">
+<h2 id="org3f678d5"><span class="section-number-2">2.</span> All of Us Diabetes Dataset</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgf82f8eb" class="outline-3">
+<h3 id="orgf82f8eb"><span class="section-number-3">2.1.</span> Dataset Description</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+There are 6 different tables associated to the dataset.
+</p>
+
+<ol class="org-ol">
+<li>Person</li>
+<li>Zip Code Socioeconomic</li>
+<li>Survey</li>
+<li>Measurement</li>
+<li>Drug</li>
+<li>Condition</li>
+</ol>
+
+<p>
+These all have a <code>person_id</code> which outlines the specific person who was involved with the measurement. The same person (meaning same <code>person_id</code>) may have multiple measurements taken from them. If the data we want to predict from is of the form <code>person_id</code> &rarr; <code>Boolean</code> we cannot have multiple rows with the same <code>person_id</code>. This means I need some kind of aggregation function of the data. Perhaps I will predict from the last known measurement?
+</p>
+
+<p>
+For measuring conditions, sometimes the <code>condition_end_datetime</code> is <code>pd.NaT</code>. There are no values for which <code>condition_start_datetime</code> is <code>pd.NaT</code>. Hence I will sort by <code>condition_start_datetime</code> and group by and get the last known measurement. Perhaps I should apply <code>1</code> if the person has ever had diabetes?
+</p>
+</div>
+<div id="outline-container-orgaede40f" class="outline-4">
+<h4 id="orgaede40f"><span class="section-number-4">2.1.1.</span> Getting the Targets</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+We are predicting people who have diabetes. Some people have gone to the hospital for multiple conditions.
+</p>
+
+<ol class="org-ol">
+<li>Group By <code>person_id</code>
+Some people have gotten a condition measured multiple times.</li>
+<li>Map any string containing "Diabetes" to 1 (this means <code>Type 2 diabetes mellitus without complication</code> and <code>Type 2 diabetes mellitus</code> and</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f711a8" class="outline-3">
+<h3 id="org3f711a8"><span class="section-number-3">2.2.</span> Model Description</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Currently the model is logistic regression (<code>sklearn.linear_model.LogisticRegression</code>).
+</p>
+
+<p>
+The data input is a <code>pd.DataFrame</code> with the index being the <code>person_id</code>, <code>gender</code>, and <code>race</code>.
+</p>
+
+<p>
+The columns are the <code>concept_id</code>'s associated with the measurements:
+</p>
+</div>
+</div>
+<div id="outline-container-org061b608" class="outline-3">
+<h3 id="org061b608"><span class="section-number-3">2.3.</span> Code Organization</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgf844d1f" class="outline-4">
+<h4 id="orgf844d1f"><span class="section-number-4">2.3.1.</span> Download Data</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+The data is accessed using Google Big Query queries. 
+</p>
+</div>
+</div>
+<div id="outline-container-org0504dcb" class="outline-4">
+<h4 id="org0504dcb"><span class="section-number-4">2.3.2.</span> Train Model</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+Randomly sample within each race
+over sample per race and gender both
+If sample<sub>size</sub> = 100 do 20 from each
+Include race and gender into input space
+Making the plots easier to compare races (use bar plot)
+Use assisted income as bias parameter
+Do data imputation rather than NA Look at disparity metrics 
+</p>
+
+<p>
+Having Difficulty oversampling to get completely balanced classes
+</p>
+
+<p>
+It is possible to balance wrt 1 Class
+To balance wrt 2+ classes my approach is the following
+</p>
+
+<p>
+Take all the columns as strings then append them
+(e.g. Given 'Black', 'Female', 'Chlorine = 0.5', 'Diabetes = True -&gt;
+output 
+</p>
+
+<p>
+I assume the reason for the difficulty is that Simple Random (Over/Under)-Sampling has coupled attributes. There is no way to uncouple them using this simplified approach. 
+</p>
+
+<p>
+Undersample test set for equal ammount of race / gender
+</p>
+
+<p>
+Here is a <a href="https://colab.research.google.com/drive/1p9DpqPiXXOpkMzulKL6Mr1MmY9P9FOWJ?usp=sharing">Colab Link</a> for how the balancing is done so far on a test dataset.
+</p>
+</div>
+</div>
+<div id="outline-container-org52f58d1" class="outline-4">
+<h4 id="org52f58d1"><span class="section-number-4">2.3.3.</span> Evaluate Model</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">ROC AUC</td>
+<td class="org-right">0.8594345870822527</td>
+<td class="org-right">0.0025139728038953467</td>
+<td class="org-right">0.8545072003866179</td>
+<td class="org-right">0.8643619737778876</td>
+</tr>
+
+<tr>
+<td class="org-left">ROC AUC</td>
+<td class="org-right">0.81397972818063</td>
+<td class="org-right">0.004148986732925996</td>
+<td class="org-right">0.8058477141840951</td>
+<td class="org-right">0.822111742177165</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+We are looking to evaluate the fairness of the model. This means two things:
+</p>
+
+<ol class="org-ol">
+<li>Compare how well a model trained on the entire dataset performs on subpopulations.</li>
+</ol>
+<p>
+We will train the model once, then compare the metrics:
+</p>
+<ul class="org-ul">
+<li>Accuracy</li>
+<li>Precision</li>
+<li>Recall</li>
+<li>F1</li>
+<li>AUC</li>
+</ul>
+
+<p>
+On the Races:
+</p>
+<ul class="org-ul">
+<li>White</li>
+<li>Black</li>
+<li>Asian</li>
+<li>Middle Eastern</li>
+</ul>
+
+<p>
+Then on the Genders:
+</p>
+<ul class="org-ul">
+<li>Male</li>
+<li>Female</li>
+</ul>
+
+<p>
+We will also compute the fairness metrics:
+</p>
+<ul class="org-ul">
+<li>Statistical Parity</li>
+<li>Equalized Odds</li>
+<li>ABROCA</li>
+</ul>
+
+<p>
+Computational Plan:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #595959;"># </span><span style="color: #595959;">1. Train The model on Everyone</span>
+<span style="color: #595959;"># </span><span style="color: #595959;">2. Evaluate the Fairness Metrics on Privilaged vs Unprivilaged Groups</span>
+<span style="color: #595959;"># </span><span style="color: #595959;">3. Per Race, do: Evaluate the (Standard-)Metrics Per Race</span>
+<span style="color: #595959;"># </span><span style="color: #595959;">4. Train Decision Tree and Plot Feature Importance</span>
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Compare which features are important when a model is trained on the individual subpopulations.
+This is accomplished by using</li>
+</ol>
+
+<p>
+Stratify the populations by Race
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge35a097" class="outline-2">
+<h2 id="orge35a097"><span class="section-number-2">3.</span> Breast Cancer Detection</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3a4d9f6" class="outline-3">
+<h3 id="org3a4d9f6"><span class="section-number-3">3.1.</span> Dataset</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The dataset contains whole slide images from 1,000 biopsies in 842 patients from 2014 to 2020. 
+</p>
+</div>
+</div>
+<div id="outline-container-org03ba185" class="outline-3">
+<h3 id="org03ba185"><span class="section-number-3">3.2.</span> The Model</h3>
+</div>
+</div>
+<div id="outline-container-org9e64b4a" class="outline-2">
+<h2 id="org9e64b4a"><span class="section-number-2">4.</span> OMAP Table</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Observational Medical Outcomes Partnership (OMOP) Common Data Model (CDM)
+</p>
+</div>
+</div>
+<div id="outline-container-org432ff7d" class="outline-2">
+<h2 id="org432ff7d"><span class="section-number-2">5.</span> All of Us Heteroskedasticity Paper</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org74093e6" class="outline-3">
+<h3 id="org74093e6"><span class="section-number-3">5.1.</span> Abstract</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Electronic Health Records (EHRs) provide a vast amount of patient data important to patient outcomes.
+However, EHR data contain many missing values which can introduce bias and reduce statistical power.
+By testing a number of data imputation techniques we find that the AUROC, accuracy, and precision of a diabetes prediction model remains roughly the same as we increase the number of missing features. However, the F1 and recall of a model goes down. We do find that all of the metrics have an increase in heteroskedasticity.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org927af50" class="outline-2">
+<h2 id="org927af50"><span class="section-number-2">6.</span> Classifier Evaluation</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-src-container">
+<pre class="src src-jupyter-python3">print("Hi")
+</pre>
+</div>
+
+<pre class="example">
+Hi
+</pre>
+</div>
+</div>
+<div id="outline-container-orgf2584ec" class="outline-2">
+<h2 id="orgf2584ec"><span class="section-number-2">7.</span> Fair Active Learning</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org318b169" class="outline-3">
+<h3 id="org318b169"><span class="section-number-3">7.1.</span> Notes on FAL Code</h3>
+<div class="outline-text-3" id="text-7-1">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">RL</span><span style="color: #000000;">(</span>path,response,sensitive,atr,demo_option,r,b,alpha,rnd,data_option,flag_demo<span style="color: #000000;">)</span>:
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org389e503" class="outline-2">
+<h2 id="org389e503"><span class="section-number-2">8.</span> Conferences</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>AISTATS
+2024 Spain October 6</li>
+
+<li>ICLR
+2024 Vienna Austria</li>
+
+<li>ICML
+2024 Vienna Austria
+2025 Vancouver Canada
+2026 Seoul Korea</li>
+
+<li>NeurIPS
+2024 Vancouver
+2025 San Diego</li>
+
+<li>CHIL</li>
+
+<li>CHI</li>
+
+<li>AMIA</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org652ee53" class="outline-2">
+<h2 id="org652ee53"><span class="section-number-2">9.</span> N by M Study</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Create Table of N by M study and Bar Plot by Tonight
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Percentile</td>
+<td class="org-left">Impute Nothing</td>
+<td class="org-left">Impute Mean</td>
+</tr>
+
+<tr>
+<td class="org-left">00 - 10</td>
+<td class="org-left">AUC</td>
+<td class="org-left">AUC</td>
+</tr>
+
+<tr>
+<td class="org-left">10 - 20</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">20 - 30</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">30 - 40</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">40 - 50</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">50 - 60</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">60 - 70</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">70 - 80</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">80 - 90</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">90 - 100</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8b55b1e" class="outline-2">
+<h2 id="org8b55b1e"><span class="section-number-2">10.</span> TikTok Hashtags</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+174 - 274
+#cops
+#motivation
+#reaction
+#fabioandben
+#familyvlog
+#greenscreen
+#miltok
+#karate
+#muaythai
+#specialneedsmom
+#laughter
+#latina
+#desi
+#arab
+#mexico
+#hispanic
+#melanin
+#grwm
+#ootd
+#fashion
+#thrifthaul
+#makeup
+#sport
+#running
+#fitcheck
+#runningfit
+#trackandfield
+#soccer
+#whatsyourpower
+#rockincollege
+#taekwondo
+#martialarts
+#boxing
+#fitness
+#sports
+#beautymodel
+#beastmode
+#blackfitness
+#blackhairstyle
+</p>
+
+
+
+
+<p>
+#greenscreen
+#playlikeher
+#jeromebaker
+#bodypositivity
+#iamwoman
+#beconfident
+#deji
+#worldcup
+#sundayleague
+#boxingtok
+#coldwater
+#kind
+#sepaktakraw
+#newsport
+#sports
+#trick
+#slaps
+#freekick
+#fighter
+#wholesome
+#cycling
+#beam
+#bowlingalley
+#momsoftiktok
+#motorsports
+#july
+#enews
+#volleyball
+#kidsoftiktok
+#martialarts
+#playmaker
+#bmxboy
+#foryou
+#coldmoments
+#voleibol
+#viral
+#nbahighlights
+#joshuasuperbaby
+#polska
+#hunar
+#usa
+#workout
+#athlete
+#flip
+#nbaedits
+#hooper
+#overtimefc
+#hype
+#433
+#running
+#u
+#happiness
+#competition
+#speed
+#youcandoit
+#showsomelove
+#bloopers
+#kids
+#basketballplayer
+#archery
+#sporttok
+#cool
+#escalade
+#highschool
+#zerobrainer0
+#fyp
+#confidenceiskey
+#brucelee
+#gorgeousgirl
+#dudeperfect
+#ironfaces
+#mothersday
+#premierleague
+#fails
+#skating
+#hoop
+#crossbarchallenge
+#newgame
+#ohno
+#recreation
+#basketball
+#darts
+#ronaldoo
+#boxing🥊
+#спорт
+#nfl
+#volleyballgame
+#wrestling
+#quick
+#teamusa
+#volleyballmen
+#bike
+#kobe
+#million
+#d1
+#landit
+#summer
+#втоп
+#gymtok
+#baseballtoks
+#crossbar
+#Unpackthe
+#dunk
+#reaction
+#satisfying
+#paintballing
+#bball
+#irishtiktok
+#bestfriend
+#skateboarding
+#sportbible
+#ufcrussia
+#amazing
+#men
+#mma
+#marquette
+#art
+#magic
+#mountainbike
+#slide
+#farmhoops
+#meme
+#nxl
+#secondaryschool
+#viralvideo
+#volley
+#trending
+#strings
+#vicious
+#ufcedit
+#shoutoutot
+#wow
+#menominee
+#love
+#basketballchallenge
+#series
+#paintballer
+#shoutoutot
+#gymnast
+#womanpower
+#legend
+#learnontiktok
+#longdistance
+#letsgo
+#lifehacks
+#пощечина
+#edit
+#game
+#emotional
+#beachvolleyball
+#anklebreaker
+#teacher
+#keepgoing
+#motivation
+#jdairmaxmode
+#nhl
+#foryoupage
+#gym
+#bar
+#familytime
+#england
+#f
+#fypシ
+#tiktok<sub>india</sub>
+#collegefootball
+#CapCut RIP
+#trendingsound
+#talent
+#photographer
+#hollywood
+#omg
+#hoops
+#baseballboys
+#bmxforever
+#nba2k
+#workoutroutine
+#iconic
+#slowmo
+#MalaysiaRoar
+#mlb
+#boxing
+#Receba
+#ufc
+#skill
+#football
+#katakata
+#tommyfuryvsjakepaul
+#whatmadeyoufamous
+#tiktokindia
+#sports
+#musically
+#beproud
+#bmxyusuf
+#nba
+#school
+#paintball
+#volleyballworld
+#volleyballwomen
+#popdarts
+#yusufbmx
+#toppserien
+#embarrassingmoments
+#likeandfollow
+#trackandfield
+#slap
+#hockey
+#peopleareawesome
+#ldr
+#babyboy
+#cristianoronaldo
+#olympian
+#xball
+#women
+#liveyourbestlife
+#thankyou
+#sportstiktok
+#aprilfools
+#tradbow
+#aw
+#mama
+#surfing
+#parati
+#bowandarrow
+#fake
+#bottleflip
+#1mil
+#cooking
+#motorcycle
+#tranding
+#ireland
+#fotball
+#satisfy
+#leap
+#boxer
+#lmao
+#muhammadali
+#greenlake
+#keepfit
+#shoutoutot
+#bowlersoftiktok
+#magictrick
+#fun
+#waffle
+#MakeNightsEpic
+#student
+#friendgamenight
+#CleanTok
+#manistique
+#fmx
+#goal
+#girl
+#calisthenics
+#backpfeifen
+#photoshoot
+#paradanza
+#playit
+#bmxlife
+#crossover
+#howto
+#bmx
+#zerobrainer0comedy
+#irish
+#wisconsin
+#tutorial
+#tumble
+#skate
+#embarrassingmyself
+#overtime
+#comedy
+#epic
+#goalkeeper
+#bouldering
+#zusje
+#NBA
+#betteratbeach
+#livelifetothefullest
+#trickshot
+#ronaldo
+#bowlingtiktok
+#schooltok
+#blowthisup
+#ronaldooooooo🔥🔥🔥🔥🔥🔥🐐🤴
+#taylorswift
+#kidstalent
+#nkwainkenndey
+#floidmayweather
+#sportclimbing
+#baby
+#bowling
+#couple
+#fty
+#easyway
+#skills
+#rapidriver
+#lad
+#whatmademeviral
+#youareenough
+#climbing
+#greenscreenvideo
+#soccer
+#olympics
+#teamd17
+#shoutoutOT
+#foryoupag
+#irishtok
+#mom
+#crazy
+#lifestyle
+#life
+#coach
+#track
+#tiktok
+#rogan
+#pose
+#neymar
+#helicopter
+#espn
+#fitnessmotivation
+#ring
+#volleyballplayer
+#rings
+#wigglenobber
+#MalaysiaBoleh
+#dontgiveup
+#Duet
+#fight
+#memes
+#sport
+#basketballtiktok
+#speedball
+#xyzbca
+#lebron
+#qatar2022
+#sportsbibleqatar2022
+#dontletthisflop
+#professionalrider
+#superbaby
+#dxnaseeb
+#footballtiktok
+#tommyfury
+#gymnastics
+#funny
+#highschoolvolleyball
+#gladstone
+#family
+#throwback
+#joaquinbuckley
+#fail
+#baseball
+#fitness
+#sportsdiary
+#sportchallenge
+#slapfight
+#dontquit
+#wrestle
+#kobebryant
+#ncaa
+#escanaba
+#taekwondo
+#jakepaul
+#myworkout
+#ko
+#micdup
+#save
+#fitnesstiktok
+#midwest
+</p>
+
+<p>
+#kawaii
+#animation
+#dance
+#bodypositivity
+#feel
+#mrbean
+#tiktokdance
+#bunny
+#rabbit
+#CardiB
+#イケメン
+#funky
+#zanzibar
+#wonder
+#relatable
+#drawing
+#show
+#flynnrider
+#mask
+#trend
+#dancechallenge
+#justdance2016
+#monkey
+#africantribes
+#shorts
+#wholesome
+#ComfortFood
+#dancetok
+#vipgirl
+#AsSceneOnTubi
+#rihannasuperbowl
+#かわいい
+#featureme
+#foryou
+#lightwhiptutorial
+#dance
+#mehndi
+#viral
+#Twins
+#halftime
+#日光さる軍団
+#hawaii
+#travelbucketlist
+#foru
+#datoga
+#fy great work I love this dance 👍👍
+#mercuri<sub>88</sub>
+#newyork
+#stickbugs
+#rickypond
+#kpnop
+#like
+#xvaños
+#SaveIt4TheEndZone
+#makeupartist
+#interview
+#pet
+#paravoce
+#wednesdayaddams
+#bdashbeats
+#bloopers
+#youngmom
+#braces
+#christmas
+#tiktoktrending
+#wisdomsociety
+#mrhammonton
+#cool
+#추천
+#letwinsdancers
+#sorpresa
+#duet
+#highschool
+#vibes
+#primitiveskills
+#babydance
+#fyp
+#breakup
+#serengeti
+#bananaball
+#battle
+#naruto
+#pennywisecosplay
+#travel
+#tanzania
+#charlidamelio
+#barça
+#Dance
+#dancewithpubgm
+#dancetiktok
+#르샤
+#kybcosmetics
+#monster
+#lovestory
+#tangled
+#disney
+#kwiktrip
+#GimmeSomeTruth
+#plussize
+#sizeinclusive
+#daddysgirl
+#hightschool
+#bunnydayoff
+#renegade
+#lechat
+#ootd
+#neon
+#dancingqueen
+#songs
+#UTPlayYourWorld
+#DanceCharades” 💃 🎶
+#hot
+#daughter
+#original
+#recap
+#blinddance
+#duet
+#cheerleader
+#foruyou
+#猿
+#dallinpond
+#look
+#anime
+#ok
+#art
+#edutok
+#illdancedancewithmyhands
+#squidgame
+#eminem
+#meme
+#neymarjrdance
+#nativetiktok
+#tomholland
+#avemoves
+#canttakemyeyesoffyou
+#dadsoftiktok
+#bushmen
+#viralvideo
+#handsome
+#gift
+#trending
+#karloluna
+#princess
+#partygirl
+#dancingdad
+#intothethickofit
+#savannahbananas
+#wow
+#love
+#MyDolceMoment
+#10monthsold
+#WAP
+#barçaontiktok
+#quince
+#dreamworks
+#dancingbaby
+#tanyaleedavis
+#son
+#dance
+#judas
+#whileyouwerebusy
+#viet
+#youcanreallydance
+#ortizboyz🎭
+#edit
+#renal
+#hadzabe
+#tanzanianationalparks
+#doja
+#quincesurprise
+#gaytiktok
+#foryoupage
+#asian
+#indigenous
+#humor
+#badbunny
+#spedup
+#musicaltheatre
+#wedding
+#fypシ
+#performance by The Royal Family 🔥💯❤
+#lgbt
+#friday
+#neiperte
+#you
+#dhoka
+#bollywood
+#omg
+#fashion
+#party
+#quinceparty
+#nativepride
+#FritoLayRickRoll
+#maori
+#travelafrica
+#さる
+#y2k
+#PerfectAsWeAre
+#disneyplus
+#Australia
+#slowmo
+#dancewithme
+#showyourpride
+#fat
+#quinceañera
+#karloybeto
+#babiesoftiktok
+#berriesandcream
+#cousins
+#baile
+#shaadi
+#stickbug
+#football
+#tiktoktanzania
+#transition
+#fypage
+#netflix
+#michaeljackson
+#viraltiktok
+#justwannarock
+#fcbarcelona
+#auto
+#puppetdance
+#ダンス
+#ドッキリ
+#brothers
+#harlemshake
+#foruuu
+#newdance
+#cancelthenoise
+#whoeverhas
+#rihanna
+#primitive
+#prank
+#singing
+#dancer
+#indiantiktok
+#dad
+#viralaudio
+#african
+#dancing
+#ngorongori
+#3danimation
+#跳び蹴り
+#bungee
+#disneyland
+#group
+#sasuke
+#dance
+#lovekt
+#brother
+#audios
+#taylorswiftchallenge
+#pixar
+#parati
+#wap
+#street
+#laugh
+#lesbian
+#dancemeright
+#reactions
+#jrmrbean
+#fitfatfun
+#trendingsong
+#signlanguage
+#daddance
+#xv
+#fun
+#seal
+#albertooseeguera
+#feelthemoment
+#TeamJazz
+#macarena
+#curte
+#funnycat
+#puppet
+#gang
+#cheerleading
+#rifatta
+#boost
+#nostalgia
+#aliceinwonderland
+#waving
+#smilechallenge ???
+#bunnydancer
+#ゆめこはん
+#quality
+#cowboy
+#backyardigans
+#master
+#littlelad
+#dancersoftiktok
+#it
+#sarati
+#breakdance
+#biloxi
+#adele
+#thriller comes on 😂🕺🏽
+#tutorial
+#drunk
+#comedy
+#dancebattle
+#trendig
+#ukbritish
+#hiphop
+#godzilla
+#sid
+#可愛い
+#car
+#onesidelove
+#lilyallen
+#sakyi
+#sorprendente
+#comeheregirl
+#infiniteclone
+#rap
+#gran
+#wednesdayaddamsdance
+#halloween
+#hiphopdance
+#baby
+#superbowl
+#vietnamese
+#sweden
+#Wishlist
+#danceindia
+#music
+#wednesday
+#neymarjr10
+#WholeNewGame
+#hunting
+#2022
+#primitivesurvival
+#gonewrong
+#primitive<sub>technology</sub>
+#InTheHeightsChallenge
+#megantheestalllon
+#Mahusiano
+#2021
+#malmöflickorna
+#fatherson
+#crazyfrog
+#lyon
+#fatherandson
+#tiktok
+#kakashi
+#surprise
+#neymar
+#backupdancer
+#ouma
+#sofine
+#forupage
+#talentshow
+#Spooktember
+#imposter
+#beachvibes
+#challenge
+#perte
+#trendingvideos
+#wtf
+#quinceañerakyb
+#kuwtos🚀
+#umbrella
+#public
+#xyzbca
+#danceinspired
+#cat
+#tiktokdeportes
+#thefamileigh
+#IGotTheMusic
+#vaiprofycaramba
+#beauty
+#couples
+#lightwhip
+#animals
+#tanzaniasafari
+#freestyle
+#arizona
+#mj
+#flipbook
+#tyler
+#smile
+#nailsalon
+#fy
+#enredados
+#samasamadirumah
+#justdance
+#bunnyoftiktok
+#gymnastics
+#rewind
+#funny
+#new
+#dolphinmarineconservationpark
+#80s
+#family
+#throwback
+#afrobeats
+#baseball
+#transitiontutorial
+#flashbob
+#動物
+#dancers
+#dancerfirst
+#blender3d
+#hand
+#rapunzel
+#ashleylookatme
+</p>
+
+<p>
+#dance
+#lesson
+#etabs
+#spirit
+#country
+#pharmacystudent
+#aero
+#bluesealighting
+#latifa<sub>rocks</sub>
+#wandavision
+#hydrokinesis
+#telekinesisisreal
+#benzene
+#kineticabilities
+#inhibitors
+#wandamaximoff
+#electronicconfiguration
+#TRY
+#excuseprooffitness
+#oddlysatisfying
+#techno
+#robloxstevenuniverse
+#trainer
+#electromagnetism
+#noexcuse
+#kineticsand
+#ansys
+#bim
+#foryou
+#rge
+#mindovermatter
+#civlengineer
+#polykinetics
+#miamorethananasana
+#viral
+#swifttok
+#spirituality
+#wakeup
+#revamp
+#abworkout
+#bodyweightworkout
+#java
+#aircraftengineering
+#grinchnails
+#wanyomori
+#tka
+#ascendedmaster
+#bay
+#workout
+#engineering
+#upperbodyworkout
+#144000
+#stagediving
+#environmentalimpact
+#stagedecor
+#slay
+#rateofreaction
+#magnetic
+#workhard
+#bpm
+#stagedecoration
+#chemicalengineering
+#finiteelementanalysis
+#satisfyingvideos
+#selfeducation
+#christmas
+#fit
+#roblox
+#standingcorecrunch
+#vcc
+#loldolls
+#tiktoksg
+#artokinesis
+#fitnesstips
+#stagelights
+#pharmacokinetics
+#highschool
+#fyp
+#ledkineticlight
+#mwa
+#dca
+#fürdichseiteシ
+#stl
+#csection
+#avionics
+#stayonthebeat
+#csectionrecovery
+#thekineticabilitesroblox
+#staadpro
+#fire
+#swiftie
+#kineticsandasmr
+#constructionprojectmanagement
+#nails
+#happy
+#simplified
+#core
+#timetravel
+#manifestation
+#IS
+#kineticball
+#bodyweight
+#aerokinesis
+#armsworkout
+#alkylhalide
+#imagination
+#bestexercises
+#pharmacytiktok
+#stagedesign
+#airbender
+#staubsauger
+#mashurkevlar
+#coreworkout
+#electromagneticfield
+#versioncontrol
+#tiktokviral
+#matrixrecoded
+#buildinginformationmodelling
+#asmr
+#mindbending
+#apchemistry
+#energy
+#summer
+#wordplay
+#abaqus
+#Adriana
+#tempofitness
+#simplefitness
+#chem
+#nailsvideotutorial
+#transformingnails
+#disproportionation
+#jclifestyle
+#periodictable
+#princessnails
+#fromthistothis
+#revit
+#sculpture
+#softwaredevelopment
+#higherself
+#kinetics
+#satisfying
+#funworkout
+#aerospacedesign
+#lightworker
+#flying
+#upperbody
+#amazing
+#spiritualtiktok
+#verticalcorecrunch
+#alchemy
+#controlsystems
+#magic
+#embeddedprogramming
+#ltspice
+#art
+#thekineticabilities
+#imnotmad
+#enzyme
+#standingcrunch
+#aerospace
+#rhythm
+#stageae
+#stagesetup
+#orbitals
+#subliminal
+#relaxing
+#redox
+#stuipd
+#fitnesssimplified
+#patientcare
+#recovery
+#URsub
+#amazonwebservices
+#strengthening
+#highestlevel
+#power
+#love
+#stagephotographer
+#psiwheel
+#lovelight
+#LinkBudsNeverOff
+#stlouis
+#cardioinfusedanaerobics
+#pvp
+#wanda
+#geotechnicalengineering
+#react
+#pharmd
+#ligands
+#circuitanalysis
+#apstudent
+#excuseproof
+#listen
+#forks
+#UnlimitedHPInk
+#lovelife
+#humboldt
+#kinetic
+#foryoupage
+#dosing
+#nursingschool
+#asmrs
+#countrymusic
+#stagedoor
+#sap2000
+#fypシ
+#lightweaver
+#sand
+#attachedtome
+#spring
+#pleadian
+#lab
+#rahatlatıcı
+#selftaught
+#lolpuppe
+#kineticasmrfun
+#atyou
+#stagehunter
+#void
+#workoutroutine
+#funfitness
+#primaverap6
+#stageleft
+#electrokinesis
+#dark
+#simulation
+#kinesis
+#executivefunctionhacks
+#kinetica
+#kinecticsand
+#sewlight
+#subs
+#stagelight
+#гельлак
+#kineticballs
+#programminglanguages
+#fluiddynamics
+#k18results
+#signalprocessing
+#5dconsciousness
+#cprogramming
+#stomachvacuum
+#cardio
+#urmomfast
+#devops
+#DisneyParksVoices
+#stageshow
+#munkbang
+#soldworks
+#top
+#CapCut
+#energycodes
+#fypage
+#hydro
+#yogainstructor
+#pharmacylife
+#fluent
+#health
+#gay
+#vancomycin
+#маникюрлюберцы
+#collegeboard
+#school
+#pricillablock
+#matlab
+#nlbtok
+#galacticfederation
+#perfectnails
+#bitbucket
+#energywork
+#lightcodes
+#abilities
+#alkene
+#stagehandlife
+#propulsionengineering
+#structuralanalysis
+#psychic
+#polyk
+#simplybebetter
+#angular
+#alkane
+#processsimulation
+#balance
+#weightloss
+#rhythmiccoordination
+#👑
+#energetics
+#beginner
+#scarletwitch
+#selflearn
+#backlight
+#structuraldesign
+#opportunity
+#photokinesis
+#eventplanner
+#pppl
+#tiktokpharmacist
+#somebody
+#stage
+#viralvideotiktok
+#studytok
+#aws
+#chemgrind
+#git
+#standingcore
+#archicad
+#satisfy
+#workoutathome
+#mentalhealthfitness
+#stagephotography
+#tiktoknails
+#ascension
+#sound
+#dlaciebie
+#kneefriendlyworkout
+#safety
+#labs
+#circuitdesign
+#дизайнногтей
+#neuroscience
+#azure
+#exercises
+#weightlossdance
+#money
+#yogapose
+#powerdistribution
+#analysis
+#fun
+#stayonbeat
+#fupa
+#orcad
+#asmrmassage
+#student
+#CAD
+#ratedeterminingstep
+#tempotraining
+#avatar
+#apush
+#simple
+#halogenoalkane
+#abdance
+#electricalengineering
+#bestexercise
+#zodiac
+#foryourpage
+#newworld
+#plantdesign
+#done
+#aerospaceengineering
+#geo5
+#manifest
+#auiastee
+#flightmechanics
+#atmokinesis
+#bilateral
+#howto
+#happynails
+#biochem
+#cardioinfusedanaerobictraining
+#transitionelements
+#thekineticabillities
+#final
+#thermaldynamics
+#coppermanganese
+#tutorial
+#chemistry
+#materialselection
+#plantoptimization
+#spacecraft
+#lolsurprise
+#reactionengineering
+#exercise
+#amsr
+#fupafighter
+#never
+#GiveWithAllYourHeart
+#chosen
+#uglynails
+#taylorswift
+#mcu
+#nucleophilicsub
+#aesthetic
+#marvel
+#tiktoker
+#gelnails
+#tips
+#stagetime
+#python
+#poleathlete
+#autocad
+#aerodaynamics🛩️
+#cloudcomputing
+#levitation
+#vccexercise
+#stageid
+#next
+#kubernetes
+#summervibes
+#music
+#spacecraftsystemsengineering
+#sosatisfying
+#poly
+#piasek
+#apchem
+#tiktokvideo
+#jctok
+#telekinesispowers
+#arms
+#fullbodyworkout
+#lgbt🌈
+#lolsurprisedolls
+#spiritual
+#katara
+#powers
+#elements
+#cplusplus
+#elbruso
+#armyoflight
+#eleven
+#tiktok
+#nails💅
+#thekineticsubs
+#systemsmodelling
+#Sn1
+#docker
+#visualization
+#career
+#noexcuses
+#axybcz
+#openfoam
+#justfeel
+#tempo
+#hazard
+#altium
+#github
+#diy
+#challenge
+#iamloki
+#growwithjo
+#jenkins
+#emmafitness
+#separationprocess
+#backfriendlyworkout
+#frequency
+#capcut
+#dontbestupid
+#dimension
+#xyzbca
+#harderthanitlooks
+#sciense
+#redtaylorsversion
+#stem
+#intentions
+#animalmovement
+#paranormal
+#lolsurpriseboy
+#plaxis
+#attached
+#stagedesigner
+#tk
+#amplifyacademy
+#smarternotharder
+#mechanicalengineering
+#smile
+#coordinatebonds
+#keepthebeat
+#fy
+#coreexercise
+#furdich
+#float
+#pyrokinesis
+#study
+#parvakonasana
+#penultimate
+#CHEM
+#selfmastery
+#telekinesis
+#nomenclature
+#fitness
+#catia
+#triiodomethanetest
+#workoutforbeginners
+#harmony
+#artist
+#stageextra
+#stagemanager
+#labawareness
+#procore
+#fu
+#movementismedicine
+#superpowers
+#stlmade
+#fürdich
+#aerosightz
+#ledkineticball
+#satisying
+#softwareengineering
+</p>
+</div>
+</div>
+<div id="outline-container-orga22a7c8" class="outline-2">
+<h2 id="orga22a7c8"><span class="section-number-2">11.</span> Lab Meeting Notes</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Hello, my name is Zain Jabbar. I am a Mathematics Ph.D. student working with you all. Here we may present on the work I perform in this lab and in the Mathematics department.
+</p>
+
+<p>
+My interests are broad, anything scientific would keep me happy. 
+</p>
+</div>
+<div id="outline-container-org00a832c" class="outline-3">
+<h3 id="org00a832c"><span class="section-number-3">11.1.</span> Model Fairness</h3>
+<div class="outline-text-3" id="text-11-1">
+<p>
+My first work is in model fairness.
+</p>
+</div>
+<div id="outline-container-org77a9b9d" class="outline-4">
+<h4 id="org77a9b9d"><span class="section-number-4">11.1.1.</span> Intuition</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<p>
+Given a dataset \( X \) partitioned by \( G \) (think of any <code>Pandas.DataFrame</code> and <code>Pandas.Grouper</code>)
+We may compare different model evaluation techniques on the different substrata of \( X \). That is, how does accuracy, F1, precision, recall, AUROC differ on each of the subpopulations within the dataset.
+</p>
+
+<p>
+Machine learning models optimize for a certain loss function. While no model would outright have a preferential treatment for certain subpopulations before seeing the dataset, we note that some stages in the ML pipeline can introduce changes in the model which favor some subpopulations.
+</p>
+
+<p>
+One immediate example is if the dataset is imbalanced,
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">X=age</th>
+<th scope="col" class="org-right">y=output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">9</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">&#x2026;</td>
+<td class="org-right">&#x2026;</td>
+</tr>
+
+<tr>
+<td class="org-right">100's</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">&#x2026;</td>
+<td class="org-right">&#x2026;</td>
+</tr>
+
+<tr>
+<td class="org-right">50</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">60</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">70</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+We find that most models would end up predicting all \( 1 \)'s for this dataset.
+</p>
+
+<p>
+If \( G = \{ [0, 10], (10, \infty) \} \) is an indicator of age above exclusive or below inclusive \( 10 \) then many ML metrics would do well on the whole dataset but poorly on some members of \( G \). 
+</p>
+</div>
+</div>
+<div id="outline-container-orge024baa" class="outline-4">
+<h4 id="orge024baa"><span class="section-number-4">11.1.2.</span> Approaches</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<p>
+Armin gave a great overview on the areas in which bias can occur in the ML pipeline. With the way I 
+</p>
+</div>
+</div>
+<div id="outline-container-org011c9cb" class="outline-4">
+<h4 id="org011c9cb"><span class="section-number-4">11.1.3.</span> All of Us</h4>
+<div class="outline-text-4" id="text-11-1-3">
+<p>
+The All of Us database, created by the National Institutes of Health, contains healthcare data from over 400 thousand participants.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9fc876a" class="outline-3">
+<h3 id="org9fc876a"><span class="section-number-3">11.2.</span> Active Learning</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+I also do work in active learning.
+</p>
+</div>
+<div id="outline-container-org2ea5d0c" class="outline-4">
+<h4 id="org2ea5d0c"><span class="section-number-4">11.2.1.</span> Intuition</h4>
+<div class="outline-text-4" id="text-11-2-1">
+<p>
+In many ML approaches, the saying is that more data is often better. However there are barriers to data aquisition.
+</p>
+
+<p>
+\[ \text{Event} \longrightarrow \text{Recording} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org05388b7" class="outline-4">
+<h4 id="org05388b7"><span class="section-number-4">11.2.2.</span> Approaches</h4>
+</div>
+</div>
+<div id="outline-container-org6864cce" class="outline-3">
+<h3 id="org6864cce"><span class="section-number-3">11.3.</span> Fair Active Learning</h3>
+</div>
+
+
+
+<div id="outline-container-org6135806" class="outline-3">
+<h3 id="org6135806"><span class="section-number-3">11.4.</span> Information Geometry</h3>
+<div class="outline-text-3" id="text-11-4">
+<p>
+In all of our ML projects, we are trying to fit a model to some dataset. In most circumstances, this entails solving an optimization problem (that is, doing calculus) over a set of parameters for a family of distributions. We may then apply principles of a more generalized calculus in higher dimensional spaces.
+</p>
+</div>
+<div id="outline-container-org2b486d5" class="outline-4">
+<h4 id="org2b486d5"><span class="section-number-4">11.4.1.</span> Gradient Methods</h4>
+<div class="outline-text-4" id="text-11-4-1">
+<p>
+One very useful method to fit a distribution uses gradient descent methods. The rule we are all familiar with is:
+</p>
+
+<p>
+\[ \theta_{t+1} \leftarrow \theta_{t} - \alpha \nabla_{\theta} L(\theta) \]
+</p>
+
+<p>
+In words, the new parameters is an updated version of the old parameters plus some step in the direction of most descent.
+</p>
+
+<p>
+The issue with this is that the distance between two distributions is not naturally expressed by Euclidean coordinates.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python3">import matplotlib.pyplot as plt
+import numpy as np
+import scipy.stats as stats
+import math
+
+mu = -1
+variance = 0.25
+sigma = math.sqrt(variance)
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+plt.plot(x, stats.norm.pdf(x, mu, sigma))
+
+mu = 1
+variance = 0.25
+sigma = math.sqrt(variance)
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+plt.plot(x, stats.norm.pdf(x, mu, sigma))
+
+plt.xlim(-3,3)
+plt.title(f'Two Normal Dists with Variance = {variance}')
+plt.show()
+
+mu = -1
+variance = 1
+sigma = math.sqrt(variance)
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+plt.plot(x, stats.norm.pdf(x, mu, sigma))
+
+mu = 1
+variance = 1
+sigma = math.sqrt(variance)
+x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+plt.plot(x, stats.norm.pdf(x, mu, sigma))
+
+plt.xlim(-3,3)
+plt.title(f'Two Normal Dists with Variance = {variance}')
+plt.show()
+</pre>
+</div>
+
+<p>
+<img src="./.ob-jupyter/9ed4bfee09f5e5c649953f76f6b4b05b23899ad0.png" alt="9ed4bfee09f5e5c649953f76f6b4b05b23899ad0.png" />
+<img src="./.ob-jupyter/adbb3e738371f0c89ea1e53b61a902dfde5b36ba.png" alt="adbb3e738371f0c89ea1e53b61a902dfde5b36ba.png" />
+</p>
+
+<p>
+If we want to compare how different the blue vs orange distributions are, we see that the top plot (small variances) are somehow more different than the bottom plot (larger variances) because the bottom plot has more "overlap". However, if we just take the distance as the Euclidean distance between parameters, we get:
+</p>
+
+\begin{align}
+\sqrt{(\mu_{1} - \mu_{2})^{2} + (\sigma_{1} - \sigma_{2})^{2}} &= \sqrt{(1 - (-1))^{2} + (0.25 - 0.25)^{2}} = 2  \tag{Top Plot} \\
+\sqrt{(\mu_{1} - \mu_{2})^{2} + (\sigma_{1} - \sigma_{2})^{2}} &= \sqrt{(1 - (-1))^{2} + (1 - 1)^{2}} = 2  \tag{Bottom Plot}
+\end{align}
+
+<p>
+Namely, the distance between the parameters are the same but we would like the distance to be different.
+</p>
+
+<p>
+One way to quantify this difference is to look at how much information we lose by using one distribution as a model for the other. If there is less overlap, we lose more information by using one distribution over the other. Hence the information loss is higher. As a formula, we have,
+</p>
+
+<p>
+\[ D_{\text{KL}}(P \ \| \ Q) = \int_{\Omega} \log \left( \frac{P(dx)}{ Q(dx)} \right) P(dx)  \]
+</p>
+
+
+<p>
+Using this as a "distance" (it is asymmetric an does not satisfy triangle inequality) we can define the "natural gradient" \( \tilde{\nabla} \) and use this natural gradient to do gradient descent.
+</p>
+
+<p>
+\[ \theta_{t+1} \leftarrow \theta_{t} - \alpha \tilde{\nabla}_{\theta} L(\theta) \]
+</p>
+
+<p>
+This natural gradient has a lot of nice properties (and some not so nice).
+</p>
+
+<ul class="org-ul">
+<li>It requires the least steps to convergence</li>
+<li>Invariant under sufficient statistics</li>
+<li>Reparameterization invariant</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4435677" class="outline-4">
+<h4 id="org4435677"><span class="section-number-4">11.4.2.</span> Case Study</h4>
+<div class="outline-text-4" id="text-11-4-2">
+<p>
+<a href="https://link.springer.com/article/10.1007/s13218-015-0382-z">https://link.springer.com/article/10.1007/s13218-015-0382-z</a>
+</p>
+
+<p>
+When looking at ML models, we are often confronted with the question of how large a model should be. There are perhaps empirical measures, memory, history of previous works, computational availability, testing many models and looking for inflections.
+</p>
+
+<p>
+Universal approximation theory (which underpins much of ML theory) gives bounds on how many parameters a type of model needs in order to be sufficiently close given a dataset.
+</p>
+
+<p>
+Universal approximation theory states that given an infinite number of parameters and infinite data we can learn the exact distribution of data. Because of the inherent error in datasets there is a cut-off point by which the number of parameters are insignificant. That is, adding more parameters do not enhance performance.
+</p>
+
+<p>
+In a paper about information geometry, a comparison was made about the tightness of bounds of parameters given by dimension counting and universal approximation theory.
+</p>
+
+<p>
+For a mechanical robot with \( 48 \) input states and \( 48 \) output states 
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga61e5b5" class="outline-2">
+<h2 id="orga61e5b5"><span class="section-number-2">12.</span> AI PHI Meeting</h2>
+</div>
+
+
+<div id="outline-container-org3d2d1bb" class="outline-2">
+<h2 id="org3d2d1bb"><span class="section-number-2">13.</span> CHI 2024 Peer Review</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-orgf4eed28" class="outline-3">
+<h3 id="orgf4eed28"><span class="section-number-3">13.1.</span> Originality</h3>
+<div class="outline-text-3" id="text-13-1">
+<p>
+The paper introduces an interactive computational model that measures behavior quantitatively. The originality is due to the amalgamation of multiple ability tests for the purpose of prediction. The paper also constructs a score for the behavior of a patient.
+</p>
+
+<p>
+This might not be very original, there are many results to "autism diagnosis ML multimodal". One original part of the paper is the use of "spatial" and "graphic" paradigms. However, these are just eye tracking done in the lab and in a natural environment. The score is also not well developed. Machine learning creates many intermediate "feature scores" as a product of the model. One must justify why this score (which is intuitive, based on blinking rate etc.) will work better than another similar score. 
+</p>
+</div>
+</div>
+<div id="outline-container-org26de1a8" class="outline-3">
+<h3 id="org26de1a8"><span class="section-number-3">13.2.</span> Significance</h3>
+<div class="outline-text-3" id="text-13-2">
+<p>
+The paper does have a good emphasis on integrating machine learning models into an existing framework and the importance of iterating on results. Many papers outline a "one-and-done" approach. This could be an example for other HCI papers to use a continuously evolving project. However the paper is very weak in many areas that would give it substance. This means that the significance is completely gone.
+</p>
+</div>
+</div>
+<div id="outline-container-org66c4244" class="outline-3">
+<h3 id="org66c4244"><span class="section-number-3">13.3.</span> Research Quality</h3>
+<div class="outline-text-3" id="text-13-3">
+<p>
+The research quality would be easier to comment on if the presentation was clearer. The description of the models are based on "experts conducting assessments" with no quotations or action-able steps to implement the same said assessments. This creates an irreproducible paper with no code and no dataset. The metrics displayed are incorrect, done with no confidence intervals, incomplete (No AUROC, no unweighted average recall), and done on a small sample size (less than 30 people).
+</p>
+</div>
+</div>
+<div id="outline-container-org8d21fe9" class="outline-3">
+<h3 id="org8d21fe9"><span class="section-number-3">13.4.</span> Previous Work</h3>
+<div class="outline-text-3" id="text-13-4">
+<p>
+There is an enormous literature on machine learning bases ASD diagnosis. For some reason the paper cites sources much less frequently after the first paragraph of its introduction. The paper does no service to itself to display its own original insight or how the previous papers cited contribute to the formation of the current work. The paper needs to compare apples to apples. The previous work cited do not use much of the same data or methodology. Hence, the placement of how much this work builds on those are unclear.
+</p>
+</div>
+</div>
+<div id="outline-container-org6f508ea" class="outline-3">
+<h3 id="org6f508ea"><span class="section-number-3">13.5.</span> Presentation Clarity</h3>
+<div class="outline-text-3" id="text-13-5">
+<p>
+Almost every sentence has an issue, due to its placement within the paper or in its content. Critiquing every sentence would be overboard. We may start with the abstract and hopefully the point is made.
+</p>
+
+<p>
+The first sentence states, "ASD is a condition impacting a persons ability to perceive and socialize with others.". We note the improper definition of ASD, what does "perceive" mean in this context. Use the DSM-5 as the main source when detailing psychiatric disorders.
+</p>
+
+<p>
+Next, "Those with Autism often experience difficulties in communication and social interaction". This sentence has almost the same content as the first. It would be wise to remove it. The author also "hedges" using the word "often". 
+</p>
+
+<p>
+Then, "we have proposed an interactive computational model that measures behavior quantitatively.". This is far too vague and could use more specific terms commonly used in machine learning papers. Quantification of behavior could mean, 1. a form of feature engineering from images, 2. new score related to survey results from psychiatrists.
+</p>
+
+<p>
+"Our trained computational model showed an accuracy, sensitivity, specificity&#x2026; in the graphic and spatial paradigms". First, accuracy should be between sensitivity and specificity. I believe there is an error with the numbers reported. Second, there is a lot of missing important information. I would like to see more metrics (AUROC, F1, F2) along with the confidence intervals. The dataset size and class size should be apparent. We are also implicitly assuming that a person either has or does not have autism (if we are using binary classification metrics) while the disorder is a spectrum. Make the binarization method clear. "Graphic" and "Spatial" paradigms are nonstandard terms. Define or substitute another word in place of those.
+</p>
+
+<p>
+"This confirms the feasibility and effectiveness of our computational model". Stay humble, this confirms nothing. Testimony, stress testing in psychiatry wards, and long term effects will actually confirm effectiveness.
+</p>
+
+<p>
+Finally, "In the future, the interactive computational model &#x2026; can become an effective auxiliary to the mainstream assessment mode for autism screening.". There is no justification for this claim. One can say, "We hope" or "With growing model effectiveness, &#x2026;". This claim has no substance or actionable insight into how one can actually use the method from the paper.
+</p>
+
+<p>
+We also note that this paper seems to be written in part by an AI. The first paragraph of the introduction has red flags according to <a href="https://copyleaks.com/ai-content-detector">https://copyleaks.com/ai-content-detector</a>. This creates grounds for rejection according to the submission rules for CHI. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org26dcb6c" class="outline-2">
+<h2 id="org26dcb6c"><span class="section-number-2">14.</span> ITM</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Title:
+Fair Active Machine Learning
+</p>
+
+<p>
+Abstract:
+With recent advances in machine learning, many high stakes tasks are being done algorithmically. One wishes for the models deployed to not propagate discrimination and biases. Fair active learning has been proposed to reduce the cost and challenge of collecting an accurately labeled dataset and to build classifiers which behave fairly.
+</p>
+
+<p>
+"Fairness" is a catch all term describing the plethora of fairness metrics like "Statistical Parity", "Equalized Odds", and "Predictive Parity". "Active Learning" is an optimization problem to create a curious machine learning model, capable of requesting data to be labeled. Fair active learning is an approach which combines the two notions, creating a model subject to a budget on dataset size which maximizes fairness.
+</p>
+</div>
+<div id="outline-container-org666ff95" class="outline-3">
+<h3 id="org666ff95"><span class="section-number-3">14.1.</span> Fairness in Machine Learning</h3>
+</div>
+</div>
+<div id="outline-container-org1e961a5" class="outline-2">
+<h2 id="org1e961a5"><span class="section-number-2">15.</span> 1-1s</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-orge854008" class="outline-3">
+<h3 id="orge854008"><span class="section-number-3">15.1.</span> Wed Feb 28 2024</h3>
+<div class="outline-text-3" id="text-15-1">
+</div>
+<div id="outline-container-org146f92c" class="outline-4">
+<h4 id="org146f92c"><span class="section-number-4">15.1.1.</span> Fair Active Learning</h4>
+<div class="outline-text-4" id="text-15-1-1">
+<p>
+There are 6 approaches to FAL in the paper by Anahideh: <a href="https://arxiv.org/pdf/2001.01796.pdf">https://arxiv.org/pdf/2001.01796.pdf</a>
+</p>
+
+<p>
+The 6 approaches are given by a pair of choices
+</p>
+
+<ol class="org-ol">
+<li>Expected Unfairness Reduction
+<ol class="org-ol">
+<li>Model agnostic expected value over all labels</li>
+
+<li>Using covariance as a proxy for fairness in General Linear Models (Efficient but only for simple models)</li>
+</ol></li>
+
+<li>Accuracy Fairness Optimization
+<ol class="org-ol">
+<li>\( \alpha \)-Aggregate: Select a hyperparameter \( \alpha \in [0,1] \) which acts like a regularizing term</li>
+
+<li>FAL Nested: From a selection of high entropy points, we choose the one which maximizes unfairness reduction</li>
+
+<li>FAL Nested Append: If a point selected by FAL nested actually reduces the unfairness, then duplicate the point and add it into the labelled pool. Fit on the larger dataset (has more points than the budget actually allows).</li>
+</ol></li>
+</ol>
+
+
+<p>
+Here we compare these 6 approaches to active learning and random labeling.
+</p>
+</div>
+</div>
+<div id="outline-container-orge729676" class="outline-4">
+<h4 id="orge729676"><span class="section-number-4">15.1.2.</span> <span class="todo TODO">TODO</span> Measure Fairness / More metrics than Accuracy</h4>
+</div>
+
+<div id="outline-container-orge8f6b19" class="outline-4">
+<h4 id="orge8f6b19"><span class="section-number-4">15.1.3.</span> <span class="todo TODO">TODO</span> Estimate the inflection point</h4>
+</div>
+
+<div id="outline-container-org8dec011" class="outline-4">
+<h4 id="org8dec011"><span class="section-number-4">15.1.4.</span> <span class="todo TODO">TODO</span> Do Isotonic Regression of Values</h4>
+</div>
+
+<div id="outline-container-orgb5c73a7" class="outline-4">
+<h4 id="orgb5c73a7"><span class="section-number-4">15.1.5.</span> <span class="todo TODO">TODO</span> Bootstrap the curves by calculating the curves 50 times</h4>
+</div>
+
+<div id="outline-container-org0096301" class="outline-4">
+<h4 id="org0096301"><span class="section-number-4">15.1.6.</span> <span class="todo TODO">TODO</span> Compare Known calibrated models (Baysian NN / Logistic Regression) to uncalibrated models (SVM, Random Forest, XGBoost)</h4>
+</div>
+
+<div id="outline-container-org67b6c56" class="outline-4">
+<h4 id="org67b6c56"><span class="section-number-4">15.1.7.</span> <span class="todo TODO">TODO</span> Compare calibration methods (Platt, Isotonic) to see if it increases accuracy</h4>
+</div>
+
+<div id="outline-container-orga88d970" class="outline-4">
+<h4 id="orga88d970"><span class="section-number-4">15.1.8.</span> <span class="todo TODO">TODO</span> Convex Combination of Fairness Metrics</h4>
+</div>
+</div>
+<div id="outline-container-org7979ebe" class="outline-3">
+<h3 id="org7979ebe"><span class="section-number-3">15.2.</span> Wed Apr 10</h3>
+<div class="outline-text-3" id="text-15-2">
+<p>
+Still need to do FAL code updates from last time:
+</p>
+</div>
+<div id="outline-container-org0e89519" class="outline-4">
+<h4 id="org0e89519"><span class="section-number-4">15.2.1.</span> Fair Active Learning</h4>
+<div class="outline-text-4" id="text-15-2-1">
+<p>
+There are 6 approaches to FAL in the paper by Anahideh: <a href="https://arxiv.org/pdf/2001.01796.pdf">https://arxiv.org/pdf/2001.01796.pdf</a>
+</p>
+
+<p>
+The 6 approaches are given by a pair of choices
+</p>
+
+<ol class="org-ol">
+<li>Expected Unfairness Reduction
+<ol class="org-ol">
+<li>Model agnostic expected value over all labels</li>
+
+<li>Using covariance as a proxy for fairness in General Linear Models (Efficient but only for simple models)</li>
+</ol></li>
+
+<li>Accuracy Fairness Optimization
+<ol class="org-ol">
+<li>\( \alpha \)-Aggregate: Select a hyperparameter \( \alpha \in [0,1] \) which acts like a regularizing term</li>
+
+<li>FAL Nested: From a selection of high entropy points, we choose the one which maximizes unfairness reduction</li>
+
+<li>FAL Nested Append: If a point selected by FAL nested actually reduces the unfairness, then duplicate the point and add it into the labelled pool. Fit on the larger dataset (has more points than the budget actually allows).</li>
+</ol></li>
+</ol>
+
+
+<p>
+Here we compare these 6 approaches to active learning and random labeling.
+</p>
+</div>
+</div>
+<div id="outline-container-org66d228c" class="outline-4">
+<h4 id="org66d228c"><span class="section-number-4">15.2.2.</span> <span class="todo TODO">TODO</span> Measure Fairness / More metrics than Accuracy</h4>
+</div>
+
+<div id="outline-container-orgc4b8c36" class="outline-4">
+<h4 id="orgc4b8c36"><span class="section-number-4">15.2.3.</span> <span class="todo TODO">TODO</span> Estimate the inflection point</h4>
+</div>
+
+<div id="outline-container-org02bca91" class="outline-4">
+<h4 id="org02bca91"><span class="section-number-4">15.2.4.</span> <span class="todo TODO">TODO</span> Do Isotonic Regression of Values</h4>
+</div>
+
+<div id="outline-container-orgb56bc6f" class="outline-4">
+<h4 id="orgb56bc6f"><span class="section-number-4">15.2.5.</span> <span class="todo TODO">TODO</span> Bootstrap the curves by calculating the curves 50 times</h4>
+</div>
+
+<div id="outline-container-org6c4387e" class="outline-4">
+<h4 id="org6c4387e"><span class="section-number-4">15.2.6.</span> <span class="todo TODO">TODO</span> Compare Known calibrated models (Baysian NN / Logistic Regression) to uncalibrated models (SVM, Random Forest, XGBoost)</h4>
+</div>
+
+<div id="outline-container-org4715767" class="outline-4">
+<h4 id="org4715767"><span class="section-number-4">15.2.7.</span> <span class="todo TODO">TODO</span> Compare calibration methods (Platt, Isotonic) to see if it increases accuracy</h4>
+</div>
+
+<div id="outline-container-org9b18086" class="outline-4">
+<h4 id="org9b18086"><span class="section-number-4">15.2.8.</span> <span class="todo TODO">TODO</span> Convex Combination of Fairness Metrics</h4>
+</div>
+
+
+<div id="outline-container-org1b4aef1" class="outline-4">
+<h4 id="org1b4aef1"><span class="section-number-4">15.2.9.</span> New Career Path</h4>
+</div>
+
+<div id="outline-container-org0c3ea4b" class="outline-4">
+<h4 id="org0c3ea4b"><span class="section-number-4">15.2.10.</span> Understanding Pay trajectories</h4>
+</div>
+
+<div id="outline-container-org8690c6e" class="outline-4">
+<h4 id="org8690c6e"><span class="section-number-4">15.2.11.</span> Location based Fairness and Regression Fairness</h4>
+</div>
+
+<div id="outline-container-org6192b96" class="outline-4">
+<h4 id="org6192b96"><span class="section-number-4">15.2.12.</span> Fair Active Simulation</h4>
+</div>
+
+<div id="outline-container-orgb19bbc3" class="outline-4">
+<h4 id="orgb19bbc3"><span class="section-number-4">15.2.13.</span> New Research ideas vs Review Paper</h4>
+</div>
+</div>
+<div id="outline-container-orga011a79" class="outline-3">
+<h3 id="orga011a79"><span class="section-number-3">15.3.</span> New Paper Ideas</h3>
+<div class="outline-text-3" id="text-15-3">
+<ol class="org-ol">
+<li>Compas</li>
+
+<li>AoU</li>
+
+<li>Applications to AoU look for large dataset and expensive tests</li>
+</ol>
+</div>
+<div id="outline-container-orgaeaff6c" class="outline-4">
+<h4 id="orgaeaff6c"><span class="section-number-4">15.3.1.</span> Calibration -&gt; More Fairness</h4>
+</div>
+</div>
+<div id="outline-container-orgdbb5da2" class="outline-3">
+<h3 id="orgdbb5da2"><span class="section-number-3">15.4.</span> Wed Jun 24</h3>
+<div class="outline-text-3" id="text-15-4">
+<p>
+Added to the review paper
+</p>
+
+<p>
+Searched papers from Science Direct, IEEE, Wiley Online Library, Arxiv
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org02837b8" class="outline-2">
+<h2 id="org02837b8"><span class="section-number-2">16.</span> Zerin Code</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Parkinson's prediction model is performing better on underrepresented groups.
+</p>
+</div>
+</div>
+<div id="outline-container-org8a7044c" class="outline-2">
+<h2 id="org8a7044c"><span class="section-number-2">17.</span> Differentiable Fairness</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+In Fairret: A Framework for Differentiable Fairness Regularization Terms, Buyl et al. introduces fairness evaluation within Pytorch, an autodiff environment. This allows users to incorporate fairness metrics within the loss function within a model during training and evaluating fairness metrics using probabilities.
+</p>
+
+<p>
+Previously, we have been using the AIF360 which computes fairness metrics using predictions rather than prediction probabilities. We will use <code>statistical_parity_difference</code> as an example.
+</p>
+
+<p>
+The idea behind <code>statistical_parity_difference</code> is to look at the positive rate of a classifier. This is important in credit loans and college entrances, where some believe that males and females should have an equal outcome of being selected. A system has some measured unfairness if
+</p>
+
+<p>
+\[ \text{POSITIVE RATE}_{\text{FEMALES}} - \text{POSITIVE RATE}_{\text{MALES}} \]
+</p>
+
+<p>
+AIF360 will perform the calculation by:
+</p>
+
+<p>
+\[ \frac{\text{POSITIVE}_{\text{FEMALES}}}{\text{NUM\_FEMALES}} - \frac{\text{POSITIVE}_{\text{MALES}}}{\text{NUM\_MALES}} \]
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python">
+</pre>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

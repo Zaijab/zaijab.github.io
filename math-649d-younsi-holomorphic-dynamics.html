@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH 649D Younsi Holomorphic Dynamics</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MATH 649D Younsi Holomorphic Dynamics</h1>
+<p>
+Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+
+<p>
+<a href="file:///home/zjabbar/holomorphic_dynamics/">file:///home/zjabbar/holomorphic_dynamics/</a>
+</p>
+<div id="outline-container-orgc72f92e" class="outline-2">
+<h2 id="orgc72f92e"><span class="section-number-2">1.</span> <span class="done DONE">DONE</span> Homework 1</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgc845ddb" class="outline-3">
+<h3 id="orgc845ddb"><span class="section-number-3">1.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Let \( \phi(z) := z + 1/z \).
+</p>
+</div>
+<div id="outline-container-org2ef1475" class="outline-4">
+<h4 id="org2ef1475"><span class="section-number-4">1.1.1.</span> Holomorphic</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Because \( z \) is holomorphic on \( \mathbb{C} \) and \( 1/z \) is holomorphic on \( \mathbb{C} - \left\{ 0 \right\} \) then \( \phi \) is holomorphic on \( \mathbb{C} \cap (\mathbb{C} - \left\{ 0 \right\}) = \mathbb{C} - \left\{ 0 \right\} \subset \hat{\mathbb{C}} - \overline{\mathbb{D}} \)
+</p>
+</div>
+</div>
+<div id="outline-container-orgca15eb4" class="outline-4">
+<h4 id="orgca15eb4"><span class="section-number-4">1.1.2.</span> Non-vanishing Derivative</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+We may find the points in which the derivative vanish,
+</p>
+
+<p>
+\[ \phi'(z) = 1 - 1/z^{2} = 0 \implies z^{2} = 1 \implies z = \pm 1 \]
+</p>
+
+<p>
+Hence \( \phi' \) is nonvanishing when the domain is \( \hat{\mathbb{C}} - \overline{\mathbb{D}} \).
+</p>
+</div>
+</div>
+<div id="outline-container-org6882ea3" class="outline-4">
+<h4 id="org6882ea3"><span class="section-number-4">1.1.3.</span> Injective</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+The inverse,
+</p>
+
+<p>
+\[ \phi(z) = z + 1/z \implies z \phi(z) = z^{2} + 1 \implies 0 = z^{2} - z \phi(z) + 1 \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ z = \frac{\phi(z) \pm \sqrt{\phi(z)^{2} - 4}}{2} \]
+</p>
+
+<p>
+So for every point in the image (except for \( \pm 2 \)) we have two such \( z \) which maps to it. This tells us that the map is surjective. 
+</p>
+
+<p>
+However, given the domain \( \hat{\mathbb{C}} - \overline{\mathbb{D}} \) for any two distinct \( z_{1} \) and \( z_{2} \), we have the inequalities
+</p>
+
+<p>
+\[ \left| \frac{1}{z_{1}} - \frac{1}{z_{2}} \right| = \frac{|z_{2} - z_{1}|}{|z_{1}||z_{2}|} < |z_{2} - z_{1}| \]
+</p>
+
+<p>
+Which tells us
+</p>
+
+<p>
+\[ \frac{1}{z_{1}} - \frac{1}{z_{2}} \neq z_{2} - z_{1} \iff z_{1} + \frac{1}{z_{1}} \neq z_{2} + \frac{1}{z_{2}}  \]
+</p>
+
+<p>
+In other words, \( \phi(z) \) is injective (not double covered).
+</p>
+</div>
+</div>
+<div id="outline-container-orgabdb42d" class="outline-4">
+<h4 id="orgabdb42d"><span class="section-number-4">1.1.4.</span> Image</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+We can look at the real and imaginary parts of \( \phi(z) \) given \( z = re^{i\theta} \).
+</p>
+
+<p>
+\[ u = u + iv = r e^{i\theta} + \frac{1}{r} e^{-i\theta} = \left( r + \frac{1}{r} \right) \cos(\theta) + \left( r - \frac{1}{r} \right) i \sin(\theta) \]
+</p>
+
+<p>
+Which tells us that circles are mapped onto ellipses. The only non ellipse is when \( r = 1 \) which yields the line segment \( [-2,2] \). Such an \( r \) is not in our domain, hence the image is \( \hat{\mathbb{C}} - [-2,2] \).
+</p>
+</div>
+</div>
+<div id="outline-container-org1a57d74" class="outline-4">
+<h4 id="org1a57d74"><span class="section-number-4">1.1.5.</span> \( P(z) := z^{2} - 2 \)</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+We note that \( P \) is \( \phi \)-conjugate to \( z^{2} \),
+</p>
+
+\begin{align}
+P(\phi(z))
+&= \left( z + \frac{1}{z} \right)^{2} - 2 \\
+&= z^{2} + 2 + \frac{1}{z^{2}} - 2 \\
+&= z^{2} + \frac{1}{z^{2}} \\
+&= \phi(z^{2})
+\end{align}
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ I_{P} = \phi(I_{z^{2}}) = \phi(\hat{\mathbb{C}} - \overline{\mathbb{D}}) = \hat{\mathbb{C}} - [-2,2] \]
+</p>
+
+<p>
+So,
+</p>
+
+<p>
+\[ K_{P} = [-2,2], J_{P} = \partial K_{P} = [-2,2] \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c09701" class="outline-3">
+<h3 id="org3c09701"><span class="section-number-3">1.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Let \( \{ V_{n} \}_{n \in \mathbb{N}} \) be an increasing sequence of simply connected domains in \( \hat{\mathbb{C}} \)  all containing \( \infty \). Denote \( V = \bigcup_{n} V_{n} \).
+</p>
+</div>
+<div id="outline-container-org7be5f77" class="outline-4">
+<h4 id="org7be5f77"><span class="section-number-4">1.2.1.</span> Proof of Connectedness of the Union</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Consider a two set disjoint open cover, \( V \subseteq U_{1} \bigcup U_{2} \).
+</p>
+
+<p>
+Because each \( V_{n} \) is connected, they must be fully contained in one of the \( U_{i} \)'s.
+Thus, \( V_{0} \subseteq U_{\lambda} \).
+Consider any other \( j \in \mathbb{N} \). \( V_{j} \subseteq U_{i} \).
+By disjointness and using the increasing sequence, we have that \( V_{0} \subseteq V_{j} \subseteq U_{\lambda} \).
+</p>
+
+<p>
+Hence, for all \( n \in \mathbb{N} \), \( V_{n} \subseteq U_{\lambda} \) therefore the other open set is empty and the cover is not a disconnection.
+</p>
+</div>
+</div>
+<div id="outline-container-orga1e0a05" class="outline-4">
+<h4 id="orga1e0a05"><span class="section-number-4">1.2.2.</span> Proof of Connectedness of the Intersection</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+The complement of \( \bigcup V_{n} \) is 
+</p>
+
+<p>
+\[ \hat{\mathbb{C}} - V = \hat{\mathbb{C}} - \left( \bigcup_{n \in \mathbb{N}} V_{n} \right) = \bigcap_{n \in \mathbb{N}} \left( \hat{\mathbb{C}} - V_{n} \right) = \bigcap_{n \in \mathbb{N}} W_{n} \]
+</p>
+
+<p>
+Where
+</p>
+
+<p>
+\[ W_{n} = \hat{\mathbb{C}} - V_{n} \]
+</p>
+
+<p>
+is a decreasing sequence of compact sets (because \( V_{n} \) contains \( \infty \)). If \( W_{n} = \emptyset \) for some \( n \), then the theorem holds. Consider \( W_{n} \neq \emptyset \) for all \( n \), and suppose there is a disconnection of compact neighborhoods \( K_{1} \subset U_{1} \) and \( K_{2} \subset U_{2} \) of the intersection,
+</p>
+
+<p>
+\[ \bigcap_{n \in \mathbb{N}} W_{n} \subseteq K_{1} \bigcup K_{2} \subset U_{1} \bigcup U_{2} \]
+</p>
+
+<p>
+Where the intersection has points in both \( K_{1} \) and \( K_{2} \).  
+</p>
+
+<p>
+Because this is a sequence of sets, there is some \( i \) such that 
+\[  W_{i} \subseteq K_{1} \bigcup K_{2} \subset U_{1} \bigcup U_{2} \]
+</p>
+
+<p>
+then by Cantor's Intersection theorem we have that the intersection is nonempty. Hence we can partition \( W_{i} = (W_{i} \cap U_{1}) \bigcup (W_{i} \cap U_{2}) \) which is impossible by connectedness of \( W_{i} \).  
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5521f6e" class="outline-3">
+<h3 id="org5521f6e"><span class="section-number-3">1.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+By containment,
+</p>
+
+<p>
+if \( P^{m}(z) \to \infty \) then every subsequence converges to \( \infty \)
+</p>
+
+<p>
+If \( (P^{m})^{n}(z) \to \infty \) then then there is an \( N \) such that \( (P^{m})^{N}(z) \in V_{R} \). Hence for any \( (P)^{n} \) will also tend to infinity. This shows \( I_{P} = I_{Q} \), taking complements shows \( K_{P} = K_{Q} \).  
+</p>
+</div>
+</div>
+<div id="outline-container-org9bc3f7d" class="outline-3">
+<h3 id="org9bc3f7d"><span class="section-number-3">1.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Let \( z \in J_{P} \), then any neighborhood, \( U_{z} \), intersects with the basin of infinity. Hence, there is a point \( i \in U_{z} \) such that \( P^{n}(i) \to \infty \). This contradicts uniform convergence.
+</p>
+
+<p>
+\[ |P^{n_{k}}| = |P^{n_{k}}(x) - \hat{P}(x) + \hat{P}(x)| \leq | \hat{P}(x) | + 1 \]
+</p>
+
+<p>
+Now suppose that for any neighborhood of \( z \) the family of iterates \( P^{n} \) is not normal. By Montel (Normal iff locally uniformly bounded), we see that the family is unbounded on every neighborhood. This means that every neighborhood intersects with the basin of infinity. Because the sequence does not converge to \( \infty \) we note that there is some element which is bounded, hence belonging to the filled Julia set \( K_{P} \). Thus \( z \in J_{P} \).   
+</p>
+</div>
+</div>
+<div id="outline-container-org9b4bc12" class="outline-3">
+<h3 id="org9b4bc12"><span class="section-number-3">1.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-orgf91cb8a" class="outline-4">
+<h4 id="orgf91cb8a"><span class="section-number-4">1.5.1.</span> A</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+Let \( z \in \mathbb{C} \) be a superattracting or attracting periodic point of \( P \).
+</p>
+
+<p>
+Then there is an iteration \( P^{m} \) such that the periodic point is a fixed point. By hypothesis \( |(P^{m})'| < 1 \). By analyticity we have that \( |(P^{m})'| \) is strictly bounded by \( 1 \) on a neighborhood of \( z \). This means that the entire neighborhoods iterates tend to the constant function \( z \). The iterates are thus bounded and so the neighborhood belongs to the filled Julia set. In other words, \( z \in \interior(K_{P}) \).
+</p>
+</div>
+</div>
+<div id="outline-container-org1d74939" class="outline-4">
+<h4 id="org1d74939"><span class="section-number-4">1.5.2.</span> B</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+Let \( z \in \mathbb{C} \) be a repelling periodic point of \( P \).
+Then \( P^{m}(z) \) is bounded as it returns to itself. But because the derivative satisfies \( |(P^{m})'| = \lambda^{n} \), the derivatives are unbounded and cannot converge uniformly to a holomorphic map. This implies that the sequence \( P^{m} \) cannot converge, telling us that the family is not normal. Hence \( z \in J_{P} \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org90abaf7" class="outline-3">
+<h3 id="org90abaf7"><span class="section-number-3">1.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org4bf2068" class="outline-4">
+<h4 id="org4bf2068"><span class="section-number-4">1.6.1.</span> A</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+If \( \mathbb{C} - \bigcup_{n = N}^{\infty} P^{n}(U) \) contains two or more points, then by Montel we see that \( P^{n} \) is a normal family on a subset \( U \) which intersects the Julia set. Hence, the union is the whole of \( \mathbb{C} \) except possibly one point.
+</p>
+</div>
+</div>
+<div id="outline-container-org2a85aa0" class="outline-4">
+<h4 id="org2a85aa0"><span class="section-number-4">1.6.2.</span> B</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<p>
+We note that the exceptional point, \( \left\{ a \right\} \)  is an completely invariant set. The only solution to \( P(z) = a \) is \( z = a \). Hence \( P(z) - a = c(z - a)^{n} \). Its derivative is \( cn (z - a)^{n-1} \) which is also zero at \( z = a \) as the degree is \( \geq 2 \). Hence the exceptional point is a super attracting point, therefore not in \( J_{P} \).      
+</p>
+</div>
+</div>
+<div id="outline-container-org8b369dc" class="outline-4">
+<h4 id="org8b369dc"><span class="section-number-4">1.6.3.</span> C</h4>
+<div class="outline-text-4" id="text-1-6-3">
+<p>
+Consider some \( z \in J_{P}\) and a neighborhood intersecting \( J_{P} \),  \( U \).
+</p>
+
+<p>
+Because \( z \) is not exceptional, we see that \( z \in \bigcup_{n = 1}^{\infty} P^{n}(U) \). So, \( z \in P^{m}(U) \) for some \( m \). In other words, \( P^{-m}(\left\{ z \right\}) \in U \).   Hence \( U \cap \bigcup_{n = 1}^{\infty} P^{n}(U_{z}) \neq 0 \) so \( J_{P} \subseteq \overline{\bigcup_{n} P^{-n}(\left\{ z \right\})} \).
+</p>
+
+<p>
+Because \( J_{P} \) is both closed and completely invariant, we know that starting from within \( J_{P} \) and taking preimages keeps us in \( J_{P} \). Taking closures will also keep us in \( J_{P} \). Therefore, \( J_{P} = \overline{\bigcup_{n} P^{-n}(\left\{ z \right\})} \).      
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3604b1b" class="outline-3">
+<h3 id="org3604b1b"><span class="section-number-3">1.7.</span> Problem 7</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Let \( P(z) = z^{2} + 2i z + b \), \( \phi(z) = z + i \). Then \( \phi^{-1}(z) = z - i \). 
+</p>
+
+
+\begin{align}
+\phi(P(\phi^{-1}(z)))
+&= ((z - i)^{2} + 2i (z - i) + b) + i \\
+&= z^{2} + b + 1 + i
+\end{align}
+
+<p>
+We know that \( K_{P} \) is connected if all of the critical points of \( P \) have bounded orbit. Because the critical points of \( \phi(P(\phi^{-1}(z))) \) is zero then we deduce that \( K_{\phi(P(\phi^{-1}(z)))} \) is connected if \( \left\{ \phi(P(\phi^{-1}(0)))^{n} \right\} \) is bounded. This is precisely the statement that \( b + 1 + i \in M \). Now we note that our polynomial \( P \) in consideration is a conformally conjugate to \( \phi(P(\phi^{-1}(z))) \) hence \( K_{P} \) is homeomorphic to \( K_{\phi(P(\phi^{-1}(z)))} \). 
+</p>
+</div>
+</div>
+<div id="outline-container-org52c8b69" class="outline-3">
+<h3 id="org52c8b69"><span class="section-number-3">1.8.</span> Problem 8</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+By induction, we show that all of the iterates are bounded (by \( 1/2 \)).  
+</p>
+
+<p>
+\[ P_{c}(0) = c \implies |P_{c}(0)| = |c| < 1/4 \leq 1/2 \]
+</p>
+
+\begin{align}
+\vert P^{n+1}_{c}(0) \vert
+&= \vert P_{c}(P^{n}_{c}(0)) \vert \\
+&= \vert (P^{n}_{c}(0))^{2} + c \vert \\
+&\leq \vert (P^{n}_{c}(0))^{2} \vert + \vert c \vert \\
+&\leq \frac{1}{4} + \frac{1}{4}\\
+&= \frac{1}{2}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org309da68" class="outline-3">
+<h3 id="org309da68"><span class="section-number-3">1.9.</span> Problem 9</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Let \( X \) be a topological space with \( g \colon X \to X \) a continuous surjective open map.
+</p>
+
+<ul class="org-ul">
+<li>A</li>
+</ul>
+
+
+<ul class="org-ul">
+<li>B</li>
+</ul>
+</div>
+<div id="outline-container-orgaf9bd50" class="outline-4">
+<h4 id="orgaf9bd50"><span class="section-number-4">1.9.1.</span> A</h4>
+<div class="outline-text-4" id="text-1-9-1">
+<p>
+Let \( E \) be backward invariant.
+</p>
+
+\begin{align}
+g(E)
+&= g(g^{-1}(E)) & \quad & \text{$g^{-1}(E) = E$} \\
+&= E & \quad & \text{$g$ Surjective}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org25b5b8e" class="outline-4">
+<h4 id="org25b5b8e"><span class="section-number-4">1.9.2.</span> B</h4>
+<div class="outline-text-4" id="text-1-9-2">
+\begin{align}
+g^{-1}(X \setminus E)
+&= g^{-1}(X) \setminus g^{-1}(E) & \quad &\text{Preimage of Set Difference} \\
+&= g^{-1}(X) \setminus E & \quad &\text{$E$ Completely Invariant} \\
+&= X \setminus E & \quad &\text{Preimage of Range}
+\end{align}
+
+\begin{align}
+g^{-1}(\interior E)
+&\subseteq \interior g^{-1}(E) &\quad &\text{$g$ Continuous} \\
+&= \interior E &\quad &\text{$E$ Completely Invariant}
+\end{align}
+
+<p>
+We also have that
+</p>
+
+<p>
+\[ g(\interior(E)) \subset g(E) \subset E \]
+As \( g \) is open and \( E \) is completely invariant.
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ \interior(E) \subset g^{-1} (g(E)) \subset g^{-1}(E)  \]
+</p>
+
+<p>
+We know that \( \overline{E} = X - \interior(X - E) \) hence \( \overline{E} \) is completely invariant.
+</p>
+
+<p>
+From this we know that \( \partial E = \overline{E} \cap \overline{(X - E)} \) is completely invariant as well. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6dffc99" class="outline-3">
+<h3 id="org6dffc99"><span class="section-number-3">1.10.</span> Problem 10</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+Let \( \left\{ f_{n} \right\} \) be a normal family of holomorphic functions on \( \Omega \) and \( f(z) = \lim_{n \to \infty} f_{n}(z) \) exists pointwise on \( E \subset \Omega \) which has an accumulation point in \( \Omega \).
+</p>
+
+<p>
+We will use the following characterization of limits,
+</p>
+
+<p>
+\( f_{n} \to f \) if and only if every subsequence \( f_{n_{k}} \) has a further subsequence \( f_{n_{k_{j}}} \to f \).
+</p>
+
+<p>
+Consider a subsequence \( f_{n_{k}} \). The subsequence forms a normal family by using the same local bound as the larger family \( f_{n} \). Hence, there is a subsequence with limit \( f_{n_{k_{j}}} \to g_{n_{k}} \). For any \( z \in E \) we can calculate the limits 
+</p>
+
+\begin{align}
+f(z)
+&= \lim_{n \to \infty} f_{n}(z) \\
+&= \lim_{k \to \infty} f_{n_{k}}(z) \\
+&= \lim_{j \to \infty} f_{n_{k_{j}}}(z) \\
+&= g_{n_{k}}(z)
+\end{align}
+
+<p>
+Because \( E \) contains an accumulation point, we note that \( f(z) = g_{n_{k}}(z) \) for all \( z \in \Omega \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgada1efe" class="outline-2">
+<h2 id="orgada1efe"><span class="section-number-2">2.</span> <span class="done DONE">DONE</span> Homework 2</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Let \( R \) denote a rational map of degree \( k \geq 2 \).  
+</p>
+</div>
+<div id="outline-container-org08a28f5" class="outline-3">
+<h3 id="org08a28f5"><span class="section-number-3">2.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Suppose that
+</p>
+
+<p>
+\[ R^{n} \xrightarrow{\text{uniformly}} g \]
+</p>
+
+<p>
+for all compact subsets of some domain \( \Omega \subset \rsphere \).
+</p>
+
+<p>
+Recall that under the chordal metric, \( R \) is Lipschitz hence uniformly continuous. So \( R^{n + 1} \xrightarrow{\text{uniformly}} R g \). However, \( R^{n + 1} \) is the same sequence as \( R^{n} \) shifted by \( 1 \). Thus, the limits are equal so \( Rg = g \). Hence, we have shown that \( g \) is a fixed function for all \( z \in \Omega \) and is holomorphic (hence continuous). Thus, \( g \) is a constant.    
+</p>
+</div>
+</div>
+<div id="outline-container-org0c65126" class="outline-3">
+<h3 id="org0c65126"><span class="section-number-3">2.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Let \( U \) be a Fatou component (a connected component of the Fatou set). We will show that \( R(U) \) is a clopen set (hence another Fatou component). First, we know that \( R(U) \) is open because \( R \) is an open map.
+</p>
+
+<p>
+We know that \( \overline{U} \) is a compact subset of \( \rsphere \) (being a closed subset of a compact set). Therefore, \( R(\overline{U}) \) is compact, hence closed.
+</p>
+
+<p>
+By a topological argument we have the subset relations:
+</p>
+
+\begin{align*}
+\partial U
+&\subseteq \partial F &\quad& \rsphere \text{ locally connected} \\
+&\subseteq J_{R} &&\text{$F$ open}
+\end{align*}
+
+<p>
+Therefore, by properties of images and complete invariance of the Julia set we have,
+</p>
+
+<p>
+\[ \partial R(U) \subseteq R(\partial U) \subseteq R(J_{R}) \subseteq J_{R} \]
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ \overline{R(U)} = R(U) \bigcup \partial R(U) \]
+</p>
+
+<p>
+\[ R(\overline{U}) = R(U \cup \partial U) = R(U) \cup R( \partial U ) \]
+</p>
+
+<p>
+Which tells us that,
+</p>
+
+<p>
+\[ R(U) = F_{R} \cap R(\overline{U}) \]
+</p>
+
+<p>
+So \( R(U) \) is a closed subset of the Fatou set \( F_{R} \). Thus, a Fatou component.  
+</p>
+</div>
+</div>
+<div id="outline-container-org1b3b62d" class="outline-3">
+<h3 id="org1b3b62d"><span class="section-number-3">2.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Let \( X \) be a topological space, \( f \colon X \to X \) be a continuous, surjective, and open map. Suppose that \( X \) has only finitely many connected components \( X_{1}, \ldots, X_{n} \).
+</p>
+
+<p>
+We know that \( X_{i} \) is connected for all \( i \), hence, \( f(X_{i}) \subseteq X_{j} \). Because \( f \) is surjective we then have \( f(X_{i}) = X_{j} \). This tells us that we have a permutation,
+</p>
+
+<p>
+\[ \sigma \colon [1 .. n] \to [1 .. n] \colon i \mapsto j \]
+</p>
+
+<p>
+Where \( [a .. b] = [a, b] \cap \mathbb{Z} \) is a slick computer science notation to write down the integers between \( a \) and \( b \).
+</p>
+
+<p>
+Any permutation necessarily has finite order, hence,
+</p>
+
+<p>
+\[ \exists m \in \mathbb{N} \colon \forall j \in [1 .. n] \colon \sigma^{m}(j) = j \]
+</p>
+
+<p>
+Which tells us that \( f^{m}(X_{j}) = X_{j} \). 
+</p>
+</div>
+</div>
+<div id="outline-container-org01a850e" class="outline-3">
+<h3 id="org01a850e"><span class="section-number-3">2.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Suppose that \( \varphi \circ R^{k} \circ \varphi^{-1} =  P \) for some polynomial \( P \). 
+</p>
+</div>
+<div id="outline-container-org8e2d747" class="outline-4">
+<h4 id="org8e2d747"><span class="section-number-4">2.4.1.</span> A</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+Polynomials have only one pole at \( \infty \). In other words, \( P^{-1}(\left\{ \infty \right\}) = \left\{ \infty \right\} \). By conjugacy, we have that,
+</p>
+
+<p>
+\[ \left\{ \infty \right\} = P^{-1}(\left\{ \infty \right\}) = (\varphi \circ R^{k} \circ \varphi^{-1})^{-1} (\left\{ \infty \right\}) = (\varphi \circ R^{-k} \circ \varphi^{-1}) (\left\{ \infty \right\}) \]
+</p>
+
+<p>
+In other words,
+</p>
+
+<p>
+\[ \varphi^{-1}(\infty) = R^{-k}(\varphi^{-1}(\infty)) \]
+</p>
+
+<p>
+If we rename, \( \varphi^{-1}(\infty) = w \) we have the problem statement,
+</p>
+
+<p>
+\[ \left\{ w \right\} = R^{-k}(\left\{ w \right\}) \]
+</p>
+</div>
+</div>
+<div id="outline-container-org0d6c073" class="outline-4">
+<h4 id="org0d6c073"><span class="section-number-4">2.4.2.</span> B</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+By part (A) we have that, \( \left\{ w \right\} = R^{-k}(\left\{ w \right\}) \), hence \( R^{-qk}(\left\{ w \right\}) = \left\{ w \right\} \). Because preimages enlarge cardinality (assuming the input is in the image of the function), we know that for any \( n \leq qk \), \( |R^{-n}(\left\{ w \right\})| \leq | R^{-qk}(\left\{ w \right\}) | = 1 \). However the function \( qk \) is unbounded. Hence, every inverse iterate, \( n \in \mathbb{N} \), \( R^{-n}(\left\{ w \right\}) \) is a singleton with possibly unique singletons \( w_{n} = R^{-n}(\left\{ w \right\}) \) for \( 0 \leq n \leq k \). This shows that the backward orbit of \( w \) is finite, hence \( w \) is an exceptional point.  
+</p>
+</div>
+</div>
+<div id="outline-container-orgb290557" class="outline-4">
+<h4 id="orgb290557"><span class="section-number-4">2.4.3.</span> C</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<p>
+From part A, we know that \( w \) is periodic. It's period is bounded by the cardinality of its set of origin. Because \( w \) is exceptional this tells us that its period is at most two. Hence,
+</p>
+
+<p>
+\[ R^{2}(w) = w \]
+</p>
+
+<p>
+This tells us that \( R^{2} \) is conjugate to a polynomial.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org10aa526" class="outline-3">
+<h3 id="org10aa526"><span class="section-number-3">2.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Let \( U \) be a completely invariant Fatou component. 
+</p>
+</div>
+<div id="outline-container-org665bec6" class="outline-4">
+<h4 id="org665bec6"><span class="section-number-4">2.5.1.</span> A</h4>
+<div class="outline-text-4" id="text-2-5-1">
+<p>
+Because \( U \) is completely invariant, we know that \( \overline{U} \) is completely invariant (previous homework). Because \( \overline{U} \) is a closed completely invariant set containing at least three points, it must contain the Julia set. But \( U \) is a Fatou component (in the complement of the Julia set) hence \( J \subseteq \partial U \). Because \( U \) is open, \( \partial U \) is disjoint from \( U \), hence \( \partial U \subseteq F^{c} = J \).
+</p>
+</div>
+</div>
+<div id="outline-container-org7c1aadb" class="outline-4">
+<h4 id="org7c1aadb"><span class="section-number-4">2.5.2.</span> B</h4>
+<div class="outline-text-4" id="text-2-5-2">
+<p>
+From part A, we have that \( \overline{U} = J \cup U = \rsphere - \cup_{i} U_{i} \) (where \( U_{i} \) is a Fatou component which is not \( U \)), which we know is connected (closure of connected set is connected). By the hint, we can deduce that each \( U_{i} \) is simply connected.  
+</p>
+</div>
+</div>
+<div id="outline-container-org8a65b8b" class="outline-4">
+<h4 id="org8a65b8b"><span class="section-number-4">2.5.3.</span> C</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<p>
+Suppose that \( F_{1}, \ldots, F_{k} \) are completely invariant components of \( F \). From part \( B \) we see that each \( F_{i} \) are simply connected (hence \( \chi(F_{i}) = 1 \)). To be precise, part \( B \) tells us that looking at \( F_{1} \) says that \( F_{2}, \ldots, F_{k} \) are simply connected. Then looking at \( F_{k} \) tells us that \( F_{1}, \ldots, F_{k - 1} \) is simply connected.
+</p>
+
+<p>
+Hence, we may calculate:
+</p>
+
+<p>
+\[ \delta_{R}(F_{i}) = (d - 1) \chi(F_{i}) = d - 1 \]
+</p>
+
+\begin{align}
+k(d-1)
+&= \sum_{i = 1}^{k} \delta_{R}(F_{i}) \\
+&\leq \delta_{R}(\rsphere) \\
+&= 2d - 2
+\end{align}
+
+<p>
+Which tells us that \( k \leq 2 \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org47fafd2" class="outline-3">
+<h3 id="org47fafd2"><span class="section-number-3">2.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+If \( F \) has finitely many components, \( F_{1}, \ldots, F_{k} \) then by previous problem \( R^{m} \) fixes \( F_{j} \) for each \( j \). This tells us that \( k \leq 2 \) by problem \( 5 \). So \( F_{1} \cup F_{2} = F_{R^{m}} = F_{R} \). 
+</p>
+</div>
+</div>
+<div id="outline-container-orgee57ef8" class="outline-3">
+<h3 id="orgee57ef8"><span class="section-number-3">2.7.</span> Problem 7</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+Suppose that \( J \) has finitely many components, \( J_{1}, \ldots, J_{k} \). By previous problem we have that \( R^{m}(J_{i}) \) for all \( J_{i} \). Hence, \( J_{i} \) is a closed completely invariant set containing at least three points. So \( J_{i} = J_{R^{m}} = J_{R} \) which is connected.      
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgba1d04c" class="outline-2">
+<h2 id="orgba1d04c"><span class="section-number-2">3.</span> Homework 3</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc647f51" class="outline-3">
+<h3 id="orgc647f51"><span class="section-number-3">3.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-org6a751d8" class="outline-4">
+<h4 id="org6a751d8"><span class="section-number-4">3.1.1.</span> Solutions</h4>
+<div class="outline-text-4" id="text-3-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org1d49805"></a>A<br />
+<div class="outline-text-5" id="text-3-1-1-1">
+<p>
+Openness follows from continuity of \( |\cdot| \circ P_{c}^{n} \) and \( V_{n} = (|P^{n}_{c}|)^{-1}[(2, \infty)] \). <br />
+</p>
+
+<p>
+To show that \( V_{n} \) is connected we suppose that \( V_{n} \) has two connected components, \( U_{1} \) and \( U_{2} \). Only one connected component will contain \( \infty \) WLOG suppose it is \( U_{1} \).
+</p>
+
+<p>
+Then \( U_{2} \) is a bounded component, hence the maximum modulus principle states that \( P^{n}_{c} \) takes its maximum value on the boundary of \( U_{2} \). But we know that the boundary values are less than or equal to \( 2 \) where we know the interior of \( U_{2} \) contains values strictly greater than \( 2 \) by hypothesis. 
+</p>
+</div>
+</li>
+<li><a id="orgbd847cc"></a>B<br />
+<div class="outline-text-5" id="text-3-1-1-2">
+<p>
+By the chain rule, we have the following formula for the derivative of \( P^{n}_{c}(z) \). 
+</p>
+
+<p>
+\[ \frac{ d }{ d z} P_{c}^{n}(z) = \prod_{i = 1}^{n-1} P_{c}'(P^{i}_{c}(z)) \]
+</p>
+
+<p>
+This tells us that if we have a critical point, \( z \),  of \( P^{n}_{c} \) then \( P'_{c}(P^{i}_{c}(z)) = 0 \) for some \( i \).
+Hence, \( P^{i}_{c}(z) = 0 \). Because \( c \in \mathcal{M} \) we know that the orbit of this point is bounded (by \( 2 \)). Hence, \( | P^{n - i} \circ P_{c}^{i}(z) | = | P_{c}^{n}(z) | < 2 \). 
+</p>
+</div>
+</li>
+<li><a id="orgdedabd9"></a>C<br />
+<div class="outline-text-5" id="text-3-1-1-3">
+<p>
+We will show that \( \Gamma_{n} = \partial V_{n} \) and that each \( \Gamma_{n} \) is a Jordan curve by induction.
+</p>
+
+<p>
+<b>Base Case</b> \( n = 0 \):
+We know that \( V_{0} = \left\{ z \in \rsphere \middle\vert |P^{0}_{c}(z)| = |z| > 2 \right\} = \rsphere - \mathbb{D}(0,2) \) which has one boundary component. This boundary component is the first Jordan curve, \( \Gamma_{0} = \partial D(0,2) = \partial V_{0} \) 
+</p>
+
+<p>
+<b>Inductive Hypothesis</b>: Suppose that \( V_{n - 1} \) has one boundary component \( \Gamma_{n - 1} \), 
+</p>
+
+<p>
+We know that nonconstant polynomials are proper, hence if we consider \( P_{c} \colon V_{n} \to V_{n - 1} \) we have the relation
+</p>
+
+
+\begin{align*}
+& &\#(\text{Boundary Curves of $V_{n}$}) - 2 &= 2(\#(\text{Boundary Curves of $V_{n - 1}$}) - 2) - \text{Multiplicity of $\infty$} &&\text{Riemann-Hurwitz} \\
+&\implies &\#(\text{Boundary Curves of $V_{n}$}) - 2 &= 2(1 - 2) - 1 &&\text{Substitute Values} \\
+&\implies &\#(\text{Boundary Curves of $V_{n}$}) &= 1 &&\text{Simplify}
+\end{align*}
+
+<p>
+From this, we may deduce that the boundary of \( V_{n} \) consists of a single Jordan curve \( \Gamma_{n} = \partial V_{n} \).
+</p>
+
+<p>
+Now that we know that every boundary of \( V_{n} \) is a single Jordan curve and we know that
+Because \( P_{c} \) is proper, we have \( P_{c}(\partial V_{n}) = \partial V_{n - 1} \) so \( \partial V_{n} \subseteq P_{c}^{-1}(\partial V_{n - 1}) \).
+Because \( P_{c} \) is open, we know it does not send interior points to boundary points, thus \( \partial V_{n} = P_{c}^{-1}(\partial V_{n - 1}) = \Gamma_{n} \).
+</p>
+</div>
+</li>
+<li><a id="orgb2b8250"></a>D<br />
+<div class="outline-text-5" id="text-3-1-1-4">
+<p>
+Because \( 2 \) is an escape radius for the polynomial, we note that \( z \in V_{n} \implies |P_{c}^{n}(z)| > 2 \implies |P_{c}^{n+1}(z)| > 2 \implies z \in V_{n + 1} \)
+</p>
+
+<p>
+\[ V_{0} \subseteq V_{1} \subseteq \cdots \subseteq V_{n} \subseteq \cdots \]
+</p>
+
+<p>
+By taking complements (flips subset), we get,
+</p>
+
+<p>
+\[ V_{0}^{c} \supseteq V_{1}^{c} \supseteq \cdots \supseteq V_{n}^{c} \supseteq \cdots \]
+</p>
+
+<p>
+By taking interiors (monotone under subset), we get,
+</p>
+
+<p>
+\[ U_{0} \supseteq U_{1} \supseteq \cdots \supseteq U_{n} \supseteq \cdots \]
+</p>
+</div>
+</li>
+<li><a id="orgf527988"></a>E<br />
+<div class="outline-text-5" id="text-3-1-1-5">
+<p>
+\[ U_{n} = \interior(V_{n}^{c}) \subseteq V_{n}^{c} \]
+</p>
+
+<p>
+So, \( z \in U_{n} \implies | P_{c}^{n}(z) | < 2 \).
+Elements of the filled Julia set are bounded (by \( 2 \)) for all \( n \), elements of \( U_{n} \) are bounded (by \( 2 \))  for a given \( n \),
+Hence \( K_{P_{c}} \subseteq U_{n} \).  
+</p>
+</div>
+</li>
+<li><a id="orgc99e5ac"></a>F<br />
+<div class="outline-text-5" id="text-3-1-1-6">
+<p>
+Forgive this lengthy proof. I much prefer the Green's function one I saw in office hours. However, presenting this felt a bit more honest, at the expense of some sanity. <br />
+</p>
+
+<p>
+Let \( U \) be an open neighborhood of \( K_{P_{c}} \).
+For any \( x \in J_{P_{c}} \), there is an open ball, \( B(x, \varepsilon) \subseteq U \).
+This ball contains points in the basin of infinity, hence it contains a point, \( w \), such that \( \lim_{n \to \infty} | P^{n}(w) | \to \infty \).
+Hence there is some \( N \) by which \( | P^{N}(w) | > 2 \) showing that \( w \in U_{N} \).
+</p>
+
+<p>
+We now consider for any \( z \in J_{P_{c}} \) ,
+</p>
+
+\begin{align*}
+f_{n}(z)
+&:= \dist(z, V_{n}) &&\text{Definition} \\
+&= \dist(x, \partial V_{n}) &&\text{$V_{n}$ nonempty, $x \in \interior(\rsphere \setminus V_{n})$} \\
+&= \dist(x, \Gamma_{n}) &&\text{$\Gamma_{n} = \partial V_{n}$}
+\end{align*}
+
+
+<p>
+Because \( \{ V_{n} \}_{n \in \mathbb{N}}  \) is an increasing nested family, we see that for all \( m \geq n \), 
+</p>
+
+<p>
+\[ f_{n}(z) = \dist(z, V_{n}) \geq \dist(z, V_{m}) = f_{m}(z) \]
+</p>
+
+<p>
+Given any \( \varepsilon > 0 \),
+</p>
+\begin{align*}
+&&B(z, \varepsilon) \cap I_{P_{c}} &\neq \emptyset &\text{$z \in J_{P_{c}} = \partial I_{P_{c}}$}\\
+&\implies &\exists w \in B(z, \varepsilon) \cap I_{P_{c}} &&\text{Def. Nonempty}\\
+&\implies &\exists n \in \mathbb{N} \colon w \in P_{c}^{-n}(\rsphere \setminus \overline{\mathbb{D}(0,2)})  &&\text{Characterization of $I_{P_{c}}$}
+\end{align*}
+
+<p>
+In other words, we can make \( f_{n}(z) \) small enough by making \( n \) large enough. Hence, \( f_{n}(z) \) is a sequence of functions which monotonically decreases to \( 0 \) pointwise, by Dini Theorem we can deduce that the sequence of functions converges to \( 0 \) uniformly. Hence, given some epsilon, we may deduce that there is some \( N \) large enough such that for all \( n \geq N \), \( | f_{n} | < \varepsilon \). Thus, \( \forall z \in J_{P_{c}} \colon f_{n}(z) = \dist(z, \Gamma_{n}) < \varepsilon \) which implies \( \sup_{z \in J_{P_{c}}} f_{n}(z) < \varepsilon \).  
+</p>
+
+<p>
+We now conclude by noting that any open neighborhood of a compact set is a uniform neighborhood. In other words, there is an open set,
+</p>
+
+<p>
+\[ B(J_{P_{c}}, \varepsilon) = \left\{ z \in \rsphere \;\middle\vert\; d(z, J_{P_{c}}) < \varepsilon \right\} \subseteq U \]
+</p>
+
+<p>
+Hence, there is some \( N \) such that all points \( U_{N} \) is at most \( \varepsilon \) away from \( J_{P_{c}} \).
+</p>
+</div>
+</li>
+<li><a id="orga78b0dd"></a>G<br />
+<div class="outline-text-5" id="text-3-1-1-7">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #531ab6;">import</span> cmath
+<span style="color: #531ab6;">from</span> cmath <span style="color: #531ab6;">import</span> sqrt
+<span style="color: #531ab6;">from</span> itertools <span style="color: #531ab6;">import</span> chain
+<span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">compute_julia_preimages</span><span style="color: #000000;">(</span>c, num_iter=10<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">fig</span>, <span style="color: #005e8b;">ax</span> = plt.subplots<span style="color: #000000;">()</span>
+    fig.set_size_inches<span style="color: #000000;">(</span>10,10<span style="color: #000000;">)</span>
+    
+    <span style="color: #005e8b;">gamma</span> = <span style="color: #000000;">[</span>2*cmath.exp<span style="color: #dd22dd;">(</span>theta*1j<span style="color: #dd22dd;">)</span>
+             <span style="color: #531ab6;">for</span> theta <span style="color: #531ab6;">in</span> np.linspace<span style="color: #dd22dd;">(</span>0, 2*np.pi, 1000<span style="color: #dd22dd;">)</span><span style="color: #000000;">]</span>
+
+    <span style="color: #005e8b;">size</span> = 1
+
+    <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>num_iter<span style="color: #000000;">)</span>:
+      <span style="color: #005e8b;">gamma</span> = <span style="color: #000000;">[</span>unit * sqrt<span style="color: #dd22dd;">(</span>z - c<span style="color: #dd22dd;">)</span>
+               <span style="color: #531ab6;">for</span> z <span style="color: #531ab6;">in</span> gamma
+               <span style="color: #531ab6;">for</span> unit <span style="color: #531ab6;">in</span> <span style="color: #dd22dd;">(</span>1, -1<span style="color: #dd22dd;">)</span><span style="color: #000000;">]</span>
+
+      ax.plot<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>z.real <span style="color: #531ab6;">for</span> z <span style="color: #531ab6;">in</span> gamma<span style="color: #dd22dd;">]</span>, <span style="color: #dd22dd;">[</span>z.imag <span style="color: #531ab6;">for</span> z <span style="color: #531ab6;">in</span> gamma<span style="color: #dd22dd;">]</span>,
+              <span style="color: #3548cf;">'.'</span>, ms=size, alpha=0.6<span style="color: #000000;">)</span>
+      <span style="color: #005e8b;">size</span> *= 0.75
+    plt.title<span style="color: #000000;">(</span>f<span style="color: #3548cf;">"c: </span>{c}<span style="color: #3548cf;">"</span><span style="color: #000000;">)</span>
+    plt.show<span style="color: #000000;">()</span>
+
+compute_julia_preimages<span style="color: #000000;">(</span>c=0.346-0.171j<span style="color: #000000;">)</span>
+compute_julia_preimages<span style="color: #000000;">(</span>c=0.25+0j<span style="color: #000000;">)</span>
+compute_julia_preimages<span style="color: #000000;">(</span>c=0-1j<span style="color: #000000;">)</span>
+compute_julia_preimages<span style="color: #000000;">(</span>c=-1+0j<span style="color: #000000;">)</span>
+compute_julia_preimages<span style="color: #000000;">(</span>c=-0.12+0.75j<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+<img src="./.ob-jupyter/fe65dd7ae8d3eb5d7407e792c7dd62d87e32af08.png" alt="fe65dd7ae8d3eb5d7407e792c7dd62d87e32af08.png" />
+<img src="./.ob-jupyter/830323072f4aa15be6e647ce9823ce57ab414a9c.png" alt="830323072f4aa15be6e647ce9823ce57ab414a9c.png" />
+<img src="./.ob-jupyter/09fa0ab4138d29faa6eca00dc07af8ad2db37446.png" alt="09fa0ab4138d29faa6eca00dc07af8ad2db37446.png" />
+<img src="./.ob-jupyter/56717150072c8f0abbb9beb55ec8dfb56a119a36.png" alt="56717150072c8f0abbb9beb55ec8dfb56a119a36.png" />
+<img src="./.ob-jupyter/db403bd17de387964d424f3b8b67680bb0c4ce68.png" alt="db403bd17de387964d424f3b8b67680bb0c4ce68.png" />
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga6eca17" class="outline-3">
+<h3 id="orga6eca17"><span class="section-number-3">3.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-3-2">
+</div>
+<div id="outline-container-org4e78eac" class="outline-4">
+<h4 id="org4e78eac"><span class="section-number-4">3.2.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+<span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+
+<span style="color: #595959;"># </span><span style="color: #595959;">n-fold composition</span>
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">iterate</span><span style="color: #000000;">(</span>f, n<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> f <span style="color: #531ab6;">if</span> n == 1 <span style="color: #531ab6;">else</span> <span style="color: #531ab6;">lambda</span> z: f<span style="color: #000000;">(</span>iterate<span style="color: #dd22dd;">(</span>f,n-1<span style="color: #dd22dd;">)(</span>z<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">polynomial</span>
+<span style="color: #005e8b;">p_c</span> = <span style="color: #531ab6;">lambda</span> c : <span style="color: #531ab6;">lambda</span> z : z*z + c
+<span style="color: #531ab6;">lambda</span> z : z**3 + z + 0.6j
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">divergence_layers</span><span style="color: #000000;">(</span>p<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">bins</span> = 1000
+    <span style="color: #005e8b;">bound</span> = 20
+    <span style="color: #005e8b;">n</span> = np.zeros<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>bins, bins<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">z</span> = np.zeros<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>bins, bins<span style="color: #dd22dd;">)</span>, dtype=np.complex64<span style="color: #000000;">)</span>
+
+    <span style="color: #531ab6;">for</span> i, x <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">enumerate</span><span style="color: #000000;">(</span>np.linspace<span style="color: #dd22dd;">(</span>-2, 2, bins<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>:
+        <span style="color: #531ab6;">for</span> j, y <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">enumerate</span><span style="color: #000000;">(</span>np.linspace<span style="color: #dd22dd;">(</span>-2, 2, bins<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>:
+            <span style="color: #005e8b;">count</span> = 0
+            <span style="color: #005e8b;">z</span><span style="color: #000000;">[</span><span style="color: #005e8b;">i</span>,<span style="color: #005e8b;">j</span><span style="color: #000000;">]</span> = <span style="color: #8f0075;">complex</span><span style="color: #000000;">(</span>x,y<span style="color: #000000;">)</span>
+            <span style="color: #531ab6;">while</span> count &lt; bound:
+                <span style="color: #005e8b;">count</span> += 1
+                <span style="color: #005e8b;">z</span><span style="color: #000000;">[</span><span style="color: #005e8b;">i</span>,<span style="color: #005e8b;">j</span><span style="color: #000000;">]</span> = p<span style="color: #000000;">(</span>z<span style="color: #dd22dd;">[</span>i,j<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+                <span style="color: #531ab6;">if</span> z<span style="color: #000000;">[</span>i,j<span style="color: #000000;">]</span>.real**2 + z<span style="color: #000000;">[</span>i,j<span style="color: #000000;">]</span>.imag**2 &gt; 4:
+                    <span style="color: #531ab6;">break</span>
+                <span style="color: #005e8b;">n</span><span style="color: #000000;">[</span><span style="color: #005e8b;">i</span>,<span style="color: #005e8b;">j</span><span style="color: #000000;">]</span> = count
+                
+    plt.figure<span style="color: #000000;">(</span>figsize=<span style="color: #dd22dd;">(</span>5.5,5.5<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    plt.contourf<span style="color: #000000;">(</span>np.linspace<span style="color: #dd22dd;">(</span>-3, 3, bins<span style="color: #dd22dd;">)</span>,np.linspace<span style="color: #dd22dd;">(</span>-2, 2, bins<span style="color: #dd22dd;">)</span>,n<span style="color: #000000;">)</span>
+    plt.show<span style="color: #000000;">()</span>
+
+divergence_layers<span style="color: #000000;">(</span><span style="color: #531ab6;">lambda</span> z : z**3 + z + 0.6j<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+<img src="./.ob-jupyter/e6120b32569ed62eab5e619f9b8cd06248c02331.png" alt="e6120b32569ed62eab5e619f9b8cd06248c02331.png" />
+<img src="./.ob-jupyter/93b083b12caf2facd714a04e44444628dc34f448.png" alt="93b083b12caf2facd714a04e44444628dc34f448.png" />
+<img src="./.ob-jupyter/99df9f6ab33f3b5ef87767ddd9028893eab2c849.png" alt="99df9f6ab33f3b5ef87767ddd9028893eab2c849.png" />
+<img src="./.ob-jupyter/0c884d4a775069b8642b1c2a0c6b2a3570fa1963.png" alt="0c884d4a775069b8642b1c2a0c6b2a3570fa1963.png" />
+<img src="./.ob-jupyter/b264935e90d82dfcde51eb43275d81707ca8ab21.png" alt="b264935e90d82dfcde51eb43275d81707ca8ab21.png" />
+<img src="./.ob-jupyter/e7d2f90f847e8fcf6a2043c91333d306432e5c95.png" alt="e7d2f90f847e8fcf6a2043c91333d306432e5c95.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH 699 Gawlik Finite Element Exterior Calculus</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MATH 699 Gawlik Finite Element Exterior Calculus</h1>
+<p>
+Reading course at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+
+<p>
+<a href="file:///home/zjabbar/books/applied_math/Finite Element Exterior Calculus.pdf">FEEC Douglas Arnold</a>
+</p>
+<div id="outline-container-org4eaa24f" class="outline-2">
+<h2 id="org4eaa24f"><span class="section-number-2">1.</span> Presentation</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org892ac52" class="outline-3">
+<h3 id="org892ac52"><span class="section-number-3">1.1.</span> Motivating Problem</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Our problem setting is in the Lipschitz Polyhedral Domain \( \Omega \subseteq \mathbb{R}^{n} \) with its \( L^{2} \) de Rham complex (6.15) with domain complex (6.16) and Adjoint complex given by Theorem 6.5.
+</p>
+
+<div class="DEFINITION" id="org1c95fb1">
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & L^{2}(\Lambda^{0}(\Omega)) \ar[r]^{d} & L^{2}(\Lambda^{1}(\Omega)) \ar[r]^{d} & \cdots \ar[r]^{d} & L^{2}(\Lambda^{n}(\Omega)) \ar[r] & 0 & \text{Base Space Complex} \\ 
+0 \ar[r] & H(\Lambda^{0}(\Omega)) \ar[r]^{d} & H(\Lambda^{1}(\Omega)) \ar[r]^{d} & \cdots \ar[r]^{d} & H(\Lambda^{n}(\Omega)) \ar[r] & 0 & \text{Domain Complex} \\ 
+0 & \ar[l]  \mathring{H}^{\ast}(\Lambda^{0}(\Omega)) & \ar[l]^{\delta}  \mathring{H}^{\ast}(\Lambda^{1}(\Omega)) & \ar[l]^{\delta} \cdots & \ar[l]^{\delta} \mathring{H}^{\ast}(\Lambda^{n}(\Omega)) & \ar[l] 0 & \text{Adjoint Complex} 
+}
+\end{xy} \]
+</p>
+
+</div>
+
+<p>
+Recall that in \( \mathbb{R}^{3} \) this becomes the following:
+</p>
+
+<div class="DEFINITION" id="orgc8544e4">
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & L^{2}(\Omega) \ar[r]^{\text{grad}} & L^{2}(\Omega;\mathbb{R}^{3}) \ar[r]^{\text{curl}} & L^{2}(\Omega;\mathbb{R}^{3}) \ar[r]^{\text{div}} & L^{2}(\Omega) \ar[r] & 0 & \text{Base Space Complex} \\ 
+0 \ar[r] & H^{1}(\Omega) \ar[r]^{\text{grad}} & H(\text{curl}) \ar[r]^{\text{curl}} & H(\text{div}) \ar[r]^{\text{div}} & L^{2}(\Omega) \ar[r] & 0 & \text{Domain Space Complex} \\
+0 & \ar[l] L^{2}(\Omega) & \ar[l]^{-\text{div}} \ring{H}(\text{div}) & \ar[l]^{\text{curl}} \ring{H}(\text{curl}) & \ar[l]^{-\text{grad}} \ring{H}^{1}(\Omega) & \ar[l] 0 & \text{Adjoint Complex}
+}
+\end{xy} \]
+</p>
+
+</div>
+
+<p>
+For every \( k \) we may write down the mixed-Galerkin weak formulation of the Hodge-Laplace problem:
+</p>
+
+<div class="DEFINITION" id="org0674a6c">
+<p>
+Given \( f \in W^{k} \), find \( \sigma \in V^{k-1} \), \( u \in V^{k} \), and \( p \in \mathfrak{H}^{k} \) such that
+</p>
+
+\begin{align*}
+\left\langle \sigma , \tau \right\rangle - \left\langle u , dt \right\rangle &= 0 &&\tau \in V^{k-1} \\
+\left\langle d\sigma , v \right\rangle + \left\langle du , dv \right\rangle + \left\langle p , v \right\rangle &= \left\langle f , v \right\rangle &&v \in V^{k} \\
+\left\langle u , q \right\rangle &= 0 &&q \in \mathfrak{H}^{k}
+\end{align*}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orged31161" class="outline-3">
+<h3 id="orged31161"><span class="section-number-3">1.2.</span> Motivating Solution</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Recall from section 5.2.2 that there were three assumptions used to guarantee that the mixed Galerkin method provides an accurate approximation of the true solution.
+</p>
+
+<p>
+We need:
+</p>
+
+<ol class="org-ol">
+<li>Approximation</li>
+<li>Subcomplexes</li>
+<li>Bounded Cochain Projections</li>
+</ol>
+
+<p>
+Hence, to have a satisfactory finite element method, we are looking for the following subcomplex:
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & H(\Lambda^{0}(\Omega)) \ar[r]^{d} \ar[d]^{\Pi_{h}^{0}} & H(\Lambda^{1}(\Omega)) \ar[r]^{d} \ar[d]^{\Pi_{h}^{1}} & \cdots \ar[r]^{d} & H(\Lambda^{n}(\Omega)) \ar[r] \ar[d]^{\Pi_{h}^{n}} & 0 & \text{Domain Complex} \\ 
+0 \ar[r] & V_{h}^{0} \ar[r]^{d} & V_{h}^{1} \ar[r]^{d} & \cdots \ar[r]^{d} & V_{h}^{n} \ar[r] & 0 & \text{Galerkin Complex} 
+}
+\end{xy} \]
+</p>
+
+<p>
+Where \( \Pi_{h}^{k} \) is a bounded cochain projection and \( V_{h}^{k} \) is a finite dimensional space.
+</p>
+
+<p>
+If we were dealing with continuous functions in the domain complex, one could write \( \Pi_{h}^{k} \) as an interpolation operator (Crouzeix–Raviart interpolation). In our case, we can show that the projections commute with \( d \) (Stokes' Theorem) but each \( \Pi_{h}^{k} \) is unbounded because we cannot interpolate the end points of a function not defined pointwise.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc57c012" class="outline-3">
+<h3 id="orgc57c012"><span class="section-number-3">1.3.</span> Finite Element Space</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+We wish to define a finite element space. A finite element space consists of three parts:
+</p>
+
+<ol class="org-ol">
+<li>A Triangulation \( \mathcal{T} \) consisting of polyhedral elements \( T \).
+\( T \) can be a lot of things simplices, cubes, distorted cubes, quadrilaterals.
+For the time being we will only consider simplicial triangulations.</li>
+
+<li>For each \( T \), we describe a set of shape functions \( V(T) \).
+Elements of \( V(T) \) are typically polynomials.</li>
+
+<li>For each \( T \), there is a unisolvent collection of degrees of freedom (DOF) associated to each "face" of the polyhedra.
+This is a finite set of linear functionals with cardinality equaling the dimension of the shape function space \( \{ \psi_{i} \in V(T)^{\ast} \}_{i = 1}^{\dim(V(T))} \) which are unisolvent.</li>
+</ol>
+
+<p>
+Unisolvent means that for any set of numbers \( \{ a_{i} \in \mathbb{R} \}^{\dim(V(T))}_{i = 1} \) there is a function \( p \in V(T) \) such that \( \psi_{i}(p) = a_{i} \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1aeb17" class="outline-3">
+<h3 id="orgb1aeb17"><span class="section-number-3">1.4.</span> Unisolvency</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Unisolvent is a new word to me and is a big part of the final condition for finite element spaces. I will dive deeper into this definition.
+</p>
+
+<div class="DEFINITION" id="org2c976ac">
+<p>
+A set of \( n \) functions, \( \{ f_{i} \}_{i = 1}^{n} \) is unisolvent (uniquely solvable) on a domain \( \Omega \) if the following matrix is invertible for any choice of \( n \) distinct points \( \left\{ x_{j} \right\}_{j = 1}^{n} \).  
+</p>
+
+<p>
+\[ \begin{bmatrix} f_{i}(x_{j}) \end{bmatrix}_{i,j} \]
+</p>
+
+</div>
+
+<div class="THEOREM" id="orga989afa">
+<p>
+Given \( n \) functions and \( n \) points, \( f_{i} \) and \( x_{j} \), the following are equivalent:
+</p>
+
+<ol class="org-ol">
+<li>\( f_{i} \) is unisolvent</li>
+
+<li>The following vectors are linearly independent</li>
+
+<li>\( f_{i} \) form a basis of the function space</li>
+</ol>
+
+</div>
+
+<p>
+This last way of describing unisolvency tells us that the property has little to do with the actual collection of functions, instead it is a property of the vector space. This is because any two bases are related by an invertible matrix (the change of basis matrix). Hence, one basis is unisolvent if and only if any other basis is unisolvent.
+</p>
+
+<div class="THEOREM" id="org571e211">
+<p>
+\[ \psi_{i}(p) = p(x_{i}) \]
+</p>
+
+</div>
+
+<div class="THEOREM" id="orgfcc01eb">
+<p>
+Consider \( V([0,1]) = \left\{ ax^{2} + c \;\middle\vert\; a,c \in \mathbb{R} \right\} \). This space has dimension \( 2 \).
+</p>
+
+<p>
+This space is unisolvent on \( [0,1] \) but not on \( [-1,1] \).
+</p>
+
+</div>
+
+<div class="THEOREM" id="orgf7de6b7">
+<p>
+Consider \( V([0,1]) = \left\{ ax^{2} + bx + c \;\middle\vert\; a,b,c \in \mathbb{R} \right\} \). This space has dimension \( 3 \).
+Consider the following three functionals,
+</p>
+
+\begin{align*}
+\psi_{1}(p) &= p(0) \\
+\psi_{2}(p) &= p(1) \\
+\psi_{3}(p) &= p'(0.5)
+\end{align*}
+
+<p>
+Then the equations,
+</p>
+
+\begin{align*}
+\psi_{1}(p) &= 0 \\
+\psi_{2}(p) &= 0 \\
+\psi_{3}(p) &= 0
+\end{align*}
+
+<p>
+Is satisfied for the polynomial \( x (1 - x) \) as well as \( 0 \).
+</p>
+
+<p>
+We may fix this counter example by using the following three functionals,
+</p>
+
+\begin{align*}
+\psi_{1}(p) &= p(0) \\
+\psi_{2}(p) &= p(1) \\
+\psi_{3}(p) &= p(0.5)
+\end{align*}
+
+</div>
+</div>
+</div>
+<div id="outline-container-org953b09d" class="outline-3">
+<h3 id="org953b09d"><span class="section-number-3">1.5.</span> Shape Functions</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+We will be using polynomials of degree less than \( r \) with inputs in \( \mathbb{R}^{n} \).
+</p>
+
+<p>
+\( V(T) = P_{r}(\mathbb{R}^{n}) \) 
+</p>
+
+<p>
+The basis for the space is
+</p>
+
+<p>
+\[ \left\{ x_{1}^{\alpha_{1}} \cdots x_{n}^{\alpha_{n}} \middle\vert \sum_{i = 1}^{n} \alpha_{i} \leq r \right\} = \left\{ 1^{\alpha_{0}} \cdot x_{1}^{\alpha_{1}} \cdots x_{n}^{\alpha_{n}} \middle\vert \sum_{i = 0}^{n} \alpha_{i} = r \right\} \]
+</p>
+
+<p>
+In other words, there is a one to one correspondence between multi-indices of a certain size and basis elements of our space.
+</p>
+
+<p>
+This space has dimension \( {r + n \choose n} \) by "stars and bars" (\( r \) stars with \( n \) bars (\( n + 1 \) groups)).
+</p>
+
+<p>
+\[ \overbrace{\ast \ast \ast \ast \ast \ast \ast \ast \ast \ast}^{\text{Total Degree } r} \]
+</p>
+
+<p>
+\[ \overbrace{ \underbrace{\ast \ast \ast \ast}_{\text{Power of } 1} \underbrace{\ast \ast \ast \ast}_{\text{Power of } x_{1}} \underbrace{\ast \ast}_{\text{Power of } x_{2}}}^{\text{Total Degree } r} \]
+</p>
+
+<p>
+\[ \overbrace{ \underbrace{\ast \ast \ast \ast}_{\text{Power of } 1} \vert \underbrace{\ast \ast \ast \ast}_{\text{Power of } x_{1}} \vert \underbrace{\ast \ast}_{\text{Power of } x_{2}}}^{\text{Total Degree } r} \]
+</p>
+
+<p>
+\[ \overbrace{ - - - - - - - - - - - - }^{\text{Total Slots } r + n} \]
+</p>
+
+<p>
+Hence the number of monomials is the number of ways to choose the location of bars \( n \) (which is equal to the number of independent variables, look to the right of a bar) in the \( r + n \) spots. Hence,
+</p>
+
+<p>
+\[ \dim(P_{r}(T)) = {r + n \choose n} \]
+</p>
+
+<p>
+Now we can define the polynomial differential forms. These are differential forms whose coefficients belong to the polynomial space.
+</p>
+
+<p>
+\[ \mathcal{P}_{r}(\Lambda^{k}(T)) = \left\{ \sum_{1 \leq \sigma_{1} \leq \cdots \leq \sigma_{k} \leq n} p_{\sigma} dx^{\sigma} \;\middle\vert\; p_{\sigma} \in \mathcal{P}_{r}(T) \right\}  \]
+</p>
+
+<p>
+Recall the notation, \( \sigma \) is a multi-index, a tuple. The standard basis for \( k \)-forms is an increasing index of \( dx^{i} \). The coefficient \( p_{\sigma} \) is any polynomial of degree \( r \) or less.
+</p>
+
+\begin{align*}
+2x_{1}x_{2} dx^{1} \wedge dx^{2} \wedge dx^{3} &\in \mathcal{P}_{2}(\Lambda^{3}(\mathbb{R}^{4})) &\quad& \\
+2x_{1} dx^{1} \wedge dx^{2} + 5 x_{4} dx^{1} \wedge dx^{3} + dx^{3} \wedge dx^{4} &\in \mathcal{P}_{2}(\Lambda^{2}(\mathbb{R}^{4})) && \\
+x_{1}x_{2}x_{3} + x_{4} x_{5} &\in \mathcal{P}_{3}(\Lambda^{0}(\mathbb{R}^{5})) &&\text{Alan} \\
+x_{1}^{2}x_{2}x_{3} dx_{1} \wedge dx_{2} + x_{2}^{2} x_{3} dx_{2} \wedge dx_{3} + x_{1} dx_{1} dx_{3} &\in \mathcal{P}_{4}(\Lambda^{2}(\mathbb{R}^{3})) &&\text{Sam} \\
+x_{1}dx^{2} \wedge dx^{3} - x_{2} dx^{1} \wedge dx^{3} + x_{3} dx^{2} \wedge dx^{2}  &\in \mathcal{P}_{2}(\Lambda^{2}(\mathbb{R}^{3})) &&\text{Jack} \\
+dx_{1}\wedge dx_{2} \wedge dx_{3} &\in \mathcal{P}_{0}(\Lambda^{3}(\mathbb{R}^{3})) &&\text{Gawlik}
+\end{align*}
+
+<p>
+We note that the basis is then elements of the form \( \{ p_{\sigma} dx^{\sigma} \} = \{ (p_{\sigma}, dx^{\sigma}) \} \) which shows that the dimension of the space is
+</p>
+
+<p>
+\[ \dim(P_{r}(\Lambda^{k}(T))) = {n \choose k} \times \dim(P_{r}(T)) = {n \choose k} {r + n \choose n} = {r + n \choose r + k}{r + k \choose r} \]
+</p>
+
+<p>
+We see that the exterior derivative lowers the polynomial degree while raising the form degree, hence the polynomial subcomplex is,
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & H(\Lambda^{0}(\Omega)) \ar[r]^{d} \ar[d]^{\Pi_{h}^{0}} & H(\Lambda^{1}(\Omega)) \ar[r]^{d} \ar[d]^{\Pi_{h}^{1}} & \cdots \ar[r]^{d} & H(\Lambda^{n}(\Omega)) \ar[r] \ar[d]^{\Pi_{h}^{n}} & 0 & \text{Domain Complex} \\ 
+0 \ar[r] & \mathcal{P}_{r}\Lambda^{0} \ar[r]^{d} & \mathcal{P}_{r - 1} \Lambda^{1} \ar[r]^{d} & \cdots \ar[r]^{d} & \mathcal{P}_{r - n} \Lambda^{n} \ar[r] & 0 & \text{Polynomial Complex} 
+}
+\end{xy} \]
+</p>
+
+<p>
+Now, we have a finite dimensional subcomplex given a triangulation (which we assume we have) with shape functions from polynomials. The last ingredient for finite element methods is unisolvency.
+</p>
+
+<p>
+Degrees of Freedom for polynomials,
+</p>
+
+<p>
+"For each face, the degrees of freedom are integrals weighted by a basis for the polynomial space of a certain degree"
+</p>
+
+<p>
+\[ u \mapsto \int_{f} (\tr_{f} u) q, q \in \mathcal{P}_{r - \dim(f) - 1}, f \in \Delta(T) \]
+</p>
+
+<p>
+Let us do an example of using cubic polynomials in \( \mathbb{R}^{3} \) 
+</p>
+
+<p>
+For an edge, the formula reads,
+\[ \int_{e} (\tr_{e} u) q, q \in \mathcal{P}_{3 - 1 - 1} \]
+</p>
+
+<p>
+Which results in the following two degrees of freedom
+\[ \int_{e} (\tr_{e} u(s)) \cdot 1 ds \quad \int_{e} (\tr_{e} u) \cdot s ds \]
+</p>
+
+<p>
+For a face, the formula reads,
+\[ \int_{f} (\tr_{f} u) q, q \in \mathcal{P}_{3 - 2 - 1} \]
+</p>
+
+<p>
+Which results in the following degree of freedom
+\[ \int_{e} (\tr_{e} u(s)) \cdot 1 ds \]
+</p>
+
+<p>
+For a vertex, the formula reads,
+\[ \int_{v} (\tr_{v} u) q, q \in \mathcal{P}_{3 - 0 - 1} \]
+</p>
+
+<p>
+But this is a polynomial of degree two at a point, any polynomial of any degree is constant on a vertex. This results in only one degree of freedom (multiplication by a constant)
+\[ \int_{v} (\tr_{v} u(s)) ds = u(v) \]
+</p>
+
+<p>
+For the interior of the simplex, the formula reads,
+\[ \int_{T} (\tr_{T} u) q, q \in \mathcal{P}_{3 - 3 - 1} \]
+</p>
+
+<p>
+This is the trivial zero vector space, hence, no degrees of freedom.
+In total we have how many degrees of freedom?
+</p>
+
+<p>
+\[ \#\text{DOF vertex} \cdot \#\text{Vertex } + \#\text{DOF edge} \cdot \#\text{Edge } + \#\text{DOF Face} \cdot \#\text{Face } + \#\text{DOF Simplex} \cdot \#\text{Simplex} \]
+</p>
+
+<p>
+\[ 1 \cdot 4 + 2 \cdot 6 + 1 \cdot 4 + 0 \cdot 1 = 20 = {6 \choose 3} = \dim(\mathcal{P}_{3}(T_{3})) \]
+</p>
+
+<p>
+This is a general fact of these polynomial systems.
+</p>
+
+<div class="THEOREM" id="orgc550975">
+<p>
+The functionals,
+\[ u \mapsto \int_{f} (\tr_{f} u) q, q \in \mathcal{P}_{r - \dim(f) - 1}, f \in \Delta(T) \]
+</p>
+
+<p>
+Form a basis for \( \mathcal{P}_{r}^{\ast}(T) \).
+</p>
+
+</div>
+
+<div class="PROOF" id="orgc8d1cbe">
+\begin{align}
+\sum_{d \geq k} \#\Delta_{d}(T) \dim(\mathcal{P}_{r - d - 1} \Lambda^{d}(T))
+&= \sum_{d \geq k} {n + 1 \choose d + 1} {r - d - 1 + d \choose r - d - 1 + k} {r - d - 1 + k \choose r - d - 1} \\
+&= \sum_{d \geq k} {n + 1 \choose d + 1} {r - 1 \choose r - d - 1} {r - 1 - (r - d - 1) \choose r - 1 - (r - d - 1 + k)} \\
+&= \sum_{d \geq k} {n + 1 \choose d + 1} {r - 1 \choose r - d - 1} {d \choose d - k} \\
+&= \sum_{j \geq 0} {n + 1 \choose j + k + 1} {r - 1 \choose r - j - k - 1} {j + k \choose j} \\
+&= {r + n \choose r + k} {r + k \choose r} \\
+&= \dim \mathcal{P}_{r}
+\end{align}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgf52eb1f" class="outline-3">
+<h3 id="orgf52eb1f"><span class="section-number-3">1.6.</span> Koszul Complex</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+For this complex we will use the affine structure of \( \mathbb{R}^{n} \) and identify points of the space with the vector field of the identity. 
+</p>
+
+<p>
+The Koszul differential is a map
+</p>
+
+<p>
+\[ \kappa \colon \Lambda^{k} \to \Lambda^{k - 1} \colon \omega \mapsto \omega \lrcorner \id \]
+</p>
+
+<p>
+Recall the identity (using the alternating property of forms)
+</p>
+
+<p>
+\[ \omega \lrcorner v \lrcorner v = \omega(v,v, \ldots) = 0 \]
+</p>
+
+<p>
+In this case we have,
+</p>
+
+<p>
+\[ \kappa \circ \kappa (\omega) = \omega \lrcorner \id \lrcorner \id = 0 \]
+</p>
+
+<p>
+Which defines a complex,
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & \Lambda^{n} \ar[r]^{\kappa} & \Lambda^{n - 1} \ar[r]^{\kappa} & \cdots \ar[r]^{k} & \Lambda^{0} \ar[r] & 0 & \text{Koszul Complex}
+}\end{xy}\]
+</p>
+
+<p>
+Let us calculate some examples:
+</p>
+
+<p>
+Koszul of a \( 0 \)-form (a function) is a \( -1 \)-form, hence zero (there are no \( -1 \) forms):   
+\[ \kappa(f) = 0 \]
+</p>
+
+<p>
+Koszul of a \( 1 \)-form (a function) is a \( 0 \)-form, a function:
+\[ \kappa(f dx^{1}) = f dx^{1} \lrcorner \id = f dx^{1} \left( \begin{bmatrix} x_{1} \\ \vdots \\ x_{n} \end{bmatrix} \right) = f x_1 \]
+Notice that we are just multiplying the function by an independent variable?
+We can see from this, if \( f \) is a polynomial, we are raising the degree by one. In other words, for polynomial differential forms, we have the complex,
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & \mathcal{P}_{r}\Lambda^{n} \ar[r]^{\kappa} & \mathcal{P}_{r + 1}\Lambda^{n - 1} \ar[r]^{\kappa} & \cdots \ar[r]^{k} & \mathcal{P}_{r+n}\Lambda^{0} \ar[r] & 0 & \text{Koszul Complex}
+}\end{xy}\]
+</p>
+
+<p>
+In \( \mathbb{R}^{3} \), 
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & \mathcal{P}_{r}\Lambda^{3} \ar[r]^{x} & \mathcal{P}_{r + 1}\Lambda^{2} \ar[r]^{\times x} & \mathcal{P}_{r + 2} \Lambda^{1} \ar[r]^{\cdot x} & \mathcal{P}_{r+3}\Lambda^{0} \ar[r] & 0 & \text{$3$D Koszul Complex}
+}\end{xy}\]
+</p>
+
+<p>
+This gives us a better appreciation for the Koszul operator. Much in the same way that the differential of a function, \( d \), allows us to study \( \nabla \), \( \nabla \cdot \), \( \nabla \times \) depending on the context, we now have an operator which is multiplication by \( x \), curling by \( x \), or dotting by \( x \) in different contexts.
+</p>
+
+<div class="THEOREM" id="orgc632052">
+<p>
+\[ \kappa(\omega \wedge \mu) = (\kappa \omega) \wedge \mu + (-1)^{k} \omega \wedge (\kappa \mu) \]
+</p>
+
+</div>
+
+<div class="PROOF" id="org9a86054">
+\begin{align*}
+i_{v_1}(\omega\wedge\phi)(v_2,\dots,v_{k+l})
+&=(\omega\wedge\phi)(v_1,\dots,v_{k+l}) \\
+&=\sum_{\sigma \in(k,l)}\text{sgn}(\sigma)\omega(v_{\sigma(1)},\dots v_{\sigma(k)})\phi(v_{\sigma(k+1)},\dots,v_{\sigma(k+l)}) \\
+&=\sum_{\sigma(1)=1}+\sum_{\sigma(k+1)=1} \\
+&=\sum_{\tau\in (k-1,l)}\text{sgn}(\tau)\omega(v_{\tau(1)},\dots v_{\sigma(k)})\phi(v_{\tau(k+1)},\dots,v_{\tau(k+l)})
++\sum_{\tau\in (k,l-1)}\text{sgn}(\tau)\omega(v_{\tau(1)},\dots v_{\tau(k)})\phi(v_{\tau(k+1)},\dots,v_{\tau(k+l)}).
+\end{align*}
+
+</div>
+
+
+<div class="THEOREM" id="org9592cd4">
+<p>
+\[ \kappa(dx^{1} \wedge dx^{3}) = x_{1} dx^{3} - x_{3} dx^{1} \]
+</p>
+
+</div>
+
+<p>
+Note that Koszul, \( \kappa \), increases polynomial degree and lowers form degree.
+Exterior differentiation, \( d \), decreases polynomial degree and increases form degree.
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+\mathcal{H}_{r+1}\Lambda^{k -1} \ar@<1ex>[r]^{d} & \ar@<1ex>[l]^{\kappa} \mathcal{H}_{r}\Lambda^{k} \ar@<1ex>[r]^{d} & \ar@<1ex>[l]^{\kappa} \mathcal{H}_{r- 1}\Lambda^{k + 1}
+}\end{xy}\]
+Hence, we can compose them to get back to the original space. The following theorem states that making a figure eight results in a scaled version of the identity.
+</p>
+
+<div class="THEOREM" id="orgfe58fff">
+<p>
+\[ (d \kappa + \kappa d) \omega = (k + r) \omega, \omega \in \mathcal{H}_{r}(\Lambda^{k}) \]
+</p>
+
+</div>
+
+<div class="PROOF" id="orgd469dde">
+<p>
+By Induction on the form degree \( k \).
+</p>
+
+<p>
+Base Case: \( k = 0 \)
+</p>
+
+<p>
+There are no \( -1 \)-forms so half of the statement goes away 
+\[ \begin{xy}
+\xymatrix{
+\mathcal{H}_{r}\Lambda^{0} \ar@<1ex>[r]^{d} & \ar@<1ex>[l]^{\kappa} \mathcal{H}_{r- 1}\Lambda^{1}
+}\end{xy}\]
+</p>
+
+<p>
+The statement then becomes, for \( u \) a homogeneous polynomial of degree \( r \), 
+</p>
+
+<p>
+\[ x \cdot \nabla u = r u \]
+</p>
+
+<p>
+Which is supposedly well known as "Euler's Identity".
+</p>
+
+<p>
+Subproof:
+</p>
+
+<p>
+\[ u(t x) = t^{r} u(x) \]
+</p>
+
+<p>
+Differentiate by \( t \),
+</p>
+
+<p>
+\[ r t^{r-1}u(x) = \sum_{i = 1}^{n} \frac{ \partial u}{ \partial (tx_{i})} \frac{ \partial (tx_{i})}{ \partial t} = \sum_{i = 1}^{n} \frac{ \partial u}{ \partial (tx_{i})} x_{i} = x \cdot \nabla_{tx} u  \]
+</p>
+
+<p>
+Setting \( t = 1 \) proves the claim.
+</p>
+
+<p>
+Now suppose that the claim is true for \( k \)-forms. Consider a \( k+1 \)-form. We may write any \( k +1 \)-form as \( \sum_{i} f_{i} dx^{i} \wedge \omega \) hence showing this result for the terms, \( dx^{i} \wedge \omega \) will prove the claim. The rest is a matter of calculation:
+</p>
+
+<p>
+\[ d \kappa (dx^{i} \wedge \omega) = d (x^{i} \omega - dx^{i} \wedge \kappa \omega) = dx^{i} \wedge \omega + x^{i}d\omega + dx^{i} \wedge d \kappa \omega \]
+</p>
+
+<p>
+\[ \kappa d(dx^{i} \wedge \omega) = - \kappa (dx^{i} \wedge d\omega) = -x^{i} d \omega + dx^{i} \wedge \kappa d \omega \]
+</p>
+
+<p>
+Therefore,
+</p>
+
+\begin{align}
+(d \kappa + \kappa d) (dx^{i} \wedge \omega)
+&= dx^{i} \wedge \omega + dx^{i} \wedge (d \kappa + \kappa d) \omega \\
+&= dx^{i} \wedge \omega + (k + r) dx^{i} \wedge \omega \\
+&= (k + r + 1) dx^{i} \wedge \omega
+\end{align}
+
+</div>
+
+<div class="PROOF" id="orgb390fe8">
+<p>
+By Cartan's Magic Formula,
+</p>
+
+<p>
+\[ \frac{ d }{ d t} (\varphi_{t}^{\ast} \omega) \vert_{t = 0} = \mathcal{L}_{v}(\omega) = d \omega \lrcorner v + d (\omega \lrcorner v) \]
+</p>
+
+<p>
+In the case of Koszul, \( v = \id \), so \( \varphi_{t} = e^{t} x \).
+</p>
+
+<p>
+\[ \omega_{e^{t}x}(e^{t}v_{1}, \ldots, e^{t} v_{k}) = e^{kt} e^{rt} \omega_{x}(v_{1}, \ldots, v_{k}) \]
+</p>
+
+<p>
+So \( \kappa d\omega + d \kappa \omega = \mathcal{L}_{\id}(\omega) = (r + k) \omega \). 
+</p>
+
+</div>
+
+<div class="THEOREM" id="orgad7a1c9">
+<p>
+The Polynomial de Rham and Koszul complexes are both exact.
+</p>
+
+<p>
+So if \( d \omega = 0 \) then \( \omega = d \eta \) for some \( \eta \).   
+</p>
+
+</div>
+
+<div class="PROOF" id="org3198502">
+<p>
+\[ \omega = (s + k)^{-1} (d \kappa + \kappa d) \omega = (s+k)^{-1} d \kappa \omega \]
+</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1127be3" class="outline-2">
+<h2 id="org1127be3"><span class="section-number-2">2.</span> Simulations</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+FENICS
+</p>
+
+<p>
+\[ \wedge dx \]
+</p>
+</div>
+</div>
+<div id="outline-container-org538d1ab" class="outline-2">
+<h2 id="org538d1ab"><span class="section-number-2">3.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Changed meeting time to twice (TR) a week for an hour.
+Read chapters 1 and 2. Alan and Jack will present C2. Sam and I will present C3.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcfdc985" class="outline-2">
+<h2 id="orgcfdc985"><span class="section-number-2">4.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Basic Notions of Homological Algebra:
+</p>
+</div>
+<div id="outline-container-org40926ff" class="outline-3">
+<h3 id="org40926ff"><span class="section-number-3">4.1.</span> 2.1 Graded vector spaces, chain complexes, and differentials</h3>
+</div>
+
+
+
+<div id="outline-container-orgc522214" class="outline-3">
+<h3 id="orgc522214"><span class="section-number-3">4.2.</span> 2.2</h3>
+</div>
+
+
+
+<div id="outline-container-org6d7c31a" class="outline-3">
+<h3 id="org6d7c31a"><span class="section-number-3">4.3.</span> 2.3</h3>
+</div>
+
+<div id="outline-container-org127f342" class="outline-3">
+<h3 id="org127f342"><span class="section-number-3">4.4.</span> 2.4</h3>
+</div>
+
+<div id="outline-container-org4541388" class="outline-3">
+<h3 id="org4541388"><span class="section-number-3">4.5.</span> 2.5</h3>
+</div>
+
+<div id="outline-container-org291c2af" class="outline-3">
+<h3 id="org291c2af"><span class="section-number-3">4.6.</span> 2.6</h3>
+</div>
+</div>
+<div id="outline-container-org278b313" class="outline-2">
+<h2 id="org278b313"><span class="section-number-2">5.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</div>
+<div id="outline-container-orga757435" class="outline-2">
+<h2 id="orga757435"><span class="section-number-2">6.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org8da55c6" class="outline-3">
+<h3 id="org8da55c6"><span class="section-number-3">6.1.</span> Types of Operators</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgc6623d6" class="outline-4">
+<h4 id="orgc6623d6"><span class="section-number-4">6.1.1.</span> Definition: Unbounded Operator</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+An <b>unbounded operator</b> between Hilbert spaces \( T \colon X \to Y \) is a partial linear function defined on a subspace \( D(T) \subseteq X \).
+</p>
+
+<p>
+These are just operators which are not everywhere defined.
+</p>
+
+<p>
+Every unbounded operator in this book will be densely defined, \( \overline{D(T)} = X \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgf267306" class="outline-4">
+<h4 id="orgf267306"><span class="section-number-4">6.1.2.</span> Definition: Equivalence of Unbounded Operators</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+Two unbounded operators \( T, S \) are equal if and only if
+</p>
+
+<p>
+\[ D(T) = D(S) \]
+</p>
+
+<p>
+and
+</p>
+
+<p>
+\[ \forall x \colon T(x) = S(x) \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgd2f7344" class="outline-4">
+<h4 id="orgd2f7344"><span class="section-number-4">6.1.3.</span> Example: The Gradient</h4>
+<div class="outline-text-4" id="text-6-1-3">
+<p>
+\[ X = L^{2}(\Omega), Y = L^{2}(\Omega) \]
+</p>
+
+\begin{align}
+T &\colon X \to Y \\
+T &\colon \phi \mapsto \text{grad} \phi
+\end{align}
+
+<p>
+Which is defined on the dense subspace \( H^{1}(\Omega) \) 
+</p>
+
+<p>
+We can also define it on the (again dense) subspace \( H^{1}_{0} \)
+</p>
+</div>
+</div>
+<div id="outline-container-org2d4fabd" class="outline-4">
+<h4 id="org2d4fabd"><span class="section-number-4">6.1.4.</span> Definition: Null Space of T</h4>
+</div>
+
+<div id="outline-container-orgc645d14" class="outline-4">
+<h4 id="orgc645d14"><span class="section-number-4">6.1.5.</span> Definition: Range of T</h4>
+</div>
+
+<div id="outline-container-org455446f" class="outline-4">
+<h4 id="org455446f"><span class="section-number-4">6.1.6.</span> Definition: Graph of T</h4>
+</div>
+
+<div id="outline-container-org27e61aa" class="outline-4">
+<h4 id="org27e61aa"><span class="section-number-4">6.1.7.</span> Definition: Graph Norm and Inner Product</h4>
+<div class="outline-text-4" id="text-6-1-7">
+<p>
+\[ \left\langle v , w \right\rangle_{D(T)} := \left\langle v,w \right\rangle_{X} + \left\langle Tv, Tw \right\rangle_{Y} \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org84b02ac" class="outline-3">
+<h3 id="org84b02ac"><span class="section-number-3">6.2.</span> Closed Operators</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org61be850" class="outline-4">
+<h4 id="org61be850"><span class="section-number-4">6.2.1.</span> Definition: Closed Operator</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<p>
+An operator \( T \) is closed if \( \Gamma(T) \) is a closed subset of \( X \times Y \).
+</p>
+
+<p>
+Equivalently:
+</p>
+
+<p>
+\[ v_{n} \to x, T v_{n} \to y \implies Tx = y \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgae39840" class="outline-4">
+<h4 id="orgae39840"><span class="section-number-4">6.2.2.</span> Theorem: Unbounded operator is Closed iff Domain with Graph Norm is Hilbert Space</h4>
+</div>
+</div>
+<div id="outline-container-orgbb83b58" class="outline-3">
+<h3 id="orgbb83b58"><span class="section-number-3">6.3.</span> Adjoint of an Unbounded Operator</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org1b77e93" class="outline-4">
+<h4 id="org1b77e93"><span class="section-number-4">6.3.1.</span> Definition: Adjoint</h4>
+<div class="outline-text-4" id="text-6-3-1">
+<p>
+The adjoint of \( T \colon X \to Y \) is another function \( T^{\ast} \colon Y \to X \) such that
+</p>
+
+<p>
+\[ \left\langle w, T v \right\rangle_{Y} = \left\langle T^{\ast} w , v \right\rangle_{X} \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgd03ad33" class="outline-4">
+<h4 id="orgd03ad33"><span class="section-number-4">6.3.2.</span> Proposition: Orthogonal Complement of Graph is Rotated Graph of Adjoint</h4>
+<div class="outline-text-4" id="text-6-3-2">
+<p>
+\[ \Gamma(T)^{\perp} = \tilde{\Gamma}(T^{\ast}) \]
+</p>
+
+<p>
+Proof,
+</p>
+
+<p>
+Let \( (x, w) \in X \times Y \) belong to \( \Gamma(T)^{\perp} \)  
+</p>
+
+<p>
+That means for \( (v , Tv) \in \Gamma(T) \),
+</p>
+
+<p>
+\[ \left\langle x , v  \right\rangle + \left\langle w , Tv \right\rangle = 0 \]
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1beb7d1" class="outline-2">
+<h2 id="org1beb7d1"><span class="section-number-2">7.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+</div>
+<div id="outline-container-org177e903" class="outline-2">
+<h2 id="org177e903"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+</div>
+<div id="outline-container-org86e8d16" class="outline-2">
+<h2 id="org86e8d16"><span class="section-number-2">9.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+</div>
+<div id="outline-container-org988b4dd" class="outline-2">
+<h2 id="org988b4dd"><span class="section-number-2">10.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+</div>
+<div id="outline-container-org02bd8b2" class="outline-2">
+<h2 id="org02bd8b2"><span class="section-number-2">11.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+</div>
+<div id="outline-container-org9cac5a9" class="outline-2">
+<h2 id="org9cac5a9"><span class="section-number-2">12.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+</div>
+<div id="outline-container-org1468002" class="outline-2">
+<h2 id="org1468002"><span class="section-number-2">13.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+</div>
+<div id="outline-container-orgb24338b" class="outline-2">
+<h2 id="orgb24338b"><span class="section-number-2">14.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+</div>
+<div id="outline-container-org884edfa" class="outline-2">
+<h2 id="org884edfa"><span class="section-number-2">15.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+</div>
+<div id="outline-container-orgd400596" class="outline-2">
+<h2 id="orgd400596"><span class="section-number-2">16.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+</div>
+<div id="outline-container-org9023119" class="outline-2">
+<h2 id="org9023119"><span class="section-number-2">17.</span> <span class="done DONE">DONE</span> Hodge Decomposition</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-org7a3a710" class="outline-3">
+<h3 id="org7a3a710"><span class="section-number-3">17.1.</span> Statement</h3>
+<div class="outline-text-3" id="text-17-1">
+<p>
+Every equivalence class in \( H^{k}(\Omega) \) contains one Harmonic form. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgcd9be58" class="outline-3">
+<h3 id="orgcd9be58"><span class="section-number-3">17.2.</span> Solution</h3>
+<div class="outline-text-3" id="text-17-2">
+<p>
+\( \mathfrak{Z}^{k} = \mathcal{N}(d^{k}) \) 
+</p>
+
+<p>
+\[ \mathfrak{H}^{k} = \mathfrak{Z}^{k} \cap \mathfrak{Z}^{\ast}_{k} \]
+</p>
+
+<p>
+\[ \mathcal{H} = \mathfrak{Z}^{k} / \mathfrak{B}^{k} \]
+</p>
+
+<p>
+First, the Harmonic \( k \)-forms \( \mathfrak{H}^{k} \) form a closed subspace of the set of all forms.
+</p>
+
+<p>
+Suppose \( h \) is harmonic, 
+</p>
+
+<p>
+\[ \| h \|_{V \cap V^{\ast}}^{2} = 2 \| h \|^{2} + \| dh \|^{2} + \| d^{\ast} h \|^{2} \]
+</p>
+
+<p>
+\[ \| h \|_{V \cap V^{\ast}}^{2} = 2 \| h \|^{2} \]
+</p>
+
+<p>
+\[ \| h_{n} \|_{V \cap V^{\ast}}^{2} = 2 \| h \|^{2} \]
+</p>
+
+<p>
+If that is true, then
+</p>
+
+<p>
+\[ \mathcal{H}^{k} = \mathfrak{H}^{k} \oplus (\mathfrak{H}^{k})^{\perp} \]
+</p>
+
+<p>
+Let \( \omega \in \mathcal{H}^{k} \) and \( h \in \mathfrak{H}^{k} \) then
+</p>
+
+<p>
+\[ \left\langle \Delta \omega, h \right\rangle = \left\langle \omega , \Delta h \right\rangle = \left\langle \omega, 0 \right\rangle = 0 \] 
+</p>
+
+<p>
+This means, \( \mathcal{R}(\Delta) \subseteq (\mathfrak{H}^{k})^{\perp} \) 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org770c7e9" class="outline-2">
+<h2 id="org770c7e9"><span class="section-number-2">18.</span> <span class="done DONE">DONE</span> Hodge Laplacian in \( \mathbb{R}^{3} \)</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+The de Rham complex for some open set \( \Omega \subseteq \mathbb{R}^{3} \) with Lipschitz boundary
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & W^{0} \ar[r]^{d} & W^{1} \ar[r]^{d} & W^{2} \ar[r]^{d} & W^{3} \ar[r] & 0 & \text{Base Space Complex} \\ 
+0 \ar[r] & V^{0} \ar[r]^{d} & V^{1} \ar[r]^{d} & V^{2} \ar[r]^{d} & V^{3} \ar[r] & 0 & \text{Domain Space Complex} \\
+0 & \ar[l]  V^{\ast}_{0} & \ar[l]^{d^{\ast}} V^{\ast}_{1} & \ar[l]^{d^{\ast}} V^{\ast}_{2} & \ar[l]^{d^{\ast}} V^{\ast}_{3} & \ar[l] 0 & \text{Adjoint Complex} \\
+}
+\end{xy} \]
+</p>
+
+
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & L^{2}(\Omega) \ar[r]^{\text{grad}} & L^{2}(\Omega;\mathbb{R}^{3}) \ar[r]^{\text{curl}} & L^{2}(\Omega;\mathbb{R}^{3}) \ar[r]^{\text{div}} & L^{2}(\Omega) \ar[r] & 0 & \text{Base Space Complex} \\ 
+0 \ar[r] & H^{1}(\Omega) \ar[r]^{\text{grad}} & H(\text{curl}) \ar[r]^{\text{curl}} & H(\text{div}) \ar[r]^{\text{div}} & L^{2}(\Omega) \ar[r] & 0 & \text{Domain Space Complex} \\
+0 & \ar[l] L^{2}(\Omega) & \ar[l]^{-\text{div}} \ring{H}(\text{div}) & \ar[l]^{\text{curl}} \ring{H}(\text{curl}) & \ar[l]^{-\text{grad}} \ring{H}^{1}(\Omega) & \ar[l] 0 & \text{Adjoint Complex}
+}
+\end{xy} \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgc818e94" class="outline-2">
+<h2 id="orgc818e94"><span class="section-number-2">19.</span> <span class="done DONE">DONE</span> Mixed Methods of Discretization</h2>
+<div class="outline-text-2" id="text-19">
+</div>
+<div id="outline-container-org9235592" class="outline-3">
+<h3 id="org9235592"><span class="section-number-3">19.1.</span> Mixed Weak Formulation</h3>
+<div class="outline-text-3" id="text-19-1">
+<p>
+<b>Given the Hilbert complexes</b>
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & W^{0} \ar[r]^{d} & W^{1} \ar[r]^{d} & \cdots \ar[r]^{d} & W^{n} \ar[r] & 0 & \text{Base Space Complex} \\ 
+0 \ar[r] & V^{0} \ar[r]^{d} & V^{1} \ar[r]^{d} & \cdots \ar[r]^{d} & V^{n} \ar[r] & 0 & \text{Domain Space Complex}
+}
+\end{xy} \]
+</p>
+
+
+<p>
+<b>We can pose the following problem at some index \( k \)</b>
+</p>
+
+<p>
+Given \( f \in W^{k} \), find \( \sigma \in V^{k-1} \), \( u \in V^{k} \), and \( p \in \mathfrak{H}^{k} \) such that
+</p>
+
+\begin{align}
+\left\langle \sigma , \tau \right\rangle - \left\langle u , dt \right\rangle &= 0 &&\tau \in V^{k-1} \\
+\left\langle d\sigma , v \right\rangle + \left\langle du , dv \right\rangle + \left\langle p , v \right\rangle &= \left\langle f , v \right\rangle &&v \in V^{k} \\
+\left\langle u , q \right\rangle &= 0 &&q \in \mathfrak{H}^{k}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org8fa8afb" class="outline-3">
+<h3 id="org8fa8afb"><span class="section-number-3">19.2.</span> Galerkin Method</h3>
+<div class="outline-text-3" id="text-19-2">
+<p>
+Galerkin Method looks at finite dimensional subspaces so that the linear equations produce systems of equations.
+</p>
+
+<p>
+In this case, we look at finite dimensional subspaces \( V_{h}^{j} \) of \( V^{j} \). From this choice, we can define:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Definition</th>
+<th scope="col" class="org-left">Symbol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Discrete Cocycles</b></td>
+<td class="org-left">\( \mathfrak{Z}_{h}^{j} := \left\{ v \in V_{h}^{j} \middle\vert dv = 0 \right\} \subseteq \mathfrak{Z}^{j} \)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Discrete Coboundaries</b></td>
+<td class="org-left">\( \mathfrak{B}_{h}^{j + 1} := \left\{ dv \middle\vert v \in V_{h}^{j} \right\} \subseteq \mathfrak{B}^{j + 1} \)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Discrete Harmonic Forms</b></td>
+<td class="org-left">\( \mathfrak{H}_{h}^{k} = \left\{ v \in \mathfrak{Z}_{h}^{k} \middle\vert v \perp \mathfrak{B}_{h}^{k} \right\} \)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+We should note that there are discrete harmonic forms which are not true harmonic forms:
+</p>
+
+<p>
+\[ \mathfrak{H}_{h}^{k} = \mathfrak{Z}_{h}^{k} \cap \mathfrak{B}^{k,\perp}_{h} \not\subset \mathfrak{Z}^{k} \cap \mathfrak{B}^{k,\perp} = \mathfrak{H}^{k}  \]
+</p>
+
+<p>
+This is because true harmonic forms are orthogonal for all \( \mathfrak{B}^{k} \), discrete harmonic forms are orthogonal to a subset. 
+</p>
+
+<p>
+<b>Given the closed Hilbert complex</b>
+</p>
+
+<p>
+\[ \begin{xy}
+\xymatrix{
+0 \ar[r] & V^{0}_{h} \ar[r]^{d} & V^{1}_{h} \ar[r]^{d} & \cdots \ar[r]^{d} & V^{n}_{h} \ar[r] & 0 & \text{Base Space Complex} \\ 
+0 \ar[r] & V^{0}_{h} \ar[r]^{d} & V^{1}_{h} \ar[r]^{d} & \cdots \ar[r]^{d} & V^{n}_{h} \ar[r] & 0 & \text{Domain Space Complex (Finite Dim Closed)}
+}
+\end{xy} \]
+</p>
+
+<p>
+We have all of the theory which backs up abstract Hilbert complexes. That is, we have:
+</p>
+
+<ul class="org-ul">
+<li>A Hodge Decomposition</li>
+<li>A Poincare Constant</li>
+<li>Abstract Hodge Laplacian</li>
+<li>Existence of Solutions to Hodge Laplacian</li>
+<li>Adjoint</li>
+<li>Harmonic Forms</li>
+</ul>
+
+<p>
+<b>We can pose the following problem at some index \( k \)</b>
+</p>
+
+<p>
+Given \( f \in W^{k} \), find \( \sigma_{h} \in V^{k-1}_{h} \), \( u_{h} \in V^{k}_{h} \), and \( p_{h} \in \mathfrak{H}^{k}_{h} \) such that
+</p>
+
+\begin{align}
+\left\langle \sigma_{h} , \tau \right\rangle - \left\langle u_{h} , dt \right\rangle &= 0 &&\tau \in V^{k-1}_{h} \\
+\left\langle d\sigma_{h} , v \right\rangle + \left\langle du_{h} , dv \right\rangle + \left\langle p_{h} , v \right\rangle &= \left\langle f , v \right\rangle &&v \in V^{k}_{h} \\
+\left\langle u_{h} , q \right\rangle &= 0 &&q \in \mathfrak{H}^{k}_{h}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org62b7fe0" class="outline-3">
+<h3 id="org62b7fe0"><span class="section-number-3">19.3.</span> Gap Between \( \mathfrak{H} \) and \( \mathfrak{H}_{h} \)</h3>
+<div class="outline-text-3" id="text-19-3">
+<p>
+From now on, assume anything with \( (\cdot)_{h} \) is a finite dimensional form of \( (\cdot) \) and that it satisfies the three nice properties in 5.2.2.  
+</p>
+
+<div class="THEOREM" id="org125cace">
+<p>
+If \( \pi_{h} \) has satisfies the weak approximation property:
+</p>
+
+<p>
+\[ \| q - \pi_{h} q \| < \| q \|, 0 \neq q \in \mathfrak{H}^{k} \]
+</p>
+
+
+<p>
+Then \( \pi_{h} \) induces an isomorphism from \( \mathcal{H}^{k} \) onto \( \mathcal{H}^{k}_{h} \).  
+</p>
+
+</div>
+
+<p>
+This tells us that \( \mathfrak{H}^{k} \) and \( \mathfrak{H}^{k}_{h} \) are isomorphic as well. This is important because part of the problem formulation is
+</p>
+
+<p>
+\[ \left\langle u , q \right\rangle = 0, q \in \mathfrak{H}^{k} \]
+</p>
+
+<p>
+If \( \mathfrak{H}^{k} \) and \( \mathfrak{H}^{k}_{h} \) were not isomorphic (different dimensions) then the number of conditions would not match up to solve the problem.
+</p>
+
+<div class="PROOF" id="orgd144e16">
+<p>
+We know that projections are surjections, hence we need only show \( \pi_{h} \) is an injection.
+</p>
+
+<p>
+We may do this by showing the null space is trivial
+</p>
+
+<p>
+\[ \pi_{h}(z) = 0 \implies z = 0 \]
+</p>
+
+<p>
+By definition, the homology is \( \mathcal{H}^{k} = \mathfrak{Z}^{k} / \mathfrak{B}^{k} \), thus this definition boils down to
+</p>
+
+<p>
+\[ \pi_{h}(z) \in \mathfrak{B}^{k}_{h} \implies z \in \mathfrak{B}^{k} \]
+</p>
+
+\begin{align}
+z
+&= b + q & \quad & \text{Hodge Decomposition } \mathfrak{Z}^{k} = \mathfrak{B}^{k} \oplus \mathfrak{H}^{k}
+\end{align}
+
+<p>
+Because \( \pi_{h} \) is a cochain map, \( \pi_{h}(b) \in \mathfrak{B}^{k} \). By hypothesis \( \pi_{h}(z) \in \mathfrak{B}^{k} \).
+Hence, \( \pi_{h}(z) - \pi_{h}(b) = \pi_{h}(q) \in \mathfrak{B}^{k} \).
+</p>
+
+<p>
+But \( q \perp \mathfrak{B}^{k} \) because \( q \in \mathfrak{H}^{k} \), hence \( q \perp \pi_{h}(q) \).
+</p>
+
+<p>
+If \( \| q \| \neq 0 \) then, by Pythagoras and the approximation hypothesis,
+</p>
+
+<p>
+\[ \| q \| > \| q - \pi_{h}(q) \|^{2} = \| q \|^{2} + \| \pi_{h}(q) \|^{2} \geq \| q \|^{2} \]
+</p>
+
+<p>
+Thus \( \| q \| = 0 \). 
+</p>
+
+</div>
+
+<div class="THEOREM" id="org4c4cced">
+<p>
+The "gap" between harmonic forms satisfies the following inequality:
+</p>
+\begin{align}
+\gap(\mathfrak{H}^{k}, \mathfrak{H}^{k}_{h})
+&:= \max \left( \sup_{\substack{u \in \mathfrak{H} \\ \| u \| = 1}} \inf_{v \in \mathfrak{H}_{h}} \| u - v \|_{V}, \sup_{\substack{v \in \mathfrak{H}_{h} \\ \| v \| = 1}} \inf_{u \in \mathfrak{H}} \| u - v \|_{V} \right) \\
+&\leq \sup_{\substack{q \in \mathfrak{H} \\ \| q \| = 1}} \| (I - \pi_{h}) q \|_{V}
+\end{align}
+
+</div>
+
+<p>
+The <b>gap</b> can be calculated for two Hilbert spaces. It is \( 1 \) if they are orthogonal and \( 0 \) if they coincide. It's like a measure of the angle of two Hilbert spaces.  
+</p>
+
+<div class="PROOF" id="org26bab04">
+<p>
+
+</p>
+
+<p>
+First we prove the inequalities:
+</p>
+
+\begin{align}
+\| (I - P_{\mathfrak{H}_{h}}) q \|_{V} &\leq \| (I - \pi_{h}^{k}) q \|_{V} && q \in \mathfrak{H}^{k} \\
+\| (I - P_{\mathfrak{H}}) q \|_{V} &\leq \| (I - \pi_{h}^{k}) P_{\mathfrak{H}} q \|_{V} && q \in \mathfrak{H}^{k}_{h}
+\end{align}
+
+
+<p>
+For the top inequality, suppose \( q \in \mathfrak{H} \).
+Then, \( P_{\mathfrak{H}_{h}}q = P_{\mathfrak{Z}_{h}}q \) because \( \mathfrak{Z}_{h} = \mathfrak{H}_{h} \oplus \mathfrak{B}_{h} \) and \( q \perp \mathfrak{B} \supset \mathfrak{B}_{h} \).
+This means that \( P_{\mathfrak{H}_{h}}q \) is the closest element of \( \mathfrak{Z}_{h} \) (in the \( V \) norm). But \( \pi_{h}(q) \in \mathfrak{Z}_{h} \) as \( \pi_{h} \) is a cochain map.
+</p>
+
+<p>
+For the bottom inequality, suppose \( q \in \mathfrak{H}_{h} \subset \mathfrak{Z}_{h} \subset \mathfrak{Z} \).
+By Hodge decomposition, \( q - P_{\mathfrak{H}}(q) \in \mathfrak{B}  \) hence \( \pi_{h}(q - P_{\mathfrak{H}}(q)) \in \mathfrak{B}_{h} \).
+Because \( \pi_{h}(q - P_{\mathfrak{H}}(q)) \perp \mathfrak{H} \) and \( \pi_{h}(q - P_{\mathfrak{H}}(q)) \perp \mathfrak{H}_h \) we have that it majorizes the norm.
+</p>
+
+\begin{align}
+\| q - P_{\mathfrak{H}}(q) \|
+&\leq \| q - P_{\mathfrak{H}}(q) - \pi_{h}(q - P_{\mathfrak{H}}(q)) \| \\
+&= \| (I - \pi_{h})(q - P_{\mathfrak{H}}(q)) \| \\
+&= \| (I - \pi_{h})(P_{\mathfrak{H}}(q)) \|
+\end{align}
+
+<p>
+The gap is:
+</p>
+
+\begin{align}
+\gap(\mathfrak{H}^{k}, \mathfrak{H}^{k}_{h})
+&= \max \left( \sup_{\substack{u \in \mathfrak{H} \\ \| u \| = 1}} \inf_{v \in \mathfrak{H}_{h}} \| u - v \|_{V}, \sup_{\substack{v \in \mathfrak{H}_{h} \\ \| v \| = 1}} \inf_{u \in \mathfrak{H}} \| u - v \|_{V} \right) \\
+&\leq \max \left( \sup_{\substack{u \in \mathfrak{H} \\ \| u \| = 1}} \| u - P_{\mathfrak{H}_{h}}u \|_{V}, \sup_{\substack{v \in \mathfrak{H}_{h} \\ \| v \| = 1}} \| P_{\mathfrak{H}}v - v \|_{V} \right) \\
+&\leq \max \left( \sup_{\substack{u \in \mathfrak{H} \\ \| u \| = 1}} \| (I - \pi_{h}) u \|_{V}, \sup_{\substack{v \in \mathfrak{H}_{h} \\ \| v \| = 1}} \| (I - \pi_{h})P_{\mathfrak{H}}v \|_{V} \right) \\
+&\leq \max \left( \sup_{\substack{u \in \mathfrak{H} \\ \| u \| = 1}} \| (I - \pi_{h}) u \|_{V}, \sup_{\substack{v \in \mathfrak{H} \\ \| v \| = 1}} \| (I - \pi_{h})v \|_{V} \right) \\
+&\leq \sup_{\substack{q \in \mathfrak{H} \\ \| q \| = 1}} \| (I - \pi_{h}) q \|_{V}
+\end{align}
+
+</div>
+</div>
+</div>
+<div id="outline-container-org479b2c7" class="outline-3">
+<h3 id="org479b2c7"><span class="section-number-3">19.4.</span> The Discrete Poincaré Inequality and Stability</h3>
+<div class="outline-text-3" id="text-19-4">
+<p>
+Last time we were given the stability estimate of the Hodge Laplacian problem for any closed Hilbert Complex. Writing this down in the discrete complex yields:
+</p>
+
+<p>
+\[ \| \sigma_{h} \|_{V} + \| u_{h} \|_{V} + \| p_{h} \| \leq c_{h} \| f \| \]
+</p>
+
+
+<div class="THEOREM" id="org8dcc2e0">
+<p>
+Given a \( V \)-bounded cochain projection \( \pi_{h} \) onto finite dimensional subcomplex \( V_{h} \), then for any cochain orthogonal to the nullspace we have the Poincaré inequality
+</p>
+
+<p>
+\[ \| v \|_{V} \leq c_{P} \| \pi^{k}_{h} \| \| dv \|_{V}, v \in \mathfrak{Z}^{k, \perp}_{h} \cap V^{k}_{h} \]
+</p>
+
+<p>
+Where \( c_{P} \) is the Poincaré constant (dependent on the problem formulation only, not on \( h \)!!). 
+</p>
+
+</div>
+
+<div class="PROOF" id="org3823f4d">
+<p>
+Given \( v \in \mathfrak{Z}^{k, \perp}_{h} \cap V^{k}_{h} \), we have \( z \in \mathfrak{Z}^{k, \perp} \cap V^{k} \) such that \( dz = dv \).
+This is possible because \( dv \in \mathcal{R}(d) \simeq \mathcal{N}(d)^{\perp} \).
+By the continuous Poincaré, we have
+</p>
+
+<p>
+\[ \| z \|_{V} \leq c_{P} \| dz \| \]
+</p>
+
+<p>
+Consider \( v - \pi_{h}(z) \in V_{h}^{k} \),
+</p>
+
+<p>
+Calculate,
+</p>
+\begin{align}
+d \pi_{h} z
+= \pi_{h} dz &\quad & \pi_{h} \text{ commutes with } d \\
+= \pi_{h} dv && dv = dz \\
+= dv && \text{Subcomplex Property } dv \in V_{h}^{k + 1} \\
+\end{align}
+
+<p>
+Hence \( d(v - \pi_{h}(z)) = 0 \) so \( v - \pi_{h}(z) \in \mathfrak{Z}_{h}^{k} \). Because \( v \in \mathfrak{Z}_{h}^{k,\perp} \) we have that \( v - \pi_{h}(z) \perp v \). By Pythagoras,
+</p>
+
+<p>
+\[ \| v \|_{V}^{2} = \left\langle v , \pi_{h}^{k}z \right\rangle + \left\langle v , v - \pi_{h}^{k}z \right\rangle = \left\langle v , \pi_{h}^{k}z \right\rangle \leq \| v \| \pi_{h}^{k}\| \| z \| \]
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ \| v \| \leq \| \pi_{h}^{k} \| \| z \| \leq c_{P} \| \pi_{h}^{k} \| \| dv \| \]
+</p>
+
+</div>
+
+
+<div class="THEOREM" id="orgb1429e2">
+<p>
+Given the same setup as previous, the inf-sup constant \( \gamma_{h} \) can be bounded below by a positive constant depending only on \( c_{P} \) and \( \| \pi_{h}^{k} \| \).
+</p>
+
+<p>
+The stability estimate
+</p>
+
+\begin{align}
+\text{inf-sup constant } \gamma_{h} &\geq \text{constant}(c_{P}, \| \pi_{h}^{k} \|) > 0\\
+\text{Stability constant } c_{h} &= \text{constant}(c_{P}, \| \pi_{h}^{k} \|) \geq 0
+\end{align}
+
+</div>
+</div>
+</div>
+<div id="outline-container-orge7cead2" class="outline-3">
+<h3 id="orge7cead2"><span class="section-number-3">19.5.</span> Error Estimates</h3>
+<div class="outline-text-3" id="text-19-5">
+<div class="THEOREM" id="org83ac2da">
+<p>
+
+</p>
+
+</div>
+
+<div class="THEOREM" id="orgb476763">
+<p>
+
+</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org2facd43" class="outline-2">
+<h2 id="org2facd43"><span class="section-number-2">20.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+</div>
+<div id="outline-container-orgafb8f34" class="outline-2">
+<h2 id="orgafb8f34"><span class="section-number-2">21.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-21">
+</div>
+</div>
+<div id="outline-container-org97a51bf" class="outline-2">
+<h2 id="org97a51bf"><span class="section-number-2">22.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+</div>
+<div id="outline-container-org3682b11" class="outline-2">
+<h2 id="org3682b11"><span class="section-number-2">23.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+</div>
+<div id="outline-container-org19e8b4e" class="outline-2">
+<h2 id="org19e8b4e"><span class="section-number-2">24.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-24">
+</div>
+</div>
+<div id="outline-container-org88bb301" class="outline-2">
+<h2 id="org88bb301"><span class="section-number-2">25.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+</div>
+<div id="outline-container-org98939fb" class="outline-2">
+<h2 id="org98939fb"><span class="section-number-2">26.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+</div>
+<div id="outline-container-orgc818da8" class="outline-2">
+<h2 id="orgc818da8"><span class="section-number-2">27.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-27">
+</div>
+</div>
+<div id="outline-container-orgef0c243" class="outline-2">
+<h2 id="orgef0c243"><span class="section-number-2">28.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-28">
+</div>
+</div>
+<div id="outline-container-org3277f10" class="outline-2">
+<h2 id="org3277f10"><span class="section-number-2">29.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-29">
+</div>
+</div>
+<div id="outline-container-orgf1bdaf3" class="outline-2">
+<h2 id="orgf1bdaf3"><span class="section-number-2">30.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-30">
+</div>
+</div>
+<div id="outline-container-org19915f1" class="outline-2">
+<h2 id="org19915f1"><span class="section-number-2">31.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-31">
+</div>
+</div>
+<div id="outline-container-org47050ae" class="outline-2">
+<h2 id="org47050ae"><span class="section-number-2">32.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-32">
+</div>
+</div>
+<div id="outline-container-orge079cef" class="outline-2">
+<h2 id="orge079cef"><span class="section-number-2">33.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-33">
+</div>
+</div>
+<div id="outline-container-org8174240" class="outline-2">
+<h2 id="org8174240"><span class="section-number-2">34.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-34">
+</div>
+</div>
+<div id="outline-container-orgf093d8c" class="outline-2">
+<h2 id="orgf093d8c"><span class="section-number-2">35.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-35">
+</div>
+</div>
+<div id="outline-container-org2248df1" class="outline-2">
+<h2 id="org2248df1"><span class="section-number-2">36.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-36">
+</div>
+</div>
+<div id="outline-container-org30677ed" class="outline-2">
+<h2 id="org30677ed"><span class="section-number-2">37.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div class="outline-text-2" id="text-37">
+</div>
+</div>
+</div>
+</body>
+</html>

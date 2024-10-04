@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH 649K Mileyko</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MATH 649K Mileyko</h1>
+<p>
+Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+<div id="outline-container-org3d33c5f" class="outline-2">
+<h2 id="org3d33c5f"><span class="section-number-2">1.</span> Homework 1</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgf8e5953" class="outline-3">
+<h3 id="orgf8e5953"><span class="section-number-3">1.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org427286d" class="outline-4">
+<h4 id="org427286d"><span class="section-number-4">1.1.1.</span> Statement</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Let
+</p>
+
+<ul class="org-ul">
+<li>\( x_{0}, \ldots, x_{n} \in | K | \) where \( K \) is a simplicial complex</li>
+<li>\( w_{0}, \ldots , w_{n} \in \mathbb{R}_{> 0} \) such that \( w_{0} + \cdots + w_{n} = 1 \)</li>
+</ul>
+
+<p>
+Show
+</p>
+
+<p>
+\[ x = \sum_{i = 0}^{n} w_{i} x_{i} \in | K | \iff \exists \sigma \in K \colon x_{0}, \ldots, x_{n} \in \sigma \]
+</p>
+</div>
+</div>
+<div id="outline-container-org22734f1" class="outline-4">
+<h4 id="org22734f1"><span class="section-number-4">1.1.2.</span> Solution</h4>
+<div class="outline-text-4" id="text-1-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2ac9700"></a>Sufficiency<br />
+<div class="outline-text-5" id="text-1-1-2-1">
+<p>
+Suppose that \( x = \sum_{i = 0}^{n} w_{i} x_{i} \in |K| \) 
+</p>
+
+<p>
+Consider the carrier, \( \carr(x) = [v_{0}, \ldots, v_{\ell}] \)
+</p>
+
+<p>
+Then
+</p>
+\begin{align}
+x
+&= \sum_{j = 0}^{\ell} x(v_{j}) v_{j} \tag{Barycentric Coordinates} \\
+&= \sum_{j = 0}^{\ell} \left(\sum_{i = 0}^{n} w_{i}x_{i}(v_{j}) \right) v_{j} \tag{Def $x$}
+\end{align}
+
+<p>
+By minimality of the carrier, we know that \( x(v_{j}) \) is strictly positive. This means for every \( j \), there is some \( i \) such that the point \( x_{i} \) has positive barycentric coordinate with respect to \( v_{j} \). This means \( x_{i} \in \carr(x) \).
+</p>
+</div>
+</li>
+<li><a id="orgd53ce80"></a>Necessity<br />
+<div class="outline-text-5" id="text-1-1-2-2">
+<p>
+Suppose \( x_{0}, \ldots, x_{n} \in \sigma \subseteq | K | \) 
+</p>
+
+\begin{lflalign}
+\{ x_{i} \}_{i = 0}^{n} &\subseteq \sigma  \tag{Hypothesis} \\
+\conv(\{ x_{i} \}_{i = 0}^{n}) &\subseteq \conv(\sigma) \tag{Convex Hull Monotonic} \\
+\conv(\{ x_{i} \}_{i = 0}^{n}) &\subseteq \sigma \tag{Convex Hull Idempotent}
+\end{lflalign}
+
+<p>
+Hence, \( \sum_{i = 0}^{n} w_{i} = 1 \) and \( w_{i} > 0 \) implies \( \sum_{i = 0}^{n} w_{i} x_{i} \in \conv(\{ x_{i} \}_{i = 0}^{n}) \subseteq  \sigma \subset | K | \) 
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3cf8612" class="outline-3">
+<h3 id="org3cf8612"><span class="section-number-3">1.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org3a0fa6d" class="outline-4">
+<h4 id="org3a0fa6d"><span class="section-number-4">1.2.1.</span> Statement</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Let \( K,L \) be simplicial complexes, \( f \colon |K| \to |L| \) continuous, \( g \colon |K| \to |L| \) simplicial. Show
+</p>
+
+<p>
+\[  g \text{ Simplicial Approximation of } f \iff f(\str(v))  \subset \str(g(v))   \]
+</p>
+</div>
+</div>
+<div id="outline-container-org0837c59" class="outline-4">
+<h4 id="org0837c59"><span class="section-number-4">1.2.2.</span> Solution</h4>
+<div class="outline-text-4" id="text-1-2-2">
+</div>
+<ol class="org-ol">
+<li><a id="orge4f1b92"></a>Sufficiency<br />
+<div class="outline-text-5" id="text-1-2-2-1">
+<p>
+Let \( g \) be a simplicial approximation of \( f \).
+</p>
+
+<p>
+Let \( v \in K \) be any vertex, and take any \( x \in \str(v) \).
+</p>
+
+<p>
+Then the barycentric coordinate of \( x \) with respect to \( v \) is positive \( x(v) > 0 \).
+</p>
+
+<p>
+Because \( g \) is simplicial, \( g(x(v) v) = x(v) g(v) > 0 \) thus \( g(x) \) has positive barycentric coordinate with respect to \( g(v) \). This means \( g(x) \in \str(g(v)) \). Hence \( g(v) \in \carr(g(x)) \).
+</p>
+
+<p>
+Because \( g \) is a simplicial approximation, we have that \( g(x) \in \carr(f(x)) \). We also have that \( \carr(g(x)) \subseteq \carr(f(x)) \), hence \( g(v) \in \carr(f(x)) \) so \( f(x) \in \str(g(v)) \).
+</p>
+
+<p>
+Because \( x \) was any element of \( \str(v) \) this shows that \( f(\str(v)) \subseteq \str(g(v)) \).
+</p>
+</div>
+</li>
+<li><a id="org2a3ee6b"></a>Necessity<br />
+<div class="outline-text-5" id="text-1-2-2-2">
+<p>
+Suppose \( f(\str(v)) \subseteq \str(g(v)) \)
+</p>
+
+<p>
+Consider an arbitrary \( x \in |K| \). Denote, \( x = \sum_{i = 0}^{n} \lambda_{i} v_{i} \), with \( \carr(x) = [v_{0}, \ldots, v_{n}] \).   
+</p>
+
+<p>
+For some vertex \( v_{i} \in \carr(x) \), then \( x \in \str(v_{i}) \).
+</p>
+
+<p>
+By hypothesis, this means \( f(x) \in \str(g(v_{i})) \).
+</p>
+
+<p>
+Thus, \( g(v_{i}) \in \carr(f(x)) \)
+</p>
+
+<p>
+Because \( g \) is simplicial, \( g(x) = \sum_{i = 0}^{n} \lambda_{i} g(v_{i}) \) which is a convex combination of items in \( \carr(f(x)) \).
+</p>
+
+<p>
+This means \( g(x) \in \carr(f(x)) \).
+</p>
+
+<p>
+Hence, \( g \) is a simplicial approximation. 
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfc853ad" class="outline-3">
+<h3 id="orgfc853ad"><span class="section-number-3">1.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org2723588" class="outline-4">
+<h4 id="org2723588"><span class="section-number-4">1.3.1.</span> Statement</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Prove that if \( X \) is a compact metric space and \( \mathcal{U} \) is a collection of open sets covering \( X \), then there exists a positive number \( \varepsilon > 0 \) such that each subset of \( X \) of diameter \( < \varepsilon \) is contained in at least one set of the family \( \mathcal{U} \).     
+</p>
+</div>
+</div>
+<div id="outline-container-org82907cf" class="outline-4">
+<h4 id="org82907cf"><span class="section-number-4">1.3.2.</span> Solution</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+Let \( X \) be compact metric space, \( \mathcal{U} \) be an open cover.
+</p>
+
+<p>
+If \( X \in \mathcal{U} \) then any \( \varepsilon \) will do.
+</p>
+
+<p>
+Suppose then that \( X \not\in \mathcal{U} \). By compactness, there is a finite sub covering \( \{ U_{i} \}_{i = 1}^{n} \subseteq \mathcal{U} \), where by hypothesis \( U_{i}^{c} \neq \emptyset \). Define \( f \colon X \to \mathbb{R} \) via
+</p>
+
+<p>
+\[ x \mapsto \frac{1}{n} \sum_{i = 1}^{n} d(x, U_{i}^{c}) \]
+</p>
+
+<p>
+We note that \( f \) is continuous as the metric \( d \) is a continuous function and finite sums of continuous functions are continuous. Because \( X \) is compact, \( f \) attains its max and minimum on \( X \). We note that the minimum must be strictly positive. Firstly, it is positive due to \( f \) being a sum of positive numbers. Secondly, the strictness,
+</p>
+
+\begin{lflalign}
+&f(x) = 0 \\
+\iff &\forall i \colon d(x, U_{i}^{c}) = 0 \\
+\iff & x \in \bigcap_{i = 1}^{n} U_{i}^{c}
+\end{lflalign}
+
+<p>
+But because \( U_{i} \) covers \( X \) this cannot happen. Hence, let \( \varepsilon = \inf_{x \in X} \frac{ f(x)}{2} \) and take any \( S \subseteq X \) such that \( \diam(S) < \varepsilon \).
+</p>
+
+<p>
+Note for any \( s \in S \), by hypothesis on the diameter,
+</p>
+
+<p>
+\[ S \subseteq B_{\varepsilon}(s) \]
+</p>
+
+<p>
+also \( f(s) \geq 2 \varepsilon \), hence by properties of averages, \( \exists i \colon d(x, U_{i}^{c}) \geq 2 \varepsilon \) 
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ S \subseteq B_\varepsilon(s) \subseteq U_{i} \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2155a91" class="outline-3">
+<h3 id="org2155a91"><span class="section-number-3">1.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-1-4">
+</div>
+<div id="outline-container-org3482ad5" class="outline-4">
+<h4 id="org3482ad5"><span class="section-number-4">1.4.1.</span> Statement</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+Use the lemma provided below (proven in class) to prove the Brouwer fixed point theorem, that is, every continuous map \( f \colon D \to D \), where \( D \subset \mathbb{R}^{n} \)  is a closed ball of positive radius, has a fixed point.
+</p>
+
+<p>
+LEMMA. Let \( S = [p_{0} , \ldots, p_{n} ] \) be a simplex and let \( A_{0} , \ldots, A_{n} \) be subsets of \( |S| \) such that for any face \( Q = [p_{i_{0}}, \ldots , p_{i_{k}} ] \) we have \( |Q| \subset A_{i_{0}} \cup \cdots \cup A_{i_{k}} \).
+</p>
+
+<p>
+Then \( A_{0} \cap \cdots \cap A_{n}  \neq \emptyset \).
+</p>
+</div>
+</div>
+<div id="outline-container-org0eced14" class="outline-4">
+<h4 id="org0eced14"><span class="section-number-4">1.4.2.</span> Solution</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<p>
+Let \( \Delta^{n} \) be an \( n \)-simplex, \( \varphi \colon \Delta^{n} \to \Delta^{n} \) be a continuous map. Define the following closed subsets,
+</p>
+
+<p>
+\[ A_{i} = \{ x \in \Delta^{n} \vert x_{i} \geq \varphi_{i}(x) \} \]
+</p>
+
+<p>
+Let \( Q = [p_{i_{0}}, \ldots, p_{i_{k}}] \) be any face of a simplex
+</p>
+
+<p>
+Suppose that \( x \in | Q | \). By way of contradiction suppose \( x \) were not in \( A_{i} \) for any \( i \) then
+</p>
+
+\begin{align}
+1
+&= \sum_{n = 0}^{k} x_{i_{n}} \tag{Def. Barycentric Coordinates} \\
+&< \sum_{n = 0}^{k} \varphi_{i_{n}}(x) \tag{Hypothesis $x \not\in A_{i} \implies x_{i} < \varphi_{i}(x)$} \\
+&\leq \sum_{i = 0}^{n} \varphi_{i}(x) \tag{Sum of More Positive}\\
+&= 1 \tag{Def. Barycentric Coordinates}
+\end{align}
+
+<p>
+This is a contradiction. Hence, \( \exists i \colon x \in A_{i} \). Thus, \( |Q| \subseteq \cup_{i_{n}} A_{i_{n}} \). 
+</p>
+
+<p>
+By the lemma,
+</p>
+
+<p>
+\[ \bigcap_{i} A_{i} \neq \emptyset \]
+</p>
+
+<p>
+Let \( x \in \bigcap_{i} A_{i} \). From this, \( \forall i \colon \varphi_{i} \leq x_{i} \). We may deduce that these are in fact equalities. By way of contradiction, suppose there is such an \( i \) such that \( \varphi_{i}(x) < x_{i} \) then,
+</p>
+\begin{align}
+1
+&= \sum_{n = 0}^{k} \varphi_{n}(x) \tag{Def. Barycentric Coordinates} \\
+&< \sum_{n = 0}^{k} x_{n} \tag{Hypothesis} \\
+&= 1 \tag{Def. Barycentric Coordinates}
+\end{align}
+
+<p>
+Hence \( \varphi_{i}(x) = x_{i} \) for all \( i \). Therefore \( x \) is a fixed point.   
+</p>
+
+<p>
+Now that we have proven the theorem for the simplex, we note that the \( n \)-disk is homeomorphic to the \( n \)-simplex. Let \( D \) be the closed unit ball, \( f \colon D \to D \) be continuous, and let \( \varphi \colon D \to \Delta^{n} \) be a homeomorphism to the \( n \) simplex.
+</p>
+
+<p>
+Then \( \varphi \circ f \circ \varphi^{-1} \colon \Delta^{n} \to \Delta^{n} \) is a continuous map from the simplex to the simplex. By above, it has a fixed point \( x \).
+</p>
+
+<p>
+\[ x = \varphi \circ f \circ \varphi^{-1}(x) \iff \varphi^{-1}(x) = f \circ \varphi^{-1}(x) \]
+</p>
+
+<p>
+Thus the sphere has \( \varphi^{-1}(x) \) as a fixed point. 
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0194e56" class="outline-2">
+<h2 id="org0194e56"><span class="section-number-2">2.</span> Final</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb689572" class="outline-3">
+<h3 id="orgb689572"><span class="section-number-3">2.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Let \( f, g \colon |P| \to |Q| \) be continuous functions such that \( \forall x \in |P| \colon \exists v \in \vertex(Q) \colon f(x), g(x) \in \str(v)  \).
+</p>
+
+<p>
+Let \( v(x) = \vertex(\carr(f(x))) \cup \vertex(\carr(g(x))) \), we may order \( v(x) \) arbitrarily by \( v_{i} \).  We may write \( f(x) \) and \( g(x) \) in Barycentric coordinates with respect to a common vertex set.
+</p>
+
+\begin{align*}
+f(x) &= \sum_{v_{i} \in v(x)} f(x)(v_{i})v_{i} \\
+g(x) &= \sum_{v_{i} \in v(x)} g(x)(v_{i})v_{i}
+\end{align*}
+
+<p>
+We may consider a new function,
+</p>
+
+<p>
+\[ h(x) = \sum_{v_{i} \in v(x)} \min(f(x)(v_{i}), g(x)(v_{i})) v_{i} \]
+</p>
+
+<p>
+This quantity is well defined as simplices have finite number of vertices so \( v(x) \) is finite. Also, every \( f(x) \) and \( g(x) \) belong to some simplex so \( v(x) \) is nonempty.
+</p>
+
+<p>
+We also note that \( \min(f(x)(v_{i}), g(x)(v_{i})) \) is a continuous quantity for each \( v_{i} \). This is because \( \min \colon \mathbb{R}^{2} \to \mathbb{R} \) is continuous and \( f \) and \( g \) are continuous, also the projection to a Barycentric coordinate is continuous.
+</p>
+
+<p>
+We have that \( h \) is continuous because finite sums are continuous in finite dimensional spaces (of which a simplex is contained in one). 
+</p>
+
+<p>
+Now we prove that \( f \simeq h \simeq g \) proving our result.
+</p>
+
+<p>
+Consider \( x \in | P | \), and \( \carr(h(x)) = [v_{0}, \ldots, v_{n}] \). Because \( \forall 0 \leq i \leq n \colon h(x)(v_{i}) > 0 \) we have that \( \forall 0 \leq i \leq n \colon f(x)(v_{i}) \geq \min(f(x)(v_{i}), g(x)(v_{i})) = h(x)(v_{i}) > 0 \) and \( \forall 0 \leq i \leq n \colon g(x)(v_{i}) \geq \min(f(x)(v_{i}), g(x)(v_{i})) = h(x)(v_{i}) > 0 \) by construction.  
+</p>
+
+<p>
+This means that \( \carr(h(x)) \leq \carr(f(x)) \) and \( \carr(h(x)) \leq \carr(g(x)) \). Hence, there is a straight line homotopy from \( f(x) \) to \( h(x) \) and \( g(x) \) to \( h(x) \).  
+</p>
+
+<p>
+The straight line homotopy is thus in a common open vertex star because the coordinates are all strictly positive. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgae642c7" class="outline-3">
+<h3 id="orgae642c7"><span class="section-number-3">2.2.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+From the hypotheses we have the inclusions:
+</p>
+
+<p>
+\[ K \subseteq D_{\varepsilon}(P) \subseteq D_{2 \varepsilon}(K) \subseteq D_{3 \varepsilon}(P) \subseteq D_{4 \varepsilon}(K) \]
+</p>
+
+<p>
+With corresponding maps
+</p>
+
+<p>
+\[ H_{\ell}(K) \to H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{2 \varepsilon}(K)) \to H_{\ell}(D_{3 \varepsilon}(P)) \to H_{\ell}(D_{4 \varepsilon}(K)) \]
+</p>
+
+<p>
+First, we may restate the goal using the First Isomorphism Theorem:
+</p>
+
+<p>
+\[ \im( H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{3 \varepsilon}(P)) ) \simeq H_{\ell}(D_{\varepsilon}(P)) / \ker( H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{3 \varepsilon}(P)) ) \]
+</p>
+
+<p>
+Because \( 4 \varepsilon < \alpha \), we have that
+</p>
+
+<p>
+\[ H_{\ell}(K) \simeq H_{\ell}(D_{4 \varepsilon}(K) \]
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{4 \varepsilon}(K)) \simeq H_{\ell}(K) \]
+</p>
+
+<p>
+is surjective
+</p>
+
+<p>
+By first isomorphism theorem we have,
+</p>
+
+<p>
+\[ H_{\ell}(K) \simeq H_{\ell}(D_{\varepsilon}(P)) / \ker(H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{4 \varepsilon}(K))) \]
+</p>
+
+<p>
+Because we can thicken \( D_{3 \varepsilon}(P) \) by another \( \varepsilon \) to get \( D_{4\varepsilon}(K) \) by hypothesis on the distances, we have that
+</p>
+
+<p>
+\[ \ker(H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{4 \varepsilon}(K))) \simeq \ker( H_{\ell}(D_{\varepsilon}(P)) \to H_{\ell}(D_{3 \varepsilon}(P)) ) \]
+</p>
+
+<p>
+Which finishes the result.
+</p>
+</div>
+</div>
+<div id="outline-container-org8bca7a6" class="outline-3">
+<h3 id="org8bca7a6"><span class="section-number-3">2.3.</span> Problem 8</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Let \( K \) be a connected, finite simplicial complex and \( v \in K_{0} \) be a vertex of \( K \).
+</p>
+
+<p>
+Because \( K \) is connected and finite \( K_{1} \) is a finite connected graph, denote \( T \) by the finite spanning tree of \( K_{1} \). We have that \( T \searrow v \) by a finite sequence of "elementary collapses"
+</p>
+
+<p>
+\[ T \hat{\searrow} T' \iff T = T' \cup \sigma \cup \tau \]
+</p>
+
+<p>
+Where \( \sigma \) is a face of \( T \), \( \tau \) is an edge of \( \sigma \) not contained in another face and \( \sigma, \tau \) are not in \( T' \).   
+</p>
+
+<p>
+\[ T \searrow v \iff T = T_{n} \hat{\searrow} \cdots \hat{\searrow} T_{1} = v \]
+</p>
+
+<p>
+Define,
+</p>
+
+\begin{align}
+f_{1} &\colon \{ v \} \to \mathbb{R} \\
+f_{n} &\colon T_{n} \to \mathbb{R}
+\end{align}
+
+<p>
+Where \( f_{1}(v) = 0 \) and
+</p>
+
+\begin{align}
+f_{n}(x)
+\begin{cases}
+f_{n-1}(x) & x \in T_{n-1} \\
+1 + \sup_{x} f_{n-1}(x) & x = \sigma \\
+2 + \sup_{x} f_{n-1}(x) & x = \tau
+\end{cases}
+\end{align}
+
+<p>
+Now we extend \( f_{n} \) to be a Morse function on the entire complex,
+</p>
+
+\begin{align}
+g(x) =
+\begin{cases}
+f_{n}(x) & x \in T \\
+\text{dim}(x) + \sup_{x} f_{n}(x) & \text{else}
+\end{cases}
+\end{align}
+
+<p>
+All of the \( f_{i} \)'s and \( g \) were chosen to grow larger in a Morse preserving way. This makes the value at vertex \( v \) the smallest and only critical cell of dimension zero.   
+</p>
+</div>
+</div>
+<div id="outline-container-org3614453" class="outline-3">
+<h3 id="org3614453"><span class="section-number-3">2.4.</span> Problem 10</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+To prove that \( A \) is a sheaf, we must show it satisfies locality and gluing. 
+</p>
+
+<p>
+Locality:
+</p>
+
+<p>
+We may show locality by showing that the restriction maps are injective on the open star basis for the topology.
+</p>
+
+<p>
+\[ \rho_{V,U} \colon A(U) \to A(V) \]
+</p>
+
+<p>
+If \( A(U) \) sends a nonzero element to a nonzero element then we are done.
+</p>
+
+<p>
+If \( 0 \neq s \in A(U) \) then \( s \) is a linear combination of simplicies in \( U \), \( s = \sum_{\sigma_{i} \leq U} c_{i} \sigma_{i} \). Because \( s \neq 0 \) we have some nonzero coefficient for some \( i \) thus \( \rho_{\str(\sigma_{i}), U}(s) \neq 0 \)
+</p>
+
+<p>
+Gluing:
+</p>
+
+<p>
+Let \( s \in A(U) \) and \( t \in A(V) \) be two sections which are equal on the intersection of \( U \cap V \).
+</p>
+
+<p>
+By Mayer-Vietoris we have
+</p>
+
+<p>
+\[ \cdots \to H_{\ell}(X, X - (U \cup V)) \to H_{\ell}(X, X - U) \oplus H_{\ell}(X, X - V) \to H_{k}(X, X - (U \cap V)) \to \cdots \]
+</p>
+
+<p>
+Because \( s \) and \( t \) agree on their intersection, and the map from the direct sum is the difference map, \( (s,t) \) is mapped to \( 0 \). Hence it is in the kernel of that map, thus in the image of the previous map. This means there is an element in \( H_{\ell}(X, X - (U \cup V)) \) such that its inclusion is \( s \) and \( t \). This is a chain that has the restriction necessary.   
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1db8f45" class="outline-2">
+<h2 id="org1db8f45"><span class="section-number-2">3.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Went over the embedding theorem and general position.
+Discussed infinite simplices and simplicial complexes.
+</p>
+</div>
+</div>
+<div id="outline-container-orgaa3b18c" class="outline-2">
+<h2 id="orgaa3b18c"><span class="section-number-2">4.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</div>
+<div id="outline-container-orgb7e6689" class="outline-2">
+<h2 id="orgb7e6689"><span class="section-number-2">5.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Got 3 Problems for homework.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7b2672" class="outline-2">
+<h2 id="orgc7b2672"><span class="section-number-2">6.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+</div>
+<div id="outline-container-org8a57490" class="outline-2">
+<h2 id="org8a57490"><span class="section-number-2">7.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+</div>
+<div id="outline-container-org0ee16e3" class="outline-2">
+<h2 id="org0ee16e3"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+</div>
+<div id="outline-container-org9743773" class="outline-2">
+<h2 id="org9743773"><span class="section-number-2">9.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+</div>
+<div id="outline-container-org014e988" class="outline-2">
+<h2 id="org014e988"><span class="section-number-2">10.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+</div>
+<div id="outline-container-orgec5d001" class="outline-2">
+<h2 id="orgec5d001"><span class="section-number-2">11.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+</div>
+<div id="outline-container-orgc86aaeb" class="outline-2">
+<h2 id="orgc86aaeb"><span class="section-number-2">12.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+</div>
+<div id="outline-container-org69b756b" class="outline-2">
+<h2 id="org69b756b"><span class="section-number-2">13.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+</div>
+<div id="outline-container-orgc14560c" class="outline-2">
+<h2 id="orgc14560c"><span class="section-number-2">14.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+</div>
+<div id="outline-container-orgb4aa0c8" class="outline-2">
+<h2 id="orgb4aa0c8"><span class="section-number-2">15.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+</div>
+<div id="outline-container-orged6ca60" class="outline-2">
+<h2 id="orged6ca60"><span class="section-number-2">16.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+</div>
+<div id="outline-container-org6b4332d" class="outline-2">
+<h2 id="org6b4332d"><span class="section-number-2">17.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+</div>
+<div id="outline-container-org3c733d4" class="outline-2">
+<h2 id="org3c733d4"><span class="section-number-2">18.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-18">
+</div>
+</div>
+<div id="outline-container-org8e7b5e7" class="outline-2">
+<h2 id="org8e7b5e7"><span class="section-number-2">19.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-19">
+</div>
+</div>
+<div id="outline-container-org582c6d9" class="outline-2">
+<h2 id="org582c6d9"><span class="section-number-2">20.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+</div>
+<div id="outline-container-orga4ffff9" class="outline-2">
+<h2 id="orga4ffff9"><span class="section-number-2">21.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-21">
+</div>
+</div>
+<div id="outline-container-org0774ddd" class="outline-2">
+<h2 id="org0774ddd"><span class="section-number-2">22.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+</div>
+<div id="outline-container-orgf4b1b2b" class="outline-2">
+<h2 id="orgf4b1b2b"><span class="section-number-2">23.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+</div>
+<div id="outline-container-orgbc21576" class="outline-2">
+<h2 id="orgbc21576"><span class="section-number-2">24.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-24">
+</div>
+</div>
+<div id="outline-container-org29b5759" class="outline-2">
+<h2 id="org29b5759"><span class="section-number-2">25.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+</div>
+<div id="outline-container-org2739a53" class="outline-2">
+<h2 id="org2739a53"><span class="section-number-2">26.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+</div>
+<div id="outline-container-orgc23997f" class="outline-2">
+<h2 id="orgc23997f"><span class="section-number-2">27.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-27">
+</div>
+</div>
+<div id="outline-container-orgb79b505" class="outline-2">
+<h2 id="orgb79b505"><span class="section-number-2">28.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-28">
+</div>
+</div>
+<div id="outline-container-org1e0da90" class="outline-2">
+<h2 id="org1e0da90"><span class="section-number-2">29.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-29">
+</div>
+</div>
+<div id="outline-container-org3266220" class="outline-2">
+<h2 id="org3266220"><span class="section-number-2">30.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-30">
+</div>
+</div>
+<div id="outline-container-orga5ba076" class="outline-2">
+<h2 id="orga5ba076"><span class="section-number-2">31.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-31">
+</div>
+</div>
+<div id="outline-container-orgebf4752" class="outline-2">
+<h2 id="orgebf4752"><span class="section-number-2">32.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-32">
+</div>
+</div>
+<div id="outline-container-orgcbb913a" class="outline-2">
+<h2 id="orgcbb913a"><span class="section-number-2">33.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-33">
+</div>
+</div>
+<div id="outline-container-orgb3304de" class="outline-2">
+<h2 id="orgb3304de"><span class="section-number-2">34.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-34">
+</div>
+</div>
+<div id="outline-container-org969d728" class="outline-2">
+<h2 id="org969d728"><span class="section-number-2">35.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-35">
+</div>
+</div>
+<div id="outline-container-org0a833bf" class="outline-2">
+<h2 id="org0a833bf"><span class="section-number-2">36.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-36">
+</div>
+</div>
+<div id="outline-container-orgc36929d" class="outline-2">
+<h2 id="orgc36929d"><span class="section-number-2">37.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-37">
+</div>
+</div>
+<div id="outline-container-org3f21bca" class="outline-2">
+<h2 id="org3f21bca"><span class="section-number-2">38.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-38">
+</div>
+</div>
+<div id="outline-container-org0ab8784" class="outline-2">
+<h2 id="org0ab8784"><span class="section-number-2">39.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-39">
+</div>
+</div>
+<div id="outline-container-org1516cc0" class="outline-2">
+<h2 id="org1516cc0"><span class="section-number-2">40.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-40">
+</div>
+</div>
+<div id="outline-container-orge0ed6da" class="outline-2">
+<h2 id="orge0ed6da"><span class="section-number-2">41.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-41">
+</div>
+</div>
+<div id="outline-container-org3f8f93c" class="outline-2">
+<h2 id="org3f8f93c"><span class="section-number-2">42.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-42">
+</div>
+</div>
+<div id="outline-container-org7b768fb" class="outline-2">
+<h2 id="org7b768fb"><span class="section-number-2">43.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-43">
+</div>
+</div>
+<div id="outline-container-org0c44a77" class="outline-2">
+<h2 id="org0c44a77"><span class="section-number-2">44.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-44">
+</div>
+</div>
+<div id="outline-container-orgcf9bd08" class="outline-2">
+<h2 id="orgcf9bd08"><span class="section-number-2">45.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-45">
+</div>
+</div>
+<div id="outline-container-org8948de5" class="outline-2">
+<h2 id="org8948de5"><span class="section-number-2">46.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-46">
+</div>
+</div>
+<div id="outline-container-orgbcff014" class="outline-2">
+<h2 id="orgbcff014"><span class="section-number-2">47.</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-47">
+</div>
+</div>
+<div id="outline-container-orgefbbd46" class="outline-2">
+<h2 id="orgefbbd46"><span class="section-number-2">48.</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-48">
+</div>
+</div>
+<div id="outline-container-org57e4f74" class="outline-2">
+<h2 id="org57e4f74"><span class="section-number-2">49.</span> <span class="done DONE">DONE</span> MATH 649K</h2>
+<div class="outline-text-2" id="text-49">
+<p>
+Went over abstract and geometric simplicial complexes.
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

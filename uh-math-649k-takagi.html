@@ -1,0 +1,1873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UH MATH 649K Takagi</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">UH MATH 649K Takagi</h1>
+<p>
+Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+<div id="outline-container-org89867fc" class="outline-2">
+<h2 id="org89867fc"><span class="section-number-2">1.</span> Holzapfel-Gasser-Ogden Model</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgfea14e1" class="outline-3">
+<h3 id="orgfea14e1"><span class="section-number-3">1.1.</span> Scope and Importance</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Blood transport is vital to all vertebrates including but not limited to us humans. Blood transports oxygen and nutrients to all cells throughout the body. Human tissue can only survive for four hours without proper blood flow. Blood is transported throughout the body using a circulatory system, first passing through the heart outwards via arteries then back to the heart via veins. Any part of the circulatory system is at risk of failure and the methods of treating such failure is complex. In order to gain a better grasp on possible treatments and pathologies of the circulatory system, we would like to understand how each component works from a mechanical perspective. The scope of this paper is to report on a constitutive model for arterial walls.
+</p>
+
+<p>
+About 50% of all deaths in westernized society is caused by atherosclerosis. Atherosclerosis is a build up of plaque along arterial walls. One clinical treatment for atherosclerosis is <b>percutaneous transluminal angioplasty</b> (PTA). This involves inserting a catheter into a vessel and expanding a balloon at the end. Such a treatment requires a reliable constitutive model of the arterial wall in order to be safe. Risk of atherosclerosis can be minimized by healthily eating and exercise. However, arteriosclerosis risk happens due to age and is an unavoidable risk for elderly people. This makes understanding the arterial walls especially important.
+</p>
+
+<p>
+The model developed can be applied to more than arterial walls. It falls into the regime of anisotropic hyperelasticity. Anisotropy means that it models materials that have different stress fields depending on its orientation. Hyperelastic means that the stress response comes from a strain energy function. This model is useful for many biomaterials, but also reinforced rubbers and plastics and composite materials. 
+</p>
+</div>
+</div>
+<div id="outline-container-orge6ebae8" class="outline-3">
+<h3 id="orge6ebae8"><span class="section-number-3">1.2.</span> Arterial Histology</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<div id="orgb56ee01" class="figure">
+<p><img src="media/artery_walls_ima.png" alt="artery_walls_ima.png" width="750" />
+</p>
+</div>
+
+
+<p>
+In order to write a proper constitutive relation, we would need to know the properties of the constituents. Firstly, we simplify the model to only concern itself with in vitro effects. Hence, this model does not factor in vasa vasorum, nerve control, humoral control, pervascular connective tissue and neighboring organs like a pulsating heart. We also use many material parameters which will be estimated on an arterial section basis. We cannot say apriori if the carotid artery would have a different relationship or material parameters compared to the ulnar artery. In the model developed, we do make a simplifying assumption that they have the same governing equations and forms of stress, but leave comparison of material parameters for another paper.
+</p>
+
+<p>
+Arterial walls have many parts which may be grouped at various levels of resolution. First, we consider two types of categories of artery: elastic vs muscular arteries. Elastic arteries have larger diameters and are located closer to the heart. Muscular arteries are the opposite, smaller diameters and located further away from the heart. Within the arteries there are three main layers, the intima, media, and adventitia. Within each of these layers we have sub layers.
+</p>
+
+<p>
+The intima is the innermost layer consisting of a single layer of endothelial cells. Because of how thin this layer is in young healthy muscular arteries we consider it to have no contribution to the mechanics of the arterial wall. As we age, the intima does stiffen leading to arteriosclerosis. This is likely to have a significant impact on the mechanics. As mentioned earlier, atherosclerosis is a buildup of plaque in the intimal components. Because plaque can stick anywhere, this makes the geometry of this condition harder to model and its discussion is deferred.
+</p>
+
+<p>
+The media is the middle layer and consists of a network of smooth muscle cells, elastin, and collagen fibrils. 
+</p>
+
+<p>
+The adventitia is the outermost layer and consists of fibroblasts and birocytes.
+</p>
+</div>
+</div>
+<div id="outline-container-orgab3c009" class="outline-3">
+<h3 id="orgab3c009"><span class="section-number-3">1.3.</span> Description of the Deformation</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+The artery is a pre-stretched material under internal pressure load. This falls in the regime of large deformation anisotropic elasticity. To model the arteries, we take can use the elastic response of an anisotropic material based on an elastic free-energy function and specialize them for circular cylindrical geometry.
+</p>
+
+<p>
+It is noted that arteries themselves are under stress. This can be seen when slicing them, the artery will spring open to form an open sector. For model simplification purposes we assume this radial cut leaves the artery unstressed. This is known to not be true (Vossoughi et al).
+</p>
+
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( \Omega_{0} \) be a fixed reference configuration of the continuous stress-free body.</li>
+<li>\( \chi \colon \Omega_0 \to \mathbf{R}^{3} \) be the deformation map which transforms a material point, \( \mathbf{X} \in \Omega_0 \), to a deformed configuration \( \mathbf{x} = \chi(\mathbf{X}) \in \Omega \)</li>
+<li>\( \mathbf{F}(\mathbf{X}) =  \frac{ \partial \chi}{ \partial \mathbf{X}}(\mathbf{X}) \) be the deformation gradient</li>
+<li>\( J(\mathbf{X}) = \det(\mathbf{F}(\mathbf{X})) > 0 \) be the local volume ratio</li>
+</ul>
+
+<p>
+We may decompose the deformation gradient into its polar form, a spherical and unimodular part.
+</p>
+
+<p>
+\[ \mathbf{F} = (J^{{1 / 3}} \mathbf{I}) \overline{F} \]
+</p>
+
+<p>
+We may define the Cauchy-Green tensors \( \mathbf{C} \) and \( \mathbf{b} \) from the above.
+</p>
+
+<p>
+\[ \mathbf{C} = \mathbf{F}^T \mathbf{F} = J^{(2/3) }\overline{\mathbf{C}}, \overline{\mathbf{C}} = \mathbf{\overline{F}}^T \mathbf{\overline{F}} \]
+</p>
+
+<p>
+\[ \mathbf{b} = \mathbf{F} \mathbf{F}^T  = J^{(2/3) }\overline{\mathbf{b}}, \overline{\mathbf{b}} = \mathbf{\overline{F}} \mathbf{\overline{F}}^T  \]
+</p>
+
+
+<p>
+In addition, we have the Green-Lagrange strain tensor \( \mathbf{E} \) and the modified strain tensor \( \mathbf{\overline{E}} \).
+</p>
+
+<p>
+\[ \mathbf{E} = \frac{1}{2}(\mathbf{C} - \mathbf{I}) = J^{(2/3)} \overline{E} + \frac{1}{2}(J^{(2/3) }- 1) \mathbf{I}, \overline{\mathbf{E}} = \frac{1}{2}(\overline{\mathbf{C}} - \mathbf{I}) \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgdd2505d" class="outline-3">
+<h3 id="orgdd2505d"><span class="section-number-3">1.4.</span> Hyperelastic Stress Response</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+The paper describes the wall structure using a set of second order tensors
+</p>
+
+<p>
+\[ \{ \mathbf{A}_{\alpha} \}_{{\alpha \in [1 .. n]}} \]
+</p>
+
+<p>
+Which describe the fiber structure of the walls. In the case of arteries, this is one or two 
+</p>
+
+<p>
+And assume the existence of a decoupled Helmholtz free-energy function
+</p>
+
+<p>
+\[ \psi(\mathbf{E}, \mathbf{A}_1, \ldots, \mathbf{A}_n) = U(J) + \overline{\psi}(\overline{\mathbf{E}}, \mathbf{A}_1, \ldots, \mathbf{A}_n)\]
+</p>
+
+<p>
+Where \( U \) is a purely volumetric contribution and \( \overline{\psi} \) is isochoric (constant volume) contribution to the free energy. This gives us an idea of the types of motion of the wall given a constant temperature. 
+</p>
+
+<p>
+We can see the instantaneous dependence of free energy on the Cauchy Strain tensor by
+</p>
+
+<p>
+\[ \frac{ \partial \psi}{ \partial \mathbf{E}} = \mathbf{S}_{\text{vol}} + \overline{\mathbf{S}} = \frac{ \partial U}{ \partial \mathbf{E}}(J) + \frac{ \partial \mathbf{\psi}}{ \partial \mathbf{E}}(\mathbf{\overline{E}}, \mathbf{A}_1, \ldots , \mathbf{A}_n) \]
+</p>
+
+<p>
+Where \( \mathbf{S}_{\text{vol}} = \frac{ \partial U}{ \partial \mathbf{E}}(J) \) and \( \overline{\mathbf{S}} = \frac{ \partial \mathbf{\psi}}{ \partial \mathbf{E}}(\mathbf{\overline{E}}, \mathbf{A}_1, \ldots , \mathbf{A}_n) \) 
+</p>
+
+<p>
+We have the following results too,
+</p>
+
+<p>
+\[ \frac{ \partial J}{ \partial \mathbf{E}} = J \mathbf{C}^{-1}, \frac{ \partial \overline{\mathbf{E}}}{ \partial \mathbf{E}} = J^{-2/3} \left( \mathbb{I} - \frac{1}{3} \overline{\mathbf{C}} \otimes \overline{\mathbf{C}}^{-1} \right) \]
+</p>
+
+<p>
+Where \( \mathbb{I} \) is a fourth order tensor (a tensor with four components) defined by \( \mathbb{I}_{IJKL} = \frac{\delta_{IK} \delta_{JL} + \delta_{IL} \delta_{JK}}{2} \) where &delta; is the Kronecker delta. With these results above we may rewrite \( \mathbf{S} \) using hydrostatic pressure \( p = \frac{ d U}{ d J} \).
+</p>
+
+<p>
+\[ \mathbf{S}_{\text{vol}} = p J \mathbf{C}^{-1}, \overline{\mathbf{S}} = J^{-2/3} \text{Dev}\left( \frac{ \partial \overline{\psi}}{ \partial \overline{E}}\right) \]
+Where \( \text{Dev}(\mathbf{T}) = \mathbf{T} - \frac{1}{3} [ \mathbf{T} \colon \overline{\mathbf{C}}] \overline{\mathbf{C}}^{-1}\) which has the property that \( \text{Dev}(\mathbf{T}) \colon \mathbf{C} = 0 \).
+</p>
+
+<p>
+There is a Piola transformation which maps between Lagrangian and Eulerian coordinates and allows the Cauchy Stress tensor to be put in the decoupled form
+</p>
+
+<p>
+\[ \sigma = J^{-1} \mathbf{F} \mathbf{S} \mathbf{F}^T = \sigma_{\text{vol}} + \overline{\sigma} \]
+</p>
+
+<p>
+Where \( \sigma_{\text{vol}} = p \mathbf{I} \) and \( \overline{\sigma} = J^{-1} \text{dev}\left( \overline{\mathbf{F}} \frac{ \partial \mathbf{\psi}}{ \partial \overline{\mathbf{E}}} \overline{\mathbf{F}}^{T}    \right) \)  
+</p>
+
+<p>
+Where \( \text{dev} \) is defined analogously,
+</p>
+
+<p>
+\[ \text{dev}(\mathbf{T}) = \mathbf{T} - \frac{1}{3}[\mathbf{T} \colon \mathbf{I}] \mathbf{I} \]
+With the similar property that \( \text{dev}(T) \colon \mathbf{I} = 0 \).
+</p>
+</div>
+</div>
+<div id="outline-container-org0e41e3b" class="outline-3">
+<h3 id="org0e41e3b"><span class="section-number-3">1.5.</span> Kinematics</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+In this paper, an artery is to be an incompressible thick-walled cylindrical tube which may be subjected to various loads. We may consider three separate but related configurations of the artery. One configuration is the load-free configuration, in which the artery is cut perpendicular to the radius. Another configuration is one in which the artery is cut along a radius, this is assumed to be stress free, though shown in other papers to not be quite true. The last configuration is the deformed configuration at some time along the deformation map.
+</p>
+
+<p>
+This is summarized in the figure:
+</p>
+
+
+<div id="org68abc56" class="figure">
+<p><img src="media/three_configs_artery.png" alt="three_configs_artery.png" width="750" />
+</p>
+</div>
+
+<p>
+The geometrical region of \( \Omega_0 \) using the above figure is,
+</p>
+
+<p>
+\[ R_i \leq R \leq R_o, 0 \leq \Theta \leq (2 \pi - \alpha), 0 \leq Z \leq L \]
+</p>
+
+<p>
+Where \( R_i, R_o \) are inner and outer radii, \( \alpha \) is the opening angle, and \( L \) is the length of the undeformed tube.
+</p>
+
+<p>
+After deformation, the region \( \Omega = \chi (\Omega_{0}) \) is given by
+</p>
+
+<p>
+\[ r_i \leq r \leq r_o, 0 \leq \theta \leq (2 \pi), 0 \leq z \leq l \]
+</p>
+
+<p>
+Where \( r_i, r_o \) are inner and outer radii, and \( l \) is the length of the undeformed tube.
+</p>
+
+<p>
+We assume \( \chi \) to be isochoric (constant volume) and is of the form
+</p>
+
+<p>
+\[ \chi = r \mathbf{e}_r + z \mathbf{e}_z \]
+</p>
+
+<p>
+With respect to basis vectors \( \{ \mathbf{e}_r, \mathbf{e}_{\theta}, \mathbf{e}_z \} \)  in cylindrical polar coordinates \( (r, \theta, z) \) 
+</p>
+
+<p>
+Where
+</p>
+
+<p>
+\[ r = \sqrt{\frac{R^2 - R_i^2}{k \lambda_z} + r_i^2}, \theta = k \Theta + Z \frac{\Phi}{L}, z = \lambda_z Z \]
+</p>
+
+<p>
+With \( k = \frac{2 \pi}{2 \pi - \alpha} \) being the ratio of the tube opening angle in the unstressed configuration vs deformed configuration, and \( \Phi \) is the angle of twist arising from torsion. \( \lambda_{z} \) is a constant axial stretch, and is one of three principal stretches with the other two given by,
+</p>
+
+<p>
+\[ \lambda_r(R) = \frac{ \partial r}{ \partial R} = \frac{R}{r k \lambda_z} \]
+</p>
+
+<p>
+\[ \lambda_{\theta}(R) =\frac{r}{R}\frac{ \partial \theta}{ \partial \Theta} = \frac{kr}{R} \]
+</p>
+
+<p>
+Note that these are stretches that occur when there is no twist. The stretch that occurs when there is twisting is given by \( \gamma \) which represents a locally the amount of shear in the \( (\theta, z) \)-plane. Its formula is given by,
+</p>
+
+<p>
+\[ \gamma(R) = r \frac{ \partial \theta}{ \partial z} = r \frac{\Phi}{l} \]
+</p>
+
+<p>
+The requirement that volume is preserved during deformation is that \( \lambda_r \lambda_{\theta} \lambda_z = 1 \).
+</p>
+
+<p>
+We may use these expressions of the principal stretches to write out the deformation gradient, \( \mathbf{F} \), and the Cauchy-Green tensors \( \mathbf{C}, \mathbf{b} \). We note again that the deformation preserves volumes, which means that the tensors are equal to their rotational part in their respective polar decomposition.
+</p>
+
+<p>
+\[ \mathbf{F} = \overline{\mathbf{F}} = (\lambda_{\theta} \lambda_z)^{-1} \mathbf{e}_r \otimes \mathbf{E}_R + \lambda_{\theta} \mathbf{e}_{\theta} \otimes \mathbf{E}_{\Theta} + \gamma \lambda_z \mathbf{e}_{\theta} \otimes \mathbf{E}_Z + \lambda_z \mathbf{e}_z \otimes \mathbf{E}_Z \]
+</p>
+
+<p>
+\[ \mathbf{C} = \overline{\mathbf{C}} = (\lambda_{\theta} \lambda_z)^{-2} \mathbf{E}_R \otimes \mathbf{E}_R + \lambda_{\theta}^2 \mathbf{E}_{\Theta} \otimes \mathbf{E}_{\Theta} + \lambda_z^2(1 + \gamma^2) \mathbf{E}_Z \otimes \mathbf{E}_Z + \gamma \lambda_{\theta} \lambda_z (\mathbf{E}_{\Theta} \otimes \mathbf{E}_Z + \mathbf{E}_Z \otimes \mathbf{E}_{\Theta}) \]
+</p>
+
+<p>
+\[ \mathbf{b} = \overline{\mathbf{b}} = (\lambda_{\theta} \lambda_z)^{-2} \mathbf{e}_r \otimes \mathbf{e}_r + (\lambda_{\theta}^2 + \gamma^2 \lambda_z^2) \mathbf{e}_{\Theta} \otimes \mathbf{e}_{\Theta} + \lambda_z^2 \mathbf{e}_e \otimes \mathbf{e}_e + \gamma \lambda_z^2 (\mathbf{e}_{\theta} \otimes \mathbf{e}_z + \mathbf{e}_z \otimes \mathbf{e}_{\theta}) \]
+</p>
+</div>
+</div>
+<div id="outline-container-org5d2ea9f" class="outline-3">
+<h3 id="org5d2ea9f"><span class="section-number-3">1.6.</span> Equilibrium Equations</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+In the absence of body forces, we have the relation:
+</p>
+
+<p>
+\[ \nabla \cdot \mathbf{\sigma} = \mathbf{0} \]
+</p>
+
+<p>
+Due to the geometrical and constitutive symmetry the only nontrivial component of the equilibrium equation is:
+</p>
+
+<p>
+\[ \frac{ d \sigma_{rr}}{ d r} + \frac{\sigma_{rr  } - \sigma_{\theta\theta}_{}_{}}{r} = 0 \]
+</p>
+
+<p>
+Using the boundary condition \( \sigma_{rr} \vert_{r=r_{0}} = 0 \) we may calculate the radial Cauchy stress \( \sigma_{rr} \) via
+</p>
+
+<p>
+\[ \sigma_{rr}(\xi)= \int_{\xi}^{r_o} \frac{\sigma_{rr} - \sigma_{\theta \theta}}{r} dr\]
+</p>
+
+<p>
+The internal pressure \( p_i = - \sigma_{rr} \vert_{r = r_i} \) is calculated similarly,
+</p>
+
+<p>
+\[ p_i = \int_{r_i}^{r_o} \frac{\sigma_{\theta\theta} - \sigma_{rr}}{r} dr \]
+</p>
+
+<p>
+If we know the state of deformation, we may calculate the axial force \( N \) and torsional couple \( M_{t} \) by the equations:
+</p>
+
+<p>
+\[ N = 2 \pi \int_{r_i}^{r_{o}} \sigma_{zz}r dr, M_{t} = 2 \pi \int_{r_i}^{r_{o}} \sigma_{\theta z}r^2 dr \]
+</p>
+
+<p>
+We may recast the expressions for \( N \) and \( M_t \) using the volumetric and isochoric split of \( \sigma \). That is, \( \sigma_{\theta\theta} = p + \overline{\sigma}_{\theta\theta} \)   and \( \sigma_{rr} = p + \overline{\sigma}_{rr} \) and \( \sigma_{\theta z} = \overline{\sigma}_{\theta z} \). This allows us to write,
+</p>
+
+<p>
+\[ N = 2 \pi \int_{r_i}^{r_o} \left[ \int_{r_o}^{\xi} \frac{\overline{\sigma}_{\theta\theta} - \overline{\sigma}_{rr}}{r} dr - \overline{\sigma}_{rr} + \overline{\sigma}_{zz} \right] \xi d \xi \]
+</p>
+
+<p>
+Which leads to the general formula
+</p>
+
+<p>
+\[ F = \pi \int_{r_i}^{r_o} (2 \overline{\sigma}_{zz} - \overline{\sigma}_{\theta\theta} - \overline{\sigma}_{rr}) r dr \implies F = N - r_i^2 \pi p_i \]
+</p>
+
+<p>
+Which is very important as this is the quantity we may readily measure for the inflation tests on arteries.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc9ba082" class="outline-3">
+<h3 id="orgc9ba082"><span class="section-number-3">1.7.</span> Multi-Layer Model for Arterial Walls</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+The strain-energy function proposed takes in two layers for the wall corresponding to the media (M) and adventitia (A) layers of the artery. The walls are considered to be a composite reinforced by two families of collagen fibers arranged in symmetrical spirals. One assumption is to assume that the two layers have the same strain-energy function but have different material parameters. There is also an assumption of an additive split of the isochoric strain-energy function \( \overline{\psi} \) into isotropic and anisotropic deformations given by
+</p>
+
+<p>
+\[ \overline{\psi}(\overline{\mathbf{C}}, \mathbf{a}_{01}, \mathbf{a}_{02}) = \overline{\psi}_{\text{iso}}(\overline{\mathbf{C}}) + \overline{\psi}_{\text{aniso}}(\overline{\mathbf{C}}, \mathbf{a}_{01}, \mathbf{a}_{02} ) \]
+</p>
+
+<p>
+With \( \mathbf{a}_{01}, \mathbf{a}_{02} \) being direction vectors for the fibers each having magnitude \( 1 \). In accordance with the earlier definition of the strain-energy function depending on second order tensors, we define \( \mathbf{A}_{i} = \mathbf{a}_{0i} \otimes \mathbf{a}_{0i} \). Also, we use \( \overline{\mathbf{C}} \) rather than \( \overline{\mathbf{E}} \) for the deformation measure. To maintain frame invariance, we would like the strain-energy functions to depend on the invariants of combinations of our tensors. This forms what is known as an integrity basis, invariants \( \overline{I}_{1}, \ldots , \overline{I}_{9} \).
+</p>
+
+\begin{align*}
+\overline{I}_1 &= \tr \overline{\mathbf{C}} \\
+\overline{I}_2 &= \frac{1}{2} \left( (\tr \overline{\mathbf{C}})^2 - \tr( \overline{\mathbf{C}}^2) \right) \\
+\overline{I}_3 &=  \det \overline{\mathbf{C}} \\
+\overline{I}_4 &= \overline{\mathbf{C}} \colon \mathbf{A}_1 \\
+\overline{I}_5 &= \overline{\mathbf{C}}^2 \colon \mathbf{A}_1 \\
+\overline{I}_6 &= \overline{\mathbf{C}} \colon \mathbf{A}_2 \\
+\overline{I}_7 &= \overline{\mathbf{C}}^2 \colon \mathbf{A}_2 \\
+\overline{I}_8 &= (\mathbf{a}_{01} \cdot \mathbf{a}_{02}) \mathbf{a}_{01} \cdot \overline{\mathbf{C}} \mathbf{a}_{02} \\
+\overline{I}_9 &= (\mathbf{a}_{01} \cdot \mathbf{a}_{02})^2
+\end{align*}
+
+<p>
+This makes our problem into the following form:
+</p>
+
+<p>
+\[ \overline{\psi}(\overline{\mathbf{C}}, \mathbf{A}_{1}, \mathbf{A}_{2}) = \overline{\psi}_{\text{iso}}(\overline{I}_{1}, \overline{I}_{2}) + \overline{\psi}_{\text{aniso}}(\overline{I}_{1}, \ldots , \overline{I}_{9}) \]
+</p>
+
+<p>
+In order to reduce the total number of parameters, we make a simplifying assumption to only use \( \overline{I}_4 \) and \( \overline{I}_6 \) which are the squares of the stretching done in directions \( \mathbf{a}_{01} \) and \( \mathbf{a}_{02} \) respectively.
+</p>
+
+<p>
+\[ \overline{\psi}(\overline{\mathbf{C}}, \mathbf{A}_{1}, \mathbf{A}_{2}) = \overline{\psi}_{\text{iso}}(\overline{I}_{1}) + \overline{\psi}_{\text{aniso}}(\overline{I}_{4}, \overline{I}_{6}) \]
+</p>
+
+<p>
+We also make an assumption that \( \overline{\psi}_{\text{iso}}(\overline{\mathbf{C}}) \) follows a neo-Hookean model, hence,
+</p>
+
+<p>
+\[ \overline{\psi}_{\text{iso}}(\overline{I}_1) = \frac{c}{2} (\overline{I}_{1} - 3) \]
+</p>
+
+<p>
+With \( c > 0 \) is a stress-like material parameter. Because there is a strong stiffening effect of each layer, we take the anisotropic strain-energy function to be of exponential type. 
+</p>
+
+<p>
+\[ \overline{\psi}_{\text{aniso}}(\overline{I}_4, \overline{I}_6) = \frac{k_1}{2 k_2} \sum_{i = 4,6} \exp(k_2 (\overline{I}_i - 1)^2) - 1 \]
+</p>
+
+<p>
+This gives enough information to derive an expression for the Cauchy stress tensor
+</p>
+
+<p>
+\[ \overline{\sigma} = c \text{ dev} (\overline{\mathbf{b}}) + \sum_{i = 4,6} 2 \overline{\psi}_i \text{dev}(\mathbf{a}_i \otimes \mathbf{a}_i) \]
+With \( \overline{\psi}_4 = \frac{ \partial \overline{\psi}_{\text{aniso}}}{ \partial \overline{I}_{4}} \) and \( \overline{\psi}_6 = \frac{ \partial \overline{\psi}_{\text{aniso}}}{ \partial \overline{I}_{6}} \) and \( \mathbf{a}_{i} = \overline{\mathbf{F}} \mathbf{a}_{0i} \). 
+</p>
+
+<p>
+The free-energy functions in this case are:
+</p>
+
+<p>
+\[ \psi_M = \frac{c_M}{2}(\overline{I}_1 - 3) + \frac{k_{1M}}{2k_{2M}} \sum_{i = 4,6} \exp(k_{2M}((\overline{I}_{iM}) - 1)^2) - 1, R_i \leq R \leq R_i + H_M \]
+</p>
+
+<p>
+\[ \psi_A = \frac{c_A}{2}(\overline{I}_1 - 3) + \frac{k_{1A}}{2k_{2A}} \sum_{i = 4,6} \exp(k_{2A}((\overline{I}_{iA}) - 1)^2) - 1, R_i + H_M \leq R \leq R_o \]
+</p>
+
+<p>
+Where the invariants are defined as:
+</p>
+
+<p>
+\[ \overline{I}_{4j} = \mathbf{A}_{1j} \colon \overline{\mathbf{C}} \]
+</p>
+
+<p>
+\[ \overline{I}_{6j} = \mathbf{A}_{2j} \colon \overline{\mathbf{C}} \]
+</p>
+
+<p>
+The tensors \( \mathbf{A}_{1j} = \mathbf{a}_{01j} \otimes \mathbf{a}_{01j} \),  \( \mathbf{A}_{2j} = \mathbf{a}_{02j} \otimes \mathbf{a}_{02j} \) can be written in cylindrical polar coordinate system with matrix notation
+</p>
+
+<p>
+\[ \mathbf{a}_{01j} = \begin{bmatrix} 0 \\ \cos(\beta_{j}) \\ \sin(\beta_{j}) \end{bmatrix}, \mathbf{a}_{02j} = \begin{bmatrix} 0 \\ \cos(\beta_{j}) \\ -\sin(\beta_{j}) \end{bmatrix} \]
+</p>
+
+<p>
+Where \( \beta_{j} \) are the angles between the collagen fibers.
+</p>
+
+<p>
+We may summarize the constants and geometry in the following figure.
+</p>
+
+
+<div id="org4edc243" class="figure">
+<p><img src="media/two_wall_artery.png" alt="two_wall_artery.png" width="750" />
+</p>
+</div>
+
+<p>
+We may plot how the arteries behave under inflation (changing the inner radius \( r_i \)) and torsion (changing the shear \( \gamma_i \)) with different principal stretching in the \( z \)-axis.
+</p>
+
+
+<div id="org4249600" class="figure">
+<p><img src="media/deformation_behavior.png" alt="deformation_behavior.png" width="750" />
+</p>
+</div>
+
+
+
+<div id="orgfda88a5" class="figure">
+<p><img src="media/MA_comparison.png" alt="MA_comparison.png" width="750" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgda344d2" class="outline-3">
+<h3 id="orgda344d2"><span class="section-number-3">1.8.</span> References</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+Holzapfel, G. A., Gasser, T. C., &amp; Ogden, R. W. (2000). A new constitutive framework for arterial wall mechanics and a comparative study of material models. Journal of elasticity and the physical science of solids, 61, 1-48.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a53c8b" class="outline-2">
+<h2 id="org3a53c8b"><span class="section-number-2">2.</span> Index Notation</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Given a vector \( v \in \mathbb{R}^3 \) we may write it out as a linear combination of basis vectors
+</p>
+
+<p>
+\[ v = \sum_{i = 1}^3 v_i e_i \]
+</p>
+
+<p>
+To make summation easier we instead infer summation from repeated indices,
+</p>
+
+<p>
+\[ v = v_i e_i \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgb5695f5" class="outline-2">
+<h2 id="orgb5695f5"><span class="section-number-2">3.</span> Kronecker Delta</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+\[ \delta_{ij} = \begin{cases} 1 \\ 0  \end{cases} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org823c22e" class="outline-2">
+<h2 id="org823c22e"><span class="section-number-2">4.</span> Levi-Civita Epsilon</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+\[ \varepsilon_{ijk} = \begin{cases} 1 \\ -1 \\ 0  \end{cases} \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgfb81721" class="outline-2">
+<h2 id="orgfb81721"><span class="section-number-2">5.</span> Inner Product</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+\[ a \cdot b = a_i b_i \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgeabe8e4" class="outline-2">
+<h2 id="orgeabe8e4"><span class="section-number-2">6.</span> Cross Product</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+\[ a \times b =  a_j b_k \varepsilon_{ijk} e_i \]
+</p>
+</div>
+</div>
+<div id="outline-container-org367b733" class="outline-2">
+<h2 id="org367b733"><span class="section-number-2">7.</span> Homework 1</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+The Kronecker Delta has a nice property such that \( \delta_{ij}a_i = a_j \). In many instances in this homework I want to point out I use this property. Saying 'simplify' feels too vague at times, hence I will call this property <code>deltafy</code>. 
+</p>
+</div>
+<div id="outline-container-org8404e73" class="outline-3">
+<h3 id="org8404e73"><span class="section-number-3">7.1.</span> Problem</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-org759b62b" class="outline-4">
+<h4 id="org759b62b"><span class="section-number-4">7.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+Consider the vector \( Su \) in two frames.
+</p>
+
+<p>
+\( [Su] = [A][Su]' = [A][S'][u'] = [A][S'][A^T][u] \)
+</p>
+
+<p>
+\( [S] = [A][S'][A^T] \) on every input \( u \) thus are the same function.
+</p>
+</div>
+</div>
+<div id="outline-container-org379252d" class="outline-4">
+<h4 id="org379252d"><span class="section-number-4">7.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-7-1-2">
+\begin{align}
+\det{ST}
+&= \varepsilon_{ijk} (ST)_{i1}(ST)_{j2}(ST)_{k3} \tag{Def. of $\det$} \\
+&= \varepsilon_{ijk} S_{i \ell} T_{\ell 1} S_{j m} T_{m 2} S_{k n} T_{n 3} \tag{Def. of Tensor Mult} \\
+&= \varepsilon_{ijk} S_{i \ell} S_{j m} S_{k n} T_{\ell 1}  T_{m 2}  T_{n 3} \tag{Commutativity of $\mathbb{R}$} \\
+&= \varepsilon_{lmn} \det(S) T_{\ell 1}  T_{m 2}  T_{n 3} \tag{Def. of $\det$} \\
+&= \det(S) \varepsilon_{lmn}  T_{\ell 1}  T_{m 2}  T_{n 3} \tag{Using Hint} \\
+&= \det(S) \det(T) \tag{Def. of $\det$}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org334252c" class="outline-4">
+<h4 id="org334252c"><span class="section-number-4">7.1.3.</span> C</h4>
+<div class="outline-text-4" id="text-7-1-3">
+\begin{align}
+\det([S])
+&= \det([A^T] [S]' [A]) \tag{Consider $S$ in another frame.} \\
+&= \det([A]^T) \det( [S]') \det( [A]) \tag{Use Part B} \\
+&= \det( [S]') \det([A]^T)  \det( [A]) \tag{Commutativity of $\mathbb{R}$} \\
+&= \det( [S]') \det([A]^T [A]) \tag{Use Part B} \\
+&= \det( [S]') \det(I) \tag{$A$ is Orthogonal} \\
+&= \det( [S]') \tag{$\det(I) = 1$}
+\end{align}
+</div>
+</div>
+</div>
+<div id="outline-container-org261fc44" class="outline-3">
+<h3 id="org261fc44"><span class="section-number-3">7.2.</span> Problem</h3>
+<div class="outline-text-3" id="text-7-2">
+</div>
+<div id="outline-container-org62e2a26" class="outline-4">
+<h4 id="org62e2a26"><span class="section-number-4">7.2.1.</span> A</h4>
+<div class="outline-text-4" id="text-7-2-1">
+\begin{align}
+\det(S - \alpha I)
+&= \varepsilon_{ijk} (S - \alpha I)_{i1}(S - \alpha I)_{j2}(S - \alpha I)_{k3} \\
+&= \varepsilon_{ijk} (S_{i1} - \alpha \delta_{i1})(S_{j2} - \alpha \delta_{j2})(S_{k3} - \alpha \delta_{k3})
+\end{align} 
+
+<p>
+The most straightforward method is to expand all of the factors. The proof would then progress by grouping and manipulating the coefficients. I find that this method, while it works, has far too much going on at once. I will progress by argumentation of the form of the determinant, then deducing the coefficients.
+</p>
+
+
+
+<p>
+Note, \( (2) \) is a multiplication of \( 3 \) binomials in \( \alpha \), the difference of a constant and a product of \( \alpha \) and a Kronecker delta. Each term in the sum will include one term of index \( i1, j2 \) and \( k3 \) times \( \varepsilon_{ijk} \). That is, each term will look like
+</p>
+
+<p>
+\[ (-1)^p \varepsilon_{ijk} (-)_{i1} (-)_{j2} (-)_{k3} \]
+</p>
+
+<p>
+where \( p \) is the power of \( \alpha \) and we have three slots to fill. I will call this the <code>term formula</code>. The slots may be filled by \( S_{--} \) or \( \delta_{--} \), where the number of \( \delta \)'s are determined by the power of \( \alpha \) of which this term is a coefficient of. It proves to be fruitful to group terms by the powers of \( \alpha \).
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org99b9d29"></a>Coefficient of \( \alpha^3 \)<br />
+<div class="outline-text-5" id="text-7-2-1-1">
+<p>
+There is \( {3 \choose 3} = 1 \) term.
+<code>Term formula</code> gives \[ (-1)^3 \varepsilon_{ijk}  \delta_{i1} \delta_{j2} \delta_{k3} \]
+Deltafying the expression yields:
+\[ (-1) \varepsilon_{123} = -1 \]
+</p>
+</div>
+</li>
+<li><a id="org1b598b8"></a>Coefficient of \( \alpha^2 \)<br />
+<div class="outline-text-5" id="text-7-2-1-2">
+<p>
+There are \( {3 \choose 2} = 3 \) terms.
+<code>Term formula</code> gives
+\[ \varepsilon_{ijk} S_{i1} \delta_{j2} \delta_{k3} + \varepsilon_{ijk} \delta_{i1} S_{j2}  \delta_{k3} + \varepsilon_{ijk}  \delta_{i1} \delta_{j2} S_{k3} \]
+Deltafying yields, \[ \varepsilon_{i23} S_{i1} + \varepsilon_{1j3} S_{j2} + \varepsilon_{12k} S_{k3}  \]
+The only values for \( i,j,k \) which do not make \( \varepsilon = 0 \) is \( 1,2,3 \) respectively. This makes all \( \varepsilon_{---} \) symbols have value \( 1 \). This simplifies the sum to \( S_{11} + S_{22} + S_{33} = \tr(S) \).
+</p>
+</div>
+</li>
+<li><a id="org74e24fb"></a>Coefficient of \( \alpha \)<br />
+<div class="outline-text-5" id="text-7-2-1-3">
+<p>
+There are \( {3 \choose 1} = 3 \) terms.
+<code>Term formula</code> gives \[ \varepsilon_{ijk} S_{i1} S_{j2} \delta_{k3} + \varepsilon_{ijk} S_{j2} \delta_{i1} S_{k3} + \varepsilon_{ijk} S_{k3} S_{i1} \delta_{j2}  \]
+</p>
+
+<p>
+Deltafying yields, \[ \varepsilon_{ij3} S_{i1} S_{j2} + \varepsilon_{1jk} S_{j2} S_{k3} + \varepsilon_{i2k} S_{k3} S_{i1}  \]
+</p>
+
+<p>
+Each term has one index fixed by the permutation symbol, two indices fixed on the right index of \( S \) and 'two' free indices on the left index of \( S \). The two free symbols will annihilate the term if it is the same value of the permutation fixed index. Choosing one free index which makes the term nonzero uniquely determines the other symbol as it could not be the value of the first free index and cannot be the third fixed by the permutation. 
+</p>
+
+<p>
+There are then two cases, the values of the free index are equal to the value of the fixed index, making \( \varepsilon = 1 \), or they are both unequal to the value of the fixed symbol, making \( \varepsilon = -1 \). This reduces the sum to be:
+</p>
+
+<p>
+\[ S_{11}S_{22} + S_{22}S_{33} + S_{11}S_{33} - [S_{21}S_{12} + S_{32}S_{23} + S_{13}S_{31}] \]
+</p>
+
+<p>
+Motivated by the end result, we may make two copies of each term and divide by \( 2 \).
+</p>
+
+<p>
+\[ \frac{1}{2} (S_{11}S_{22} + S_{22}S_{33} + S_{11}S_{33} + S_{11}S_{22} + S_{22}S_{33} + S_{11}S_{33} - [S_{21}S_{12} + S_{32}S_{23} + S_{13}S_{31} + S_{21}S_{12} + S_{32}S_{23} + S_{13}S_{31}]) \] 
+</p>
+
+<p>
+Further motivated by the end result we will add \[ 0 = S_{11}^2 + S_{22}^2 + S_{33}^2 - (S_{11}^2 + S_{22}^2 + S_{33}^2) \]
+</p>
+
+\begin{align*}
+\frac{1}{2} (S_{11}S_{22} + S_{22}S_{33} + S_{11}S_{33} + S_{11}S_{22} + S_{22}S_{33} + S_{11}S_{33} + S_{11}^2 + S_{22}^2 + S_{33}^2 \\
+- [S_{11}^2 + S_{22}^2 + S_{33}^2 + S_{21}S_{12} + S_{32}S_{23} + S_{13}S_{31} + S_{21}S_{12} + S_{32}S_{23} + S_{13}S_{31}])
+\end{align*}
+
+<p>
+We may write this in index notation,
+</p>
+
+<p>
+\[ \frac{1}{2}[S_{ii}S_{kk} - S_{ik}S_{ki}] = \frac{1}{2} [\tr(S)^2 - \tr(S^2)] \]
+</p>
+</div>
+</li>
+<li><a id="orgf1faf14"></a>Constant Term<br />
+<div class="outline-text-5" id="text-7-2-1-4">
+<p>
+There is \( {3 \choose 0} = 1 \) term.
+</p>
+
+<p>
+\[ \varepsilon_{ijk} S_{i1} S_{j2} S_{k3} = \det(S) \]
+</p>
+
+<p>
+By definition.
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org10a152d" class="outline-4">
+<h4 id="org10a152d"><span class="section-number-4">7.2.2.</span> B</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<p>
+We know that the \( \tr(S)  \) and \( \det(S) \) is independent of the coordinate frame. Hence, functions of them will be independent of coordinate frame.
+</p>
+</div>
+</div>
+<div id="outline-container-org8897e9b" class="outline-4">
+<h4 id="org8897e9b"><span class="section-number-4">7.2.3.</span> C</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<p>
+By a general fact of algebra we see that the \( n-1 \)st degree term (the coefficient of \( \alpha^2 \) in this case) is the sum of the roots and the constant term is the product of the roots. This incidentally proves that the trace and determinant are the sum and products of the eigenvalues respectively.
+</p>
+
+<p>
+Hence for eigenvalues \( \alpha_i \), \( I_1 = \alpha_1 + \alpha_2 + \alpha_3 \) and \( I_3 = \alpha_1 \alpha_2 \alpha_3 \). 
+</p>
+
+<p>
+Note, if \( \alpha \) is an eigenvalue of \( S \) with eigenvector \( x \) then \( \alpha^2 \) is an eigenvalue of \( S^2 \). Proof by calculation: \( S^2 x = S (\alpha x) = \alpha \alpha x = \alpha^2 x \). Hence \( \tr(S^2) = \alpha_1^2 + \alpha_2^2 + \alpha_3^2 \). Then by substitution,
+</p>
+
+<p>
+\[ I_2 = \frac{1}{2}\left( \left(\sum_{i = 1}^{3} \alpha_i\right)^2 - \left(\sum_{i = 1}^{3} \alpha_i^2\right)\right) \]
+</p>
+
+<p>
+Expanding the square of the first term gives the product of two monomials \( \alpha_i \alpha_j \). The second term (sum of squares) kills any term of the form \( \alpha_i \alpha_i \). By commutativity of real number multiplication \( \alpha_i \alpha_j = \alpha_j \alpha_i \), thus each term is multiplied by \( 2 \) and cancels with the outside division by \( 2 \).
+</p>
+
+<p>
+Thus \( I_2 = \alpha_1 \alpha_2 + \alpha_1 \alpha_3 + \alpha_2 \alpha_3 \). \\\\
+</p>
+
+<p>
+An alternative proof was mentioned in class,
+</p>
+
+<p>
+If \( S \) were symmetric, then there is a basis in which its coordinates are diagonal. The diagonal entries will be the eigenvalues. The proof appears to be the same as above, replace \( (\sum_{i} \alpha_i)^2 \) with  \( (S_{ii})^2 \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org371dc01" class="outline-3">
+<h3 id="org371dc01"><span class="section-number-3">7.3.</span> Problem</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-org43252da" class="outline-4">
+<h4 id="org43252da"><span class="section-number-4">7.3.1.</span> A</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<p>
+A general fact about the curl.
+</p>
+
+\begin{align}
+(\nabla \times v)(\mathbf{x})
+&= \varepsilon_{ijk} v_{i , k} e_j \tag{Def. of Curl} \\
+&= \varepsilon_{kji} v_{k , i} e_j \tag{$i,k$ are dummy variables} \\
+&= - \varepsilon_{ijk} v_{k , i} e_j \tag{Property of $\varepsilon$}
+\end{align}
+
+<p>
+\[ (\nabla \times v)(\mathbf{x}) = 0 \implies \nabla v = \nabla v^T \]
+</p>
+
+<p>
+Suppose \( (\nabla \times v)(\mathbf{x}) = 0 \). From above, we see that \( - \varepsilon_{ijk} v_{k , i} e_j = 0 = \varepsilon_{ijk} v_{k , i} e_j \).
+Hence \( \varepsilon_{ijk} v_{k , i} e_j = \varepsilon_{ijk} v_{i , k} e_j \), so \( v_{k,i} = v_{i,k} \). Thus, the gradient is symmetric.
+</p>
+
+<p>
+\[ (\nabla \times v)(\mathbf{x}) = 0 \impliedby \nabla v = \nabla v^T \]
+Suppose \( \nabla v = \nabla v^T \). Then \( v_{i,k} = v_{k,i} \). Thus,
+</p>
+
+\begin{align}
+(\nabla \times v)(\mathbf{x})
+&= \varepsilon_{ijk} v_{i , k} e_j \tag{Def. of Curl} \\
+&= \varepsilon_{ijk} v_{k , i} e_j \tag{Symmetry of $\nabla v$}
+\end{align}
+
+<p>
+From above, we have that
+</p>
+
+<p>
+\( - \varepsilon_{ijk} v_{k , i} e_j = \varepsilon_{ijk} v_{k , i} e_j \implies \varepsilon_{ijk} v_{k , i} e_j = 0 \)
+</p>
+</div>
+</div>
+<div id="outline-container-org5223610" class="outline-4">
+<h4 id="org5223610"><span class="section-number-4">7.3.2.</span> B</h4>
+<div class="outline-text-4" id="text-7-3-2">
+\begin{align}
+\nabla \times (\nabla \times v)
+&= \varepsilon_{ijk} (\varepsilon_{klm} v_{m,l}),j e_i \\
+&= \varepsilon_{ijk} \varepsilon_{klm} v_{m,lj} e_i \\
+&= [\delta_{il} \delta_{jm} - \delta_{im} \delta_{jl}] v_{m,lj} e_i \\
+&= v_{j,ij} e_i - v_{i,jj} e_i \\
+&= \nabla ( \nabla \cdot v) - \Delta v
+\end{align}
+</div>
+</div>
+<div id="outline-container-orgc5e4910" class="outline-4">
+<h4 id="orgc5e4910"><span class="section-number-4">7.3.3.</span> C</h4>
+<div class="outline-text-4" id="text-7-3-3">
+<p>
+Given \( (B) \), we have
+</p>
+
+<p>
+\[ \nabla \times (\nabla \times v) = \nabla(\nabla \cdot v) - \Delta v \]
+</p>
+
+<p>
+Using \(  \nabla \cdot v = 0 \) and \( \nabla \times v = 0 \),
+</p>
+
+<p>
+\[ \nabla \times (0) = \nabla(0) - \Delta v \implies 0 = - \Delta v \implies \Delta v = 0 \]
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org26dd358" class="outline-2">
+<h2 id="org26dd358"><span class="section-number-2">8.</span> Homework 2</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org6cf3974" class="outline-3">
+<h3 id="org6cf3974"><span class="section-number-3">8.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Suppose we have a body in equilibrium with Cauchy stress field
+</p>
+
+<p>
+\[ \mathbf{S} = \rho (\mathbf{C} \mathbf{x}) \otimes \mathbf{x}, \rho > 0 \]
+</p>
+</div>
+<div id="outline-container-orgb6d9911" class="outline-4">
+<h4 id="orgb6d9911"><span class="section-number-4">8.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<p>
+Given the local equilibrium conditions
+</p>
+
+\begin{align}
+\nabla \cdot \mathbf{S} + \rho \mathbf{b} = 0 \\
+\mathbf{S}^T = \mathbf{S}
+\end{align}
+
+<p>
+We may solve for \( \mathbf{b} \),
+</p>
+
+\begin{align}
+\mathbf{b}
+&= -  \frac{1}{\rho} \nabla \cdot \mathbf{S} \tag{Solve for $\mathbf{b}$, note $\rho \neq 0$} \\
+&= -  \frac{1}{\rho} \nabla \cdot \rho (\mathbf{C} \mathbf{x}) \otimes \mathbf{x} \tag{Def. $\mathbf{S}$} \\
+&= - \nabla \cdot (\mathbf{C} \mathbf{x}) \otimes \mathbf{x} \tag{Linearity of $\nabla$} \\
+&= - \left[ (\nabla \cdot \mathbf{x}) \mathbf{C} \mathbf{x} + (\nabla \mathbf{C} \mathbf{x}) \mathbf{x} \right] \tag{Dyadic Product Rule} \\
+&= - \left[ (\nabla \cdot \mathbf{x}) \mathbf{C} \mathbf{x} + \mathbf{C} (\nabla \mathbf{x}) \mathbf{x} \right] \tag{$C$ constant Tensor} \\
+&= - \left[ 3 \mathbf{C} \mathbf{x} + \mathbf{C} \mathbf{x} \right] \tag{Simplify} \\
+&= - 4 \mathbf{C} \mathbf{x} \tag{Simplify}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org81f8836" class="outline-4">
+<h4 id="org81f8836"><span class="section-number-4">8.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<p>
+Strictly speaking, because \( \mathbf{S} \) is symmetric, the expression is just \( \mathbf{0} \) or \( [0]_i \) in index notation.
+However, looking at part (C), I believe we want to express \( \nabla \cdot (\mathbf{S} - \mathbf{S}^T) \) in terms of the entries of \( \mathbf{C} \).
+</p>
+
+\begin{align}
+0
+&= (S_{ji} - S_{ij})_{,j} \tag{$\mathbf{S}$ Symmetric} \\
+&= (\pho C_{jk}x_k x_i - \rho C_{ik} x_k x_j)_{,j} \tag{Def. $\mathbf{S}$} \\
+&= \rho (C_{jk}x_k x_i - C_{ik} x_k x_j)_{,j} \tag{$\rho$ Constant} \\
+&= \rho (C_{jk} \delta_{kj} x_i + C_{jk} x_k \delta_{ij} - C_{ik} \delta{kj} x_j - C_{ik} x_k \delta_{jj}) \tag{Evaluate Partials} \\
+&= \rho (C_{kk} x_i + C_{ik} x_k - C_{ik} x_k - 3 C_{ik} x_k) \tag{Simplify $\delta$} \\
+&= \rho (C_{kk} x_i - 3 C_{ik} x_k) \tag{Simplify} \\
+&= \rho (C_{\ell \ell} \delta_{ik} - 3 C_{ik}) x_k \tag{Factor $x_k$}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org5824772" class="outline-4">
+<h4 id="org5824772"><span class="section-number-4">8.1.3.</span> C</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<p>
+Because the above equation holds for all \( x \) in the body we have:
+</p>
+
+<p>
+\[ \frac{1}{3} C_{\ell \ell} \delta_{ik} = C_{ik} \]
+</p>
+
+<p>
+This states that \( \mathbf{C} = \alpha \mathbf{I} \) for some constant \( \alpha \). Also if we assume that \( \mathbf{C} = \alpha \mathbf{I} \) then
+</p>
+
+<p>
+\[ \mathbf{S} = \rho \alpha \mathbf{x} \otimes \mathbf{x} \]
+</p>
+
+<p>
+which is symmetric.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org86a1fa7" class="outline-3">
+<h3 id="org86a1fa7"><span class="section-number-3">8.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-8-2">
+</div>
+<div id="outline-container-org12e1c04" class="outline-4">
+<h4 id="org12e1c04"><span class="section-number-4">8.2.1.</span> A</h4>
+<div class="outline-text-4" id="text-8-2-1">
+<p>
+We may decompose this deformation map into a matrix multiplication:
+</p>
+
+<p>
+\[ \mathbf{x} =
+\begin{bmatrix}
+\cos(\omega t) & \sin(\omega t) & 0 \\
+-\sin(\omega t) & \cos(\omega t) & 0 \\
+0 & 0 & (1 + \alpha t)
+\end{bmatrix} \mathbf{X} \]
+</p>
+
+<p>
+The reason for rewriting the map in this form is so that we may simply take the matrix inverse (which is just an application of a formula) as the inverse motion. Hence,
+</p>
+
+
+<p>
+\[ \mathbf{X} =
+\begin{bmatrix}
+\cos(\omega t) & - \sin(\omega t) & 0 \\
+\sin(\omega t) & \cos(\omega t) & 0 \\
+0 & 0 & \frac{1}{1 + \alpha t}
+\end{bmatrix} \mathbf{x} \implies
+\begin{align}
+X_1 &= \cos(\omega t) x_1 - \sin(\omega t) x_2 \\
+X_2 &= \sin(\omega t) x_1 + \cos(\omega t) x_2 \\
+X_3 &= \frac{x_3}{1 + \alpha t}
+\end{align}\]
+</p>
+</div>
+</div>
+<div id="outline-container-orgebe6aa6" class="outline-4">
+<h4 id="orgebe6aa6"><span class="section-number-4">8.2.2.</span> B</h4>
+<div class="outline-text-4" id="text-8-2-2">
+<p>
+By calculation,
+</p>
+
+\begin{align*}
+V_1 &= - \omega \sin(\omega t) X_1 + \omega \cos(\omega t) X_2 \\
+V_2 &= - \omega \cos(\omega t) X_1 - \omega \sin(\omega t) X_2 \\
+V_3 &= \alpha X_3
+\end{align*}
+
+
+\begin{align*}
+v_1 &= \omega (- \sin(\omega t) X_1 + \cos(\omega t) X_2)  &&= \omega x_2 \\
+v_2 &= - \omega ( \cos(\omega t) X_1 + \sin(\omega t) X_2) &&= - \omega x_1 \\
+v_3 &= \frac{\alpha}{1 + \alpha t} ((1 + \alpha t)X_3)     &&= \frac{\alpha}{1 + \alpha t} x_3
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org130800c" class="outline-4">
+<h4 id="org130800c"><span class="section-number-4">8.2.3.</span> C</h4>
+<div class="outline-text-4" id="text-8-2-3">
+<p>
+\[ \nabla^x \mathbf{v} =
+\begin{bmatrix}
+0 & \omega & 0 \\
+ -\omega & 0 & 0 \\
+0 & 0 & \frac{\alpha}{1 + \alpha t} \end{bmatrix} \implies
+\mathbf{L} =
+\begin{bmatrix}
+0 & 0 & 0 \\
+ 0 & 0 & 0 \\
+0 & 0 & \frac{\alpha}{1 + \alpha t} \end{bmatrix},
+\mathbf{W} =
+\begin{bmatrix}
+0 & \omega & 0 \\
+ -\omega & 0 & 0 \\
+0 & 0 & 0 \end{bmatrix}\]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org07db2dc" class="outline-3">
+<h3 id="org07db2dc"><span class="section-number-3">8.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-8-3">
+</div>
+<div id="outline-container-org7c656fe" class="outline-4">
+<h4 id="org7c656fe"><span class="section-number-4">8.3.1.</span> A</h4>
+<div class="outline-text-4" id="text-8-3-1">
+<p>
+Let \( \mathbf{w} = \nabla \times v \), consider the \( i \)-th component of the following cross product, 
+</p>
+
+\begin{align}
+ [\mathbf{w} \times \mathbf{c}]_{i}
+&= \varepsilon_{jki} w_j c_k \tag{Index Notation} \\
+&= \varepsilon_{jki} \varepsilon_{j \ell m} \frac{ \partial v_m}{ \partial x_{\ell}} c_k \tag{Def. $w_j$} \\
+&= [\delta_{k \ell} \delta_{im} - \delta_{km} \delta_{i \ell}] \frac{ \partial v_m}{ \partial x_{\ell}} c_k \tag{$\varepsilon - \delta$ Identity} \\
+&= \delta_{k \ell} \delta_{im} \frac{ \partial v_m}{ \partial x_{\ell}} c_k - \delta_{km} \delta_{i \ell} \frac{ \partial v_m}{ \partial x_{\ell}} c_k \tag{Distribute} \\
+&= \frac{ \partial v_i}{ \partial x_{k}} c_k - \frac{ \partial v_k}{ \partial x_{i}} c_k \tag{Simplify $\delta$} \\
+&= \left(\frac{ \partial v_i}{ \partial x_{k}} - \frac{ \partial v_k}{ \partial x_{i}} \right) c_k \tag{Factor} \\
+&= 2 W_{ik} c_k \tag{Def. $W$} \\
+&= [2 \mathbf{W} \mathbf{c}]_i \tag{Tensor Notation}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org583bfca" class="outline-4">
+<h4 id="org583bfca"><span class="section-number-4">8.3.2.</span> B</h4>
+<div class="outline-text-4" id="text-8-3-2">
+<p>
+We have that
+</p>
+
+\begin{align}
+\mathbf{a}
+&= \frac{ \partial }{ \partial t} \mathbf{v} + (\nabla^{\mathbf{x}} \mathbf{v}) \mathbf{v} \tag{Def. $\mathbf{a}$} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + (\nabla^{\mathbf{x}} \mathbf{v} - \nabla^{\mathbf{x}} \mathbf{v}^T + \nabla^{\mathbf{x}} \mathbf{v}^T) \mathbf{v} \tag{Addition by $0$} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + (2 \mathbf{W} + \nabla^{\mathbf{x}} \mathbf{v}^T) \mathbf{v} \tag{Def. $\mathbf{W}$} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + 2 \mathbf{W} \mathbf{v}+ \nabla^{\mathbf{x}} \mathbf{v}^T \mathbf{v} \tag{Distribute} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + \mathbf{w} \times \mathbf{v}+ \nabla^{\mathbf{x}} \mathbf{v}^T \mathbf{v} \tag{Part A} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + \mathbf{w} \times \mathbf{v}+ \frac{ \partial v_i}{ \partial x_j} v_i \mathbf{e}_j \tag{Def. $\nabla^\mathbf{x}$} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + \mathbf{w} \times \mathbf{v}+ \frac{ \partial}{ \partial x_j} ( \frac{1}{2} v_i v_i) \mathbf{e}_j \tag{Product Rule Symmetry} \\
+&= \frac{ \partial }{ \partial t} \mathbf{v} + \mathbf{w} \times \mathbf{v}+ \nabla^{\mathbf{x}} ( \frac{1}{2} \mathbf{v} \cdot \mathbf{v}) \tag{Def. $\nabla^\mathbf{x}$}
+\end{align}
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org85eff11" class="outline-2">
+<h2 id="org85eff11"><span class="section-number-2">9.</span> Homework 3</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org601c1c7" class="outline-3">
+<h3 id="org601c1c7"><span class="section-number-3">9.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Suppose we are stretching a linearly elastic sheet such that the displacement field is given by the constant second order tensor below:
+</p>
+
+<p>
+\[ \mathbf{u} = \mathbf{A}\mathbf{x} = \begin{bmatrix} \alpha_1 & 0 & 0 \\ 0 & \alpha_2 & 0 \\ 0 & 0 & - \gamma \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \]
+</p>
+</div>
+<div id="outline-container-org6770b34" class="outline-4">
+<h4 id="org6770b34"><span class="section-number-4">9.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<p>
+Because \( \mathbf{A} \) is symmetric, \( \mathbf{L} = A \) 
+</p>
+
+<p>
+Assuming there is no traction in the \( x_3 \) direction, we have,
+</p>
+
+<p>
+\[ 0 = \lambda (\alpha_1 + \alpha_2 - \gamma) - 2 \mu \gamma \]
+</p>
+
+<p>
+Hence,
+\[ \gamma = \left( \frac{\lambda}{\lambda + 2 \mu} \right) (\alpha_1 + \alpha_2)
+          = \left( \frac{\nu}{1 - \nu} \right) (\alpha_1 + \alpha_2) \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgc11bd07" class="outline-4">
+<h4 id="orgc11bd07"><span class="section-number-4">9.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<p>
+Many terms of the Cauchy Stress Tensor are zero.
+</p>
+
+\begin{align*}
+\mathbf{S} =
+\begin{bmatrix}
+\frac{E( \alpha_1 + \nu \alpha_2)}{1 - \nu^2} & 0 & 0 \\
+0 & \frac{E( \nu \alpha_1 + \alpha_2)}{1 - \nu^2} & 0 \\
+0 & 0 & 0
+\end{bmatrix}
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org888f5f7" class="outline-4">
+<h4 id="org888f5f7"><span class="section-number-4">9.1.3.</span> C</h4>
+<div class="outline-text-4" id="text-9-1-3">
+<p>
+If there is no traction in the \( x_2 \) direction, then \( \alpha_2 = - \nu \alpha_1 \) which means 
+\[ [ \mathbf{A} ] = \begin{bmatrix} \alpha_1 & 0 & 0 \\ 0 & - \nu \alpha_1 & 0 \\ 0 & 0 & - \nu \alpha_1 \end{bmatrix} = \alpha_1 \begin{bmatrix} \alpha_1 & 0 & 0 \\ 0 & - \nu & 0 \\ 0 & 0 & - \nu \end{bmatrix} \]
+</p>
+
+<p>
+Which is uniaxial stretching.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga188541" class="outline-3">
+<h3 id="orga188541"><span class="section-number-3">9.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-org0d19654" class="outline-4">
+<h4 id="org0d19654"><span class="section-number-4">9.2.1.</span> A</h4>
+<div class="outline-text-4" id="text-9-2-1">
+\begin{align*}
+&& &&0 &= &&\mathbf{u}\big\rvert_{x = 0} \tag{Boundary Condition} \\
+&& &&  &= &&\mathbf{u}_{\text{inc}} + \mathbf{u}_{\text{inc}} \tag{Def. \( \mathbf{u} \)} \\
+&& &&  &= &&\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \cdot \begin{bmatrix} 0 \\ x_2 \end{bmatrix} - \omega t \right) \right) + \\
+&& &&  &  &&r_p \begin{bmatrix} - \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \begin{bmatrix} -\cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \cdot \begin{bmatrix} 0 \\ x_2 \end{bmatrix} - \omega t \right) \right) + \\
+&& &&  &  &&r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} \exp \left( i \left( k_s \begin{bmatrix} -\cos(\beta) \\ \sin(\beta) \end{bmatrix} \cdot \begin{bmatrix} 0 \\ x_2 \end{bmatrix} - \omega t \right) \right) \tag{Def. of Terms} \\
+&& &&  &= &&\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) \right) + \\
+&& &&  &  &&r_p \begin{bmatrix} - \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) \right) + \\
+&& &&  &  &&r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} \exp \left( i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) \tag{Evaluate Dot Product} \\
+&&\implies && 0 &= &&\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) - i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) + \\
+&& &&  &  &&r_p \begin{bmatrix} - \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) - i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) + \\
+&& &&  &  &&r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix}  \tag{Division by \( \exp \)} \\
+&&\implies && -r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} &= &&\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) - i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) + \\
+&& &&  &  &&r_p \begin{bmatrix} - \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) - i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) \tag{Subtraction} \\
+&&\implies && -r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} &= && \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) - i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) \left(\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} + r_p \begin{bmatrix} -\cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \right) \tag{Factor Scalars}
+\end{align*}
+
+<p>
+Notice, the left hand side of the above equation is constant and does not depend on \( x_2 \) whereas the right hand side does.
+Because the complex exponential is a local homeomorphism (that is, given a small enough neighborhood the function is injective and surjective onto a subset of its image) holds for all \( x_2 \) this implies that the exponent of the right hand side is a constant equal to \( 0 \).
+Hence,
+</p>
+
+<p>
+\[ k_p \sin( \alpha ) = k_s \sin( \beta ) \implies \frac{\omega}{c_p} \sin ( \alpha ) = \frac{\omega}{c_s} \sin ( \beta ) \implies \sin ( \beta ) = \frac{c_s}{c_p} \sin ( \alpha ) \]
+</p>
+</div>
+</div>
+<div id="outline-container-org2b10747" class="outline-4">
+<h4 id="org2b10747"><span class="section-number-4">9.2.2.</span> B</h4>
+<div class="outline-text-4" id="text-9-2-2">
+<p>
+In part A we deduced that the exponent of the line <code>Factor Scalars</code> was \( 0 \), hence
+</p>
+
+\begin{lflalign*}
+&&\implies && -r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} &= && \exp \left( i \left( k_p \sin(\alpha) x_2 - \omega t \right) - i \left( k_s \sin(\beta) \cdot  x_2 - \omega t \right) \right) \left(\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} + r_p \begin{bmatrix} -\cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \right) \tag{Part A} \\
+&&\implies && -r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} &= && \left(\begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} + r_p \begin{bmatrix} -\cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \right)  \tag{Part A} \\
+&&\implies && - \begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} &= && r_s \begin{bmatrix} \sin(\beta) \\ \cos(\beta) \end{bmatrix} + r_p \begin{bmatrix} -\cos(\alpha) \\ \sin(\alpha) \end{bmatrix} \tag{Algebra} \\
+&&\implies && - \begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} &= && \begin{bmatrix} - \cos(\alpha) & \sin(\beta) \\ \sin(\alpha) & \cos(\beta) \end{bmatrix} \begin{bmatrix} r_p \\ r_s \end{bmatrix} \tag{Def. Matrix Multiplication} \\
+&&\implies &&  \begin{bmatrix} - \cos(\alpha) & \sin(\beta) \\ \sin(\alpha) & \cos(\beta) \end{bmatrix}^{-1} \begin{bmatrix} -\cos(\alpha) \\ -\sin(\alpha) \end{bmatrix} &= &&  \begin{bmatrix} r_p \\ r_s \end{bmatrix} \tag{Matrix Inverse} \\
+&&\implies && \frac{1}{-\cos(\alpha) \cos(\beta) - \sin (\alpha) \sin(\beta)} \begin{bmatrix} - \cos(\beta) & \sin(\beta) \\ \sin(\alpha) & \cos(\alpha) \end{bmatrix} \begin{bmatrix} -\cos(\alpha) \\ -\sin(\alpha) \end{bmatrix} &= &&  \begin{bmatrix} r_p \\ r_s \end{bmatrix} \tag{Matrix Inverse} \\
+&&\implies && \frac{1}{\cos(\alpha) \cos(\beta) + \sin (\alpha) \sin(\beta)} \begin{bmatrix} - \cos(\beta) & \sin(\beta) \\ \sin(\alpha) & \cos(\alpha) \end{bmatrix} \begin{bmatrix} \cos(\alpha) \\ \sin(\alpha) \end{bmatrix} &= &&  \begin{bmatrix} r_p \\ r_s \end{bmatrix} \tag{Simplify} \\
+&&\implies && \frac{1}{\cos(\alpha - \beta)} \begin{bmatrix} - \cos(\beta) \cos(\alpha) + \sin(\beta) \sin(\alpha) \\ \cos(\alpha) \sin(\alpha) + \cos(\alpha) \sin(\alpha) \end{bmatrix} &= &&  \begin{bmatrix} r_p \\ r_s \end{bmatrix} \tag{Trig Identity} \\
+&&\implies && \frac{1}{\cos(\alpha - \beta)} \begin{bmatrix} \cos( \alpha + \beta) \\ \sin(2\alpha) \end{bmatrix} &= &&  \begin{bmatrix} r_p \\ r_s \end{bmatrix} \tag{Trig Identity}
+\end{lflalign*}
+<p>
+Hence,
+</p>
+
+<p>
+\[ r_p = \frac{\cos( \alpha + \beta )}{\cos(\alpha - \beta)}, r_s = \frac{\sin( 2\alpha )}{\cos(\alpha - \beta)} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org561b482" class="outline-4">
+<h4 id="org561b482"><span class="section-number-4">9.2.3.</span> C</h4>
+<div class="outline-text-4" id="text-9-2-3">
+<p>
+As \( \alpha \to 0 \), we see that \( \beta \to 0 \) by the relation \( \sin( \beta ) = \frac{c_s}{c_p} \sin(\alpha) \). Hence \( r_p = 1, r_s = 0 \). This means there is only a P-wave reflecting.
+</p>
+
+<p>
+As \( \alpha \to \frac{\pi}{2} \), we see that \( \beta \to \sin^{-1}(\frac{c_s}{c_p}) \) by the relation \( \sin( \beta ) = \frac{c_s}{c_p} \sin(\alpha) \). We see that \( r_p = \frac{\cos(\frac{\pi}{2} + \beta) }{\cos(\frac{\pi}{2} - \beta)} = \frac{-\sin(\beta)}{\sin(\beta)} = -1, r_s = 0 \). This means there is only a P-wave reflecting.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf0d7a17" class="outline-3">
+<h3 id="orgf0d7a17"><span class="section-number-3">9.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-9-3">
+</div>
+<div id="outline-container-org7673e04" class="outline-4">
+<h4 id="org7673e04"><span class="section-number-4">9.3.1.</span> A</h4>
+<div class="outline-text-4" id="text-9-3-1">
+\begin{align*}
+&\frac{ d }{ d s} (T \cos (\theta)) &= 0      &&\implies T \cos(\theta) &= c_1 \\
+&\frac{ d }{ d s} (T \sin (\theta)) &= \rho g &&\implies T \sin(\theta) &= \rho g s + c_2
+\end{align*}
+
+<p>
+Hence,
+</p>
+
+\begin{align}
+\tan(\theta)
+&= \frac{T \sin(\theta)}{T \cos(\theta)} \tag{Trig Identity} \\
+&= \frac{\rho g s + c_2}{c_1} \tag{Above}
+\end{align}
+
+<p>
+Now we may use the initial conditions to obtain relations for \( c_1 \) and \( c_2 \).
+</p>
+
+<p>
+\[ \tan(\theta_0) = \frac{c_2}{c_1} \]
+</p>
+
+<p>
+\[ \tan(\theta_L) = \frac{\rho g L + c_2}{c_1} = - \frac{c_2}{c_1} = \tan( - \theta_0) \]
+</p>
+
+<p>
+Using these equations we may solve for \( c_2 \) first.
+</p>
+
+<p>
+\[ \rho g L + c_2 = -c_2 \implies c_2 = -\frac{\rho g L}{2} \]
+</p>
+
+<p>
+With \( c_2 \) we may solve for \( c_1 \).
+</p>
+
+<p>
+\[ c_1 = - \frac{\rho g L}{2 \tan(\theta_0)}  \]
+</p>
+
+<p>
+We may substitute these constants into our expression for \( \tan(\theta) \).
+</p>
+
+\begin{align}
+\tan(\theta)
+&= \frac{\rho g s - \frac{\rho g L}{2}}{-\frac{\rho g L}{2 \tan(\theta_0)}} \tag{Substitution} \\
+&= -\frac{2 \tan(\theta_0)}{\rho g L} \left( \rho g s - \frac{\rho g L}{2} \right) \tag{Simplify} \\
+&= -\frac{2 \tan(\theta_0)}{\rho g L} \left(  \frac{2 \rho g s - \rho g L}{2} \right) \tag{Simplify} \\
+&= -\tan(\theta_0) \left(  \frac{2s}{L} - 1 \right) \tag{Simplify} \\
+&= \tan(\theta_0) \left(  1 - \frac{2s}{L} \right) \tag{Simplify}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org820c09d" class="outline-4">
+<h4 id="org820c09d"><span class="section-number-4">9.3.2.</span> B</h4>
+<div class="outline-text-4" id="text-9-3-2">
+<p>
+I will be assuming the beam is supported at both ends meaning the deflection at \( x = 0,L \) is both \( 0 \). Also by symmetry, the force applied at the end points is the total load \( \rho g L \) is distributed equally at both ends. Hence, both ends have a force upwards of \( \frac{\rho g L}{2} \).
+</p>
+
+<p>
+In the small deflection regime we have the constitutive relation,
+</p>
+
+<p>
+\[ B \frac{ d^2 w}{ d x^2} = M(x) \]
+</p>
+
+<p>
+We may derive the expression for the moment using a free body diagram.
+</p>
+
+<p>
+\[ M(x) = \frac{\rho g L}{2}x - \frac{\rho g x^2}{2} \]
+</p>
+
+<p>
+We may integrate twice, to get an expression for \( w \) with two arbitrary constants \( c_1,c_2 \).
+</p>
+
+<p>
+\[ B w(x) = \frac{\rho g L}{12} x^3 - \frac{\rho g x^4}{24} + c_1 x + c_2 \]
+</p>
+
+<p>
+The boundary conditions imply:
+</p>
+
+<p>
+\[ w(0) = 0 \implies c_2 = 0 \]
+</p>
+
+<p>
+\[ w(L) = 0 \implies \frac{\rho g L^4}{12} - \frac{\rho g L^4}{24} + c_1 L = 0 \implies c_1 = - \frac{\rho g L^3}{24} \].
+</p>
+
+<p>
+Hence,
+</p>
+
+\begin{align}
+w(x)
+&= \frac{1}{B} \left( \frac{\rho g L}{12} x^3 - \frac{\rho g x^4}{24} - \frac{\rho g L^3}{24} x \right) \\
+&= \frac{- \rho g}{24 B} \left( - 2 L x^3 + x^4 + L^3 x \right) \\
+&= \frac{- \rho g}{24 B} x \left( - 2 L x^2 + x^3 + L^3 \right) \\
+&= \frac{- \rho g}{24 B} x (L - x) \left( L^2 + L x - x^2 \right)
+\end{align}
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd973b4b" class="outline-2">
+<h2 id="orgd973b4b"><span class="section-number-2">10.</span> Homework 4</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org6939e7a" class="outline-3">
+<h3 id="org6939e7a"><span class="section-number-3">10.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-10-1">
+</div>
+<div id="outline-container-org12c792f" class="outline-4">
+<h4 id="org12c792f"><span class="section-number-4">10.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-10-1-1">
+<p>
+The Navier-Stokes equations state:
+</p>
+
+<p>
+\[  \frac{ \partial \mathbf{u}}{ \partial t} + \mathbf{u} \cdot \nabla \mathbf{u} = \frac{-1}{\rho_0} \nabla \mathbf{\rho} + \nu \nabla^2 \mathbf{u} + \mathbf{g} \]
+</p>
+
+<p>
+Using index notation, the \( i \)-th coordinate is:
+</p>
+
+<p>
+\[ \frac{\partial u_i}{\partial t} + u_j \frac{ \partial u_i}{ \partial x_j} =   \frac{-1}{\rho_0} \frac{ \partial \rho }{ \partial x_{i}} + \nu \frac{ \partial^2 u_{i}}{ \partial x_i^2} + g_{i} \]
+</p>
+
+<p>
+By incompressibility we have
+</p>
+
+\begin{align}
+0
+&= \nabla \cdot \mathbf{u} \tag{Incompressibility} \\
+&= \frac{ \partial u_i}{ \partial x_i} \tag{Index Notation} \\
+&= \frac{ \partial u_{1}}{ \partial x_1} \tag{Speed is Only Horrizontal}
+\end{align}
+
+<p>
+Using this fact, we can deduce the term \( \mathbf{u} \cdot \nabla \mathbf{u} = 0 \). First, because the flow is horrizontal, the only term remaining is \( u_1 \frac{ \partial u_1}{ \partial x_1} \). Next, by the above argument, this term is also zero.
+Because the flow velocity only depends on the vertical distance away from the plate, we know that the pressure gradient cannot have an affect on the velocity. This means the pressure in the horizontal direction \( \frac{ \partial \rho}{ \partial x_i}  = 0 \). This reduces the Navier-Stokes equations to:
+</p>
+
+<p>
+\[  \frac{ \partial \mathbf{u}}{ \partial t} =  \nu \nabla^2 \mathbf{u} \]
+</p>
+
+<p>
+Then, because \( \mathbf{u} = u(y,t) \) we have that \( \nabla^2 \mathbf{u} = \frac{ \partial^2 u}{ \partial y^2} \).
+</p>
+
+<p>
+So we have,
+</p>
+
+<p>
+\[  \frac{ \partial u}{ \partial t} =  \nu \frac{ \partial^2 u}{ \partial y^2} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org49b3382" class="outline-4">
+<h4 id="org49b3382"><span class="section-number-4">10.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-10-1-2">
+<p>
+Suppose we have a solution of the form,
+</p>
+
+<p>
+\[ u(y, t) = \Re [U_0 f(y) e^{i \omega t}] \]
+</p>
+
+<p>
+We will assume no-slip boundary conditions:
+</p>
+
+<ul class="org-ul">
+<li>\( u(0,t) = U_0 \cos(\omega t) \), so \( f(0) = 1 \).</li>
+
+<li>\( u(h,t) = 0 \), so \( f(h) = 0 \).</li>
+</ul>
+
+<p>
+According the equation we have,
+</p>
+
+<p>
+\[ \Re [ i \omega U_0 f(y) e^{i \omega t} ] = \nu \Re [ U_0 f''(y) e^{i \omega t} ] \]
+</p>
+
+<p>
+Which implies,
+</p>
+
+<p>
+\[ i \omega U_0 f(y) e^{i \omega t} = \nu U_0 f''(y) e^{i \omega t} \]
+</p>
+
+<p>
+Which can be simplified further to,
+\[ i \omega f(y) = \nu f''(y) \implies f'' - \frac{i \omega}{\nu} f = 0 \]
+</p>
+
+<p>
+Which is a linear ordinary differential equation with constant coefficients.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb7ad1fd" class="outline-4">
+<h4 id="orgb7ad1fd"><span class="section-number-4">10.1.3.</span> C</h4>
+<div class="outline-text-4" id="text-10-1-3">
+<p>
+The general solution to the linear ODE is:
+</p>
+
+\begin{align}
+f(y)
+&= A e^{\sqrt{\frac{i \omega }{\nu}} y} + B e^{-{\sqrt{\frac{i \omega }{\nu} }y}} \\
+&= A e^{(1 + i)\sqrt{\frac{ \omega }{2\nu}} y} + B e^{-(1 + i){\sqrt{\frac{ \omega }{2 \nu} }y}}
+\end{align}
+
+<p>
+Imposing the two initial conditions from above we get.
+</p>
+
+\begin{align}
+f(y)
+&= \left( \frac{ e^{-(1 + i)\sqrt{\frac{ \omega }{2\nu}}H } }{ -e^{(1 + i)\sqrt{\frac{ \omega }{2\nu}}H } + e^{-(1 + i)\sqrt{\frac{ \omega }{2\nu}}H } } \right) e^{(1 + i)\sqrt{\frac{ \omega }{2\nu}} y} + \left(\frac{-e^{(1 + i)\sqrt{\frac{ \omega }{2\nu}}H }}{ -e^{(1 + i)\sqrt{\frac{ \omega }{2\nu}}H } + e^{-(1 + i)\sqrt{\frac{ \omega }{2\nu}}H }} \right) e^{-(1 + i){\sqrt{\frac{ \omega }{2 \nu} }y}}
+\end{align}
+
+<p>
+As \( H \to \infty \) the first coefficient tends to zero and the second coefficient tends to 1. This makes the exponential growth term die and leaves only exponential decay. This makes the fluid have velocity tend to zero at infinity.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7b2fbcc" class="outline-3">
+<h3 id="org7b2fbcc"><span class="section-number-3">10.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-10-2">
+</div>
+<div id="outline-container-org59e2927" class="outline-4">
+<h4 id="org59e2927"><span class="section-number-4">10.2.1.</span> A</h4>
+<div class="outline-text-4" id="text-10-2-1">
+\begin{align}
+\mathbf{v}
+&= \nabla \left(\mathbf{x} \cdot \frac{\alpha \mathbf{V}}{r} + \beta \mathbf{V} \cdot \nabla \left(\frac{1}{r} \right) \right) - 2 \left( \frac{\alpha \mathbf{V}}{r} \right) \tag{Substitute} \\
+&= \nabla \left(\mathbf{x} \cdot \frac{\alpha \mathbf{V}}{r} - \beta \mathbf{V} \cdot \left(\frac{\mathbf{x}}{r^{3}} \right) \right) - 2 \left( \frac{\alpha \mathbf{V}}{r} \right) \tag{Evaluate \( \nabla \)} \\
+&= \frac{-\alpha \mathbf{V}}{r} + \frac{- \alpha (\mathbf{V} \cdot \mathbf{x}) \mathbf{x}}{r^3} + \frac{- \beta \mathbf{V}}{r^3} + \frac{3 \beta (\mathbf{V} \cdot \mathbf{x}) \mathbf{x}}{r^5} \tag{Evaluate \( \nabla \)} \\
+&= \alpha \left( -\frac{\mathbf{V}}{r} - \frac{ (\mathbf{V} \cdot \mathbf{x}) \mathbf{x}}{r^3} \right) + \beta \left( \frac{- \mathbf{V}}{r^3} + \frac{3 (\mathbf{V} \cdot \mathbf{x}) \mathbf{x}}{r^5} \right) \tag{Factor Unknowns}
+\end{align}
+
+<p>
+The component normal to the sphere is
+</p>
+
+<p>
+\[ \frac{-\alpha \mathbf{V} \cdot \mathbf{x}}{a} + \frac{-\alpha \mathbf{V} \cdot \mathbf{x}}{a^{3}} + \frac{-\beta \mathbf{V} \cdot \mathbf{x}}{a^{3}} + \frac{3 \beta \mathbf{V} \cdot \mathbf{x}}{a^{5}^{}} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org1cc0b27" class="outline-4">
+<h4 id="org1cc0b27"><span class="section-number-4">10.2.2.</span> B</h4>
+<div class="outline-text-4" id="text-10-2-2">
+<p>
+The pressure is given by the Papkovich-Neuber representation.
+</p>
+
+<p>
+\[ p = \nabla \cdot \phi = \frac{- \alpha \mathbf{V} \cdot \mathbf{x}}{r^3} \]
+</p>
+
+
+\begin{align}
+\mathbf{S}
+&= - p \mathbf{I} + \mu ( \nabla \mathbf{v} + \nabla \mathbf{v}^T) \\
+&= -\frac{- \alpha \mathbf{V} \cdot \mathbf{x}}{r^3} \mathbf{I} +
+\mu \left(&\alpha \left( \frac{(\mathbf{V} \otimes \mathbf{x} + \mathbf{x} \otimes \mathbf{V})}{r^{3}} + \frac{3 (\mathbf{V} \cdot \mathbf{x}) \mathbf{x} \otimes \mathbf{x}}{r^5} \right) + \\
+&& \beta \left( \frac{3 (\mathbf{V}  \otimes \mathbf{x} + \mathbf{x} \otimes \mathbf{V})}{r^5} + \frac{15 (\mathbf{V} \cdot \mathbf{x}) \mathbf{x} \otimes \mathbf{x}}{r^7} \right) + \\
+& &\alpha \left( \frac{(\mathbf{V} \otimes \mathbf{x} + \mathbf{x} \otimes \mathbf{V} + 2 (\mathbf{V} \cdot \mathbf{x}) \mathbf{I} )}{r^{3}} + \frac{3 (\mathbf{V} \cdot \mathbf{x}) \mathbf{x} \otimes \mathbf{x}}{r^5} \right) + \\
+&& \beta \left( \frac{3 (\mathbf{V}  \otimes \mathbf{x} + \mathbf{x} \otimes \mathbf{V} + 2 (\mathbf{V} \cdot \mathbf{x}) \mathbf{I})}{r^5} + \frac{15 (\mathbf{V} \cdot \mathbf{x}) \mathbf{x} \otimes \mathbf{x}}{r^7} \right) + 
+\right)
+\end{align}
+
+
+
+<p>
+The shear traction on the bubbles surface is:
+\[ \mathbf{x} - \frac{3 \mu \mathbf{V}}{2a} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org50f51c8" class="outline-4">
+<h4 id="org50f51c8"><span class="section-number-4">10.2.3.</span> C</h4>
+<div class="outline-text-4" id="text-10-2-3">
+<p>
+The drag on the sphere is,
+</p>
+
+<p>
+\[ \int_0^{\pi} \frac{3\mu \mathbf{V}}{a} \cos^2(\theta) 2 \pi a^{2} \sin(\theta) d\theta = 4 \pi \mu a V \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e0d3f4" class="outline-3">
+<h3 id="org5e0d3f4"><span class="section-number-3">10.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-10-3">
+</div>
+<div id="outline-container-orgf4806ec" class="outline-4">
+<h4 id="orgf4806ec"><span class="section-number-4">10.3.1.</span> A</h4>
+<div class="outline-text-4" id="text-10-3-1">
+<p>
+The velocity potential is harmonic.
+</p>
+
+<p>
+\[ \psi''(z) = k^2 \psi \]
+</p>
+</div>
+</div>
+<div id="outline-container-org71e3a22" class="outline-4">
+<h4 id="org71e3a22"><span class="section-number-4">10.3.2.</span> B</h4>
+<div class="outline-text-4" id="text-10-3-2">
+<p>
+From the relation we have fundamental solutions,
+</p>
+
+<p>
+\[ \sinh(kz), \cosh(kz) \]
+</p>
+
+<p>
+The boundary condition at the bottom is \( \frac{ \partial \phi }{ \partial z} = 0 \) 
+</p>
+
+<p>
+The solution is
+</p>
+
+<p>
+\[ \psi(z) = \frac{C \cosh(k(z + h))}{\cosh(kh)} \]
+</p>
+
+<p>
+Using our relations,
+</p>
+
+<p>
+\[ \frac{ \partial \eta}{ \partial t} - \frac{ \partial \phi}{ \partial z} = 0 \implies i \omega + k \tanh(kh) C = 0 \]
+</p>
+
+<p>
+\[ \frac{ \partial \phi}{ \partial t} + g \eta -  \frac{\gamma}{\rho} \nabla^2 \eta  = 0 \implies g + \frac{\gamma}{\rho} k^2 - i \omega C = 0 \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ (i \omega C)(i \omega) = (g + \frac{\gamma}{\rho}k^{2})(-k \tanh(kh) C) \]
+</p>
+
+<p>
+Giving,
+</p>
+
+<p>
+\[ \omega^2 = (gk + \frac{\gamma}{\rho}k^3) \tanh(kh) \]
+</p>
+</div>
+</div>
+<div id="outline-container-org329b3b5" class="outline-4">
+<h4 id="org329b3b5"><span class="section-number-4">10.3.3.</span> C</h4>
+<div class="outline-text-4" id="text-10-3-3">
+<p>
+If \( kh \gg 1 \) then \( \sech \to 0 \) and \( \tanh \to 1 \).
+If \( k^2 \gg \frac{\rho g}{\gamma} \), then \( g \) is negligible in the term \( g + \frac{\gamma}{\rho} k^2 \).
+</p>
+
+<p>
+From above we have,
+</p>
+
+<p>
+\[ \omega^2^{} = \left( g + \frac{\gamma}{\rho} k^2^{} \right) k \tanh(kh) \]
+by the simplifications in the hypothesis, this implies,
+</p>
+
+<p>
+\[ \omega^{2} = \frac{\gamma}{\rho} k^3 \implies \omega = \sqrt{\frac{\gamma}{\rho} k^3} \implies \frac{\omega}{k} = \sqrt{\frac{\gamma}{\rho} k} \]
+</p>
+
+
+<p>
+Next, by taking partials on both sides of the above relation,
+</p>
+
+<p>
+\[ 2 \omega \frac{ \partial \omega}{ \partial k} = (gk + \frac{\gamma}{\rho}k^3)  \sech^{2}(kh) + (g + \frac{3\gamma}{\rho}k^2) \tanh(kh)  \]
+</p>
+
+
+<p>
+So,
+</p>
+
+
+<p>
+\[ 2 \omega \frac{ \partial \omega}{ \partial k} =  \frac{3\gamma}{\rho}k^2  \]
+</p>
+
+<p>
+\[ \frac{ \partial \omega}{ \partial k} =  \frac{3\gamma k^{2}}{2\rho} \frac{1}{\sqrt{\frac{\gamma k^{3}}{\rho}}} \implies \frac{ \partial \omega}{ \partial k} =  \frac{3^{}}{2} \sqrt{\frac{\gamma}{\rho} k} \]
+</p>
+
+<p>
+Hence, \[ \frac{ \partial \omega}{ \partial k} \geq \frac{\omega}{k} \]
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

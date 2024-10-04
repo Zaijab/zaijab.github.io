@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PhD Literature Review</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">PhD Literature Review</h1>
+<p>
+My current work with Andrey Papov.
+</p>
+<div id="outline-container-org4a18e7a" class="outline-2">
+<h2 id="org4a18e7a"><span class="section-number-2">1.</span> Useful References</h2>
+<div class="outline-text-2" id="text-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Title</th>
+<th scope="col" class="org-left">Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Universal approximation of invertible neural networks</td>
+<td class="org-left">(Ishikawa, Isao and Teshima, Takeshi and Tojo, Koichi and Oono, Kenta and Ikeda, Masahiro and Sugiyama, Masashi, 2023)</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge731308" class="outline-2">
+<h2 id="orge731308"><span class="section-number-2">2.</span> 2024/08/29 - Brunton Data Driven Book Chapter</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org982b480" class="outline-3">
+<h3 id="org982b480"><span class="section-number-3">2.1.</span> <span class="todo TODO">TODO</span> For This Time</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Choose a reading from (Brunton, Steven L and Kutz, J Nathan, 2022) and talk about it.
+</p>
+</div>
+</div>
+<div id="outline-container-org2f908b8" class="outline-3">
+<h3 id="org2f908b8"><span class="section-number-3">2.2.</span> Work Done</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+I read chapter 12, Reduced-order models, of Data Driven book (Brunton, Steven L and Kutz, J Nathan, 2022).
+</p>
+
+<p>
+The main idea is that PDEs can be reexpressed as ODEs of finite difference methods.
+</p>
+
+<p>
+\[ u_{t} = N(u, u_{x}, u_{xx}, \ldots, x, t; \beta), x \in [-L,L] \]
+</p>
+
+<p>
+\[ u(x_{k}, t) \; \text{for } k = 1, 2, \ldots, n \]
+</p>
+
+<p>
+\[ u_{x} = \frac{u(x_{k+1}, t) - u(x_{k}, t)}{2 \Delta x} \]
+</p>
+
+<p>
+\[ \frac{d u_{k}}{dt} = N(u(x_{k+1}, t), ) \; k = 1,2, \ldots, n \]
+</p>
+
+<p>
+\[ u(x,t) = a(t) \psi(x) \]
+</p>
+
+<p>
+\[ u(x,t) = \sum_{k = 1}^{n} a_{k}(t) \psi_{k}(x) \]
+</p>
+
+
+<p>
+ODEs have well known solution techniques / algorithms (Runge-Kutta 4).
+However, there is an ODE for every point in the domain of interest.
+If we wish to find a highly accurate solution, this involves simulating many points.
+This is expensive, hence, it is natural to ask if there is a method which involves a low amount of simulation with high accuracy.
+</p>
+
+<p>
+The solution techinique demonstrated uses the SVD of the Fourier mode expansion.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #005e8b;">my_array</span> = np.zeros<span style="color: #000000;">(</span>5<span style="color: #000000;">)</span>
+my_array<span style="color: #000000;">[</span>1:5<span style="color: #000000;">]</span>
+</pre>
+</div>
+
+<pre class="example">
+array([0., 0., 0., 0.])
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">from</span> scipy <span style="color: #531ab6;">import</span> integrate
+<span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+
+<span style="color: #005e8b;">L</span> = 30
+<span style="color: #005e8b;">n</span> = 512
+<span style="color: #005e8b;">x2</span> = np.linspace<span style="color: #000000;">(</span>-L/2, L/2, n+1<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">x</span> = x2<span style="color: #000000;">[</span>0:n<span style="color: #000000;">]</span>
+<span style="color: #005e8b;">k</span>= <span style="color: #000000;">(</span>2 * np.pi/L<span style="color: #000000;">)</span> * np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>np.arange<span style="color: #008899;">(</span>0, n/2 - 1<span style="color: #008899;">)</span>, np.arange<span style="color: #008899;">(</span>-n/2, -1<span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>.T
+<span style="color: #005e8b;">V</span>=np.square<span style="color: #000000;">(</span>x<span style="color: #000000;">)</span>.T
+<span style="color: #005e8b;">t</span>=np.arange<span style="color: #000000;">(</span>0, 0.2, 20<span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">harm_rhs</span><span style="color: #000000;">(</span>ut_split,t,k=k,V=V,n=n<span style="color: #000000;">)</span>:
+   <span style="color: #005e8b;">ut</span> = ut_split<span style="color: #000000;">[</span>:n<span style="color: #000000;">]</span> + <span style="color: #000000;">(</span>1j<span style="color: #000000;">)</span> * ut_split<span style="color: #000000;">[</span>n:<span style="color: #000000;">]</span>
+   <span style="color: #005e8b;">u</span> = np.fft.ifft<span style="color: #000000;">(</span>ut<span style="color: #000000;">)</span>
+   <span style="color: #005e8b;">rhs</span> = -0.5 * <span style="color: #000000;">(</span>1j<span style="color: #000000;">)</span> * np.power<span style="color: #000000;">(</span>k,2<span style="color: #000000;">)</span> * ut - 0.5 * <span style="color: #000000;">(</span>1j<span style="color: #000000;">)</span> * np.fft.fft<span style="color: #000000;">(</span>V * u<span style="color: #000000;">)</span>
+   <span style="color: #005e8b;">rhs_split</span> = np.concatenate<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>np.real<span style="color: #008899;">(</span>rhs<span style="color: #008899;">)</span>,np.imag<span style="color: #008899;">(</span>rhs<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+   <span style="color: #531ab6;">return</span> rhs_split
+
+<span style="color: #005e8b;">u</span> = np.exp<span style="color: #000000;">(</span>-0.2 * np.power<span style="color: #dd22dd;">(</span>x-1,2<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">initial conditions</span>
+<span style="color: #005e8b;">ut</span> = np.fft.fft<span style="color: #000000;">(</span>u<span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">FFT initial data</span>
+<span style="color: #005e8b;">ut_split</span> = np.concatenate<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>np.real<span style="color: #008899;">(</span>ut<span style="color: #008899;">)</span>,np.imag<span style="color: #008899;">(</span>ut<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">utsol_split</span> = integrate.odeint<span style="color: #000000;">(</span>harm_rhs,ut_split,t,mxstep=10 ** 6<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">utsol</span> = utsol_split<span style="color: #000000;">[</span>:,:n<span style="color: #000000;">]</span> + <span style="color: #000000;">(</span>1j<span style="color: #000000;">)</span> * utsol_split<span style="color: #000000;">[</span>:,n:<span style="color: #000000;">]</span>
+<span style="color: #005e8b;">usol</span> = np.zeros_like<span style="color: #000000;">(</span>utsol<span style="color: #000000;">)</span>
+<span style="color: #531ab6;">for</span> jj <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span><span style="color: #8f0075;">len</span><span style="color: #dd22dd;">(</span>t<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">usol</span><span style="color: #000000;">[</span>jj,:<span style="color: #000000;">]</span> = np.fft.ifft<span style="color: #000000;">(</span>utsol<span style="color: #dd22dd;">[</span>jj,:<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+
+
+
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #005e8b;">U</span>, <span style="color: #005e8b;">S</span>, <span style="color: #005e8b;">Vh</span> = np.linalg.svd<span style="color: #000000;">(</span>usol<span style="color: #000000;">)</span>
+np.diag<span style="color: #000000;">(</span>S<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+array([[6.91587004]])
+</pre>
+</div>
+</div>
+<div id="outline-container-org5d1c15e" class="outline-3">
+<h3 id="org5d1c15e"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> For Next Time</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Goodfellow ML GANS
+Reich and Cotter Probabilistic Forecasting
+Density Estimation Silverman
+</p>
+
+<p>
+Figure out why gan discriminator can be discarded (it will have accuracy of 1/2)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2def9a5" class="outline-2">
+<h2 id="org2def9a5"><span class="section-number-2">3.</span> 2024/09/05 - GANs and the Useless Discriminator</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Using information from Ian Goodfellow:
+</p>
+
+<p>
+(Ian Goodfellow and Yoshua Bengio and Aaron Courville, 2016) - Deep Learning Book
+(Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua, 2014) - Original GAN Paper
+</p>
+</div>
+<div id="outline-container-orgface2c0" class="outline-3">
+<h3 id="orgface2c0"><span class="section-number-3">3.1.</span> Problem Statement</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Suppose we have i.i.d. random variables \( X_{i} \) hailing from some distribution with density \( p_{X} \).
+</p>
+
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( G \) be a multilayer perceptron with input being \( \mathbb{R}^{N} \) for \( N \) some hyperparameter and output the same as the shape of \( X_{i} \).</li>
+<li>\( D \) be a multilayer perceptron whose input dimension is the shape of \( X_{i} \) and output shape is \( 1 \) (binary classifier).</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> torch
+<span style="color: #531ab6;">import</span> torch.nn <span style="color: #531ab6;">as</span> nn
+
+<span style="color: #005e8b;">G</span> = nn.Sequential<span style="color: #000000;">(</span>
+    nn.Linear<span style="color: #dd22dd;">(</span>764, 100<span style="color: #dd22dd;">)</span>,
+    nn.ReLU<span style="color: #dd22dd;">()</span>,
+    nn.Linear<span style="color: #dd22dd;">(</span>100, 50<span style="color: #dd22dd;">)</span>,
+    nn.ReLU<span style="color: #dd22dd;">()</span>,
+    nn.Linear<span style="color: #dd22dd;">(</span>50, 10<span style="color: #dd22dd;">)</span>,
+    nn.Sigmoid<span style="color: #dd22dd;">()</span>
+<span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">V</span> = nn.Sequential<span style="color: #000000;">(</span>
+    nn.Linear<span style="color: #dd22dd;">(</span>764, 100<span style="color: #dd22dd;">)</span>,
+    nn.ReLU<span style="color: #dd22dd;">()</span>,
+    nn.Linear<span style="color: #dd22dd;">(</span>100, 50<span style="color: #dd22dd;">)</span>,
+    nn.ReLU<span style="color: #dd22dd;">()</span>,
+    nn.Linear<span style="color: #dd22dd;">(</span>50, 10<span style="color: #dd22dd;">)</span>,
+    nn.Sigmoid<span style="color: #dd22dd;">()</span>
+<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+Sequential(
+  (0): Linear(in_features=764, out_features=100, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=100, out_features=50, bias=True)
+  (3): ReLU()
+  (4): Linear(in_features=50, out_features=10, bias=True)
+  (5): Sigmoid()
+)
+</pre>
+
+
+<p>
+We want to simultaneously train \( D \) to correctly classify if an image comes from the dataset or from \( G \) and \( G \) to trick \( D \).
+</p>
+
+<p>
+Perfect discriminator \( D \) is \( 1 \) on real data and \( 0 \) on outputs of \( G \).
+The loss will be
+</p>
+
+<p>
+\[ - x \log(D(x)) - (1 - x) \log(1 - D(x)) \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgee2312f" class="outline-3">
+<h3 id="orgee2312f"><span class="section-number-3">3.2.</span> GAN Proof</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+To learn the generator's distribution \( p_{g} \) over data \( x \), we define a prior on input noise variables \( p_{z}(z) \), then represent a mapping to data space as \( G(z; \theta_{g}) \), where \( G \) is a differentiable function represented by a multilayer perceptron with parameters \( \theta_{g} \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgb0db6e0" class="outline-3">
+<h3 id="orgb0db6e0"><span class="section-number-3">3.3.</span> GAN Proof</h3>
+</div>
+
+
+
+<div id="outline-container-orgf976535" class="outline-3">
+<h3 id="orgf976535"><span class="section-number-3">3.4.</span> Problem Statement</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( X_{i} \) be i.i.d random variables in \( \mathbb{R}^{M} \)  with distribution having density \( p_{\text{data}}(x) \)</li>
+<li>\( G \) be a multilayer perceptron with input being \( \mathbb{R}^{N} \) for \( N \) some hyperparameter and output the same as the shape of \( X_{i} \).</li>
+<li>\( D \) be a multilayer perceptron whose input dimension is the shape of \( X_{i} \) and output shape is \( 1 \) (binary classifier).</li>
+</ul>
+
+<p>
+Now consider the binary classification problem,
+</p>
+
+<p>
+If a matrix is generated via \( p_{\text{data}} \) then assign \( y = 1 \)
+If a matrix is generated via \( p_{g} \) then assign \( y = 0 \)
+</p>
+
+<p>
+\( D \) will want to minimize the binary cross entropy loss
+</p>
+
+<p>
+\[ \mathcal{L} = y \log(\hat{y}) + (1 - y) \log(1 - \hat{y}) \]
+</p>
+
+<p>
+\( G \) will want to maximize the binary cross entropy loss.
+</p>
+
+<p>
+In theory we want to find such a \( G \) that perfectly tricks \( D \) and \( D \) which perfectly classifies, this is a statement which is posed for arbitrary distributions in probability space. In practice we will instead try to find the weights for the MLPs which plays the minimax game.
+</p>
+
+<p>
+We note that when \( y = 0 \), \( \hat{y} = D(G(z)) \).
+When \( y = 1 \), \( \hat{y} = D(x) \).
+</p>
+
+<p>
+Over the course of training we will of course sum the losses.
+A nice way to codify the sum is to use expected values.
+</p>
+
+<p>
+We now have the following minimax game,
+</p>
+
+<p>
+\[ \min_{G} \max_{D} V(D, G) = \mathbb{E}_{x \sim p_{\text{data}}(x)} \left[ \log(D(x)) \right] + \mathbb{E}_{z \sim p_{z}(z)} \left[ \log(1 - D(G(z))) \right] \]
+</p>
+</div>
+</div>
+<div id="outline-container-org1c7e2a5" class="outline-3">
+<h3 id="org1c7e2a5"><span class="section-number-3">3.5.</span> Loss Derivation</h3>
+</div>
+
+<div id="outline-container-org3794bee" class="outline-3">
+<h3 id="org3794bee"><span class="section-number-3">3.6.</span> GAN Proof</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Theorem 1: For \( G \) fixed, the optimal discriminator \( D \) is
+</p>
+
+<p>
+\[ D_{G}^{\ast}(x) = \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \]
+</p>
+
+<p>
+Proof:
+</p>
+
+<p>
+Given a fixed generator \( G \), the optimal discriminator has the property:
+</p>
+
+<p>
+\[ D = \argmax_{D} V(D, G) = \argmax_{D} \left( \mathbb{E}_{x \sim p_{\text{data}}(x)} \left[ \log(D(x)) \right] + \mathbb{E}_{z \sim p_{z}(z)} \left[ \log(1 - D(G(z))) \right] \right) \]
+</p>
+
+<p>
+Let us rewrite \( V(D,G) \) in terms of their respective integrals,
+</p>
+
+\begin{align*}
+V(D,G)
+&= \int_{x} \log(D(x)) p_{\text{data}}(x) dx + \int_{z} \log(1 - D(G(z))) p_{z}(z) dz &&\text{Def. $V(D,G)$} \\
+&= \int_{x} \log(D(x)) p_{\text{data}}(x) dx + \int_{x} \log(1 - D(x)) p_{g}(x) dx &&\text{Change of Variables (Pushforward Measure)} \\
+&= \int_{x} \log(D(x)) p_{\text{data}}(x) + \log(1 - D(x)) p_{g}(x) dx &&\text{Combine Integrals}
+\end{align*}
+
+<p>
+We note that the integral is maximized whenever \( D(x) \) maximizes the integrand for each \( x \).
+This means we want to describe what \( D(x) \) should be which maximizes the following for a fixed \( x \),
+</p>
+
+<p>
+\[ \log(D(x)) p_{\text{data}}(x) + \log(1 - D(x)) p_{g}(x) \]
+</p>
+
+<p>
+We may take a step back and notice the "form" of the integrand.
+We want to find the \( y \) which maximizes,
+</p>
+
+<p>
+\[ a \log(y) + b \log(1 - y) \]
+</p>
+
+<p>
+Simple calculus&#x2026;
+</p>
+
+\begin{align*}
+&&y &= \argmax_{y} \left[ a \log(y) + b \log(1 - y) \right] &\text{} \\
+&\implies &0 &= \frac{ d }{ d y} \left[ a \log(y) + b \log(1 - y) \right] &\text{} \\
+&\iff &0 &= \frac{a}{y} - \frac{b}{1 - y} \\
+&\iff &0 &= \frac{a(1 - y) - by}{y (1 - y)} \\
+&\iff &0 &= a(1-y) - by \\
+&\iff &y &= \frac{a}{a + b}
+\end{align*}
+
+<p>
+By substituting the our variables we see that,
+</p>
+
+<p>
+\[ D(x) = \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7aa3cb" class="outline-3">
+<h3 id="orgc7aa3cb"><span class="section-number-3">3.7.</span> Theorem 1</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+We may now ask the question of what the minimal \( G \) looks like within the minimax problem given the optimal \( D \). First, introduce some notation,
+</p>
+
+\begin{align*}
+C(G)
+&= \max_{D} V(G,D) &\text{} \\
+&= \max_{D} V(G,D) &\text{} \\
+\end{align*}
+
+<p>
+KL Divergence
+</p>
+
+<p>
+\[ KL(p \| q ) = \int_{x} p(x) \log \left( \frac{p(x)}{q(x)} \right) dx \]
+</p>
+
+\begin{align*}
+C(G)
+&= \mathbb{E}_{x \sim p_{\text{data}}(x)} \left[ \log \left( \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) \right] + \mathbb{E}_{x \sim p_{g}(x)} \left[ \log \left( \frac{p_{g}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) \right] & \text{} \\
+&= \int_{x} p_{\text{data}}(x) \log \left( \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) dx +  \int_{x} p_{g}(x) \log \left( \frac{p_{g}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) dx &\text{} \\
+&= \int_{x} p_{\text{data}}(x) \log \left(\frac{2}{2} \frac{p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) dx +  \int_{x} p_{g}(x) \log \left(\frac{2}{2} \frac{p_{g}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) dx &\text{} \\
+&= \int_{x} p_{\text{data}}(x) \log \left( \frac{2 p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) - p_{\text{data}}(x) \log(2) dx +  \int_{x} p_{g}(x) \log \left(\frac{2 p_{g}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) - p_{g}(x) \log(2) dx &\text{} \\
+&= \int_{x} p_{\text{data}}(x) \log \left(  \frac{ 2 p_{\text{data}}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) dx +  \int_{x} p_{g}(x) \log \left(\frac{2 p_{g}(x)}{p_{\text{data}}(x) + p_{g}(x)} \right) dx - \log(2) &\text{} \\
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgadc9909" class="outline-3">
+<h3 id="orgadc9909"><span class="section-number-3">3.8.</span> Literature Review</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+Sundials Time integration
+</p>
+
+<p>
+Simulate Lorenz Butterfly via GAN
+</p>
+
+<p>
+VODE
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org36f00ce" class="outline-2">
+<h2 id="org36f00ce"><span class="section-number-2">4.</span> 2024/09/12 - Generating Points on Lorenz Butterfly via GAN</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Need to see 5k batches to somewhat compare results.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">                                        <span style="color: #595959;">; </span><span style="color: #595959;">Previous</span>
+<span style="color: #000000;">(</span><span style="color: #531ab6;">let</span> <span style="color: #dd22dd;">(</span><span style="color: #008899;">(</span>epochs 50<span style="color: #008899;">)</span>
+      <span style="color: #008899;">(</span>dataset-size 10000000<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+  <span style="color: #dd22dd;">(</span>* epochs dataset-size<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+                                        <span style="color: #595959;">; </span><span style="color: #595959;">New</span>
+<span style="color: #000000;">(</span><span style="color: #531ab6;">let</span> <span style="color: #dd22dd;">(</span><span style="color: #008899;">(</span>batch-size 100000<span style="color: #008899;">)</span>
+      <span style="color: #008899;">(</span>batches 5000<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+  <span style="color: #dd22dd;">(</span>* batches batch-size<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+</div>
+<div id="outline-container-orgb21513a" class="outline-3">
+<h3 id="orgb21513a"><span class="section-number-3">4.1.</span> <span class="todo TODO">TODO</span> Implement Ball</h3>
+</div>
+
+<div id="outline-container-orgf585fbd" class="outline-3">
+<h3 id="orgf585fbd"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> Readings  ADAM-W, Data Assimilation, Jaynes Probability</h3>
+</div>
+
+<div id="outline-container-orgee1571b" class="outline-3">
+<h3 id="orgee1571b"><span class="section-number-3">4.3.</span> <span class="todo TODO">TODO</span> FUSION RIO 2025 deadline march 1st</h3>
+</div>
+
+<div id="outline-container-org0f1c4a0" class="outline-3">
+<h3 id="org0f1c4a0"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> Change ADAM Optimizer Parameters</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+beta<sub>1</sub> = 0.1
+beta<sub>2</sub> = 0.99, 0.95
+</p>
+</div>
+</div>
+<div id="outline-container-orgbcd91ad" class="outline-3">
+<h3 id="orgbcd91ad"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> Implement Ikeda Map</h3>
+</div>
+
+<div id="outline-container-orgc11c4b4" class="outline-3">
+<h3 id="orgc11c4b4"><span class="section-number-3">4.6.</span> <span class="done DONE">DONE</span> Implement CyclicalLearningRate</h3>
+</div>
+
+<div id="outline-container-org851b7b8" class="outline-3">
+<h3 id="org851b7b8"><span class="section-number-3">4.7.</span> <span class="done DONE">DONE</span> Make new data for every batch</h3>
+</div>
+
+<div id="outline-container-orgbd85883" class="outline-3">
+<h3 id="orgbd85883"><span class="section-number-3">4.8.</span> <span class="done DONE">DONE</span> Make noise<sub>dim</sub> larger (&gt; 5)</h3>
+</div>
+
+<div id="outline-container-org6b4fc58" class="outline-3">
+<h3 id="org6b4fc58"><span class="section-number-3">4.9.</span> <span class="done DONE">DONE</span> Ask hadari about "staple", ask about roles of cooperating faculty (meetings?)</h3>
+</div>
+</div>
+<div id="outline-container-org109b4ce" class="outline-2">
+<h2 id="org109b4ce"><span class="section-number-2">5.</span> 2024/09/19 - Data Assimilation Overview</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Went over some references to read about data assimilation
+</p>
+</div>
+</div>
+<div id="outline-container-orge6fd542" class="outline-2">
+<h2 id="orge6fd542"><span class="section-number-2">6.</span> 2024/09/24 - Data Assimilation Gatekeeping</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Kritka U Washington Former student of brunton and kutz
+Sparse identification of nonlinear dynamics (Look at his implementation)
+Overview Brunton Book (It's mostly correct / Regularization is wrong)
+</p>
+
+<p>
+Invertible Neural Network Review Paper (How to Implement them)
+</p>
+<ul class="org-ul">
+<li>Types of Normalizing flows</li>
+<li>See what has already been implemented</li>
+</ul>
+
+
+<p>
+Ikeda GAN with Invertible NN
+Make sure I understand what I am using !!
+</p>
+
+<p>
+Bayesian Inference
+</p>
+
+<p>
+Banana Problem - Implement Algorithm in Paper
+</p>
+
+<p>
+Post &alpha; Prior x Measurement (Gaussian-ish)
+</p>
+</div>
+</div>
+<div id="outline-container-org3408f66" class="outline-2">
+<h2 id="org3408f66"><span class="section-number-2">7.</span> 2024/10/03 -</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org86e8df4" class="outline-3">
+<h3 id="org86e8df4"><span class="section-number-3">7.1.</span> GAN with Invertibility</h3>
+</div>
+
+<div id="outline-container-org4bf709a" class="outline-3">
+<h3 id="org4bf709a"><span class="section-number-3">7.2.</span> Data Assimilation</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Implement Lorenz 63
+Call the measurement map the projection onto the 1st coordinate.
+Try to implement filter. Linear filter is implemented already.
+</p>
+</div>
+<div id="outline-container-org0bfcdc4" class="outline-4">
+<h4 id="org0bfcdc4"><span class="section-number-4">7.2.1.</span> Preamble</h4>
+<div class="outline-text-4" id="text-7-2-1">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> pandas <span style="color: #531ab6;">as</span> pd
+<span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #531ab6;">import</span> sympy <span style="color: #531ab6;">as</span> sp
+<span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+<span style="color: #531ab6;">from</span> scipy.integrate <span style="color: #531ab6;">import</span> ode
+<span style="color: #531ab6;">from</span> tqdm <span style="color: #531ab6;">import</span> tqdm
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9ed574c" class="outline-4">
+<h4 id="org9ed574c"><span class="section-number-4">7.2.2.</span> Full Model - Lorenz63</h4>
+<div class="outline-text-4" id="text-7-2-2">
+<div class="org-src-container">
+<pre class="src src-jupyter-python">sp.init_printing<span style="color: #000000;">()</span>
+<span style="color: #005e8b;">rng</span> = np.random.default_rng<span style="color: #000000;">()</span>
+
+<span style="color: #005e8b;">t</span>, <span style="color: #005e8b;">x</span>, <span style="color: #005e8b;">y</span>, <span style="color: #005e8b;">z</span> = sp.var<span style="color: #000000;">(</span><span style="color: #3548cf;">'t, x, y, z'</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">declare model parameters</span>
+<span style="color: #005e8b;">beta</span>, <span style="color: #005e8b;">rho</span>, <span style="color: #005e8b;">sigma</span> = sp.var<span style="color: #000000;">(</span><span style="color: #3548cf;">'beta, rho, sigma'</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">define symbolic model equations</span>
+<span style="color: #005e8b;">_x_dot</span> = sigma * <span style="color: #000000;">(</span>y - x<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_y_dot</span> = x * <span style="color: #000000;">(</span>rho - z<span style="color: #000000;">)</span> - y
+<span style="color: #005e8b;">_z_dot</span> = x * y - beta * z
+
+<span style="color: #595959;"># </span><span style="color: #595959;">define symbolic system and compute the jacobian</span>
+<span style="color: #005e8b;">_lorenz_system</span> = sp.Matrix<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">[</span>_x_dot<span style="color: #008899;">]</span>, <span style="color: #008899;">[</span>_y_dot<span style="color: #008899;">]</span>, <span style="color: #008899;">[</span>_z_dot<span style="color: #008899;">]</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+_lorenz_system
+
+<span style="color: #005e8b;">_lorenz_jacobian</span> = _lorenz_system.jacobian<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>x, y, z<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+_lorenz_jacobian
+
+<span style="color: #005e8b;">X</span> = sp.DeferredVector<span style="color: #000000;">(</span><span style="color: #3548cf;">'X'</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">change_of_vars</span> = <span style="color: #000000;">{</span><span style="color: #3548cf;">'x'</span>: X<span style="color: #dd22dd;">[</span>0<span style="color: #dd22dd;">]</span>, <span style="color: #3548cf;">'y'</span>: X<span style="color: #dd22dd;">[</span>1<span style="color: #dd22dd;">]</span>, <span style="color: #3548cf;">'z'</span>: X<span style="color: #dd22dd;">[</span>2<span style="color: #dd22dd;">]</span><span style="color: #000000;">}</span>
+<span style="color: #005e8b;">_transformed_lorenz_system</span> = _lorenz_system.subs<span style="color: #000000;">(</span>change_of_vars<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_transformed_lorenz_jacobian</span> = _transformed_lorenz_system.jacobian<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>X<span style="color: #008899;">[</span>0<span style="color: #008899;">]</span>, X<span style="color: #008899;">[</span>1<span style="color: #008899;">]</span>, X<span style="color: #008899;">[</span>2<span style="color: #008899;">]</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">wrap the symbolic expressions as callable numpy funcs</span>
+<span style="color: #005e8b;">_args</span> = <span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_f</span> = sp.lambdify<span style="color: #000000;">(</span>_args, _transformed_lorenz_system,
+                 modules=<span style="color: #dd22dd;">[</span><span style="color: #008899;">{</span><span style="color: #3548cf;">'ImmutableMatrix'</span>: np.array<span style="color: #008899;">}</span>, <span style="color: #3548cf;">"numpy"</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_jac</span> = sp.lambdify<span style="color: #000000;">(</span>_args, _transformed_lorenz_jacobian,
+                   modules=<span style="color: #dd22dd;">[</span><span style="color: #008899;">{</span><span style="color: #3548cf;">'ImmutableMatrix'</span>: np.array<span style="color: #008899;">}</span>, <span style="color: #3548cf;">"numpy"</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">lorenz_system</span><span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Return the Lorenz system.</span>
+
+<span style="color: #2a5045;">    Parameters</span>
+<span style="color: #2a5045;">    ----------</span>
+<span style="color: #2a5045;">    t : float</span>
+<span style="color: #2a5045;">        Time</span>
+<span style="color: #2a5045;">    X : ndarray (float, shape=(3,))</span>
+<span style="color: #2a5045;">        Endogenous variables of the Lorenz system.</span>
+<span style="color: #2a5045;">    beta : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\b</span><span style="color: #2a5045;">eta`.</span>
+<span style="color: #2a5045;">    rho : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\r</span><span style="color: #2a5045;">ho`.</span>
+<span style="color: #2a5045;">    sigma : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; \sigma`.</span>
+
+
+<span style="color: #2a5045;">    Returns</span>
+<span style="color: #2a5045;">    -------</span>
+<span style="color: #2a5045;">    rhs_ode : ndarray (float, shape=(3,))</span>
+<span style="color: #2a5045;">        Right hand side of the Lorenz system of ODEs.</span>
+
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #005e8b;">rhs_ode</span> = _f<span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>.ravel<span style="color: #000000;">()</span>
+    <span style="color: #531ab6;">return</span> rhs_ode
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">lorenz_jacobian</span><span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Return the Jacobian of the Lorenz system.</span>
+
+<span style="color: #2a5045;">    Parameters</span>
+<span style="color: #2a5045;">    ----------</span>
+<span style="color: #2a5045;">    t : float</span>
+<span style="color: #2a5045;">        Time</span>
+<span style="color: #2a5045;">    X : ndarray (float, shape=(3,))</span>
+<span style="color: #2a5045;">        Endogenous variables of the Lorenz system.</span>
+<span style="color: #2a5045;">    beta : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\b</span><span style="color: #2a5045;">eta`.</span>
+<span style="color: #2a5045;">    rho : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\r</span><span style="color: #2a5045;">ho`.</span>
+<span style="color: #2a5045;">    sigma : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; \sigma`.</span>
+
+<span style="color: #2a5045;">    Returns</span>
+<span style="color: #2a5045;">    -------</span>
+<span style="color: #2a5045;">    jac : ndarray (float, shape=(3,3))</span>
+<span style="color: #2a5045;">        Jacobian of the Lorenz system of ODEs.</span>
+
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #005e8b;">jac</span> = _jac<span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> jac
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">scipy_butterfly</span><span style="color: #000000;">(</span>num_points, initial_value<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">lorenz_params</span> = <span style="color: #000000;">(</span>2.66, 28.0, 10.0<span style="color: #000000;">)</span>
+
+    <span style="color: #595959;"># </span><span style="color: #595959;">create the instance</span>
+    <span style="color: #005e8b;">solution</span> = ode<span style="color: #000000;">(</span>f=lorenz_system, jac=lorenz_jacobian<span style="color: #000000;">)</span> \
+        .set_integrator<span style="color: #000000;">(</span><span style="color: #3548cf;">'vode'</span><span style="color: #000000;">)</span> \
+        .set_initial_value<span style="color: #000000;">(</span>initial_value, 0<span style="color: #000000;">)</span> \
+        .set_f_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span> \
+        .set_jac_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span>
+
+    <span style="color: #005e8b;">t_final</span> = 50
+    <span style="color: #005e8b;">dt</span> = 0.01
+    <span style="color: #531ab6;">while</span> solution.successful<span style="color: #000000;">()</span> <span style="color: #531ab6;">and</span> solution.t &lt; t_final:
+        solution.t + dt, solution.integrate<span style="color: #000000;">(</span>solution.t + dt<span style="color: #000000;">)</span>
+
+        
+    <span style="color: #005e8b;">butterfly</span> = <span style="color: #000000;">[]</span>
+    <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>num_points<span style="color: #000000;">)</span>:
+        solution.integrate<span style="color: #000000;">(</span>solution.t + dt<span style="color: #000000;">)</span>
+        butterfly.append<span style="color: #000000;">(</span>solution.y<span style="color: #000000;">)</span>
+
+    <span style="color: #005e8b;">butterfly</span> = np.array<span style="color: #000000;">(</span>butterfly<span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> butterfly
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">butterfly_generator</span><span style="color: #000000;">(</span>batch_size, batches<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>batches<span style="color: #000000;">)</span>:
+        <span style="color: #531ab6;">yield</span> scipy_butterfly<span style="color: #000000;">(</span>batch_size, rng.uniform<span style="color: #dd22dd;">(</span>-2,2,3<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">plot_butterfly</span><span style="color: #000000;">(</span>array_of_points<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">ax</span> = plt.figure<span style="color: #000000;">()</span>.add_subplot<span style="color: #000000;">(</span>projection=<span style="color: #3548cf;">'3d'</span><span style="color: #000000;">)</span>
+    ax.scatter<span style="color: #000000;">(</span>array_of_points<span style="color: #dd22dd;">[</span>:, 0<span style="color: #dd22dd;">]</span>, array_of_points<span style="color: #dd22dd;">[</span>:, 1<span style="color: #dd22dd;">]</span>, array_of_points<span style="color: #dd22dd;">[</span>:, 2<span style="color: #dd22dd;">]</span>, s=0.5<span style="color: #000000;">)</span>
+    ax.set_xlabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"X Axis"</span><span style="color: #000000;">)</span>
+    ax.set_ylabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"Y Axis"</span><span style="color: #000000;">)</span>
+    ax.set_zlabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"Z Axis"</span><span style="color: #000000;">)</span>
+    ax.set_title<span style="color: #000000;">(</span><span style="color: #3548cf;">"Lorenz Attractor"</span><span style="color: #000000;">)</span>
+    plt.show<span style="color: #000000;">()</span>
+
+<span style="color: #531ab6;">for</span> butterfly <span style="color: #531ab6;">in</span> butterfly_generator<span style="color: #000000;">(</span>10000, 2<span style="color: #000000;">)</span>:
+    plot_butterfly<span style="color: #000000;">(</span>butterfly<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+<img src="file:///home/zjabbar/.cache/jupyter/e2775e1b53678c6a74f00c612c0e6e96c04d6a31.png" alt="e2775e1b53678c6a74f00c612c0e6e96c04d6a31.png" />
+<img src="file:///home/zjabbar/.cache/jupyter/6de37d9135bd208a272719f104911b83fc22d924.png" alt="6de37d9135bd208a272719f104911b83fc22d924.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-org0f80181" class="outline-4">
+<h4 id="org0f80181"><span class="section-number-4">7.2.3.</span> Measurement</h4>
+<div class="outline-text-4" id="text-7-2-3">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #005e8b;">lorenz_params</span> = <span style="color: #000000;">(</span>8/3, 28, 10<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">initial_value</span> = <span style="color: #000000;">(</span>0, 1, 0<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">R</span> = 1/16
+<span style="color: #005e8b;">P</span> = np.eye<span style="color: #000000;">(</span>3<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">eq_pt</span> = np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>6*np.sqrt<span style="color: #008899;">(</span>2<span style="color: #008899;">)</span>, 6*np.sqrt<span style="color: #008899;">(</span>2<span style="color: #008899;">)</span>, 27<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">h</span><span style="color: #000000;">(</span>state<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> np.linalg.norm<span style="color: #000000;">(</span>state - eq_pt<span style="color: #000000;">)</span> + rng.normal<span style="color: #000000;">(</span>0, R<span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">dh_dx</span><span style="color: #000000;">(</span>state<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>state<span style="color: #008899;">[</span>i<span style="color: #008899;">]</span> / np.linalg.norm<span style="color: #008899;">(</span>state - eq_pt<span style="color: #008899;">)</span> <span style="color: #531ab6;">for</span> i <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #008899;">(</span>3<span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">create the instance</span>
+<span style="color: #005e8b;">solution</span> = ode<span style="color: #000000;">(</span>f=lorenz_system, jac=lorenz_jacobian<span style="color: #000000;">)</span> \
+    .set_integrator<span style="color: #000000;">(</span><span style="color: #3548cf;">'vode'</span><span style="color: #000000;">)</span> \
+    .set_initial_value<span style="color: #000000;">(</span>initial_value, 0<span style="color: #000000;">)</span> \
+    .set_f_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span> \
+    .set_jac_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">t_final</span> = 30
+<span style="color: #005e8b;">dt</span> = 0.12
+<span style="color: #531ab6;">while</span> solution.successful<span style="color: #000000;">()</span> <span style="color: #531ab6;">and</span> solution.t &lt; t_final:
+    <span style="color: #005e8b;">time</span>, <span style="color: #005e8b;">pos</span> = solution.t + dt, solution.integrate<span style="color: #000000;">(</span>solution.t + dt<span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">x</span> = h<span style="color: #000000;">(</span>pos<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">N</span> = 10
+
+<span style="color: #531ab6;">for</span> i <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>N<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">H</span> = dh_dx<span style="color: #000000;">(</span>pos<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">K</span> = P @ H.T * <span style="color: #000000;">(</span>1 / <span style="color: #dd22dd;">(</span>H @ P @ H.T + N * R<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">pos</span> = pos + K * <span style="color: #000000;">(</span>x - h<span style="color: #dd22dd;">(</span>pos<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">P</span> = <span style="color: #000000;">(</span>np.eye<span style="color: #dd22dd;">(</span>3<span style="color: #dd22dd;">)</span> - K @ H<span style="color: #000000;">)</span> @ P
+
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>pos, P<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+[-10.18144851 -12.54446335  25.99075014] [[ 0.89056453 -0.10943547 -0.10943547]
+ [-0.10943547  0.89056453 -0.10943547]
+ [-0.10943547 -0.10943547  0.89056453]]
+</pre>
+
+
+<p>
+<b>*</b>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #005e8b;">lorenz_params</span> = <span style="color: #000000;">(</span>8/3, 28, 10<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">initial_value</span> = <span style="color: #000000;">(</span>0, 1, 0<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">R</span> = 1/16
+<span style="color: #005e8b;">P</span> = np.eye<span style="color: #000000;">(</span>3<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">eq_pt</span> = np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>6*np.sqrt<span style="color: #008899;">(</span>2<span style="color: #008899;">)</span>, 6*np.sqrt<span style="color: #008899;">(</span>2<span style="color: #008899;">)</span>, 27<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">h</span><span style="color: #000000;">(</span>state<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> np.linalg.norm<span style="color: #000000;">(</span>state - eq_pt<span style="color: #000000;">)</span> + rng.normal<span style="color: #000000;">(</span>0, R<span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">dh_dx</span><span style="color: #000000;">(</span>state<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> np.array<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>state<span style="color: #008899;">[</span>i<span style="color: #008899;">]</span> / np.linalg.norm<span style="color: #008899;">(</span>state - eq_pt<span style="color: #008899;">)</span> <span style="color: #531ab6;">for</span> i <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #008899;">(</span>3<span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">create the instance</span>
+<span style="color: #005e8b;">M</span> = 10
+<span style="color: #005e8b;">prior</span> = np.zeros<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>M,3<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+<span style="color: #531ab6;">for</span> j <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>M<span style="color: #000000;">)</span>:
+    
+    <span style="color: #005e8b;">solution</span> = ode<span style="color: #000000;">(</span>f=lorenz_system, jac=lorenz_jacobian<span style="color: #000000;">)</span> \
+        .set_integrator<span style="color: #000000;">(</span><span style="color: #3548cf;">'vode'</span><span style="color: #000000;">)</span> \
+        .set_initial_value<span style="color: #000000;">(</span>rng.uniform<span style="color: #dd22dd;">(</span>0,1, 3<span style="color: #dd22dd;">)</span>, 0<span style="color: #000000;">)</span> \
+        .set_f_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span> \
+        .set_jac_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span>
+
+    <span style="color: #005e8b;">t_final</span> = 30
+    <span style="color: #005e8b;">dt</span> = 0.12
+    <span style="color: #531ab6;">while</span> solution.successful<span style="color: #000000;">()</span> <span style="color: #531ab6;">and</span> solution.t &lt; t_final:
+        <span style="color: #005e8b;">time</span>, <span style="color: #005e8b;">pos</span> = solution.t + dt, solution.integrate<span style="color: #000000;">(</span>solution.t + dt<span style="color: #000000;">)</span>
+
+    <span style="color: #005e8b;">prior</span><span style="color: #000000;">[</span>j<span style="color: #000000;">]</span> = pos
+
+<span style="color: #005e8b;">m</span> = <span style="color: #000000;">(</span>1/M<span style="color: #000000;">)</span> * np.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span>prior, axis=0<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">x</span> = m + 1.01*<span style="color: #000000;">(</span>prior - m<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">P</span> = <span style="color: #000000;">(</span>1 / <span style="color: #dd22dd;">(</span>M - 1<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span> * <span style="color: #000000;">(</span>prior - m<span style="color: #000000;">)</span> @ <span style="color: #000000;">(</span>prior - m<span style="color: #000000;">)</span>.T
+
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>P.shape<span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">for</span> j <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>M<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">y</span> = h<span style="color: #000000;">(</span>prior<span style="color: #dd22dd;">[</span>j<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> + rng.normal<span style="color: #000000;">(</span>0, R<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">H</span> = dh_dx<span style="color: #000000;">(</span>prior<span style="color: #dd22dd;">[</span>j<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">S</span> = <span style="color: #000000;">(</span>H @ P<span style="color: #000000;">)</span> @ H.T + R
+    <span style="color: #595959;">#</span><span style="color: #595959;">K = P @ H.T * (1 / (H @ P @ H.T + N * R))</span>
+    <span style="color: #595959;">#</span><span style="color: #595959;">pos = pos + K * (x - h(pos))</span>
+    <span style="color: #595959;">#</span><span style="color: #595959;">P = (np.eye(3) - K @ H) @ P</span>
+
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>pos, P<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+(10, 10)
+</pre>
+
+<pre class="example" id="orgb5c0ce3">
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In [37], line 40
+     38     y = h(prior[j]) + rng.normal(0, R)
+     39     H = dh_dx(prior[j])
+---&gt; 40     S = (H @ P) @ H.T + R
+     41     #K = P @ H.T * (1 / (H @ P @ H.T + N * R))
+     42     #pos = pos + K * (x - h(pos))
+     43     #P = (np.eye(3) - K @ H) @ P
+     45 print(pos, P)
+
+ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)-&gt;(n?,m?) (size 10 is different from 3)
+</pre>
+</div>
+</div>
+<div id="outline-container-org4d21241" class="outline-4">
+<h4 id="org4d21241"><span class="section-number-4">7.2.4.</span> SNEES (Some Statistical Measure)</h4>
+<div class="outline-text-4" id="text-7-2-4">
+<p>
+Calc Root mean square error
+Scaled lineariszed ~~
+</p>
+
+<p>
+Compute scaled covariance 
+Measures consistency of filter mean and covariance actually match the system
+Want it to be &lt;1
+</p>
+
+<p>
+Sample around mean of the truth
+</p>
+
+<p>
+Min Cov = Argmin Tr = Matrix cook stuff and get formula
+</p>
+
+<p>
+As
+</p>
+
+<p>
+Get a better GAN then send as final draft
+</p>
+
+<p>
+Cartan for beginners
+Lee trilogy
+o neil diff geo
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

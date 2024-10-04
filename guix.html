@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guix</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Guix</h1>
+<div class="org-src-container">
+<pre class="src src-jupyter-scheme"><span style="color: #000000;">(</span>+ 1 2<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<div>You have not selected an execution environment
+yet.  You can create one by entering a “magic command” in a cell as follows:<p><code>;;guix environment my-environment &lt;- python-ipykernel</code></p>Subsequent cells will be executed by the IPython kernel in this environment.</div>
+<div id="outline-container-org178e68d" class="outline-2">
+<h2 id="org178e68d"><span class="section-number-2">1.</span> Guix Functions</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orge8b9f75" class="outline-3">
+<h3 id="orge8b9f75"><span class="section-number-3">1.1.</span> System Declaration</h3>
+</div>
+
+<div id="outline-container-org4307b00" class="outline-3">
+<h3 id="org4307b00"><span class="section-number-3">1.2.</span> Home Declaration</h3>
+</div>
+
+<div id="outline-container-orga1595c5" class="outline-3">
+<h3 id="orga1595c5"><span class="section-number-3">1.3.</span> Contributing Tutorial</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+First download <code>Guix</code> using <code>git</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git clone https://git.savannah.gnu.org/git/guix.git
+</pre>
+</div>
+
+<p>
+Set the right environmental variables
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">guix shell -D guix
+</pre>
+</div>
+
+<p>
+Run the following
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">./bootstrap
+./configure --localstatedir=/var
+make
+</pre>
+</div>
+
+<p>
+We may add files however we want now. Then we will add the changes as a commit
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">git add -A
+git commit -am <span style="color: #3548cf;">"Making commit."</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga42f6ed" class="outline-2">
+<h2 id="orga42f6ed"><span class="section-number-2">2.</span> Experimentation on Emacs with Guix</h2>
+</div>
+
+<div id="outline-container-org1fad9d2" class="outline-2">
+<h2 id="org1fad9d2"><span class="section-number-2">3.</span> GNUPG</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+GNUPG (GNU Privacy Guard) is a program implementing the PGP (Pretty Good Privacy) protocol. 
+</p>
+</div>
+</div>
+<div id="outline-container-org92a7dea" class="outline-2">
+<h2 id="org92a7dea"><span class="section-number-2">4.</span> Guix Operations in Guile Scheme</h2>
+</div>
+
+<div id="outline-container-orgf4b7b8f" class="outline-2">
+<h2 id="orgf4b7b8f"><span class="section-number-2">5.</span> G-Expressions</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Recall that Lisp has the "code-data duality". That is, Lisp code,
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme"><span style="color: #000000;">(</span>+ 1 2<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+can be turned into lisp data via quoting,
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme">'<span style="color: #000000;">(</span>+ 1 2<span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+This allows us to modify the code itself using standard Lisp operations,
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme"><span style="color: #000000;">(</span>cons '- <span style="color: #dd22dd;">(</span>cdr '<span style="color: #008899;">(</span>+ 1 2<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">-</td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Now we can execute the code with <code>eval</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-scheme"><span style="color: #000000;">(</span>eval '<span style="color: #dd22dd;">(</span>cons '- <span style="color: #008899;">(</span>cdr '<span style="color: #972500;">(</span>+ 1 2<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+ice-9/boot-9.scm:1685:16: In procedure raise-exception:
+Wrong number of arguments to #&lt;procedure eval (_ _)&gt;
+
+Entering a new prompt.  Type `,bt' for a backtrace or `,q' to continue.
+scheme@(guile-user) [1]&gt; 
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc02fb9b" class="outline-2">
+<h2 id="orgc02fb9b"><span class="section-number-2">6.</span> Everyday Use</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org64c563b" class="outline-3">
+<h3 id="org64c563b"><span class="section-number-3">6.1.</span> Public WI-FI</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="org-src-container">
+<pre class="src src-bash">sudo nmcli device wifi list
+</pre>
+</div>
+
+<p>
+Add connections using
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">sudo nmcli device wifi connect 
+</pre>
+</div>
+
+<p>
+<code>sudo nmcli device wifi connect</code>
+</p>
+
+<p>
+Use <code>ip route</code> to find the portals.
+</p>
+</div>
+</div>
+<div id="outline-container-org0a4235e" class="outline-3">
+<h3 id="org0a4235e"><span class="section-number-3">6.2.</span> VFIO PCI</h3>
+<div class="outline-text-3" id="text-6-2">
+<div class="org-src-container">
+<pre class="src src-shell">
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">20211210212624-japanese.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20211210212713-topology.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20211217162132-common<sub>lisp.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20211219043753-hindi.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20211222094239-workflow.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20211224040925-todo.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220221200803-economics.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220227203933-python.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220227214555-learning<sub>to</sub><sub>learn.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220305235319-basis.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220308150824-topology<sub>eagle</sub><sub>eye.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220308152530-topology<sub>intuition.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220308152745-equialent<sub>formulations</sub><sub>of</sub><sub>a</sub><sub>topology.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220317093748-dynamical<sub>systems.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220331085706-elephant<sub>and</sub><sub>tailor.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220408192439-algebraic<sub>geometry.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220505193227-japanese<sub>with</sub><sub>asami</sub><sub>lesson</sub><sub>one.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220808172140-uhm<sub>energy.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220827185208-lean.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220904134044-calculus.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220908150010-probability.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220917123941-student<sub>seminar.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20220922081629-paperwork.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220925152629-index.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220925155207-about.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20220925194334-categories.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221012095710-toric<sub>varieties</sub><sub>presentation.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221014095347-sql.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221014095347-sql.tex</td>
+</tr>
+
+<tr>
+<td class="org-left">20221016152052-guix.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221024195507-bash.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221107072546-partial<sub>differential</sub><sub>equations.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221107072546-partial<sub>differential</sub><sub>equations.sync</sub>-conflict-20231128-023704-6LPQLU7.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221110230023-guile<sub>scheme.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221112161504-habits.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221113114525-guix<sub>intro.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221114110845-long<sub>and</sub><sub>short</sub><sub>term</sub><sub>time</sub><sub>series</sub><sub>network.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221115072814-measure<sub>theory.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221122102550-markov<sub>chain</sub><sub>monte</sub><sub>carlo.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221123175032-exercise.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221127132834-machine<sub>learning</sub><sub>andrew</sub><sub>ng.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221204145316-influx.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221205150233-agenda.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221207231205-guix<sub>packaging.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221208120824-lstnet.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221211171434-chickadee.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221213173629-statistics.org</td>
+</tr>
+
+<tr>
+<td class="org-left">latex<sub>header.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221215134621-differential<sub>geometry.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221220201517-linear<sub>algebra.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221220201517-linear<sub>algebra.sync</sub>-conflict-20231128-023704-6LPQLU7.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20221222123021-emacs<sub>tutorial.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221222174235-study<sub>materials.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221224161805-differential<sub>equations.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221224221020-math<sub>is</sub><sub>beautiful.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20221228214449-projects.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230103184020-abstract<sub>algebra.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230104133743-uh<sub>math</sub><sub>649k.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230104133801-uh<sub>math</sub><sub>649d.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230104141121-oahu<sub>roads.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230104162736-goals.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230104214114-uh<sub>ics</sub><sub>635</sub><sub>washington.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230105135659-python<sub>pandas.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230105135714-python<sub>numpy.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230105135750-python<sub>tensorflow.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230105135806-python<sub>scikit</sub><sub>learn.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230109082933-uh<sub>math</sub><sub>649k</sub><sub>takagi.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230109125621-uh<sub>math</sub><sub>602</sub><sub>post.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230113100300-koopman<sub>operator.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230114133213-analysis<sub>for</sub><sub>applied</sub><sub>mathematics</sub><sub>ward</sub><sub>cheney.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230124170443-roc<sub>curve.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230126104357-journal.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230127093834-python<sub>leetcode.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230127130002-predicting<sub>building</sub><sub>power</sub><sub>usage.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230129123012-uh<sub>ics</sub><sub>637</sub><sub>sadowski.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230204202742-org<sub>mode.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230206164731-convex<sub>optimization.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230207123627-emacs<sub>for</sub><sub>data</sub><sub>science.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230222104410-time<sub>series</sub><sub>prediction.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230222104948-cat<sub>and</sub><sub>dog</sub><sub>image</sub><sub>classification.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230224124519-diet.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230224133317-time<sub>series.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230224135319-map<sub>territory</sub><sub>relations</sub><sub>in</sub><sub>math.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230225142533-category<sub>theory.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230225142818-notation.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230225143306-posts.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230226152026-emacs<sub>and</sub><sub>guix</sub><sub>for</sub><sub>data</sub><sub>science.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230227103905-information<sub>geometry.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230306183959-adaboost.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230313222501-march<sub>madness</sub><sub>kaggle.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230323105711-so<sub>good</sub><sub>they</sub><sub>can</sub><sub>t</sub><sub>ignore</sub><sub>you.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230323204912-python<sub>sqlalchemy.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230325122439-taxes.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230331123144-resume.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230414163911-discrete<sub>math.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230420170708-hyperparameter<sub>optimization.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230420172407-data<sub>visualization.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230428130525-model<sub>fairness.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230523124504-applied<sub>qualifying</sub><sub>exam.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230612164252-digital<sub>health</sub><sub>lab.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230616133208-conferences.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20230620123821-problem<sub>solving</sub><sub>strategies.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230625181146-free<sub>recall.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230816114311-fair<sub>active</sub><sub>learning</sub><sub>paper.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230816152218-high<sub>dimensional</sub><sub>spaces.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230822144411-math<sub>607</sub><sub>gawlik.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230822145746-math<sub>649k</sub><sub>mileyko.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230824144930-ics<sub>690</sub><sub>sadowski.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230911123912-learning<sub>elliptic</sub><sub>partial</sub><sub>differential</sub><sub>equations</sub><sub>with</sub><sub>randomized</sub><sub>linear</sub><sub>algebra.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20230915123043-active<sub>learning</sub><sub>literature</sub><sub>survey.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231017160558-python<sub>scikit</sub><sub>learn.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231109145427-dealing<sub>with</sub><sub>missing</sub><sub>data.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231113125538-tex.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20231206183729-org<sub>roam.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231206184131-fair<sub>class</sub><sub>balancing</sub><sub>enhancing</sub><sub>model</sub><sub>fairness</sub><sub>without</sub><sub>observing</sub><sub>sensitive</sub><sub>attributes.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231207114549-determinant.org</td>
+</tr>
+
+<tr>
+<td class="org-left">20231207143639-fairness<sub>definitions</sub><sub>explained.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231207144718-sufficient<sub>statistics.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231207175808-fisher<sub>information</sub><sub>matrix.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231207180329-fisher<sub>information</sub><sub>matrix</sub><sub>normal</sub><sub>distribution.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231208160127-normal<sub>distribution.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231210152158-python<sub>io.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231210153559-all<sub>of</sub><sub>us</sub><sub>database.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231212141458-continuous<sub>function.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">20231222073145-change<sub>of</sub><sub>variables.org</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">attachments</td>
+</tr>
+
+<tr>
+<td class="org-left">bibtex</td>
+</tr>
+
+<tr>
+<td class="org-left">CNAME</td>
+</tr>
+
+<tr>
+<td class="org-left">css</td>
+</tr>
+
+<tr>
+<td class="org-left">daily</td>
+</tr>
+
+<tr>
+<td class="org-left">figures</td>
+</tr>
+
+<tr>
+<td class="org-left">flashcard<sub>media</sub></td>
+</tr>
+
+<tr>
+<td class="org-left">_.git</td>
+</tr>
+
+<tr>
+<td class="org-left">ltximg</td>
+</tr>
+
+<tr>
+<td class="org-left">static</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org77b7fae" class="outline-3">
+<h3 id="org77b7fae"><span class="section-number-3">6.3.</span> Mount USB</h3>
+<div class="outline-text-3" id="text-6-3">
+<div class="org-src-container">
+<pre class="src src-bash">sudo mount /dev/sda /media
+sudo rm -rf /media/documents/*
+sudo cp -r ~/books/* /media/documents/
+sudo umount /media
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org28fc91b" class="outline-2">
+<h2 id="org28fc91b"><span class="section-number-2">7.</span> Guix Licensing</h2>
+</div>
+</div>
+</body>
+</html>

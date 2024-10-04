@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Workflow</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Workflow</h1>
+<p>
+Wake Up 6
+Get Ready 6:00 - 6:15
+Get to School 6:15 - 6:30
+Workout 6:30 - 8:00
+Shower 8:00 - 8:30
+Work 9:00 - 5:00
+Get Home 5:00 - 5:30
+Eat Dinner 5:30 - 6:30
+</p>
+
+<p>
+Japanese / League / Emacs 6:30 - 8:30
+</p>
+<div id="outline-container-org20e52a4" class="outline-2">
+<h2 id="org20e52a4"><span class="section-number-2">1.</span> Computer Boot Process</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Write down what software I run on my computer and why.
+The orchestration of the software is taken care of in <a href="file:///home/zjabbar/.config/guix/">Guix Directory</a>.
+</p>
+</div>
+<div id="outline-container-orgaf8a073" class="outline-3">
+<h3 id="orgaf8a073"><span class="section-number-3">1.1.</span> GNU Guix</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Guix is a functional package manager.
+That means that the operations done on the system are transactional. We must define three environments for the system to work properly.
+</p>
+
+<p>
+Define the state of the operating system in the `operating-system` record.
+Define the state of the home environment in the `home-environment` record.
+Define the state of the installed files in the `manifest`.
+</p>
+</div>
+<div id="outline-container-org6b25e8a" class="outline-4">
+<h4 id="org6b25e8a"><span class="section-number-4">1.1.1.</span> Operating System Definition</h4>
+</div>
+
+
+<div id="outline-container-org9dc3372" class="outline-4">
+<h4 id="org9dc3372"><span class="section-number-4">1.1.2.</span> Home Definition</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+These are userspace configurations.
+</p>
+
+<p>
+GUIX Home Declarations in <code>zaijab/home/user.scm</code>
+GUIX Home Services Declarations in <code>zaijab/service/*.scm</code>
+</p>
+</div>
+</div>
+<div id="outline-container-org11e60f1" class="outline-4">
+<h4 id="org11e60f1"><span class="section-number-4">1.1.3.</span> Package Management</h4>
+</div>
+
+
+<div id="outline-container-orgd99f35b" class="outline-4">
+<h4 id="orgd99f35b"><span class="section-number-4">1.1.4.</span> Features</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+Every package installed will have some configuration associated with it.
+Define configurations using Guile Scheme functions.
+Call on them from Home or System.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0424ad1" class="outline-3">
+<h3 id="org0424ad1"><span class="section-number-3">1.2.</span> GNU Shepherd</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+GNU Shepherd is a system management tool.
+It is PID 1.
+It logs into my account and begins SWAY + Emacs Daemon.
+</p>
+</div>
+</div>
+<div id="outline-container-orgddd9eb3" class="outline-3">
+<h3 id="orgddd9eb3"><span class="section-number-3">1.3.</span> GNU Emacs</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org82c13c7" class="outline-4">
+<h4 id="org82c13c7"><span class="section-number-4">1.3.1.</span> Dired</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Directory Editor. For Moving, Renaming, Creating, and Selecting files.
+</p>
+</div>
+</div>
+<div id="outline-container-orga0d5027" class="outline-4">
+<h4 id="orga0d5027"><span class="section-number-4">1.3.2.</span> Xah-Fly-Keys</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+Modal Editing.
+Rather than straining my fingers by holding a modifyer key + character, I use modes to run functions on one character keys.
+Based on command efficiency and has more sensible movement options. Use personal helper functions to modify text in place of evil extended commands. 
+</p>
+</div>
+</div>
+<div id="outline-container-org58459ef" class="outline-4">
+<h4 id="org58459ef"><span class="section-number-4">1.3.3.</span> Guile Scheme</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<p>
+A small Scheme language to interop between many different languages.
+Used a glue in the GNU Guix operating system.
+</p>
+</div>
+</div>
+<div id="outline-container-org31fa513" class="outline-4">
+<h4 id="org31fa513"><span class="section-number-4">1.3.4.</span> Geiser</h4>
+</div>
+
+
+<div id="outline-container-org8d6391c" class="outline-4">
+<h4 id="org8d6391c"><span class="section-number-4">1.3.5.</span> Python</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+The Defacto language for Statistics, Machine learning, and Artificial Intelligence.
+GNU Guix installs packages and the Jupyter Notebook system.
+</p>
+</div>
+</div>
+<div id="outline-container-org68c50d4" class="outline-4">
+<h4 id="org68c50d4"><span class="section-number-4">1.3.6.</span> Jupyter</h4>
+<div class="outline-text-4" id="text-1-3-6">
+<p>
+An interactive computing platform. Creates a persistent session to which Emacs can connect to and evaluate Jupyter Kernel code. Typical use for me is in Python. Python data structures (Like <code>plots</code> and <code>DataFrames</code> are rendered into more readable formats for better interactivity. 
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org0364a22"></a><span class="todo TODO">TODO</span> Fix <code>emacs-jupyter</code> connection when starting REPL<br /></li>
+
+<li><a id="org614fc64"></a><span class="todo TODO">TODO</span> Adjust default parameters<br />
+<div class="outline-text-5" id="text-1-3-6-2">
+<p>
+Make async happen by default and session name match buffer unless otherwise dictated.
+</p>
+</div>
+</li>
+<li><a id="orgdae836f"></a><span class="todo TODO">TODO</span> Connect to UHM Cluster<br /></li>
+</ol>
+</div>
+<div id="outline-container-org17c4bfc" class="outline-4">
+<h4 id="org17c4bfc"><span class="section-number-4">1.3.7.</span> PDF-Tools</h4>
+<div class="outline-text-4" id="text-1-3-7">
+<p>
+To read PDFs.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc3f20bd" class="outline-4">
+<h4 id="orgc3f20bd"><span class="section-number-4">1.3.8.</span> Org Roam</h4>
+<div class="outline-text-4" id="text-1-3-8">
+<p>
+A way to organze Org files via a relational database.
+</p>
+</div>
+</div>
+<div id="outline-container-org2b7eef0" class="outline-4">
+<h4 id="org2b7eef0"><span class="section-number-4">1.3.9.</span> Org Drill</h4>
+<div class="outline-text-4" id="text-1-3-9">
+<p>
+Create multimedia multisided flashcards with an SRS algorithm.
+</p>
+</div>
+</div>
+<div id="outline-container-org360f2b8" class="outline-4">
+<h4 id="org360f2b8"><span class="section-number-4">1.3.10.</span> Org Capture</h4>
+<div class="outline-text-4" id="text-1-3-10">
+<p>
+A quick way to grab information.
+Makes a template for an Org file so that I wouldn't need to edit formatting.
+</p>
+</div>
+</div>
+<div id="outline-container-org147c0c4" class="outline-4">
+<h4 id="org147c0c4"><span class="section-number-4">1.3.11.</span> Mu4e</h4>
+<div class="outline-text-4" id="text-1-3-11">
+<p>
+An Email client in Emacs. Can store emails locally and search with tags.
+</p>
+</div>
+</div>
+<div id="outline-container-org31c109f" class="outline-4">
+<h4 id="org31c109f"><span class="section-number-4">1.3.12.</span> EShell</h4>
+<div class="outline-text-4" id="text-1-3-12">
+<p>
+A Shell implemented in Emacs Lisp. Does not handle visual programs very well.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org891cd60"></a>ISSUE - Does not handle visual programs well<br /></li>
+
+<li><a id="org09ce02c"></a>ISSUE - Sudo might not work<br /></li>
+
+<li><a id="orgd054797"></a>ISSUE - Completions are broken wrt Guix and nmcli<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb3ddcd8" class="outline-3">
+<h3 id="orgb3ddcd8"><span class="section-number-3">1.4.</span> GNUPG</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Creates public key pairs. Used to verify the sender of files and emails as well as encrypt files for security. 
+</p>
+</div>
+</div>
+<div id="outline-container-org1b28522" class="outline-3">
+<h3 id="org1b28522"><span class="section-number-3">1.5.</span> GNU Jami</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+For communication. A decentralized FOSS varient of Zoom with P2P encryption.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc17e150" class="outline-3">
+<h3 id="orgc17e150"><span class="section-number-3">1.6.</span> Virtualization</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org4779445" class="outline-4">
+<h4 id="org4779445"><span class="section-number-4">1.6.1.</span> IOMMU</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org0af222d" class="outline-2">
+<h2 id="org0af222d"><span class="section-number-2">2.</span> Information Intake</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+The Web at large makes money based on consumer data and on retention time.
+It was designed to take up your time as much as it can. One thing that always gets me are inflammatory posts about gender roles and dating. It targets an insecurity about my romantic life. I will avoid the YouTube site by downloading lecture videos as much as I can.
+</p>
+</div>
+<div id="outline-container-orgd1e4e82" class="outline-3">
+<h3 id="orgd1e4e82"><span class="section-number-3">2.1.</span> Sources</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgbd7ec2b" class="outline-4">
+<h4 id="orgbd7ec2b"><span class="section-number-4">2.1.1.</span> Podcasts</h4>
+<div class="outline-text-4" id="text-2-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org406edc0"></a>Andrew Huberman<br /></li>
+
+
+<li><a id="orgae2dd7e"></a>Matthew Walker<br /></li>
+
+
+<li><a id="org7969887"></a>David Sinclair<br /></li>
+
+
+<li><a id="orgd66da68"></a>3B1B<br /></li>
+
+
+<li><a id="org11ea6be"></a>Numberphile<br /></li>
+</ol>
+</div>
+<div id="outline-container-orgcdf4de4" class="outline-4">
+<h4 id="orgcdf4de4"><span class="section-number-4">2.1.2.</span> Lectures</h4>
+<div class="outline-text-4" id="text-2-1-2">
+</div>
+<ol class="org-ol">
+<li><a id="orgc99905e"></a>Algebraic Topology - Piere Albin<br /></li>
+
+
+<li><a id="orgfc107e3"></a>Differential Geometry - Frederic Shuller<br /></li>
+</ol>
+</div>
+<div id="outline-container-org929fa7e" class="outline-4">
+<h4 id="org929fa7e"><span class="section-number-4">2.1.3.</span> Books</h4>
+</div>
+</div>
+<div id="outline-container-org3e249ce" class="outline-3">
+<h3 id="org3e249ce"><span class="section-number-3">2.2.</span> Ingestion</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Online websites such as YouTube are designed to capture and retain attention.
+Download helpful videos to this computer and use MPV to view videos to keep from being distracted. 
+Use Emacs as a video player, audio player, and PDF reader to 
+</p>
+</div>
+</div>
+<div id="outline-container-org9107bf8" class="outline-3">
+<h3 id="org9107bf8"><span class="section-number-3">2.3.</span> Retention</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Spaced Repetition Systems allow us to remember large amounts of information over long periods of time. It accomplishes this by prompting us to remember a piece of information when we are likely to forget it.
+</p>
+
+<p>
+Emacs <code>Org-FC</code> is a package which allows you to define flashcards in org mode. The benefit of this is to insert flashcards, we may access the public Jisho API.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9d18ea" class="outline-3">
+<h3 id="orgf9d18ea"><span class="section-number-3">2.4.</span> Note Taking</h3>
+</div>
+</div>
+<div id="outline-container-org893cdd1" class="outline-2">
+<h2 id="org893cdd1"><span class="section-number-2">3.</span> Fun</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Read about information which is not entirely relevant to a short term goal.
+Gaming videos, shorts, and motivational podcasts are fun but they will always be there. I may view them later.
+</p>
+</div>
+<div id="outline-container-org49d8f94" class="outline-3">
+<h3 id="org49d8f94"><span class="section-number-3">3.1.</span> Differential Forms</h3>
+</div>
+
+<div id="outline-container-org7bd2e86" class="outline-3">
+<h3 id="org7bd2e86"><span class="section-number-3">3.2.</span> Matrix Calculus</h3>
+</div>
+
+<div id="outline-container-org4a0f538" class="outline-3">
+<h3 id="org4a0f538"><span class="section-number-3">3.3.</span> Tensor Calculus</h3>
+</div>
+
+<div id="outline-container-org3ecb1e1" class="outline-3">
+<h3 id="org3ecb1e1"><span class="section-number-3">3.4.</span> Differential Geometry</h3>
+</div>
+
+<div id="outline-container-orgd61d5ea" class="outline-3">
+<h3 id="orgd61d5ea"><span class="section-number-3">3.5.</span> Complex Analysis</h3>
+</div>
+
+<div id="outline-container-orgda0aafb" class="outline-3">
+<h3 id="orgda0aafb"><span class="section-number-3">3.6.</span> Differential Equations</h3>
+</div>
+
+<div id="outline-container-orgd4a9a0d" class="outline-3">
+<h3 id="orgd4a9a0d"><span class="section-number-3">3.7.</span> Emacs</h3>
+</div>
+
+<div id="outline-container-org3160d26" class="outline-3">
+<h3 id="org3160d26"><span class="section-number-3">3.8.</span> Guix</h3>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Problem Solving Strategies</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Problem Solving Strategies</h1>
+<p>
+In Mathematics, we want to solve problems. Far too often, I see students at the graduate level and below struggle with basic problem solving concepts. These concepts underpin every single math course and form a foundation for critical thinking in general. This post will be a brief rundown of how to solve a mathematical problem.
+</p>
+<div id="outline-container-org2f94e18" class="outline-2">
+<h2 id="org2f94e18"><span class="section-number-2">1.</span> Mathematical Statement</h2>
+</div>
+
+
+
+<div id="outline-container-org5066b43" class="outline-2">
+<h2 id="org5066b43"><span class="section-number-2">2.</span> Proofs</h2>
+</div>
+
+<div id="outline-container-org0f2f882" class="outline-2">
+<h2 id="org0f2f882"><span class="section-number-2">3.</span> Set Theory</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Let,
+</p>
+\begin{align}
+f \colon A \to B \\
+X \subseteq A \\
+Y \subseteq B
+\end{align}
+
+<p>
+Define,
+</p>
+\begin{align}
+f[X] &:= \left\{ f(x) \in B \;\middle\vert\; x \in X \right\} := \left\{ b \in B \;\middle\vert\; \exists x \in A \colon (b = f(x)) \land (x \in X) \right\} \\
+f^{-1}[Y] &:= \left\{ a \in A \;\middle\vert\; \exists a \in A \colon f(a) \in Y \right\}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org6f92649" class="outline-2">
+<h2 id="org6f92649"><span class="section-number-2">4.</span> Things We Want to Prove</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org6a27944" class="outline-3">
+<h3 id="org6a27944"><span class="section-number-3">4.1.</span> Supremum are Limit Points</h3>
+</div>
+
+<div id="outline-container-org3ba8fb4" class="outline-3">
+<h3 id="org3ba8fb4"><span class="section-number-3">4.2.</span> Preimages of Open Sets are Open</h3>
+</div>
+
+<div id="outline-container-org85991ed" class="outline-3">
+<h3 id="org85991ed"><span class="section-number-3">4.3.</span> Preimages of Closed Sets are Closed</h3>
+</div>
+
+<div id="outline-container-org327d00e" class="outline-3">
+<h3 id="org327d00e"><span class="section-number-3">4.4.</span> Integral from A to B then B to C is A to C</h3>
+</div>
+</div>
+<div id="outline-container-org85b553f" class="outline-2">
+<h2 id="org85b553f"><span class="section-number-2">5.</span> Proof Techniques</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org93a1ff4" class="outline-3">
+<h3 id="org93a1ff4"><span class="section-number-3">5.1.</span> Direct Proof</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+This is the main proof technique to master. Other proof techniques can try to modify the original problem statement in a way that will make direct proofs easier to handle. But in the end, the direct proof will be the back bone of every single proof. It is wise to understand how to manipulate it.
+</p>
+</div>
+</div>
+<div id="outline-container-org2455285" class="outline-3">
+<h3 id="org2455285"><span class="section-number-3">5.2.</span> </h3>
+</div>
+</div>
+<div id="outline-container-org9525c23" class="outline-2">
+<h2 id="org9525c23"><span class="section-number-2">6.</span> The Plan</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+We may flowchart a solution technique which should work for every math problem in graduate school. The main idea is to create a system in which one can immediately see a problem and "hit the ground running". As soon as you see the problem statement you can get 50% of the way to the solution, then you can "brute force" the rest of the way there.
+</p>
+
+<ol class="org-ol">
+<li>Read the statement, transform it into a more mathy statement amenable to the different proof techniques.</li>
+
+<li>Attempt a direct proof on the amenable statement.</li>
+
+<li><p>
+If direct proof does not work, try finding an equivalent statement:
+</p>
+
+<p>
+Previous Work - Use a similar proof technique done previously
+Invariants - Seek a mathematical object which encodes the statement
+Induction - When the problem is given by recursion
+Contrapositive - When one side is easier to manipulate
+Contradiction - When all hope is lost
+</p></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org547ff42" class="outline-2">
+<h2 id="org547ff42"><span class="section-number-2">7.</span> Random Proofs</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgcf44695" class="outline-3">
+<h3 id="orgcf44695"><span class="section-number-3">7.1.</span> The Supremum of a Set is a Limit Point</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Here is a problem in real analysis:
+</p>
+</div>
+</div>
+<div id="outline-container-org35b02c5" class="outline-3">
+<h3 id="org35b02c5"><span class="section-number-3">7.2.</span> Additive Domain of Integration</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Assume \( E_{\lambda} \) is a disjoint family of sets parameterized by \( \lambda \). 
+</p>
+
+<p>
+\[ \int_{\cup E_{\lambda}} f = \sum_{\lambda} \int_{E_{\lambda}} f \]
+</p>
+
+<p>
+This is the graduate level statement, we are used to in calculus,
+</p>
+
+<p>
+\[ \int_{a}^{c} f(x) dx = \int_{a}^{b} f(x) dx + \int_{b}^{c} f(x) dx \]
+</p>
+</div>
+</div>
+<div id="outline-container-org072bbb1" class="outline-3">
+<h3 id="org072bbb1"><span class="section-number-3">7.3.</span> Compact Subsets are Closed in a Hausdorff Space</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+Theorem 26.3 (Munkres) Every compact subspace of a Hausdorff space is closed.
+</p>
+
+<p>
+Step 1: Make the statement more amenable.
+</p>
+
+<p>
+\[ X \text{ Hausdorff} \implies (K \subset X \text{ Compact } \implies K \text{ Closed}) \]
+</p>
+
+<p>
+Step 2: Try a direct proof.
+</p>
+
+<p>
+Given the statement of the form \( P \implies Q \) we assume \( P \) and try to deduce \( Q \).
+</p>
+
+<p>
+We have the following statement:
+\[ X \text{ Hausdorff} \implies (K \subset X \text{ Compact } \implies K \text{ Closed}) \]
+</p>
+
+<p>
+Hence, suppose \( X \) is Hausdorff. Now we must try to prove that.
+</p>
+
+<p>
+\[ K \subset X \text{ Compact } \implies K \text{ Closed} \]
+</p>
+
+<p>
+We now are trying to prove (again) a statement of the form \( P \implies Q \). We may try a direct proof:
+</p>
+
+<p>
+Suppose \( K \subset X \) is compact. We now have to show that \( K \) is closed. To show that \( K \) is closed we must show that its complement is open. To show that its complement is open we must show that is 
+</p>
+</div>
+</div>
+<div id="outline-container-org4b82ed5" class="outline-3">
+<h3 id="org4b82ed5"><span class="section-number-3">7.4.</span> Average Value of Wave Equation</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+Statement:
+</p>
+
+<p>
+Let \( \Omega = \left\{ x \in \mathbb{R}^{3} \middle| \left| x \right| < 1\right\} \) and let \( u(x,t) \) be a smooth solution of the wave equation
+</p>
+
+\begin{align}
+u_{tt} &= \Delta u &\quad & \text{in } \Omega \times (0,\infty) \\
+\frac{ \partial u}{ \partial n} &= 0 &\quad & \text{on } \partial \Omega \times (0,\infty)
+\end{align}
+
+<p>
+For each \( r \in (0,1) \) and \( t \in (0,\infty) \), let \( U(r,t) \) denote the average value of \( u(\cdot,t) \) over a sphere of radius \( r \). Show that
+</p>
+
+<p>
+\[ \int_{0}^{1} r^{2} U_{tt}(r,t) dr = 0 \]
+</p>
+
+<p>
+for all \( t \).
+</p>
+
+<p>
+Step 1: Make the problem amenable.
+</p>
+
+<p>
+Let:
+</p>
+
+<p>
+\( u(x,t) \) satisfy
+</p>
+\begin{align}
+u_{tt} &= \Delta u &\quad & \text{in } \Omega \times (0,\infty) \\
+\frac{ \partial u}{ \partial n} &= 0 &\quad & \text{on } \partial \Omega \times (0,\infty)
+\end{align}
+
+<p>
+Denote
+</p>
+
+<p>
+\[ U(r,t) = \frac{1}{\mu(\partial B(x,r))} \int_{\partial B(x, r)} u(y, t) dy \]
+</p>
+
+<p>
+Recall that we are in \( \mathbb{R}^{3} \) so the sphere is a \( 2 \) dimensional object which is the boundary of the (3D) ball.
+</p>
+
+\begin{align}
+\int_{0}^{1} r^{2} U_{tt}(r,t) dr
+&= \int_{0}^{1} r^{2} \frac{ \partial^{2} }{ \partial t^{2}} \frac{1}{\mu(\partial B(x,r))} \int_{\partial B(x, r)} u(y, t) dy dr \\
+&=\frac{ \partial^{2} }{ \partial t^{2}} \int_{0}^{1}\int_{\partial B(x, r)} r^{2}  \frac{1}{\mu(\partial B(x,r))} u(y, t) dy dr \\
+&=\frac{ \partial^{2} }{ \partial t^{2}} \int_{B(x, r)} r^{2}  \frac{1}{\mu(\partial B(x,r))} u(y, t) dy dr \\
+&= \int_{B(x, r)} r^{2}  \frac{1}{\mu(\partial B(x,r))} u_{tt}(y, t) dy \\
+&=r^{2}  \frac{1}{\mu(\partial B(x,r))} \int_{B(x, r)}  \Delta u(y, t) dy \\
+&=r^{2}  \frac{1}{\mu(\partial B(x,r))} \int_{B(x, r)}  \Delta u(y, t) dy \\
+&=r^{2}  \frac{1}{\mu(\partial B(x,r))} \int_{B(x, r)}  \Delta u(y, t) dy \\
+\end{align}
+</div>
+</div>
+</div>
+<div id="outline-container-org4705205" class="outline-2">
+<h2 id="org4705205"><span class="section-number-2">8.</span> Random Tips</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li><p>
+Learn something the first time you see it.
+Many students, for whatever reason, see a concept they fail to grasp and sit comfortably without understanding the material. If you ask students of basic facts and examples surrounding the concepts in class, they can probably parrot something from lecture, but cannot speak their mind to anything critical about the subject. Whenever you go through material keep up your scrutiny.
+</p>
+
+<p>
+A. When encountering a definition, come up with every trivial example and at least 10 nontrivial examples.
+</p></li>
+</ol>
+
+
+<ol class="org-ol">
+<li>Keep a running list of fully worked out examples.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org02a7210" class="outline-2">
+<h2 id="org02a7210"><span class="section-number-2">9.</span> Set Containment</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Let \( f \colon A \to B \), \( X \subseteq A \),  
+</p>
+
+<p>
+\[ f [f^{-1}[f[X]]] = f[X] \]
+</p>
+
+\begin{align*}
+&& f [f^{-1}[f[X]]] &= \left\{ b \in B \colon \exists x \in A \colon(b = f(x)) \land (x \in f^{-1}[f[X]]) \right\} &&\text{Def. Image}\\
+&&  &= \left\{ b \in B \colon \exists x \in A \colon(b = f(x)) \land (\exists x \in A \colon f(x) \in f(X) \right\} &&\text{Def. Preimage}\\
+&&  &= \left\{ b \in B \colon \exists x \in A \colon(b = f(x)) \land (\exists x \in A \colon \exists x \in A \colon (f(x) = f(z)) \land (z \in X)) \right\} &&\text{Def. Image}\\
+&&  &= \left\{ b \in B \colon \exists x \in A \colon(b = f(x)) \land (f(x) = f(z)) \land (z \in X)) \right\} &&\text{Chained Existence}\\
+&&  &= \left\{ b \in B \colon \exists x \in X \colon(b = f(a)) \right\} &&\text{}\\
+&&  &= f[X] &&\text{}\\
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org446bc7a" class="outline-2">
+<h2 id="org446bc7a"><span class="section-number-2">10.</span> Supremum of Convex Functions are Convex</h2>
+<div class="outline-text-2" id="text-10">
+<div class="PROBLEM" id="org4975a10">
+<p>
+Prove that the supremum of any collection of convex functions on \( (a,b) \) is convex on \( (a,b) \) (if it is finite) and that pointwise limits of sequences of convex functions are convex. What can you say about upper and lower limits of sequences of convex functions?  
+</p>
+
+</div>
+
+<p>
+First things first, get the definitions straight and write out the problem statement.
+</p>
+
+<p>
+Definitions:
+</p>
+
+<p>
+Convex: \( \varphi \colon (a , b) \to \mathbb{R} \) is convex if the function values are lower than the line connecting two points:
+\[ \varphi((1 - t)x + t y) \leq (1 - t) \varphi(x) + t \varphi(y) \]
+</p>
+
+<p>
+Supremum: Least Upper Bound
+</p>
+
+<p>
+\[ s = \sup X \iff \forall x \in X \colon x \leq s \land (\forall L \in \mathbb{R} \colon x \leq L \implies s \leq L) \]
+</p>
+
+<p>
+Problem Statement 1:
+</p>
+
+\begin{align*}
+& &&\forall \alpha \in A \colon \forall x, y \in (a,b) \colon \forall t \in [0,1] \colon \left( \varphi_{\alpha}((1 - t)x + ty) \leq (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \implies \sup_{\alpha \in A} \varphi_{\alpha}((1 - t)x + ty) \leq \sup_{a \in A} \left( (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \right) \right)
+\end{align*}
+
+<p>
+Direct Method: (Unravel Implication)
+Assume:
+</p>
+
+<p>
+\[ \forall \alpha \in A \colon \forall x, y \in (a,b) \colon \forall t \in [0,1] \colon \varphi_{\alpha}((1 - t)x + ty) \leq (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \]
+</p>
+
+<p>
+Let \( \alpha \in A \) be arbitrary.
+</p>
+
+<p>
+\[ \forall x, y \in (a,b) \colon \forall t \in [0,1] \colon \varphi_{\alpha}((1 - t)x + ty) \leq (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \]
+</p>
+
+<p>
+Let \( x, y \in (a,b) \) be arbitrary.
+</p>
+
+<p>
+\[ \forall t \in [0,1] \colon \varphi_{\alpha}((1 - t)x + ty) \leq (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \]
+</p>
+
+<p>
+Let \( t \in [0,1] \) be arbitrary.
+</p>
+
+<p>
+\[ \varphi_{\alpha}((1 - t)x + ty) \leq (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \]
+</p>
+
+<p>
+Now that we have properly "unraveled" everything. Now we do the fun part of implications. We need to show,  
+</p>
+
+<p>
+\[ \sup_{\alpha \in A} \varphi_{\alpha}((1 - t)x + ty) \leq \sup_{a \in A} \left( (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \right) \]
+</p>
+
+
+\begin{align*}
+\varphi_{\alpha}((1 - t)x + ty)
+&\leq \sup_{\alpha \in A} \varphi_{\alpha}((1 - t)x + ty) &&\text{Supremum is Upper Bound} \\
+&\leq (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) &&\text{Supremum is Least of Upper Bounds (Convex)} \\
+&\leq \sup_{a \in A} \left( (1 - t) \varphi_{\alpha}(x) + t \varphi_{\alpha}(y) \right) &&\text{Supremum is Upper Bound}
+\end{align*}
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Partial Differential Equations</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Partial Differential Equations</h1>
+<p>
+Books:
+</p>
+<ul class="org-ul">
+<li><a href="file:///home/zjabbar/books/applied_math/Evans Partial Differential Equations.pdf">Partial Differential Equations by Evans</a></li>
+<li><a href="file:///home/zjabbar/books/applied_math/Olver Introduction to Partial Differential Equations.pdf">Partial Differential Equations by Olver</a></li>
+</ul>
+<div id="outline-container-org3ac704b" class="outline-2">
+<h2 id="org3ac704b"><span class="section-number-2">1.</span> Definitions</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgca64ca1" class="outline-3">
+<h3 id="orgca64ca1"><span class="section-number-3">1.1.</span> Partial Differential Equation</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Given an expression of the form
+</p>
+
+<p>
+\[ F(@(D^k u(x))_{k}, x) = 0 \]
+</p>
+
+<p>
+where
+</p>
+
+<p>
+\[ F \colon \prod_{k} \mathbb{R}^{n^k} \to \mathbb{R} \]
+Then \( F \) is called a partial differential equation.
+</p>
+</div>
+</div>
+<div id="outline-container-org24b4763" class="outline-3">
+<h3 id="org24b4763"><span class="section-number-3">1.2.</span> Initial Value Problem</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Let
+</p>
+</div>
+</div>
+<div id="outline-container-org624adcd" class="outline-3">
+<h3 id="org624adcd"><span class="section-number-3">1.3.</span> Boundary Value Problem</h3>
+</div>
+
+
+<div id="outline-container-org9ce7ca9" class="outline-3">
+<h3 id="org9ce7ca9"><span class="section-number-3">1.4.</span> Linear Partial Differential Equation</h3>
+</div>
+
+
+<div id="outline-container-org1f6021d" class="outline-3">
+<h3 id="org1f6021d"><span class="section-number-3">1.5.</span> Semilinear Partial Differential Equation</h3>
+</div>
+
+
+<div id="outline-container-orgd30edb7" class="outline-3">
+<h3 id="orgd30edb7"><span class="section-number-3">1.6.</span> Quasilinear Partial Differential Equation</h3>
+</div>
+
+
+<div id="outline-container-org8ad30ef" class="outline-3">
+<h3 id="org8ad30ef"><span class="section-number-3">1.7.</span> Characteristic</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Let \( \Sigma \) be a \( \mathscr{C}^1(\Omega)  \) hypersurface.
+</p>
+
+<p>
+We say \( \Sigma \) is characteristic for \( L \) at \( x \in \Sigma \) if one of the two unit normal vectors to Sigma at x has zero dot product with b
+</p>
+
+<p>
+Equivalently, \( b(x) \) is tangent to Sigma
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5bee14b" class="outline-2">
+<h2 id="org5bee14b"><span class="section-number-2">2.</span> Problem Solving Methods</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Look for \( C^1 \) function
+</p>
+
+<p>
+Problem Solving Method
+</p>
+
+<p>
+(1) Look for special solutions (Explicit)
+(2) Existence of Solution in some class (The larger the class the easier)
+    Sobolev Spaces and Distributions
+(3) Uniqueness (The smaller the class the easier)
+(4) Regularity of Solution (Deep)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">PDE</th>
+<th scope="col" class="org-left">IC</th>
+<th scope="col" class="org-left">BC</th>
+<th scope="col" class="org-left">Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Heat</td>
+<td class="org-left">\( f(x) \)</td>
+<td class="org-left">Homogeneous Dirichlet \( u(0, t) = 0, u(L, t) = 0 \)</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgac75bfe" class="outline-2">
+<h2 id="orgac75bfe"><span class="section-number-2">3.</span> Problems</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orge5052a4" class="outline-3">
+<h3 id="orge5052a4"><span class="section-number-3">3.1.</span> Heat Equation in Rod Homogeneous Dirichlet</h3>
+</div>
+
+<div id="outline-container-org3214347" class="outline-3">
+<h3 id="org3214347"><span class="section-number-3">3.2.</span> Heat Equation in Rod Homogeneous Neumann</h3>
+</div>
+
+<div id="outline-container-orgb644b68" class="outline-3">
+<h3 id="orgb644b68"><span class="section-number-3">3.3.</span> Heat Equation in Rod Mixed Boundary Condition</h3>
+</div>
+
+<div id="outline-container-org4f71f45" class="outline-3">
+<h3 id="org4f71f45"><span class="section-number-3">3.4.</span> Heat Equation Semi-infinite Rod Inhomogeneous Dirichlet</h3>
+</div>
+
+<div id="outline-container-org799cdfb" class="outline-3">
+<h3 id="org799cdfb"><span class="section-number-3">3.5.</span> Heat Equation Semi-infinite Rod Inhomogeneous Neumann</h3>
+</div>
+
+<div id="outline-container-org9aba24b" class="outline-3">
+<h3 id="org9aba24b"><span class="section-number-3">3.6.</span> Population Equation Method of Characteristics</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+\[ \frac{ \partial P}{ \partial t} + \frac{ \partial P}{ \partial y} + D(t, y) P = 0 \]
+</p>
+
+<p>
+This is,
+</p>
+
+<p>
+\[ P_{t} + P_{y} + D(t,y)P = 0 \]
+</p>
+
+<p>
+So
+</p>
+
+<p>
+\[ \nabla P \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} = D(t,y) P \]
+</p>
+</div>
+</div>
+<div id="outline-container-org1132517" class="outline-3">
+<h3 id="org1132517"><span class="section-number-3">3.7.</span> Quasi-Linear Equation Method of Characteristics</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+Given a PDE of the form
+</p>
+
+<p>
+\[ b(x, u) \cdot \nabla u = 0 \]
+</p>
+
+<p>
+This implies that the directional derivative in the direction \( b(x,u) \) is \( 0 \).
+This means that along lines that are tangent
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7449a75" class="outline-2">
+<h2 id="org7449a75"><span class="section-number-2">4.</span> First Order Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgb551b3f" class="outline-3">
+<h3 id="orgb551b3f"><span class="section-number-3">4.1.</span> Linear</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org45e48d2" class="outline-4">
+<h4 id="org45e48d2"><span class="section-number-4">4.1.1.</span> Constant Coefficient Transport</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Take a Point \( x_{0} \), then the line through that point is \( \vec{x}_{0} + t \vec{v} \)  
+</p>
+
+<p>
+In 2D,
+</p>
+
+\begin{align*}
+\begin{bmatrix} x_{0} \\ x_{1} \end{bmatrix} + \begin{bmatrix} t v_{0} \\ t v_{1} \end{bmatrix}
+&= \begin{bmatrix} x_{0} + t v_{0} \\ x_{1} + t v_{1} \end{bmatrix}
+\end{align*}
+
+<p>
+So,
+</p>
+
+\begin{align}
+x &= x_{0} + t v_{0} \\
+y &= x_{1} + t v_{1}
+\end{align}
+
+<p>
+Solving for \( t \) then substituting gives and equation in the form \( y = mx + b \).
+</p>
+
+<p>
+\[ y = x_{1} + \left( \frac{x - x_{0}}{v_{0}} \right) v_{1} \]
+</p>
+
+<p>
+We may then move all of the initial conditions to one side. This will give a relation between \( x \) and \( y \) equaling some constant.
+</p>
+
+<p>
+\[ - x_{1} + \frac{x_{0}v_{1}}{v_{0}} = \frac{v_{1}}{v_{0}} x - y \]
+</p>
+
+<p>
+Equivalently, 
+</p>
+
+<p>
+\[ - v_{0} x_{1} + v_{1} x_{0} = v_{1} x - v_{0} y \]
+</p>
+
+<p>
+Hence, in the case of PDEs where we have the equation
+</p>
+
+<p>
+\[ \left\langle a , b \right\rangle \cdot \nabla V = 0 \]
+</p>
+
+<p>
+We have characteristic lines
+</p>
+
+<p>
+\[ \xi = bx - ay \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgdbf6f30" class="outline-4">
+<h4 id="orgdbf6f30"><span class="section-number-4">4.1.2.</span> Variable Coefficient Transport</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+\[ u_{x} + y u_{y} = 0 \]
+</p>
+
+<p>
+Notice that this is the directional derivative dotted with the (variable) vector \( \begin{bmatrix} 1 \\ y \end{bmatrix} \) 
+That is, the equation is equivalent to,
+</p>
+
+<p>
+\[ \begin{bmatrix} 1 \\ y \end{bmatrix} \cdot \nabla u = 0  \]
+</p>
+
+<p>
+This states that the function \( u \) is constant in the direction \( (1 , y) \). Thus, if we find curves which are everywhere tangent to \( (1,y) \) then \( u \) is constant on those. 
+</p>
+</div>
+</div>
+<div id="outline-container-org023d5f8" class="outline-4">
+<h4 id="org023d5f8"><span class="section-number-4">4.1.3.</span> \( u_t + b \cdot \nabla u = 0 \) - Linear Transport Equation</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( b \in \mathbb{R}^n \) (be a constant vector)</li>
+<li>\( u(t,x) \), \( t \geq 0 \), \( x \in \mathbb{R}^n \), \( \nabla = (\frac{\partial}{\partial x_1}, \cdots, \frac{\partial}{\partial x_n}) \)</li>
+</ul>
+
+<p>
+Then consider \( u_t + b \cdot \nabla u = 0 \)
+</p>
+
+<p>
+We may write this as \[ u_t + \sum_{i = 1}^n b_i \frac{\partial u}{\partial x_i} \] which is also equivalent to \( (u_t, \nabla u) \cdot (1, b) = 0 \)
+</p>
+
+<p>
+Equation type:
+</p>
+<ul class="org-ul">
+<li>Linear
+The equation is linear in the unknown.</li>
+
+<li>First order
+The highest power of the differential is one.</li>
+
+<li>Homogeneous
+Right hand side is identically \( 0 \).</li>
+
+<li>Constant Coefficients
+Coefficients are \( 1 \) and \( b \) we may write \( (1,b) \in \mathbb{R}^{1 + n} \)</li>
+</ul>
+
+<p>
+Notice that the function \( u \) has a directional derivative equal to \( 0 \) along \( (1,b) \).
+</p>
+
+<p>
+Define a new function \( z \colon \mathbb{R} \to \mathbb{R} \) \(  \) 
+</p>
+
+<p>
+\( z(s) = u(t + s, x+sb) = u( (t,x) + s(1,b)) \)
+</p>
+
+<p>
+Then \( \dot{z}(s) = u_t(t+s, x+sb) + \nabla u(t + s, x + sb) \cdot b = 0 \)
+</p>
+
+<p>
+So \( z \) is constant. This tells us that \( u \) is constant on the lines parallel to \( (1,b) \).
+</p>
+
+<p>
+Denote \( \Sigma = \{ t = 0 \} \subset \mathbb{R}^{1+n} \) the "\( x \)" axis, \( \bar{u} \in C^1(\Sigma) \) 
+</p>
+</div>
+</div>
+<div id="outline-container-orgc0f9e7a" class="outline-4">
+<h4 id="orgc0f9e7a"><span class="section-number-4">4.1.4.</span> \[ Lu = \sum_{i = 1}^{N} b_i(x) \frac{\partial u}{\partial x_i} \]</h4>
+<div class="outline-text-4" id="text-4-1-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Name</th>
+<th scope="col" class="org-left">Equation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">PDE</td>
+<td class="org-left">\( Lu = \sum_{i = 1}^{N} b_i(x) \frac{\partial u}{\partial x_i} \)</td>
+</tr>
+
+<tr>
+<td class="org-left">Boundary Condition</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8806907" class="outline-4">
+<h4 id="org8806907"><span class="section-number-4">4.1.5.</span> Method of Characteristics</h4>
+<div class="outline-text-4" id="text-4-1-5">
+<p>
+This method finds curves in your space. Along such curves the PDE becomes a system of ODE's.
+</p>
+
+<p>
+Here are some equations that can be solved using the method of characteristics:
+</p>
+
+\begin{align}
+\sum_{i = 1}^{n} a_{i}(x_{1}, \ldots, x_{n}, u) \frac{ \partial u}{ \partial x_{i}} &= c(x_{1}, \ldots, x_{n}, u)
+& \quad & \text{Quasilinear General} \\
+2 \frac{ \partial u}{ \partial x_{1}} + 60 \frac{ \partial u}{ \partial x_{2}} &= 0
+& \quad & \text{Linear Homogeneous Constant Coefficients} \\
+x_{1} \frac{ \partial u}{ \partial x_{1}} + x_{2} \frac{ \partial u}{ \partial x_{2}} &= 0
+& \quad & \text{Linear Homogeneous Variable Coefficients} \\
+x_{1}^{2} \frac{ \partial u}{ \partial x_{1}} + x_{2} \frac{ \partial u}{ \partial x_{2}} &= 0
+& \quad & \text{Linear Homogeneous Variable Coefficients} \\
+x_{1}^{2} \frac{ \partial u}{ \partial x_{1}} + x_{2} \frac{ \partial u}{ \partial x_{2}} &= x_{1}^{2}
+& \quad & \text{Linear Inhomogeneous Variable Coefficients} \\
+x_{1}^{2} \frac{ \partial u}{ \partial x_{1}} + x_{2} \frac{ \partial u}{ \partial x_{2}} &= x_{1}^{2} + u
+& \quad & \text{Linear Inhomogeneous Variable Coefficients} \\
+x_{1}^{2} \frac{ \partial u}{ \partial x_{1}} + x_{2} \frac{ \partial u}{ \partial x_{2}} &= x_{1}^{2} + u^{2}
+& \quad & \text{Semilinear Inhomogeneous Variable Coefficients} \\
+x_{1}^{2} u \frac{ \partial u}{ \partial x_{1}} + x_{2} \frac{ \partial u}{ \partial x_{2}} &= x_{1}^{2}
+& \quad & \text{Quasilinear Inhomogeneous Variable Coefficients}
+\end{align}
+
+<p>
+The solution technique is:
+</p>
+
+<ol class="org-ol">
+<li>Turn the PDE into the standard quasilinear form.</li>
+
+<li>Solve the system of ODEs</li>
+</ol>
+
+\begin{align}
+\frac{ d x_{i}}{ d t} &= a_{i}(x_{1}, \ldots, x_{n}, z) \\
+\frac{ d z}{ d t} &= c(x_{1}, \ldots, x_{n}, z)
+\end{align}
+
+<p>
+Let us solve:
+</p>
+
+\begin{align}
+x^{2} u_{x} + (x^{2} + y^{2})u_{y} = 5u
+\end{align}
+
+<p>
+Then:
+</p>
+
+\begin{align}
+\frac{ d x}{ d t} = x^{2} \\
+\frac{ d y}{ d t} = y \\
+\frac{ d z}{ d t} = 5
+\end{align}
+
+
+<p>
+Hence:
+</p>
+
+\begin{align}
+x(t) = \frac{1}{C_{0} + t} \\
+y(t) = C_{1}e^{t} \\
+z(t) = 5t + C_{2}
+\end{align}
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge547570" class="outline-2">
+<h2 id="orge547570"><span class="section-number-2">5.</span> Second Order Partial Differential Equations</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgec6ccb3" class="outline-3">
+<h3 id="orgec6ccb3"><span class="section-number-3">5.1.</span> Laplace Equation</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgd8cc147" class="outline-4">
+<h4 id="orgd8cc147"><span class="section-number-4">5.1.1.</span> Elliptic Equation</h4>
+</div>
+
+<div id="outline-container-org5c7c11c" class="outline-4">
+<h4 id="org5c7c11c"><span class="section-number-4">5.1.2.</span> Parabolic Equation</h4>
+</div>
+
+<div id="outline-container-orgd248da0" class="outline-4">
+<h4 id="orgd248da0"><span class="section-number-4">5.1.3.</span> Hyperbolic Equation</h4>
+</div>
+</div>
+<div id="outline-container-org79c5db3" class="outline-3">
+<h3 id="org79c5db3"><span class="section-number-3">5.2.</span> Heat Equation</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+In all cases,
+</p>
+
+<ol class="org-ol">
+<li>Suppose the unknown function \( u \) is separable \( u(t,x) = T(t) X(x) \)</li>
+<li>Plug the separable equation into the governing PDE</li>
+<li>Separate and deduce a separation constant</li>
+<li>Solve the multiple ODEs</li>
+<li>The ODEs will have arbitrary constants and dependence on the separation constant, solve using boundary conditions</li>
+<li>Use linearity and superposition to deduce constants of sum of Fourier series</li>
+</ol>
+</div>
+<div id="outline-container-org85bb7dd" class="outline-4">
+<h4 id="org85bb7dd"><span class="section-number-4">5.2.1.</span> Dirichlet Boundary Condition</h4>
+</div>
+
+
+<div id="outline-container-orge2cc833" class="outline-4">
+<h4 id="orge2cc833"><span class="section-number-4">5.2.2.</span> Neumann Boundary Condition</h4>
+</div>
+
+<div id="outline-container-orgf103d4a" class="outline-4">
+<h4 id="orgf103d4a"><span class="section-number-4">5.2.3.</span> Mixed Boundary Condition</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org3bacc7a" class="outline-2">
+<h2 id="org3bacc7a"><span class="section-number-2">6.</span> Table of PDEs</h2>
+</div>
+
+
+<div id="outline-container-orgaf5b0ab" class="outline-2">
+<h2 id="orgaf5b0ab"><span class="section-number-2">7.</span> Leibniz Rule for Differentiating an Integral</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+\[ \frac{ d }{ d x} \int_{a(x)}^{b(x)} f(x, t) dt =  \]
+</p>
+
+<p>
+First, here is an integral with variable boundaries.
+</p>
+\begin{align}
+\int_{x}^{x^{2}} \sin(t) dt
+&= \left[ - \cos(t) \right]^{x^{2}}_{x} \\
+&= -cos(x^{2}) + \cos(x)
+\end{align}
+
+<p>
+Let us take the derivative of the last expression
+</p>
+
+\begin{align}
+\frac{ d }{ d x} \left(  -cos(x^{2}) + \cos(x) \right)
+&= \sin(x^{2}) (2x) - \sin(x)
+\end{align}
+</div>
+</div>
+<div id="outline-container-org124113b" class="outline-2">
+<h2 id="org124113b"><span class="section-number-2">8.</span> Hilbert Spaces</h2>
+</div>
+
+
+<div id="outline-container-orgca342ad" class="outline-2">
+<h2 id="orgca342ad"><span class="section-number-2">9.</span> Banach Spaces</h2>
+</div>
+
+
+<div id="outline-container-orga5bb4ad" class="outline-2">
+<h2 id="orga5bb4ad"><span class="section-number-2">10.</span> Fourier Transform</h2>
+</div>
+
+
+<div id="outline-container-org148dfd9" class="outline-2">
+<h2 id="org148dfd9"><span class="section-number-2">11.</span> Fourier Series</h2>
+</div>
+
+
+<div id="outline-container-orgcee94c4" class="outline-2">
+<h2 id="orgcee94c4"><span class="section-number-2">12.</span> Test Question</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+Raleigh Quotient:
+</p>
+
+<p>
+Let \( S \colon U \to U \) be self adjoint positive definite linear operator on inner product space \( U \). Suppose that the linear system \( S[u] = f \) has unique solution \( u_{* }\). Then \( u_{*} \) minimizes the quadratic functional:
+</p>
+
+<p>
+\[ Q[u] = \frac{1}{2} \langle u , S[u] \rangle - \langle f , u \rangle \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgb52171e" class="outline-2">
+<h2 id="orgb52171e"><span class="section-number-2">13.</span> Rayleigh Quotient</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+Let \( S \colon U \to U \) be self adjoint linear operator on an inner product space. Define the Rayleigh quotient to be:
+</p>
+
+<p>
+\[ R[u] = \frac{\langle u , S[u] \rangle}{||u||^2} \]
+</p>
+
+<p>
+Theorem: Suppose \( u_{*} \) minimizes \( R[u] \). Then
+</p>
+<ol class="org-ol">
+<li>\( u_{*} \) is an eigenfunction of \( S \)</li>
+<li>\( \lambda_{*} \) the corresponding eigenvalue is the smallest eigenvalue of \( S \)</li>
+</ol>
+
+<p>
+Proof:
+Suppose \( u_{*} \) minimizes \( S \).
+Consider the scalar function \( g(t) = R[u_{*} + t u] \) for any \( u \in U \)
+</p>
+
+\begin{align}
+g(t)
+&= R[u_{*} + tu] \\
+&= \frac{\langle u_{*} + tu , S[u_{*} + tu] \rangle}{||u_{*} + tu||^2} \\
+&= \frac{ \langle u_{*}  , S[u_{*}] \rangle + 2t \langle u , S[u_{*}] \rangle + t^2 \langle u , S[u] \rangle}{||u_{*}||^2 + 2 \langle u , u_{*}\rangle + t^2||u||^2} \\
+\end{align}
+<p>
+We know that because \( u_{*} \) minimizes \( S \), the minimum value will occur at \( t = 0 \).
+</p>
+
+<p>
+By differentiating \( g(t) \) we yield
+</p>
+
+<p>
+\[ 0 = g'(0) = \frac{2 ||u_{*}||^2 \langle u , S[u_{*}] \rangle - \langle u_{*} , S[u_{*}] \rangle ||u_{*}||^2}{||u_{*}||^4} \]
+\[ 0 = g'(0) = \frac{2 \langle u , S[u_{*}] \rangle - \langle u_{*} , S[u_{*}] \rangle}{||u_{*}||^2} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org9217a06" class="outline-2">
+<h2 id="org9217a06"><span class="section-number-2">14.</span> First Order Linear Constant Coefficients</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Consider the equation
+</p>
+
+<p>
+\[ a u_{x} + b u_{y} = 0 \]
+</p>
+
+<p>
+Where \( u \colon \mathbb{R}^{2} \to \mathbb{R} \) is an unknown function and \( a,b \) are nonzero constants. 
+</p>
+
+<p>
+We note that this describes a directional derivative equal to zero.
+</p>
+
+<p>
+\[ 0 = \begin{bmatrix} u_{x} \\ u_{y} \end{bmatrix} \cdot \begin{bmatrix} a \\ b \end{bmatrix} = \nabla u \cdot \begin{bmatrix} a \\ b \end{bmatrix} \]
+</p>
+
+<p>
+There are then two methods of solving this equation.
+</p>
+
+<p>
+Coordinate Method:
+</p>
+
+<p>
+Variable Substitution Method:
+</p>
+
+<ol class="org-ol">
+<li>Construct new coordinates \( \hat{x}, \hat{y} \) such that nice terms cancel each other out during chain rule.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3b84f3c" class="outline-2">
+<h2 id="org3b84f3c"><span class="section-number-2">15.</span> "Trivial" PDEs</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+There are two types of "easy" PDEs to solve. Much of the work in this introduction to PDEs is to try and reduce the PDE into one of these forms.
+</p>
+
+<ol class="org-ol">
+<li>A single variable PDE</li>
+</ol>
+
+<p>
+If you have a function \( f(x,y) \) and we state that
+</p>
+
+<p>
+\[ \frac{ \partial f}{ \partial x} + \frac{ \partial^{2} f}{ \partial x^{2}} + \cdots = g(x,y) \]
+</p>
+
+
+<p>
+This can be thought of as an ODE in \( x \) only. Hence, we may attempt to solve the PDE like it were an ODE. We may, for example, look to use separation of variables, integrating factors, variation of parameters. The only difference is that the constants that appear as part of the solution technique are replaced with arbitrary functions of the other variables. In this case, \( y \).
+</p>
+</div>
+</div>
+<div id="outline-container-org8ac12f7" class="outline-2">
+<h2 id="org8ac12f7"><span class="section-number-2">16.</span> Transport Equation</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+Suppose we are given the equation,
+</p>
+
+<p>
+\[ b(x) \cdot \nabla u = 0 \]
+</p>
+
+<p>
+Suppose that \( b(x) \) is not tangent to \( \Sigma \)  
+</p>
+</div>
+</div>
+<div id="outline-container-orgb15564f" class="outline-2">
+<h2 id="orgb15564f"><span class="section-number-2">17.</span> Variational Problems</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+Suppose we are given a PDE, I will use the Poisson equation.
+</p>
+
+<p>
+\[ \Delta u = f \]
+</p>
+
+<p>
+We may do the following trick, multiply by a smooth scalar function \( v \) and integrate by parts.
+</p>
+
+<p>
+Step 1:
+</p>
+
+<p>
+\[ v \Delta u = v f \]
+</p>
+
+<p>
+Step 2:
+</p>
+
+\begin{align}
+&&\int_{\Omega} v \Delta u dx &= \int_{\Omega} v f dx \\
+&\implies &\int_{\Omega} v \Delta u dx &= \int_{\Omega} v f dx \\
+\end{align}
+</div>
+</div>
+<div id="outline-container-org5963935" class="outline-2">
+<h2 id="org5963935"><span class="section-number-2">18.</span> Integration By Parts</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+Recall that differential operators, \( \frac{ d }{ d x}, \nabla, \nabla \cdot, \nabla \times, \Delta, ... \) tend to obey a "product rule"
+</p>
+
+<p>
+\[ \frac{ d (uv)}{ d x} = \frac{ d u}{ d x} v + u \frac{ d v}{ d x} \]
+</p>
+
+\begin{alignat*}{2}
+[\nabla (uv)]_{i}
+&= \begin{bmatrix} \frac{ \partial (uv)}{ \partial x_{i}} \end{bmatrix}_i &\quad
+&\text{$i$-th Component of $\nabla$}\\
+&= \begin{bmatrix} \frac{ \partial u}{ \partial x_{i}}v + u\frac{ \partial v}{ \partial x_{i}} \end{bmatrix}_i &\quad
+&\text{$1$D Product Rule}\\
+&= v \begin{bmatrix} \frac{ \partial u}{ \partial x_{i}} \end{bmatrix}_{i} + u \begin{bmatrix} \frac{ \partial v}{ \partial x_{i}} \end{bmatrix}_i &\quad
+&\text{Component-Wise Linearity} \\
+&= v [\nabla u]_i + u [\nabla v]_i &\quad
+&\text{Def. $\nabla$}
+\end{alignat*}
+
+\begin{align*}
+&&[\nabla (uv)]_{i} &= \begin{bmatrix} \frac{ \partial (uv)}{ \partial x_{i}} \end{bmatrix}_i
+&\quad &\text{$i$-th Component of $\nabla$}\\
+\implies &&[\nabla (uv)]_{i} &= \begin{bmatrix} \frac{ \partial u}{ \partial x_{i}}v + u\frac{ \partial v}{ \partial x_{i}} \end{bmatrix}_i
+&\quad &\text{$1$D Product Rule}\\
+\implies &&[\nabla (uv)]_{i} &= v \begin{bmatrix} \frac{ \partial u}{ \partial x_{i}} \end{bmatrix}_{i} + u \begin{bmatrix} \frac{ \partial v}{ \partial x_{i}} \end{bmatrix}_i
+&\quad &\text{Thing} \\
+\implies &&[\nabla (uv)]_{i} &= v [\nabla u]_i + u [\nabla v]_i
+&\quad &\text{Def. $\nabla$}
+\end{align*}
+
+<p>
+Each component matches, hence,
+</p>
+
+<p>
+\[ \nabla(uv) = v \nabla u + u \nabla v \]
+</p>
+
+\begin{alignat*}{2}
+[\nabla (uv)]_{i}
+&= \begin{bmatrix} \frac{ \partial (uv)}{ \partial x_{i}} \end{bmatrix}_i &\quad
+&\text{$i$-th Component of $\nabla$}\\
+&= \begin{bmatrix} \frac{ \partial u}{ \partial x_{i}}v + u\frac{ \partial v}{ \partial x_{i}} \end{bmatrix}_i &\quad
+&\text{$1$D Product Rule}\\
+&= v \begin{bmatrix} \frac{ \partial u}{ \partial x_{i}} \end{bmatrix}_{i} + u \begin{bmatrix} \frac{ \partial v}{ \partial x_{i}} \end{bmatrix}_i &\quad
+&\text{Component-Wise Linearity} \\
+&= v [\nabla u]_i + u [\nabla v]_i &\quad
+&\text{Def. $\nabla$}
+\end{alignat*}
+
+<p>
+Each component matches, hence,
+</p>
+
+<p>
+\[ \nabla(uv) = v \nabla u + u \nabla v \]
+</p>
+</div>
+<div id="outline-container-org662d2cd" class="outline-3">
+<h3 id="org662d2cd"><span class="section-number-3">18.1.</span> Partial Derivative Scalar times Vector</h3>
+</div>
+
+<div id="outline-container-org54de778" class="outline-3">
+<h3 id="org54de778"><span class="section-number-3">18.2.</span> Gradient Scalar Times Scalar</h3>
+</div>
+
+<div id="outline-container-org2287a9a" class="outline-3">
+<h3 id="org2287a9a"><span class="section-number-3">18.3.</span> Gradient Vector Dot Vector</h3>
+</div>
+
+<div id="outline-container-orgd38476d" class="outline-3">
+<h3 id="orgd38476d"><span class="section-number-3">18.4.</span> Divergence Scalar Times Vector</h3>
+</div>
+
+<div id="outline-container-org3d07c6b" class="outline-3">
+<h3 id="org3d07c6b"><span class="section-number-3">18.5.</span> Divergence Vector Cross Vector</h3>
+</div>
+
+<div id="outline-container-org564fd11" class="outline-3">
+<h3 id="org564fd11"><span class="section-number-3">18.6.</span> Curl Scalar Times Vector</h3>
+</div>
+
+<div id="outline-container-org7bc185e" class="outline-3">
+<h3 id="org7bc185e"><span class="section-number-3">18.7.</span> Curl Vector Cross Vector</h3>
+</div>
+
+<div id="outline-container-org409e9d9" class="outline-3">
+<h3 id="org409e9d9"><span class="section-number-3">18.8.</span> Scalar Times Laplacian</h3>
+<div class="outline-text-3" id="text-18-8">
+\begin{align}
+\int_{\Omega} u \Delta v dx
+&= \int_{\Omega} u \sum_{i = 1}^{n} \frac{ \partial^{2} v}{ \partial x_{i}^{2}} dx \\
+&= \sum_{i = 1}^{n} \int_{\Omega} u \frac{ \partial^{2} v}{ \partial x_{i}^{2}} dx \\
+&= \sum_{i = 1}^{n} \int_{\Omega} \frac{ \partial }{ \partial x_{i}} \left(u \frac{ \partial v}{ \partial x_{i}} \right) - \frac{ \partial u}{ \partial x_{i}} \frac{ \partial v}{ \partial x_{i}} dx \\
+&= \sum_{i = 1}^{n} \left( \int_{\Omega} \frac{ \partial }{ \partial x_{i}} \left(u \frac{ \partial v}{ \partial x_{i}} \right) dx - \int_{\Omega} \frac{ \partial u}{ \partial x_{i}} \frac{ \partial v}{ \partial x_{i}} dx \right) \\
+&= \sum_{i = 1}^{n} \left( \int_{\partial \Omega} u \frac{ \partial v}{ \partial x_{i}} \nu^{i} dS - \int_{\Omega} \frac{ \partial u}{ \partial x_{i}} \frac{ \partial v}{ \partial x_{i}} dx \right) \\
+&= \int_{\partial \Omega} u \nabla v \cdot \nu dS - \int_{\Omega} \nabla u \cdot \nabla v dx \\
+&= \int_{\partial \Omega} u \frac{ \partial v}{ \partial \nu} dS - \int_{\Omega} \nabla u \cdot \nabla v dx \\
+\end{align}
+</div>
+</div>
+</div>
+<div id="outline-container-org64d5d24" class="outline-2">
+<h2 id="org64d5d24"><span class="section-number-2">19.</span> Negative Laplacian is Self Adjoint</h2>
+<div class="outline-text-2" id="text-19">
+<p>
+Given the linear operator
+</p>
+
+<p>
+\[ L[u] = - u'' \]
+</p>
+
+<p>
+with Boundary conditions
+</p>
+
+<p>
+\[ u(0) = 0, u(1) = 0 \]
+</p>
+
+<p>
+We have that \( L \) is self adjoint.
+</p>
+
+
+\begin{align}
+\left\langle L[u], v \right\rangle
+&= \int_{0}^{1} (-u''(x))(v(x)) dx \\
+&= \Eval{v(x) (-u'(x))}{0}{1} - \int_{0}^{1} (-u'(x))(v'(x)) dx \\
+&= \int_{0}^{1} (u'(x))(v'(x)) dx \\
+&=  \Eval{u(x)v'(x)}{0}{1} - \int_{0}^{1} (u(x))(v''(x)) dx \\
+&= \int_{0}^{1} (u(x))(-v''(x)) dx
+\end{align}
+</div>
+</div>
+<div id="outline-container-org20e9239" class="outline-2">
+<h2 id="org20e9239"><span class="section-number-2">20.</span> Weak Formulations</h2>
+<div class="outline-text-2" id="text-20">
+<p>
+PDE -&gt; Weak Form (Multiply by a smooth function and integrate by parts)
+</p>
+
+<p>
+Weak Form -&gt; PDE
+</p>
+</div>
+</div>
+<div id="outline-container-org2007160" class="outline-2">
+<h2 id="org2007160"><span class="section-number-2">21.</span> Variational Formulation</h2>
+<div class="outline-text-2" id="text-21">
+<p>
+Recall that the weak formulation of a PDE is given by:
+</p>
+
+<p>
+\[ a(u,v) = \ell(v) \]
+</p>
+
+<p>
+Where \( a \colon V \times V \to \mathbb{R} \) is a symmetric positive definite bilinear form.
+</p>
+
+
+<p>
+We see that,
+</p>
+
+<p>
+\[ J(v) = \frac{1}{2} a(v, v) - \ell(v) \]
+</p>
+
+
+
+\begin{align}
+\left. \frac{ d }{ d t} J(u + tv) \right|_{t=0}
+&= \left. \frac{ d }{ d t} \left( \frac{1}{2} a(u + tv, u + tv) - \ell(u + tv) \right) \right|_{t=0} \\
+&= \left. \frac{ d }{ d t} \left( \frac{1}{2} a(u,u) + t a(u, v) + \frac{t^{2}}{2} a(v,v) - \ell(u) - t \ell(v) \right) \right|_{t=0} \\
+&= \left. \left( a(u, v) + t a(v,v) - \ell(v) \right) \right|_{t=0} \\
+&= a(u, v) - \ell(v)
+\end{align}
+
+<p>
+Hence we see that,
+</p>
+
+<p>
+\[ \left. \frac{ d }{ d t} J(u + tv) \right|_{t=0} = a(u,v) - \ell(v) \]
+</p>
+
+<p>
+Setting one side of the equation to zero proves the claim. That is, setting the LHS to zero means that \( u \) minimizes \( J \) implying \( a(u,v) = \ell(v) \). Setting the RHS to zero means \( a(u,v) = \ell(v) \) which implies \( u \) minimizes \( J \).      
+</p>
+
+<p>
+These minimizers are unique,
+</p>
+
+<p>
+\[ a(u_{1} - u_{2}, v) = a(u_{1}, v) - a(u_{2}, v) = \ell(v) - \ell(v) = 0 \]
+</p>
+
+<p>
+Hence \( u_{1} - u_{2} = 0 \).  
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

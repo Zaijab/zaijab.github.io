@@ -1,0 +1,2550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UH MATH 602 POST</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">UH MATH 602 POST</h1>
+<p>
+A class taken at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+<div id="outline-container-org3a50d2d" class="outline-2">
+<h2 id="org3a50d2d"><span class="section-number-2">1.</span> Homework 1</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgdcd46fb" class="outline-3">
+<h3 id="orgdcd46fb"><span class="section-number-3">1.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+The constants are \( \alpha = \frac{1}{n}, \beta = 1 \).
+</p>
+
+<p>
+Separate the inequality into two inequalities:
+</p>
+
+\begin{align}
+\alpha ||x||_1 \leq ||x||_\infty \\
+||x||_\infty \leq \beta ||x||_1 
+\end{align}
+
+<p>
+Proof of \( (1) \), 
+</p>
+
+\begin{align}
+\sum_{i = 1}^{n} |x_i|
+&\leq \sum_{i=1}^n \sup_{k} x_k \tag{Supremum greater than any element} \\
+&= n \sup_k x_k \tag{Supremum is constant} \\
+\implies \frac{1}{n} \sum_{i = 1}^{n} |x_i|
+&\leq \sup_{i} x_i \tag{Dividing by $n$}
+\end{align}
+
+<p>
+Proof of \( (2) \), 
+</p>
+
+<p>
+\[ \sup_{i} x_i \leq \sum_{i = 1}^{n} |x_i| \]
+</p>
+
+<p>
+The supremum of a discrete sequence is an element of the sequence. Hence the RHS sum contains the supremum as one of the summands. Thus RHS is greater than LHS.
+</p>
+
+<p>
+These constants are the best because there are vectors which make the two expressions equal.
+</p>
+
+<p>
+Tightness of \( (1) \): Let \( x = (1,1,1,\ldots,1) \) 
+\[ \frac{1}{n} ||x||_1 = \frac{1}{n} \sum_i 1 = 1 = ||x||_\infty \]
+Tightness of \( (2) \):  Let \( x = (1,0,0,\ldots,0) \) 
+\[ ||x||_\infty = 1 = ||x||_1 \]
+</p>
+</div>
+</div>
+<div id="outline-container-org7035cb9" class="outline-3">
+<h3 id="org7035cb9"><span class="section-number-3">1.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Suppose \( x_n \) is a Cauchy sequence such that it contains a convergent subsequence: \( x_{n_j} \to x \).
+Let \( \varepsilon > 0 \).
+Because \( x_n \) is Cauchy there is an \( N_1 \) such that \( \forall n,n_{j} \geq N_1 . | x_{n} - x_{n_j} | < \frac{\varepsilon}{2} \)
+Because \( x_{n_j} \to x \) there is an \( N_2 \) such that \( \forall n_{j} \geq N_2 . |x - x_{n_j} | <  \frac{\varepsilon}{2} \)
+</p>
+
+<p>
+Suppose \( n \geq \max(N_1, N_2) \) :
+</p>
+
+\begin{align}
+|x_n - x|
+&= |x_n - x_{n_j} + x_{n_j} - x| \\
+&\leq |x_n - x_{n_j}| + |x_{n_j} - x| \\
+&< \frac{\varepsilon}{2} + \frac{\varepsilon}{2} \\
+&= \varepsilon
+\end{align}
+
+<p>
+Hence \( x_n \to x \).
+</p>
+
+<p>
+This implies that compact spaces are complete.
+In fact, a generalized form of Heine-Borel for arbitrary metric spaces states Compact \( \iff \) Complete and Totally Bounded.
+</p>
+</div>
+</div>
+<div id="outline-container-org429eb93" class="outline-3">
+<h3 id="org429eb93"><span class="section-number-3">1.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-1-3">
+\begin{align}
+|| x + y ||^2 + ||x - y||^2
+&= \langle x + y , x + y \rangle + \langle x - y , x - y \rangle \\
+&= \langle x , x \rangle + \langle x , y \rangle + \langle y , x \rangle + \langle y , y \rangle +
+   \langle x , x \rangle - \langle x , y \rangle - \langle y , x \rangle + \langle y, y \rangle   \\
+&= 2 \langle x , x \rangle  + 2 \rangle + \langle y, y \rangle \\
+&= 2 ||x||  + 2 || y ||
+\end{align}
+</div>
+</div>
+<div id="outline-container-org9826830" class="outline-3">
+<h3 id="org9826830"><span class="section-number-3">1.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-1-4">
+\begin{align}
+\ || x - \lambda y||
+&= \langle x - \lambda y, x - \lambda y \rangle \\
+&= ||x||^2 + \lambda^2 ||y||^2 - 2 \lambda \langle x , y \rangle
+\end{align}
+
+<p>
+This is a quadratic in \( \lambda \) which has a minimum at \( \frac{\langle x , y \rangle}{||y||^2} \) (axis of symmetry formula).
+</p>
+</div>
+</div>
+<div id="outline-container-org43e2fd1" class="outline-3">
+<h3 id="org43e2fd1"><span class="section-number-3">1.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+First a lemma,
+</p>
+
+<div class="LEMMA" id="org2e6b22a">
+<p>
+The inner product denoted by
+\[ \langle \cdot , \cdot \rangle \colon V^2 \to \mathbb{R} \]
+is continuous.
+</p>
+
+</div>
+<div class="PROOF" id="orgc280f06">
+<p>
+Suppose we have two sequences which converge \( x_n \to x \) and \( y_n \to y \).
+We know that both sequences are bounded, hence \( y_n < M \).
+Because both sequences converge there is an \( N \) for which all \( n \geq N \) implies \( ||x_n - x|| < \frac{\varepsilon}{2M} \) and \( ||y_n - y|| < \frac{\varepsilon}{2 ||x||} \) 
+</p>
+
+<p>
+Consider the difference
+</p>
+\begin{align}
+\ |\langle x_n , y_n \rangle - \langle x , y \rangle|
+&= |\langle x_n - x , y_n \rangle + \langle x , y_n - y \rangle| \tag{Linearity of Inner Product} \\
+&\leq |\langle x_n - x , y_n \rangle| + |\langle x , y_n - y \rangle| \tag{Triangle Inequality} \\
+&\leq ||x_n - x|| ||y_n|| + ||x ||||y_n - y || \tag{Cauchy-Schwarz Inequality} \\
+&< \frac{\varepsilon}{2 M} ||y_n|| + ||x || \frac{\varepsilon}{2 ||x||} \tag{Replace Small Expressions} \\
+&= \varepsilon \tag{Simplify}
+\end{align}
+
+</div>
+
+<p>
+This makes the problem easier.
+</p>
+
+<p>
+Let \( x_n \to x \) be a convergent sequence in \( X \) where all \( x_n \in M \).
+</p>
+
+\begin{align}
+\lim_{n \to \infty} \langle x_n, v \rangle = 0 \tag{Constant Sequence $0$} \\
+\langle \lim_{n \to \infty} x_n, v \rangle = 0 \tag{Continuity of Inner Product} \\
+\langle x, v \rangle = 0 \tag{Evaluate Limit}
+\end{align}
+
+<p>
+This shows the limit of the sequence is also orthogonal to the constant vector \( v \).
+</p>
+</div>
+</div>
+<div id="outline-container-org35ed5b1" class="outline-3">
+<h3 id="org35ed5b1"><span class="section-number-3">1.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+From problem \( 5 \) we have that \( M^{\perp} \) is closed hence \( M^{\perp \perp} \) is closed too, thus \( M \) .
+</p>
+
+<p>
+Because \( M \) is closed we have that \( H = M \oplus M^{\perp} \).
+</p>
+
+<p>
+Let \( x \in M^{\perp \perp} \) then \( x = x_0 + y_0 \)
+</p>
+
+\begin{align}
+0
+&= \langle x , y_0 \rangle \tag{$x \in M^{\perp \perp}, y \in M^{\perp}$} \\
+&= \langle x_0 + y_0 , y_0 \rangle \tag{Def. $x$} \\
+&= \langle x_0 , y_0 \rangle + \langle y_0 , y_0 \rangle \tag{Linearity of Inner Product} \\
+&=  \langle y_0 , y_0 \rangle \tag{$x_0 \in M, y_0 \in M^\perp$} \\
+&=  ||y_0||^2 \tag{Def. Norm}
+\end{align}
+<p>
+Hence \( y_0 = 0 \) so \( x \in M \).
+</p>
+</div>
+</div>
+<div id="outline-container-orge1f84c5" class="outline-3">
+<h3 id="orge1f84c5"><span class="section-number-3">1.7.</span> Problem 7</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+First, a lemma.
+</p>
+
+<div class="LEMMA" id="orgcb75c03">
+<p>
+If \( I = \{i_k \}_{k = 1}^{m} \) is a set of linearly independent vectors (size \( m \) for manini)  and \( S = \{s_k \}_{k = 1}^{n} \) is a set of spanning vectors (size \( n \) for nui), then \( m \leq n \).
+</p>
+
+</div>
+
+<div class="PROOF" id="org45e80a1">
+<p>
+Consider a minimal \( B \): \( I \subseteq B \subseteq I \cup S \) such that \( B \) spans.
+Consider a linear combination of vectors in \( B \) equal to \( 0 \),
+</p>
+
+<p>
+\[ \left( \sum_{k = 1}^{m} a_k i_k \right) + \left( \sum_{j = 1}^{n} b_{k_j} s_{k_j} \right) = 0 \]
+</p>
+
+<p>
+If some \( b_{k_j} \neq 0 \) then \( s_{k_j} \) in the spanning set of \( B - \{ s_{k_j} \} \) which contradicts minimality of \( B \). Hence \( \forall j . b_{k_j} = 0 \).
+By independence \( \forall k . a_k = 0 \). Hence \( |I| \leq | S | \).
+</p>
+
+</div>
+
+<p>
+Now, with the lemma, suppose we have two bases of our vector space. They both are linearly independent and they both span. Hence they must be simultaneously lesser than and greater than each other, thus are the same size.
+</p>
+</div>
+</div>
+<div id="outline-container-org30f65d2" class="outline-3">
+<h3 id="org30f65d2"><span class="section-number-3">1.8.</span> Problem 8</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+Suppose that \( \{ q_i \}_{i \in I} \) is an orthogonal set of vectors.
+</p>
+
+<p>
+Consider a linear combination which equals \( 0  \).
+</p>
+
+\begin{align}
+\sum \alpha_i q_i = 0 \tag{Hypothesis} \\
+\langle q_j, \sum \alpha_i q_i \rangle = \langle q_j, 0\rangle \tag{Inner Product of Both Sides by $q_j$} \\
+\sum \alpha_i \langle q_j, q_i \rangle = 0 \tag{By Linearity of Inner Product} \\
+\alpha_j \langle q_j, q_j \rangle = 0 \tag{Orthogonality of $q_i$}
+\end{align}
+
+<p>
+By positive definiteness, \( \langle q_j, q_j \rangle > 0 \implies a_j = 0 \)
+Because \( q_j \) was an arbitrary vector from the original set, this implies \( \forall j . \alpha_j = 0 \).
+Hence the set is linearly independent.
+</p>
+</div>
+</div>
+<div id="outline-container-org12d7958" class="outline-3">
+<h3 id="org12d7958"><span class="section-number-3">1.9.</span> Problem 9</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Let \( \varepsilon = 0.5 \) and \( N \in \mathbb{N} \) be arbitrary.
+</p>
+
+<p>
+Consider \( n := N \) and \( m := 3n \).
+</p>
+
+<p>
+When \( t \in [\frac{1}{m}, \frac{1}{n}] \)  \( x_m(t) - x_n(t) = 1 - nt \).
+</p>
+
+<p>
+This expression is linear with negative slope; hence, the maximum value (in the given domain) is the smallest value of \( t \).
+</p>
+
+<p>
+\[ 1 - \frac{n}{3n} = 1 - \frac{1}{3} = \frac{2}{3} > \varepsilon \]
+</p>
+
+<p>
+Thus the sequence is not Cauchy as \( \sup ||x_m - x_n|| \geq \frac{2}{3} > \varepsilon \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0ca66d" class="outline-2">
+<h2 id="orge0ca66d"><span class="section-number-2">2.</span> Homework 2</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgd41633e" class="outline-3">
+<h3 id="orgd41633e"><span class="section-number-3">2.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org8fd7019" class="outline-4">
+<h4 id="org8fd7019"><span class="section-number-4">2.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+First a note about the inner product. We are working in the space of polynomials, so
+</p>
+
+<p>
+\[  \langle f , g \rangle = \int_{-\infty}^{\infty} f(t) g(t) e^{-t^2} dt = \int_{-\infty}^{\infty} [\text{Polynomial}] e^{-t^2} dt      \]
+</p>
+
+<p>
+We may calculate this quantity easily if we know the quantity
+</p>
+
+
+<p>
+\[ \int_{-\infty}^{\infty} t^n e^{-t^2} dt = \sqrt{\pi} \int_{-\infty}^{\infty} t^n \frac{1}{\sqrt{\pi}} e^{-t^2} dt = \sqrt{\pi} \cdot \left[ \text{$n^\text{th}$ moment of } \mathcal{N}\left(0, \frac{1}{2}\right) \right] \]
+</p>
+
+<p>
+I will assume these are well known (using MATH 471 material).
+Hence, we have what I will call <code>inner product formula</code>,
+\[ \langle x^n , x^m \rangle = \sqrt{\pi} \left[ \text{$(n+m)^\text{th}$ moment of } \mathcal{N}\left(0, \frac{1}{2}\right) \right] \]
+Something nice to note, the odd order moments will be \( 0 \). Because the index in the sum in the Gram-Schmidt formula goes up by \( 1 \), that means we can forget about every other term in the sum. With that preamble, we may begin the problem.
+</p>
+
+<p>
+Base case of Gram-Schmidt:
+\[ u_0 = \frac{v_0}{||v_0||} = \frac{1}{\sqrt{\langle 1 , 1 \rangle}} = \frac{1}{\sqrt{\sqrt{\pi \cdot 1}}} = \frac{1}{\pi^{\frac{1}{4}}} \]
+</p>
+
+<p>
+Recursive step:
+\[ n = 1 \]
+</p>
+\begin{align}
+u_1
+&= \frac{v_1 - \sum_{j=0}^{0} \langle v_1 , u_j \rangle u_j}
+        {|| v_1 - \sum_{j=0}^{0} \langle v_1 , u_j \rangle u_j ||} \tag{Gram-Schmidt} \\
+&= \frac{x - \langle x , u_0 \rangle u_0}
+        {|| x - \langle x , u_0 \rangle u_0 ||} \tag{Expanding sum} \\
+&= \frac{x - \langle x , 1 \rangle u_0^2}
+        {||x - \langle x , 1 \rangle u_0^2 ||} \tag{Putting in form for inner product formula} \\
+&= \frac{x}
+        {||x||} \tag{First Moment $= \mu = 0$} \\
+&= \frac{x}
+        {\sqrt{\langle x , x \rangle}} \tag{Def. Norm} \\
+&= \frac{x}
+        {\sqrt{\sqrt{\pi} \cdot \frac{1}{2}}} \tag{Inner Product Formula} \\
+&= \frac{\sqrt{2}x}{\pi^{\frac{1}{4}}} \tag{Simplify}
+\end{align}
+
+<p>
+\[ n = 2 \]
+</p>
+\begin{align}
+u_2
+&= \frac{v_2 - \sum_{j=0}^{1} \langle v_2 , u_j \rangle u_j}
+        {|| v_2 - \sum_{j=0}^{1} \langle v_2 , u_j \rangle u_j ||} \tag{Gram-Schmidt} \\
+&= \frac{x^2 - \langle x^2 , u_0 \rangle u_0 - \langle x^2 , u_1 \rangle u_1 }
+        {||  x^2 - \langle x^2 , u_0 \rangle u_0 - \langle x^2 , u_1 \rangle u_1 ||} \tag{Expanding Sum} \\
+&= \frac{x^2 - \langle x^2 , 1 \rangle u_0^2 }
+        {|| x^2 - \langle x^2 , 1 \rangle u_0^2 ||} \tag{Linearity of IP} \\
+&= \frac{x^2 - \sqrt{\pi} \cdot \frac{1}{2} \cdot u_0^2 }
+        {|| x^2 -  \sqrt{\pi} \cdot \frac{1}{2} \cdot u_0^2 ||} \tag{Inner Product Formula} \\
+&= \frac{x^2 - \frac{1}{2} }
+        {|| x^2 -  \frac{1}{2} ||} \tag{Substitute and Simplify} \\
+&= \frac{x^2 - \frac{1}{2} }
+        {\sqrt{\langle x^2 -  \frac{1}{2} , x^2 -  \frac{1}{2} \rangle}} \tag{Def. Norm} \\
+&= \frac{x^2 - \frac{1}{2} }
+        {\sqrt{\langle x^2 , x^2 \rangle - \langle x^2 , \frac{1}{2} \rangle -
+               \langle \frac{1}{2} , x^2 \rangle +
+               \langle \frac{1}{2} , \frac{1}{2} \rangle }} \tag{Linearity of Inner Product} \\
+&= \frac{x^2 - \frac{1}{2} }
+        {\sqrt{ \frac{3 \sqrt{\pi}}{4} - \frac{\sqrt{\pi}}{2} + \frac{\sqrt{\pi}}{4} }} \tag{Inner Product Formula} \\
+&= \frac{x^2 - \frac{1}{2} }
+        {\sqrt{ \frac{\sqrt{\pi}}{2} }} \tag{Simplify} \\
+&= \frac{2x^2 - 1 }
+        {\sqrt{ 2 } \pi^{\frac{1}{4}}} \tag{Simplify}
+\end{align}
+
+<p>
+\[ n = 3 \]
+</p>
+\begin{align}
+u_3
+&= \frac{v_3 - \sum_{j=0}^{2} \langle v_3 , u_j \rangle u_j}
+        {|| v_3 - \sum_{j=0}^{2} \langle v_3 , u_j \rangle u_j ||} \tag{Gram-Schmidt} \\
+&= \frac{x^3 - \langle x^3 , u_0 \rangle u_0 - \langle x^3 , u_1 \rangle u_1 - \langle x^3 , u_2 \rangle u_2 }
+        {||  x^3 - \langle x^3 , u_0 \rangle u_0 - \langle x^3 , u_1 \rangle u_1 - \langle x^3 , u_2 \rangle u_2 ||} \tag{Expanding Sum} \\
+&= \frac{x^3  - \langle x^3 , x \rangle  \frac{2 x}{ \pi^{\frac{1}{2}}}}
+        {||  x^3 -  \langle x^3 , x \rangle  \frac{2 x}{ \pi^{\frac{1}{2}}} ||} \tag{Linearity of Inner Product} \\
+&= \frac{x^3  - \frac{3x}{2}}
+        {||  x^3 -  \frac{3x}{2} ||} \tag{Inner Product Formula} \\
+&= \frac{x^3  - \frac{3x}{2}}
+        {\sqrt{ \langle x^3 -  \frac{3x}{2}, x^3 -  \frac{3x}{2} \rangle }} \tag{Def Norm.} \\
+&= \frac{x^3  - \frac{3x}{2}}
+        {\sqrt{ \langle x^3 , x^3 \rangle -
+                \langle x^3 , \frac{3x}{2} \rangle -
+                \langle \frac{3x}{2} , x^3 \rangle +
+                \langle \frac{3x}{2} , \frac{3x}{2} \rangle }} \tag{Linearity of Inner Product} \\
+&= \frac{x^3  - \frac{3x}{2}}
+        {\sqrt{ \sqrt{\pi} \cdot \frac{15}{8} -
+                \frac{3}{4} \cdot \sqrt{\pi} \cdot \frac{3}{4} +
+                \frac{3}{4} \cdot \sqrt{\pi} \cdot \frac{3}{4} +
+                \frac{9}{4} \cdot \sqrt{\pi} \cdot \frac{1}{2}}} \tag{Inner Product Formula} \\
+&= \frac{1}{\sqrt{3} \pi^{\frac{1}{4}}} (2x^3 - 3x) \tag{Simplify}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org3b233e5" class="outline-4">
+<h4 id="org3b233e5"><span class="section-number-4">2.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-2-1-2">
+\begin{align}
+\langle Ap , q \rangle
+&= \int_{-\infty}^{\infty} (Ap)(t) q(t) e^{-t^2} dt \tag{Def. Inner Product} \\
+&= \int_{-\infty}^{\infty} p''(t) q e^{-t^2}  - 2t p'q e^{-t^2} dt \tag{Def. Operator} \\
+&= \int_{-\infty}^{\infty} p''(t) q e^{-t^2} dt  - \int_{-\infty}^{\infty} 2t p'q e^{-t^2} dt \tag{Linearity of Integral} \\
+&= \left[ p' q e^{-t^2} \right]_{- \infty}^{\infty} - \int_{-\infty}^{\infty}  p'q' e^{-t^2} - 2t p'q e^{-t^2} dt - \int_{-\infty}^{\infty} 2t p'q e^{-t^2} dt \tag{Integration by Parts} \\
+&= \int_{-\infty}^{\infty} - p'q' e^{-t^2} dt + \int_{-\infty}^{\infty} 2t p'q e^{-t^2} dt - \int_{-\infty}^{\infty} 2t p'q e^{-t^2} dt \tag{Linearity of Integral} \\
+&=   \int_{-\infty}^{\infty} - p'q' e^{-t^2} dt \tag{Cancel Same Integral} \\
+&=   \left[ p q' e^{-t^2} \right]_{-\infty}^{\infty} + \int_{-\infty}^{\infty}  p q'' e^{-t^2} - 2t p q' e^{-t^2} dt \tag{Integration by Parts} \\
+&=  \int_{-\infty}^{\infty}  p q'' e^{-t^2} - 2t p q' e^{-t^2} dt \tag{Evaluate Definite Integral} \\
+&=  \int_{-\infty}^{\infty}  p A(q) e^{-t^2} dt \tag{Def. Operator} \\
+&=  \langle p , Aq \rangle
+\end{align}
+</div>
+</div>
+<div id="outline-container-orgae76ec4" class="outline-4">
+<h4 id="orgae76ec4"><span class="section-number-4">2.1.3.</span> C</h4>
+<div class="outline-text-4" id="text-2-1-3">
+<p>
+Note, if \( v \) is an eigenvector with eigenvalue \( \lambda \), then \( Kv \) is also an eigenvector with the same eigenvalue for \( K \) constant. We may use this fact plugging in the unnormalized polynomials into \( A \).
+</p>
+
+
+<p>
+By calculation:
+</p>
+
+\begin{align}
+A(1)
+&= (1)'' - 2t (1)' \\
+&= 0 \tag{$\lambda = 0$}
+\end{align}
+
+\begin{align}
+A\left(t \right)
+&= \left(t \right)'' - 2t \left(t \right)' \\
+&= - 2t \\
+&= -2 \left( t \right) \tag{$\lambda = -2$}
+\end{align}
+
+\begin{align}
+A\left(t^2 - \frac{1}{2}\right)
+&= \left(t^2 - \frac{1}{2}\right)'' - 2t \left(t^2 - \frac{1}{2}\right)' \\
+&= 2 - 4t^2 \\
+&= -4 \left(-\frac{1}{2} + t^2 \right) \tag{$\lambda = -4$}
+\end{align}
+
+\begin{align}
+A\left(t^3 - \frac{3}{2}t \right)
+&= \left( t^3 - \frac{3}{2}t \right)'' - 2t \left( t^3 - \frac{3}{2}t \right)' \\
+&= 9t - 6t^3 \\
+&= -6 \left(-\frac{3}{2}t + t^3 \right) \tag{$\lambda = -6$}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org2fea134" class="outline-4">
+<h4 id="org2fea134"><span class="section-number-4">2.1.4.</span> D</h4>
+<div class="outline-text-4" id="text-2-1-4">
+<p>
+First we prove that \( p_k \) are in fact polynomials. I will first show
+\[ \exists q \text{ polynomial }  \colon \frac{d^k}{dt^k} e^{-t^2} = q(t) e^{-t^2} \]
+</p>
+
+<p>
+Base case, \( k = 0 \)
+</p>
+
+<p>
+\[ \frac{d^0}{dt^0} e^{-t^2} = e^{-t^2} = e^{-t^2} \cdot 1 \]
+</p>
+
+<p>
+Inductive Step, Suppose the hypothesis is true for some \( k = n \).
+Consider the case \( n + 1 \).
+</p>
+
+<p>
+\[ \frac{d^{n+1}}{dt^{n+1}} e^{-t^2} = \frac{d^{1}}{dt^{1}} q(t)e^{-t^2} = q'(t)e^{-t^2} - 2t q(t) e^{-t^2} = e^{-t^2}(q'(t) - 2tq(t)) \]
+</p>
+
+<p>
+With that lemma proven,
+</p>
+
+<p>
+\[ p_k = e^{t^2} \frac{d^k}{dt^k} e^{-t^2} =e^{t^2} q(t) e^{-t^2} = q(t) \]
+</p>
+
+<p>
+Now we may show that these polynomials are orthogonal with respect to the inner product.
+</p>
+
+<p>
+Consider \( p_m \) and \( p_n \) for \( m \neq n \). We may also assume \( m < n \).
+</p>
+
+\begin{align}
+\langle p_m , p_n \rangle
+&= \int_{-\infty}^{\infty} p_m p_n e^{-t^2} dt \tag{Def. Inner Product} \\
+&= \int_{-\infty}^{\infty} p_m \left[ e^{t^2} \frac{d^n}{dt^n} e^{-t^2} \right] e^{-t^2} dt \tag{Def. $p_n$} \\
+&= \int_{-\infty}^{\infty} p_m \frac{d^n}{dt^n} e^{-t^2} dt \tag{Simplify} \\
+&= \left[ \sum_{i = 0}^{n - 1} (-1)^{i}  \frac{d^i}{dt^i} p_m \frac{d^{n - 1 - i}}{dt^{n - 1 - i}}(e^{-t^2}) \right]_{- \infty}^{\infty} + (-1)^n\int_{-\infty}^{\infty} \frac{d^n}{dt^n} (p_m)  e^{-t^2} dt \tag{Integration by Parts} \\
+&= (-1)^n\int_{-\infty}^{\infty} \frac{d^n}{dt^n} (p_m)  e^{-t^2} dt \tag{$\lim_{t \to \pm \infty} \frac{p(x)}{e^{-t^2}} = 0$} \\
+&= 0 \tag{$m < n$}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org9d1ac8b" class="outline-4">
+<h4 id="org9d1ac8b"><span class="section-number-4">2.1.5.</span> E</h4>
+<div class="outline-text-4" id="text-2-1-5">
+\begin{align}
+p_k'
+&= \left( e^{t^2} \frac{d^k}{dt^k} e^{-t^2} \right)' \tag{Def. $p_k$} \\
+&= e^{t^2} \frac{d^{k}}{dt^{k}} (-2)te^{-t^2} + 2t e^{t^2} \frac{d^k}{dt^k} e^{-t^2} \tag{Product Rule} \\
+&= e^{t^2}  \sum_{n = 0}^k -2 \binom{n}{n} \frac{d^{n}}{dt^{n}} t \frac{d^{k - n}}{dt^{k - n}} e^{-t^2} + 2t e^{t^2} \frac{d^k}{dt^k} e^{-t^2} \tag{Product Rule} \\
+&=   -2t e^{t^2} \frac{d^k}{dt^k} e^{-t^2} + -2k e^{t^2} \frac{d^{k-1}}{dt^{k-1}} e^{-t^2} + 2t e^{t^2} \frac{d^k}{dt^k} e^{-t^2} \tag{Derivative Higher Order than Poly is Zero} \\
+&= -2k e^{t^2} \frac{d^{k-1}}{dt^{k-1}} e^{-t^2} \tag{Simplify} \\
+&= -2k p_{k-1} \tag{Def. $p_k$}
+\end{align}
+<p>
+Also,
+</p>
+
+\begin{align}
+p_k' 
+&= \left( e^{t^2} \frac{d^k}{dt^k} e^{-t^2} \right)' \tag{Def. $p_k$} \\
+&= e^{t^2} \frac{d^{k+1}}{dt^{k+1}} e^{-t^2} + 2t e^{t^2} \frac{d^k}{dt^k} e^{-t^2} \tag{Product Rule} \\
+&= p_{k+1} + 2t p_{k} \tag{Def}
+\end{align}
+<p>
+Rearranging,
+</p>
+
+<p>
+\[ tp_k = -\frac{1}{2} p_{k+1}   -k p_{k-1} \]
+</p>
+
+<p>
+Now,
+</p>
+
+\begin{align}
+A(p_k)
+&= p_k'' -2t p_k' \tag{Def. $A$} \\
+&= 4k^2 p_{k-2} + 4 tk  p_{k-1} \tag{Use Lemma} \\
+&= 4k(k p_{k-2} + t  p_{k-1}) \tag{Factor} \\
+&= 4k(k p_{k-2} - \frac{1}{2} p_{k} - k p_{k-2}) \tag{Use Above} \\
+&= - 2k p_{k} \tag{Simplify}
+\end{align}
+<p>
+Hence it is an eigenvector with eigenvalue \( -2k \) 
+</p>
+</div>
+</div>
+<div id="outline-container-org9083d0b" class="outline-4">
+<h4 id="org9083d0b"><span class="section-number-4">2.1.6.</span> F</h4>
+<div class="outline-text-4" id="text-2-1-6">
+<p>
+Let \( e_k = \frac{p_k}{|| p_k ||} \), then all \( e_k \) lie in the unit ball. The sequence \( Ae_k \to - \infty \) using part E.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3d7b45a" class="outline-3">
+<h3 id="org3d7b45a"><span class="section-number-3">2.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Let \( Y \) be a closed subspace of a Hilbert Space \( X \), and \( P \colon X \to Y \) be the projection on to \( Y \).
+</p>
+
+<p>
+By calculation: \( x - (I - P)x = x - x + Px = Px \in Y \)
+</p>
+
+<p>
+Hence \( x - (I - P)x \perp Y^\perp \) 
+</p>
+</div>
+</div>
+<div id="outline-container-org4427f9f" class="outline-3">
+<h3 id="org4427f9f"><span class="section-number-3">2.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( [u_n] \) be an orthonormal sequence in a Hilbert space</li>
+<li>\( Ax = \sum \lambda_n \langle x, u_n \rangle u_n \)</li>
+<li>\( [\lambda_n] \) be bounded</li>
+</ul>
+
+<p>
+Note that \( u_n \) are Eigenvectors of \( A \) with eigenvalues \( \lambda_n \).
+By calculation,
+</p>
+
+\begin{align}
+Au_i
+&= \sum_{n} \lambda_n \langle u_i , u_n \rangle u_n \tag{Def. $A$} \\
+&= \lambda_n u_i \tag{$u_n$ Orthonormal, only $u_i$ term nonzero}
+\end{align}
+</div>
+<div id="outline-container-orge751fbb" class="outline-4">
+<h4 id="orge751fbb"><span class="section-number-4">2.3.1.</span> \( \implies \)</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+Suppose \( A = A^* \)
+</p>
+
+
+\begin{align}
+\langle Au_n , u_n \rangle
+&= \overline{\langle u_n , Au_n \rangle} \tag{Conjugate Symmetry} \\
+&= \overline{\langle u_n , \lambda_n u_n \rangle} \tag{$u_n$ Eigenvector} \\
+&= \overline{\overline{\lambda_n} \langle u_n , u_n \rangle} \tag{Conjugate linear in second} \\
+&= \lambda_n \overline{\langle u_n , u_n \rangle} \tag{Simplify Conjugate} \\
+&= \lambda_n \tag{Orthonormality of $u_n$}
+\end{align}
+
+\begin{align}
+\langle Au_n , u_n \rangle
+&= \langle u_n , A^*u_n \rangle \tag{Existence of Adjoint} \\
+&= \langle u_n , A u_n \rangle \tag{$A$ Self Adjoint Hypothesis} \\
+&= \langle u_n , \lambda_n u_n \rangle \tag{$u_n$ Eigenvector} \\
+&= \overline{\lambda_n} \langle u_n , u_n \rangle \tag{Conjugate Linear in Second} \\
+&= \overline{\lambda_n} \tag{Orthonormality of \( u_n \) }
+\end{align}
+
+<p>
+So \( \lambda_n = \overline{\lambda_n} \implies \lambda_n \in \mathbb{R} \) 
+</p>
+</div>
+</div>
+<div id="outline-container-org3c85113" class="outline-4">
+<h4 id="org3c85113"><span class="section-number-4">2.3.2.</span> \( \impliedby \)</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+Suppose \( \lambda_n \in \mathbb{R} \)
+</p>
+
+\begin{align}
+\langle Ax , y \rangle
+&= \langle \sum \lambda_n \langle x, u_n \rangle u_n , y \rangle \tag{Def. $A$} \\
+&= \sum \lambda_n \langle x, u_n \rangle \langle  u_n , y \rangle \tag{Linearity in First} \\
+&= \langle x, \overline{\sum \lambda_n \langle  u_n , y \rangle} u_n \rangle  \tag{Conjugate Linearity in Second} \\
+&= \langle x, \sum \overline{\lambda_n} \overline{\langle  u_n , y \rangle} u_n \rangle  \tag{Property of Conjugation} \\
+&= \langle x, \sum \lambda_n \overline{\langle  u_n , y \rangle} u_n \rangle  \tag{$\lambda_n \in \mathbb{R}$} \\
+&= \langle x, \sum \lambda_n \langle  y , u_n \rangle u_n \rangle  \tag{Conjugate Symmetry} \\
+&= \langle x, A y \rangle  \tag{Def $A$}
+\end{align}
+
+<p>
+Hence \( A = A^* \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org59b730b" class="outline-3">
+<h3 id="org59b730b"><span class="section-number-3">2.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Suppose \( \forall x . \langle Ax , x \rangle = 0 \)
+Then \( \langle A(x + \beta y) , x + \beta y \rangle  = 0 \) 
+</p>
+
+\begin{align}
+0
+&= \langle A(x + \beta y) , x + \beta y \rangle \tag{Property of \( A \)} \\
+&= \langle Ax + \beta Ay , x + \beta y \rangle \tag{Linearity of \( A \)} \\
+&= \langle Ax , x \rangle + \langle Ax , \beta y \rangle +
+   \langle \beta Ay , x  \rangle + \langle \beta Ay , \beta y \rangle
+ \tag{Linearity of Inner Product} \\
+&=  \langle Ax , \beta y \rangle + \langle \beta Ay , x  \rangle \tag{$Ax \perp x$} \\
+&=  \overline{\beta} \langle Ax , y \rangle + \beta \langle Ay , x  \rangle \tag{Linearity of IP}
+\end{align}
+
+<p>
+Now we have a condition that is true for all \( \beta \), we may then substitute different values of \( \beta \) to yield a system of equations.
+</p>
+
+\begin{align}
+0 &=  \langle Ax , y \rangle + \langle Ay , x  \rangle \tag{$\beta = 1$} \\
+0 &=  -i \langle Ax , y \rangle + i \langle Ay , x  \rangle \tag{$\beta = i$} \\
+0 &=  - \langle Ax , y \rangle + \langle Ay , x  \rangle \tag{Divide above by $i$}
+\end{align}
+
+<p>
+By summing the top and bottom equations we have,
+</p>
+
+\begin{align}
+0 &= 2 \langle Ay , x \rangle \\
+\implies 0 &= \langle Ay , x \rangle \tag{Divide by $2$} \\ 
+\implies 0 &= \langle Ay , Ay \rangle \tag{Substitute $x = Ay$} \\ 
+\implies 0 &= || Ay ||^2 \tag{Def Norm}
+\end{align}
+
+<p>
+By definiteness of the norm this implies \( \forall y . Ay = 0 \).
+</p>
+</div>
+</div>
+<div id="outline-container-org0c6b5eb" class="outline-3">
+<h3 id="org0c6b5eb"><span class="section-number-3">2.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Let \( T \) be a Hermitian operator.
+</p>
+
+<p>
+Consider the inner product between some vector \( Tx \in \im{T}  \) and \( y \in \ker{T} \) 
+</p>
+
+<p>
+\[ \langle Tx , y \rangle = \langle x , Ty \rangle = \langle x , 0 \rangle = 0 \]
+</p>
+
+<p>
+It is possible to have a non Hermitian operator have a vector in the image not be orthogonal to its kernel.
+</p>
+
+<p>
+Consider a matrix with real entries that is not symmetric,
+</p>
+
+<p>
+\[ T =
+\begin{bmatrix}
+1 & 2 & 3 \\
+2 & 4 & 6 \\
+4 & 8 & 12
+\end{bmatrix} \]
+</p>
+
+
+<p>
+By construction, the columns are all multiples of each other so the image and nullspace are immediate.
+</p>
+
+<p>
+\[ \im{T} = \spn\left\{\begin{bmatrix} 1 \\ 2 \\ 4 \end{bmatrix}\right\} \]
+</p>
+
+<p>
+\[ \ker{T} = \spn\left\{\begin{bmatrix} -2 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} -3 \\ 0 \\ 1 \end{bmatrix}\right\} \]
+</p>
+
+<p>
+Now consider the inner product,
+</p>
+
+<p>
+\[ \left\langle \begin{bmatrix} 1 \\ 2 \\ 4 \end{bmatrix}, \begin{bmatrix} -3 \\ 1 \\ 0 \end{bmatrix} \right\rangle = -3 + 2 + 0 = -1 \neq 0 \]
+</p>
+</div>
+</div>
+<div id="outline-container-orga98f1a1" class="outline-3">
+<h3 id="orga98f1a1"><span class="section-number-3">2.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Denote the coefficients of \( x = \sum \langle x , u_n \rangle u_n \) by \( x_n \).
+</p>
+
+<p>
+Suppose
+\[ Ax = \begin{pmatrix} 0 , x_1 , x_2 , \ldots \end{pmatrix} = \lambda x \]
+</p>
+
+<p>
+Then \( \lambda x_1 = 0 \implies x_1 = 0 \implies x_2 = 0 \implies \cdots \implies x = 0 \)
+But eigenvectors are always nonzero. Hence this operator has no eigenvalues.
+</p>
+
+<p>
+Note that \( A \) is an isometry,
+</p>
+
+\begin{align}
+\langle Ax , Ay \rangle
+&= \langle \sum_{n} \langle x , u_n \rangle u_{n + 1} , \sum_{m} \langle y , u_m \rangle u_{m + 1} \rangle \tag{Def. $A$} \\
+&= \sum_{n} \langle x , u_n \rangle \overline{\sum_{m} \langle y , u_m \rangle} \langle  u_{n + 1} , u_{m + 1} \rangle \tag{Linearity of Inner Product} \\
+&= \sum_{n} \langle x , u_n \rangle \overline{\sum_{m} \langle y , u_m \rangle} \delta_{n+1 , m+ 1} \tag{Orthogonality} \\
+&= \sum_{n} \langle x , u_n \rangle \overline{\sum_{m} \langle y , u_m \rangle} \delta_{nm} \tag{Equivalent Condition} \\
+&= \sum_{n} \langle x , u_n \rangle \overline{\sum_{n} \langle y , u_n \rangle} \tag{Summation with Delta} \\
+&= \langle x , y \rangle \tag{Orthonormal Basis Theorem}
+\end{align}
+
+<p>
+Because the unit ball in an infinite dimensional space is closed and bounded but not compact, the closure of its isometric image will not be compact. That is, distances are preserved before and after applying \( A \), and because we may find a sequence in the domain with no convergent subsequence, the image will also not have a convergent subsequence. So \( A \)  is not compact.
+</p>
+
+<p>
+\( A \) is not Hermitian.
+</p>
+
+\begin{align}
+\langle A u_1 , u_2 \rangle &= \langle u_2 , u_2 \rangle = 1 \\
+\langle u_1 , A u_2 \rangle &= \langle u_1 , u_3 \rangle = 0
+\end{align}
+
+<p>
+\( ||A|| = 1 \) follows from \( A \) is an isometry.
+</p>
+</div>
+</div>
+<div id="outline-container-org47aa963" class="outline-3">
+<h3 id="org47aa963"><span class="section-number-3">2.7.</span> Problem 7</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+Base Case: \( n = 0 \)
+If \( x \) is a vector such that \( Ax \neq 0 \) then \( x \neq 0 \) because \( A(0) = 0 \).
+</p>
+
+<p>
+Inductive Step: Suppose \( A^n x \neq 0 \).
+By theorem \( 6 \), the null space of a Hermitian operator is the orthogonal complement of its range. For some \( A^n x \in \mathcal{R}(A) - \{ 0 \} = \mathcal{N}(A)^\perp - \{ 0 \}  \) we then know that \( A^nx \not \in \mathcal{N}(A) \) thus \( A^{n+1}x \neq 0 \).
+</p>
+</div>
+</div>
+<div id="outline-container-org9a2860d" class="outline-3">
+<h3 id="org9a2860d"><span class="section-number-3">2.8.</span> Problem 8</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+By the spectral theorem let \( \{ e_k \} \) denote an orthonormal system such that
+</p>
+
+<p>
+\[ Ax = \sum \lambda_k \langle x , e_k \rangle e_k \]
+Then
+\[ AB e_k = \lambda_k B e_k \]
+</p>
+
+<p>
+Hence, \( Be_k \) is an eigenvector of \( A \) with eigenvalue \( \lambda_k \).
+</p>
+
+<p>
+Let \( \Lambda_k = \spn \{ e_i \}_{i = 1}^{k} \). By the previous statement \( B \Lambda_k \subseteq \Lambda_k \). \( B \) restricted to \( \Lambda_k \)  remains to be a compact Hermitian operator hence it too has a spectral decomposition of orthonormal basis vectors spanning \( \Lambda_k \), called \( \{ \tilde{e}_i \}_{i = 1}^{k} \) . This new basis for every eigenspace is the shared set of eigenvectors for \( A \) and \( B \).
+</p>
+</div>
+</div>
+<div id="outline-container-org23d2cad" class="outline-3">
+<h3 id="org23d2cad"><span class="section-number-3">2.9.</span> Problem 9</h3>
+<div class="outline-text-3" id="text-2-9">
+</div>
+<div id="outline-container-org6cd4c20" class="outline-4">
+<h4 id="org6cd4c20"><span class="section-number-4">2.9.1.</span> A</h4>
+<div class="outline-text-4" id="text-2-9-1">
+\begin{align}
+\langle E_j E_k x , y \rangle
+&= \langle E_k x , E_j y \rangle \tag{Projection is Hermitian} \\
+&= 0 \tag{Eigenspaces orthogonal}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org672f9ad" class="outline-4">
+<h4 id="org672f9ad"><span class="section-number-4">2.9.2.</span> B</h4>
+<div class="outline-text-4" id="text-2-9-2">
+<p>
+Because \( A \) is Hermitian in a finite dimensional vector space, it is compact. Hence it has a spectral decomposition \( Ax = \sum \lambda_n \langle x , u_n \rangle u_n \). By the Projection theorem (part g) \( E_n x = \sum \langle x , e_i \rangle e_i \) but all the eigenvectors are distinct so the space is one dimensional and we may write the projection as a single term \( \langle x , e_n \rangle e_n \). Thus \( Ax = \sum \lambda_n E_n x \implies A = \sum \lambda_n E_n \) 
+</p>
+</div>
+</div>
+<div id="outline-container-orgc9d64ca" class="outline-4">
+<h4 id="orgc9d64ca"><span class="section-number-4">2.9.3.</span> C</h4>
+<div class="outline-text-4" id="text-2-9-3">
+<p>
+If \( x \) is an eigenvector of \( A \) with eigenvalue \( \lambda \) then, \( A^n x = \lambda^n x \). Also if \( x \) is an eigenvector to \( A \) and \( B \) with eigenvalues \( \lambda \) and \( \mu \) then \( (A + B)x = Ax + Bx = \lambda x + \mu x = (\lambda + \mu) x \). Hence any polynomial (which is a sum of powers) keeps the eigenvectors the same and applies the transformation to the eigenvalue. Hence \( p(A) = \sum p(\lambda_n) E_n \).
+</p>
+</div>
+</div>
+<div id="outline-container-org609641a" class="outline-4">
+<h4 id="org609641a"><span class="section-number-4">2.9.4.</span> D</h4>
+<div class="outline-text-4" id="text-2-9-4">
+<p>
+Let
+</p>
+
+<p>
+\[ p_k(A) = \frac{\prod_{i \neq k} (A - \lambda_i I )}{\prod_{i \neq k} (\lambda_k - \lambda_i)} = \sum_n \frac{\prod_{i \neq k} (\lambda_n - \lambda_i)}{\prod_{i \neq k} (\lambda_k - \lambda_i)} E_n \]
+</p>
+
+<p>
+If \( n \neq k \) then \( \lambda_n - \lambda_i \) will appear in the product hence will make the term equal to \( 0 \). The only term surviving is the \( k \)th term. On that term the numerator will be of the form \( \lambda_k - \lambda_i \) which will cancel with the denominator. Hence \( p_k(A) = E_k \).
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org0fc6af2" class="outline-2">
+<h2 id="org0fc6af2"><span class="section-number-2">3.</span> Rewrite</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgc232d1c" class="outline-3">
+<h3 id="orgc232d1c"><span class="section-number-3">3.1.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Let \( Y \subseteq X \) be a closed subspace of a Hilbert Space. \( P \colon X \to X \) be the projection operator.
+</p>
+
+<p>
+Consider \( \langle Px , x \rangle \).
+</p>
+
+\begin{align}
+\langle Px , x \rangle
+&= \langle Px , (Px) + (x - Px) \rangle \tag{$Y$ closed subspace $\implies X = Y \oplus Y^T$} \\
+&= \langle Px , Px \rangle + \langle Px ,(x - Px) \rangle \tag{Linearity of Inner Product} \\
+&= \langle Px , Px \rangle \tag{$Px \in Y, (x - Px) \in Y^\perp$} \\
+&= ||Px||^2  \tag{Def. Norm}
+\end{align}
+
+
+<p>
+Now we may use this result to derive the operator norm of \( P \). Note that \( P \) is a Hermitian operator from the <b>Orthogonal Projection Theorem</b> (Theorem 7 Part F Pg. 75).
+</p>
+
+\begin{align}
+\sup_{||x|| = 1} || Px ||
+&= || P || \tag{Def. Operator Norm} \\
+&= ||| P ||| \tag{$||P|| = |||P|||$ When $P$ Hermitian} \\
+&= \sup_{||x|| = 1} \langle Px , x \rangle \tag{Def. $|||P|||$} \\
+&= \sup_{||x|| = 1} ||Px||^2 \tag{From Above}
+\end{align}
+
+<p>
+Hence we have
+</p>
+
+<p>
+\[ \sup_{||x|| = 1} || Px || = \sup_{||x|| = 1} ||Px||^2 \]
+</p>
+
+<p>
+A fact that I too hastily mentioned in my exam (calling it Math 331 material and did not explain) is the following,
+</p>
+
+<p>
+\[ \sup_{a \in A} (a^2) = (\sup_{a \in A} a)^2 \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[||P || = \sup_{||x|| = 1} || Px || = \sup_{||x|| = 1} ||Px||^2 = (\sup_{||x|| = 1} ||Px||)^2 = ||P||^2 \]
+</p>
+
+
+<p>
+Where the equation \( ||P|| = ||P||^2 \) is satisfied when \( ||P|| = 0,1 \). To show that \( ||P|| \neq 0 \) consider some \( 0 \neq y \in Y \) (I suppose I am further imposing \( Y \) is not trivial subspace, but it's necessary), then \( || P \frac{y}{||y||} || = \frac{||y||}{||y||} = 1 \) so \( ||P|| \geq 1 \). 
+</p>
+</div>
+</div>
+<div id="outline-container-org9e497aa" class="outline-3">
+<h3 id="org9e497aa"><span class="section-number-3">3.2.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Let \( A \) be a bounded linear operator on \( X \) and suppose there are two operators \( A_1^*, A_2^* \) such that
+</p>
+
+<p>
+\[ \langle Ax , y \rangle = \langle x , A_1^*y \rangle = \langle x , A_2^*y \rangle \]
+</p>
+
+<p>
+Consider their difference,
+</p>
+
+\begin{align}
+\langle x , (A_1^* - A_2^*)y \rangle
+&= \langle x , A_1^*y - A_2^*y \rangle \tag{Linearity of Adjoint} \\
+&= \langle x , A_1^*y \rangle - \langle x , A_2^*y \rangle \tag{Linearity of Inner Product} \\
+&= \langle Ax , y \rangle - \langle Ax , y \rangle \tag{Def. Adjoint} \\
+&= 0 \tag{Canellation}
+\end{align}
+
+<p>
+Because \( x,y \) are arbitrary we have shown,
+</p>
+
+<p>
+\[ \forall x, y \in X . \langle x , (A_1^* - A_2^*)y \rangle = 0 \]
+</p>
+
+<p>
+We may substitute to get our result. By letting \( y \) be arbitrary and \( x = (A_1^* - A_2^*)y \) we have,
+</p>
+
+<p>
+\[ \langle (A_1^* - A_2^*)y , (A_1^* - A_2^*)y \rangle = 0 \implies (A_1^* - A_2^*)y = 0 \]
+</p>
+
+<p>
+Hence every output of the operator is \( 0 \) by positive definiteness.
+Then, \( A_1^* - A_2^* = 0 \implies A_1^* = A_2^* \)
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org54b3d43" class="outline-2">
+<h2 id="org54b3d43"><span class="section-number-2">4.</span> Homework 3</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org4285429" class="outline-3">
+<h3 id="org4285429"><span class="section-number-3">4.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( f(x) \in \mathcal{C}^2(\mathbb{R}, \mathbb{R}), f(\overline{x}) = 0, f'(\overline{x}) \neq 0 \)</li>
+<li>\( K(x) = x - \frac{f(x)}{f'(x)} \)</li>
+<li>\( x_{n+1} = K(x_n) \)</li>
+</ul>
+
+<p>
+Note, \( f(\overline{x}) = 0 \implies K'(\overline{x}) = 0 \).
+</p>
+
+\begin{align}
+K'(\overline{x})
+&= 1 - \frac{f'(\overline{x})^2 - f(\overline{x}) f''(\overline{x})}{f'(\overline{x})^2} \tag{Derivative Rules} \\
+&= \frac{f(\overline{x}) f''(\overline{x})}{f'(\overline{x})^2} \tag{Simplify} \\
+&= 0 \tag{Def \( \overline{x} \), also \( f'(\overline{x}) \neq 0 \)}
+\end{align}
+
+<p>
+Note that \( K' \) is a combination of continuous functions. Hence \( K' \) is continuous.
+</p>
+
+<p>
+By continuity of \( K' \) and \( f' \), we may find a closed interval \( I \) centered at \( \overline{x} \) such that:
+</p>
+<ul class="org-ul">
+<li>\( \forall z \in I \ K'(z) < B < 1 \)</li>
+<li>\( \forall z \in I \ f'(z) \neq 0 \)</li>
+</ul>
+
+<p>
+Proof:
+</p>
+\begin{alignat}{2}
+&&U = K'^{-1}[ (-B, B) ] \cap f'^{-1}[(-\infty, 0) \cup (0, \infty)] \tag{Is Open by Continuity} \\
+&\Rightarrow \quad  &\exists (\overline{x} - \varepsilon, \overline{x} + \varepsilon) \subset U \tag{By Openness, \( \overline{x} \) in both Preimages} \\
+&\Rightarrow \quad &I = \left[ \overline{x} - \frac{\varepsilon}{2}, \overline{x} + \frac{\varepsilon}{2}\right] \subseteq (\overline{x} - \varepsilon, \overline{x} + \varepsilon)  \tag{Properties of Order}
+\end{alignat}
+
+
+<p>
+With both of these facts we may show that \( K \) is a contraction map and the fixed point of \( K \) is a root of \( f \).
+</p>
+
+<ul class="org-ul">
+<li>Proof of First Claim: \( K \) is a contraction map.</li>
+</ul>
+\begin{align}
+\| K(x) - K(y) \|
+&= |K'(c)||x - y| \tag{MVT} \\
+&< B |x - y| \tag{\( K' < B < 1 \) On \( I \)}
+\end{align}
+<p>
+By the contraction mapping principle we have that there is a unique fixed point \( x_f \) such that \( K(x_f) = x_f \).
+</p>
+
+<ul class="org-ul">
+<li>Proof of Second Claim: \( x_f \) is a root of \( f \)</li>
+</ul>
+\begin{align}
+0
+&= K(x_f) - x_f \tag{From Contraction Mapping Principle} \\
+&= x_f - \frac{f(x_f)}{f'(x_f)} - x_f \tag{Def \( K \)} \\
+&= - \frac{f(x_f)}{f'(x_f)}  \tag{Simplify} \\
+&= f(x_f)  \tag{\( f' \neq 0 \) On \( I \)}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org512ba22" class="outline-3">
+<h3 id="org512ba22"><span class="section-number-3">4.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( f \in \mathcal{C}^1(\mathbb{R}, \mathbb{R}) \)</li>
+</ul>
+
+<p>
+Note that \( \mathbb{R} \) is locally compact, consider an \( x \in \mathbb{R} \) and a compact connected neighborhood \( K_x \) 
+</p>
+
+<p>
+Because \( f \in \mathcal{C}^1(\mathbb{R}, \mathbb{R}) \) then \( f' \in C(\mathbb{R} , \mathbb{R}) \). Hence \( f' \) is bounded on \( K_x \).
+</p>
+
+<p>
+Consider \( x_1, x_2 \in \mathbb{R} \),
+</p>
+
+\begin{alignat}{2}
+&&f(x_1) - f(x_2) = f'(c) ( x_1 - x_2) \tag{MVT} \\
+&\Rightarrow \quad &|f(x_1) - f(x_2)| = |f'(c)| |x_1 - x_2| \tag{Absolute Value} \\
+&\Rightarrow \quad &|f(x_1) - f(x_2)| \leq \left( \sup_{c \in K_x}|f'(c)| \right) |x_1 - x_2| \tag{Property of Supremum}
+\end{alignat}
+
+<p>
+Hence, \( f \) is locally Lipschitz continuous with Lipschitz constant \( \left( \sup_{c \in K_x}|f'(c)| \right) \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgb44f120" class="outline-3">
+<h3 id="orgb44f120"><span class="section-number-3">4.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Note, we may read the eigenvalues directly (using properties of trace and determinant),
+\[ \begin{bmatrix} 2 & 1 \\ -1 & 2 \end{bmatrix} \implies \lambda_1, \lambda_2 = 2-i, 2+i \]
+</p>
+
+<p>
+This is a good sign for our solution, our matrix is diagonalizable.
+We may compute the eigenvectors,
+</p>
+<ul class="org-ul">
+<li>\( \lambda_1 \)</li>
+</ul>
+<p>
+\[ \begin{bmatrix} i & 1 \\ -1 & i \end{bmatrix} \implies u_1 = \begin{bmatrix} i \\ 1 \end{bmatrix} \] 
+</p>
+<ul class="org-ul">
+<li>\( \lambda_2 \)</li>
+</ul>
+<p>
+\[ \begin{bmatrix} -i & 1 \\ -1 & -i \end{bmatrix} \implies u_2 = \begin{bmatrix} -i \\ 1 \end{bmatrix} \] 
+</p>
+
+\begin{align}
+x(t)
+&= \exp \left(At \right) x_0 \tag{Solution of Linear System} \\
+&= \exp \left(\begin{bmatrix} i & -i \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 2 - i & 0 \\ 0 & 2 + i \end{bmatrix} \begin{bmatrix} i & -i \\ 1 & 1 \end{bmatrix}^{-1} t \right) x_0 \tag{\( A \) is Diagonalizable} \\
+&= \exp \left(\begin{bmatrix} i & -i \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 2 - i & 0 \\ 0 & 2 + i \end{bmatrix} \begin{bmatrix} \frac{-i}{2} & \frac{1}{2} \\ \frac{i}{2} & \frac{1}{2} \end{bmatrix} t \right) x_0 \tag{Compute Inverse} \\
+&= \begin{bmatrix} i & -i \\ 1 & 1 \end{bmatrix} \exp \left( \begin{bmatrix} 2 - i & 0 \\ 0 & 2 + i \end{bmatrix}  t \right) \begin{bmatrix} \frac{-i}{2} & \frac{1}{2} \\ \frac{i}{2} & \frac{1}{2} \end{bmatrix} x_0 \tag{Property of Matrix Exponential} \\
+&= \begin{bmatrix} i & -i \\ 1 & 1 \end{bmatrix} \begin{bmatrix} \exp((2 - i)t) & 0 \\ 0 & \exp((2 + i)t) \end{bmatrix} \begin{bmatrix} \frac{-i}{2} & \frac{1}{2} \\ \frac{i}{2} & \frac{1}{2} \end{bmatrix} x_0 \tag{Property of Matrix Exponential} \\
+&= \begin{bmatrix} i & -i \\ 1 & 1 \end{bmatrix} \begin{bmatrix} e^{2t} (\cos(t) - i\sin(t)) & 0 \\ 0  &  e^{2t} (\cos(t) + i \sin(t)) \end{bmatrix} \begin{bmatrix} \frac{-i}{2} & \frac{1}{2} \\ \frac{i}{2} & \frac{1}{2} \end{bmatrix} x_0 \tag{Complex Exponential} \\
+&=  \begin{bmatrix} e^{2t} \cos(t) & e^{2t} \sin(t) \\ - e^{2t} \sin(t)  &  e^{2t} \cos(t) \end{bmatrix} x_0 \tag{Matrix Multiplication} \\
+&=  \begin{bmatrix} e^{2t} \cos(t) + e^{2t} \sin(t) \\ - e^{2t} \sin(t)  +  e^{2t} \cos(t) \end{bmatrix} \tag{Use Initial Condition}
+\end{align}
+<p>
+Interestingly, I believe we may shorten much of this work using an isomorphism (of rings) between \( M_{2 \times 2} \to \mathbb{C} \) via \( \begin{bmatrix} a & b \\ -b & a \end{bmatrix} \mapsto a + bi \). This means
+\[ \dot{x} = (2 + i)x \implies x(t) = e^{2t}(\cos(t) + i \sin(t)) x_0 \implies x(t) = e^{2t} \begin{bmatrix} \cos(t) & \sin(t) \\ - \sin(t) & \cos(t) \end{bmatrix} x_0 \]
+</p>
+
+<p>
+which is the same result as above. Though there are a number of holes I spot. Firstly, my understanding of complex valued differential equations is limited. I don't have an existence and uniqueness theorem at the ready in \( \mathbb{C} \). Also, I do not know how the initial condition should transform under the isomorphism. Similarly, I do not know what happens to the norms between the isomorphism. But seeing this makes my mathematician's heart feel on fire! There has to be <b>something</b> here!
+</p>
+</div>
+</div>
+<div id="outline-container-org0fcda67" class="outline-3">
+<h3 id="org0fcda67"><span class="section-number-3">4.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Fixed points are in the null space of \( A \) (which we may skip calculation by noticing that the second column being a half times the first).
+</p>
+
+<p>
+\[ \mathcal{N}(A) = \mathcal{N} \left( \begin{bmatrix} 2 & 1 \\ 4 & 2 \end{bmatrix} \right) = \spn \left( \left\{ \begin{bmatrix} 1 \\ -2 \end{bmatrix} \right\} \right) \]
+</p>
+
+<p>
+The eigenvalues of \( A \) are \( 0 \) (because \( A \) is not invertible) and \( 4 = \tr(A) \). Notably, they are not all negative, so the fixed points are unstable. 
+</p>
+
+<p>
+We may calculate \( \omega_{\sigma}(x) \) depending on what set \( x \) lies in.
+</p>
+
+<ul class="org-ul">
+<li>Case 1: \( Ax = 0 \)</li>
+</ul>
+<p>
+These are the fixed points of the system. Hence \( \omega_{\sigma}(x) = \{ x \} \) 
+</p>
+
+<ul class="org-ul">
+<li>Case 2: \( Ax \neq 0 \)</li>
+</ul>
+
+<p>
+These are points around an unstable fixed point. The matrix \( A \) also does not depend on \( x \), hence all such \( x \) will flow away from the fixed points. So \( \omega_{+}(x) = \emptyset \). The \( \omega_{-}(x) \) will be some point on the line which describes the nullspace. To calculate the point explicitly we may solve the equation. To get a point in the negative limit set consider an arbitrary sequence, \( t_n \to -\infty \). 
+</p>
+
+\begin{align}
+\lim_{n \to \infty} x(t_n)
+&= \lim_{n \to \infty} \exp \left(At_n \right) x_0 \tag{Solution of Linear System} \\
+&= \lim_{n \to \infty} \exp \left(4 \begin{bmatrix} -1 & 1 \\ 2 & 2 \end{bmatrix} \begin{bmatrix} 0 & 0 \\ 0 & 4 \end{bmatrix} \begin{bmatrix} -2 & 1 \\ 2 & 1 \end{bmatrix} t_n \right) x_0 \tag{\( A \) is Diagonalizable} \\
+&= \lim_{n \to \infty} \begin{bmatrix} -1 & 1 \\ 2 & 2 \end{bmatrix} \exp \left(4  \begin{bmatrix} 0 & 0 \\ 0 & 4 \end{bmatrix}  t_n \right) \begin{bmatrix} -2 & 1 \\ 2 & 1 \end{bmatrix} x_0 \tag{Property of Matrix Exponential} \\
+&= \lim_{n \to \infty} \begin{bmatrix} -1 & 1 \\ 2 & 2 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & e^{16 t_n} \end{bmatrix} \begin{bmatrix} -2 & 1 \\ 2 & 1 \end{bmatrix} x_0 \tag{Property of Matrix Exponential} \\
+&= \begin{bmatrix} -1 & 1 \\ 2 & 2 \end{bmatrix} \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} -2 & 1 \\ 2 & 1 \end{bmatrix} x_0 \tag{Take Limit} \\
+&= \begin{bmatrix} 2 & -1 \\ -4 & 2 \end{bmatrix}  x_0 \tag{Matrix Multiply} \\
+\end{align}
+</div>
+</div>
+<div id="outline-container-org5b2dfc2" class="outline-3">
+<h3 id="org5b2dfc2"><span class="section-number-3">4.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+To show \( \Phi \) is a flow.
+</p>
+\begin{align}
+\Phi(t + s, x)
+&= e^{t + s} (1 + x) - 1 \tag{Def. \( \Phi \)} \\
+&= e^{t} (e^{s} (1 + x)) - 1 \tag{Prop of \( \exp \)} \\
+&= e^{t} (e^{s}(1 + x) - 1 + 1) - 1 \tag{Addition by \( 0 \)} \\
+&= e^{t} (\Phi(s, x) + 1) - 1 \tag{Def. \( \Phi \)} \\
+&= \Phi(t, \Phi(s, x)) \tag{Def. \( \Phi \)}
+\end{align}
+<p>
+Also, \( \Phi(0, x) = x \).
+</p>
+
+
+<p>
+To find the ODE which describes \( \Phi \).
+</p>
+
+\begin{alignat}{2}
+&&x(t) &= e^t (1 + x_0) - 1 \tag{Given} \\
+&\Rightarrow\quad &\dot{x}(t) &= e^t (1 + x_0) \tag{Take Derivative} \\
+&\Rightarrow\quad &x(t) &= \dot{x}(t) - 1 \tag{Substitution} \\
+&\Rightarrow\quad &\dot{x}(t) &=  x(t) + 1 \tag{Write in Standard Form}
+\end{alignat}
+</div>
+</div>
+<div id="outline-container-orgaebec4f" class="outline-3">
+<h3 id="orgaebec4f"><span class="section-number-3">4.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-4-6">
+</div>
+<div id="outline-container-orgd09e49b" class="outline-4">
+<h4 id="orgd09e49b"><span class="section-number-4">4.6.1.</span> \( \Omega(f) \) is a closed invariant set</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<p>
+First we show that \( M - \Omega(f) \) is open.
+</p>
+
+<p>
+\[ x \in M \text{ is non-wandering} \iff \forall U_x \text{ open} \, \exists t_n \to \infty n \forall t_n \ \Phi(t_n, U_x) \cap U_x \neq \emptyset \]
+</p>
+
+<p>
+The logical negation of the above statement gives a characterization of elements in the complement,
+</p>
+
+<p>
+\[ y \in M \text{ is wandering} \iff y \in M - \Omega(f) \iff \exists U_y \text{ open} \forall t_n \to \infty \exists \Phi(t_n, U_y) \cap U_y = \emptyset \]
+</p>
+
+<p>
+Hence for every element in the complement, there is an open set of wandering points. Thus \( M - \Omega(f) \) is open. Therefore \( \Omega(f) \) is closed.
+</p>
+
+<p>
+To show that \( \Omega(f) \) is invariant, \( x \in \Omega(f) \) consider \( y = \Phi(s, x) \) we wish to show that \( y \) is non-wandering. Consider a neighborhood of \( y \), \( U_y \), the intersection \( U_y \cap \Phi(t_n, U_{y}) \), for some arbitrary sequence \( t_n \). We will show there is a \( t_n \) such that the intersection is nonempty.
+</p>
+
+<p>
+Because \( \Phi \) is a homeomorphism we may run \( \Phi \) in reverse to get a neighborhood of \( x \).
+</p>
+\begin{align}
+\Phi(-s, U_y \cap \Phi(t_n, U_{y}))
+&= \Phi(-s, U_y) \cap \Phi(-s, \Phi(t_n, U_{y})) \tag{Property of Bijection} \\
+&= \Phi(-s, U_y) \cap \Phi(-s + t_n, U_{y}) \tag{Semigroup Property of Flow} \\
+&= U_x \cap \Phi(t_n, U_{x}) \tag{Rename Newfound Neighborhood of \( x \)} \\
+&\neq \emptyset \tag{Def. \( x \in \Omega(f) \), \( \exists \) such a \( t_n \)}
+\end{align}
+
+<p>
+Because the image is nonempty, we must have put in an element. Hence \( U_y \cap \Phi(t_n, U_{y}) \neq \emptyset \).
+</p>
+</div>
+</div>
+<div id="outline-container-org104a81e" class="outline-4">
+<h4 id="org104a81e"><span class="section-number-4">4.6.2.</span> \( \Omega(f) \) contains all periodic orbits</h4>
+<div class="outline-text-4" id="text-4-6-2">
+<p>
+Let \( x \) be a periodic point. Then \( \exists T \in \mathbb{R} \, \forall n \in \mathbb{N} \ \Phi(nT, x) = x \)
+Consider a neighborhood of \( x \), \( U_x \).
+Then \( \Phi(nT , U_x) \cap U_x \supset \{ x \} \neq \emptyset \).
+Thus \( x \in \Omega(f) \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgc03805a" class="outline-4">
+<h4 id="orgc03805a"><span class="section-number-4">4.6.3.</span> \( \forall x \in M \  \omega_{+}(x) \subset \Omega(f) \)</h4>
+<div class="outline-text-4" id="text-4-6-3">
+<p>
+If \( y \in \omega_+(x) \) then \( \exists t_n \to \infty \ \Phi(t_n , x) \to y \) 
+</p>
+
+<p>
+Consider a neighborhood \( U_y \). Then \( \exists N \in \mathbb{N} \, \forall n \geq N \ \Phi(t_n , x ) \in U_y \).
+</p>
+
+<p>
+Consider the sequence \( \{ t_n \}_{n \geq N} \), which is a sequence that also tends to \( \infty \).
+We have that \( \Phi(t_N, x) \in U_y \) and that
+\(\Phi(t_n, \Phi(t_N, x)) \in \Phi(t_n, U_y) \implies \Phi(t_n + t_N, x) \in \Phi(t_n, U_y)  \)
+</p>
+</div>
+</div>
+<div id="outline-container-org9be499c" class="outline-4">
+<h4 id="org9be499c"><span class="section-number-4">4.6.4.</span> Non-Wandering Points of the System \( f ( x, y ) = ( y , -x ) \)</h4>
+<div class="outline-text-4" id="text-4-6-4">
+<p>
+The solution is given by \( (A \sin(t + \delta), A \cos(t + \delta)) \) (we don't even need to do calculus, just geometry. Note the derivative is always perpendicular to the vector.)
+</p>
+
+<p>
+Every point is periodic with period \( 2 \pi \). Hence, given some point \( (x, y) \) change to polar representation with radius \( A \) and angle \( \delta \)  then the sequence \( t_n \to \infty \) given by \( t_n = 2 \pi n \) has flow \( \Phi(2 \pi n, (x,y)) = (x , y) \) which is constant, hence convergent. Thus every point is non-wandering.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgef2bf5b" class="outline-2">
+<h2 id="orgef2bf5b"><span class="section-number-2">5.</span> Homework 4</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgca556f2" class="outline-3">
+<h3 id="orgca556f2"><span class="section-number-3">5.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+If \( f(y) = 0 \) then the constant solution \( \Phi(t, y) = y \) is a solution. By Uniqueness of solutions, this is the only solution. Hence \( \gamma(y) = \Phi(\mathbb{R} \times y) = \{ y \} \).
+</p>
+</div>
+</div>
+<div id="outline-container-org60b0215" class="outline-3">
+<h3 id="org60b0215"><span class="section-number-3">5.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Let \( y \) be a fixed point and \( y \in \gamma_{\sigma }(x) \).
+Then \( y = \Phi(t, x) \) for some &Phi;. By the semigroup property \( \Phi(-t, y) = x \) by problem 1 we have that \( \Phi(-t , y) = y = x \) hence \( x \) is a fixed point.
+</p>
+</div>
+</div>
+<div id="outline-container-org2848422" class="outline-3">
+<h3 id="org2848422"><span class="section-number-3">5.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Let \( \phi(t) \) be the solution of a first order autonomous system and \( \lim_{{t \to \infty} } \phi(t) = z \)
+</p>
+
+<p>
+Then around \( z \) the system looks like \( f(x) = f(z) + O(|z - x|) \) 
+</p>
+
+<p>
+By definition of limit, when \( t \) is large enough, \( | \phi(t) - z | < \epsilon \).
+By Lipschitz continuity of \( f \), \( | \phi'(t) - f(z) | = | f(\phi(t)) - f(z) | \leq K | \phi(t) - z | < M \epsilon \).
+</p>
+
+<p>
+Then, if \( t_1 \) and \( t_{2} \) are large enough, then:
+</p>
+
+\begin{align}
+2 \epsilon
+&> | \phi(t_2) - z | + |z - \phi(t_{1}) | \tag{Hypothesis} \\
+&> | \phi(t_2) - \phi(t_{1}) | \tag{Triangle Inequality} \\
+&= \left| \int_{t_1} ^{t_{2}} \phi'(t) dt \right| \tag{FTC} \\
+&= \left| \int_{t_1} ^{t_{2}} \phi'(t) - f(z) + f(z) dt \right| \tag{Addition by Zero} \\
+&^{}\geq \left| \int_{t_1} ^{t_{2}} f(z) dt \right| - \left| \int_{t_1} ^{t_{2}} \phi'(t) - f(z) dt \right| \tag{Reverse Triangle Inequality for Continuous Functions}  \\
+&> \left| f(z) (t_2-t_1) \right| - \left| M \epsilon |t_2 - t_1| \right|  \tag{Evaluate Integral}
+\end{align}
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ f(z) < \epsilon \left( \frac{2 + M | t_2 - t_1 |}{|t_2-t_1|} \right) \]
+</p>
+
+<p>
+Because \( f(z) \) can be smaller than any \( \epsilon' \) hence, \( f(z) = 0 \).
+</p>
+</div>
+</div>
+<div id="outline-container-org2881e02" class="outline-3">
+<h3 id="org2881e02"><span class="section-number-3">5.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Let
+</p>
+
+<p>
+\[ L(x,y) = x^{2} + y^{2 }\]
+</p>
+
+<p>
+\[ \dot{x} = y, \dot{y} = - \eta y - x \]
+</p>
+
+<p>
+Then \( \dot{L}(x,y) = 2 x \dot{x} + 2 y \dot{y} = 2 x y + 2 y (- \eta y - x) = - 2 \eta y^{2}  \) 
+</p>
+
+<p>
+This is a Liapunov function for the system because it is always nonincreasing when &eta; is positive.
+</p>
+
+<p>
+The system is described by the matrix,
+</p>
+\begin{align*}
+\begin{bmatrix}
+0 & 1 \\
+-1 & - \eta
+\end{bmatrix}
+\end{align*}
+
+<p>
+Which has negative trace (equal to \( -\eta \)) and positive determinant (equal to \( 1 \)). Hence the eigenvalues have negative real part so the origin is stable. To justify this further consider the case in which the eigenvalues are real. Then because the determinant is positive, they must have the same sign. The trace being negative implies that the sign is negative. If the eigenvalues are complex then they come in conjugate pairs. The trace is then twice the real part, which is a negative number.
+</p>
+</div>
+</div>
+<div id="outline-container-org60a787e" class="outline-3">
+<h3 id="org60a787e"><span class="section-number-3">5.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+\[ \dot{x} = y = 0 \implies y = 0 \]
+</p>
+
+<p>
+\[ \dot{y} = -2x - 3x^{2} = 0 \implies x = 0, \frac{-2}{3} \]
+</p>
+
+<p>
+These two equations are independent hence we have two fixed points,
+</p>
+
+<p>
+\[ (0,0), \left( \frac{-2}{3}, 0 \right) \]
+</p>
+
+\begin{align}
+\frac{dy}{dx}
+&= \frac{\dot{y}}{\dot{x}} \tag{Parametric Derivative} \\
+&= \frac{-2x - 3x^{2}}{y} \tag{Given System}
+\end{align}
+
+<p>
+This implies,
+</p>
+
+<p>
+\[ y dy = (-2x - 3x^{2}) dx \implies \frac{1}{2}y^{2} = -x^{2} - x^{3} + c \]
+</p>
+
+<p>
+By differentiating both sides by \( t \), we obtain,
+</p>
+
+<p>
+\[ \dot{L}(x,y) = -y \dot{y}  -2 x \dot{x} - 3 x^{2} \dot{x} \implies \dot{L} = -y (-2 x - 3 x^{2}) + (-2 x - 3 x^{2}) y = 0 \]
+</p>
+
+<p>
+By the Liapunov theorem, this shows the origin is stable. Because the derivative is identically zero, orbits of the system are level sets of this Liapunov function. So orbits around the origin do not converge to the origin. Hence the origin is stable but not asymptotically stable.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd5ab10a" class="outline-3">
+<h3 id="orgd5ab10a"><span class="section-number-3">5.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+\[ \dot{x} = y = 0 \implies y = 0 \]
+</p>
+
+<p>
+\[ \dot{y} = -x + 0 (1 - x^{2} - 2y^{2} ) = 0 \implies x = 0 \]
+</p>
+
+<p>
+So origin is only fixed point.
+</p>
+
+\begin{align}
+\dot{V}(x,y)
+&= 2 x \dot{x} + 2 y \dot{y} \\
+&= 2 x y + 2 y (-x + y (1 - x^{2} - 2y^{2} ))  \\
+&= 2 y^{2} (1 - x^{2} - 2y^{2} )
+\end{align}
+
+<p>
+When \( x^{2} + y^{2} \leq \frac{1}{2} \) then,
+</p>
+
+
+\begin{align}
+\dot{V}(x,y)
+&= 2 y^{2} (1 - x^{2} - 2y^{2} ) \\
+&= 2 y^{2} (1 - x^{2} - y^{2} - y^{2}) \\
+&\geq 2 y^{2} (\frac{1}{2} - y^{2}) \\
+&\geq 0
+\end{align}
+
+<p>
+When \( 1 \leq x^{2} + y^{2} \) then,
+</p>
+
+
+\begin{align}
+\dot{V}(x,y)
+&= 2 y^{2} (1 - x^{2} - 2y^{2} ) \\
+&= 2 y^{2} (1 - x^{2} - y^{2} - y^{2}) \\
+&\leq 2 y^{2} (- y^{2}) \\
+&= -2 y^{4} \\
+&\leq 0
+\end{align}
+
+<p>
+Hence the flows will flow out of the circle \( x^{2} + y^{2} \leq \frac{1}{2} \) into the annulus, furthermore the flow will leave the region \( 1 \leq x^{2} + y^{2} \) into the annulus. Hence the annulus is a trapping region. The annulus also does not have a fixed point. Hence, by Poincare-Bendixon there is a periodic orbit in the annulus.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org13aa626" class="outline-2">
+<h2 id="org13aa626"><span class="section-number-2">6.</span> Homework 5</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgb659f40" class="outline-3">
+<h3 id="orgb659f40"><span class="section-number-3">6.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+A metal bar of length \( \ell = 1 \) satisfies the heat equation \( u_t = u_{xx} \) with insulated ends (meaning \( u_x(t, 0) = 0 \) and \( u_x(t, 1) = 0 \)).
+</p>
+
+<p>
+Suppose that the initial temperature distribution is
+</p>
+
+\begin{align*}
+u(0, x) =
+\begin{cases}
+x & 0 \leq x \leq \frac{1}{2} \\
+1 - x & \frac{1}{2} \leq x \leq 1 \\
+\end{cases}
+\end{align*}
+</div>
+<div id="outline-container-org4bf1803" class="outline-4">
+<h4 id="org4bf1803"><span class="section-number-4">6.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+From the notes, we have that the solution is of the form:
+</p>
+
+<p>
+\[ u(t, x) = \sum_{n=0}^{\infty} a_n e^{- n^2 \pi^2 t} \cos(n \pi x) \] 
+</p>
+
+<p>
+We may determine the coefficients by formula:
+The constant term is the integral of the initial value function. This easy due to the shape being a triangle with height \( \frac{1}{2} \) and base \( 1 \).   
+\[ \frac{a_0}{2} = \int_0^1 u(x, 0) dx = \frac{1}{4} \]
+</p>
+
+
+
+\begin{align}
+a_n
+&= 2 \int_{0}^{1} u(0, x) \cos(n \pi x) dx \tag{Formula for Fourier Coefficients} \\
+&= 2 \int_0^{\frac{1}{2}} x \cos(n \pi x) dx + 2 \int_{\frac{1}{2}}^1 (1 - x) \cos(n \pi x) dx \tag{\(u(0,x)\) Piecewise Defined} \\
+&= 2 \left[  x \frac{\sin(n \pi x)}{n \pi} + \frac{\cos(n \pi x)}{(n \pi)^2}  \right]_{0}^{\frac{1}{2}} + 2 \left[ (1 - x) \frac{\sin(n \pi x)}{n \pi} - \frac{\cos(n \pi x)}{(n \pi)^2} \right]_{\frac{1}{2}}^1 \tag{Integration By Parts} \\
+&= 2 \left[ \frac{\sin(\frac{n \pi}{2})}{2 n \pi} + \frac{\cos(\frac{n \pi}{2})}{(n \pi)^2}  \right] - 2 \left[ \frac{1}{(n \pi)^2}  \right] + 2 \left[ - \frac{\cos(n \pi)}{(n \pi)^2} \right] - 2 \left[ \frac{\sin(\frac{n \pi}{2})}{2 n \pi} - \frac{\cos(\frac{n \pi}{2})}{(n \pi)^2} \right] \tag{Evaluate Bounds} \\
+&= \frac{4 \cos(\frac{n \pi}{2}) - 2 - 2\cos(n \pi)}{(n \pi)^2} \tag{Combine Like Terms}
+\end{align}
+
+<p>
+The integration by parts can be done easily using the tabular method as we have a polynomial times a trigonometric function. The numerator is periodic mod \( 4 \). We may study the cases.
+</p>
+
+\begin{align*}
+4 \cos \left(\frac{n \pi}{2} \right) - 2 \cos(n \pi) - 2
+&= \begin{cases} 0 & n = 0 \pmod 4 \\ 0 & n = 1 \pmod 4 \\ -8 & n = 2 \pmod 4 \\ 0 & n = 3 \pmod 4  \end{cases}
+\end{align*}
+
+<p>
+Because the coefficient is zero unless \( n = 4k + 2 \) we may somehow notate this into our Fourier series using indicator functions or we may reindex to only include the appropriate \( n \) (parameterized by \( k \)). I shall do the latter.
+</p>
+
+<p>
+\[ u(t, x) =\frac{1}{4} + \sum_{k=0}^{\infty} \frac{-8}{((4k + 2)\pi)^2} e^{- (4k + 2)^2 \pi^2 t} \cos((4k + 2) \pi x) \] 
+</p>
+</div>
+</div>
+<div id="outline-container-org929222b" class="outline-4">
+<h4 id="org929222b"><span class="section-number-4">6.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-6-1-2">
+<p>
+The equilibrium temperature is \( \frac{1}{4} \). This is achieved by letting \( t \to \infty \) and noting that all terms except \( a_0 \) are multiplied by a decaying exponential.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org37bee89" class="outline-3">
+<h3 id="org37bee89"><span class="section-number-3">6.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+The change in energy is given by the temporal derivative.
+</p>
+
+\begin{align}
+\frac{ d E}{ d t}
+&=\frac{ d }{ d t} \int_0^{\ell} u dx \tag{Def. Energy} \\
+&= \int_0^{\ell} u_t dx \tag{Bring \( \partial_{t} \) In} \\
+&= \int_0^{\ell} u_{xx} dx \tag{Heat Eqn.} \\
+&= u_x(t, \ell) - u_{x}(t, 0) \tag{FTC}
+\end{align}
+
+<p>
+With Dirichlet Boundary conditions this is not necessarily \( 0 \), hence the energy can change. With Neumann boundary conditions we impose that the two values are equal hence the derivative of energy is \( 0 \), thus the energy is constant. The physical intuition behind this is that in the Dirichlet case, the ends of the bar are touching some material of constant temperature. So the bars temperature will change with energy trying to average that of the material it is touching. In the Neumann case, the bar is insulated at both ends, so the heat flux is \( 0 \). This entails the system to be conservative.
+</p>
+
+<p>
+Because the energy is constant in the Neumann case, we may calculate the energy at the initial value.
+</p>
+
+<p>
+\[ E(t) = E(0) = \int_0^{\ell} u(0,x) dx \]
+</p>
+</div>
+</div>
+<div id="outline-container-org1ff757a" class="outline-3">
+<h3 id="org1ff757a"><span class="section-number-3">6.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+We are looking to solve the initial boundary value equation
+</p>
+
+<p>
+\[ u_t = u_{xx}, u(0,x) = f(x), u_{x}(t,0) = 0, u(t, 1) = \alpha \]
+</p>
+
+<p>
+Firstly, let us consider the steady state problem, where the change in temperature in time is zero. That is,
+</p>
+
+<p>
+\[ u_t^{*} = 0 = u_{xx}^{*} \implies u^{*}(x) = Ax + B \]
+</p>
+
+<p>
+Using the boundary conditions,
+</p>
+
+<p>
+\[ \begin{cases} u_x^{*}(t,0) = 0 = A \\ u^{*}(t, 1) = \alpha = B \end{cases} \]
+</p>
+
+<p>
+So we have a function \( u^{*} \) which is a solution to the heat equation. By the superposition principle we have that a linear combination of solutions is a solution. Hence \( v \) defined below will also be a solution to the heat equation.
+</p>
+
+
+<p>
+\[ u(t,x) - u^{*}(t,x) = v(t,x) \]
+</p>
+
+<p>
+The difference in this case though is that the boundary conditions are now homogeneous. This is because \( v(t,1) = u(t,1) - u^{*}(t,1) = \alpha - \alpha = 0 \). Solving the homogeneous case is much easier, hence we will consider this new IBVP but with \( \alpha = 0 \).
+</p>
+
+<p>
+Make a separability assumption, \( v(t,x) = X(x) T(t) \)
+</p>
+
+<p>
+From the defining PDE we have
+</p>
+
+<p>
+\[ \frac{T'}{T} = \frac{X''}{X} \implies \begin{cases} X'' = - \lambda^2 X \\ T' = -\lambda^2 T \end{cases} \]
+</p>
+
+<p>
+This entails that the solution is,
+</p>
+
+<p>
+\[\begin{cases} X = A \cos( \lambda x) + B \sin(\lambda x) \\ T = \exp(-\lambda^2 t) \end{cases}  \]
+</p>
+
+
+<p>
+From the boundary condition that \( u_x(t,0) = 0 \)
+</p>
+
+<p>
+\[ - A \lambda \sin(\lambda 0) + B \lambda \cos(\lambda 0) = 0 \implies B \lambda = 0 \]
+</p>
+
+<p>
+From here we know \( B = 0 \) because if \( \lambda = 0 \) we would have a constant solution.
+</p>
+
+
+<p>
+Using the Dirichlet boundary condition we have a formula for A.
+\[ u(t, 1) = 0 = A \cos(\lambda) \]
+</p>
+
+<p>
+We cannot have \( A = 0 \) because then we would have a trivial solution. Hence we have the values for \( \lambda \).
+</p>
+
+<p>
+\[ \lambda = \left(n - \frac{1}{2}\right) \pi \]
+</p>
+
+<p>
+Hence all solutions are
+</p>
+
+<p>
+\[ v(t, x) = a_0 + \sum_{n = 1}^{\infty} a_n e^{((n - \frac{1}{2})\pi)^2 t} \cos( (n - \frac{1}{2})\pi x) \]
+We can note from this general formula that at \( x = 1 \) all the cosine terms are zero, leaving \( v(t, 1) = a_{0} = 0 \).
+</p>
+
+<p>
+Hence the general solution in the original IBVP is,
+</p>
+
+<p>
+\[ u(t, x) = \alpha + \sum_{n = 1}^{\infty} a_n e^{((n - \frac{1}{2})\pi)^2 t} \cos( (n - \frac{1}{2})\pi x) \]
+</p>
+
+<p>
+Where the \( a_{n} \) are left to be determined via the initial conditions. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgdc80a82" class="outline-3">
+<h3 id="orgdc80a82"><span class="section-number-3">6.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+Let
+</p>
+
+<p>
+\[ L[u] = x u'' + u' = - \frac{ d }{ d x} \left( -x u' \right) + 0 u \]
+</p>
+
+\begin{align}
+\langle L[u] , v \rangle
+&= \int_1^2 L[u] v dx \tag{Def. Inner Product} \\
+&= \int_1^2 (x u')' v dx \tag{Def. \( L[u] \)} \\
+&= [x u' v]_{1}^{2} - \int_1^2 x u' v' dx \tag{Integration by Parts} \\
+&= - \int_1^2 x u' v' dx \tag{Apply BC} \\
+&= - [x v' u]_1^2 + \int_1^2 u (xv')' dx \tag{Integration by Parts} \\
+&=  \int_1^2 u (xv')' dx \tag{Apply BC} \\
+&= \langle u , L[v] \rangle
+\end{align}
+
+
+<p>
+To find out all functions in the cokernel, we must solve the differential equation
+</p>
+
+<p>
+\[ L^{*}[v] = x v'' + v' = 0 \]
+</p>
+
+<p>
+Reading off from the Sturm-Lioville form, we have that \( x u' = c_1 \) hence \( u = c_1 \log(x) + c_2 \).
+</p>
+
+<p>
+Using the boundary values, \( u'(1) = 0 = \frac{c_{1}}{x} \implies c_1 = 0 \), hence \( u \) is constant (in the span of \( 1 \)).
+</p>
+
+<p>
+Hence the Fredholm Alternative states that if we had a solution \( L[u] = 1 - \frac{2}{3} x \) then we expect the inner product to be \( 0 \). We will verify this condition.
+</p>
+
+<p>
+\[ \langle 1 , 1 - \frac{2}{3} x \rangle = \int_1^2 (1 - \frac{2}{3}x) dx = 0 \]
+</p>
+
+<p>
+Hence, we have a shot of existence of a solution. To actually solve the equation, we return to the Sturm-Lioville form and integrate.
+</p>
+
+<p>
+\[ \frac{ d }{ d x} (x u') = 1 - \frac{2}{3}x \implies x u' = x - \frac{1}{3} x^{2} + c_1 \]
+</p>
+
+<p>
+We may solve for \( u \) by dividing by \( x \) then integrating.
+</p>
+
+<p>
+\[ u = \int 1 - \frac{1}{3}x + \frac{c_{1}}{x} dx \implies x - \frac{1}{6} x^2 + c_1 \log(x) + c_2 \]
+</p>
+
+<p>
+The boundary value \( u(1) = 0 = 1 - \frac{1}{3} + c_{1} \implies c_1 = \frac{-2}{3} \) 
+</p>
+
+<p>
+Hence the most specific form of \( u \) we may attain is,
+</p>
+
+<p>
+\[ u = x - \frac{1}{6} x^2 + \frac{-2}{3} \log(x) + c_2 \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgdb749cd" class="outline-3">
+<h3 id="orgdb749cd"><span class="section-number-3">6.5.</span> Problem 5</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+Let
+</p>
+
+<p>
+\[ L[u] = x u' + u = (xu')' \]
+</p>
+
+<p>
+Such an \( L \) is self adjoint (written in Sturm-Lioville form with Dirichlet boundary conditions) and positive definite by the notes.
+</p>
+</div>
+</div>
+<div id="outline-container-org2716264" class="outline-3">
+<h3 id="org2716264"><span class="section-number-3">6.6.</span> Problem 6</h3>
+<div class="outline-text-3" id="text-6-6">
+<p>
+Let
+</p>
+
+<p>
+\[ S[u] = u'' \]
+</p>
+
+<p>
+Consider the inner product:
+</p>
+\begin{align}
+\langle L[u] , v \rangle
+&= \int_0^1 L[u] v dx \\
+&= \int_0^1 u'' v dx \\
+&= \left[ u' v \right]_0^1 -\left[ u v' \right]_0^1 +  \int_0^1 u v'' dx \\
+&= \left[ u'(1) v(1) - u'(0) v(0) \right] - \left[ u(1) v'(1) - u(0) v'(0) \right] +  \int_0^1 u v'' dx \\
+&= \left[ - \beta u(1) v(1)  + \beta u(1) v(1) \right] +  \int_0^1 u v'' dx \\
+&= \int_0^1 u v'' dx \\
+&= \langle u , L[v] \rangle
+\end{align}
+
+
+<p>
+Hence \( S \) is self-adjoint.
+</p>
+</div>
+</div>
+<div id="outline-container-orgca1f0a6" class="outline-3">
+<h3 id="orgca1f0a6"><span class="section-number-3">6.7.</span> Problem 7</h3>
+<div class="outline-text-3" id="text-6-7">
+</div>
+<div id="outline-container-orga22a7dc" class="outline-4">
+<h4 id="orga22a7dc"><span class="section-number-4">6.7.1.</span> A</h4>
+<div class="outline-text-4" id="text-6-7-1">
+<p>
+This is a linear homogeneous differential equation.
+</p>
+
+<p>
+\[ -x^2 u'' - x u' - \lambda u = 0 \iff x^2 u'' + x u' + \lambda u = 0 \]
+</p>
+
+<p>
+We may solve the eigenvalue problem by cases on the sign of \( \lambda \).
+</p>
+
+<p>
+Case \( \lambda = 0 \), then \( x^2 u'' + x u' = 0 \iff x (x u')' = 0 \implies xu' = c_1 \implies u = c_1 \log(x) + c_2 \) 
+</p>
+
+<p>
+The boundary condition \( u(1) = 0 = c_2 \)
+The other boundary condition: \( u(e) = 0 = c_1 + c_2 \implies c_1 = 0 \).
+</p>
+
+<p>
+Case \( \lambda \leq 0 \iff \lambda = - k^2 \) 
+</p>
+
+<p>
+This is an Euler equation, which the ansatz is \( u = x^{r} \).
+</p>
+
+<p>
+Plugging in this ansatz yields,
+</p>
+
+<p>
+\[ r(r-1) + r - k^{2} = 0 \implies r^{2} - k^2 = 0 \implies r = \pm k \]
+</p>
+
+<p>
+Hence the general solution looks like
+</p>
+
+<p>
+\[ u = c_1 x^k + c_2 x^{-k} \]
+</p>
+
+<p>
+Using the boundary conditions:
+</p>
+
+<p>
+\[ \begin{cases} u(1) = c_1 + c_2 = 0 \\ u(e) = c_1e^k + c_2 e^{-k} = 0 \end{cases} \implies \begin{cases} c_1 = 0  \\ c_2 = 0  \end{cases} \]
+</p>
+
+<p>
+We may deduce those constants because the determinant is nonzero so there is only one solution in this linear system. This means that this case results in trivial solutions as well.
+</p>
+
+<p>
+Case: \( \lambda > 0 \iff \lambda = k^2 \) 
+</p>
+
+<p>
+Then we proceed similarly with solutions:
+</p>
+
+<p>
+\[ u = c_1 \cos( k \log(x)) + c_2 \sin(k \log(x)) \]
+</p>
+
+<p>
+Using one of our boundary conditions,
+</p>
+
+<p>
+\[ u(1) = c_1 = 0 \]
+</p>
+
+<p>
+Using the other boundary condition we have:
+</p>
+
+<p>
+\[ u(e) = c_2 \sin(k) = 0  \]
+</p>
+
+
+<p>
+We require that \( c_2 \neq 0 \) because then we would have another trivial solution. This implies that \( k = n \pi \). This gives us our eigenvalues \( \lambda = (n \pi)^2 \) with eigenfunctions \( \sin(n \pi \log(x)) \).
+</p>
+</div>
+</div>
+<div id="outline-container-orgf10160d" class="outline-4">
+<h4 id="orgf10160d"><span class="section-number-4">6.7.2.</span> B</h4>
+<div class="outline-text-4" id="text-6-7-2">
+<p>
+The differential equation is in weighted Sturm-Liouville form with Dirichlet boundary conditions,
+</p>
+
+<p>
+\[ L[u] = -\frac{1}{\frac{1}{x}} \left[ (x u')' \right] \]
+</p>
+
+<p>
+Which means \( L \) is self-adjoint w.r.t.
+</p>
+
+<p>
+\[ \langle f , g \rangle = \int_1^e f(x) g(x) \frac{1}{x} dx \]
+</p>
+</div>
+</div>
+<div id="outline-container-org59a899e" class="outline-4">
+<h4 id="org59a899e"><span class="section-number-4">6.7.3.</span> C</h4>
+<div class="outline-text-4" id="text-6-7-3">
+<p>
+We may construct the Green's function by appealing to the defining properties of the function.
+</p>
+
+<p>
+The Greens function solves the homogeneous differential equation for \( x \neq \xi \) 
+</p>
+
+<p>
+\[ L[G(x, \xi)] = -x [xG'(x, \xi)]' = \delta(x - \xi)  \]
+</p>
+
+<p>
+Hence the general solution is
+</p>
+
+<p>
+\[ G(x, \xi) = c_1 \log(x) + c_2 \] 
+</p>
+
+<p>
+Constants constrained by the left boundary condition are,
+</p>
+
+<p>
+\[ G(1, \xi) = c_2 = 0 \]
+</p>
+
+
+<p>
+Constants constrained by the right boundary condition are,
+</p>
+
+<p>
+\[ G(e, \xi) = c_1 + c_2 = 0 \]
+</p>
+
+<p>
+Therefore, the solution has the form:
+</p>
+
+<p>
+\[ G(x, \xi) = \begin{cases} a \log(x) & 1 \leq x \leq \xi \\ b (\log(x) - 1) & \xi \leq x \leq e \end{cases} \]
+</p>
+
+<p>
+We know that Green's functions are continuous,
+</p>
+
+<p>
+\[ a \log(\xi) = b(log(\xi) - 1) \implies \frac{a}{b} = \frac{\log(\xi) - 1}{\log(\xi)} \] 
+</p>
+
+<p>
+Also their derivative has a jump discontinuity
+</p>
+
+<p>
+\[ \frac{a}{\xi} - 1 = \frac{b}{\xi} \implies a - \xi = b \implies a = \xi + b \]
+</p>
+
+
+\begin{align}
+\frac{\xi + b}{b} &= \frac{\log(\xi) - 1}{\log(\xi)} \\
+\frac{\xi}{b} &= \frac{\log(\xi) - 1}{\log(\xi)} - 1 \\
+\frac{\xi}{b} &= \frac{- 1}{\log(\xi)} \\
+- \xi \log(\xi) &= b \\
+\xi - \xi \log(\xi) &= a
+\end{align}
+
+<p>
+Hence the Green's function is of the form:
+</p>
+
+<p>
+\[ G(x, \xi) = \begin{cases} (\xi (1 - \log(\xi))) \log(x) & 1 \leq x \leq \xi \\ (\xi \log(\xi)) (1 - \log(x)) & \xi \leq x \leq e \end{cases} \]
+</p>
+
+<p>
+In terms of an eigenfunction series,
+</p>
+
+<p>
+\[ G(x, \xi) = \sum_{n=1}^{\infty} c_n \sin(n \pi \log(x)) \]
+</p>
+
+<p>
+Where
+\[ c_n = \frac{\langle G(x, \xi) , \sin(n \pi \log(x)) \rangle}{|| \sin(n \pi \log(x)) ||} \]
+</p>
+
+<p>
+This is a complicated expression, I will tackle the numerator and denominator separately.
+</p>
+
+<p>
+Starting with the numerator:
+</p>
+\begin{align}
+&\langle G(x, \xi) , \sin(n \pi \log(x)) \rangle \\
+&= \int_1^e \frac{G(x, \xi) \sin(n \pi \log(x))}{x} dx \\
+&= \int_1^\xi \frac{G(x, \xi) \sin(n \pi \log(x))}{x} dx +\int_\xi^e \frac{G(x, \xi) \sin(n \pi \log(x))}{x} dx  \\
+&= \int_1^\xi \frac{\xi (1 - \log(\xi)) \log(x) \sin(n \pi \log(x))}{x} dx +\int_\xi^e \frac{\xi (1 - \log(x)) \log(\xi) \sin(n \pi \log(x))}{x} dx  \\
+&= \int_0^{\log(\xi)} \xi (1 - \log(\xi)) u \sin(n \pi u) du +\int_{\log(\xi)}^1 \xi (1 - u) \log(\xi) \sin(n \pi u) du  \\
+&=\xi (1 - \log(\xi)) \int_0^{\log(\xi)}  u \sin(n \pi u) du + \xi \log(\xi) \int_{\log(\xi)}^1 (1 - u) \sin(n \pi u) du  \\
+&=\xi (1 - \log(\xi)) \left[ \frac{\sin(n \pi \log(\xi)) - n \pi \log(\xi) \cos(n \pi \log(\xi))}{n^2 \pi^2} \right] \\
+ &+ \xi \log(\xi) \left[ \frac{\sin(n \pi \log(\xi)) - n \pi (\log(\xi) - 1) \cos(n \pi \log(\xi))}{n^2 \pi^2} \right] \\
+&= \xi \frac{\sin(n \pi \log(\xi))}{n^2 \pi^2}
+\end{align}
+
+<p>
+The denominator:
+</p>
+
+\begin{align}
+|| \sin(n \pi \log(x))  ||
+&= \int_1^e \sin^2(n \pi \log(x)) \frac{1}{x} dx \\
+&= \int_0^1 \sin^2(n \pi u) du \\
+&= \int_0^1 \sin^2(n \pi u) du \\
+&= 0.5
+\end{align}
+
+<p>
+Hence:
+</p>
+
+<p>
+\[ G(x, \xi) = \sum_{n=1}^{\infty} \frac{2 \xi \sin(n \pi \log(\xi))}{n^2 \pi^2} \sin(n \pi \log(x)) \]
+</p>
+</div>
+</div>
+<div id="outline-container-orge885737" class="outline-4">
+<h4 id="orge885737"><span class="section-number-4">6.7.4.</span> D</h4>
+<div class="outline-text-4" id="text-6-7-4">
+<p>
+The Green's function is not symmetric. We may symmetrize it using the weighting of the inner product.
+</p>
+
+<p>
+\[ \widehat{G}(x,\xi) = \frac{G(x, \xi)}{\xi} = \begin{cases} (1 - \log(\xi)) \log(x) & 1 \leq x \leq \xi \\  \log(\xi) (1 - \log(x)) & \xi \leq x \leq e \end{cases} \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgc5d3888" class="outline-4">
+<h4 id="orgc5d3888"><span class="section-number-4">6.7.5.</span> E</h4>
+<div class="outline-text-4" id="text-6-7-5">
+<p>
+We have a theorem, if the norm of \( \widehat{G} \)  is finite, then the eigenfunctions are complete.
+</p>
+\begin{align}
+\| \widehat{G}  \|^2
+&= \int_1^e \int_1^e \frac{\widehat{G}^2(x, \xi)}{x \xi} dx d\xi \\
+&= 2 \int_1^e \int_1^\xi \frac{(1 - \log(\xi))^2(\log(x))^2}{x \xi} dx d\xi \\
+&= 2 \int_1^e \frac{(1 - \log(\xi))^2}{\xi} \int_1^\xi \frac{(\log(x))^2}{x} dx d\xi \\
+&= 2 \int_1^e \frac{(1 - \log(\xi))^2}{\xi} \int_0^{\log(\xi)} u^2 du d\xi \\
+&= 2 \int_1^e \frac{(1 - \log(\xi))^2}{\xi} \left[ \frac{\log(\xi)^3}{3} \right] d\xi \\
+&= \frac{2}{3} \int_{1}^{e} \frac{(1 - \log(\xi))^2}{\xi} \log(\xi)^3 d\xi \\
+&= \frac{2}{3} \int_0^1 (1 - v)^2 v^3 dv \\
+&= \frac{1}{90}
+\end{align}
+
+<p>
+Which is definitely finite.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9866de9" class="outline-3">
+<h3 id="org9866de9"><span class="section-number-3">6.8.</span> Problem 8</h3>
+<div class="outline-text-3" id="text-6-8">
+<p>
+Let \( S \colon U \to U \) be a positive semi-definite linear operator, \( u \neq 0 \) 
+</p>
+
+\begin{align}
+\langle u , (S + \mu I)[u] \rangle
+&= \langle u , S[u] + \mu u \rangle \\
+&= \langle u , S[u] \rangle + \langle u , \mu u \rangle \\
+&= \langle u , S[u] \rangle + \mu \langle u, u \rangle \\
+&> 0
+\end{align}
+
+<p>
+Where statement 3 is the sum of the two inequalities,
+</p>
+
+\begin{align}
+\langle u , S[u] \rangle &\geq 0 \tag{Positive Semi-Definite} \\
+\langle u , u \rangle &> 0 \tag{Positive Definite, \( u \neq 0 \)} \\
+\mu \langle u , u \rangle &> 0 \tag{Mult. Both Sides by Pos. Real}
+\end{align}
+
+
+<p>
+Then suppose \( u \) is an Eigenfunction of \( S \).
+</p>
+
+\begin{align}
+(S + \mu I)[u]
+&= S[u] + \mu u \\
+&= \lambda u + \mu u \\
+&= (\lambda + \mu) u \\
+\end{align}
+<p>
+Suppose \( u \) is an Eigenfunction of \( S + \mu I \) 
+</p>
+
+\begin{align}
+S[u]
+&= S[u] + \mu u - \mu u \\
+&= S[u] + \mu I [u] - \mu u \\
+&= (S + \mu I)[u] - \mu u \\
+&= \lambda [u] - \mu u \\
+&= (\lambda - \mu) u \\
+\end{align}
+<p>
+Hence eigenvalues of \( S + \mu I \) are \( \mu \) greater than eigenvalues of \( S \).
+Equivalently eigenvalues of \( S \) are \( \mu \) less than eigenvalues of \( S + \mu I \).
+</p>
+</div>
+</div>
+<div id="outline-container-org8ac520b" class="outline-3">
+<h3 id="org8ac520b"><span class="section-number-3">6.9.</span> Problem 9</h3>
+<div class="outline-text-3" id="text-6-9">
+</div>
+<div id="outline-container-orgb420dd7" class="outline-4">
+<h4 id="orgb420dd7"><span class="section-number-4">6.9.1.</span> A</h4>
+<div class="outline-text-4" id="text-6-9-1">
+\begin{align}
+(S - \mu I)[R_S[u]]
+&= (S - \mu I) \left[ \int_a^b \widehat{G}(x, \xi; \mu) u(\xi) \rho(\xi) d\xi \right] \\
+&= (S - \mu I) \left[ \int_a^b G(x, \xi; \mu) u(\xi) d\xi \right] \\
+&=\int_a^b (S - \mu I) \left[ G(x, \xi; \mu) u(\xi)  \right] d\xi  \\
+&=\int_a^b u(\xi) (S - \mu I) \left[ G(x, \xi; \mu)  \right] d\xi \\
+&=\int_a^b u(\xi) \delta(x - \xi) d\xi \\
+&= u(x)
+\end{align}
+
+\begin{align}
+R_S[(S-\mu I)[u]]
+&= \int_a^b \widehat{G}(x, \xi; \mu) (S - \mu I)[u](\xi) \rho(\xi) d \xi \\
+&= \langle \widehat{G}(x, \xi; \mu) , (S - \mu I)[u] \rangle \\
+&= \langle (S - \mu I)[\widehat{G}(x, \xi; \mu)] , u \rangle \\
+&= \langle \frac{1}{\rho(\xi)}\delta(x, \xi) , u \rangle \\
+&= \int_a^b \frac{1}{\rho(\xi)}\delta(x - \xi) u(\xi) \rho(\xi) d \xi \\
+&= \int_a^b \delta(x - \xi) u(\xi) d \xi \\
+&= u(x)
+\end{align}
+</div>
+</div>
+<div id="outline-container-org0566076" class="outline-4">
+<h4 id="org0566076"><span class="section-number-4">6.9.2.</span> B</h4>
+<div class="outline-text-4" id="text-6-9-2">
+\begin{align}
+\langle R_{S}[u] , v \rangle
+&= \int_a^b R_S[u](x) v(x) \rho(x) dx \\
+&= \int_a^b \left[ \int_a^b \widehat{G}(x, \xi; \mu) u(\xi) \rho(\xi) d\xi \right] v(x) \rho(x) dx \\
+&= \int_a^b \int_a^b \widehat{G}(x, \xi; \mu) u(\xi) \rho(\xi) v(x) \rho(x) d\xi dx \\
+&= \int_a^b \int_a^b u(\xi) \rho(\xi) \widehat{G}(x, \xi; \mu)  v(x) \rho(x) d\xi dx \\
+&= \int_a^b \int_a^b u(\xi) \rho(\xi) \widehat{G}(x, \xi; \mu)  v(x) \rho(x) dx d \xi \\
+&= \int_a^b u(\xi) \rho(\xi) \left[ \int_a^b \widehat{G}(x, \xi; \mu)  v(x) \rho(x) dx \right] d\xi \\
+&= \int_a^b u(\xi) \rho(\xi) R_{S}[v] d\xi \\
+&= \langle u , R_{S}[v] \rangle
+\end{align}
+</div>
+</div>
+<div id="outline-container-orgd3dfdaa" class="outline-4">
+<h4 id="orgd3dfdaa"><span class="section-number-4">6.9.3.</span> C</h4>
+<div class="outline-text-4" id="text-6-9-3">
+<p>
+Let us manipulate the relations proven in part A.
+</p>
+\begin{align}
+         &&R_S[(S[u] - \mu I) u] &= u \\
+&\implies &R_{S}[S[u] - \mu u] &=  u \\
+&\implies &R_{S}[S[u]] - \mu R_{S}[u] &=  u \\
+&\implies &R_{S}[S[u]]  &= \mu R_{S}[u] + u \\
+\end{align}
+
+\begin{align}
+         &&(S[u] - \mu I)[R_{S}[u]] &= u \\
+&\implies &S[R_S[u]] - \mu R_{S}[u] &=  u \\
+&\implies &S[R_S[u]] &=  \mu R_{S}[u] + u
+\end{align}
+
+<p>
+Hence, we have
+</p>
+
+<p>
+\[ R_{S}[S[u]] = \mu R_{S} [u] + u = S[R_S[u]] \]
+</p>
+
+<p>
+Now we will prove the main result.
+</p>
+
+<p>
+Suppose \( u \) is an eigenvector of \( S \).
+</p>
+
+\begin{align}
+         &&R_{S}[S[u]] &=  \mu R_S[u] + u \\
+&\implies & \lambda R_S[u] &=  \mu R_S[u] + u \\
+&\implies & R_S[u] &=  \frac{1}{\lambda - \mu} u
+\end{align}
+
+<p>
+So the eigenvalues are related via the function \( \lambda \mapsto \frac{1}{\lambda - \mu} \).
+</p>
+
+
+<p>
+Suppose \( u \) is an eigenvector of \( R_S \) 
+</p>
+\begin{align}
+         &&S[R_{S}[u]] &=  \mu R_{S}[ u] + u \\
+&\implies & \lambda S[u] &=  \mu \lambda u + u \\
+&\implies & S[u] &=  \frac{\mu \lambda + 1}{\lambda} u
+\end{align}
+
+<p>
+The eigenvalues are related via the function \( \lambda \mapsto \frac{\mu \lambda + 1}{\lambda} \).
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

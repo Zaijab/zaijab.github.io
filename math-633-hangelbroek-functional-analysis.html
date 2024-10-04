@@ -1,0 +1,2082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MATH 633 Hangelbroek Functional Analysis</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">MATH 633 Hangelbroek Functional Analysis</h1>
+<p>
+Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+<div id="outline-container-org903fc91" class="outline-2">
+<h2 id="org903fc91"><span class="section-number-2">1.</span> <span class="done DONE">DONE</span> Homework 1</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org2a30b0d" class="outline-3">
+<h3 id="org2a30b0d"><span class="section-number-3">1.1.</span> Problem 1a</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li><p>
+Homogeneity
+</p>
+
+<p>
+\[ \| \alpha v \|_{1} = \sum_{i} | \alpha v_{i} | = |\alpha| \sum_{i} |v_{i}| = |\alpha| \| v \|_{1} \]
+</p></li>
+<li><p>
+Positive Definite
+</p>
+
+<p>
+\[ \| v \|_{1} \geq \min_{i} | v_{i} | = 0 \iff \forall i \colon v_{i} = 0 \]
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+Triangle Inequality
+</p>
+
+<p>
+\[ \| v + w \|_{1} = \sum_{i} |v_{i} + w_{i}| \leq \sum_{i} |v_{i}| + |w_{i}| = \| v \|_{1} + \| w \|_{1} \]
+</p></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4e2d40a" class="outline-3">
+<h3 id="org4e2d40a"><span class="section-number-3">1.2.</span> Problem 1b</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li><p>
+\( \| x \|_{1} \leq n \| x \|_{\infty} \) 
+</p>
+
+<p>
+\[ \| x \|_{1} = \sum_{i} |x_{i}| \leq \sum_{i} |\max_{j} x_{j}| = n | \max_{j} x_{j} | = n \| x \|_{\infty} \]
+</p></li>
+
+<li>\( \| x \|_{\infty} \leq \| x \|_{2} \)</li>
+</ol>
+\begin{align*}
+\| x \|_{\infty}
+&= \left| \max_{j} x_{j} \right| & \quad & \text{Def. $\ell_{\infty}$} \\
+&= \sqrt{\left| \max_{j} x_{j} \right|^{2}} & \quad & \text{Def. $|\cdot|$} \\
+&\leq \sqrt{\sum_{i \neq j} x_{i}^{2} + \left| \max_{j} x_{j} \right|^{2}} & \quad & \text{$\sqrt{\cdot}$ Monotone Increasing} \\
+&= \sqrt{\sum_{i = 1}^{n} x_{i}^{2}} & \quad & \text{Def. $j$} \\
+&= \| x \|_{2}
+\end{align*}
+
+
+<ol class="org-ol">
+<li>\( \| x \|_{2} \leq \| x \|_{1} \)</li>
+</ol>
+\begin{align*}
+\| x \|_{2}^{2}
+&= \sum_{i = 1}^{n} x_{i}^{2} &\quad &\text{Def. $\| \cdot \|_{2}$} \\
+&= \sum_{i = 1}^{n} | x_{i} | |x_{i}| &\quad &\text{Def. $(\cdot)^{2}$} \\
+&\leq \sum_{i = 1}^{n} \sum_{j = 1}^{n} (| x_{j} |) |x_{i}| &\quad &\text{Adding More Positive Elements} \\
+&= \left( \sum_{j = 1}^{n} | x_{j} | \right) \left(\sum_{i = 1}^{n}  |x_{i}| \right) &\quad &\text{Factor Independent Indices} \\
+&= \| x \|_{1}^{2} &\quad &\text{Def. $\| \cdot \|_{1}$}
+\end{align*}
+
+<p>
+Because the two norms are positive, we note,
+</p>
+
+<p>
+\[ \| x \|_{2}^{2} \leq \| x \|_{1}^{2} \implies \| x \|_{2} \leq \| x \|_{1} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org6a0863e" class="outline-3">
+<h3 id="org6a0863e"><span class="section-number-3">1.3.</span> Problem 1c</h3>
+<div class="outline-text-3" id="text-1-3">
+
+<div id="org17a2f17" class="figure">
+<p><img src="file:///home/zjabbar/Downloads/PXL_20240123_183147964.jpg" alt="PXL_20240123_183147964.jpg" width="500px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1a3cc82" class="outline-3">
+<h3 id="org1a3cc82"><span class="section-number-3">1.4.</span> Problem 8</h3>
+<div class="outline-text-3" id="text-1-4">
+\begin{align*}
+\sup \left\{ \| M x \|_{Y} \middle| \| x \|_{X} < 1 \right\}
+&\leq \sup \left\{ \frac{1}{\| x \|_{X}} \| M x \|_{Y} \middle| \| x \|_{X} < 1 \right\} \\
+&= \sup \left\{ \| M \frac{x}{\| x \|_{X}} \|_{Y} \middle| \| x \|_{X} < 1 \right\} \\
+&= \sup \left\{ \| M u \|_{Y} \middle| \| u \|_{X} = 1 \right\} \\
+&\leq \sup \left\{ \| M u \|_{Y} \middle| \| u \|_{X} \leq 1 \right\} \\
+&\leq \sup \left\{ \frac{\| M u \|_{Y}}{\| u\|_{X}} \middle| \| u \|_{X} \leq 1 \right\} \\
+&\leq \sup \left\{ \frac{\| M u \|_{Y}}{\| u\|_{X}} \middle| \| u \|_{X} \neq 0 \right\}
+\end{align*}
+
+<p>
+Because the supremum is a limit point, there is a sequence,
+</p>
+
+<p>
+\[ \frac{\| M u_{n} \|_{Y}}{\| u_{n} \|_{X}} \to \sup_{\| u \|_{X}} \frac{\| M u \|_{Y}}{\| u \|_{X}} \]
+</p>
+
+<p>
+Consider the sequence, \( y_{n} = \frac{n}{n+1} \frac{u_{n}}{\| u_{n}\|_{X}} \) 
+</p>
+
+<p>
+Then,
+</p>
+
+\begin{align*}
+\lim_{n \to \infty} \| M y_{n} \|_{Y}
+&= \lim_{n \to \infty} \left\| M \left(\frac{n}{n+1} \frac{u_{n}}{\| u_{n}\|_{X}} \right) \right\|_{Y} \\
+&= \lim_{n \to \infty} \frac{n}{n+1} \frac{\left\| M u_{n} \right\|_{Y}}{\| u_{n} \|_{X}} \\
+&= \sup_{\| u \|_{X}} \frac{\| M u \|_{Y}}{\| u \|_{X}}
+\end{align*}
+
+<p>
+By construction \( \| y_{n} \| < 1 \), yet attain the same supremum. Hence,
+</p>
+
+<p>
+\[ \sup \left\{ \| M x \|_{Y} \middle| \| x \|_{X} < 1 \right\} \geq \sup \left\{ \frac{\| M u \|_{Y}}{\| u\|_{X}} \middle| \| u \|_{X} \neq 0 \right\}  \]
+</p>
+
+<p>
+Allowing us to deduce the equivalence of the first four definitions of the operator norm.
+</p>
+
+<p>
+We may prove that the last two definitions are equivalent.
+</p>
+
+\begin{align*}
+M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r)
+&\iff \forall \| x \| < 1 \colon \| Mx \| \leq r &\quad &\text{Element wise Definition} \\
+&\implies \sup_{\| x\| < 1} \| Mx \| \leq r &\quad &\text{Take Supremum} \\
+&\implies \sup_{\| x\| < 1} \| Mx \| \leq \inf_{r \colon M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r)} r &\quad &\text{Take Infimum} \\
+&\iff \sup_{\| x\| \leq 1} \| M x \| \leq \inf_{r \colon M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r)} r &\quad &\text{Equivalance of Operator Norm}
+\end{align*}
+
+<p>
+We will prove equality by supposing for the sake of contradiction, that the inequality is strict.
+</p>
+
+<p>
+\[ \sup_{\| x\| \leq 1} \| Mx \| < \inf_{r \colon M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r)} r = r_{m} \]
+</p>
+
+<p>
+This says that for all unit \( x \), there is some \( \varepsilon > 0 \) such that,
+</p>
+
+<p>
+\[ \| M x \| + \varepsilon < r_{m} \implies \| M x \| < r_{m} - \varepsilon \]
+</p>
+
+<p>
+But this means there is an \( x \in B_{X}(0,1) \) that gets mapped to a ball of smaller radius \( r_{m} - \varepsilon < r_{m} \) which contradicts minimality of \( r_{m} \). To see why the infimum is a minimum, we may show that the set which defines the infimum is a closed set. We show this by proving its complement is open:
+</p>
+
+\begin{align*}
+\left\{ r \in \mathbb{R} \colon M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r) \right\}^{c}
+&= \left\{ r \in \mathbb{R} \colon \forall \| x \| < 1 \colon \| Mx \| \leq r \right\}^{c} \\
+&= \left\{ r \in \mathbb{R} \colon \exists \| x \| < 1 \colon \| Mx \| > r \right\}
+\end{align*}
+
+<p>
+By continuity of \( M \) we see that this set is open (if a continuous function is strictly larger than some value then there is a neighborhood in which it is larger than that value).
+</p>
+
+<p>
+Thus,
+</p>
+
+<p>
+\[ \inf_{r \colon M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r)} r = \min_{r \colon M(B_{X}(0,1)) \subset \overline{B_{Y}}(0,r)} r \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgae928c3" class="outline-3">
+<h3 id="orgae928c3"><span class="section-number-3">1.5.</span> Problem 12</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Suppose \( Y \subset X \) is an open subspace. Then there is a ball in the subspace fully contained in the subspace
+</p>
+
+<p>
+\[ 0 \in Y \implies \exists \varepsilon > 0 \colon B_{\varepsilon}(0) \subseteq Y \]
+</p>
+
+<p>
+We note that for all \( x \in X \), \( \frac{x}{\| x \|} \in B_{\varepsilon}(0) \) hence by closure under scalar multiplication, \( x \in Y \). Hence \( Y \) is not a proper subspace. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgc803c61" class="outline-3">
+<h3 id="orgc803c61"><span class="section-number-3">1.6.</span> Problem 15</h3>
+<div class="outline-text-3" id="text-1-6">
+\begin{align*}
+A &:= \left\{ a \in c_{0}(\mathbb{N}) \middle| \forall n \in \mathbb{N}, a_{2n + 1} = 0 \right\} \\
+B &:= \left\{ a \in c_{0}(\mathbb{N}) \middle| \forall n \in \mathbb{N}, a_{2n - 1} = a_{2n}/n \right\}
+\end{align*}
+
+<ul class="org-ul">
+<li><p>
+They Are Closed
+</p>
+
+<p>
+Let \( (a_{m}) \subset A \) be a convergent sequence with limit \( a \in c_{0}(\mathbb{N}) \).
+</p>
+
+<p>
+Then \( a_{2n + 1} = \lim_{m \to \infty} a_{m, 2n + 1} = \lim_{m \to \infty} 0 = 0 \) hence \( a \in A \).
+</p>
+
+<p>
+Let \( (b_{m}) \subset B \) be a convergent subsequence with limit \( b \in c_{0}(\mathbb{N}) \).
+</p>
+
+<p>
+Then \( b_{2n - 1} = \lim_{m \to \infty} b_{m, 2n - 1} = \lim_{m \to \infty} b_{m, 2n} / n = b_{2n} / n \) 
+</p></li>
+
+<li><p>
+\( A + B \neq c_{0}(\mathbb{N}) \) 
+</p>
+
+<p>
+Suppose \( \ell = \left( \frac{1}{n} \right) \in A + B \) then
+</p>
+
+<p>
+\[ \ell_{2n - 1} = \frac{1}{2n - 1} = a_{2n - 1} + b_{2n - 1} = \frac{b_{2n}}{n} \implies b_{2n} = \frac{n}{2n - 1} \]
+</p>
+
+<p>
+Hence the limit,
+</p>
+
+<p>
+\[ \lim_{n \to \infty} b_{2n} = \frac{1}{2} \]
+</p>
+
+<p>
+Which is a contradiction, we know it must be zero. Hence, \( \left( \frac{1}{n} \right) \notin A + B \).
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+\( \overline{A + B} = c_{0}(\mathbb{N}) \) 
+</p>
+
+<p>
+Given \( \left( \ell_{1}, \ell_{2}, \ldots, \ell_{n}, 0, \ldots \right) \) 
+</p>
+
+<p>
+From the odd terms, \( \ell_{2n - 1} = a_{2n - 1} + b_{2n - 1} = \frac{b_{2n}}{n} \), we have \( b_{2n - 1} = \ell_{2n - 1} \)  \( b_{2n} = n \ell_{2n - 1} \). 
+From the even terms, \( \ell_{2n} = a_{2n} + b_{2n} \) we may solve for \( a_{2n} = \ell_{2n} - b_{2n} = \ell_{2n} - n \ell_{2n - 1} \).
+</p>
+
+<p>
+Hence we can write down \( (\ell_{1}, \ell_{2}, \ldots) = (0, \ell_{2} - \ell_{1}, \ldots) + (\ell_{1}, \ell_{1}, \ldots) \) as a sum of sequence in \( A \) and \( B \) respectively.
+</p></li>
+
+<li><p>
+Does this contradict proposition 1.9?
+</p>
+
+<p>
+No. The hypotheses state that one space needs to be closed and the other be finite dimensional. Both spaces have countable infinity dimension. 
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org416e0e7" class="outline-2">
+<h2 id="org416e0e7"><span class="section-number-2">2.</span> <span class="done DONE">DONE</span> Homework 2</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org5a81e25" class="outline-3">
+<h3 id="org5a81e25"><span class="section-number-3">2.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-org2a6d327" class="outline-4">
+<h4 id="org2a6d327"><span class="section-number-4">2.1.1.</span> Answer</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Let \( x' \in \left( c_{0}(\mathbb{N}) \right)' \) be a map which sends a sequence converging to \( 0 \) to some element in \( \mathbb{F} \). 
+</p>
+
+<p>
+Define a map, \( i \), which takes in an element of the dual space, \( x' \in c_{0}(\mathbb{N}) \), and forms a sequence,
+</p>
+
+<p>
+\[ i(x') = (x'(e_{j}))_{j \in \mathbb{N}} \]
+</p>
+
+<p>
+We may show that this sequence is in \( \ell_{1}(\mathbb{N}) \). First, create a special sequence,
+</p>
+
+<p>
+\[ x_{\leq N, n} = \begin{cases} \frac{|x'(e_{n})|}{x'(e_{n})} & |x'(e_{n})| \neq 0 \land n \leq N \\ 0 & \text{else} \end{cases} \]
+</p>
+
+<p>
+We note that \( x_{\leq N, n} \in c_{0}(\mathbb{N}) \) because the tail is all zeros after \( N \). Also, for all \( n \), the norm is less than \( 1 \), hence
+</p>
+
+<p>
+\[ | x'(x_{\leq N}) | \leq \| x' \| \| x_{\leq N} \| \leq \| x' \| \]
+</p>
+
+
+\begin{align}
+\left| x'(x_{\leq N}) \right|
+&= \left| x' \left(\sum_{j = 1}^{\infty} x_{\leq N, j} e_{j} \right) \right| & \quad & \text{} \\
+&= \left| x' \left(\sum_{j = 1}^{N} x_{\leq N, j} e_{j} \right) \right| & \quad & \text{} \\
+&= \left|\sum_{j = 1}^{N} x_{\leq N, j} x' \left(e_{j} \right) \right| & \quad & \text{} \\
+&= \left|\sum_{j = 1}^{N} \left| x' \left(e_{j} \right) \right| \right| & \quad & \text{} \\
+&= \sum_{j = 1}^{N} \left| x' \left(e_{j} \right) \right| & \quad & \text{} \\
+\end{align}
+<p>
+Because this inequality holds for all \( N \), we have that it holds in the limit,
+</p>
+
+<p>
+\[ \sum_{j = 1}^{\infty} |x'(e_{j})| \leq \| x' \| \]
+</p>
+
+<p>
+Thus, \( (x'(e_{j}))_{j \in \mathbb{N}} \in \ell_{1}(\mathbb{N}) \) 
+</p>
+
+<p>
+\[ \| i(x') \|_{1} \leq \| x' \| \]
+</p>
+
+<p>
+We also get the reverse inequality, proving that the map is an isometry (also proving that the map is one to one). 
+\[ \| x'(x) \| \leq  \| \sum_{j = 1}^{\infty} x_{j} x'(e_{j}) \| \leq \| x_{j} \|_{\infty} \| i(x') \|_{\ell_{1}}  \]
+</p>
+
+<p>
+We may prove that the map is surjective. For any \( l \in \ell_{1}(\mathbb{N}) \), we the linear functional \( x' \) whose values on the basis coincide with the values of the sequence, \( x'(e_{j}) = l_{j} \), is sent to that sequence. We know that the functional is bounded by Holder's inequality,
+</p>
+
+<p>
+\[ | x'(x) | = | \sum_{j = 1}^{\infty} x_{j} x'(e_{j}) | \leq  \sum_{j = 1}^{\infty} \left| x_{j} l_{j} \right| \leq \| x_{j} \|_{\infty} \| l \|_{1} \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd9a2993" class="outline-3">
+<h3 id="orgd9a2993"><span class="section-number-3">2.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-org44168e0" class="outline-4">
+<h4 id="org44168e0"><span class="section-number-4">2.2.1.</span> Answer</h4>
+<div class="outline-text-4" id="text-2-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org622e482"></a>A<br />
+<div class="outline-text-5" id="text-2-2-1-1">
+\begin{align}
+\left| \lambda x \right|
+&= \left| \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} x_{n} / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}} \right| \\
+&\leq \left| \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} \| x \|_{\infty} / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}} \right| \\
+&= \| x \|_{\infty} \left| \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} 1 / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}} \right| \\
+&= \| x \|_{\infty}
+\end{align}
+</div>
+</li>
+<li><a id="orgf6ae7ac"></a>B<br />
+<div class="outline-text-5" id="text-2-2-1-2">
+<p>
+When \( x \in c(\mathbb{N}) \) then given \( \varepsilon \) there is some \( N \) such that for all \( n \geq N \), \( L - \varepsilon \leq x_{n} \leq L + \varepsilon \).
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ L - \varepsilon = \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} (L - \varepsilon) / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}} \leq \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} x_{n} / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}} \leq \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} (L + \varepsilon) / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}} = L + \varepsilon \]
+</p>
+
+<p>
+Because \( \varepsilon \) was arbitrary, we see
+</p>
+
+<p>
+\[ L = \limsup_{N \to \infty} \frac{\sum_{n = N}^{\infty} x_{n} / n^{2}}{\sum_{n = N}^{\infty} 1 / n^{2}}  \]
+</p>
+</div>
+</li>
+<li><a id="org283e362"></a>C<br />
+<div class="outline-text-5" id="text-2-2-1-3">
+<p>
+No. If \( \lambda \in \left( c(\mathbb{N}) \right)' \), then for some convergent sequence \( x = \sum_{n \in N} x_{n} e_{n} \), 
+</p>
+
+<p>
+\[ \lambda x = \lambda \sum_{n \in \mathbb{N}} x_{n} e_{n} = \sum_{n \in \mathbb{N}} x_{n} \lambda(e_{n}) \]
+</p>
+
+<p>
+But \( \lambda(e_{n}) = 0 \) for all Schauder basis sequences. 
+</p>
+</div>
+</li>
+<li><a id="org0cdc61b"></a>D<br />
+<div class="outline-text-5" id="text-2-2-1-4">
+<p>
+Let \( y \in \ell_{1}(\mathbb{N}) \).
+If
+</p>
+
+<p>
+\[ \lambda x = \sum_{j = 1}^{\infty} x_{j} \overline{y_{j}} \]
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[ 0 = \lambda e_{j} = \overline{y_{j}} \]
+</p>
+
+
+<p>
+Hence \( y = 0 \) implying that \( \lambda \) would be the zero functional, which is untrue.  
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org9ef08d2" class="outline-3">
+<h3 id="org9ef08d2"><span class="section-number-3">2.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-2-3">
+</div>
+<div id="outline-container-orgf4d1f5f" class="outline-4">
+<h4 id="orgf4d1f5f"><span class="section-number-4">2.3.1.</span> Answer</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+Suppose \( \phi \neq 0 \) is a continuous linear functional on \( L_{p}([0,1]) \) for \( 0 < p < 1 \).
+</p>
+
+<p>
+Because \( \phi \neq 0 \) it has nonzero operator norm. Hence, there is some \( f \) with \( \| f \|_{p} = 1 \) such that \( 0 < \phi f =: \alpha \).    
+</p>
+
+<p>
+Because \( \| f \|_{p} = 1 \) we have
+</p>
+
+<p>
+\[ \left(\int_{0}^{1} |f|^{p} dx\right)^{1/p} = 1 \iff \int_{0}^{1} |f|^{p} dx = 1 \]
+</p>
+
+<p>
+We know that
+</p>
+
+<p>
+\[ g(x) = \int_{0}^{x} |f|^{p} dx \]
+</p>
+
+<p>
+is a continuous function with \( g(0) = 0 \) and \( g(1) = 1 \). By IVT we see that there is some \( s \) such that \( g(s) = \int_{0}^{s} |f|^{p} dx = 1/2 \). By additivity of domain of integration bounds we see that
+</p>
+
+<p>
+\[ \int_{s}^{1} |f|^{p} dx = 1/2 \]
+</p>
+
+<p>
+We will repeat this procedure of splitting the interval into halves. At the \( i \)-th step, we have \( 2^{i} \) many intervals, \( [s_{i,j}, s_{i,j+1}] \) such that \( f \), has norm \( \int_{s_{i,j}}^{s_{i,j+1}} |f|^{p} dx = \frac{1}{2^{i}} \) on that interval.
+</p>
+
+<p>
+Let
+</p>
+
+<p>
+\[ f_{i,j}(x) = \begin{cases} f(x) & x \in [s_{i,j},s_{i,j + 1}] \\ 0 & \text{else} \end{cases} \]
+</p>
+
+<p>
+Then we may represent \( f \) as a sum \( f = \sum_{j = 1}^{2^{i}} f_{i,j} \)
+</p>
+
+<p>
+\[ \alpha = \phi f = \phi \sum f_{j} = \sum \phi f_{j} \]
+</p>
+
+<p>
+There are \( 2^{j} \) terms in this sum adding to \( \alpha \). Hence there is some element \( f_{i,j} \) such that \( \phi f_{i,j} > 2^{-i} \alpha \).
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ \phi f_{i,j} > 2^{-i} \alpha > 2^{-i / p} \alpha = \| f_{i,j} \|_{p} \alpha \]
+</p>
+
+<p>
+Which shows that the operator is not continuous.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd886ac3" class="outline-3">
+<h3 id="orgd886ac3"><span class="section-number-3">2.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org8f27c8f" class="outline-4">
+<h4 id="org8f27c8f"><span class="section-number-4">2.4.1.</span> Answer</h4>
+<div class="outline-text-4" id="text-2-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="org56ad80b"></a>A<br />
+<div class="outline-text-5" id="text-2-4-1-1">
+<p>
+First we calculate the strong derivatives.
+\[ \frac{ \partial f}{ \partial x_{1}} = \frac{-1}{x^{2} + 1}, \frac{ \partial f}{ \partial x_{2}} = \frac{1}{x^{2} + 1}  \]
+</p>
+
+<p>
+Now we shall prove that strong derivatives are weak derivatives.
+</p>
+
+\begin{align}
+\int_{\Omega} \frac{ \partial f}{ \partial x_{i}} g dx
+&= \int_{\Omega} \frac{ \partial }{ \partial x_{i}} \left( f g \right) - f \frac{ \partial g}{ \partial x_{i}} dx & \quad & \text{Integration by Parts} \\
+&= \int_{\Omega} \frac{ \partial }{ \partial x_{i}} \left( f g \right) dx - \int_{\Omega} f \frac{ \partial g}{ \partial x_{i}} dx & \quad & \text{Linearity of Integration} \\
+&= \int_{\partial \Omega} f g \nu_{i} dS - \int_{\Omega} f \frac{ \partial g}{ \partial x_{i}} dx & \quad & \text{Gauss-Green} \\
+&= - \int_{\Omega} f \frac{ \partial g}{ \partial x_{i}} dx & \quad & \text{$g \in C^{\infty}_{c}$}
+\end{align}
+</div>
+</li>
+<li><a id="orgb909374"></a>B<br />
+<div class="outline-text-5" id="text-2-4-1-2">
+<p>
+Because \( \Omega \) is a bounded domain (quarter circle), and \( f \) is bounded, and the weak derivatives are bounded, then  \( f \in W^{1}_{1}(\Omega) \). By Holder's inequality we have that \( f \in W_{p}^{1}(\Omega) \) for all \( p \geq 1 \).    
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org0c3d0cd" class="outline-2">
+<h2 id="org0c3d0cd"><span class="section-number-2">3.</span> <span class="done DONE">DONE</span> Homework 3</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2888851" class="outline-3">
+<h3 id="org2888851"><span class="section-number-3">3.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgb73f2a0" class="outline-4">
+<h4 id="orgb73f2a0"><span class="section-number-4">3.1.1.</span> Problem 4</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Let \( H = \ell_{2}(\mathbb{N}) \), with \( \vec{e}_{1}, \vec{e}_{2}, \ldots \)  denoting the coordinate vectors.
+</p>
+
+<p>
+Define \( f_{n} := \vec{e}_{2n - 1} - \vec{e}_{2n} \) and \( X = (\spn(f_{n}))^{-} \).
+</p>
+
+<p>
+For \( x = \sum_{j = 1}^{\infty} 2^{-j} \vec{e}_{j} \)
+</p>
+
+
+<p>
+We may calculate \( P_{X}(x) \) directly:
+</p>
+
+\begin{align*}
+P_{X}(x)
+&= \sum_{j = 1}^{\infty} \frac{\left\langle x , f_{j} \right\rangle}{\left\langle f_{j} , f_{j} \right\rangle} f_{j} &\quad &\text{Projection Formula} \\
+&= \sum_{j = 1}^{\infty} \frac{1}{4} \left\langle x , f_{j} \right\rangle f_{j} &\quad &\text{$\| f_{n} \| = 2$} \\
+&= \sum_{j = 1}^{\infty} \frac{1}{4} \left\langle  \sum_{n = 1}^{\infty} 2^{-n} \vec{e}_{n} , f_{j} \right\rangle f_{j} &\quad &\text{Def. $x$} \\
+&= \sum_{j = 1}^{\infty} \frac{1}{4} \left\langle  \sum_{n = 1}^{\infty} 2^{-n} \vec{e}_{n} , e_{2j-1} - e_{2j} \right\rangle f_{j} &\quad &\text{Def. $f_{j}$} \\
+&= \sum_{j = 1}^{\infty} \frac{1}{4} \left( 2^{-2j + 1} - 2^{-2j} \right) f_{j} &\quad &\text{Orthonormality of $e_{j}$} \\
+&= \sum_{j = 1}^{\infty} \frac{1}{4} \left( 2^{-2j + 1} - 2^{-2j} \right) (e_{2j - 1} - e_{2n}) &\quad &\text{Def. $e_{j}$}
+\end{align*}
+
+<p>
+Now that we have an explicit formula for \( P_{X}(x) \) the norm is simply the sum of the squares of the coefficients (by orthonormality of \( e_{n} \)). We notice that in the above expression, for every \( j \) there are two orthonormal vectors with the same coefficient (modulo a minus sign), hence we multiply each term by \( 2 \).  
+</p>
+
+<p>
+\[ \| P_{X}(x) \| = \sum_{j = 1}^{\infty} 2 \cdot \left( \frac{1}{4} \left( 2^{-2j + 1} - 2^{-2j} \right) \right)^{2} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org46eccb8" class="outline-4">
+<h4 id="org46eccb8"><span class="section-number-4">3.1.2.</span> Problem 10</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+Let \( \mathcal{P} \) denote the vector space of polynomials \( \sum_{j = 0}^{n} a_{j} x^{j} \) with complex coefficients.  
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="orgd8701f7"></a>A<br />
+<div class="outline-text-5" id="text-3-1-2-1">
+<p>
+Let
+</p>
+
+<p>
+\[ \left\langle \cdot , \cdot \right\rangle \colon \mathcal{P} \times \mathcal{P} \to \mathbb{C} \colon \left( \sum_{j = 0}^{n} a_{j} x^{j} , \sum_{j = 0}^{m} b_{j} x^{j} \right) \mapsto \sum_{j = 0}^{\min(n,m)} a_{j} \overline{b_{j}} \]
+</p>
+
+<p>
+Before we proceed, I will embed the space of polynomials into the space of formal power series and treat all coefficients higher than the degree of the polynomial as zero. In this regime we can redefine the function equivalently as,
+</p>
+
+<p>
+\[ \left\langle \cdot , \cdot \right\rangle \colon \mathcal{P} \times \mathcal{P} \to \mathbb{C} \colon \left( \sum_{j = 0}^{n} a_{j} x^{j} , \sum_{j = 0}^{m} b_{j} x^{j} \right) \mapsto \sum_{j = 0}^{\infty} a_{j} \overline{b_{j}} \]
+</p>
+
+<p>
+This proves that this is an inner product on \( H_{2}(\mathbb{D}) \) (for part \( D \)) and avoids some indexing headaches. Now we may proceed to prove that this function defines an inner product.
+</p>
+
+<ul class="org-ul">
+<li>Linearity in first component:</li>
+</ul>
+
+\begin{align*}
+\left\langle \lambda p_{1} + p_{2} , q \right\rangle
+&= \sum_{j = 0}^{\infty} (\lambda a_{1, j} + a_{2, j}) \overline{b_{j}} &\quad&\text{Def. $\left\langle \cdot , \cdot \right\rangle$} \\
+&= \sum_{j = 0}^{\infty} \lambda a_{1, j} \overline{b_{j}} + a_{2, j} \overline{b_{j}} &\quad&\text{Distributive Property} \\
+&= \lambda \left( \sum_{j = 0}^{\infty} a_{1, j} \overline{b_{j}} \right) + \left( \sum_{j = 0}^{\infty} a_{2, j} \overline{b_{j}} \right) &\quad&\text{Linearity of Sum} \\
+&= \lambda \left\langle p_{1} , q \right\rangle + \left\langle p_{2} , q \right\rangle &\quad&\text{Def. $\left\langle \cdot , \cdot \right\rangle$}
+\end{align*}
+
+
+<ul class="org-ul">
+<li>Skew-symmetry:</li>
+</ul>
+
+\begin{align*}
+\left\langle p , q \right\rangle
+&= \sum_{j = 0}^{\infty} a_{j} \overline{b_{j}} &\quad &\text{Def. $\left\langle \cdot , \cdot \right\rangle$} \\
+&= \overline{\overline{\sum_{j = 0}^{\infty} a_{j} \overline{b_{j}}}} &\quad &\text{Conjugation is Involution} \\
+&= \overline{\sum_{j = 0}^{\infty} \overline{a_{j} \overline{b_{j}}}} &\quad &\text{Conjugation Distributes over Summation} \\
+&= \overline{\sum_{j = 0}^{\infty} \overline{a_{j}} \overline{\overline{b_{j}}}} &\quad &\text{Conjugation Distributes over Multiplication} \\
+&= \overline{\sum_{j = 0}^{\infty} \overline{a_{j}} b_{j}} &\quad &\text{Conjugation Involution} \\
+&= \overline{\left\langle q , p \right\rangle} &\quad &\text{Def. $\left\langle \cdot , \cdot \right\rangle$}
+\end{align*}
+
+<ul class="org-ul">
+<li>Positive Definiteness:</li>
+</ul>
+
+\begin{align*}
+\left\langle p , p \right\rangle
+&= \sum_{j = 0}^{\infty} |a_{j}|^{2}
+\end{align*}
+
+<p>
+Which equals zero if and only if \( p \) is the zero polynomial. 
+</p>
+</div>
+</li>
+<li><a id="org999d619"></a>B<br />
+<div class="outline-text-5" id="text-3-1-2-2">
+<p>
+Let
+</p>
+
+<p>
+\[ \ell \colon \mathcal{P} \to \mathbb{C} \colon \sum_{j = 0}^{n} a_{j} x^{j} \mapsto \sum_{j = 0}^{n} \frac{a_{j}}{j + 1} \]
+</p>
+
+<p>
+We will show that it is a bounded linear functional,
+</p>
+
+<ul class="org-ul">
+<li>Linear</li>
+</ul>
+
+\begin{align*}
+\ell(\lambda p + q)
+&= \sum_{j = 0}^{n} \frac{\lambda a_{j} + b_{j}}{j + 1} &\quad &\text{Def. $\ell$} \\
+&= \sum_{j = 0}^{n} \lambda \frac{a_{j}}{j+1} + \frac{b_{j}}{j + 1} &\quad &\text{Distributive Property} \\
+&= \lambda \left(\sum_{j = 0}^{n} \frac{a_{j}}{j+1} \right) + \left( \sum_{j = 0}^{n} \frac{b_{j}}{j + 1} \right) &\quad &\text{Linearity of Summation} \\
+&= \lambda \ell(p) + \ell(q) &\quad &\text{Def. $\ell$}
+\end{align*}
+
+<ul class="org-ul">
+<li>Bounded</li>
+</ul>
+\begin{align*}
+\left| \ell(p) \right|^{2}
+&= \left\vert \sum_{j = 0}^{n} \frac{a_{j}}{j+1} \right\vert^{2} &\quad &\text{Def $\ell$} \\
+&\leq \left( \sum_{j = 0}^{n} |a_{j}|^{2} \right) \left( \sum_{j = 0}^{n} \frac{1}{(j + 1)^{2}} \right) &\quad &\text{Cauchy-Schwarz for Complex Sums} \\
+&\leq \left( \sum_{j = 0}^{n} |a_{j}|^{2} \right) \left( \sum_{j = 0}^{\infty} \frac{1}{(j + 1)^{2}} \right) &\quad &\text{Adding More Positive} \\
+&= C \left( \sum_{j = 0}^{n} |a_{j}|^{2} \right) &\quad &\text{Basel Problem (Sum of Reciprocal Squares Converges)} \\
+&= C \| p \|^{2} &\quad &\text{Def. Induced Norm}
+\end{align*}
+
+<p>
+Taking square roots on both sides shows that the function is bounded,
+</p>
+
+<p>
+\[ |\ell(p)| \leq \sqrt{C} \| p \| \]
+</p>
+</div>
+</li>
+<li><a id="org26813b2"></a>C<br />
+<div class="outline-text-5" id="text-3-1-2-3">
+<p>
+If \( \mathcal{P} \) is a Hilbert space, \( \ell(p) \) would be equal to \( \left\langle p, q \right\rangle \) for some polynomial \( q \).
+</p>
+
+<p>
+We may then figure out the coefficients of the polynomial by means of the inner product.
+</p>
+
+<p>
+\[ \frac{1}{n + 1} = \ell(x^{n}) = \left\langle x^{n} , q \right\rangle = \overline{b_{n}} \]
+</p>
+
+<p>
+But this shows that \( q \) has infinitely many nonzero coefficients. Hence it is not an element of our space. 
+</p>
+</div>
+</li>
+<li><a id="org7577db3"></a>D<br />
+<div class="outline-text-5" id="text-3-1-2-4">
+<p>
+Let \( H_{2}(\mathbb{D}) \) be the Hilbert space of formal power series with coefficients \( (a_{j}) \in \ell_{2}(\mathbb{Z}_{+}) \) endowed with the inner product in part (A). We will show that the monomials are a complete orthonormal set in \( H_{2}(\mathbb{D}) \). We need to show that the monomials form an orthogonal family, then, by proposition 3.14 (nice!) and knowing the density of monomials, we can conclude that the monomials are complete. However, checking this is trivial. The inner product is very easy to compute on monomials (lots of zeros).
+</p>
+
+<p>
+\[ \left\langle x^{i}, x^{j} \right\rangle = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{else} \end{cases}\]
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgac14052" class="outline-3">
+<h3 id="orgac14052"><span class="section-number-3">3.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Let \( H_{1} \) and \( H_{2} \) be Hilbert spaces and \( B \colon H_{1} \times H_{2} \to \mathbb{F} \) satisfy
+</p>
+
+<p>
+\[ |B(x,y)| \leq C \| x \|_{H_{1}} \| y \|_{H_{2}} \]
+</p>
+
+<p>
+Define a new function, \( f_{x} \colon H_{2} \to \mathbb{F} \) for every \( x \in H_{1} \), via
+</p>
+
+<p>
+\[ f_{x} \colon y \mapsto \overline{B(x,y)} \]
+</p>
+
+<p>
+This function is linear,
+</p>
+
+\begin{align}
+f_{x}(av + w)
+&= \overline{B(x, av + w)} \\
+&= \overline{ \overline{a} B(x, v) + B(x,w)} \\
+&= a \overline{B(x, v)} + \overline{B(x,w)} \\
+&= a f_{x}(v) + f_{x}(w)
+\end{align}
+
+<p>
+The function is also bounded,
+</p>
+
+<p>
+\[ | f_{x}(y) | = | \overline{B(x,y)} | = | B(x,y) | \leq C \| x \|_{H_{1}} \| y \|_{H_{2}}  \]
+</p>
+
+<p>
+Thus by the Riez-Representation theorem, we have an element \( A_{x} \in H_{2} \), with norm \( \| A_{x} \| = \| f_{x} \| \) such that,
+</p>
+
+<p>
+\[ f_{x}(y) = \left\langle y , A_{x} \right\rangle = \overline{\left\langle A_{x}, y \right\rangle} = \overline{B(x,y)} \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ B(x,y) = \left\langle A_{x}, y \right\rangle \]
+</p>
+
+<p>
+Now we can show that the function,
+</p>
+
+<p>
+\[ A \colon x \mapsto A_{x} \]
+</p>
+
+<p>
+Is a linear bounded map,
+</p>
+
+<ul class="org-ul">
+<li>Linear:</li>
+</ul>
+
+<p>
+\[ \forall y \in H_{2} \colon \left\langle A(av + w), y \right\rangle = B(av + w, y) = a B(v,y) + B(w,y) =  a\left\langle Av, y \right\rangle + \left\langle Aw, y \right\rangle = \left\langle a A v + Aw , y \right\rangle \]
+</p>
+
+<p>
+We note that \( \forall y \colon \left\langle x, y \right\rangle = \left\langle z, y \right\rangle \implies x = y \) 
+</p>
+
+<ul class="org-ul">
+<li>Bounded:</li>
+</ul>
+
+<p>
+\[ \|Ax\| = \| A_{x} \| = \| f_{x} \| \leq C \| x \|  \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ \| A \| \leq C \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgd8c8c75" class="outline-3">
+<h3 id="orgd8c8c75"><span class="section-number-3">3.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Given \( A \in \mathcal{L}(H_{1}, H_{2}) \), we may define the maps,
+</p>
+
+\begin{align}
+B &\colon H_{1} \times H_{2} \to \mathbb{F} \colon&& (x, y) \mapsto \left\langle Ax,y \right\rangle \\
+B^{\ast} &\colon H_{2} \times H_{1} \to \mathbb{F} \colon&& (y, x) \mapsto \overline{B(x,y)} = \overline{\left\langle Ax, y \right\rangle} = \left\langle y , Ax \right\rangle_{H_{2}}
+\end{align}
+
+<p>
+From last problem, we know that there exists \( A^{\ast} \in \mathcal{L}(H_{2}, H_{1}) \) such that \( B^{\ast}(y,x) = \left\langle A^{\ast} y , x \right\rangle_{H_{1}} \). Hence,
+</p>
+
+<p>
+\[  \left\langle A^{\ast}y, x \right\rangle = B^{\ast}(y, x) = \left\langle y, Ax \right\rangle \]
+</p>
+
+<p>
+To match the problem statement, we may take conjugates,
+</p>
+
+<p>
+\[ \left\langle A^{\ast}y, x \right\rangle = \left\langle y, Ax \right\rangle \iff \overline{\left\langle A^{\ast}y, x \right\rangle} = \overline{\left\langle y, Ax \right\rangle} \iff \left\langle Ax , y \right\rangle = \left\langle x , A^{\ast}y \right\rangle \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgd9fe32d" class="outline-3">
+<h3 id="orgd9fe32d"><span class="section-number-3">3.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+\[ x \in \mathcal{N}(A^{\ast}) \iff \forall y \in H_{2} \colon \left\langle A^{\ast}x , y \right\rangle = 0 \iff \forall y \in H_{2} \left\langle x , Ay \right\rangle = 0 \iff x \perp \mathcal{R}(A)  \]
+</p>
+
+<p>
+\[ x \in \mathcal{N}(A) \iff \forall y \in H_{2} \colon \left\langle Ax , y \right\rangle = 0 \iff \forall y \in H_{2} \left\langle x , A^{\ast}y \right\rangle = 0 \iff x \perp \mathcal{R}(A^{\ast})  \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4dae250" class="outline-2">
+<h2 id="org4dae250"><span class="section-number-2">4.</span> <span class="done DONE">DONE</span> Homework 4</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org56ce42c" class="outline-3">
+<h3 id="org56ce42c"><span class="section-number-3">4.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-4-1">
+</div>
+<div id="outline-container-org091316f" class="outline-4">
+<h4 id="org091316f"><span class="section-number-4">4.1.1.</span> A</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<p>
+Consider the indicator function on any subset of the naturals,
+</p>
+
+<p>
+\[ \forall I \in \mathcal{P}(\mathbb{N}) \colon \mathbb{1}_{I}(i) = \begin{cases} 1 & i \in I \\ 0 & i \not\in I \end{cases} \]
+</p>
+
+<p>
+Each such function is bounded, hence in \( \ell_{\infty}(\mathbb{N}) \) and the distance can be calculated,
+</p>
+
+<p>
+\[ \| \mathbb{1}_{I} - \mathbb{1}_{J} \|_{\ell_{\infty}} = \begin{cases} 1 & I = J \\ 0 & I \neq J \end{cases} \]
+</p>
+
+<p>
+We can now define an uncountable set of disjoint open balls,
+</p>
+
+<p>
+\[ \mathcal{B} = \left\{ B_{d_{\infty}} \left( \mathbb{1}_{I}, \frac{1}{2} \right) \colon I \in \mathcal{P}(\mathbb{N}) \right\} \]
+</p>
+
+<p>
+We know they are disjoint because given another \( J \neq I \), the distance is one but the ball centered at each of the sequences has radius \( \frac{1}{2} \). If there were some dense subset, \( \mathcal{D} \), then by density, each ball, \( B \in \mathcal{B} \), must have nontrivial intersection with \( \mathcal{D} \). But because there is an uncountable number of disjoint balls, and each ball contains at least one element of \( \mathcal{D} \) then we know that \( \mathcal{D} \) must be uncountable. Hence, \( \ell_{\infty} \) is not separable.
+</p>
+</div>
+</div>
+<div id="outline-container-org691aca1" class="outline-4">
+<h4 id="org691aca1"><span class="section-number-4">4.1.2.</span> B</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<p>
+From part \( A \) we know that \( (\ell_{1}(\mathbb{N}))^{\ast} = \ell_{\infty}(\mathbb{N}) \) is not separable.
+Thus, showing that \( \ell_{1}(\mathbb{N}) \) is separable will complete the problem.
+</p>
+
+<p>
+Let \( D \) be the set of finitely supported rational sequences and \( \varepsilon > 0 \). 
+</p>
+
+<p>
+Then for some \( x \in \ell_{1}(\mathbb{N}) \) we can find a tail, \( N \), of size \( \varepsilon / 2 \) ( \( \sum_{n = N + 1}^{\infty} | x_{n} | = \frac{\varepsilon}{2} \)). By density of \( \mathbb{Q} \), we can find \( q = ( q_{n} )_{n = 1}^{N} \) such that \( | x_{n} - q_{n} | \leq \frac{\varepsilon}{2^{n + 1}} \). Hence,
+</p>
+
+<p>
+\[ \| x - q \| = \sum_{n = 1}^{\infty} | x_{n} - q_{n} | = \sum_{n = 1}^{N} | x_{n} - q_{n} | + \sum_{n = N + 1}^{\infty} | x_{n} | \leq \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon \]
+</p>
+</div>
+</div>
+<div id="outline-container-org8191d2f" class="outline-4">
+<h4 id="org8191d2f"><span class="section-number-4">4.1.3.</span> C</h4>
+<div class="outline-text-4" id="text-4-1-3">
+<p>
+Let \( X \) be a normed linear space whose dual \( X' \) is separable. Let \( \left\{ \lambda_{n} \right\} = \Lambda \subseteq X' \) be a countable dense subset. We may consider a collection of points \( \Omega = \left\{ y_{n} \in X \middle\vert \lambda_{n}(y_{n}) \geq \frac{1}{2} \| \lambda_{n} \| \right\} \).
+</p>
+
+<p>
+We can consider \( Y = \overline{\spn(\Omega)} \) a separable closed space. If \( Y = X \) then we are done. By way of contradiction, suppose \( Y \neq X \), then there is some \( \lambda \in X' \) such that \( \| \lambda \| > 0 \) and \( Y \subseteq \mathcal{N}(\lambda) \) (Chapter 4, Problem 16). By density of \( \Lambda \), there is a sequence \( \lambda_{n_{j}} \to \lambda \),
+</p>
+
+<p>
+\[ \| \lambda_{n_{j}} - \lambda \| \geq | \lambda_{n_{j}}(x_{n_{j}}) - \lambda(x_{n_{j}}) | = |\lambda_{n_{j}}(x_{n_{j}})| \geq \frac{1}{2} \| \lambda_{n_{j}} \| \]
+</p>
+
+<p>
+Hence, \( \| \lambda_{n_{j}} \| \to 0 \) which tells us that \( \| \lambda \| \to 0 \) which violates the fact that \( \| \lambda \| > 0 \). So \( Y = X \) and \( X \) is separable.     
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3a3e1dd" class="outline-3">
+<h3 id="org3a3e1dd"><span class="section-number-3">4.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-4-2">
+</div>
+<div id="outline-container-org882868d" class="outline-4">
+<h4 id="org882868d"><span class="section-number-4">4.2.1.</span> A</h4>
+<div class="outline-text-4" id="text-4-2-1">
+\begin{align}
+d(\mu, \spn(L))
+&= \inf_{l \in \spn(L)} \sup_{\| x \| \leq 1} |\mu(x) - l(x)| \\
+&\geq \inf_{l \in \spn(L)} \sup_{x \in L_{\perp}, \| x \| \leq 1} |\mu(x) - l(x)| \\
+&= \sup_{x \in L_{\perp}, \| x \| \leq 1} |\mu(x)| \\
+&= \| \mu \vert_{Y} \|_{Y'}
+\end{align}
+
+<p>
+On the other hand, for \( \mu \vert_{Y} \), there is an extension \( \hat{\mu} \) with norm \( \| \hat{\mu} \| = \sup_{x \in Y, \| x \| \leq 1} |\mu(x)| \) by Hahn-Banach. We note that \( \mu - \hat{\mu} \in \perp Y = \overline{\spn(L)} = \spn(L) \)
+</p>
+
+\begin{align}
+\dist(\mu, \spn(L))
+&= \inf_{l \in \spn(L)} \sup_{\| x \| \leq 1} |\mu(x) - l(x)| \\
+&\leq \sup_{\| x \| \leq 1} |\mu(x) - \mu(x) - \hat{\mu}(x)| \\
+&= \sup_{\| x \| \leq 1} |\hat{\mu}(x)| \\
+&= \| \mu \vert_{Y} \|_{Y'}
+\end{align}
+</div>
+</div>
+<div id="outline-container-org793efc1" class="outline-4">
+<h4 id="org793efc1"><span class="section-number-4">4.2.2.</span> B</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+By Cauchy-Schwarz we have,
+\[ \int_{0}^{1} x f(x) dx \leq \left(\int_{0}^{1} x^{2} dx\right)^{1/2} \left( \int_{0}^{1} f(x)^{2} dx \right)^{1/2} = \left( \int_{0}^{1} x^{2} dx \right)^{1/2} \]
+</p>
+
+<p>
+We know that Cauchy-Schwarz is an equality when \( f(x) = k x \). Because \( \| f \|_{L_{2}([0,1])} = 1 \) we have \( \int_{0}^{1} (kx)^{2} dx = 1 \) so \( k = \sqrt{3} \). So, the maximum value is,
+</p>
+
+<p>
+\[ \int_{0}^{1} \sqrt{3} x^{2} dx = \frac{\sqrt{3}}{3} \]
+</p>
+
+<hr />
+<p>
+I tried getting this formula into a form somewhat usable by part A. But I got stuck.
+</p>
+
+<p>
+Let \( X = L_{2}([0,1]) \), \( L = \left\{ 0 \right\} \), \( Y = L_{\perp} = X \), \( \mu(f) = \int_{0}^{1}x f(x) dx \) 
+</p>
+
+<p>
+\[ \| \mu \| = \sup_{f \in L_{2}([0,1]), \| f \| = 1} | \mu(f) | = \dist(\mu , \left\{ 0 \right\})  \]
+</p>
+</div>
+</div>
+<div id="outline-container-org322ff4a" class="outline-4">
+<h4 id="org322ff4a"><span class="section-number-4">4.2.3.</span> C</h4>
+<div class="outline-text-4" id="text-4-2-3">
+<p>
+Let \( X = L_{2}([0,1]) \), \( L = \left\{ 1 \right\} \), \( Y = L_{\perp} \), \( \mu(f) = \int_{0}^{1} x f(x) dx = \left\langle x , f \right\rangle \) 
+</p>
+
+\begin{align}
+\| \mu \vert_{Y} \|_{Y'}
+&= \sup_{\substack{f \in L_{2}([0,1]) \\ \left\langle f , 1 \right\rangle = \int_{0}^{1} f(x) dx = 0 \\ \| f \|_{L_{2}([0,1])} = 1}} | \mu(f) | \\
+&= \dist(\mu , \left\{ 1 \right\}) \\
+&= \| \mu - P_{\spn(1)}(\mu) \|_{(L_{2}([0,1]))'} \\
+&= \| \mu - \left\langle \mu , 1 \right\rangle \cdot 1 \| \\
+&= \sup_{\substack{f \in L_{2}([0,1]) \\ \| f \|_{L_{2}([0,1])} = 1}}  \left| \mu(f) - \left\langle \mu , 1 \right\rangle \cdot 1 \right| \\
+&= \sup_{\substack{f \in L_{2}([0,1]) \\ \| f \|_{L_{2}([0,1])} = 1}}  \left| \int_{0}^{1} x f(x) dx - \int_{0}^{1}  \left\langle \mu , 1 \right\rangle \cdot 1 \right| \\
+&= \sup_{\substack{f \in L_{2}([0,1]) \\ \| f \|_{L_{2}([0,1])} = 1}}  \left| \int_{0}^{1} x f(x) dx - \frac{1}{2} \right|
+\end{align}
+
+<p>
+In which case, this is the same problem as part \( B \) but subtracted by a constant \( \frac{1}{2} \). Hence, the maximum value is \( \frac{\sqrt{3}}{3} - \frac{1}{2} \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d3f5e7" class="outline-3">
+<h3 id="org8d3f5e7"><span class="section-number-3">4.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-orgc235477" class="outline-4">
+<h4 id="orgc235477"><span class="section-number-4">4.3.1.</span> A</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+Consider any open cover of \( K \). The cover will have one open neighborhood of \( 0 \). This neighborhood contains all but finitely many elements of the form \( \frac{1}{j} e_{j} \). Hence only finitely many more open sets are needed to cover \( K \).    
+</p>
+</div>
+</div>
+<div id="outline-container-orged0a801" class="outline-4">
+<h4 id="orged0a801"><span class="section-number-4">4.3.2.</span> B</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+\[ v = \frac{1}{\sum_{j = 1}^{\infty} j^{-3/2}} \sum_{j = 1}^{\infty} j^{-5/2} \vec{e}_{j} = \frac{1}{\sum_{j = 1}^{\infty} j^{-3/2}} \sum_{j = 1}^{\infty} j^{-3/2} \left( \frac{1}{j} \vec{e}_{j} \right) \]
+</p>
+
+<p>
+We know that \( \zeta(3/2) = \sum_{j = 1}^{\infty} j^{-3/2} \) converges and each term is non negative, hence
+</p>
+
+<p>
+\[ v_{n} = \left( 1 - \frac{1}{\sum_{j = 1}^{\infty} j^{-3/2}} \sum_{j = 1}^{n} j^{-3/2} \right) 0 + \frac{1}{\sum_{j = 1}^{\infty} j^{-3/2}} \sum_{j = 1}^{n} j^{-3/2} \left( \frac{1}{j} \vec{e}_{j} \right) \]
+</p>
+
+<p>
+Is a finite convex combination of elements in \( K \), so \( v_{n} \in \overparen{K} \). It's limit as \( n \to \infty \) is \( v \), hence \( v \in \bar{\overparen{K}} \).
+</p>
+</div>
+</div>
+<div id="outline-container-org0b13ca6" class="outline-4">
+<h4 id="org0b13ca6"><span class="section-number-4">4.3.3.</span> C</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+We note that \( v \) has infinitely many nonzero components. However, each finite convex combination of elements in \( K \) has finitely many nonzero components. Thus, \( v \not \in \overbar{\overparen{K}} \).
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbee3bf3" class="outline-2">
+<h2 id="orgbee3bf3"><span class="section-number-2">5.</span> <span class="done DONE">DONE</span> Homework 5</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgc80b0cf" class="outline-3">
+<h3 id="orgc80b0cf"><span class="section-number-3">5.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orgc57db4c" class="outline-4">
+<h4 id="orgc57db4c"><span class="section-number-4">5.1.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+It is helpful to prove the following fact now,
+</p>
+
+<p>
+Lemma: Basic Weak open sets contains the joint kernel.
+</p>
+
+<p>
+Let \( x \in X \), consider \( \Lambda = \cap_{j = 1}^{n} \Lambda_{r_{j}, \lambda_{j}}(x) \in \mathbb{B}(x) \) and call \( N = \left( \left\{ \lambda_{j} \right\}_{j = 1}^{n} \right)_{\perp} \).
+</p>
+
+<p>
+Because \( X \) is infinite dimensional, and \( \codim(N) \leq n \) we have that \( N \neq 0 \).
+</p>
+
+<p>
+Note that \( x + N \subseteq \Lambda \),
+\[ \forall y \in N \colon \forall j \in [1 .. n] \colon | \lambda_{j}(x + y) | = |\lambda_{j}(x)| < r_{j} \]
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org7e3a35d"></a>A<br />
+<div class="outline-text-5" id="text-5-1-1-1">
+<p>
+We will show \( \overline{\partial B(0,1)}^{w} = B(0,1) \).
+</p>
+
+<p>
+\( \subseteq \) :
+</p>
+
+\begin{align*}
+\overline{\partial B(0,1)}^{w}
+&\subseteq \overline{B(0,1)}^{w} &\quad&\text{Closure Nondecreasing} \\
+&= B(0,1) &&\text{$B(0,1)$ Closed and Convex}
+\end{align*}
+
+<p>
+\( \supseteq \) :
+</p>
+
+<p>
+Let \( x \in X \), consider \( \Lambda = \cap_{j = 1}^{n} \Lambda_{r_{j}, \lambda_{j}}(x) \in \mathbb{B}(x) \) and call \( N = \left( \left\{ \lambda_{j} \right\}_{j = 1}^{n} \right)_{\perp} \).
+We see that \( (x + N) \cap \partial B(0,1) \neq 0 \), proving the claim. 
+</p>
+</div>
+</li>
+<li><a id="orgdf59c3e"></a>B<br />
+<div class="outline-text-5" id="text-5-1-1-2">
+<p>
+If \( \| \cdot \| \) is weakly continuous, then \( \left(\| \cdot \| \right)^{-1}\left[ 1 \right] = \partial B(0,1) \) would be weakly closed. From (A) we see that \( \partial B(0,1) \) is not weakly closed. 
+</p>
+</div>
+</li>
+<li><a id="org0f60800"></a>C<br />
+<div class="outline-text-5" id="text-5-1-1-3">
+<p>
+Suppose there is some \( x \in \interior(B_{X}(0,1)) \).
+Then, there is some weak basic neighborhood \( \Lambda = \cap_{j = 1}^{n} \Lambda_{r_{j}, \lambda_{j}}(x) \subseteq \interior(B_{X}(0,1)) \).
+From our lemma, \( x + N \subseteq \Lambda \subseteq \interior(B_{X}(0,1)) \). This is a contradiction, \( x + N \) contains vectors with unbounded size whereas \( B_{X}(0,1) \) is bounded with norm \( 1 \).   
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3da9027" class="outline-3">
+<h3 id="org3da9027"><span class="section-number-3">5.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-5-2">
+</div>
+<div id="outline-container-orgd4438d1" class="outline-4">
+<h4 id="orgd4438d1"><span class="section-number-4">5.2.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-5-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org35d9602"></a>A<br />
+<div class="outline-text-5" id="text-5-2-1-1">
+<p>
+We must show that the graph of the function is closed.
+Hence, take a sequence \( f_{n} \to f \) in \( C(\mathbb{T}) \) and suppose that \( \Lambda(f_{n}) \to b \).
+We must show that \( \Lambda(f) = b \).
+</p>
+
+<p>
+It follows from continuity of Fourier Transform that the following functions converge pointwise,
+</p>
+
+<p>
+\[ \widehat{f_{n}} \to f, \widehat{\Lambda(f_{n})} \to \widehat{b} \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ \hat{b} = \lim_{n \to \infty} \widehat{\Lambda(f_{n})} = \lim_{n \to \infty} \gamma \cdot \hat{f}_{n} = \gamma \cdot \hat{f} = \widehat{\Lambda(f)} \]
+</p>
+
+<p>
+Fourier inversion proves the claim.
+</p>
+</div>
+</li>
+<li><a id="org8523b20"></a>B<br />
+<div class="outline-text-5" id="text-5-2-1-2">
+<p>
+From part (A) we have that \( \widehat{\Lambda} \) is bounded. So,
+</p>
+
+<p>
+\[ |\gamma| \cdot \| \widehat{f} \|_{\sup} = \| \gamma \cdot \widehat{f} \|_{\sup} = \| \widehat{\Lambda(f)} \|_{\sup} \leq K \| \widehat{f} \|_{\sup}  \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ \| \gamma \| \leq K \]
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0333c79" class="outline-3">
+<h3 id="org0333c79"><span class="section-number-3">5.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-org6046491" class="outline-4">
+<h4 id="org6046491"><span class="section-number-4">5.3.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-5-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org22c32ba"></a>A<br />
+<div class="outline-text-5" id="text-5-3-1-1">
+<p>
+Let \( x_{n} \rightharpoonup x \in C \).
+From Lemma 7.6, We know that such a sequence is bounded.
+This means there is a largest \( J \) such that
+</p>
+
+<p>
+\[ \left\{ x_{n} \right\}_{n \in \mathbb{N}} \subseteq \left\{ \sqrt{j}e_{j} \right\}_{j = 1}^{J} = C_{J} \]
+</p>
+
+<p>
+Because \( C_{J} \) is finite and the weak topology is Hausdorff, \( x_{n} \) must be eventually constant, hence \( x \in C_{J} \subseteq C \).
+</p>
+</div>
+</li>
+<li><a id="orgfeacc1a"></a>B<br />
+<div class="outline-text-5" id="text-5-3-1-2">
+<p>
+Let \( W = W_{\lambda, \varepsilon}(0) \) be a simple neighborhood of the origin.
+By Bessel's inequality,
+</p>
+
+\begin{align*}
+\sum_{j = 1}^{\infty} \left\vert \lambda(e_{j}) \right\vert^{2}
+&= \sum_{j = 1}^{\infty} \left\vert\left\langle x_{\lambda}, e_{j} \right\rangle\right\vert^{2} &\quad&\text{Riesz representation} \\
+&\leq \| x_{\lambda} \|^{2} &\quad&\text{Bessel's Inequality} \\
+&= \| \lambda \|^{2} &\quad&\text{Riesz representation}
+\end{align*}
+
+<p>
+This shows that the sum on the left hand side converges, hence, there is a \( J \) in which
+</p>
+
+<p>
+\[ | \lambda(e_{J}) |^{2} < \frac{\varepsilon^{2}}{J} \implies |\lambda(e_{J})| < \frac{\varepsilon}{\sqrt{J}} \implies |  \lambda(\sqrt{J} e_{J})| < \varepsilon \]
+</p>
+
+<p>
+Hence,
+\[ \forall \varepsilon > 0 \colon \exists J \in \mathbb{N} \colon \sqrt{J} e_{J} \in W_{\lambda, \varepsilon}(0) \]
+</p>
+
+<p>
+We may generate an infinite list of such \( J \)'s inductively.
+</p>
+
+<p>
+Base Case: Let \( \varepsilon > 0 \) be given. We know there is some \( J \) such that \( \sqrt{J} e_{J} \in W_{\lambda, \varepsilon}(0) \)
+</p>
+
+<p>
+Inductive Step: Assume we have some \( J \in \mathbb{N} \) such that \( \sqrt{J} e_{J} \in W_{\lambda, \varepsilon}(0) \).
+</p>
+
+<p>
+Then, there is some \( J' \in \mathbb{N} \) such that \( \sqrt{J'}e_{J'} \in W_{\lambda, \left\vert \lambda(\sqrt{J} e_{J}) \right\vert}(0) \)
+</p>
+
+<p>
+Such a \( J' \) has the property that \( \left\vert \lambda \left( \sqrt{J'}e_{J'} \right) \right\vert < \left\vert \lambda(\sqrt{J} e_{J}) \right\vert \) by construction. Hence, \( J' \neq J \).
+</p>
+
+<p>
+This shows that there are countably infinite such vectors in \( W_{\lambda, \varepsilon}(0) \cap C \).
+</p>
+</div>
+</li>
+<li><a id="orgaa4f796"></a>C<br />
+<div class="outline-text-5" id="text-5-3-1-3">
+<p>
+A general weak neighborhood of zero is a union of basic neighborhoods of zero. Hence, if we show that basic neighborhoods contain an element of \( C \) then we have shown that general weak neighborhoods contain an element of \( C \).
+</p>
+
+<p>
+Let \( W = \cap_{i = 1}^{k} W_{\lambda_{i}, \varepsilon_{i}}(0) \) be a basic open set, \( \varepsilon = \min_{i} \varepsilon_{i} \).
+We may proceed in a similar manner to part B.
+</p>
+
+\begin{align*}
+\sum_{j = 1}^{\infty} \sum_{i = 1}^{k} \left| \lambda_{i}(e_{j}) \right|^{2}
+&= \sum_{i = 1}^{k} \sum_{j = 1}^{\infty} \left| \lambda_{i}(e_{j}) \right|^{2} &\quad&\text{Tonelli's Theorem} \\
+&= \sum_{i = 1}^{k} \sum_{j = 1}^{\infty} \left| \left\langle x_{\lambda_{i}},e_{j}\right\rangle  \right|^{2} &\quad&\text{Riesz representation Theorem} \\
+&= \sum_{i = 1}^{k} \| x_{\lambda_{i}} \|^{2} &\quad&\text{Bessel's Inequality} \\
+&= \sum_{i = 1}^{k} \| \lambda_{i} \|^{2} &\quad&\text{Riesz representation Theorem} \\
+&< \infty
+\end{align*}
+
+<p>
+This shows that there is a \( J \) such that,
+</p>
+
+<p>
+\[ \sum_{i = 1}^{k} |\lambda_{i}(e_{J})|^{2} < \frac{\varepsilon^{2}}{J} \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ | \lambda_{i}(e_{J}) | \leq \sum_{i = 1}^{k} |\lambda_{i}(e_{J})|^{2} < \frac{\varepsilon^{2}}{J} \implies | \lambda_{i}(\sqrt{J} e_{J}) | < \varepsilon  \]
+So \( \sqrt{J} e_{J} \in W \), telling us that \( 0 \) is in the weak closure of \( C \). Hence, \( C \) is not weakly closed (\( 0 \) is not in \( C \)) but it is sequentially closed.     
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org447c966" class="outline-3">
+<h3 id="org447c966"><span class="section-number-3">5.4.</span> Problem 4</h3>
+<div class="outline-text-3" id="text-5-4">
+</div>
+<div id="outline-container-orgc82e92a" class="outline-4">
+<h4 id="orgc82e92a"><span class="section-number-4">5.4.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-5-4-1">
+</div>
+<ol class="org-ol">
+<li><a id="orge062f6a"></a>A<br />
+<div class="outline-text-5" id="text-5-4-1-1">
+<p>
+Suppose that on \( X' \) the weak and weak-* topologies coincide.
+Let \( \mu \in X'' \), we note that \( \mu \) is a continuous function on \( X' \) with respect to the weak topology.  
+</p>
+
+<p>
+\[ \mu \colon X' \to \mathbb{F} \]
+</p>
+
+<p>
+By continuity of \( \mu \) we note that the following set is weakly open
+</p>
+
+\begin{align*}
+\mu^{-1}[B_{\mathbb{F}}(0, 1)]
+&= \left\{ \lambda \in X' \;\middle\vert\; \mu(\lambda) \in B_{\mathbb{F}}(0, 1) \right\} &\quad&\text{} \\
+&= \left\{ \lambda \in X' \;\middle\vert\; | \mu(\lambda) | < 1 \right\} &\quad&\text{} \\
+\end{align*}
+<p>
+By hypothesis this is also an open set in the weak-* topology.
+</p>
+
+<p>
+Because \( \mu(0) = 0 \) by linearity, we note that \( 0 \in \mu^{-1}[B_{\mathbb{F}}(0, 1)] \) so there is a basic open neighborhood of \( 0 \) in the weak-* topology contained in the set.
+</p>
+
+<p>
+\[ \bigcap_{j = 1}^{n} W_{x_{j} , r_{j}}(0) = \left\{ \lambda \in X' \;\middle\vert\; \forall j \in [1 .. n] \colon |\lambda(x_{j})| < r_{j} \right\} \subseteq \mu^{-1}[B_{\mathbb{F}}(0, 1)] \]
+By keeping the \( x_{j} \) and letting \( \varepsilon = \min_{j} r_{j} \) we get an open set in \( X' \) with the property that applying \( \mu \) to any element in the open set will have absolute value less than \( 1 \).
+</p>
+
+<p>
+\[ \bigcap_{j = 1}^{n} W_{x_{j} , \varepsilon}(0) \subseteq \bigcap_{j = 1}^{n} W_{x_{j} , r_{j}}(0) \subseteq \mu^{-1}[B_{\mathbb{F}}(0, 1)] \]
+</p>
+</div>
+</li>
+<li><a id="orgc3dc048"></a>B<br />
+<div class="outline-text-5" id="text-5-4-1-2">
+<p>
+Suppose that \( \lambda x_{j} = 0 \) for all \( j \).
+Then \( \alpha \lambda x_{j} = 0 \) for all \( j \) as well.  
+So \( \alpha \lambda \in \bigcap_{j = 1}^{n} W_{x_{j} , \varepsilon}(0) \).
+Thus, \( | \mu(\alpha \lambda) | < 1 \).
+By linearity, \( |\mu(\lambda)| < \frac{1}{|\alpha|} \) for all \( \alpha \). This means that \( \mu(\lambda) = 0 \).    
+</p>
+</div>
+</li>
+<li><a id="org32daf55"></a>C<br />
+<div class="outline-text-5" id="text-5-4-1-3">
+<p>
+Recall that there is a natural embedding
+</p>
+
+<p>
+\[ \iota \colon X \to X'' \colon x \mapsto (\lambda \mapsto \lambda(x)) \]
+</p>
+
+<p>
+So, \( \iota_{x}(\lambda) = \lambda(x) \) 
+</p>
+
+<p>
+From part (B) we have that
+</p>
+
+<p>
+\[ \bigcap_{j = 1}^{n} \ker(\spn(\iota_{x_{j}})) \subseteq \ker(\mu) \]
+</p>
+
+<p>
+From this we have,
+</p>
+
+\begin{align*}
+\mu
+&= \sum_{j = 1}^{n} \alpha_{j} \iota_{x_{j}} &\quad&\text{Linear Dep. of Intersection of Kernels}\\
+&= \iota_{\sum_{j = 1}^{n} \alpha_{j} x_{j}} &&\text{Linearity of Component}
+\end{align*}
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org7978634" class="outline-2">
+<h2 id="org7978634"><span class="section-number-2">6.</span> Homework 6</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orgfb48af7" class="outline-3">
+<h3 id="orgfb48af7"><span class="section-number-3">6.1.</span> Problem 1</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgd7b71c1" class="outline-4">
+<h4 id="orgd7b71c1"><span class="section-number-4">6.1.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<p>
+We note that \( \sigma(x) \) is nonempty, and the spectral radius is
+</p>
+
+<p>
+\[ \lim_{n \to \infty} \| x^{n} \|^{1/n} = 0 \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ \sigma(x) = \left\{ 0 \right\} \]
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org985ce83" class="outline-3">
+<h3 id="org985ce83"><span class="section-number-3">6.2.</span> Problem 2</h3>
+<div class="outline-text-3" id="text-6-2">
+</div>
+<div id="outline-container-org5e714fb" class="outline-4">
+<h4 id="org5e714fb"><span class="section-number-4">6.2.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-6-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org5dd9414"></a>A<br />
+<div class="outline-text-5" id="text-6-2-1-1">
+<p>
+Note that
+</p>
+
+<p>
+\[ (\lambda - A) \colon \frac{N_{j + 1}}{N_{j}} \to \frac{N_{j}}{N_{j - 1}} \]
+</p>
+
+<p>
+Is a well defined injective linear map.
+</p>
+
+<p>
+Note that the map, \( (\lambda - A) \colon N_{i} \to N_{i - 1} \) as,
+</p>
+
+<p>
+\[ (\lambda - A)^{i - 1} ( (\lambda - A) y_{i}) = (\lambda - A)^{i} y_{i} = 0 \]
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ (\lambda - A) (y_{j + 1} + N_{j}) = (\lambda - A) y_{j + 1} + (\lambda - A) N_{j} \]
+</p>
+
+<p>
+Where \( (\lambda - A) y_{j + 1} \in N_{j} \) and \( (\lambda - A) N_{j} \subseteq N_{j - 1} \).  
+</p>
+</div>
+</li>
+<li><a id="org9e6e740"></a>B<br />
+<div class="outline-text-5" id="text-6-2-1-2">
+<p>
+Suppose that \( N_{j} = N_{j + 1} \).
+</p>
+
+\begin{align*}
+0
+&= \dim(N_{j + 1} / N_{j}) &&\text{Hypothesis} \\
+&\geq \dim(N_{j + 2} / N_{j + 1}) &&\text{Sequence Nonincreasing} \\
+&\geq 0 &&\text{$\dim(V) \in \mathbb{N}$}
+\end{align*}
+
+<p>
+This shows that \( N_{j} = N_{j + 1} = N_{j + 2} \). 
+</p>
+
+<p>
+By simple induction, \( N_{k} = N_{j} \).
+</p>
+</div>
+</li>
+<li><a id="org0753c88"></a>C<br />
+<div class="outline-text-5" id="text-6-2-1-3">
+<p>
+By way of contradiction, suppose,
+</p>
+
+<p>
+\[ N_{j} < N_{j + 1} < \cdots \]
+</p>
+
+<p>
+Then by Riesz's Lemma, there are vectors \( x_{j} \in N_{j} \) with norm \( \| x_{j} \| \leq 1 \) such that  
+</p>
+
+<p>
+\[ \forall j \colon \exists x_{j + 1} \in N_{j + 1} \colon \| x_{j+1}\| \leq 1 \land \dist(x_{j+1}, N_{j}) > \frac{1}{2} \]
+</p>
+
+<p>
+Because the sequence \( \{ x_{j} \} \) is bounded, the sequence \( \left\{ A x_{j} \right\} \) has a convergent subsequence.
+However,
+</p>
+
+\begin{align*}
+\| A x_{k} - A x_{j} \|
+&= |\lambda| \left\Vert x_{k} - \frac{1}{\lambda} \left[ (\lambda - A) x_{k} + A x_{j} \right] \right\Vert &&\\
+&\geq |\lambda| \dist(x_{k}, N_{j - 1}) &&\\
+&\geq \frac{|\lambda|}{2}
+\end{align*}
+
+<p>
+Therefore the sequence has no convergent subsequence. 
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org8e22890" class="outline-3">
+<h3 id="org8e22890"><span class="section-number-3">6.3.</span> Problem 3</h3>
+<div class="outline-text-3" id="text-6-3">
+</div>
+<div id="outline-container-org1de27cc" class="outline-4">
+<h4 id="org1de27cc"><span class="section-number-4">6.3.1.</span> Solution</h4>
+<div class="outline-text-4" id="text-6-3-1">
+</div>
+<ol class="org-ol">
+<li><a id="org42db4d7"></a>A<br />
+<div class="outline-text-5" id="text-6-3-1-1">
+\begin{align}
+M(\phi_{j})(\theta)
+&= \tau_{y} \circ \tau_{-y} \circ M(\phi_{j})(\theta) &&\text{} \\
+&= \tau_{y} M(\tau_{-y} \circ \phi_{j})(\theta) &&\text{} \\
+&= \tau_{y} M(\tau_{-y} \circ e^{2 \pi i j \cdot})(\theta) &&\text{} \\
+&= \tau_{y} M(e^{2 \pi i j (\cdot -y)})(\theta) &&\text{} \\
+&= \tau_{y} M(e^{- 2 \pi i j y} e^{2 \pi i j (\cdot)})(\theta) &&\text{} \\
+&= \tau_{y} e^{- 2 \pi i j y} M(\phi_{j})(\theta) &&\text{} \\
+&= e^{- 2 \pi i j y} M(\phi_{j})(\theta + y) &&\text{} \\
+&= e^{- 2 \pi i j y} \tau_{\theta} M(\phi_{j})(y) &&\text{} \\
+&= e^{- 2 \pi i j y} M(\tau_{\theta}\phi_{j})(y) &&\text{} \\
+&= e^{- 2 \pi i j y} M(e^{2 \pi i j \theta} \phi_{j})(y) &&\text{} \\
+&= e^{- 2 \pi i j y} M(\phi_{j})(y) e^{2 \pi i j \theta} &&\text{} \\
+&= e^{- 2 \pi i j y} M(\phi_{j})(y) \phi_{j}(\theta) &&\text{}
+\end{align}
+
+<p>
+We note that this relation holds for all translations by \( y \). Because outputs of functions are unique, we note that it must be constant for all \( y \). We are thus justified in the notation, \( \gamma_{j} = e^{-2 \pi i j y} M(\phi_{j})(y) \).
+</p>
+</div>
+</li>
+<li><a id="org14bc119"></a>B<br />
+<div class="outline-text-5" id="text-6-3-1-2">
+<p>
+Boundedness of the sequence comes from the hypothesis of boundedness of \( M \). 
+</p>
+
+<p>
+\[ |\gamma_{j}| = | e^{-2 \pi i j y} M(\phi_{j})(y) | \leq |M(\phi_{j})(y)| \leq \| M(\phi_{j}) \| \leq \| M \| < \infty \]
+</p>
+
+
+\begin{align*}
+&&f(\theta) &= \sum_{j \in \mathbb{Z}} a_{j} e^{2 \pi i j \theta} && \\
+&\implies &M f(\theta) &= M \sum_{j \in \mathbb{Z}} a_{j} e^{2 \pi i j \theta} && \\
+&&&= \sum_{j \in \mathbb{Z}} a_{j} M(e^{2 \pi i j \theta}) &&\text{Continuity of $M$} \\
+&&&= \sum_{j \in \mathbb{Z}} a_{j} \gamma_{j} e^{2 \pi i j \theta} &&\text{Part A}
+\end{align*}
+</div>
+</li>
+<li><a id="orgb5a8e47"></a>C<br />
+<div class="outline-text-5" id="text-6-3-1-3">
+<p>
+We first note that our function \( M = \mathcal{F}^{-1} M_{\gamma} \mathcal{F} \) where \( M_{\gamma} \) multiplies by \( \gamma_{j} \in L^{\infty}(\mathbb{T}) \) and \( \mathcal{F} \) is the Fourier transform. Our function \( M \) has the same spectra as the multiplication operator.
+</p>
+
+<p>
+We note that \( M_{\gamma} - \lambda = M_{\gamma - \lambda} \) is bijective if and only if \( (M_{\gamma} - \lambda) x = y \) has a solution. That happens if and only if the operator \( y \mapsto (\gamma - \lambda)^{-1} y \) is a bounded linear map on \( L^{2} \) which then happens if and only if \( \frac{1}{\gamma - \lambda} \) is in \( L^{\infty} \). This states that there is some \( C \) such that
+</p>
+
+<p>
+\[ \mu(\left\{ x \in \mathbb{T} \;\middle\vert\; |(\gamma - \lambda)^{-1}| > C \right\}) = 0 \]
+</p>
+
+<p>
+so,
+</p>
+
+<p>
+\[ \mu(\left\{ x \in \mathbb{T} \;\middle\vert\; |(\gamma - \lambda)| > \frac{1}{C} \right\}) = 0 \]
+</p>
+
+<p>
+Which is the condition that \( \lambda \) is not in the essential range of \( \gamma \).
+</p>
+
+<p>
+Hence,
+</p>
+
+<p>
+\[ \sigma(M) = \text{essran}(\gamma_{j}) \]
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd23747d" class="outline-2">
+<h2 id="orgd23747d"><span class="section-number-2">7.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Defined normed linear space.
+</p>
+</div>
+</div>
+<div id="outline-container-org7131338" class="outline-2">
+<h2 id="org7131338"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Proved Riez Lemma.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb98a433" class="outline-2">
+<h2 id="orgb98a433"><span class="section-number-2">9.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+</div>
+<div id="outline-container-orge0fe74f" class="outline-2">
+<h2 id="orge0fe74f"><span class="section-number-2">10.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+</div>
+<div id="outline-container-orgb373b98" class="outline-2">
+<h2 id="orgb373b98"><span class="section-number-2">11.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+</div>
+<div id="outline-container-org62ce0e7" class="outline-2">
+<h2 id="org62ce0e7"><span class="section-number-2">12.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+</div>
+<div id="outline-container-org5391a96" class="outline-2">
+<h2 id="org5391a96"><span class="section-number-2">13.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+</div>
+<div id="outline-container-org9b669e2" class="outline-2">
+<h2 id="org9b669e2"><span class="section-number-2">14.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+</div>
+<div id="outline-container-org32c5703" class="outline-2">
+<h2 id="org32c5703"><span class="section-number-2">15.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+</div>
+<div id="outline-container-org6ef967a" class="outline-2">
+<h2 id="org6ef967a"><span class="section-number-2">16.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+</div>
+<div id="outline-container-orgab263fd" class="outline-2">
+<h2 id="orgab263fd"><span class="section-number-2">17.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+</div>
+<div id="outline-container-org950f7df" class="outline-2">
+<h2 id="org950f7df"><span class="section-number-2">18.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-18">
+</div>
+</div>
+<div id="outline-container-orga5c3122" class="outline-2">
+<h2 id="orga5c3122"><span class="section-number-2">19.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-19">
+</div>
+</div>
+<div id="outline-container-orgcd4ef99" class="outline-2">
+<h2 id="orgcd4ef99"><span class="section-number-2">20.</span> <span class="done DONE">DONE</span> MATH 633</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+</div>
+<div id="outline-container-orgfb0e771" class="outline-2">
+<h2 id="orgfb0e771"><span class="section-number-2">21.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-21">
+</div>
+</div>
+<div id="outline-container-org2ab7bb9" class="outline-2">
+<h2 id="org2ab7bb9"><span class="section-number-2">22.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-22">
+</div>
+</div>
+<div id="outline-container-orgc1baa9c" class="outline-2">
+<h2 id="orgc1baa9c"><span class="section-number-2">23.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-23">
+</div>
+</div>
+<div id="outline-container-orgea46948" class="outline-2">
+<h2 id="orgea46948"><span class="section-number-2">24.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-24">
+</div>
+</div>
+<div id="outline-container-orgef62c59" class="outline-2">
+<h2 id="orgef62c59"><span class="section-number-2">25.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+</div>
+<div id="outline-container-org6756822" class="outline-2">
+<h2 id="org6756822"><span class="section-number-2">26.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+</div>
+<div id="outline-container-org74438cd" class="outline-2">
+<h2 id="org74438cd"><span class="section-number-2">27.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-27">
+</div>
+</div>
+<div id="outline-container-orgeab3c4a" class="outline-2">
+<h2 id="orgeab3c4a"><span class="section-number-2">28.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-28">
+</div>
+</div>
+<div id="outline-container-org1919565" class="outline-2">
+<h2 id="org1919565"><span class="section-number-2">29.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-29">
+</div>
+</div>
+<div id="outline-container-org8bd19fe" class="outline-2">
+<h2 id="org8bd19fe"><span class="section-number-2">30.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-30">
+</div>
+</div>
+<div id="outline-container-orge409097" class="outline-2">
+<h2 id="orge409097"><span class="section-number-2">31.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-31">
+</div>
+</div>
+<div id="outline-container-org3fecd2c" class="outline-2">
+<h2 id="org3fecd2c"><span class="section-number-2">32.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-32">
+</div>
+</div>
+<div id="outline-container-org78f3e1e" class="outline-2">
+<h2 id="org78f3e1e"><span class="section-number-2">33.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-33">
+</div>
+</div>
+<div id="outline-container-orgdfcd753" class="outline-2">
+<h2 id="orgdfcd753"><span class="section-number-2">34.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-34">
+</div>
+</div>
+<div id="outline-container-org36b55b1" class="outline-2">
+<h2 id="org36b55b1"><span class="section-number-2">35.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-35">
+</div>
+</div>
+<div id="outline-container-orgb49d8e1" class="outline-2">
+<h2 id="orgb49d8e1"><span class="section-number-2">36.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-36">
+</div>
+</div>
+<div id="outline-container-orgfbe8e39" class="outline-2">
+<h2 id="orgfbe8e39"><span class="section-number-2">37.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-37">
+</div>
+</div>
+<div id="outline-container-org9aced99" class="outline-2">
+<h2 id="org9aced99"><span class="section-number-2">38.</span> <span class="todo TODO">TODO</span> MATH 633</h2>
+<div class="outline-text-2" id="text-38">
+</div>
+</div>
+</div>
+</body>
+</html>

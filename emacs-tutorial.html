@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs Tutorial</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Emacs Tutorial</h1>
+<p>
+An opinionated collection of high level concepts for the <a href="emacs.html#ID-77bea67c-e086-4046-a82a-9304f76fa38c">Emacs</a> text editor.
+</p>
+<div id="outline-container-org208ddd9" class="outline-2">
+<h2 id="org208ddd9"><span class="section-number-2">1.</span> Emacs is an Emacs Lisp interpreter</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This is the fundamental idea within the Zen of Emacs. Every key you press that gets sent to Emacs is a function which is called in Emacs. When one types, "a", this in fact calls upon the command <code>self-insert-key</code> with the parameter "a".
+</p>
+
+<p>
+Workflows in Unix like systems involve using the shell to manipulate text and pipe said text into other programs. The method by which a user parses the text involves a sequence of regular expressions to get the right piece of data. In Emacs, data is not entirely text based, there is the <code>string</code> datatype, but most data are structured.
+</p>
+</div>
+</div>
+<div id="outline-container-org7787700" class="outline-2">
+<h2 id="org7787700"><span class="section-number-2">2.</span> High Level Ideas</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org23dae82" class="outline-3">
+<h3 id="org23dae82"><span class="section-number-3">2.1.</span> Emacs Lisp Interpreter</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Emacs, at its most fundamental level, is an Emacs Lisp Interpreter. Emacs is a program intended to run commands in a language called Emacs Lisp. It is well known as a text editor, however, that label undermines the full capabilities of Emacs. 
+</p>
+</div>
+</div>
+<div id="outline-container-org030ffea" class="outline-3">
+<h3 id="org030ffea"><span class="section-number-3">2.2.</span> Information Processing</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgff335eb" class="outline-4">
+<h4 id="orgff335eb"><span class="section-number-4">2.2.1.</span> Filtration</h4>
+</div>
+
+<div id="outline-container-orge9bfeb0" class="outline-4">
+<h4 id="orge9bfeb0"><span class="section-number-4">2.2.2.</span> Selection</h4>
+</div>
+
+<div id="outline-container-org4986935" class="outline-4">
+<h4 id="org4986935"><span class="section-number-4">2.2.3.</span> Completion</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org883f88f" class="outline-2">
+<h2 id="org883f88f"><span class="section-number-2">3.</span> Vertico</h2>
+</div>
+
+<div id="outline-container-org6a78490" class="outline-2">
+<h2 id="org6a78490"><span class="section-number-2">4.</span> Marginalia</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Symbol</th>
+<th scope="col" class="org-left">Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">f</td>
+<td class="org-left">function</td>
+</tr>
+
+<tr>
+<td class="org-left">c</td>
+<td class="org-left">command</td>
+</tr>
+
+<tr>
+<td class="org-left">C</td>
+<td class="org-left">interactive-only command</td>
+</tr>
+
+<tr>
+<td class="org-left">m</td>
+<td class="org-left">macro</td>
+</tr>
+
+<tr>
+<td class="org-left">F</td>
+<td class="org-left">special-form</td>
+</tr>
+
+<tr>
+<td class="org-left">M</td>
+<td class="org-left">module function</td>
+</tr>
+
+<tr>
+<td class="org-left">P</td>
+<td class="org-left">primitive</td>
+</tr>
+
+<tr>
+<td class="org-left">g</td>
+<td class="org-left">cl-generic</td>
+</tr>
+
+<tr>
+<td class="org-left">p</td>
+<td class="org-left">pure</td>
+</tr>
+
+<tr>
+<td class="org-left">s</td>
+<td class="org-left">side-effect-tree</td>
+</tr>
+
+<tr>
+<td class="org-left">@</td>
+<td class="org-left">autoloaded</td>
+</tr>
+
+<tr>
+<td class="org-left">\!</td>
+<td class="org-left">advised</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">obsolete</td>
+</tr>
+
+<tr>
+<td class="org-left">&amp;</td>
+<td class="org-left">alias</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">u</td>
+<td class="org-left">custom</td>
+</tr>
+
+<tr>
+<td class="org-left">U</td>
+<td class="org-left">custom (Modified compared to global value)</td>
+</tr>
+
+<tr>
+<td class="org-left">v</td>
+<td class="org-left">variable</td>
+</tr>
+
+<tr>
+<td class="org-left">l</td>
+<td class="org-left">local</td>
+</tr>
+
+<tr>
+<td class="org-left">L</td>
+<td class="org-left">local (Modified compared to default value)</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">obsolete</td>
+</tr>
+
+<tr>
+<td class="org-left">&amp;</td>
+<td class="org-left">alias</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">a</td>
+<td class="org-left">face</td>
+</tr>
+
+<tr>
+<td class="org-left">t</td>
+<td class="org-left">cl-type</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org7dbe14b" class="outline-2">
+<h2 id="org7dbe14b"><span class="section-number-2">5.</span> Flash Cards (<code>Org-FC</code>)</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Spaced Repetition systems (SRS) are (often programatic) methods of recalling information. There is a nice SRS being actively developed called <code>org-fc</code>. 
+</p>
+</div>
+<div id="outline-container-org4f29538" class="outline-3">
+<h3 id="org4f29538"><span class="section-number-3">5.1.</span> Math Definitions</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Use a compact normal card. The Org heading is the definition name, then the body is the actual definition, "A <b>X</b> is <b><b>Y</b></b> if&#x2026;".
+</p>
+</div>
+</div>
+<div id="outline-container-org908cea5" class="outline-3">
+<h3 id="org908cea5"><span class="section-number-3">5.2.</span> Math Theorems</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Double Sided Normal Card. Heading is name of theorem or some kind of summary of significance. One sub-heading is the full statement. Back sub-heading is the proof of the theorem. Put multiple cards for each of the steps of the proof. This makes the cards easier to compose and less likely to become a repeat card over time.
+</p>
+</div>
+</div>
+<div id="outline-container-org484ac93" class="outline-3">
+<h3 id="org484ac93"><span class="section-number-3">5.3.</span> Program Syntax</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Double sided card. Front states a question about what the syntax can accomplish. Back is the exact notation to use for the syntax.
+</p>
+</div>
+</div>
+<div id="outline-container-org3db2117" class="outline-3">
+<h3 id="org3db2117"><span class="section-number-3">5.4.</span> Program Functions</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Double sided card. Front is the function name and module path. Back is the arguments of the function and their purposes.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbeefdbe" class="outline-2">
+<h2 id="orgbeefdbe"><span class="section-number-2">6.</span> Org Roam</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Org Roam is a method of 
+</p>
+</div>
+</div>
+<div id="outline-container-org38f8ead" class="outline-2">
+<h2 id="org38f8ead"><span class="section-number-2">7.</span> Emacs Lisp</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org327fb86" class="outline-3">
+<h3 id="org327fb86"><span class="section-number-3">7.1.</span> File Management</h3>
+<div class="outline-text-3" id="text-7-1">
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #000000;">(</span>file-truename <span style="color: #3548cf;">"~/dwn/"</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

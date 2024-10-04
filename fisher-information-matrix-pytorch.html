@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fisher Information Matrix PyTorch</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Fisher Information Matrix PyTorch</h1>
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #531ab6;">import</span> torch
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">_check_param_device</span><span style="color: #000000;">(</span>param, old_param_device<span style="color: #000000;">)</span>:
+    r<span style="color: #2a5045;">"""This helper function is to check if the parameters are located</span>
+<span style="color: #2a5045;">    in the same device. Currently, the conversion between model parameters</span>
+<span style="color: #2a5045;">    and single vector form is not supported for multiple allocations,</span>
+<span style="color: #2a5045;">    e.g. parameters in different GPUs, or mixture of CPU/GPU.</span>
+
+<span style="color: #2a5045;">    Arguments:</span>
+<span style="color: #2a5045;">        param ([Tensor]): a Tensor of a parameter of a model</span>
+<span style="color: #2a5045;">        old_param_device (int): the device where the first parameter of a</span>
+<span style="color: #2a5045;">                                model is allocated.</span>
+
+<span style="color: #2a5045;">    Returns:</span>
+<span style="color: #2a5045;">        old_param_device (int): report device for the first time</span>
+<span style="color: #2a5045;">    """</span>
+
+    <span style="color: #595959;"># </span><span style="color: #595959;">Meet the first parameter</span>
+    <span style="color: #531ab6;">if</span> old_param_device <span style="color: #531ab6;">is</span> <span style="color: #0000b0;">None</span>:
+        <span style="color: #005e8b;">old_param_device</span> = param.get_device<span style="color: #000000;">()</span> <span style="color: #531ab6;">if</span> param.is_cuda <span style="color: #531ab6;">else</span> -1
+    <span style="color: #531ab6;">else</span>:
+        <span style="color: #005e8b;">warn</span> = <span style="color: #0000b0;">False</span>
+        <span style="color: #531ab6;">if</span> param.is_cuda:  <span style="color: #595959;"># </span><span style="color: #595959;">Check if in same GPU</span>
+            <span style="color: #005e8b;">warn</span> = <span style="color: #000000;">(</span>param.get_device<span style="color: #dd22dd;">()</span> != old_param_device<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">else</span>:  <span style="color: #595959;"># </span><span style="color: #595959;">Check if in CPU</span>
+            <span style="color: #005e8b;">warn</span> = <span style="color: #000000;">(</span>old_param_device != -1<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">if</span> warn:
+            <span style="color: #531ab6;">raise</span> <span style="color: #005f5f;">TypeError</span><span style="color: #000000;">(</span><span style="color: #3548cf;">'Found two parameters on different devices, '</span>
+                            <span style="color: #3548cf;">'this is currently not supported.'</span><span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> old_param_device
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">vector_to_parameter_list</span><span style="color: #000000;">(</span>vec, parameters<span style="color: #000000;">)</span>:
+    r<span style="color: #2a5045;">"""Convert one vector to the parameter list</span>
+
+<span style="color: #2a5045;">    Arguments:</span>
+<span style="color: #2a5045;">        vec (Tensor): a single vector represents the parameters of a model.</span>
+<span style="color: #2a5045;">        parameters (Iterable[Tensor]): an iterator of Tensors that are the</span>
+<span style="color: #2a5045;">            parameters of a model.</span>
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #595959;"># </span><span style="color: #595959;">Ensure vec of type Tensor</span>
+    <span style="color: #531ab6;">if</span> <span style="color: #531ab6;">not</span> <span style="color: #8f0075;">isinstance</span><span style="color: #000000;">(</span>vec, torch.Tensor<span style="color: #000000;">)</span>:
+        <span style="color: #531ab6;">raise</span> <span style="color: #005f5f;">TypeError</span><span style="color: #000000;">(</span><span style="color: #3548cf;">'expected torch.Tensor, but got: {}'</span>
+                        .<span style="color: #8f0075;">format</span><span style="color: #dd22dd;">(</span>torch.typename<span style="color: #008899;">(</span>vec<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #595959;"># </span><span style="color: #595959;">Flag for the device where the parameter is located</span>
+    <span style="color: #005e8b;">param_device</span> = <span style="color: #0000b0;">None</span>
+    <span style="color: #005e8b;">params_new</span> = <span style="color: #000000;">[]</span>
+    <span style="color: #595959;"># </span><span style="color: #595959;">Pointer for slicing the vector for each parameter</span>
+    <span style="color: #005e8b;">pointer</span> = 0
+    <span style="color: #531ab6;">for</span> param <span style="color: #531ab6;">in</span> parameters:
+        <span style="color: #595959;"># </span><span style="color: #595959;">Ensure the parameters are located in the same device</span>
+        <span style="color: #005e8b;">param_device</span> = _check_param_device<span style="color: #000000;">(</span>param, param_device<span style="color: #000000;">)</span>
+
+        <span style="color: #595959;"># </span><span style="color: #595959;">The length of the parameter</span>
+        <span style="color: #005e8b;">num_param</span> = param.numel<span style="color: #000000;">()</span>
+        <span style="color: #595959;"># </span><span style="color: #595959;">Slice the vector, reshape it, and replace the old data of the parameter</span>
+        <span style="color: #005e8b;">param_new</span> = vec<span style="color: #000000;">[</span>pointer:pointer + num_param<span style="color: #000000;">]</span>.view_as<span style="color: #000000;">(</span>param<span style="color: #000000;">)</span>.data
+        params_new.append<span style="color: #000000;">(</span>param_new<span style="color: #000000;">)</span>
+        <span style="color: #595959;"># </span><span style="color: #595959;">Increment the pointer</span>
+        <span style="color: #005e8b;">pointer</span> += num_param
+
+    <span style="color: #531ab6;">return</span> <span style="color: #8f0075;">list</span><span style="color: #000000;">(</span>params_new<span style="color: #000000;">)</span>
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">Rop</span><span style="color: #000000;">(</span>ys, xs, vs<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">if</span> <span style="color: #8f0075;">isinstance</span><span style="color: #000000;">(</span>ys, <span style="color: #8f0075;">tuple</span><span style="color: #000000;">)</span>:
+        <span style="color: #005e8b;">ws</span> = <span style="color: #000000;">[</span>torch.tensor<span style="color: #dd22dd;">(</span>torch.zeros_like<span style="color: #008899;">(</span>y<span style="color: #008899;">)</span>, requires_grad=<span style="color: #0000b0;">True</span><span style="color: #dd22dd;">)</span> <span style="color: #531ab6;">for</span> y <span style="color: #531ab6;">in</span> ys<span style="color: #000000;">]</span>
+    <span style="color: #531ab6;">else</span>:
+        <span style="color: #005e8b;">ws</span> = torch.tensor<span style="color: #000000;">(</span>torch.zeros_like<span style="color: #dd22dd;">(</span>ys<span style="color: #dd22dd;">)</span>, requires_grad=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+
+    <span style="color: #005e8b;">gs</span> = torch.autograd.grad<span style="color: #000000;">(</span>ys, xs, grad_outputs=ws, create_graph=<span style="color: #0000b0;">True</span>, retain_graph=<span style="color: #0000b0;">True</span>, allow_unused=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">re</span> = torch.autograd.grad<span style="color: #000000;">(</span>gs, ws, grad_outputs=vs, create_graph=<span style="color: #0000b0;">True</span>, retain_graph=<span style="color: #0000b0;">True</span>, allow_unused=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> <span style="color: #8f0075;">tuple</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>j.detach<span style="color: #008899;">()</span> <span style="color: #531ab6;">for</span> j <span style="color: #531ab6;">in</span> re<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">Lop</span><span style="color: #000000;">(</span>ys, xs, ws<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">vJ</span> = torch.autograd.grad<span style="color: #000000;">(</span>ys, xs, grad_outputs=ws, create_graph=<span style="color: #0000b0;">True</span>, retain_graph=<span style="color: #0000b0;">True</span>, allow_unused=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> <span style="color: #8f0075;">tuple</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>j.detach<span style="color: #008899;">()</span> <span style="color: #531ab6;">for</span> j <span style="color: #531ab6;">in</span> vJ<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">HesssianVectorProduct</span><span style="color: #000000;">(</span>f, x, v<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">df_dx</span> = torch.autograd.grad<span style="color: #000000;">(</span>f, x, create_graph=<span style="color: #0000b0;">True</span>, retain_graph=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">Hv</span> = Rop<span style="color: #000000;">(</span>df_dx, x, v<span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> <span style="color: #8f0075;">tuple</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>j.detach<span style="color: #008899;">()</span> <span style="color: #531ab6;">for</span> j <span style="color: #531ab6;">in</span> Hv<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">FisherVectorProduct</span><span style="color: #000000;">(</span>loss, output, model, vp<span style="color: #000000;">)</span>:
+
+
+    <span style="color: #005e8b;">Jv</span> = Rop<span style="color: #000000;">(</span>output, <span style="color: #8f0075;">list</span><span style="color: #dd22dd;">(</span>model.parameters<span style="color: #008899;">()</span><span style="color: #dd22dd;">)</span>, vp<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">batch</span>, <span style="color: #005e8b;">dims</span> = output.size<span style="color: #000000;">(</span>0<span style="color: #000000;">)</span>, output.size<span style="color: #000000;">(</span>1<span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">if</span> loss.grad_fn.__class__.<span style="color: #8f0075;">__name__</span> == <span style="color: #3548cf;">'NllLossBackward'</span>:
+        <span style="color: #005e8b;">outputsoftmax</span> = torch.nn.functional.softmax<span style="color: #000000;">(</span>output, dim=1<span style="color: #000000;">)</span>
+        <span style="color: #005e8b;">M</span> = torch.zeros<span style="color: #000000;">(</span>batch, dims, dims<span style="color: #000000;">)</span>.cuda<span style="color: #000000;">()</span> <span style="color: #531ab6;">if</span> outputsoftmax.is_cuda <span style="color: #531ab6;">else</span> torch.zeros<span style="color: #000000;">(</span>batch, dims, dims<span style="color: #000000;">)</span>
+        M.reshape<span style="color: #000000;">(</span>batch, -1<span style="color: #000000;">)[</span>:, ::dims + 1<span style="color: #000000;">]</span> = outputsoftmax
+        <span style="color: #005e8b;">H</span> = M - torch.einsum<span style="color: #000000;">(</span><span style="color: #3548cf;">'bi,bj-&gt;bij'</span>, <span style="color: #dd22dd;">(</span>outputsoftmax, outputsoftmax<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+        <span style="color: #005e8b;">HJv</span> = <span style="color: #000000;">[</span>torch.squeeze<span style="color: #dd22dd;">(</span>H @ torch.unsqueeze<span style="color: #008899;">(</span>Jv<span style="color: #972500;">[</span>0<span style="color: #972500;">]</span>,
+                                                 -1<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span> / batch<span style="color: #000000;">]</span> 
+    <span style="color: #531ab6;">else</span>:
+        <span style="color: #005e8b;">HJv</span> = HesssianVectorProduct<span style="color: #000000;">(</span>loss, output, Jv<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">JHJv</span> = Lop<span style="color: #000000;">(</span>output, <span style="color: #8f0075;">list</span><span style="color: #dd22dd;">(</span>model.parameters<span style="color: #008899;">()</span><span style="color: #dd22dd;">)</span>, HJv<span style="color: #000000;">)</span>
+
+
+    <span style="color: #531ab6;">return</span> torch.cat<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>torch.flatten<span style="color: #008899;">(</span>v<span style="color: #008899;">)</span> <span style="color: #531ab6;">for</span> v <span style="color: #531ab6;">in</span> JHJv<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+</div>
+</body>
+</html>

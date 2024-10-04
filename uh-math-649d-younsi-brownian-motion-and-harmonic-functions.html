@@ -1,0 +1,1511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UH MATH 649D Younsi Brownian Motion and Harmonic Functions</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">UH MATH 649D Younsi Brownian Motion and Harmonic Functions</h1>
+<p>
+Class taken at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+<div id="outline-container-orge619278" class="outline-2">
+<h2 id="orge619278"><span class="section-number-2">1.</span> MATH 649D Younsi</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org818fb84" class="outline-3">
+<h3 id="org818fb84"><span class="section-number-3">1.1.</span> Homework 1</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgce2d7cd" class="outline-4">
+<h4 id="orgce2d7cd"><span class="section-number-4">1.1.1.</span> Problem 1</h4>
+<div class="outline-text-4" id="text-1-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="org460c42c"></a>A<br />
+<div class="outline-text-5" id="text-1-1-1-1">
+<p>
+Denote \( E_i \) be the event where \( HTTHTH \) happens on the \( i \)-th toss. 
+Note: \( \forall i \mathbb{P}(E_i) = \mathbb{P}(HTTHTH) = \frac{1}{2^6} \) because the tosses are independent.
+\( \sum_i P(E_i) = \infty \) hence by Borel Cantelli \( \mathbb{P}(HTTHTH \text{ i.o}) = 1  \)  
+</p>
+</div>
+</li>
+<li><a id="org4bce9c6"></a>B<br />
+<div class="outline-text-5" id="text-1-1-1-2">
+<p>
+Denote \( E_i \) be the event where \( H\ldots H \) \( i \)-times for tosses \( i \) to \( 2i \). 
+Note: \( \forall i \mathbb{P}(E_i) = \frac{1}{2^i} \).
+\( \sum_i P(E_i) = 1 \) hence by Borel Cantelli \( \mathbb{P}(HTTHTH \text{ i.o}) = 0  \)  
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgf5b5578" class="outline-4">
+<h4 id="orgf5b5578"><span class="section-number-4">1.1.2.</span> Problem 2</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+First we do some preliminary simplification, then I will do the proof.
+</p>
+
+<p>
+Let \( A \) be an arbitrary set and \( \mathbbm{1}_A \) be it's indicator function.
+\( \mathcal{F}(\mathbbm{1}_A) = \{\mathbbm{1}_A^{-1}(B) \vert B \text{ Borel} \}\) The characteristic function is only \( 0 \) or \( 1 \) hence we have the cases for \( B \).
+</p>
+
+<ol class="org-ol">
+<li>\( 0,1 \not \in B \) \( \implies \mathbbm{1}_A^{-1}(B) = \emptyset \)</li>
+<li>\( 1 \in B \) and \( 0 \not \in B \) \( \implies \mathbbm{1}_A^{-1}(B) = A \)</li>
+<li>\( 0 \in B \) and \( 1 \not \in B \) \( \implies \mathbbm{1}_A^{-1}(B) = A^c \)</li>
+<li>\( 0,1 \in B \) \( \implies \mathbbm{1}_A^{-1}(B) = \Omega \)</li>
+</ol>
+
+<p>
+\( \mathcal{F}(\mathbbm{1}_A) = \{ \emptyset, A, A^c, \Omega \}\)
+</p>
+
+<p>
+Having proved this for a general indicator function this will be true for given \( A \) and \( B \).
+</p>
+
+<p>
+Thus the probabilities we need to calculate can be organized into a table.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">\( \emptyset \)</th>
+<th scope="col" class="org-left">\( A \)</th>
+<th scope="col" class="org-left">\( A^c \)</th>
+<th scope="col" class="org-left">\( \Omega \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\( \emptyset \)</td>
+<td class="org-right">0</td>
+<td class="org-left">0</td>
+<td class="org-left">0</td>
+<td class="org-left">0</td>
+</tr>
+
+<tr>
+<td class="org-left">\( B \)</td>
+<td class="org-right">0</td>
+<td class="org-left">\( P(A \cap B) \)</td>
+<td class="org-left">\( P(A^c \cap B) \)</td>
+<td class="org-left">\( P(B) \)</td>
+</tr>
+
+<tr>
+<td class="org-left">\( B^c \)</td>
+<td class="org-right">0</td>
+<td class="org-left">\( P(A \cap B^c) \)</td>
+<td class="org-left">\( P(A^c \cap B^c) \)</td>
+<td class="org-left">\( P(B^c) \)</td>
+</tr>
+
+<tr>
+<td class="org-left">\( \Omega \)</td>
+<td class="org-right">0</td>
+<td class="org-left">\( P(A) \)</td>
+<td class="org-left">\( P(A^c) \)</td>
+<td class="org-left">\( 1\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+To verify independence in our proof, we only need to see that \( P(A \cap B) = P(A)P(B) \). The rows containing \( \emptyset \) and \( \Omega \) have nothing to verify.
+Also short lemma if \( A \) and \( B \) are independent then \( A \), \( A^c \), \( B \), and \( B^c \) are all independent.
+</p>
+
+\begin{align*}
+P(A^c \cap B^c)
+&= P((A \cup B)^c) \\
+&= 1 - P(A \cup B) \\
+&= 1 - [P(A) + P(B) - P(A \cap B)] \\
+&= 1 - P(A) - P(B) + P(A)P(B) \\
+&= (1 - P(A))(1 - P(B)) 
+\end{align*}
+
+\begin{align*}
+P(A \cap B^c)
+&= P(A) - P(A \cap B) \\
+&= P(A) - P(A)P(B) \\
+&= P(A)(1 - P(B))
+\end{align*}
+
+\begin{align*}
+P(A^c \cap B)
+&= P(B) - P(A \cap B) \\
+&= P(B) - P(A)P(B) \\
+&= P(B)(1 - P(A))
+\end{align*}
+
+<p>
+Now, for the actual proof.
+</p>
+
+<p>
+Suppose \( A  \) and \( B \) are independent.
+</p>
+
+<p>
+Then the correspondent \( \sigma \)-algebras are independent using the lemma.
+</p>
+
+<p>
+Suppose the \( \sigma \)-algebras are independent. Then all the sets are independent, namely \( A \) and \( B \) are independent.
+</p>
+</div>
+</div>
+<div id="outline-container-org069d450" class="outline-4">
+<h4 id="org069d450"><span class="section-number-4">1.1.3.</span> Problem 3</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+Let \( X \sim U[-1,1] \) having density \( f(x) = \frac{1}{2} \) 
+</p>
+
+<p>
+Then \( X \) and \( X^2 \) are not independent. However their expectations are multiplicative.
+We will not need to compute \( \mathbb{E}[X^2] \) interestingly enough.
+</p>
+
+<p>
+Because \( X \) and \( X^3 \) are odd functions on a symmetric interval their expectations are \( 0 \).
+</p>
+
+<p>
+Hence \( \mathbb{E}[X^3] = 0 = \mathbb{E}[X^2] \mathbb{E}[X] = \mathbb{E}[X^2] \cdot 0 \) 
+</p>
+</div>
+</div>
+<div id="outline-container-orgae99ec9" class="outline-4">
+<h4 id="orgae99ec9"><span class="section-number-4">1.1.4.</span> Problem 4</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+We have stated in class that a distribution determines a random variable.
+</p>
+
+<p>
+Let \( F(x) = \begin{cases} 0 & x < 0 \\ c(x) & 0 \leq x \leq 1 \\ 1 & 1 < x\end{cases} \) 
+</p>
+
+<p>
+Where \( c(x) \) is the Cantor Function (the famous counter example that goes from \( 0 \) to \( 1 \))
+</p>
+
+<p>
+\( F(x) \) is \( 0 \) as \( x \to - \infty \)
+\( F(x) \) is \( 1 \) as \( x \to \infty \)
+\( F(x) \) is right continuous
+\( F(x) \) is increasing
+\( \forall x . 0 \leq F(x) \leq 1 \) 
+</p>
+
+<p>
+Hence \( F \) is a distribution for a random variable \( X \).
+</p>
+
+<p>
+But \( X \) has no density function.
+</p>
+
+<p>
+If it did, then firstly, \( f = 0 \) on \( \mathbb{R} - [0,1] \).
+</p>
+
+<p>
+Then suppose \( f \neq 0 \) on some interval \( J \subseteq [0,1] \) then \( \int_J f d \mu \neq 0 \). But every interval contains a constant part of the cantor function meaning the function should have been \( 0 \) on that constant portion. Hence a contradiction.
+</p>
+</div>
+</div>
+<div id="outline-container-org25a5401" class="outline-4">
+<h4 id="org25a5401"><span class="section-number-4">1.1.5.</span> Problem 5</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+I remember talking about this problem!
+Consider the experiment of two tosses of a coin.
+The columns are the first coin, the rows are the second coin.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">H</td>
+<td class="org-left">T</td>
+</tr>
+
+<tr>
+<td class="org-left">H</td>
+<td class="org-left">HH</td>
+<td class="org-left">TH</td>
+</tr>
+
+<tr>
+<td class="org-left">T</td>
+<td class="org-left">HT</td>
+<td class="org-left">TT</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Let \( A_1 \) be the event where the first toss is heads.
+Let \( A_2 \) be the event where the second toss is heads.
+Let \( A_3 \) be the event where only one toss is heads.
+</p>
+
+<p>
+Then,
+</p>
+
+<p>
+\( P(A_1 \cap A_2)  = \frac{1}{4} = P(A_1) P(A_2) \) (This is the top left element of the table)
+\( P(A_1 \cap A_3)  = \frac{1}{4} = P(A_1) P(A_3) \) (This is the bottom left element of the table)
+\( P(A_2 \cap A_3)  = \frac{1}{4} = P(A_2) P(A_3) \) (This it the top right element of the table)
+</p>
+
+<p>
+However,
+</p>
+
+<p>
+\( P(A_1 \cap A_2 \cap A_3) = 0 \neq \frac{1}{8} \) We cannot have both coins be heads and only one coin be heads.
+</p>
+</div>
+</div>
+<div id="outline-container-org7203395" class="outline-4">
+<h4 id="org7203395"><span class="section-number-4">1.1.6.</span> Problem 6</h4>
+<div class="outline-text-4" id="text-1-1-6">
+</div>
+<ol class="org-ol">
+<li><a id="org9a0ede3"></a>A<br />
+<div class="outline-text-5" id="text-1-1-6-1">
+<p>
+Let \( U \colon [0,1] \to \mathbb{R} \) via \( U(\omega) = \omega \).
+</p>
+
+<p>
+The distribution of \( U \) is \( F_U(x) = \mathbb{P}(U^{-1}([-\infty,x])) = \mathbb{P}(U^{-1}([0,x])) = \mathbb{P}([0,x]) = x\).
+The pushforward measure is the same as the original measure hence absolutely continuous and has density \( f \) given by the Radon-Nikodym theorem.
+</p>
+
+<p>
+Hence \( \int_0^x f(x) dx = x \implies f(x) = 1 \).
+</p>
+</div>
+</li>
+<li><a id="org6e7ccf9"></a>B<br />
+<div class="outline-text-5" id="text-1-1-6-2">
+<p>
+Let \( U(\omega) = \sum_{j = 1}^{\infty} \frac{B_j(\omega)}{2^j} \)
+</p>
+
+<p>
+Note that \( B_j(\omega) \) is a Bernoulli random variable.
+</p>
+
+<p>
+Let \( \{I_n\}_{n \in \mathbb{N}} \) be an infinite collection of infinite disjoint subsets of \( \mathbb{N} \). The following \( I \)'s work: \( I_n = \{p_n^k \vert k \in \mathbb{Z}_{>0}\} \), but the structure is both not given and irrelevant.
+</p>
+
+<p>
+\( U_n = \sum_{j=1}^{\infty} \frac{B_{f_n(j)(\omega)}}{2^j} \), the generating function of each term is
+</p>
+
+<p>
+\[ M_{\frac{B_{f_n(j)}}{2^j}}(t) = \mathbb{E}[e^{t \frac{B_{f_n(j)}}{2^j}}] = e^0 P(\frac{B_{f_n(j)}}{2^j} = 0) + e^{\frac{t}{2^j}}P(\frac{B_{f_n(j)}}{2^j} = 2^{-j}) = \frac{e^{\frac{t}{2^k}} + 1}{2} \]
+</p>
+
+<p>
+The MGF for \( U_n \) is
+</p>
+\begin{align}
+M_{U_n}
+&= \lim_{k \to \infty} \prod_{j=1}^{k} \frac{e^{\frac{t}{2^k}} + 1}{2} \\
+&= \lim_{k \to \infty} \frac{1}{2^k} \prod_{j=1}^{k} e^{\frac{t}{2^k}} + 1 \\
+&= \lim_{k \to \infty} \frac{1}{2^k} (\frac{e^{\frac{t}{2^k}} - 1}{e^{\frac{t}{2^k}} - 1}) \prod_{j=1}^{k} e^{\frac{t}{2^k}} + 1 \\
+&= \lim_{k \to \infty} \frac{1}{2^k} (\frac{e^{\frac{t}{2^k}} - 1}{e^{\frac{t}{2^k}} - 1}) (e^{\frac{t}{2^k}} + 1) \prod_{j=1}^{k - 1} e^{\frac{t}{2^k}} + 1 \\
+&= \lim_{k \to \infty} \frac{1}{2^k} (\frac{e^{\frac{t}{2^{k-1}}} - 1}{e^{\frac{t}{2^k}} - 1}) \prod_{j=1}^{k - 1} e^{\frac{t}{2^k}} + 1 \\
+&= \lim_{k \to \infty} \frac{e^{t} -1}{2^k (e^{\frac{t}{2^{k}}} - 1)} \\
+&= \frac{e^t - 1}{t} \\
+\end{align}
+
+<p>
+This one is crazy.
+First equality is due to sum of RV is product of MGF.
+Second equality is me taking out the constant \( 2 \) in the denominator.
+Third equality is multiplying by \( 1 \) (our favorite analysis trick).
+Fourth equality is taking the \( n \)-th term of the product out and reducing the index.
+Fifth equality is multiplying the numerators, notice the difference of squares.
+Sixth equality is actual black magic, we can multiply \( e^{\frac{t}{2^{k-1}}} -1 \) outside of the product with the \( k-1 \)'st term inside the product, yielding another difference of squares. This reduces the problem (by telescoping) until the last term does not cancel with anything.
+Last equality is taking the limit. Use the Taylor series of \( e \). This gives
+</p>
+\begin{align}
+2^k \cdot (e^{\frac{t}{2^k}} - 1)
+&= 2^k [\frac{t}{2^k} + \frac{1}{2!}\frac{t^2}{2^{2k}} + \cdots] \\
+&= [\frac{t}{1} + \frac{1}{2!}\frac{t^2}{2^{k}} + \cdots] \\
+&\to t \text{ as } k \to \infty
+\end{align}
+
+<p>
+Now we may conclude that this is the MGF of a uniform normal variable. Hence \( U_n \) has a uniform distribution.
+</p>
+
+<p>
+All the \( U_n \) are independent due to the \( B_{f_n(j)} \) only looks at the binary digits which are not found in any other \( f_i \) with \( i \neq n \) by construction.
+</p>
+</div>
+</li>
+<li><a id="org6d7808e"></a>C<br />
+<div class="outline-text-5" id="text-1-1-6-3">
+<p>
+Done by calculating the distribution.
+\( \mathbb{P}(\Phi^{-1}(U_n) \leq x) = \mathbb{P}(U_n \leq \Phi(x)) = \Phi(x) \) 
+</p>
+
+<p>
+The first equality is applying \( \Phi \) to both sides not changing the set. The second equality is by noting that \( U_n \) is a uniform random variable, the distribution states \( \mathbb{P}(U_n \leq t) = t \).
+</p>
+
+<p>
+Hence the \( X_n \) are random variables (composition of measurable functions) have distribution \( \Phi(x) \) (thus normal) and are independent (\( U_n \) independent implies \( g(U_n) \) independent for \( g \) Borel measurable). 
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5d0b0b7" class="outline-4">
+<h4 id="org5d0b0b7"><span class="section-number-4">1.1.7.</span> Problem 7</h4>
+<div class="outline-text-4" id="text-1-1-7">
+</div>
+<ol class="org-ol">
+<li><a id="orgc331634"></a>A<br />
+<div class="outline-text-5" id="text-1-1-7-1">
+<p>
+I will prove this statement using part B.
+Let \( \mathcal{F}(X) \) and \( \mathcal{F}(Y, \mathcal{G}) \) be independent \( \sigma \)-algebras.
+</p>
+
+\begin{align}
+\mathbb{E}[XY \vert \mathcal{G}]
+&=  \mathbb{E}[\mathbb{E}[XY \vert \mathcal{F}(Y,\mathcal{G})] \vert \mathcal{G}]\\
+&=  \mathbb{E}[Y \mathbb{E}[X \vert \mathcal{F}(Y,\mathcal{G})] \vert \mathcal{G}]\\
+&=  \mathbb{E}[Y \mathbb{E}[X] \vert \mathcal{G}]\\
+&=  \mathbb{E}[X]\mathbb{E}[Y \vert \mathcal{G}]\\
+\end{align}
+<p>
+The first equality is the tower property.
+The second equality is because \( Y \) is \( \mathcal{F}(Y) \)-measurable.
+The third equality is because \( X \) is independent from \( \mathcal{F}(Y, \mathcal{G}) \) by hypothesis.
+The last equality is linearity of expected value.
+</p>
+</div>
+</li>
+<li><a id="orga11c1fb"></a>B<br />
+<div class="outline-text-5" id="text-1-1-7-2">
+<p>
+Suppose \( X \) is \( \mathcal{G} \)-measurable.
+We will show that \( \mathbb{E}[XY \vert \mathcal{G}] = X\mathbb{E}[Y \vert \mathcal{G}] \). We do this proof in stages. We will also show that it is enough to know this fact for non-negative random variables. The justification is, given \( X \) and \( Y \) we may decompose using the standard notation \( X = X^+ - X^- \) and \( Y = Y^+ - Y^- \).
+Then,
+</p>
+\begin{align}
+\mathbb{E}[(X^+ - X^-)(Y^+ - Y^-) \vert \mathcal{G}]
+&= \mathbb{E}[X^+ Y^+ \vert \mathcal{G}] - \\
+   &\mathbb{E}[X^+ Y^- \vert \mathcal{G}] - \\
+   &\mathbb{E}[X^- Y^+ \vert \mathcal{G}] + \\
+   &\mathbb{E}[X^- Y^- \vert \mathcal{G}] \\
+&= X^+\mathbb{E}[Y^+ \vert \mathcal{G}] - \\
+   &X^+\mathbb{E}[ Y^- \vert \mathcal{G}] - \\
+   &X^-\mathbb{E}[ Y^+ \vert \mathcal{G}] + \\
+   &X^-\mathbb{E}[ Y^- \vert \mathcal{G}] \\
+&= (X^+-X^-)\mathbb{E}[Y^+ \vert \mathcal{G}] - \\
+   &(X^+ - X^-)\mathbb{E}[ Y^- \vert \mathcal{G}] \\
+&= (X^+-X^-)\mathbb{E}[Y^+ - Y^- \vert \mathcal{G}] \\
+&= X\mathbb{E}[Y \vert \mathcal{G}]
+\end{align}
+
+<p>
+(I apologize for the formatting, I didn't know how to make this look better.)
+By using linearity and assuming the theorem for the positive case we have proven it for the more general case. For the remainder of this proof assume \( X,Y \geq 0 \).
+</p>
+
+<p>
+We have that \( X \mathbb{E}[Y \vert \mathcal{G}] \) is \( \mathcal{G} \)-measurable. It remains to be shown that given an \( A \in \mathcal{G} \)  \( \int_A X \mathbb{E}[Y \vert \mathcal{G}] dP = \int_A XY dP \) 
+</p>
+
+<p>
+First assume that \( B \in \mathcal{G} \) and \( X = \mathbbm{1}_B \).
+Then \(  \)
+</p>
+\begin{align*}
+\int_A \mathbbm{1}_B \mathbb{E}[Y \vert \mathcal{G}] dP
+&= \int_{A \cap B} \mathbb{E}[Y \vert \mathcal{G}] dP \) \\
+&= \int_{A \cap B} Y dP \\
+&= \int_{A} \mathbbm{1}_B Y dP \\
+&= \int_{A} X Y dP \\
+\end{align*}
+
+<p>
+Then we may extend this using linearity to simple functions. Suppose \( X = \sum_{j=1}^{n} c_j \mathbbm{1}_{B_j} \) 
+</p>
+\begin{align*}
+\int_A [\sum_{j=1}^{n} c_j \mathbbm{1}_{B_j}] \mathbb{E}[Y \vert \mathcal{G}] dP
+&= \sum_{j=1}^{n} \int_{A \cap B_j} c_j \mathbb{E}[Y \vert \mathcal{G}] dP \) \\
+&= \sum_{j=1}^{n} \int_{A \cap Bj} c_j Y dP \\
+&= \int_{A} [\sum_{j=1}^n c_j \mathbbm{1}_{B_j}] Y dP \\
+&= \int_{A} X Y dP \\
+\end{align*}
+<p>
+Then we suppose that there is an increasing sequence of simple functions \( X_n \to X \).
+</p>
+\begin{align*}
+\lim_{n \to \infty} \int_A X_n \mathbb{E}[Y \vert \mathcal{G}] dP
+&= \lim_{n \to \infty} \int_{A} X_n Y dP \\
+&= \int_{A} X Y dP \\
+\end{align*}
+<p>
+The first equation is true because of the last step and we know \( X_n \) are simple. The second one is due to the monotone convergence theorem.
+</p>
+</div>
+</li>
+<li><a id="org807e676"></a>C<br />
+<div class="outline-text-5" id="text-1-1-7-3">
+<p>
+Let \( f \colon \mathbb{R} \to \mathbb{R} \) be Borel Measureable.
+We will show \( \mathbb{E}[f(X) Y \vert X] = f(X) \mathbb{E}[Y \vert X] \). 
+</p>
+
+<p>
+We know that \( f(X) \) is \( \mathcal{F}(X) \)-measurable. Hence by part B we may pull it out of the expectation.
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org3bb09f5" class="outline-4">
+<h4 id="org3bb09f5"><span class="section-number-4">1.1.8.</span> Problem 8</h4>
+<div class="outline-text-4" id="text-1-1-8">
+<p>
+First we calculate the expected value of \( W_n \)
+</p>
+\begin{align}
+\mathbb{E}[W_n]
+&= \mathbb{E}[\sum_{j=1}^{n} B_j X_j] \\
+&= \sum_{j=1}^{n} \mathbb{E}[B_j X_j] \\
+&= \sum_{j=1}^{n} [\mathbb{E}[\mathbb{E}[B_j X_j \vert B_j]]] \\
+&= \sum_{j=1}^{n} \mathbb{E}[B_j \mathbb{E}[X_j]] \\
+&= \sum_{j=1}^{n} \mathbb{E}[B_j \mathbb{E}[X_j \vert B_j]] \\
+&= \sum_{j=1}^{n} \mathbb{E}[B_j \cdot 0] \\
+&= 0
+\end{align}
+
+<p>
+The first equality is the definition of \( W_n \).
+The second equality uses linearity of expected value.
+The third equality uses \( \mathbb{E}[X] = \mathbb{E}[\mathbb{E}[X \vert G]] \).
+The fourth uses the fact \( B_j \) is measurable with respect to \( \mathcal{F}(B_j) \).
+The fifth uses independence of coin flips. That is, \( B_j \) tells you about the previous \( j-1 \)  coin flips. But that is independent from the \( j \)-th coin flip.
+The sixth is a straight calculation of expected value, \( X_j \) is symmetric around \( 0 \).
+The last is multiplying and adding.
+</p>
+
+<p>
+Now we calculate the expected value with respect to the previous filtration.
+</p>
+\begin{align}
+\mathbb{E}[W_n \vert X_1, \cdots, X_{n-1}]
+&= \mathbb{E}[\mathbb{E}[W_n \vert X_1, \cdots, X_n] \vert X_1, \cdots, X_{n_1}] \\
+&= \mathbb{E}[\mathbb{E}[W_n] \vert X_1, \cdots, X_{n_1}] \\
+&= \mathbb{E}[0 \vert X_1, \cdots, X_{n_1}] \\
+&= 0 \\
+&= \mathbb{E}[X_{n-1}]
+\end{align}
+<p>
+The first equality uses the tower rule.
+The second notes that \( W_n \) is \( X_1, \cdots, X_n \) measurable.
+The third equality uses the expected value we calculated previously.
+The rest is noting that the expectations are the same as what we desire.
+</p>
+</div>
+</div>
+<div id="outline-container-orga8000ac" class="outline-4">
+<h4 id="orga8000ac"><span class="section-number-4">1.1.9.</span> Problem 9</h4>
+<div class="outline-text-4" id="text-1-1-9">
+<p>
+Let \( X \sim N(\mu_1, \sigma_1^2) \) and \( Y \sim N(\mu_2, \sigma_2^2) \) be independent random variables.
+</p>
+
+<p>
+Denote \( \varphi_{X + Y}(t) = \mathbb{E}[\exp(it(X + Y))] \) to be the characteristic function of \( X+Y \).
+</p>
+
+\begin{align}
+\varphi_{X+Y}(t)
+&= \varphi_X(t) \varphi_Y(t) \\
+&= \exp(it \mu_1 - \frac{\sigma_1^2 t^2}{2}) \exp(it \mu_2 - \frac{\sigma_2^2 t^2}{2}) \\
+&= \exp(it (\mu_1 + \mu_2) - \frac{(\sigma_1^2 \sigma_2^2) t^2}{2}) \\
+\end{align}
+<p>
+Hence \( X+Y \sim N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2) \)
+Similarly,
+</p>
+\begin{align}
+\varphi_{X-Y}(t)
+&= \varphi_X(t) \varphi_Y(-t) \\
+&= \exp(it \mu_1 - \frac{\sigma_1^2 t^2}{2}) \exp(-it \mu_2 - \frac{\sigma_2^2 t^2}{2}) \\
+&= \exp(it (\mu_1 - \mu_2) - \frac{(\sigma_1^2 \sigma_2^2) t^2}{2}) \\
+\end{align}
+
+<p>
+Hence \( X-Y \sim N(\mu_1 - \mu_2, \sigma_1^2 + \sigma_2^2) \)
+</p>
+
+<p>
+Independence: In class we had that for <b>normal</b> RV's \( \Cov(X,Y) = 0 \implies \) Independence (False in general).
+Hence, we perform a quick calculation.
+</p>
+
+\begin{align*}
+\Cov(X+Y,X-Y)
+&= \Cov(X,X-Y) + \Cov(Y,X-Y) \\
+&= \Cov(X,X) - \Cov(X, Y) + \Cov(Y,X) - \Cov(Y,Y) \\
+&= \sigma_1^2 - \sigma_2^2
+\end{align*}
+<p>
+This shows that if \( X \) and \( Y \) have the same variance then they are independent. It's curious, symbolically they must have the same variance if they want to be independent. But it's not intuitive for me at least.
+</p>
+</div>
+</div>
+<div id="outline-container-org467ef3e" class="outline-4">
+<h4 id="org467ef3e"><span class="section-number-4">1.1.10.</span> Problem 10</h4>
+<div class="outline-text-4" id="text-1-1-10">
+<p>
+Let \( X \sim \exp(\lambda) \). \( X \) has density \( f(x) \colon = \lambda e^{- \lambda x} . (x > 0)\).
+</p>
+
+<p>
+\( X \) has distribution function
+</p>
+
+\begin{align*}
+F(t)
+&= \int_0^{t} \lambda e^{- \lambda x} dx \\
+&= \lambda [\frac{1}{-\lambda} e^{- \lambda x}]_{x = 0}^{x = t} \\
+&= - [e^{- \lambda t} - 1] \\
+&= 1 - e^{-\lambda t}
+\end{align*}
+</div>
+<ol class="org-ol">
+<li><a id="org2325a5b"></a>A<br />
+<div class="outline-text-5" id="text-1-1-10-1">
+\begin{align*}
+P\{X \geq s + t \vert X \geq s \}
+&= \frac{P\{X \geq s + t\}}{P\{X \geq s\}} \\
+&= \frac{1 - F(s + t)}{1 - F(s)} \\
+&= \frac{e^{- \lambda (s + t)}}{e^{- \lambda s}} \\
+&= \frac{e^{- \lambda s}e^{-\lambda t}}{e^{- \lambda s}} \\
+&= e^{-\lambda t} \\
+&= P\{X \geq t \}
+\end{align*}
+</div>
+</li>
+<li><a id="org721d085"></a>B<br />
+<div class="outline-text-5" id="text-1-1-10-2">
+<p>
+Suppose \( Y \) is a random variable that has the memoryless property.
+</p>
+
+<p>
+Then \( P\{ Y \geq s + t \vert Y \geq s \} = P\{ Y \geq t \} \)
+Also from the conditional distribution we have \( \frac{P\{ Y \geq s + t\}}{P\{ Y \geq s \}} = P\{ Y \geq t \} \)
+Hence \( P\{Y \geq s + t\} = P\{Y \geq s \} P\{Y \geq t\} \)
+</p>
+
+<p>
+Note, \( P\{ Y \geq s\} = 1 - F_Y(s) \), by hypothesis \( F_Y \) (the distribution of \( Y \)) is continuous.
+</p>
+
+<p>
+Denote \( g(s) = 1 - F_Y(s) \). We then have a functional equation \( g(s+t) = g(s) g(t) \) where \( g \) is decreasing (\( F_Y \) is increasing function) and continuous because as \( F_Y \) is continuous again by hypothesis.
+</p>
+
+<p>
+Setting \( h(x) = \log(g(x)) \) and taking the log of both sides gives us the famous Cauchy functional equation for a continuous function \( h(x + y) = h(x) + h(y) \)  meaning \( h(x) = \lambda x \). To actually prove it, I would show that \( h(nx) = nh(x) \) for any integer \( n \). Then I would show that \( h(qx) = qh(x) \) for any rational \( q \). Then I would show by continuity \( h(cx) = ch(x) \) for any real \( c \). Then I would show that \( h(x) = cx \) by linear algebra. Hopefully saying <b>famous</b> and <b>Cauchy</b> in the same sentence is a proof.
+</p>
+
+<p>
+Hence \( g(x) = e^{\lambda x} \). Because \( g \) is monotone decreasing we note that \( \lambda < 0 \). Hence the only random variable with continuous distribution is an exponentially distributed random variable.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org78c1bda" class="outline-3">
+<h3 id="org78c1bda"><span class="section-number-3">1.2.</span> Homework 2</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( \{B_t\}_{t \geq 0} \) denote standard Brownian motion</li>
+<li>\( \{F_t\}_{t \geq 0} \) denote Brownian filtration</li>
+<li>\( T_a \) denote the first time Brownian motion hits \(a \)</li>
+</ul>
+</div>
+<div id="outline-container-orgd043f6c" class="outline-4">
+<h4 id="orgd043f6c"><span class="section-number-4">1.2.1.</span> Problem 1</h4>
+<div class="outline-text-4" id="text-1-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org3ce5d04"></a>A<br />
+<div class="outline-text-5" id="text-1-2-1-1">
+<p>
+Consider \( \mathbb{P}\{ B_1 \leq 1/2, B_3 > B_1 + 2 \} \)
+</p>
+
+\begin{align*}
+\large
+\mathbb{P}\{ B_1 \leq 1/2, B_3 > B_1 + 2 \}
+&= \mathbb{P}\{ B_1 - B_0 \leq 1/2, B_3 - B_1 > 2 \}  \\
+&= \mathbb{P}\{ B_1 - B_0 \leq 1/2 \} \mathbb{P} \{B_3 - B_1 > 2 \} && \text{Independence of increments} \\
+&= \mathbb{P}\{ \mathcal{N}(0,1) \leq 1/2 \} \mathbb{P} \{ \mathcal{N}(0,2) > 2 \} && \text{Increments normally distributed} \\
+&= \int_{-\infty}^{1/2} \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}} dx \cdot
+\int_{2}^{\infty} \frac{1}{\sqrt{2 \pi \cdot 2}} e^{-\frac{x^2}{2 \cdot 2}} dx
+ && \text{Normal Distribution has density} \\
+\end{align*}
+</div>
+</li>
+<li><a id="orge9709b7"></a>B<br />
+<div class="outline-text-5" id="text-1-2-1-2">
+<p>
+Consider \( \mathbb{P}\{ E \} \) where \( E \) is the event that the graph of \( t \mapsto B_t \) is always below the line \( y = 6 \) for time \( 0 \leq t \leq 10 \).
+</p>
+
+<p>
+This is \( \mathbb{P}( \max_{t \in [0,10]} B_t \leq 6) \). We have the distribution of this from class.
+</p>
+
+\begin{align*}
+\mathbb{P} \left( \max_{t \in [0,10]} B_t \leq 6 \right)
+&= 1 - \mathbb{P} \left( \max_{t \in [0,10]} B_t > 6 \right) \\
+&= 1 - \left(2 - \Phi \left( \frac{6}{\sqrt{10}} \right) \right) 
+\end{align*}
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org591b47c" class="outline-4">
+<h4 id="org591b47c"><span class="section-number-4">1.2.2.</span> Problem 2</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Let
+</p>
+<ul class="org-ul">
+<li>\( \sigma > 0 \)</li>
+<li>\( t \geq 0 \)</li>
+<li>\( M_t := \exp(\sigma B_t - \frac{\sigma^2 t}{2}) \)</li>
+</ul>
+
+<p>
+Let us rewrite \( M_t \) in a way that makes this problem easier to solve.
+</p>
+
+<p>
+\[ M_t = \exp \left(\sigma B_t - \frac{\sigma^2 t}{2}\right) = \frac{\exp (\sigma B_t)}{\exp\left(\frac{\sigma^2 t}{2}\right)} = \frac{\exp (\sigma B_t)}{\mathbb{E} [\exp(\sigma B_t)]} \]
+</p>
+
+<p>
+We get this relation from
+\[ \mathbb{E} [\exp (\sigma B_t)] = \mathbb{E} [\exp (\sigma \sqrt{t} Z)] = \mathcal{M}_Z(\sigma \sqrt{t}) = \exp\left(\frac{\sigma^2 t}{2}\right)\]
+Where \(Z\) is a standard Normal Random Variable and \( \mathcal{M}_Z \) denotes the moment generating function of \(Z\).
+</p>
+
+
+\begin{align*}
+\mathbb{E} [M_t \vert \mathcal{F}_s]
+&= \mathbb{E} \left[ \frac{\exp (\sigma B_t)}{\mathbb{E} [\exp(\sigma B_t)]} \vert \mathcal{F}_s\right] && \text{Def. of $M_t$} \\
+&= \frac{\mathbb{E} [\exp (\sigma B_t) \vert \mathcal{F}_s]}{\mathbb{E} [\exp(\sigma B_t)]} && \text{Linearity of $\mathbb{E}$ (denom. has no dependence on $\omega$)}  \\
+&= \frac{\mathbb{E} [\exp (\sigma (B_t - B_s) + \sigma B_s) \vert \mathcal{F}_s]}{\mathbb{E} [\exp(\sigma (B_t - B_s) + \sigma B_s)]} && \text{Splitting Brownian Motion by time} \\
+&= \frac{\exp(\sigma B_s) \mathbb{E} [\exp (\sigma (B_t - B_s)) \vert \mathcal{F}_s]}{\mathbb{E}[\sigma B_s] \mathbb{E} [\exp(\sigma (B_t - B_s))]} && \text{$B_s$ is $\mathcal{F}_s$ measurable \& Indep. Increments} \\
+&= \frac{\exp(\sigma B_s) \mathbb{E} [\exp (\sigma (B_t - B_s))]}{\mathbb{E}[\sigma B_s] \mathbb{E} [\exp(\sigma (B_t - B_s))]} && \text{Independent Increments} \\
+&= \frac{\exp(\sigma B_s)}{\mathbb{E}[\sigma B_s]} && \text{Cancellation}  \\
+&= M_s
+\end{align*}
+</div>
+</div>
+<div id="outline-container-orgac01f92" class="outline-4">
+<h4 id="orgac01f92"><span class="section-number-4">1.2.3.</span> Problem 3</h4>
+<div class="outline-text-4" id="text-1-2-3">
+\begin{align*}
+\mathbb{E} \left[ B_t^2 \vert \mathcal{F}_s \right]
+&= \mathbb{E} \left[ (B_s + B_t - B_s )^2 \vert \mathcal{F}_s \right] && \text{Adding zero $+B_s - B_s$} \\
+&= \mathbb{E} \left[ B_s^2 \vert \mathcal{F}_s \right] + 
+   2\mathbb{E} \left[ B_s (B_t - B_s) \vert \mathcal{F}_s \right] +
+   \mathbb{E} \left[ (B_t - B_s)^2 \vert \mathcal{F}_s \right] && \text{Multiplying Square and Using Linearity of $\mathbb{E}$}\\
+&= B_s^2 + 
+   2 B_s \mathbb{E} \left[  (B_t - B_s) \vert \mathcal{F}_s \right] +
+   \mathbb{E} \left[ (B_t - B_s)^2 \right] && \text{Pulling out $\mathcal{F}_s$ measurable and using indep.} \\
+&= B_s^2 + 
+   \mathbb{E} \left[ B_t^2 \right] +
+   2 \mathbb{E} \left[ B_t B_s \right] +
+   \mathbb{E} \left[ B_s^2 \right] && \text{Indep. increments & Multiplying out square} \\
+&= B_s^2 + 
+   \mathbb{E} \left[ B_t^2 \right] +
+   2 \mathbb{E} \left[ \mathbb{E} \left[ B_t \vert \mathcal{F}_s \right] B_s \right] +
+   \mathbb{E} \left[ B_s^2 \right] && \text{Tower Rule and Pulling out Measurable} \\
+&= B_s^2 + 
+   \mathbb{E} \left[ B_t^2 \right] -
+   2\mathbb{E}[B_s^2] +
+   \mathbb{E}[B_s^2] && \text{$B_t$ is a martingale} \\
+&= B_s^2 + 
+   \mathbb{E} \left[ B_t^2 \right] -
+   \mathbb{E}[B_s^2] && \text{Simplifying expression}
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org91fc6ca" class="outline-4">
+<h4 id="org91fc6ca"><span class="section-number-4">1.2.4.</span> Problem 4</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+We may prove that if \( f \in \mathcal{C}^1((a,b)) \) then \(f \) has \( 0 \) quadratic variation.
+Hence, by contraposition, \(B_t\) (which has nonzero quadratic variation) will not be continuously differentiable.
+</p>
+
+<p>
+Let \( M = \sup_{t \in (a,b)} f'(t) \) then \( f(t_i) - f(t_j) \leq M(t_i - t_j) \)
+</p>
+
+<p>
+Consider a seqence of partitions with \(n \) divisions \( P_n \) of \( (a,b) \) such that \( \lim_{n \to \infty} | P_n | \to 0 \).
+Denote \( t_{i,n} \) to be the \(i\)-th member of the \( P_n \)-th partition.
+</p>
+
+<p>
+We may calculate:
+</p>
+
+\begin{align*}
+\sum_{i = 0}^{n - 1} (f(t_{i + 1, n}) - f(t_{i, n}))^2
+&\leq \sum_{i = 0}^{n - 1} (Mt_{i + 1, n} - Mt_{i, n})^2 && \text{Using above inequality} \\
+&\leq M^2 \sum_{i = 0}^{n - 1} (t_{i + 1, n} - t_{i, n})^2 && \text{Factoring} \\
+&\leq M^2  (| P_n |)^2 (a - b) && \text{Def. of norm of partition} \\
+&\to 0 && \text{as $n \to \infty$} \\
+\end{align*}
+</div>
+</div>
+<div id="outline-container-org562d5a0" class="outline-4">
+<h4 id="org562d5a0"><span class="section-number-4">1.2.5.</span> Problem 5</h4>
+<div class="outline-text-4" id="text-1-2-5">
+<p>
+Let \( M_t = \sup \{ B_s \colon 0 \leq s \leq t \} \)
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org4abd278"></a>A<br />
+<div class="outline-text-5" id="text-1-2-5-1">
+\begin{align*}
+\mathbb{P} \left(\sqrt{t} M_1 < x \right)
+&=  \mathbb{P} \left( M_1 < \frac{x}{\sqrt{t}} \right) \\
+&= 1 -  2 \left(1 - \Phi \left(\frac{x}{\sqrt{t}} \right) \right) \\
+&= \mathbb{P} (M_t < x)
+\end{align*}
+</div>
+</li>
+<li><a id="orge03bb07"></a>B<br />
+<div class="outline-text-5" id="text-1-2-5-2">
+\begin{align*}
+\mathbb{E}[M_t]
+&= \mathbb{E}[\sqrt{t} M_1] \\
+&= \sqrt{t} \mathbb{E}[M_1] \\
+&= \sqrt{t} \int_0^\infty 2m \frac{1}{\sqrt{2 \pi}} \exp(-\frac{m^2}{2}) dm \\
+&= \sqrt{t} \int_0^\infty m \sqrt{\frac{2}{\pi}} \exp(-\frac{m^2}{2}) dm \\
+&= \sqrt{\frac{2t}{\pi}} \int_0^\infty m \exp(-\frac{m^2}{2}) dm \\
+&= \sqrt{\frac{2t}{\pi}} \int_0^\infty \exp(-u) du \\
+&= \sqrt{\frac{2t}{\pi}} \\
+\end{align*}
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgaeb7dd3" class="outline-4">
+<h4 id="orgaeb7dd3"><span class="section-number-4">1.2.6.</span> Problem 6</h4>
+<div class="outline-text-4" id="text-1-2-6">
+<p>
+Let \( T_a = \inf \{ t \geq 0 \colon B_t = a \} \)
+</p>
+
+<p>
+To show \( T_a \) is a stopping time we must show that the set \( \{ T_a \leq t \} \in \mathcal{F}_t \)
+</p>
+
+<p>
+Note that \( \{ T_a \leq t\} = \{ \sup_{s \in [0,t]} B_s \geq a  \} \) which, by continuity of Brownian Motion, is the same as \( \{ \sup_{s \in \mathbb{Q} \cap [0,t]} B_s \geq a  \} \) ( \( \mathbb{Q} \) is not special here. Any countable dense subset will do. ) The supremum over a countable collection of (\( \mathcal{F}_t \)-)measurable functions is (\( \mathcal{F}_t \)-)measurable. Hence the set is measurable by construction of Brownian filtration.
+</p>
+
+<p>
+Due to the discussion on the 17th, I think it's worth mentioning proof of the following two lemmas I assumed in the previous section.
+</p>
+
+<div class="LEMMA" id="orgf56b58c">
+<p>
+Let \( f \colon \mathbb{R} \to \mathbb{R} \) be continuous.
+</p>
+
+<p>
+Then \[ \sup_{x \in [a,b]} f(x) = \sup_{x \in \mathbb{Q} \cap [a,b]} f(x) \]
+</p>
+
+</div>
+
+<div class="proof" id="org4c1dec9">
+<p>
+Note:
+\[ \sup_{x \in [a,b]} f(x) \geq \sup_{x \in \mathbb{Q} \cap [a,b]} f(x) \]
+</p>
+
+<p>
+Suppose 
+\[ s_r = \sup_{x \in [a,b]} f(x) > \sup_{x \in \mathbb{Q} \cap [a,b]} f(x) = s_q \]
+</p>
+
+<p>
+Let \( \varepsilon = \frac{s_r - s_q}{2} \)
+</p>
+
+<p>
+Then there is an \( x \in [a,b] \) such that \( |s_r - f(x) | < \varepsilon \)
+</p>
+
+<p>
+By density of the rationals there is a sequence of rationals \( x_n \to x \).
+</p>
+
+<p>
+By continuity of \(f \) we have that \( f(x_n) \to f(x) > m + \frac{\varepsilon}{2} \).
+</p>
+
+<p>
+This is a contradiction. Hence the suprema are equal.
+</p>
+
+</div>
+
+<div class="LEMMA" id="orgd181c81">
+<p>
+Let \( f_n \colon \Omega \to \mathbb{R} \) be a countable collection of measurable functions.
+</p>
+
+<p>
+Then \( \sup_n f_n \) is a measurable function.
+</p>
+
+</div>
+
+<div class="PROOF" id="org35ca101">
+<p>
+Measurability is determined by preimages of rays.
+</p>
+
+<p>
+\[ (\sup_{n \in \mathbb{N}} f_n)^{-1}((a, \infty)) = \bigcup_{n \in \mathbb{N}} f^{-1}_{n} ((a, \infty)) \]
+</p>
+
+<p>
+Hence measurable.
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org54467ae" class="outline-4">
+<h4 id="org54467ae"><span class="section-number-4">1.2.7.</span> Problem 7</h4>
+<div class="outline-text-4" id="text-1-2-7">
+<p>
+The main paper I will be referencing is "On Nowhere Monotone Functions" by Clifford E. Weil <a href="https://www.ams.org/journals/proc/1976-056-01/S0002-9939-1976-0396870-2/S0002-9939-1976-0396870-2.pdf">here</a>.
+</p>
+
+<p>
+The main idea underlying the approach uses the following form of the Baire Category Theorem:
+</p>
+
+<div class="THEOREM" id="org5f23fe9">
+<p>
+Every pseudo-complete metric space has the property that the countable union of nowhere dense sets is nowhere dense. 
+</p>
+
+</div>
+
+<p>
+Consider the set
+</p>
+
+<p>
+\[ D = \{ f \colon \mathbb{R} \to \mathbb{R} \vert f \text{ is bounded and has an antiderivative} \}\]
+</p>
+
+<p>
+and endow \(D\) with the uniform convergence metric
+</p>
+
+<p>
+\[ d(f,g) = \sup_{x \in \mathbb{R}} \vert f(x) - g(x) \vert \]
+</p>
+
+<p>
+This space is complete according to "basic advanced calculus". Meaning, if we have a sequence of functions \( f_n \) which is Cauchy then there exists a limit function \( f \) which has an antiderivative and is bounded. Let
+</p>
+
+<p>
+\[ D_0 = \{ f \in D \vert \overline{f^{-1}(0)} = \mathbb{R} \} \]
+</p>
+
+<p>
+Denote the set of functions which has a dense set of roots in \( \mathbb{R} \).
+This metric space has some nice properties:
+</p>
+<ul class="org-ul">
+<li>It contains more than the zero function</li>
+<li>It is complete</li>
+<li>It is closed under addition</li>
+<li>It is Baire</li>
+</ul>
+
+<p>
+Then the paper states that the following set is megre.
+</p>
+
+<p>
+\[ E = \{ f \in D_0 \vert \exists I \subseteq \mathbb{R} \text{ such that f is unsigned} \} \]
+</p>
+
+<p>
+Hence, its complement, the set of functions for which the function is signed on all intervals is comegre. Namely, its complement is nonempty and that proves existence of our desired function.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org21c2257" class="outline-3">
+<h3 id="org21c2257"><span class="section-number-3">1.3.</span> Homework 3 - Final</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Let \( \{ B_t \}_{t \geq 0} \) denote 1-Dimensional Brownian Motion.
+</p>
+</div>
+<div id="outline-container-org607ebbc" class="outline-4">
+<h4 id="org607ebbc"><span class="section-number-4">1.3.1.</span> Problem 1</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+Consider the process \( M_t := B_t^2 - t \)
+</p>
+
+<p>
+Define \( f \colon \mathbb{R} \to \mathbb{R}, x \mapsto x^2 \) 
+</p>
+
+<p>
+By Ito's Formula,
+</p>
+
+\begin{alignat}{2}
+&&f(B_t) - f(B_0) &= \int_0^t f'(B_t) dB_t + \frac{1}{2} \int_0^t f''(B_s) ds \tag{Ito's Formula} \\
+&\Rightarrow\quad &B_t^2 &= \int_0^t 2 B_t dB_t + \frac{1}{2} \int_0^t 2 ds \tag{Sub. $f$, $B_0$} \\
+&\Rightarrow\quad &B_t^2 - t &= \int_0^t 2 B_t dB_t \tag{Eval integral} \\
+&\Rightarrow\quad &M_t &= \int_0^t 2 B_t dB_t \tag{Def. $M_t$}
+\end{alignat}
+
+<p>
+Note now that our process \( M_t \) is equal to a stochastic integral. Stochastic integrals are continuous martingales, hence \( M_t \) is a martingale.
+</p>
+</div>
+</div>
+<div id="outline-container-org201be87" class="outline-4">
+<h4 id="org201be87"><span class="section-number-4">1.3.2.</span> Problem 2</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+Define
+</p>
+<ul class="org-ul">
+<li>\( a,b \in \mathbb{R}_{> 0} \)</li>
+<li>\( T = T_{a,b} := \min \{ t \geq 0 \vert B_t = a \lor B_t = -b \} \)</li>
+<li>\( M_t := B_t^2 - t \)</li>
+</ul>
+
+<p>
+Consider the process
+</p>
+
+<p>
+\[ M_{t \wedge T} = \begin{cases} M_t & 0 \leq t \leq T \\ M_T & T \leq t \end{cases} \]
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org1cded3a"></a>A<br />
+<div class="outline-text-5" id="text-1-3-2-1">
+<p>
+Using the above, we have
+</p>
+
+
+<p>
+\[ M_{t \wedge T} = \int_0^{t \wedge T} 2 B_t dB_t = \int_{0}^{t} 2 B_t \mathbf{1}_{[0, T]} d B_t \]
+</p>
+
+<p>
+Hence \( M_{t \wedge T} \) is a Martingale
+</p>
+</div>
+</li>
+<li><a id="org8d8238e"></a>B<br />
+<div class="outline-text-5" id="text-1-3-2-2">
+<p>
+Because  \( M_{t \wedge T} \) is a Martingale we have that expectations are constant, hence,
+</p>
+
+<p>
+\[ \mathbb{E}[M_{t \wedge T}] = \mathbb{E}[M_{0}] = \mathbb{E}\left[\int_{0}^{0} 2 B_t \mathbf{1}_{[0, T]} d B_t\right] = \mathbb{E}[0] = 0 \]
+</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-org5f15ca3" class="outline-4">
+<h4 id="org5f15ca3"><span class="section-number-4">1.3.3.</span> Problem 3</h4>
+<div class="outline-text-4" id="text-1-3-3">
+</div>
+<ol class="org-ol">
+<li><a id="org2e6360b"></a>A<br />
+<div class="outline-text-5" id="text-1-3-3-1">
+<p>
+Let \( f(t,x) = t x + g(x) \), in order for \( f(B_t, t) \) to be a Martingale we wish for
+</p>
+
+<p>
+\[ \partial_0 f = \frac{-1}{2} \partial_1^2 f \]
+</p>
+
+<p>
+So that the Riemannian integral term of Ito's formula is \( 0 \).
+</p>
+
+<p>
+Evaluating the derivatives yields,
+</p>
+
+<p>
+\[ x = \frac{-1}{2} g''(x) \implies -2x = g''(x) \]
+</p>
+
+<p>
+Which is a second order, linear, nonhomogeneous ODE. The solution is given by integrating twice,
+</p>
+
+<p>
+\[ g(x) = \int \int -2x dx dx = \frac{-x^3}{3} + c_1 x + c_0 \]
+</p>
+
+<p>
+We were asked to find one such \( g \). We will choose one with the constants zeroed out for simplicity.
+</p>
+
+<p>
+\[ g(x) = \frac{-x^3}{3} \]
+</p>
+</div>
+</li>
+<li><a id="org0733fbc"></a>B<br />
+<div class="outline-text-5" id="text-1-3-3-2">
+<p>
+We have that the process
+</p>
+
+<p>
+\[ M_t = tB_t + \frac{-B_t^3}{3} = \int_0^t \partial_1 f(s,B_s) dB_s \]
+</p>
+
+<p>
+is a martingale by part (A). We know that expectations of Martingales are constant hence
+</p>
+
+<p>
+\[ \mathbb{E}[M_t] = \mathbb{E}[M_0] = 0 \]
+</p>
+
+<p>
+We can also show that \( M_{t \wedge T} \) is a martingale similar to the previous problem
+</p>
+
+<p>
+\[ M_{t \wedge T} = \int_{0}^{t} \partial_1 f(s, B_s) \mathbf{1}_{[0, T]} dB_s \]
+</p>
+
+<p>
+Hence the expectation can be calculated,
+</p>
+
+
+<p>
+\[ \mathbb{E}[M_{t \wedge T}] = \mathbb{E}[M_0] = 0 \]
+</p>
+
+<p>
+Thus,
+</p>
+
+\begin{alignat}{2}
+&& \mathbb{E}\left[ TB_T - \frac{B_T^3}{3} \right] &= 0 \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= \mathbb{E}\left[ \frac{B_T^3}{3} \right] \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= P(B_T = a) \frac{a^3}{3} + P(B_T = -b) \frac{-b^3}{3} \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= \frac{b}{a+b} \frac{a^3}{3} + \frac{a}{a+b} \frac{-b^3}{3} \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= \frac{ba^3 - ab^3}{3(a+b)} \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= \frac{ab(a^2 - b^2)}{3(a+b)} \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= \frac{ab(a + b) (a - b)}{3(a+b)} \\
+&\Rightarrow\quad &\mathbb{E}\left[ TB_T \right] &= \frac{ab(a - b)}{3} \\
+\end{alignat}
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orgdd070b3" class="outline-4">
+<h4 id="orgdd070b3"><span class="section-number-4">1.3.4.</span> Problem 4</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<p>
+Denote \( T_{a} := \min \{ t \geq 0 \vert B_t = a \} \). We will use the fact that Brownian motion satistifes the strong Markov property (i.e. \( B_{t + \tau} - B_{\tau} \) is a Brownian motion) and that \( T_a < \infty \) almost surely.
+</p>
+
+<p>
+<br />
+</p>
+
+<p>
+We may show that one dimmensional Brownian motion is point recurrent by showing that it will bounce between some arbirary point \( a \) and \( 0 \) infinitely many times by induction. This results in a headache inducing series of notation. I'll outline the main approach intuitively first.
+</p>
+
+
+<p>
+Intuitive: Start the Brownian motion at time \( t = 0 \). Then almost surely Brownian motion reaches \( a \), we may start the Brownian motion again at \( a \) by the strong Markov property. The Brownian motion will then reach \( 0 \) (by going down \( -a \)). Then again it will bounce to \( a \) and \( 0 \) infinitely often almost surely.
+</p>
+
+<p>
+<br />
+</p>
+
+<p>
+Base case, Brownian motion starting at time \( t = 0 \) will reach \( a \) then go back down to \( 0 \). \\\\
+We know almost surely, \( \exists T_a^1 > 0 . B_{T_a^1} = a \). By the strong Markov property, \( B_{t + T_{a}^1} - B_{T_a} \) is a Brownian motion, hence almost surely \( \exists T_{-a}^1 . B_{T_{-a}^1 + T_{a}^1} - B_{T_a} = -a \implies B_{T_{-a}^1 + T_{a}^1} = 0 \). Now \( B_{t + T_{-a}^1 + T_{a}^1} \) is a Brownian motion starting at \( 0 \). 
+</p>
+
+<p>
+Suppose that Brownian motion has reached \( a \) and \( 0 \) \( n \) times after a total of \( T^n = \sum_{i = 1}^{n} T_{a}^n + T_{-a}^n \) time. \\\\  
+We know almost surely, \( \exists T_a^{n+1} > T^n . B_{T_a^{n+1}} - B_{T^n} = a \). By the strong Markov property, \( B_{t + T_{a}^{n+1} + T^n} - B_{T_a^{n+1} + T^n} \) is a Brownian motion, hence almost surely \( \exists T_{-a}^{n + 1} > T_{a}^{n+1} + T^n . B_{T_{-a}^{n + 1} + T_{a}^{n+1} + T^n} - B_{T_{a}^{n+1} + T^n} = -a \implies B_{T_{-a}^{n + 1} + T_{a}^{n+1} + T^n} = 0 \). Now \( B_{t + T_{-a}^{n + 1} + T_{a}^{n+1} + T^n} \) is a Brownian motion starting at \( 0 \). 
+</p>
+
+<p>
+Hence the sequence \( \{ T_{a}^n + T^{n - 1} \}_{n \in \mathbb{N}} \) is a sequence of times such that the Brownian motion \( B_{T_{a}^n + T^{n - 1}} = a \). Hence Brownian motion is point recurrent.   
+</p>
+</div>
+</div>
+<div id="outline-container-orgaebf64a" class="outline-4">
+<h4 id="orgaebf64a"><span class="section-number-4">1.3.5.</span> Problem 5</h4>
+<div class="outline-text-4" id="text-1-3-5">
+<p>
+Define \( u \colon \mathbb{R}^d \to \mathbb{R} \) via \( x \mapsto ||x ||^{2 - d} = \left( \sum_{i = 0}^d x_i^2 \right)^{\frac{2 - d}{2}} \).
+</p>
+
+<p>
+We may parameterize an element \( x \in \mathbb{R}^d \) as \( x = r \theta \). Where \( r = ||x|| \) and \( \theta \in S^{d - 1} \).
+</p>
+
+<p>
+\( u(x) \) may then be written as \( u(r,\theta) = r^{2 - d} \).
+</p>
+
+<p>
+The laplacian in spherical coordinates may then be written as
+</p>
+
+<p>
+\[ \Delta u = \frac{\partial^2 u}{\partial r^2} + \frac{d - 1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^{2}} \Delta_{S^{d - 1}} u \]
+</p>
+
+<p>
+Where \( \Delta_{S^{d - 1}} \) is the Laplace-Beltrami operator which only depends on angular components. Of which \( u \) does not depend on. Let us calculate the expression in parts.
+</p>
+
+<p>
+\[ \frac{\partial u}{\partial r} = \frac{\partial}{\partial r} r^{2 - d} = (2 - d) r^{1 - d} \]
+</p>
+
+<p>
+\[ \frac{\partial^2 u}{\partial r^2} = \frac{\partial}{\partial r} (2 - d) r^{1 - d} = (2 - d)(1 - d)r^{-d} \]
+</p>
+
+<p>
+\[\Delta_{S^{d - 1}} u = 0 \]
+</p>
+
+
+<p>
+Now we have calculated all the expressions that require taking derivatives. Substituting yields,
+</p>
+
+\begin{align}
+\Delta u
+&= \frac{\partial^2 u}{\partial r^2} + \frac{d - 1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^{2}} \Delta_{S^{d - 1}} u  \\
+&= (2 - d)(1 - d)r^{-d} + \frac{d - 1}{r} (2 - d) r^{1 - d} \\
+&= (2 - d)(1 - d)r^{-d} - (1 - d) (2 - d) r^{- d} \\
+&= 0
+\end{align}
+
+<p>
+Hence \( u \) is harmonic.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

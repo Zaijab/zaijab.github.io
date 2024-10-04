@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UH JPN 102</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">UH JPN 102</h1>
+<p>
+Download all conversation MP3s - Play in car
+Put all Kanji into Kanji Dojo
+Put all vocabulary into 
+Put all Common expressions into 
+Put all Grammar Notes into <a href="japanese-grammar.html#ID-2d34f6e6-012a-4daa-9589-dd085a6bb909">Japanese Grammar</a>
+</p>
+
+<p>
+川車食飲言話語読持後午電教書番号連貝買心思口耳門聞歩間作英
+</p>
+
+<p>
+一二三四五六七八九十語勉強時大学生先年何日本人中月火水木金土曜今寺時名前間食飲半分目見行来去百千万明車円
+</p>
+<div id="outline-container-org230b79c" class="outline-2">
+<h2 id="org230b79c"><span class="section-number-2">1.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</div>
+<div id="outline-container-orgd069dbd" class="outline-2">
+<h2 id="orgd069dbd"><span class="section-number-2">2.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+</div>
+<div id="outline-container-org70807dd" class="outline-2">
+<h2 id="org70807dd"><span class="section-number-2">3.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+</div>
+<div id="outline-container-org55caf6f" class="outline-2">
+<h2 id="org55caf6f"><span class="section-number-2">4.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Homwork:
+</p>
+
+<p>
+まいにち、ともだちととしょかんに日本語を勉強する
+こんしゅうの金曜日に日本からともだちが来る
+きのう、ワイキキにかぞくとばんごはんを食べる
+</p>
+
+<p>
+「こぞうずし」はやすいとおいしいです。
+日本語百一はおもしろかったですけどむずかしかったです。
+ともだちとあって、土曜日にえいがを見ます。
+</p>
+
+<p>
+日本に行って、すしを食べたいです。
+日本に行きたいですしを食べたいです。
+</p>
+
+<p>
+Introduction:
+はじめまして、ザーンともします。しゅしんはホノルルです。せんこは数学です。ハワイイ大学の大学院年生です。コンピュタが大好きです。
+</p>
+
+<p>
+夏休みはたのしいです。アルバイトをしました。本をよみます。本は数学です。おもしろいです。
+</p>
+
+<p>
+ザーンジャバー
+</p>
+</div>
+</div>
+<div id="outline-container-org0f11d1d" class="outline-2">
+<h2 id="org0f11d1d"><span class="section-number-2">5.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</div>
+<div id="outline-container-org0db9cfb" class="outline-2">
+<h2 id="org0db9cfb"><span class="section-number-2">6.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org695fcd4" class="outline-3">
+<h3 id="org695fcd4"><span class="section-number-3">6.1.</span> Response 1</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+わたしのなまえはAzureです。しゅしんはリリハで、リリハはホノルルのちかくです。ハワイ大学生の二年生で、せんこうはマーケティングです。しゅみはいろいろ、でもバレーボールとかおんがくです。なつやすみにアルバイトをしました。
+</p>
+
+<p>
+はじめましてAzureさん。リリハはきれいです。バレーボールはたのしいです。
+</p>
+</div>
+</div>
+<div id="outline-container-org1cf7786" class="outline-3">
+<h3 id="org1cf7786"><span class="section-number-3">6.2.</span> Response 2</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+はじめまして！クリスチャンキャンパス ともうします。しゅっしんはホノルルです。わたしはハワイ大学の三年生で、せんこうはけんちくがくです。しゅみはゲームとかジムとかスポーツとかマンガとかです。どうぞよろしくおねがいします。
+</p>
+
+<p>
+はじめましてクリスチャンキャンパスさんです。けんちくがくはおもしろいです。わたしも大好きです。シカゴーとニューヨークはきれいです。
+</p>
+</div>
+</div>
+<div id="outline-container-org86fd53d" class="outline-3">
+<h3 id="org86fd53d"><span class="section-number-3">6.3.</span> Response 3</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+はじめまして、ジアンともうします。わたしのしゅっしんはカウイです。今、ハワイ大学の三年生で、せんこうはコンピュータサイエンスです。しゅみはKpopとアニメです。つやすみ、ともだちとビーチに行きました。
+</p>
+
+<p>
+はじめましてジアンさん。カウイはしずかで、とてもきれいです。カウイのレステラントはたかいです。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdb56a3b" class="outline-2">
+<h2 id="orgdb56a3b"><span class="section-number-2">7.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+上下子力男女好父家族知犬留結婚母兄姉妹弟私小友待住手校高
+</p>
+
+<p>
+川車食飲言話語読持後午電教書番号連貝買心思口耳門聞歩間作英
+</p>
+
+<ol class="org-ol">
+<li>せんしゅう（X）ブルノ・マーズ（の）コンサート（に）行きました。(went to Bruno Mars concert)</li>
+
+<li>きのう（X）としょかん（で）日本語（を）勉強しました。(studied Japanese in the library)</li>
+
+<li>きょう、ともだち（と）ひるごはん（を）食べます。(eat lunch with a friend)</li>
+
+<li>先月（X）ビーチ（に）行って、サーフィン（を）しました。</li>
+
+<li>アルバイトは９時（から）５時（まで）です。(from 9 to 5)</li>
+
+<li>月曜日（に）すうがく（の）テスト（が）あります。(I’ll have a math test)</li>
+
+<li>せんしゅう（X）ともだち（が）ハワイ（に）来ました。(A friend came to Hawaii last week.)</li>
+
+<li>らいねん（X）きょうと（と）おおさか（に）行きます。(I’ll go to Kyoto and Osaka next year.)</li>
+
+<li>チンさんはハワイ大学（の）学生です。わたし（も）ハワイ大学（の）学生です。(Chin is a UH student. I’m also a UH student.)</li>
+
+<li>A: 週末（しゅうまつ）は　どこ（か）行きましたか。(did you go somewhere?)
+B: いえ、どこ（にも）行きませんでした。(didn’t go anywhere)</li>
+</ol>
+
+<p>
+11.あたらしい（X）レストランはジム（の）となりです。(next to a gym) 
+</p>
+
+<ol class="org-ol">
+<li>A: すみません、としょかんはどこ（ に ）あるんですか。
+B: としょかんですか。としょかんは、しょくどうのとなり（ に ）ありますよ。</li>
+
+<li>明日（ の ） 2時半（ に ）先生（ に ）あいます。(will meet the teacher at 2:30 tomorrow)</li>
+</ol>
+
+
+<p>
+Plain Non-past Plain Past te form
+帰る （かえる） かえった かえって
+取る （とる） とった とって
+買う （かう） かった かって
+会う （あう） あった あって
+違う （ちがう） ちがった ちがって
+待つ （まつ） まった まって
+あった あって
+</p>
+</div>
+</div>
+<div id="outline-container-orgbe49378" class="outline-2">
+<h2 id="orgbe49378"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+上下子力男女好父母兄姉
+</p>
+</div>
+</div>
+<div id="outline-container-org3508166" class="outline-2">
+<h2 id="org3508166"><span class="section-number-2">9.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+</div>
+<div id="outline-container-org20fce9d" class="outline-2">
+<h2 id="org20fce9d"><span class="section-number-2">10.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org53603e1" class="outline-3">
+<h3 id="org53603e1"><span class="section-number-3">10.1.</span> <span class="done DONE">DONE</span> 1</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+サリ
+本田さんの家族は住んでいます。
+ホンド
+</p>
+</div>
+</div>
+<div id="outline-container-org0bc6cdb" class="outline-3">
+<h3 id="org0bc6cdb"><span class="section-number-3">10.2.</span> <span class="done DONE">DONE</span> 2</h3>
+</div>
+
+<div id="outline-container-org19c839b" class="outline-3">
+<h3 id="org19c839b"><span class="section-number-3">10.3.</span> <span class="done DONE">DONE</span> 3</h3>
+</div>
+
+<div id="outline-container-orgdb09eab" class="outline-3">
+<h3 id="orgdb09eab"><span class="section-number-3">10.4.</span> <span class="done DONE">DONE</span> 4</h3>
+</div>
+
+<div id="outline-container-org92edd03" class="outline-3">
+<h3 id="org92edd03"><span class="section-number-3">10.5.</span> <span class="done DONE">DONE</span> 5</h3>
+</div>
+
+<div id="outline-container-org81033a5" class="outline-3">
+<h3 id="org81033a5"><span class="section-number-3">10.6.</span> <span class="done DONE">DONE</span> 6</h3>
+</div>
+
+<div id="outline-container-org76aa8d6" class="outline-3">
+<h3 id="org76aa8d6"><span class="section-number-3">10.7.</span> <span class="done DONE">DONE</span> 7</h3>
+</div>
+
+<div id="outline-container-org60c5161" class="outline-3">
+<h3 id="org60c5161"><span class="section-number-3">10.8.</span> <span class="done DONE">DONE</span> 8</h3>
+</div>
+</div>
+<div id="outline-container-org800ce21" class="outline-2">
+<h2 id="org800ce21"><span class="section-number-2">11.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-11">
+</div>
+<div id="outline-container-orgfb1a69e" class="outline-3">
+<h3 id="orgfb1a69e"><span class="section-number-3">11.1.</span> <span class="done DONE">DONE</span> Moodle 22</h3>
+</div>
+
+<div id="outline-container-org00c728d" class="outline-3">
+<h3 id="org00c728d"><span class="section-number-3">11.2.</span> <span class="done DONE">DONE</span> Moodle 23</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+いく ー いっている
+</p>
+
+<p>
+A: 何人家族ですか。
+B: うちは五人です。そぼもいっしょに住んでいるんです。
+</p>
+
+<p>
+すんでいる
+</p>
+
+<p>
+かう ー かっている
+おしえる ー おしえている
+りゅうがくする ー りゅうがくしている
+けっこんする ー けっこんしている
+</p>
+</div>
+</div>
+<div id="outline-container-org6487e79" class="outline-3">
+<h3 id="org6487e79"><span class="section-number-3">11.3.</span> <span class="done DONE">DONE</span> Moodle 24</h3>
+</div>
+</div>
+<div id="outline-container-org33305e4" class="outline-2">
+<h2 id="org33305e4"><span class="section-number-2">12.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+こんにちは。クリス田中です。私の家族は六人です。 
+</p>
+
+<p>
+父と母とお姉さんと妹と弟と私です。 
+</p>
+
+<p>
+妹は中学校生で弟は小学校生です。 
+</p>
+
+<p>
+姉は結婚していて、今はボストンに住んでいます。 
+</p>
+
+<p>
+姉は、男の子が一人います。名前はライアンです。 
+</p>
+
+<p>
+ライアンは三年でかわいいです。
+</p>
+</div>
+</div>
+<div id="outline-container-org4b784e8" class="outline-2">
+<h2 id="org4b784e8"><span class="section-number-2">13.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+</div>
+<div id="outline-container-orge9e8404" class="outline-2">
+<h2 id="orge9e8404"><span class="section-number-2">14.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+ぼくの家族は、三人です。
+母と姉とぼくです。
+母はパーリモミに医者をしています。
+母はいっしょにハワイカイに住んでいます。
+姉はチカゴにかれしと住んでいます。
+医者をしています。
+かわいい犬を飼っています。
+チワワです。ねこを飼っていました。
+私にとって、家族は一番大切です。
+</p>
+</div>
+</div>
+<div id="outline-container-org8d9e458" class="outline-2">
+<h2 id="org8d9e458"><span class="section-number-2">15.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+</div>
+<div id="outline-container-org989e786" class="outline-2">
+<h2 id="org989e786"><span class="section-number-2">16.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+</div>
+<div id="outline-container-orgaac40df" class="outline-2">
+<h2 id="orgaac40df"><span class="section-number-2">17.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-org0fa48ae" class="outline-3">
+<h3 id="org0fa48ae"><span class="section-number-3">17.1.</span> <span class="done DONE">DONE</span> Preparation</h3>
+</div>
+
+<div id="outline-container-org9b03bf2" class="outline-3">
+<h3 id="org9b03bf2"><span class="section-number-3">17.2.</span> <span class="done DONE">DONE</span> Moodle</h3>
+</div>
+
+<div id="outline-container-org4d8ac4f" class="outline-3">
+<h3 id="org4d8ac4f"><span class="section-number-3">17.3.</span> <span class="done DONE">DONE</span> Homework</h3>
+</div>
+
+<div id="outline-container-org24fcbe8" class="outline-3">
+<h3 id="org24fcbe8"><span class="section-number-3">17.4.</span> <span class="done DONE">DONE</span> Mini Quiz</h3>
+</div>
+
+<div id="outline-container-orge4c5ba1" class="outline-3">
+<h3 id="orge4c5ba1"><span class="section-number-3">17.5.</span> <span class="done DONE">DONE</span> In-Class Activities</h3>
+</div>
+</div>
+<div id="outline-container-orgb33b87d" class="outline-2">
+<h2 id="orgb33b87d"><span class="section-number-2">18.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-18">
+</div>
+<div id="outline-container-org454e461" class="outline-3">
+<h3 id="org454e461"><span class="section-number-3">18.1.</span> <span class="done DONE">DONE</span> Moodle 6</h3>
+<div class="outline-text-3" id="text-18-1">
+<p>
+When using 「何何」と思います, the speaker must use the plain dictionary form of the verb.
+飲む
+</p>
+
+<p>
+耳
+</p>
+
+<p>
+パーティーに、チンさんとやまださんが「くる」とおもいます。
+</p>
+
+<p>
+リーさんのお母さんは「きれいだ」とおもいます。
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb9d5be5" class="outline-2">
+<h2 id="orgb9d5be5"><span class="section-number-2">19.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-19">
+</div>
+</div>
+<div id="outline-container-orgc613d80" class="outline-2">
+<h2 id="orgc613d80"><span class="section-number-2">20.</span> <span class="done DONE">DONE</span> JPN 102</h2>
+<div class="outline-text-2" id="text-20">
+</div>
+</div>
+<div id="outline-container-org0132a41" class="outline-2">
+<h2 id="org0132a41"><span class="section-number-2">21.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-21">
+<p>
+父
+ちち
+</p>
+<pre class="example">
+(my) father お父
+</pre>
+
+<p>
+とう
+さん: (your) father 人
+ひと
+</p>
+<pre class="example">
+person
+</pre>
+
+
+<p>
+57
+Core Vocabulary All words listed here are required, including words with an asterisk (<b>), which do
+not appear in the dialogs.
+Nouns:
+よ てい
+1b(previous) plans, prior arrangement
+1bnight
+1bnight
+今度1bnext time
+ハワイカイ2-2Hawaii Kai
+2-2car, automobile
+2-2address (of residence)
+2-2phone number
+2-2bicycle, bike
+2-2A.M.
+午後*2-2P.M.
+ポットラック/もちより2-3apotluck (party)
+サラダ2-3asalad
+ケーキ2-3acake
+ほかの人2-3aother people, someone else
+ソーダ2-3asoda
+ジュース2-3ajuice
+予定
+ばん
+晩
+よる
+夜</b>
+こん ど
+くるま
+車
+じゅうしょ
+住 所
+でん わ ばんごう
+電話番 号
+じ てんしゃ
+自転 車*
+ご ぜん
+午前*
+ご ご
+ひと
+MUSUBI Lesson 6 OC
+</p>
+</div>
+</div>
+<div id="outline-container-org190e2fa" class="outline-2">
+<h2 id="org190e2fa"><span class="section-number-2">22.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-22">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Dictionary Form</td>
+<td class="org-left">English</td>
+<td class="org-left">て-Form</td>
+<td class="org-left">ます-Form</td>
+</tr>
+
+<tr>
+<td class="org-left">さそう</td>
+<td class="org-left">to invite</td>
+<td class="org-left">さそって</td>
+<td class="org-left">さそいます</td>
+</tr>
+
+<tr>
+<td class="org-left">あるく</td>
+<td class="org-left">to walk</td>
+<td class="org-left">あるいて</td>
+<td class="org-left">あるきます</td>
+</tr>
+
+<tr>
+<td class="org-left">もっていく</td>
+<td class="org-left">to take</td>
+<td class="org-left">もっていって</td>
+<td class="org-left">もっていきます</td>
+</tr>
+
+<tr>
+<td class="org-left">つくる</td>
+<td class="org-left">to make</td>
+<td class="org-left">つくって</td>
+<td class="org-left">つくります</td>
+</tr>
+
+<tr>
+<td class="org-left">はらう</td>
+<td class="org-left">to pay</td>
+<td class="org-left">はらって</td>
+<td class="org-left">はらいます</td>
+</tr>
+
+<tr>
+<td class="org-left">はじめる</td>
+<td class="org-left">to start</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">おしえる</td>
+<td class="org-left">to tell / inform</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">でかける</td>
+<td class="org-left">to go out</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">でんわする</td>
+<td class="org-left">to call</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">メールする</td>
+<td class="org-left">to text</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">つれてくる</td>
+<td class="org-left">to take someone</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+電話番号をおしえてください。
+車で来ってください。
+ほかの人に住所をメールしてください。
+山田さんがケーキとか飲みものが持つと思います。
+チンさんは友だちを持つと思います。
+日本語102は、かんじがむずかしいと思います。
+毎日、学校にあるいて行くんです。
+</p>
+</div>
+</div>
+<div id="outline-container-org956f273" class="outline-2">
+<h2 id="org956f273"><span class="section-number-2">23.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-23">
+<p>
+何を持って来いりましょか。
+そうですね。何でもいいですよ。
+そうですか。じゃ、デザートなんか、どうですか。
+デザートですか。いいですね。じゃ、デザート、よろしくおねがいします。
+はい、どちらデザートですか。
+そうですな。アイスクリームかケーキでも。
+じゃ、アイスクリームを買って行きます。
+すみません。じゃ、おねがいします。
+</p>
+
+
+<p>
+田中さんは持って来ります。
+山田さんは買って来ります。
+チンさんはデザートを作ると思います。
+ピザを買ってくださいです。
+友だちを連れて来りましてください。
+リーさんはピザを買りまして、きむらさんはすしを
+</p>
+</div>
+</div>
+<div id="outline-container-orgdec6273" class="outline-2">
+<h2 id="orgdec6273"><span class="section-number-2">24.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-24">
+</div>
+</div>
+<div id="outline-container-orge1f4688" class="outline-2">
+<h2 id="orge1f4688"><span class="section-number-2">25.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-25">
+</div>
+</div>
+<div id="outline-container-org9f36c2a" class="outline-2">
+<h2 id="org9f36c2a"><span class="section-number-2">26.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-26">
+</div>
+</div>
+<div id="outline-container-orge1f39db" class="outline-2">
+<h2 id="orge1f39db"><span class="section-number-2">27.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-27">
+</div>
+</div>
+<div id="outline-container-orgc5c8872" class="outline-2">
+<h2 id="orgc5c8872"><span class="section-number-2">28.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-28">
+</div>
+</div>
+<div id="outline-container-org422c860" class="outline-2">
+<h2 id="org422c860"><span class="section-number-2">29.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-29">
+</div>
+</div>
+<div id="outline-container-org891ff91" class="outline-2">
+<h2 id="org891ff91"><span class="section-number-2">30.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-30">
+</div>
+</div>
+<div id="outline-container-org24df940" class="outline-2">
+<h2 id="org24df940"><span class="section-number-2">31.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-31">
+</div>
+</div>
+<div id="outline-container-orge4a8afc" class="outline-2">
+<h2 id="orge4a8afc"><span class="section-number-2">32.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-32">
+</div>
+</div>
+<div id="outline-container-org228888b" class="outline-2">
+<h2 id="org228888b"><span class="section-number-2">33.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-33">
+</div>
+</div>
+<div id="outline-container-orgac3421e" class="outline-2">
+<h2 id="orgac3421e"><span class="section-number-2">34.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-34">
+</div>
+</div>
+<div id="outline-container-orge607149" class="outline-2">
+<h2 id="orge607149"><span class="section-number-2">35.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-35">
+</div>
+</div>
+<div id="outline-container-org8c2fcb6" class="outline-2">
+<h2 id="org8c2fcb6"><span class="section-number-2">36.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-36">
+</div>
+</div>
+<div id="outline-container-org6de24e2" class="outline-2">
+<h2 id="org6de24e2"><span class="section-number-2">37.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-37">
+</div>
+</div>
+<div id="outline-container-orgf52a81e" class="outline-2">
+<h2 id="orgf52a81e"><span class="section-number-2">38.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-38">
+</div>
+</div>
+<div id="outline-container-org56b3fc6" class="outline-2">
+<h2 id="org56b3fc6"><span class="section-number-2">39.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-39">
+</div>
+</div>
+<div id="outline-container-orgc0da797" class="outline-2">
+<h2 id="orgc0da797"><span class="section-number-2">40.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-40">
+</div>
+</div>
+<div id="outline-container-orge90505a" class="outline-2">
+<h2 id="orge90505a"><span class="section-number-2">41.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-41">
+</div>
+</div>
+<div id="outline-container-org8227a79" class="outline-2">
+<h2 id="org8227a79"><span class="section-number-2">42.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-42">
+</div>
+</div>
+<div id="outline-container-org8db3c3f" class="outline-2">
+<h2 id="org8db3c3f"><span class="section-number-2">43.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-43">
+</div>
+</div>
+<div id="outline-container-org73b1d5d" class="outline-2">
+<h2 id="org73b1d5d"><span class="section-number-2">44.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-44">
+</div>
+</div>
+<div id="outline-container-org2e3866e" class="outline-2">
+<h2 id="org2e3866e"><span class="section-number-2">45.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-45">
+</div>
+</div>
+<div id="outline-container-orgbde35dc" class="outline-2">
+<h2 id="orgbde35dc"><span class="section-number-2">46.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-46">
+</div>
+</div>
+<div id="outline-container-org3d01b91" class="outline-2">
+<h2 id="org3d01b91"><span class="section-number-2">47.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-47">
+</div>
+</div>
+<div id="outline-container-org61cfc84" class="outline-2">
+<h2 id="org61cfc84"><span class="section-number-2">48.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-48">
+</div>
+</div>
+<div id="outline-container-org5379266" class="outline-2">
+<h2 id="org5379266"><span class="section-number-2">49.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-49">
+</div>
+</div>
+<div id="outline-container-org39646ae" class="outline-2">
+<h2 id="org39646ae"><span class="section-number-2">50.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-50">
+</div>
+</div>
+<div id="outline-container-org6174511" class="outline-2">
+<h2 id="org6174511"><span class="section-number-2">51.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-51">
+</div>
+</div>
+<div id="outline-container-org8087938" class="outline-2">
+<h2 id="org8087938"><span class="section-number-2">52.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-52">
+</div>
+</div>
+<div id="outline-container-org3fb4ac4" class="outline-2">
+<h2 id="org3fb4ac4"><span class="section-number-2">53.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-53">
+</div>
+</div>
+<div id="outline-container-org45132a7" class="outline-2">
+<h2 id="org45132a7"><span class="section-number-2">54.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-54">
+</div>
+</div>
+<div id="outline-container-org759397b" class="outline-2">
+<h2 id="org759397b"><span class="section-number-2">55.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-55">
+</div>
+</div>
+<div id="outline-container-org7c22dc8" class="outline-2">
+<h2 id="org7c22dc8"><span class="section-number-2">56.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-56">
+</div>
+</div>
+<div id="outline-container-orgb0f7cad" class="outline-2">
+<h2 id="orgb0f7cad"><span class="section-number-2">57.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-57">
+</div>
+</div>
+<div id="outline-container-org3e3b0c9" class="outline-2">
+<h2 id="org3e3b0c9"><span class="section-number-2">58.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-58">
+</div>
+</div>
+<div id="outline-container-org3c16249" class="outline-2">
+<h2 id="org3c16249"><span class="section-number-2">59.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-59">
+</div>
+</div>
+<div id="outline-container-org86bb5a1" class="outline-2">
+<h2 id="org86bb5a1"><span class="section-number-2">60.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-60">
+</div>
+</div>
+<div id="outline-container-orgceb7450" class="outline-2">
+<h2 id="orgceb7450"><span class="section-number-2">61.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-61">
+</div>
+</div>
+<div id="outline-container-org5d3a4d4" class="outline-2">
+<h2 id="org5d3a4d4"><span class="section-number-2">62.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-62">
+</div>
+</div>
+<div id="outline-container-orge0b5364" class="outline-2">
+<h2 id="orge0b5364"><span class="section-number-2">63.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-63">
+</div>
+</div>
+<div id="outline-container-org377e59b" class="outline-2">
+<h2 id="org377e59b"><span class="section-number-2">64.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-64">
+</div>
+</div>
+<div id="outline-container-org2a8fcbf" class="outline-2">
+<h2 id="org2a8fcbf"><span class="section-number-2">65.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-65">
+</div>
+</div>
+<div id="outline-container-org772e9b8" class="outline-2">
+<h2 id="org772e9b8"><span class="section-number-2">66.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-66">
+</div>
+</div>
+<div id="outline-container-org981378a" class="outline-2">
+<h2 id="org981378a"><span class="section-number-2">67.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-67">
+</div>
+</div>
+<div id="outline-container-org75d317e" class="outline-2">
+<h2 id="org75d317e"><span class="section-number-2">68.</span> JPN 102</h2>
+<div class="outline-text-2" id="text-68">
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GAN Dynamics</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">GAN Dynamics</h1>
+<div id="outline-container-org1ede244" class="outline-2">
+<h2 id="org1ede244"><span class="section-number-2">1.</span> Preamble</h2>
+<div class="outline-text-2" id="text-1">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #531ab6;">import</span> tensorflow <span style="color: #531ab6;">as</span> tf
+<span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+<span style="color: #531ab6;">import</span> tensorflow.keras.layers <span style="color: #531ab6;">as</span> layers
+<span style="color: #531ab6;">import</span> sympy <span style="color: #531ab6;">as</span> sp
+<span style="color: #531ab6;">import</span> time
+<span style="color: #531ab6;">from</span> scipy.integrate <span style="color: #531ab6;">import</span> ode
+<span style="color: #531ab6;">from</span> tqdm <span style="color: #531ab6;">import</span> tqdm
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org671a331" class="outline-2">
+<h2 id="org671a331"><span class="section-number-2">2.</span> Datasets</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga5011b4" class="outline-3">
+<h3 id="orga5011b4"><span class="section-number-3">2.1.</span> Lorenz</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-jupyter-python">sp.init_printing<span style="color: #000000;">()</span>
+<span style="color: #005e8b;">rng</span> = np.random.default_rng<span style="color: #000000;">()</span>
+<span style="color: #595959;"># </span><span style="color: #595959;">declare endogenous variables</span>
+<span style="color: #005e8b;">t</span>, <span style="color: #005e8b;">x</span>, <span style="color: #005e8b;">y</span>, <span style="color: #005e8b;">z</span> = sp.var<span style="color: #000000;">(</span><span style="color: #3548cf;">'t, x, y, z'</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">declare model parameters</span>
+<span style="color: #005e8b;">beta</span>, <span style="color: #005e8b;">rho</span>, <span style="color: #005e8b;">sigma</span> = sp.var<span style="color: #000000;">(</span><span style="color: #3548cf;">'beta, rho, sigma'</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">define symbolic model equations</span>
+<span style="color: #005e8b;">_x_dot</span> = sigma * <span style="color: #000000;">(</span>y - x<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_y_dot</span> = x * <span style="color: #000000;">(</span>rho - z<span style="color: #000000;">)</span> - y
+<span style="color: #005e8b;">_z_dot</span> = x * y - beta * z
+
+<span style="color: #595959;"># </span><span style="color: #595959;">define symbolic system and compute the jacobian</span>
+<span style="color: #005e8b;">_lorenz_system</span> = sp.Matrix<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">[</span>_x_dot<span style="color: #008899;">]</span>, <span style="color: #008899;">[</span>_y_dot<span style="color: #008899;">]</span>, <span style="color: #008899;">[</span>_z_dot<span style="color: #008899;">]</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+_lorenz_system
+
+
+<span style="color: #595959;"># </span><span style="color: #595959;">In[6]:</span>
+
+
+<span style="color: #005e8b;">_lorenz_jacobian</span> = _lorenz_system.jacobian<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>x, y, z<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+_lorenz_jacobian
+
+
+<span style="color: #595959;"># </span><span style="color: #595959;">In[7]:</span>
+
+
+<span style="color: #595959;"># </span><span style="color: #595959;">in order to pass an array as an argument, we need to apply a change of variables</span>
+<span style="color: #005e8b;">X</span> = sp.DeferredVector<span style="color: #000000;">(</span><span style="color: #3548cf;">'X'</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">change_of_vars</span> = <span style="color: #000000;">{</span><span style="color: #3548cf;">'x'</span>: X<span style="color: #dd22dd;">[</span>0<span style="color: #dd22dd;">]</span>, <span style="color: #3548cf;">'y'</span>: X<span style="color: #dd22dd;">[</span>1<span style="color: #dd22dd;">]</span>, <span style="color: #3548cf;">'z'</span>: X<span style="color: #dd22dd;">[</span>2<span style="color: #dd22dd;">]</span><span style="color: #000000;">}</span>
+<span style="color: #005e8b;">_transformed_lorenz_system</span> = _lorenz_system.subs<span style="color: #000000;">(</span>change_of_vars<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_transformed_lorenz_jacobian</span> = _transformed_lorenz_system.jacobian<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>X<span style="color: #008899;">[</span>0<span style="color: #008899;">]</span>, X<span style="color: #008899;">[</span>1<span style="color: #008899;">]</span>, X<span style="color: #008899;">[</span>2<span style="color: #008899;">]</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #595959;"># </span><span style="color: #595959;">wrap the symbolic expressions as callable numpy funcs</span>
+<span style="color: #005e8b;">_args</span> = <span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_f</span> = sp.lambdify<span style="color: #000000;">(</span>_args, _transformed_lorenz_system,
+                 modules=<span style="color: #dd22dd;">[</span><span style="color: #008899;">{</span><span style="color: #3548cf;">'ImmutableMatrix'</span>: np.array<span style="color: #008899;">}</span>, <span style="color: #3548cf;">"numpy"</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">_jac</span> = sp.lambdify<span style="color: #000000;">(</span>_args, _transformed_lorenz_jacobian,
+                   modules=<span style="color: #dd22dd;">[</span><span style="color: #008899;">{</span><span style="color: #3548cf;">'ImmutableMatrix'</span>: np.array<span style="color: #008899;">}</span>, <span style="color: #3548cf;">"numpy"</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+
+<span style="color: #595959;"># </span><span style="color: #595959;">In[8]:</span>
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">lorenz_system</span><span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Return the Lorenz system.</span>
+
+<span style="color: #2a5045;">    Parameters</span>
+<span style="color: #2a5045;">    ----------</span>
+<span style="color: #2a5045;">    t : float</span>
+<span style="color: #2a5045;">        Time</span>
+<span style="color: #2a5045;">    X : ndarray (float, shape=(3,))</span>
+<span style="color: #2a5045;">        Endogenous variables of the Lorenz system.</span>
+<span style="color: #2a5045;">    beta : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\b</span><span style="color: #2a5045;">eta`.</span>
+<span style="color: #2a5045;">    rho : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\r</span><span style="color: #2a5045;">ho`.</span>
+<span style="color: #2a5045;">    sigma : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; \sigma`.</span>
+
+
+<span style="color: #2a5045;">    Returns</span>
+<span style="color: #2a5045;">    -------</span>
+<span style="color: #2a5045;">    rhs_ode : ndarray (float, shape=(3,))</span>
+<span style="color: #2a5045;">        Right hand side of the Lorenz system of ODEs.</span>
+
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #005e8b;">rhs_ode</span> = _f<span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>.ravel<span style="color: #000000;">()</span>
+    <span style="color: #531ab6;">return</span> rhs_ode
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">lorenz_jacobian</span><span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Return the Jacobian of the Lorenz system.</span>
+
+<span style="color: #2a5045;">    Parameters</span>
+<span style="color: #2a5045;">    ----------</span>
+<span style="color: #2a5045;">    t : float</span>
+<span style="color: #2a5045;">        Time</span>
+<span style="color: #2a5045;">    X : ndarray (float, shape=(3,))</span>
+<span style="color: #2a5045;">        Endogenous variables of the Lorenz system.</span>
+<span style="color: #2a5045;">    beta : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\b</span><span style="color: #2a5045;">eta`.</span>
+<span style="color: #2a5045;">    rho : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; </span><span style="color: #0000b0;">\r</span><span style="color: #2a5045;">ho`.</span>
+<span style="color: #2a5045;">    sigma : float</span>
+<span style="color: #2a5045;">        Model parameter. Should satisfy :math:`0 &lt; \sigma`.</span>
+
+<span style="color: #2a5045;">    Returns</span>
+<span style="color: #2a5045;">    -------</span>
+<span style="color: #2a5045;">    jac : ndarray (float, shape=(3,3))</span>
+<span style="color: #2a5045;">        Jacobian of the Lorenz system of ODEs.</span>
+
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #005e8b;">jac</span> = _jac<span style="color: #000000;">(</span>t, X, beta, rho, sigma<span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> jac
+
+
+<span style="color: #595959;"># </span><span style="color: #595959;">In[9]:</span>
+
+
+<span style="color: #005e8b;">epochs</span> = 5
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">butterfly_generator</span><span style="color: #000000;">(</span>batch_size, batches<span style="color: #000000;">)</span>:
+
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">scipy_butterfly</span><span style="color: #000000;">(</span>num_points, initial_value<span style="color: #000000;">)</span>:
+        <span style="color: #005e8b;">lorenz_params</span> = <span style="color: #000000;">(</span>2.66, 28.0, 10.0<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">from</span> scipy.integrate <span style="color: #531ab6;">import</span> ode
+        <span style="color: #531ab6;">from</span> tqdm <span style="color: #531ab6;">import</span> tqdm
+        
+        <span style="color: #595959;"># </span><span style="color: #595959;">create the instance</span>
+        <span style="color: #005e8b;">solution</span> = ode<span style="color: #000000;">(</span>f=lorenz_system, jac=lorenz_jacobian<span style="color: #000000;">)</span> \
+            .set_integrator<span style="color: #000000;">(</span><span style="color: #3548cf;">'vode'</span><span style="color: #000000;">)</span> \
+            .set_initial_value<span style="color: #000000;">(</span>initial_value, 0<span style="color: #000000;">)</span> \
+            .set_f_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span> \
+            .set_jac_params<span style="color: #000000;">(</span>*lorenz_params<span style="color: #000000;">)</span>
+        
+        <span style="color: #005e8b;">t_final</span> = 50
+        <span style="color: #005e8b;">dt</span> = 0.01
+        <span style="color: #531ab6;">while</span> solution.successful<span style="color: #000000;">()</span> <span style="color: #531ab6;">and</span> solution.t &lt; t_final:
+            solution.t + dt, solution.integrate<span style="color: #000000;">(</span>solution.t + dt<span style="color: #000000;">)</span>
+        
+        <span style="color: #005e8b;">butterfly</span> = <span style="color: #000000;">[]</span>
+        <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>num_points<span style="color: #000000;">)</span>:
+            solution.integrate<span style="color: #000000;">(</span>solution.t + dt<span style="color: #000000;">)</span>
+            butterfly.append<span style="color: #000000;">(</span>solution.y<span style="color: #000000;">)</span>
+        <span style="color: #005e8b;">butterfly</span> = np.array<span style="color: #000000;">(</span>butterfly<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">return</span> butterfly
+    
+    <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>batches<span style="color: #000000;">)</span>:
+        <span style="color: #531ab6;">yield</span> scipy_butterfly<span style="color: #000000;">(</span>batch_size, rng.uniform<span style="color: #dd22dd;">(</span>-2,2,3<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">plot_butterfly</span><span style="color: #000000;">(</span>array_of_points<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">ax</span> = plt.figure<span style="color: #000000;">()</span>.add_subplot<span style="color: #000000;">(</span>projection=<span style="color: #3548cf;">'3d'</span><span style="color: #000000;">)</span>
+    
+    ax.scatter<span style="color: #000000;">(</span>array_of_points<span style="color: #dd22dd;">[</span>:, 0<span style="color: #dd22dd;">]</span>, array_of_points<span style="color: #dd22dd;">[</span>:, 1<span style="color: #dd22dd;">]</span>, array_of_points<span style="color: #dd22dd;">[</span>:, 2<span style="color: #dd22dd;">]</span>, s=0.5<span style="color: #000000;">)</span>
+    
+    ax.set_xlabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"X Axis"</span><span style="color: #000000;">)</span>
+    ax.set_ylabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"Y Axis"</span><span style="color: #000000;">)</span>
+    ax.set_zlabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"Z Axis"</span><span style="color: #000000;">)</span>
+    ax.set_title<span style="color: #000000;">(</span><span style="color: #3548cf;">"Lorenz Attractor"</span><span style="color: #000000;">)</span>
+    
+    plt.show<span style="color: #000000;">()</span>
+
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge79f59c" class="outline-3">
+<h3 id="orge79f59c"><span class="section-number-3">2.2.</span> Ikeda</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">ikeda_attractor_generator</span><span style="color: #000000;">(</span>batch_size, batches<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">u</span> = 0.9
+
+    <span style="color: #005f5f;">@tf.function</span><span style="color: #000000;">()</span>
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">ikeda_attractor</span><span style="color: #000000;">()</span>:
+        <span style="color: #595959;"># </span><span style="color: #595959;">Initialize x and y with random values</span>
+        <span style="color: #005e8b;">x</span>, <span style="color: #005e8b;">y</span> = tf.random.uniform<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>batch_size, 1<span style="color: #dd22dd;">)</span>, 0, 0.5<span style="color: #000000;">)</span>, tf.random.uniform<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>batch_size, 1<span style="color: #dd22dd;">)</span>, 0, 0.5<span style="color: #000000;">)</span>
+        <span style="color: #005e8b;">N</span> = 1500  <span style="color: #595959;"># </span><span style="color: #595959;">Number of iterations</span>
+
+        <span style="color: #595959;"># </span><span style="color: #595959;">Use tf.while_loop to perform iterations inside the TensorFlow graph</span>
+        <span style="color: #531ab6;">def</span> <span style="color: #721045;">condition</span><span style="color: #000000;">(</span>i, x, y<span style="color: #000000;">)</span>:
+            <span style="color: #531ab6;">return</span> i &lt; N
+
+        <span style="color: #531ab6;">def</span> <span style="color: #721045;">body</span><span style="color: #000000;">(</span>i, x, y<span style="color: #000000;">)</span>:
+            <span style="color: #005e8b;">t</span> = 0.4 - <span style="color: #000000;">(</span>6 / <span style="color: #dd22dd;">(</span>1 + x ** 2 + y ** 2<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">x_new</span> = 1 + u * <span style="color: #000000;">(</span>x * tf.cos<span style="color: #dd22dd;">(</span>t<span style="color: #dd22dd;">)</span> - y * tf.sin<span style="color: #dd22dd;">(</span>t<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">y_new</span> = u * <span style="color: #000000;">(</span>x * tf.sin<span style="color: #dd22dd;">(</span>t<span style="color: #dd22dd;">)</span> + y * tf.cos<span style="color: #dd22dd;">(</span>t<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            <span style="color: #531ab6;">return</span> i + 1, x_new, y_new
+
+        <span style="color: #005e8b;">i</span> = tf.constant<span style="color: #000000;">(</span>0<span style="color: #000000;">)</span>
+        <span style="color: #005e8b;">_</span>, <span style="color: #005e8b;">x_final</span>, <span style="color: #005e8b;">y_final</span> = tf.while_loop<span style="color: #000000;">(</span>
+            cond=condition,
+            body=body,
+            loop_vars=<span style="color: #dd22dd;">[</span>i, x, y<span style="color: #dd22dd;">]</span>,
+            parallel_iterations=4  <span style="color: #595959;"># </span><span style="color: #595959;">Adjust based on your system</span>
+        <span style="color: #000000;">)</span>
+
+        <span style="color: #531ab6;">return</span> x_final, y_final
+
+    <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>batches<span style="color: #000000;">)</span>:
+        <span style="color: #005e8b;">x_final</span>, <span style="color: #005e8b;">y_final</span> = ikeda_attractor<span style="color: #000000;">()</span>
+        <span style="color: #531ab6;">yield</span> x_final, y_final
+
+<span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> tqdm<span style="color: #000000;">(</span>ikeda_attractor_generator<span style="color: #dd22dd;">(</span>10**4, 50<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">pass</span>
+</pre>
+</div>
+
+<pre class="example">
+50it [00:04, 11.62it/s]
+</pre>
+</div>
+</div>
+<div id="outline-container-org6085c6e" class="outline-3">
+<h3 id="org6085c6e"><span class="section-number-3">2.3.</span> Plotting&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Test">Test</span></span></h3>
+</div>
+</div>
+<div id="outline-container-org350d448" class="outline-2">
+<h2 id="org350d448"><span class="section-number-2">3.</span> GAN</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org8af9c8a" class="outline-3">
+<h3 id="org8af9c8a"><span class="section-number-3">3.1.</span> Generator</h3>
+<div class="outline-text-3" id="text-3-1">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> tensorflow <span style="color: #531ab6;">as</span> tf
+<span style="color: #531ab6;">from</span> tensorflow.keras <span style="color: #531ab6;">import</span> layers
+
+<span style="color: #531ab6;">import</span> tensorflow <span style="color: #531ab6;">as</span> tf
+<span style="color: #531ab6;">from</span> tensorflow.keras <span style="color: #531ab6;">import</span> layers
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">build_dense_network</span><span style="color: #000000;">(</span>hidden_dim, num_hidden_layers, input_shape<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Builds a feedforward neural network for scaling (s) and translation (t) functions.</span>
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #005e8b;">inputs</span> = tf.keras.Input<span style="color: #000000;">(</span>shape=input_shape<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">x</span> = inputs
+    <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>num_hidden_layers<span style="color: #000000;">)</span>:
+        <span style="color: #005e8b;">x</span> = layers.Dense<span style="color: #000000;">(</span>hidden_dim, activation=<span style="color: #3548cf;">'relu'</span><span style="color: #000000;">)(</span>x<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">outputs</span> = layers.Dense<span style="color: #000000;">(</span>input_shape<span style="color: #dd22dd;">[</span>-1<span style="color: #dd22dd;">]</span>, activation=<span style="color: #3548cf;">'linear'</span><span style="color: #000000;">)(</span>x<span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> tf.keras.Model<span style="color: #000000;">(</span>inputs=inputs, outputs=outputs<span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">class</span> <span style="color: #005f5f;">CouplingLayer</span><span style="color: #000000;">(</span>tf.keras.layers.Layer<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Implements an invertible coupling layer for 2D inputs.</span>
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">__init__</span><span style="color: #000000;">(</span><span style="color: #531ab6;">self</span>, input_dim, hidden_dim, num_hidden_layers, swap=<span style="color: #0000b0;">False</span><span style="color: #000000;">)</span>:
+        <span style="color: #8f0075;">super</span><span style="color: #000000;">(</span>CouplingLayer, <span style="color: #531ab6;">self</span><span style="color: #000000;">)</span>.__init__<span style="color: #000000;">()</span>
+        <span style="color: #531ab6;">self</span>.<span style="color: #005e8b;">input_dim</span> = input_dim
+        <span style="color: #531ab6;">self</span>.<span style="color: #005e8b;">swap</span> = swap
+
+        <span style="color: #595959;"># </span><span style="color: #595959;">Build scaling (s) and translation (t) networks</span>
+        <span style="color: #531ab6;">self</span>.<span style="color: #005e8b;">s_net</span> = build_dense_network<span style="color: #000000;">(</span>hidden_dim, num_hidden_layers, input_shape=<span style="color: #dd22dd;">(</span>input_dim // 2,<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">self</span>.<span style="color: #005e8b;">t_net</span> = build_dense_network<span style="color: #000000;">(</span>hidden_dim, num_hidden_layers, input_shape=<span style="color: #dd22dd;">(</span>input_dim // 2,<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">call</span><span style="color: #000000;">(</span><span style="color: #531ab6;">self</span>, x, reverse=<span style="color: #0000b0;">False</span><span style="color: #000000;">)</span>:
+        <span style="color: #595959;"># </span><span style="color: #595959;">Split the input into two parts</span>
+        <span style="color: #531ab6;">if</span> <span style="color: #531ab6;">self</span>.swap:
+            <span style="color: #005e8b;">x1</span>, <span style="color: #005e8b;">x2</span> = tf.split<span style="color: #000000;">(</span>x, num_or_size_splits=2, axis=-1<span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">x1</span>, <span style="color: #005e8b;">x2</span> = x2, x1  <span style="color: #595959;"># </span><span style="color: #595959;">Swap x1 and x2</span>
+        <span style="color: #531ab6;">else</span>:
+            <span style="color: #005e8b;">x1</span>, <span style="color: #005e8b;">x2</span> = tf.split<span style="color: #000000;">(</span>x, num_or_size_splits=2, axis=-1<span style="color: #000000;">)</span>
+        
+        <span style="color: #595959;"># </span><span style="color: #595959;">Compute scaling and translation</span>
+        <span style="color: #005e8b;">s</span> = <span style="color: #531ab6;">self</span>.s_net<span style="color: #000000;">(</span>x1<span style="color: #000000;">)</span>
+        <span style="color: #005e8b;">t</span> = <span style="color: #531ab6;">self</span>.t_net<span style="color: #000000;">(</span>x1<span style="color: #000000;">)</span>
+        
+        <span style="color: #531ab6;">if</span> reverse:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Inverse transformation</span>
+            <span style="color: #005e8b;">y2</span> = <span style="color: #000000;">(</span>x2 - t<span style="color: #000000;">)</span> * tf.exp<span style="color: #000000;">(</span>-s<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">else</span>:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Forward transformation</span>
+            <span style="color: #005e8b;">y2</span> = x2 * tf.exp<span style="color: #000000;">(</span>s<span style="color: #000000;">)</span> + t
+        
+        <span style="color: #595959;"># </span><span style="color: #595959;">Concatenate the transformed and unchanged parts</span>
+        <span style="color: #531ab6;">if</span> <span style="color: #531ab6;">self</span>.swap:
+            <span style="color: #005e8b;">y</span> = tf.concat<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>y2, x1<span style="color: #dd22dd;">]</span>, axis=-1<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">else</span>:
+            <span style="color: #005e8b;">y</span> = tf.concat<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>x1, y2<span style="color: #dd22dd;">]</span>, axis=-1<span style="color: #000000;">)</span>
+        
+        <span style="color: #531ab6;">return</span> y
+
+<span style="color: #531ab6;">class</span> <span style="color: #005f5f;">InvertibleNN</span><span style="color: #000000;">(</span>tf.keras.Model<span style="color: #000000;">)</span>:
+    <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">    Constructs the invertible neural network using coupling layers.</span>
+<span style="color: #2a5045;">    """</span>
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">__init__</span><span style="color: #000000;">(</span><span style="color: #531ab6;">self</span>, input_dim=2, num_coupling_layers=4, hidden_dim=64, num_hidden_layers=2<span style="color: #000000;">)</span>:
+        <span style="color: #8f0075;">super</span><span style="color: #000000;">(</span>InvertibleNN, <span style="color: #531ab6;">self</span><span style="color: #000000;">)</span>.__init__<span style="color: #000000;">()</span>
+        <span style="color: #531ab6;">self</span>.<span style="color: #005e8b;">input_dim</span> = input_dim
+        <span style="color: #531ab6;">self</span>.<span style="color: #005e8b;">coupling_layers</span> = <span style="color: #000000;">[]</span>
+        <span style="color: #531ab6;">for</span> i <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>num_coupling_layers<span style="color: #000000;">)</span>:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Alternate swapping to ensure both input components are transformed</span>
+            <span style="color: #005e8b;">swap</span> = i % 2 == 1
+            <span style="color: #005e8b;">layer</span> = CouplingLayer<span style="color: #000000;">(</span>input_dim, hidden_dim, num_hidden_layers, swap=swap<span style="color: #000000;">)</span>
+            <span style="color: #531ab6;">self</span>.coupling_layers.append<span style="color: #000000;">(</span>layer<span style="color: #000000;">)</span>
+    
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">call</span><span style="color: #000000;">(</span><span style="color: #531ab6;">self</span>, x, reverse=<span style="color: #0000b0;">False</span><span style="color: #000000;">)</span>:
+        <span style="color: #531ab6;">if</span> <span style="color: #531ab6;">not</span> reverse:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Forward transformation</span>
+            <span style="color: #531ab6;">for</span> layer <span style="color: #531ab6;">in</span> <span style="color: #531ab6;">self</span>.coupling_layers:
+                <span style="color: #005e8b;">x</span> = layer<span style="color: #000000;">(</span>x<span style="color: #000000;">)</span>
+            <span style="color: #531ab6;">return</span> x
+        <span style="color: #531ab6;">else</span>:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Inverse transformation</span>
+            <span style="color: #531ab6;">for</span> layer <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">reversed</span><span style="color: #000000;">(</span><span style="color: #531ab6;">self</span>.coupling_layers<span style="color: #000000;">)</span>:
+                <span style="color: #005e8b;">x</span> = layer<span style="color: #000000;">(</span>x, reverse=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+            <span style="color: #531ab6;">return</span> x
+
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">generator_loss</span><span style="color: #000000;">(</span>fake_output<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">cross_entropy</span> = tf.keras.losses.BinaryCrossentropy<span style="color: #000000;">(</span>from_logits=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> cross_entropy<span style="color: #000000;">(</span>tf.ones_like<span style="color: #dd22dd;">(</span>fake_output<span style="color: #dd22dd;">)</span>, fake_output<span style="color: #000000;">)</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2e52f5" class="outline-3">
+<h3 id="orge2e52f5"><span class="section-number-3">3.2.</span> Discriminator</h3>
+<div class="outline-text-3" id="text-3-2">
+<div class="org-src-container">
+<pre class="src src-jupyter-python">
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">make_discriminator_model</span><span style="color: #000000;">()</span>:
+    <span style="color: #005e8b;">model</span> = tf.keras.Sequential<span style="color: #000000;">()</span>
+    model.add<span style="color: #000000;">(</span>layers.Dense<span style="color: #dd22dd;">(</span>2**6<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    model.add<span style="color: #000000;">(</span>layers.Activation<span style="color: #dd22dd;">(</span><span style="color: #3548cf;">'gelu'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    model.add<span style="color: #000000;">(</span>layers.Dense<span style="color: #dd22dd;">(</span>2**6<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    model.add<span style="color: #000000;">(</span>layers.Activation<span style="color: #dd22dd;">(</span><span style="color: #3548cf;">'gelu'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    model.add<span style="color: #000000;">(</span>layers.Dense<span style="color: #dd22dd;">(</span>2**6<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    model.add<span style="color: #000000;">(</span>layers.Activation<span style="color: #dd22dd;">(</span><span style="color: #3548cf;">'gelu'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    model.add<span style="color: #000000;">(</span>layers.Dense<span style="color: #dd22dd;">(</span>1<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> model
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">discriminator_loss</span><span style="color: #000000;">(</span>real_output, fake_output<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">cross_entropy</span> = tf.keras.losses.BinaryCrossentropy<span style="color: #000000;">(</span>from_logits=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">real_loss</span> = cross_entropy<span style="color: #000000;">(</span>tf.ones_like<span style="color: #dd22dd;">(</span>real_output<span style="color: #dd22dd;">)</span>, real_output<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">fake_loss</span> = cross_entropy<span style="color: #000000;">(</span>tf.zeros_like<span style="color: #dd22dd;">(</span>fake_output<span style="color: #dd22dd;">)</span>, fake_output<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">total_loss</span> = real_loss + fake_loss
+    <span style="color: #531ab6;">return</span> total_loss
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2c36bac" class="outline-3">
+<h3 id="org2c36bac"><span class="section-number-3">3.3.</span> GAN Training</h3>
+<div class="outline-text-3" id="text-3-3">
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">ikeda_attractor_gan_pipeline</span><span style="color: #000000;">()</span>:
+    <span style="color: #005e8b;">batches</span> = 10**7
+    <span style="color: #005e8b;">batch_size</span> = 10**4
+    <span style="color: #005e8b;">noise_dim</span> = 2
+
+    <span style="color: #005e8b;">lr_schedule_gen</span> = 0.00005
+    
+    <span style="color: #005e8b;">generator_optimizer</span> = tf.keras.optimizers.Adam<span style="color: #000000;">(</span>learning_rate=lr_schedule_gen, beta_1=0.1, beta_2=0.95<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">generator</span> = InvertibleNN<span style="color: #000000;">()</span>
+    
+    <span style="color: #005e8b;">lr_schedule_disc</span> = 0.0001
+        
+    <span style="color: #005e8b;">discriminator_optimizer</span> = tf.keras.optimizers.Adam<span style="color: #000000;">(</span>learning_rate=lr_schedule_disc, beta_1=0.1, beta_2=0.95<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">discriminator</span> = make_discriminator_model<span style="color: #000000;">()</span>
+    
+    <span style="color: #005f5f;">@tf.function</span>
+    <span style="color: #531ab6;">def</span> <span style="color: #721045;">train_step</span><span style="color: #000000;">(</span>data, generator, generator_optimizer, discriminator, discriminator_optimizer, batches, batch_size, noise_dim, k=20<span style="color: #000000;">)</span>:
+        <span style="color: #595959;"># </span><span style="color: #595959;">Train the discriminator 'k' times</span>
+        <span style="color: #531ab6;">for</span> _ <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>k<span style="color: #000000;">)</span>:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Sample noise for generating fake data</span>
+            <span style="color: #005e8b;">noise</span> = tf.random.uniform<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>batch_size, noise_dim<span style="color: #dd22dd;">]</span>, -4, 4<span style="color: #000000;">)</span>
+            <span style="color: #531ab6;">with</span> tf.GradientTape<span style="color: #000000;">()</span> <span style="color: #531ab6;">as</span> disc_tape:
+                <span style="color: #595959;"># </span><span style="color: #595959;">Generate fake data</span>
+                <span style="color: #005e8b;">generated_data</span> = generator<span style="color: #000000;">(</span>noise, training=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    
+                <span style="color: #595959;"># </span><span style="color: #595959;">Get discriminator outputs for real and fake data</span>
+                <span style="color: #005e8b;">real_output</span> = discriminator<span style="color: #000000;">(</span>data, training=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+                <span style="color: #005e8b;">fake_output</span> = discriminator<span style="color: #000000;">(</span>generated_data, training=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    
+                <span style="color: #595959;"># </span><span style="color: #595959;">Compute discriminator loss</span>
+                <span style="color: #005e8b;">disc_loss</span> = discriminator_loss<span style="color: #000000;">(</span>real_output, fake_output<span style="color: #000000;">)</span>
+    
+            <span style="color: #595959;"># </span><span style="color: #595959;">Compute and apply gradients for discriminator</span>
+            <span style="color: #005e8b;">gradients_of_discriminator</span> = disc_tape.gradient<span style="color: #000000;">(</span>disc_loss, discriminator.trainable_variables<span style="color: #000000;">)</span>
+            discriminator_optimizer.apply_gradients<span style="color: #000000;">(</span><span style="color: #8f0075;">zip</span><span style="color: #dd22dd;">(</span>gradients_of_discriminator, discriminator.trainable_variables<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    
+        <span style="color: #595959;"># </span><span style="color: #595959;">Now train the generator once</span>
+        <span style="color: #005e8b;">noise</span> = tf.random.uniform<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>batch_size, noise_dim<span style="color: #dd22dd;">]</span>, -4, 4<span style="color: #000000;">)</span>
+        <span style="color: #531ab6;">with</span> tf.GradientTape<span style="color: #000000;">()</span> <span style="color: #531ab6;">as</span> gen_tape:
+            <span style="color: #595959;"># </span><span style="color: #595959;">Generate fake data</span>
+            <span style="color: #005e8b;">generated_data</span> = generator<span style="color: #000000;">(</span>noise, training=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    
+            <span style="color: #595959;"># </span><span style="color: #595959;">Get discriminator output for the generated data</span>
+            <span style="color: #005e8b;">fake_output</span> = discriminator<span style="color: #000000;">(</span>generated_data, training=<span style="color: #0000b0;">True</span><span style="color: #000000;">)</span>
+    
+            <span style="color: #595959;"># </span><span style="color: #595959;">Compute generator loss</span>
+            <span style="color: #005e8b;">gen_loss</span> = generator_loss<span style="color: #000000;">(</span>fake_output<span style="color: #000000;">)</span>
+    
+        <span style="color: #595959;"># </span><span style="color: #595959;">Compute and apply gradients for generator</span>
+        <span style="color: #005e8b;">gradients_of_generator</span> = gen_tape.gradient<span style="color: #000000;">(</span>gen_loss, generator.trainable_variables<span style="color: #000000;">)</span>
+        generator_optimizer.apply_gradients<span style="color: #000000;">(</span><span style="color: #8f0075;">zip</span><span style="color: #dd22dd;">(</span>gradients_of_generator, generator.trainable_variables<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    
+        <span style="color: #531ab6;">return</span> gen_loss, disc_loss
+    
+    <span style="color: #531ab6;">for</span> batch, <span style="color: #000000;">(</span>x, y<span style="color: #000000;">)</span> <span style="color: #531ab6;">in</span> tqdm<span style="color: #000000;">(</span><span style="color: #8f0075;">enumerate</span><span style="color: #dd22dd;">(</span>ikeda_attractor_generator<span style="color: #008899;">(</span>batch_size, batches<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>:
+        <span style="color: #531ab6;">if</span> <span style="color: #000000;">(</span>batch + 1<span style="color: #000000;">)</span> % 500 == 0:
+            <span style="color: #005e8b;">generated_attractor</span> = generator<span style="color: #000000;">(</span>tf.random.uniform<span style="color: #dd22dd;">(</span><span style="color: #008899;">[</span>batch_size, noise_dim<span style="color: #008899;">]</span>, -4, 4<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">generated_attractor_np</span> = generated_attractor.numpy<span style="color: #000000;">()</span>
+            <span style="color: #005e8b;">real_data</span> = np.stack<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>x, y<span style="color: #dd22dd;">)</span>, axis=1<span style="color: #000000;">)</span>.reshape<span style="color: #000000;">(</span>-1, 2<span style="color: #000000;">)</span>  <span style="color: #595959;"># </span><span style="color: #595959;">Shape: (num_real_samples, 2)</span>
+            <span style="color: #005e8b;">fake_data</span> = generated_attractor_np  <span style="color: #595959;"># </span><span style="color: #595959;">Shape: (num_fake_samples, 2)</span>
+            <span style="color: #005e8b;">combined_data</span> = np.concatenate<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>real_data, fake_data<span style="color: #dd22dd;">]</span>, axis=0<span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">real_labels</span> = np.ones<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>real_data.shape<span style="color: #008899;">[</span>0<span style="color: #008899;">]</span>, 1<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">fake_labels</span> = np.zeros<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>fake_data.shape<span style="color: #008899;">[</span>0<span style="color: #008899;">]</span>, 1<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">combined_labels</span> = np.concatenate<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>real_labels, fake_labels<span style="color: #dd22dd;">]</span>, axis=0<span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">combined_data_tf</span> = tf.constant<span style="color: #000000;">(</span>combined_data, dtype=tf.float32<span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">discriminator_outputs</span> = tf.sigmoid<span style="color: #000000;">(</span>discriminator<span style="color: #dd22dd;">(</span>combined_data_tf<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>  <span style="color: #595959;"># </span><span style="color: #595959;">Outputs probabilities</span>
+            <span style="color: #005e8b;">discriminator_outputs_np</span> = discriminator_outputs.numpy<span style="color: #000000;">()</span>
+            <span style="color: #005e8b;">predictions</span> = <span style="color: #000000;">(</span>discriminator_outputs_np &gt;= 0.5<span style="color: #000000;">)</span>.astype<span style="color: #000000;">(</span>np.int32<span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">correct_predictions</span> = <span style="color: #000000;">(</span>predictions == combined_labels<span style="color: #000000;">)</span>.astype<span style="color: #000000;">(</span>np.int32<span style="color: #000000;">)</span>
+            <span style="color: #005e8b;">accuracy</span> = np.mean<span style="color: #000000;">(</span>correct_predictions<span style="color: #000000;">)</span> * 100  <span style="color: #595959;"># </span><span style="color: #595959;">Percentage</span>
+            plt.figure<span style="color: #000000;">(</span>figsize=<span style="color: #dd22dd;">(</span>8, 6<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Step 1: Generate grid points for the contour plot</span>
+            <span style="color: #005e8b;">XX</span>, <span style="color: #005e8b;">YY</span> = np.meshgrid<span style="color: #000000;">(</span>np.linspace<span style="color: #dd22dd;">(</span>-4, 4, 100<span style="color: #dd22dd;">)</span>, np.linspace<span style="color: #dd22dd;">(</span>-4, 4, 100<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Prepare grid points for the model</span>
+            <span style="color: #005e8b;">grid_points</span> = np.dstack<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>XX, YY<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>.reshape<span style="color: #000000;">(</span>-1, 2<span style="color: #000000;">)</span>  <span style="color: #595959;"># </span><span style="color: #595959;">Shape: (10000, 2)</span>
+            <span style="color: #005e8b;">grid_points_tf</span> = tf.constant<span style="color: #000000;">(</span>grid_points, dtype=tf.float32<span style="color: #000000;">)</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Obtain probability estimates from the discriminator</span>
+            <span style="color: #005e8b;">prob_estimates</span> = tf.sigmoid<span style="color: #000000;">(</span>discriminator<span style="color: #dd22dd;">(</span>grid_points_tf<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>  <span style="color: #595959;"># </span><span style="color: #595959;">If discriminator outputs logits</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Reshape the output to match the grid shape</span>
+            <span style="color: #005e8b;">prob_estimates_np</span> = prob_estimates.numpy<span style="color: #000000;">()</span>.reshape<span style="color: #000000;">(</span>100, 100<span style="color: #000000;">)</span>
+            <span style="color: #595959;"># </span><span style="color: #595959;">Plot the contour plot (assuming 'prob_estimates_np', 'XX', 'YY' are already defined)</span>
+            <span style="color: #005e8b;">contour</span> = plt.contourf<span style="color: #000000;">(</span>XX, YY, prob_estimates_np, levels=50, cmap=<span style="color: #3548cf;">'viridis'</span><span style="color: #000000;">)</span>
+            plt.colorbar<span style="color: #000000;">(</span>contour<span style="color: #000000;">)</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Plot the real data points</span>
+            plt.scatter<span style="color: #000000;">(</span>x, y, c=<span style="color: #3548cf;">'orange'</span>, s=1, label=<span style="color: #3548cf;">'Simulated'</span>, alpha=0.6<span style="color: #000000;">)</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Plot the generated data points</span>
+            plt.scatter<span style="color: #000000;">(</span>generated_attractor_np<span style="color: #dd22dd;">[</span>:, 0<span style="color: #dd22dd;">]</span>, generated_attractor_np<span style="color: #dd22dd;">[</span>:, 1<span style="color: #dd22dd;">]</span>, c=<span style="color: #3548cf;">'red'</span>, s=1, label=<span style="color: #3548cf;">'Generated'</span>, alpha=0.6<span style="color: #000000;">)</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Add labels, title, and legend</span>
+            plt.xlabel<span style="color: #000000;">(</span><span style="color: #3548cf;">'X-axis'</span><span style="color: #000000;">)</span>
+            plt.ylabel<span style="color: #000000;">(</span><span style="color: #3548cf;">'Y-axis'</span><span style="color: #000000;">)</span>
+            plt.title<span style="color: #000000;">(</span>f<span style="color: #3548cf;">'Batch: </span>{batch + 1}<span style="color: #3548cf;">, Discriminator Accuracy: </span>{accuracy:.2f}<span style="color: #3548cf;">%'</span><span style="color: #000000;">)</span>
+            plt.legend<span style="color: #000000;">()</span>
+            
+            <span style="color: #595959;"># </span><span style="color: #595959;">Show the plot</span>
+            plt.show<span style="color: #000000;">()</span>
+
+        
+        train_step<span style="color: #000000;">(</span>tf.random.shuffle<span style="color: #dd22dd;">(</span>tf.concat<span style="color: #008899;">(</span><span style="color: #972500;">[</span>x,y<span style="color: #972500;">]</span>, axis=1<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>, generator, generator_optimizer, discriminator, discriminator_optimizer, batches, batch_size, noise_dim<span style="color: #000000;">)</span>
+
+    <span style="color: #531ab6;">return</span> generator
+
+<span style="color: #005e8b;">ikeda_generator</span> = ikeda_attractor_gan_pipeline<span style="color: #000000;">()</span>
+</pre>
+</div>
+
+<pre class="example">
+499it [09:12,  1.01s/it]
+</pre>
+
+
+<div id="org6b52d31" class="figure">
+<p><img src="./.ob-jupyter/9659dfbc204a3368a3c7e972bb0b7b842ada0c09.png" alt="9659dfbc204a3368a3c7e972bb0b7b842ada0c09.png" />
+</p>
+</div>
+<pre class="example">
+664it [12:02,  1.09s/it]
+</pre>
+
+<pre class="example" id="org5c7a86e">
+---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+Cell In [19], line 109
+    105         train_step(tf.random.shuffle(tf.concat([x,y], axis=1)), generator, generator_optimizer, discriminator, discriminator_optimizer, batches, batch_size, noise_dim)
+    107     return generator
+--&gt; 109 ikeda_generator = ikeda_attractor_gan_pipeline()
+
+Cell In [19], line 105, in ikeda_attractor_gan_pipeline()
+    101         # Show the plot
+    102         plt.show()
+--&gt; 105     train_step(tf.random.shuffle(tf.concat([x,y], axis=1)), generator, generator_optimizer, discriminator, discriminator_optimizer, batches, batch_size, noise_dim)
+    107 return generator
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/util/traceback_utils.py:150, in filter_traceback.&lt;locals&gt;.error_handler(*args, **kwargs)
+    148 filtered_tb = None
+    149 try:
+--&gt; 150   return fn(*args, **kwargs)
+    151 except Exception as e:
+    152   filtered_tb = _process_traceback_frames(e.__traceback__)
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py:825, in Function.__call__(self, *args, **kwds)
+    822 compiler = "xla" if self._jit_compile else "nonXla"
+    824 with OptionalXlaContext(self._jit_compile):
+--&gt; 825   result = self._call(*args, **kwds)
+    827 new_tracing_count = self.experimental_get_tracing_count()
+    828 without_tracing = (tracing_count == new_tracing_count)
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/polymorphic_function.py:857, in Function._call(self, *args, **kwds)
+    854   self._lock.release()
+    855   # In this case we have created variables on the first call, so we run the
+    856   # defunned version which is guaranteed to never create variables.
+--&gt; 857   return self._no_variable_creation_fn(*args, **kwds)  # pylint: disable=not-callable
+    858 elif self._variable_creation_fn is not None:
+    859   # Release the lock early so that multiple threads can perform the call
+    860   # in parallel.
+    861   self._lock.release()
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/tracing_compiler.py:148, in TracingCompiler.__call__(self, *args, **kwargs)
+    145 with self._lock:
+    146   (concrete_function,
+    147    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+--&gt; 148 return concrete_function._call_flat(
+    149     filtered_flat_args, captured_inputs=concrete_function.captured_inputs)
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/monomorphic_function.py:1349, in ConcreteFunction._call_flat(self, args, captured_inputs)
+   1345 possible_gradient_type = gradients_util.PossibleTapeGradientTypes(args)
+   1346 if (possible_gradient_type == gradients_util.POSSIBLE_GRADIENT_TYPES_NONE
+   1347     and executing_eagerly):
+   1348   # No tape is watching; skip to running the function.
+-&gt; 1349   return self._build_call_outputs(self._inference_function(*args))
+   1350 forward_backward = self._select_forward_and_backward_functions(
+   1351     args,
+   1352     possible_gradient_type,
+   1353     executing_eagerly)
+   1354 forward_function, args_with_tangents = forward_backward.forward()
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/polymorphic_function/atomic_function.py:196, in AtomicFunction.__call__(self, *args)
+    194 with record.stop_recording():
+    195   if self._bound_context.executing_eagerly():
+--&gt; 196     outputs = self._bound_context.call_function(
+    197         self.name,
+    198         list(args),
+    199         len(self.function_type.flat_outputs),
+    200     )
+    201   else:
+    202     outputs = make_call_op_in_graph(self, list(args))
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/context.py:1457, in Context.call_function(self, name, tensor_inputs, num_outputs)
+   1455 cancellation_context = cancellation.context()
+   1456 if cancellation_context is None:
+-&gt; 1457   outputs = execute.execute(
+   1458       name.decode("utf-8"),
+   1459       num_outputs=num_outputs,
+   1460       inputs=tensor_inputs,
+   1461       attrs=attrs,
+   1462       ctx=self,
+   1463   )
+   1464 else:
+   1465   outputs = execute.execute_with_cancellation(
+   1466       name.decode("utf-8"),
+   1467       num_outputs=num_outputs,
+   (...)
+   1471       cancellation_manager=cancellation_context,
+   1472   )
+
+File ~/.guix-home/profile/lib/python3.10/site-packages/tensorflow/python/eager/execute.py:53, in quick_execute(op_name, num_outputs, inputs, attrs, ctx, name)
+     51 try:
+     52   ctx.ensure_initialized()
+---&gt; 53   tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+     54                                       inputs, attrs, num_outputs)
+     55 except core._NotOkStatusException as e:
+     56   if name is not None:
+
+KeyboardInterrupt: 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

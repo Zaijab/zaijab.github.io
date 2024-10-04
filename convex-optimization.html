@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Convex Optimization</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Convex Optimization</h1>
+<p>
+<a href="file:///home/zjabbar/books/applied_math/convex_optimization.pdf">Book</a>
+</p>
+<div id="outline-container-org0cd841a" class="outline-2">
+<h2 id="org0cd841a"><span class="section-number-2">1.</span> Combinations</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>\( x \in \mathbb{R}^{n \times k} \)</li>
+<li>\( \theta \in \mathbb{R}^k \)</li>
+</ul>
+
+<p>
+Given
+Consider \( x \theta \) over various conditions on \( \theta \).
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Condition on \( \theta \)</th>
+<th scope="col" class="org-left">Condition on \( x \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Linear</td>
+<td class="org-left">\( \theta \in \mathbb{R}^n \)</td>
+<td class="org-left">Linear Combination is in Space</td>
+</tr>
+
+<tr>
+<td class="org-left">Affine</td>
+<td class="org-left">\( \mathbf{1}^T \theta = 1 \)</td>
+<td class="org-left">Every Line given by two points is in Space</td>
+</tr>
+
+<tr>
+<td class="org-left">Conical</td>
+<td class="org-left">\( \theta \succeq 0 \)</td>
+<td class="org-left">If Every Ray starting from origin to point is in Space</td>
+</tr>
+
+<tr>
+<td class="org-left">Convex</td>
+<td class="org-left">\( \mathbf{1}^T \theta = 1, \theta_i \succeq 0 \)</td>
+<td class="org-left">If Every line segment between two points is in space</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-org7b03e43" class="outline-3">
+<h3 id="org7b03e43"><span class="section-number-3">1.1.</span> Affine Sets are Shifted Subspaces</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Suppose we are given the affine space,
+</p>
+
+<p>
+\[ \theta_1 x_1 + \cdots + \theta_k x_k \]
+</p>
+
+<p>
+We know that if we have \( \theta_2, \ldots, \theta_k \) then we may solve for \( \theta_1 = 1 - \sum_{i = 2}^k \theta_i \)
+</p>
+
+<p>
+\[ (1 - \theta_2 - \theta_3 - \cdots - \theta_k) x_1 + \cdots + \theta_k x_k \]
+</p>
+
+<p>
+\[ x_1 + \theta_2 (x_2 - x_1) + \cdots + \theta_k (x_k - x_1) \]
+</p>
+
+<p>
+This is a subspace shifted by \( x_1 \).
+</p>
+</div>
+</div>
+<div id="outline-container-org0b77075" class="outline-3">
+<h3 id="org0b77075"><span class="section-number-3">1.2.</span> Affine Dimension</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The affine dimension of a set is the dimension of the smallest affine space going through the set.
+</p>
+
+<p>
+For example, the affine dimension of the line is \( 1 \), plane \( 2 \), and circle \( 2 \).
+</p>
+
+<p>
+The relative interior of a set is the interior of the set in the affine space.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1c640e8" class="outline-2">
+<h2 id="org1c640e8"><span class="section-number-2">2.</span> Important Theorems From Next Section</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orga467e7e" class="outline-3">
+<h3 id="orga467e7e"><span class="section-number-3">2.1.</span> Intersections Preserve Convexity</h3>
+</div>
+
+
+<div id="outline-container-org0679b9f" class="outline-3">
+<h3 id="org0679b9f"><span class="section-number-3">2.2.</span> Affine Functions Preserve Convexity</h3>
+</div>
+
+
+<div id="outline-container-org3e1f6dc" class="outline-3">
+<h3 id="org3e1f6dc"><span class="section-number-3">2.3.</span> Every Convex Set is the Intersection of Halfspaces</h3>
+</div>
+</div>
+<div id="outline-container-orgf380a85" class="outline-2">
+<h2 id="orgf380a85"><span class="section-number-2">3.</span> Examples</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb651d4a" class="outline-3">
+<h3 id="orgb651d4a"><span class="section-number-3">3.1.</span> Solution Sets</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+A solution set for a matrix \( A \in \mathbb{R}^{m \times n}\) and vector \(b \in \mathbb{R}^{m} \) is
+</p>
+
+<p>
+\[ S = \{ x | Ax = b \} \]
+</p>
+
+<p>
+Theorem: Solution sets are affine spaces.
+</p>
+
+<p>
+Proof:
+Suppose \( x_1, x_2 \in S \)
+</p>
+\begin{align}
+A (\theta x_1 + (1 - \theta) x_2)
+&= \theta A x_1 + (1 - \theta) A x_2 \tag{Matrix Mult. Linear} \\
+&= \theta b + (1 - \theta) b \tag{Hypothesis} \\
+&=  b \tag{Calculation}
+\end{align}
+</div>
+</div>
+<div id="outline-container-orge7d7a73" class="outline-3">
+<h3 id="orge7d7a73"><span class="section-number-3">3.2.</span> Hyperplanes</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+A Hyperplane is
+</p>
+
+<p>
+\[ H = \{ x \in \mathbb{R}^n \mid a^T x = b \} \]
+</p>
+
+<p>
+Such a set is a solution set.
+</p>
+</div>
+</div>
+<div id="outline-container-org5b4886a" class="outline-3">
+<h3 id="org5b4886a"><span class="section-number-3">3.3.</span> Cones</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+A cone is a set such that a positive linear combination remains in the cone.
+</p>
+
+<p>
+Cones are Convex
+</p>
+
+<p>
+Proof:
+Suppose \( x_1, x_2 \in C \) 
+\[ \theta x_1 + (1 - \theta) x_2 \in C \]
+Because \( \theta \in [0,1], 1 - \theta \in [0, 1] \) 
+</p>
+</div>
+</div>
+<div id="outline-container-org52c9a8a" class="outline-3">
+<h3 id="org52c9a8a"><span class="section-number-3">3.4.</span> Halfspace</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+A Halfspace is the set
+</p>
+
+<p>
+\[ H = \{ x | a^T x \leq b \} \]
+</p>
+
+<p>
+This is a cone, hence convex.
+</p>
+
+<p>
+Proof:
+Suppose \( x_1, x_2 \in H \), \( \alpha, \beta \in \mathbb{R}_{> 0} \)
+WLOG Shift half space to \( 0 \) 
+\[ a^T (\alpha x_1 + \beta x_2)  = \alpha a^T x_1 + \beta a^T x_2 \leq 0  \]
+</p>
+</div>
+</div>
+<div id="outline-container-org38ce186" class="outline-3">
+<h3 id="org38ce186"><span class="section-number-3">3.5.</span> Polyhedra</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+A Polyhedron is the intersection of halfspaces.
+</p>
+
+<p>
+It is then convex.
+</p>
+</div>
+</div>
+<div id="outline-container-org27fef26" class="outline-3">
+<h3 id="org27fef26"><span class="section-number-3">3.6.</span> Simplicies</h3>
+<div class="outline-text-3" id="text-3-6">
+<p>
+Given a collection of \( k+1 \) <b>affinely independent</b> points
+</p>
+
+<p>
+(meaning: \( v_1 - v_0, \ldots, v_k - v_0 \) are <b>linearly independent</b>)
+</p>
+
+<p>
+Take the convex hull of the points. This is necessarily convex.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd9b3ab4" class="outline-3">
+<h3 id="orgd9b3ab4"><span class="section-number-3">3.7.</span> Norm Balls and Cones</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+The Ball in metric \( d \), centered at 0, and having radius \( 1 \), \( B_d(0,1) \) is convex.
+</p>
+
+<p>
+Proof:
+</p>
+
+<p>
+Suppose \( x_1, x_2 \in B_d(0,1) \).
+</p>
+
+\begin{align}
+|| \theta x_1 + (1 - \theta) x_2 ||
+&\leq \theta || x_1 || + (1 - \theta) || x_2 || \tag{Triangle Inequality} \\ 
+&\leq \theta + (1 - \theta) \tag{\( x_1, x_2 \in B_d(0,1) \)} \\ 
+&= 1 \tag{Calculation}
+\end{align}
+
+<p>
+We will prove in later seminars that <b>Affine Transformations</b> Preserve convexity.
+Hence, translations, linear dilations of the ball will be convex. So the following are convex:
+</p>
+
+<ul class="org-ul">
+<li>Ball of any radius</li>
+<li>Ball with any center</li>
+<li>Ellipses</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

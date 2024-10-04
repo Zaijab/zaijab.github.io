@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Applications</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Applications</h1>
+<div id="outline-container-org7154068" class="outline-2">
+<h2 id="org7154068"><span class="section-number-2">1.</span> MEXT</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org6d2c453" class="outline-3">
+<h3 id="org6d2c453"><span class="section-number-3">1.1.</span> What was the trigger for having an interest in Japan?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<b>Experiencing the same academic climate as Mathematical pioneers.</b>
+<b>Going to SCML and meeting the forward thinking, hardworking, likeminded researchers.</b>
+</p>
+
+<p>
+Being a mathematician, I have always been interested in the academic climate and unique problem solving skills that fostered the likes of Shun-ichi Amari, Nobuo Yoneda, Sumio Watanabe, and Kiyosaki Ito. Each of them have pioneered world-changing mathematical research whose impact is extremely apparent in many papers and textbooks.
+</p>
+
+<p>
+Mathematics, in principal, can be done using paper and pen. We may deduce that the difference is due to culture and mindset. This is something that becomes difficult to not be curious about.
+</p>
+
+<p>
+Having gone to Japan for the Scientific Computing and Machine Learning conference and speaking to the hard working, forward thinking, cutting edge researchers propelled curiosity into desire. The community was tight knit, easy to talk to, and created a palpable milieu for productive research. From then on, I wanted to find some way to do research within that environment long term. 
+</p>
+</div>
+</div>
+<div id="outline-container-org4e11d33" class="outline-3">
+<h3 id="org4e11d33"><span class="section-number-3">1.2.</span> Why do you choose Japan as a destination to study graduate-level education?</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+<b>I have a shared interest with Japan's goals concerning AI and the future of humanity.</b>
+</p>
+
+<p>
+Artificial Intelligence has seen a rapid and immense growth in terms of computing power and practical problem solving techniques. The ubiquity in application is self evident, however, the reliability, scalability, and alignment with human goals for such models are not.
+</p>
+
+<p>
+According to the theory of evolution, human intelligence was created through brute force and many generations. With reinforcement learning techniques, long training times, and faster computers, computational general intelligence is not just feasible, but inevitable.
+</p>
+
+<p>
+In order for any society to safely design a future in which humans and  ultra-intelligent systems coexist, we must solve the alignment problem first by stating that it exists, then by proposing plans by which we research mechanisms of solutions. This is a global issue. However, Japan has started the society 5.0 vision, whose premises and conclusions I find myself agreeing with. I want to be in a country which prioritizes humans amidst the AI revolution and work with others towards a common, however daunting, goal. 
+</p>
+</div>
+<div id="outline-container-orgca5889c" class="outline-4">
+<h4 id="orgca5889c"><span class="section-number-4">1.2.1.</span> References</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Official Statement - <a href="https://www8.cao.go.jp/cstp/english/society5_0/index.html">https://www8.cao.go.jp/cstp/english/society5_0/index.html</a>
+Article on Hitachi Review - <a href="https://www.hitachi.com/rev/archive/2017/r2017_06/trends/index.html">https://www.hitachi.com/rev/archive/2017/r2017_06/trends/index.html</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0295b31" class="outline-3">
+<h3 id="org0295b31"><span class="section-number-3">1.3.</span> What kinds of things do you think you can contribute to Japan and your home country through your experience of studying in Japan?</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+<b>Being a professor to disseminate newly learned research (especially online medium video / web books).</b>
+<b>Creating easy to reproduce research projects in Guix and FOSS.</b>
+</p>
+
+<p>
+The world faces a reproducibility crisis in both software and science. Japan has stated that they want to join the international conversation in open science in order to progress in ways that is optimal for the nation. I believe that transparency in the scientific method liberates all people of the world. My vision is in line with the Free Software Foundation. I will create as much transparent, verifiable, long-term, reproducible scientific software which would be practical for end users.
+By studying in Japan, I would be able to communicate directly within the scientific community to see how researchers may adapt their scientific computing environments. I would also be able to write documentation in natural Japanese for tools that do not yet have full Japanese translated manuals.
+Furthermore, I enjoy teaching and writing. I intend on disseminating the information I have learned to my future students and to a global audience by means of lecture videos, readable books, and blog posts. Both of these are helpful for the future mathematically inclined people of Japan, America, and the world over.
+</p>
+
+<p>
+I intend on 
+</p>
+
+<p>
+My main tool of choice for reproducible software would be GNU Guix.
+</p>
+
+<p>
+Because all of the software, documentation, and videos would be published online, both Japan and America would benefit from the work done during the research process.
+</p>
+
+<p>
+The unique expertise in Free and Open Source Software (FOSS) and reproducible science, particularly within the GNU Guix ecosystem, provides a valuable opportunity to contribute significantly to both Japan and the home country. Japan’s technology landscape, with its strong interest in open-source projects, can benefit from shared expertise that fosters innovation and collaboration in scientific computing. By advocating for reproducible scientific practices, which promote consistency and reliability, this approach aligns well with Japan's ongoing efforts to bolster research transparency and quality in fields like machine learning, where data and workflows can often be complex.
+</p>
+
+<p>
+Further, creating comprehensive software documentation in both English and Japanese enhances the accessibility and usability of these tools, helping bridge the gap between Japanese and global developers. This effort will facilitate a unified development community, enabling seamless collaboration and a more comprehensive exchange of ideas and techniques. With the ability to improve understanding across linguistic and technical divides, this contribution is poised to empower Japanese researchers and developers to harness the full potential of FOSS and reproducible science. Ultimately, this will strengthen international partnerships, drive innovation in both nations, and promote sustainable technological growth, which aligns perfectly with MEXT’s mission of fostering knowledge exchange.
+</p>
+</div>
+</div>
+<div id="outline-container-org08422f3" class="outline-3">
+<h3 id="org08422f3"><span class="section-number-3">1.4.</span> Past and Present Field of Study</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+I graduated summa cum laude from the University of Hawaii at Manoa College of Natural Sciences with a B.S. in Mathematics with a language certificate in Hindi-Urdu. During my undergraduate I took every single mathematics course available at the University along with some extra computer science courses focusing on data science and AI. As a graduate student, I took the department topics courses in stochastic calculus, topological data analysis, and brownian motion.
+</p>
+
+<p>
+In my first semester, I did research with Ike Wai under Dr. Ahmed Elshall by applying Markov Chain Monte Carlo techniques to solve groundwater hydrodynamical partial differential equations. During the subsequent semesters, I worked simultaneous jobs in the Physics and Mathematics department.
+One job was under the Physics department with the miniTimeCube (mTC) research team. My role was to build a neutron detector, build robotic systems which automated the data collection task, and to compare machine learning models to theory based simulation techniques (in GEANT4).
+Another sequence of jobs were under Doctor Monique Chyba using computational techniques to analyze the multitude of topical datasets with mathematical theory. For example, one task was to use computer vision techniques to detect trees dying of rapid ohia death, a newly identified fungal disease. Another task was to implement computationally demanding COVID-19 SEIR models in C using parallel algorithms on a high performance cluster. The largest research project was the discovery of latent manifolds in Waimea Microbiome sample counts using spectral embedding and spectral clustering algorithms.  
+</p>
+
+<p>
+As a graduate student, I worked with the School of Ocean and Earth Science and Technology under Eileen Peppard to model, analyze, wrangle and automate the universities electrical meter system. I then worked with the Hawaii Digital Health Laboratory under Dr. Peter Washington for a year. We published a work on the All of Us electronic heathcare record data (EHR) dataset comparing different imputation methods. The next paper in progress is a review paper on fair active learning. The use of the work will be in its application for autism spectrum disorder prediction using short video data.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb71de2c" class="outline-3">
+<h3 id="orgb71de2c"><span class="section-number-3">1.5.</span> Research Theme and Plan</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org048e0b6" class="outline-4">
+<h4 id="org048e0b6"><span class="section-number-4">1.5.1.</span> Research Theme</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+Title: <b>Mean Field Limit of Physics Informed Neural Networks Under Stochastic Gradient Descent</b>
+</p>
+
+<p>
+I intend to research theoretical machine learning by examining Physics Informed Neural Networks (PINNs) from the mean field perspective in order to advance understanding of the guarantees of performance and generalization errors of state of the art scientific machine learning models.
+</p>
+</div>
+</div>
+<div id="outline-container-org6a400e9" class="outline-4">
+<h4 id="org6a400e9"><span class="section-number-4">1.5.2.</span> Research Plan</h4>
+<div class="outline-text-4" id="text-1-5-2">
+</div>
+<ol class="org-ol">
+<li><a id="org2cc48d4"></a>Research Plan 1<br />
+<div class="outline-text-5" id="text-1-5-2-1">
+<p>
+The purpose of this study is to better understand the theory behind current state of the art machine learning models for scientific endeavors. Specifically, how may we characterize the learning trajectory of a physics informed neural network? This question has been posed and answered for multilayer neural networks with different scaling regiemes. The most successful and possibly the most interesting being the mean field limit.
+</p>
+
+<p>
+We may begin with an informal description of the problem. Artificial neural networks are a specific parameterized model consisting of repeated composition of matrix multiplications and (typically) nonlinear activation functions. In the supervised machine learning regieme, modellers use data to learn the coefficients within the matrices with the number of compositions and activation functions being fixed hyperparameters. Researchers have noticed that under certain types of normalization for the outputs of the model alongsize normalization within the training mechanism, the "histogram" of the weight coefficients approaches another "histogram". Furthermore, the path that the coefficients take as the model is learning can be characterized in this limit by a system of stochastic integro-differential equations. Naturally, one seeks generalizations of results already found. My research plan is to discover what the limit weights and learning trajectory is like for physics informed neural networks.
+</p>
+
+<p>
+With the advent of fast computers, larger storage space, and easier to collect data sets, machine learning models have become a popular choice to model physical phenomena. The state of the art models incorporate domain specific knowledge about the physical phenomena into the structure of the machine learning model. The two main ways to agument the models are to incorporate physical laws into the loss function or within the model architecture itself. The research 
+</p>
+
+<p>
+Currently, the theory lags far behind the applications for state of the art models in science. 
+</p>
+
+<p>
+Current research in infinite width neural networks pertain to fully connected feed forward multi-layer neural networks. 
+</p>
+
+
+
+<p>
+Hypothesis: I believe that there exists a unique distribution over the weights of physics informed neural networks in the mean field scaling regime.
+</p>
+
+<p>
+References:
+</p>
+
+<p>
+Rigorous dynamical mean field theory for stochastic gradient descent methods
+</p>
+</div>
+</li>
+<li><a id="org958b522"></a>Research Plan 2<br />
+<div class="outline-text-5" id="text-1-5-2-2">
+<ol class="org-ol">
+<li>Introduction:</li>
+</ol>
+<p>
+The rapidly advancing field of machine learning has become indispensable in modeling physical phenomena due to improvements in computational power, storage capacity, and data collection. Despite the progress, the theoretical understanding of current models lags behind practical applications. A crucial area that requires more investigation is the behavior of model weights in physics-informed neural networks as the number of neurons increases.
+</p>
+
+<ol class="org-ol">
+<li>Research Problem:</li>
+</ol>
+<p>
+Physics-informed neural networks (PINNs) are designed to embed the physical laws governing a system into machine learning models. However, it's unclear how model weights evolve as one introduces more neurons into the model. Understanding this process is essential for optimizing network design and ensuring the efficient modeling of physical systems.
+</p>
+
+<ol class="org-ol">
+<li>Thesis Statement:</li>
+</ol>
+<p>
+This study hypothesizes that a unique distribution over the weights exists in the mean-field scaling regime of physics-informed neural networks. By investigating the mean-field behavior of PINN weights, we can uncover the patterns and properties that arise as model complexity increases.
+</p>
+
+<ol class="org-ol">
+<li>Methodology:</li>
+</ol>
+
+<p>
+Literature Review:
+Conduct a comprehensive review of current work on mean-field theory, PINNs, and neural network weight distributions. Identify gaps that this study aims to address.
+Data Collection:
+Develop physics-informed neural network models with varying neuron counts.
+Implement computational simulations to observe the weight distributions in different scaling regimes.
+Model Analysis:
+Use mathematical and statistical tools to analyze the resulting weight distributions.
+Identify patterns, trends, and unique properties in the weight evolution across scaling regimes.
+Validation:
+Compare results to existing theoretical predictions in mean-field scaling.
+Validate findings through cross-experimental methods and by testing on known physical systems.
+</p>
+<ol class="org-ol">
+<li>Desired Outcomes:</li>
+</ol>
+
+<p>
+Theoretical Contribution: Develop a framework that explains weight evolution in physics-informed neural networks, providing theoretical underpinnings for model design.
+Practical Application: Offer guidelines for designing PINNs that optimize weight distributions and enhance predictive power.
+Future Research Directions: Identify further research questions around generalizing mean-field behavior to other types of neural networks and complex physical systems.
+</p>
+<ol class="org-ol">
+<li>Timeline:</li>
+</ol>
+
+<p>
+Year 1:
+Conduct literature review.
+Develop initial models for simulation.
+Start preliminary data collection.
+Year 2:
+Analyze weight distributions in different scaling regimes.
+Validate findings through comparison with theoretical predictions.
+Prepare initial publications and conference presentations.
+Year 3:
+Refine models based on feedback.
+Collaborate with researchers in Japan and abroad to validate findings.
+Complete thesis or research paper on findings.
+Conclusion:
+This study will provide fundamental insights into the theory behind physics-informed neural networks and their practical applications. By directly engaging with leading Japanese research in machine learning, this project aims to contribute significantly to the understanding of neural network theory, ultimately benefiting scientific communities in Japan and beyond.
+</p>
+</div>
+</li>
+<li><a id="orgc706504"></a>Research Plan 3<br />
+<div class="outline-text-5" id="text-1-5-2-3">
+<p>
+A major outstanding theoretical challenge in deep learning is the understanding of the learning dynamics of multilayer neural networks. A precise characterization of the learning trajectory is typically hard, primarily owing to the highly nonlinear and complex structure of deep learning architectures, which departs from convex optimization even when the loss function is convex. Recent progresses tackle this challenge with one simplification: they consider networks whose widths are very large, ideally approaching infinity. In particular, under suitable conditions, as the width increases, the network’s behavior during training is expected to be captured by a meaningful limit.
+</p>
+
+<p>
+One such type of analysis exploits exchangeability of neurons. [MMN18,CB18b,RVE18,SS18] show that under a suitable scaling limit, the learning dynamics of wide two-layer neural networks can be captured by a Wasserstein gradient flow of a probability measure over weights. In this limit – which is usually referred to as the mean field (MF) limit, the network weights evolve nonlinearly with time. The MF scaling of two-layer networks require a certain normalization to be applied to the last layer, together with a learning rate that compensates for this normalization. The MF limit under the Wasserstein gradient flow formulation has led to a fruitful line of research that explains and uncovers interesting properties of two-layer networks, such as their optimization efficacy. Let us delve into a few further high-level details of the two-layer case, before discussing the interesting challenge in the multilayer case.
+</p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6c2419c" class="outline-3">
+<h3 id="org6c2419c"><span class="section-number-3">1.6.</span> Justification</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Justification for Research in Japan
+Japan is at the forefront of artificial intelligence (AI) research and development, particularly in integrating AI with real-world applications. The country's Society 5.0 initiative emphasizes the harmonious integration of advanced technologies, including AI, with society to solve complex problems and enhance quality of life. This vision aligns closely with the goals of my research on PINNs, which aims to integrate physical laws into neural networks for solving PDEs.
+Japan's robust research infrastructure, exemplified by institutions such as the RIKEN Center for Advanced Intelligence Project and various top-tier universities, provides an ideal environment for conducting cutting-edge research in AI and machine learning. The collaborative and interdisciplinary nature of research in Japan, combined with access to advanced computational resources, will significantly enhance the depth and impact of my research.
+Furthermore, Japan has a rich history of pioneering contributions to theoretical and applied mathematics, as demonstrated by the work of renowned mathematicians such as Shun-ichi Amari and Kiyoshi Itô. The opportunity to work within this academic tradition and collaborate with leading Japanese researchers will provide invaluable insights and perspectives that are crucial for advancing the theoretical framework of mean field theory applied to PINNs.
+The objects of study (neural networks) are naturally expressed in the language of information geometry, pioneered largely by  Shun'ichi Amari. The evolution equations which arise in the study of these models are captured by a system of stochastic integro-differential equations, which was pioneered by Kiyosi Itô.
+ Naturally, one studying this line of research would find it fruitful to
+ learn from those academically close to these internationally known 
+researchers. 
+</p>
+</div>
+</div>
+<div id="outline-container-orge3b28c0" class="outline-3">
+<h3 id="orge3b28c0"><span class="section-number-3">1.7.</span> Interview</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org38871f1" class="outline-4">
+<h4 id="org38871f1"><span class="section-number-4">1.7.1.</span> What are some famous places you want to visit in Japan?</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+Cape Soya in Hokkaido (Northern Most Point)
+Snow Monkey Park
+Shimanami Kaido Cycling
+Hike Mt. Fuji
+Rengein Temple in Itoman Okinawa
+</p>
+</div>
+</div>
+<div id="outline-container-org419ab50" class="outline-4">
+<h4 id="org419ab50"><span class="section-number-4">1.7.2.</span> Things to help Japan and US</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+Creating lecture videos
+Open source projects
+Documentation in Japanese
+</p>
+
+<p>
+<a href="https://www.mlt.ai/math-statistics">https://www.mlt.ai/math-statistics</a>
+</p>
+
+<p>
+Open and reproducible science
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd789d1c" class="outline-2">
+<h2 id="orgd789d1c"><span class="section-number-2">2.</span> Institution Choices</h2>
+<div class="outline-text-2" id="text-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">The University of Tokyo</td>
+<td class="org-left">Graduate School of Mathematical Sciences</td>
+<td class="org-left">Prof. MASUDA, Hiroki</td>
+</tr>
+
+<tr>
+<td class="org-left">Tokyo Institute of Technology</td>
+<td class="org-left">School of Science</td>
+<td class="org-left">Prof. NINOMIYA, Syoiti</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>Hokkaido University : Sakai Akira</li>
+<li>Tokyo Tech : Syoiti Ninomiya</li>
+<li>University of Tokyo : Hiroki Masuda</li>
+</ul>
+</div>
+<div id="outline-container-org6d14dc0" class="outline-3">
+<h3 id="org6d14dc0"><span class="section-number-3">2.1.</span> Researchers</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li><a href="https://sites.google.com/view/keisuke1986en">Keisuke Fujii @ Nagoya</a>
+Machine learning, Multiagent systems, sports science</li>
+<li><a href="https://www.ism.ac.jp/~fukumizu/">Kenji Fukumizu @ SOKENDAI</a>
+Deep learning, TDA, Kernel methods</li>
+<li><a href="https://sites.google.com/view/sumiowatanabe/home?authuser=0">Sumio Watanabe @ Tokyo Institute of Technology</a>
+Singular Learning, Algebraic Geometry</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org200ecef" class="outline-3">
+<h3 id="org200ecef"><span class="section-number-3">2.2.</span> Memes</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Waseda University - Need to be non-degree research student
+Keio University - Only takes September Applications
+Okinawa Institute of Technology - March 31 Deadline
+Kyoto University - Japan Only Courses
+</p>
+
+<ul class="org-ul">
+<li>Nara Institute of Science and Technology : Kazuchi Ikeda</li>
+<li>University of Tokyo : Fumiyasu Komaki,</li>
+<li>Kobe University : Takaharu Yaguchi</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

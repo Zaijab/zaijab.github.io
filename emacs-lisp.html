@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:13 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emacs Lisp</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Emacs Lisp</h1>
+<div class="org-src-container">
+<pre class="src src-emacs-lisp"><span style="color: #595959;">;    </span><span style="color: #595959;">(setq no-byte-compile t)</span>
+
+<span style="color: #000000;">(</span><span style="color: #531ab6;">use-package</span> consult
+      <span style="color: #8f0075;">:demand</span> t
+      <span style="color: #8f0075;">:bind</span> <span style="color: #dd22dd;">(</span><span style="color: #008899;">(</span><span style="color: #3548cf;">"C-c M-x"</span> . consult-mode-command<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-c h"</span> . consult-history<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-c k"</span> . consult-kmacro<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-c m"</span> . consult-man<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-c i"</span> . consult-info<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"&lt;remap&gt; &lt;Info-search&gt;"</span> . consult-info<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-x M-:"</span> . consult-complex-command<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-x b"</span> . consult-buffer<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-x 4 b"</span> . consult-buffer-other-window<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-x 5 b"</span> . consult-buffer-other-frame<span style="color: #008899;">)</span>
+         <span style="color: #595959;">;</span><span style="color: #595959;">("C-x t b" . consult-buffer-other-tab)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-x r b"</span> . consult-bookmark<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-x p b"</span> . consult-project-buffer<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-#"</span> . consult-register-load<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-'"</span> . consult-register-store<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"C-M-#"</span> . consult-register<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-y"</span> . consult-yank-pop<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g e"</span> . consult-compile-error<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g f"</span> . consult-flymake<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g g"</span> . consult-goto-line<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g M-g"</span> . consult-goto-line<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g o"</span> . consult-outline<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g m"</span> . consult-mark<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g k"</span> . consult-global-mark<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g i"</span> . consult-imenu<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-g I"</span> . consult-imenu-multi<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s d"</span> . consult-find<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s c"</span> . consult-locate<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s g"</span> . consult-grep<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s G"</span> . consult-git-grep<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s r"</span> . consult-ripgrep<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s l"</span> . consult-line<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s L"</span> . consult-line-multi<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s k"</span> . consult-keep-lines<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s u"</span> . consult-focus-lines<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s e"</span> . consult-isearch-history<span style="color: #008899;">)</span>
+         <span style="color: #8f0075;">:map</span> isearch-mode-map
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-e"</span> . consult-isearch-history<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s e"</span> . consult-isearch-history<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s l"</span> . consult-line<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s L"</span> . consult-line-multi<span style="color: #008899;">)</span>
+         <span style="color: #8f0075;">:map</span> minibuffer-local-map
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-s"</span> . consult-history<span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span><span style="color: #3548cf;">"M-r"</span> . consult-history<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      <span style="color: #8f0075;">:hook</span> <span style="color: #dd22dd;">(</span>completion-list-mode . consult-preview-at-point-mode<span style="color: #dd22dd;">)</span>
+      <span style="color: #8f0075;">:init</span> <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">setq</span> register-preview-delay 0.5 register-preview-function <span style="color: #008899;">(</span><span style="color: #531ab6;">function</span> consult-register-format<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      <span style="color: #dd22dd;">(</span>advice-add <span style="color: #008899;">(</span><span style="color: #531ab6;">function</span> register-preview<span style="color: #008899;">)</span> <span style="color: #8f0075;">:override</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">function</span> consult-register-window<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      <span style="color: #595959;">;</span><span style="color: #595959;">(setq xref-show-xrefs-function (function consult-xref) xref-show-definitions-function (function consult-xref))</span>
+      <span style="color: #8f0075;">:config</span>
+      <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">consult-customize</span> consult-theme <span style="color: #8f0075;">:preview-key</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">quote</span> <span style="color: #972500;">(</span><span style="color: #8f0075;">:debounce</span> 0.2 any<span style="color: #972500;">)</span><span style="color: #008899;">)</span>
+                     consult-ripgrep consult-git-grep consult-grep consult-bookmark consult-recent-file
+                     <span style="color: #595959;">;</span><span style="color: #595959;">consult-xref</span>
+                     consult--source-bookmark consult--source-file-register consult--source-recent-file consult--source-project-recent-file
+                     <span style="color: #8f0075;">:preview-key</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">quote</span> <span style="color: #972500;">(</span><span style="color: #8f0075;">:debounce</span> 0.4 any<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">setq</span> consult-narrow-key <span style="color: #3548cf;">"&lt;"</span><span style="color: #dd22dd;">)</span>
+      <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">defcustom</span> <span style="color: #005e8b;">consult-ripgrep-all-args</span> <span style="color: #3548cf;">"rga --null --line-buffered --color=never --max-columns=1000 --path-separator /   --smart-case --no-heading --with-filename --line-number"</span> <span style="color: #2a5045;">"Command line arguments for ripgrep, see `</span><span style="color: #0000b0;">consult-ripgrep</span><span style="color: #2a5045;">'.\nThe dynamically computed arguments are appended.\nCan be either a string, or a list of strings or expressions."</span> <span style="color: #8f0075;">:type</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">quote</span> <span style="color: #972500;">(</span>choice string <span style="color: #808000;">(</span>repeat <span style="color: #531ab6;">(</span>choice string sexp<span style="color: #531ab6;">)</span><span style="color: #808000;">)</span><span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      
+      <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">defun</span> <span style="color: #721045;">consult--ripgrep-all-make-builder</span> <span style="color: #008899;">(</span>paths<span style="color: #008899;">)</span> <span style="color: #2a5045;">"Create ripgrep command line builder given PATHS."</span>
+         <span style="color: #008899;">(</span><span style="color: #531ab6;">let*</span> <span style="color: #972500;">(</span><span style="color: #808000;">(</span>cmd <span style="color: #531ab6;">(</span>consult--build-args consult-ripgrep-all-args<span style="color: #531ab6;">)</span><span style="color: #808000;">)</span>
+                <span style="color: #808000;">(</span>type <span style="color: #531ab6;">(</span><span style="color: #531ab6;">if</span> <span style="color: #008900;">(</span>consult--grep-lookahead-p <span style="color: #3548cf;">(</span>car cmd<span style="color: #3548cf;">)</span> <span style="color: #3548cf;">"-P"</span><span style="color: #008900;">)</span> <span style="color: #008900;">(</span><span style="color: #531ab6;">quote</span> pcre<span style="color: #008900;">)</span> <span style="color: #008900;">(</span><span style="color: #531ab6;">quote</span> extended<span style="color: #008900;">)</span><span style="color: #531ab6;">)</span><span style="color: #808000;">)</span><span style="color: #972500;">)</span>
+           <span style="color: #972500;">(</span><span style="color: #531ab6;">lambda</span> <span style="color: #808000;">(</span>input<span style="color: #808000;">)</span>
+             <span style="color: #808000;">(</span><span style="color: #531ab6;">let*</span> <span style="color: #531ab6;">(</span><span style="color: #008900;">(</span>arg <span style="color: #3548cf;">(</span>car <span style="color: #8f0075;">(</span>consult--command-split input<span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                    <span style="color: #008900;">(</span>opts <span style="color: #3548cf;">(</span>cdr <span style="color: #8f0075;">(</span>consult--command-split input<span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                    <span style="color: #008900;">(</span>flags <span style="color: #3548cf;">(</span>append cmd opts<span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                    <span style="color: #008900;">(</span>ignore-case <span style="color: #3548cf;">(</span><span style="color: #531ab6;">and</span> <span style="color: #8f0075;">(</span>not <span style="color: #000000;">(</span><span style="color: #531ab6;">or</span> <span style="color: #dd22dd;">(</span>member <span style="color: #3548cf;">"-s"</span> flags<span style="color: #dd22dd;">)</span> <span style="color: #dd22dd;">(</span>member <span style="color: #3548cf;">"--case-sensitive"</span> flags<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span>
+                                      <span style="color: #8f0075;">(</span><span style="color: #531ab6;">or</span> <span style="color: #000000;">(</span>member <span style="color: #3548cf;">"-i"</span> flags<span style="color: #000000;">)</span> <span style="color: #000000;">(</span>member <span style="color: #3548cf;">"--ignore-case"</span> flags<span style="color: #000000;">)</span>
+                                          <span style="color: #000000;">(</span><span style="color: #531ab6;">and</span> <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">or</span> <span style="color: #008899;">(</span>member <span style="color: #3548cf;">"-S"</span> flags<span style="color: #008899;">)</span> <span style="color: #008899;">(</span>member <span style="color: #3548cf;">"--smart-case"</span> flags<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+                                               <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">let</span> <span style="color: #008899;">(</span>case-fold-search<span style="color: #008899;">)</span> <span style="color: #008899;">(</span>not <span style="color: #972500;">(</span>string-match-p <span style="color: #3548cf;">"[[:upper:]]"</span> arg<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span><span style="color: #531ab6;">)</span>
+               <span style="color: #531ab6;">(</span><span style="color: #531ab6;">if</span> <span style="color: #008900;">(</span><span style="color: #531ab6;">or</span> <span style="color: #3548cf;">(</span>member <span style="color: #3548cf;">"-F"</span> flags<span style="color: #3548cf;">)</span> <span style="color: #3548cf;">(</span>member <span style="color: #3548cf;">"--fixed-strings"</span> flags<span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                   <span style="color: #008900;">(</span>cons <span style="color: #3548cf;">(</span>append cmd <span style="color: #8f0075;">(</span>list <span style="color: #3548cf;">"-e"</span> arg<span style="color: #8f0075;">)</span> opts paths<span style="color: #3548cf;">)</span> <span style="color: #3548cf;">(</span>apply-partially <span style="color: #8f0075;">(</span><span style="color: #531ab6;">function</span> consult--highlight-regexps<span style="color: #8f0075;">)</span> <span style="color: #8f0075;">(</span>list <span style="color: #000000;">(</span>regexp-quote arg<span style="color: #000000;">)</span><span style="color: #8f0075;">)</span> ignore-case<span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                 <span style="color: #008900;">(</span><span style="color: #531ab6;">let</span> <span style="color: #3548cf;">(</span><span style="color: #8f0075;">(</span>re <span style="color: #000000;">(</span>car <span style="color: #dd22dd;">(</span>funcall consult--regexp-compiler arg type ignore-case<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span>
+                       <span style="color: #8f0075;">(</span>hl <span style="color: #000000;">(</span>cdr <span style="color: #dd22dd;">(</span>funcall consult--regexp-compiler arg type ignore-case<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span>
+                   <span style="color: #3548cf;">(</span><span style="color: #531ab6;">when</span> re <span style="color: #8f0075;">(</span>cons <span style="color: #000000;">(</span>append cmd <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">and</span> <span style="color: #008899;">(</span>eq type <span style="color: #972500;">(</span><span style="color: #531ab6;">quote</span> pcre<span style="color: #972500;">)</span><span style="color: #008899;">)</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">quote</span> <span style="color: #972500;">(</span><span style="color: #3548cf;">"-P"</span><span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span> <span style="color: #dd22dd;">(</span>list <span style="color: #3548cf;">"-e"</span> <span style="color: #008899;">(</span>consult--join-regexps re type<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span> opts paths<span style="color: #000000;">)</span> hl<span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span><span style="color: #531ab6;">)</span><span style="color: #808000;">)</span><span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      
+      <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">defun</span> <span style="color: #721045;">consult-ripgrep-all</span> <span style="color: #008899;">(</span><span style="color: #005f5f;">&amp;optional</span> dir initial<span style="color: #008899;">)</span> <span style="color: #2a5045;">"Search with `</span><span style="color: #0000b0;">rg</span><span style="color: #2a5045;">' for files in DIR with INITIAL input.\nSee `</span><span style="color: #0000b0;">consult-grep</span><span style="color: #2a5045;">' for details."</span>
+         <span style="color: #008899;">(</span><span style="color: #531ab6;">interactive</span> <span style="color: #3548cf;">"P"</span><span style="color: #008899;">)</span>
+         <span style="color: #008899;">(</span>consult--grep <span style="color: #3548cf;">"Ripgrep All"</span> <span style="color: #972500;">(</span><span style="color: #531ab6;">function</span> consult--ripgrep-all-make-builder<span style="color: #972500;">)</span> dir initial<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+      <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">defun</span> <span style="color: #721045;">consult-search-library</span> <span style="color: #008899;">()</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">interactive</span><span style="color: #008899;">)</span> <span style="color: #008899;">(</span>consult-ripgrep-all <span style="color: #3548cf;">"~/library/"</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+consult-history
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style="color: #531ab6;">defcustom</span> <span style="color: #005e8b;">consult-ripgrep-all-args</span> <span style="color: #3548cf;">"rga --null --line-buffered --color=never --max-columns=1000 --path-separator /   --smart-case --no-heading --with-filename --line-number"</span> <span style="color: #2a5045;">"Command line arguments for ripgrep, see `</span><span style="color: #0000b0;">consult-ripgrep</span><span style="color: #2a5045;">'.\nThe dynamically computed arguments are appended.\nCan be either a string, or a list of strings or expressions."</span> <span style="color: #8f0075;">:type</span> <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">quote</span> <span style="color: #008899;">(</span>choice string <span style="color: #972500;">(</span>repeat <span style="color: #808000;">(</span>choice string sexp<span style="color: #808000;">)</span><span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #000000;">(</span>eval-expression
+'<span style="color: #dd22dd;">(</span><span style="color: #531ab6;">defun</span> <span style="color: #721045;">consult--ripgrep-all-make-builder</span> <span style="color: #008899;">(</span>paths<span style="color: #008899;">)</span> <span style="color: #2a5045;">"Create ripgrep command line builder given PATHS."</span>
+         <span style="color: #008899;">(</span><span style="color: #531ab6;">let*</span> <span style="color: #972500;">(</span><span style="color: #808000;">(</span>cmd <span style="color: #531ab6;">(</span>consult--build-args consult-ripgrep-all-args<span style="color: #531ab6;">)</span><span style="color: #808000;">)</span>
+                <span style="color: #808000;">(</span>type <span style="color: #531ab6;">(</span><span style="color: #531ab6;">if</span> <span style="color: #008900;">(</span>consult--grep-lookahead-p <span style="color: #3548cf;">(</span>car cmd<span style="color: #3548cf;">)</span> <span style="color: #3548cf;">"-P"</span><span style="color: #008900;">)</span> <span style="color: #008900;">(</span><span style="color: #531ab6;">quote</span> pcre<span style="color: #008900;">)</span> <span style="color: #008900;">(</span><span style="color: #531ab6;">quote</span> extended<span style="color: #008900;">)</span><span style="color: #531ab6;">)</span><span style="color: #808000;">)</span><span style="color: #972500;">)</span>
+           <span style="color: #972500;">(</span><span style="color: #531ab6;">lambda</span> <span style="color: #808000;">(</span>input<span style="color: #808000;">)</span>
+             <span style="color: #808000;">(</span><span style="color: #531ab6;">let*</span> <span style="color: #531ab6;">(</span><span style="color: #008900;">(</span>arg <span style="color: #3548cf;">(</span>car <span style="color: #8f0075;">(</span>consult--command-split input<span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                    <span style="color: #008900;">(</span>opts <span style="color: #3548cf;">(</span>cdr <span style="color: #8f0075;">(</span>consult--command-split input<span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                    <span style="color: #008900;">(</span>flags <span style="color: #3548cf;">(</span>append cmd opts<span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                    <span style="color: #008900;">(</span>ignore-case <span style="color: #3548cf;">(</span><span style="color: #531ab6;">and</span> <span style="color: #8f0075;">(</span>not <span style="color: #000000;">(</span><span style="color: #531ab6;">or</span> <span style="color: #dd22dd;">(</span>member <span style="color: #3548cf;">"-s"</span> flags<span style="color: #dd22dd;">)</span> <span style="color: #dd22dd;">(</span>member <span style="color: #3548cf;">"--case-sensitive"</span> flags<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span>
+                                      <span style="color: #8f0075;">(</span><span style="color: #531ab6;">or</span> <span style="color: #000000;">(</span>member <span style="color: #3548cf;">"-i"</span> flags<span style="color: #000000;">)</span> <span style="color: #000000;">(</span>member <span style="color: #3548cf;">"--ignore-case"</span> flags<span style="color: #000000;">)</span>
+                                          <span style="color: #000000;">(</span><span style="color: #531ab6;">and</span> <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">or</span> <span style="color: #008899;">(</span>member <span style="color: #3548cf;">"-S"</span> flags<span style="color: #008899;">)</span> <span style="color: #008899;">(</span>member <span style="color: #3548cf;">"--smart-case"</span> flags<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span>
+                                               <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">let</span> <span style="color: #008899;">(</span>case-fold-search<span style="color: #008899;">)</span> <span style="color: #008899;">(</span>not <span style="color: #972500;">(</span>string-match-p <span style="color: #3548cf;">"[[:upper:]]"</span> arg<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span><span style="color: #531ab6;">)</span>
+               <span style="color: #531ab6;">(</span><span style="color: #531ab6;">if</span> <span style="color: #008900;">(</span><span style="color: #531ab6;">or</span> <span style="color: #3548cf;">(</span>member <span style="color: #3548cf;">"-F"</span> flags<span style="color: #3548cf;">)</span> <span style="color: #3548cf;">(</span>member <span style="color: #3548cf;">"--fixed-strings"</span> flags<span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                   <span style="color: #008900;">(</span>cons <span style="color: #3548cf;">(</span>append cmd <span style="color: #8f0075;">(</span>list <span style="color: #3548cf;">"-e"</span> arg<span style="color: #8f0075;">)</span> opts paths<span style="color: #3548cf;">)</span> <span style="color: #3548cf;">(</span>apply-partially <span style="color: #8f0075;">(</span><span style="color: #531ab6;">function</span> consult--highlight-regexps<span style="color: #8f0075;">)</span> <span style="color: #8f0075;">(</span>list <span style="color: #000000;">(</span>regexp-quote arg<span style="color: #000000;">)</span><span style="color: #8f0075;">)</span> ignore-case<span style="color: #3548cf;">)</span><span style="color: #008900;">)</span>
+                 <span style="color: #008900;">(</span><span style="color: #531ab6;">let</span> <span style="color: #3548cf;">(</span><span style="color: #8f0075;">(</span>re <span style="color: #000000;">(</span>car <span style="color: #dd22dd;">(</span>funcall consult--regexp-compiler arg type ignore-case<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span>
+                       <span style="color: #8f0075;">(</span>hl <span style="color: #000000;">(</span>cdr <span style="color: #dd22dd;">(</span>funcall consult--regexp-compiler arg type ignore-case<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span><span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span>
+                   <span style="color: #3548cf;">(</span><span style="color: #531ab6;">when</span> re <span style="color: #8f0075;">(</span>cons <span style="color: #000000;">(</span>append cmd <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">and</span> <span style="color: #008899;">(</span>eq type <span style="color: #972500;">(</span><span style="color: #531ab6;">quote</span> pcre<span style="color: #972500;">)</span><span style="color: #008899;">)</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">quote</span> <span style="color: #972500;">(</span><span style="color: #3548cf;">"-P"</span><span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span> <span style="color: #dd22dd;">(</span>list <span style="color: #3548cf;">"-e"</span> <span style="color: #008899;">(</span>consult--join-regexps re type<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span> opts paths<span style="color: #000000;">)</span> hl<span style="color: #8f0075;">)</span><span style="color: #3548cf;">)</span><span style="color: #008900;">)</span><span style="color: #531ab6;">)</span><span style="color: #808000;">)</span><span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #000000;">(</span><span style="color: #531ab6;">defun</span> <span style="color: #721045;">consult-ripgrep-all</span> <span style="color: #dd22dd;">(</span><span style="color: #005f5f;">&amp;optional</span> dir initial<span style="color: #dd22dd;">)</span> <span style="color: #2a5045;">"Search with `</span><span style="color: #0000b0;">rg</span><span style="color: #2a5045;">' for files in DIR with INITIAL input.\nSee `</span><span style="color: #0000b0;">consult-grep</span><span style="color: #2a5045;">' for details."</span>
+         <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">interactive</span> <span style="color: #3548cf;">"P"</span><span style="color: #dd22dd;">)</span>
+         <span style="color: #dd22dd;">(</span>consult--grep <span style="color: #3548cf;">"Ripgrep All"</span> <span style="color: #008899;">(</span><span style="color: #531ab6;">function</span> consult--ripgrep-all-make-builder<span style="color: #008899;">)</span> dir initial<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+<span style="color: #000000;">(</span><span style="color: #531ab6;">defun</span> <span style="color: #721045;">consult-search-library</span> <span style="color: #dd22dd;">()</span> <span style="color: #dd22dd;">(</span><span style="color: #531ab6;">interactive</span><span style="color: #dd22dd;">)</span> <span style="color: #dd22dd;">(</span>consult-ripgrep-all <span style="color: #3548cf;">"~/library/"</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+consult-search-library
+</pre>
+</div>
+</body>
+</html>

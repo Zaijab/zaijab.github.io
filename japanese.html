@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Japanese</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Japanese</h1>
+<p>
+
+</p>
+
+<p>
+Resources:
+<a href="https://imabi.org">Imabi</a>
+<a href="file:///home/zjabbar/books/japanese/The World of Kanji.pdf">World of Kanji</a>
+</p>
+
+<p>
+<a href="file:///home/zjabbar/books/japanese/MUSUBI OC VOL 1.pdf">Musubi OC 1</a> - 
+<a href="file:///home/zjabbar/books/japanese/MUSUBI RW VOL 1.pdf">Musubi RW 1</a>
+</p>
+<div id="outline-container-org7957604" class="outline-2">
+<h2 id="org7957604"><span class="section-number-2">1.</span> Learning</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Learn 1 New Conversation from Musubi per day
+Write all 46*2 Kana every morning in the correct order with the correct stroke order
+Listen to JPN audio while driving and working out
+</p>
+
+<ul class="org-ul">
+<li>12人の優しい日本人</li>
+<li>YT Content</li>
+</ul>
+
+<p>
+Add the Anki 5k to Emacs as I understand more of the lessons
+</p>
+</div>
+</div>
+<div id="outline-container-org8fe4758" class="outline-2">
+<h2 id="org8fe4758"><span class="section-number-2">2.</span> Orthography</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgb4b71bf" class="outline-3">
+<h3 id="orgb4b71bf"><span class="section-number-3">2.1.</span> Hiragana (平仮名)</h3>
+</div>
+
+<div id="outline-container-org297a99e" class="outline-3">
+<h3 id="org297a99e"><span class="section-number-3">2.2.</span> Katakana (片仮名)</h3>
+</div>
+
+<div id="outline-container-org7a5ba38" class="outline-3">
+<h3 id="org7a5ba38"><span class="section-number-3">2.3.</span> Mora</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+A rhythmic unit of Japanese speech.
+Native speakers pronounce words according to a metronome dictated by them self.
+</p>
+</div>
+</div>
+<div id="outline-container-org35bc133" class="outline-3">
+<h3 id="org35bc133"><span class="section-number-3">2.4.</span> 平仮名 「ひらがな」</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Curvy Characters.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfe75923" class="outline-3">
+<h3 id="orgfe75923"><span class="section-number-3">2.5.</span> 片仮名 「かたかな」</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Pointy Characters.
+</p>
+</div>
+</div>
+<div id="outline-container-org39b291e" class="outline-3">
+<h3 id="org39b291e"><span class="section-number-3">2.6.</span> 清音</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+The hiragana without a dakuten or handakuten
+</p>
+</div>
+</div>
+<div id="outline-container-orgf3faa6f" class="outline-3">
+<h3 id="orgf3faa6f"><span class="section-number-3">2.7.</span> Kanji (漢字)</h3>
+<div class="outline-text-3" id="text-2-7">
+</div>
+<div id="outline-container-org94950bc" class="outline-4">
+<h4 id="org94950bc"><span class="section-number-4">2.7.1.</span> Laws of Kanji</h4>
+<div class="outline-text-4" id="text-2-7-1">
+</div>
+<ol class="org-ol">
+<li><a id="orgda51d05"></a>Law of Strokes<br />
+<ol class="org-ol">
+<li><a id="orgc969bad"></a>Line<br /></li>
+
+<li><a id="org2b448a2"></a>Column<br /></li>
+
+<li><a id="org9f6db36"></a>Slash<br /></li>
+
+<li><a id="org71cc40f"></a>Dot<br /></li>
+
+<li><a id="orgfbc598a"></a>Upper Corner<br /></li>
+
+<li><a id="org6dd3c33"></a>Lower Corner<br /></li>
+
+<li><a id="orgc9f5bb7"></a>Zigzag<br /></li>
+
+<li><a id="org4d0f17c"></a>Reverse Zigzag<br /></li>
+</ol>
+</li>
+<li><a id="org97ec6f5"></a>Law of Sequence<br />
+<ol class="org-ol">
+<li><a id="org7c06fdc"></a><br /></li>
+</ol>
+</li>
+<li><a id="org5a17d0c"></a>Law of Proportion<br /></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org27b4376" class="outline-3">
+<h3 id="org27b4376"><span class="section-number-3">2.8.</span> 五十音 「ごじゅうおん」</h3>
+</div>
+</div>
+<div id="outline-container-org9ebc8a7" class="outline-2">
+<h2 id="org9ebc8a7"><span class="section-number-2">3.</span> Grammar</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgd848f04" class="outline-3">
+<h3 id="orgd848f04"><span class="section-number-3">3.1.</span> Sentence Structure</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Every sentence in Japanese has a subject (sometimes implicit) and a verb or adjective (always explicit).
+</p>
+
+<p>
+Subjects are marked with 「が」 and verbs / adjectives will conjugate (change form) depending on the context of the sentence (happened in the past, did not happen, etc).
+</p>
+
+<p>
+Sentences can end with verbs (A does B), nouns (A is B), or adjectives (A is B). Here are some sentences which describe a girl Sakura (桜).
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Grammar</th>
+<th scope="col" class="org-left">Mora</th>
+<th scope="col" class="org-left">Example</th>
+<th scope="col" class="org-left">Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Noun</td>
+<td class="org-left">だ</td>
+<td class="org-left">桜が日本人だ。</td>
+<td class="org-left">Sakura is Japanese.</td>
+</tr>
+
+<tr>
+<td class="org-left">Adjective</td>
+<td class="org-left">い</td>
+<td class="org-left">桜が可愛い。</td>
+<td class="org-left">Sakura is cute.</td>
+</tr>
+
+<tr>
+<td class="org-left">Verb</td>
+<td class="org-left">う</td>
+<td class="org-left">桜が歩く。</td>
+<td class="org-left">Sakura walks.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+In all of these sentences, we have a subject (桜) marked by the particle が. In instances where the subject is obvious from context we may omit the subject entirely from the sentence.
+</p>
+</div>
+<div id="outline-container-orge34135b" class="outline-4">
+<h4 id="orge34135b"><span class="section-number-4">3.1.1.</span> Omission From Sentences</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Hypothetically, imagine a language a language similar to English. One that has the same words, comma rules, and verb conjugations, but with one big difference. Imagine that at the start of every sentence, we needed to describe time we are intending the statement we say to take place. For example,
+</p>
+
+<p>
+I am going to school. &rarr; Tomorrow, I am going to school.
+I need to eat. &rarr; In an hour, I need to eat.
+Math was cool. &rarr; During primary school, math was cool.
+</p>
+
+<p>
+What about statements which are assumed to be true for all time?
+</p>
+
+<p>
+I love math. &rarr; For all time, I love math.
+I hated that teacher. &rarr; From then on, I hated that teacher.
+</p>
+
+<p>
+Sure, the information can be useful, but the extra information can sometimes lead to the sentences feeling cluttered and having not enough emphasis on the important things. The extra words can feel sluggish and despite you not needing it to get your point across, you would be ungrammatical to not have it. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5e26e9d" class="outline-3">
+<h3 id="org5e26e9d"><span class="section-number-3">3.2.</span> Particles and Order</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+In English, order matters in a sentence.
+</p>
+
+<ul class="org-ul">
+<li>The lion ate the boar.</li>
+<li>The boar ate the lion.</li>
+</ul>
+
+<p>
+These two sentences mean completely different things. In Japanese, 
+</p>
+</div>
+</div>
+<div id="outline-container-org3a69382" class="outline-3">
+<h3 id="org3a69382"><span class="section-number-3">3.3.</span> Nouns</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Nouns in Japanese are non conjugating elements of the sentence. 
+</p>
+</div>
+</div>
+<div id="outline-container-org61f9567" class="outline-3">
+<h3 id="org61f9567"><span class="section-number-3">3.4.</span> Adjectives</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+Adjectives describe the nature of a noun.
+Adjectives can modify the noun directly (attributive form) or afar (predicative form).
+They can be conjugated for past / non-past tense along with being of positive / negative form.
+</p>
+
+<table id="orgb963094" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Positive</th>
+<th scope="col" class="org-left">Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Past</td>
+<td class="org-left">寒い</td>
+<td class="org-left">寒くない</td>
+</tr>
+
+<tr>
+<td class="org-left">Non-Past</td>
+<td class="org-left">寒かった</td>
+<td class="org-left">寒くなかった</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgf888fab" class="outline-3">
+<h3 id="orgf888fab"><span class="section-number-3">3.5.</span> Verbs</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+All Verbs end with an 「う」 noise
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Verb</th>
+<th scope="col" class="org-left">Last Mora</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">する</td>
+<td class="org-left">る</td>
+<td class="org-left">Do</td>
+</tr>
+
+<tr>
+<td class="org-left">くる</td>
+<td class="org-left">る</td>
+<td class="org-left">Come</td>
+</tr>
+
+<tr>
+<td class="org-left">よむ</td>
+<td class="org-left">む</td>
+<td class="org-left">Drink</td>
+</tr>
+
+<tr>
+<td class="org-left">たべる</td>
+<td class="org-left">る</td>
+<td class="org-left">Eat</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+There are three verb classes, ichidan verbs, godan verbs, and irregular verbs. They differ in the way they conjugate. Ichidan verbs all end in 「る」 and the rule is always to remove the final 「る」 then to 
+</p>
+
+<p>
+Verbs use the stem system. This is a method by which you can start from one form of a verb (typically the plain non-past tense) and inflect based on meaning and intent of the verb. For example, take a verb, 「食べる」 meaning (to eat). The ending of this verb is 「る」 and it is an Ichidan verb. We may then change the ending 「る」 to one of the five vowel 
+</p>
+</div>
+<div id="outline-container-org709b007" class="outline-4">
+<h4 id="org709b007"><span class="section-number-4">3.5.1.</span> Copula</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<p>
+There are two levels of politeness, two tenses, and two truth values for eight ways to change a verb.
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Politeness</th>
+<th scope="col" class="org-left">Tense</th>
+<th scope="col" class="org-left">Negativity</th>
+<th scope="col" class="org-left">Copula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Casual</td>
+<td class="org-left">Non-Past</td>
+<td class="org-left">Assertion</td>
+<td class="org-left">だ</td>
+</tr>
+
+<tr>
+<td class="org-left">Casual</td>
+<td class="org-left">Past</td>
+<td class="org-left">Assertion</td>
+<td class="org-left">だった</td>
+</tr>
+
+<tr>
+<td class="org-left">Casual</td>
+<td class="org-left">Non-Past</td>
+<td class="org-left">Negation</td>
+<td class="org-left">じゃない</td>
+</tr>
+
+<tr>
+<td class="org-left">Casual</td>
+<td class="org-left">Past</td>
+<td class="org-left">Negation</td>
+<td class="org-left">じゃなかった</td>
+</tr>
+
+<tr>
+<td class="org-left">Formal</td>
+<td class="org-left">Non-Past</td>
+<td class="org-left">Assertion</td>
+<td class="org-left">です</td>
+</tr>
+
+<tr>
+<td class="org-left">Formal</td>
+<td class="org-left">Past</td>
+<td class="org-left">Assertion</td>
+<td class="org-left">でした</td>
+</tr>
+
+<tr>
+<td class="org-left">Formal</td>
+<td class="org-left">Non-Past</td>
+<td class="org-left">Negation</td>
+<td class="org-left">ではありません</td>
+</tr>
+
+<tr>
+<td class="org-left">Formal</td>
+<td class="org-left">Past</td>
+<td class="org-left">Negation</td>
+<td class="org-left">ではありませんでした</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+There are more nuances. For example, there is a more fine gradient from formal to casual. A less formal form of 「では」 is 「じゃ」.
+</p>
+</div>
+</div>
+<div id="outline-container-org6516e92" class="outline-4">
+<h4 id="org6516e92"><span class="section-number-4">3.5.2.</span> 「ーて」 form</h4>
+<div class="outline-text-4" id="text-3-5-2">
+<p>
+Before modifying the verbb
+</p>
+</div>
+</div>
+<div id="outline-container-orgf02c31a" class="outline-4">
+<h4 id="orgf02c31a"><span class="section-number-4">3.5.3.</span> 「ーあ」 Stem for negations</h4>
+</div>
+</div>
+<div id="outline-container-org483a071" class="outline-3">
+<h3 id="org483a071"><span class="section-number-3">3.6.</span> Formality</h3>
+<div class="outline-text-3" id="text-3-6">
+</div>
+<div id="outline-container-org26200fc" class="outline-4">
+<h4 id="org26200fc"><span class="section-number-4">3.6.1.</span> お / ご</h4>
+<div class="outline-text-4" id="text-3-6-1">
+<p>
+お or ご may be used a prefix when giving respect to a noun.
+</p>
+</div>
+</div>
+<div id="outline-container-org0c869c7" class="outline-4">
+<h4 id="org0c869c7"><span class="section-number-4">3.6.2.</span> Longer = More Formal</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-org6a3aac0" class="outline-2">
+<h2 id="org6a3aac0"><span class="section-number-2">4.</span> Pronunciation</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgeda3db6" class="outline-3">
+<h3 id="orgeda3db6"><span class="section-number-3">4.1.</span> Vowels</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Japanese has 5 of them.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e0869c" class="outline-2">
+<h2 id="org8e0869c"><span class="section-number-2">5.</span> Example Sentences</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+どこへ行っているんですか。
+どこへ行くんですか。
+</p>
+</div>
+</div>
+<div id="outline-container-orgf18f1b0" class="outline-2">
+<h2 id="orgf18f1b0"><span class="section-number-2">6.</span> 結び</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org817faec" class="outline-3">
+<h3 id="org817faec"><span class="section-number-3">6.1.</span> Vol 1</h3>
+<div class="outline-text-3" id="text-6-1">
+</div>
+<div id="outline-container-orgd2906cc" class="outline-4">
+<h4 id="orgd2906cc"><span class="section-number-4">6.1.1.</span> Lesson 1 Meeting People</h4>
+<div class="outline-text-4" id="text-6-1-1">
+</div>
+<ol class="org-ol">
+<li><a id="orga7930d7"></a>Dialogues<br /></li>
+
+<li><a id="orgab7ed56"></a>Core Expressions<br /></li>
+
+<li><a id="org4981c2f"></a>Core Vocabulary<br /></li>
+</ol>
+</div>
+<div id="outline-container-org37532c4" class="outline-4">
+<h4 id="org37532c4"><span class="section-number-4">6.1.2.</span> Lesson 2</h4>
+</div>
+
+<div id="outline-container-orgdb1a558" class="outline-4">
+<h4 id="orgdb1a558"><span class="section-number-4">6.1.3.</span> Lesson 3</h4>
+</div>
+
+<div id="outline-container-org5b995da" class="outline-4">
+<h4 id="org5b995da"><span class="section-number-4">6.1.4.</span> Lesson 4</h4>
+</div>
+</div>
+<div id="outline-container-org943f799" class="outline-3">
+<h3 id="org943f799"><span class="section-number-3">6.2.</span> Vol 2</h3>
+</div>
+</div>
+<div id="outline-container-org01ac4dc" class="outline-2">
+<h2 id="org01ac4dc"><span class="section-number-2">7.</span> 皆の日本語</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org77d49d7" class="outline-3">
+<h3 id="org77d49d7"><span class="section-number-3">7.1.</span> れいしゅ</h3>
+</div>
+</div>
+</div>
+</body>
+</html>

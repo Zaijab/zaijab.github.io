@@ -1,0 +1,2412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-10-03 Thu 14:12 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>UH ICS 635 Washington</title>
+<meta name="author" content="Zain Jabbar" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+
+          <link rel="stylesheet" href="static/css/site.css" type="text/css"/>
+          <header><div class="menu"><ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/about">/about</a></li>
+          <li><a href="/posts">/posts</a></li></ul></div></header>
+          <script src="static/js/nastaliq.js"></script>
+          <script src="static/js/stacking.js"></script>
+          <link href='https://unpkg.com/tippy.js@6.2.3/themes/light.css' rel='stylesheet'>
+          <script src="https://unpkg.com/@popperjs/core@2"></script>
+          <script src="https://unpkg.com/tippy.js@6"></script>
+          <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            let page = document.querySelector('.page');
+            if (page) {
+              initializePreviews(page);
+            }
+          });
+          </script>
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+<div class="grid-container"><div class="ds-grid"><div class="page">
+<script>MathJax = { loader: { load: ['[custom]/xypic.js'], paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'} }, tex: { packages: {'[+]': ['xypic']}, macros: { R: "{\\bf R}" } } };</script><script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">UH ICS 635 Washington</h1>
+<p>
+Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
+</p>
+<div id="outline-container-orgd89b828" class="outline-2">
+<h2 id="orgd89b828"><span class="section-number-2">1.</span> Homework 1 Machine Learning Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org95ed3d8" class="outline-3">
+<h3 id="org95ed3d8"><span class="section-number-3">1.1.</span> Model Classes</h3>
+<div class="outline-text-3" id="text-1-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Answer</th>
+<th scope="col" class="org-left">Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Regression</td>
+<td class="org-left">Predicting the inches of rainfall tomorrow given the inches of rainfall over the past week</td>
+</tr>
+
+<tr>
+<td class="org-left">Classification</td>
+<td class="org-left">Predicting the type of skin cancer from an image of the skin</td>
+</tr>
+
+<tr>
+<td class="org-left">Clustering</td>
+<td class="org-left">Determining the best grouping students into grade buckets of A+, A, A-, B+, B, B-, C+, C, C-, and F</td>
+</tr>
+
+<tr>
+<td class="org-left">Regression</td>
+<td class="org-left">Forecasting the number of COVID-19 cases in 1 month given prior history</td>
+</tr>
+
+<tr>
+<td class="org-left">Classification</td>
+<td class="org-left">Face ID on a smartphone</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga704aa3" class="outline-3">
+<h3 id="orga704aa3"><span class="section-number-3">1.2.</span> AUROC Curve</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+I don't know how much Python we are allowed to use in this problem specifically.
+I tried to avoid using Scikit-Learn's Confusion Matrix and ROC functions as to not trivialize the problem.
+</p>
+
+<table id="org87efd81" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Input 1</th>
+<th scope="col" class="org-right">Input 2</th>
+<th scope="col" class="org-right">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">2</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">2</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">-1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #531ab6;">import</span> pandas <span style="color: #531ab6;">as</span> pd
+<span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
+<span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+
+<span style="color: #005e8b;">data</span> = pd.DataFrame<span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>1:<span style="color: #dd22dd;">]</span>, columns = data<span style="color: #dd22dd;">[</span>0<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">pretrained_logistic_regression_model</span><span style="color: #000000;">(</span>x_1, x_2<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> 1 / <span style="color: #000000;">(</span>1 + np.exp<span style="color: #dd22dd;">(</span>-<span style="color: #008899;">(</span>3*x_1 - 4*x_2 + 3<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">data</span><span style="color: #000000;">[</span><span style="color: #3548cf;">"Probabilities"</span><span style="color: #000000;">]</span> = pretrained_logistic_regression_model<span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">"Input 1"</span><span style="color: #dd22dd;">]</span>,
+                                                             data<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">"Input 2"</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">true_pos_rate</span><span style="color: #000000;">(</span>confusion_matrix<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> confusion_matrix<span style="color: #000000;">[</span>1,1<span style="color: #000000;">]</span> / confusion_matrix.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span>axis=1<span style="color: #000000;">)[</span>1<span style="color: #000000;">]</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">false_pos_rate</span><span style="color: #000000;">(</span>confusion_matrix<span style="color: #000000;">)</span>:
+    <span style="color: #531ab6;">return</span> confusion_matrix<span style="color: #000000;">[</span>0,1<span style="color: #000000;">]</span> / confusion_matrix.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span>axis=1<span style="color: #000000;">)[</span>0<span style="color: #000000;">]</span>
+
+<span style="color: #531ab6;">def</span> <span style="color: #721045;">confusion_matrix_calculator</span><span style="color: #000000;">(</span>y_true, y_pred<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">confusion_matrix</span> = np.zeros<span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>2,2<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">confusion_matrix</span><span style="color: #000000;">[</span>0,0<span style="color: #000000;">]</span> = np.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>y_true == 0<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>y_pred == 0<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">confusion_matrix</span><span style="color: #000000;">[</span>0,1<span style="color: #000000;">]</span> = np.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>y_true == 0<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>y_pred == 1<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">confusion_matrix</span><span style="color: #000000;">[</span>1,0<span style="color: #000000;">]</span> = np.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>y_true == 1<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>y_pred == 0<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">confusion_matrix</span><span style="color: #000000;">[</span>1,1<span style="color: #000000;">]</span> = np.<span style="color: #8f0075;">sum</span><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>y_true == 1<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>y_pred == 1<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+    <span style="color: #531ab6;">return</span> confusion_matrix
+
+<span style="color: #005e8b;">roc_points</span> = <span style="color: #000000;">[]</span>
+<span style="color: #531ab6;">for</span> threshold <span style="color: #531ab6;">in</span> <span style="color: #000000;">[</span>0, 0.2, 0.4, 0.6, 0.8, 1<span style="color: #000000;">]</span>:
+    <span style="color: #005e8b;">column_name</span> = <span style="color: #3548cf;">"Threshold "</span> + <span style="color: #8f0075;">str</span><span style="color: #000000;">(</span>threshold<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">data</span><span style="color: #000000;">[</span>column_name<span style="color: #000000;">]</span> = <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">"Probabilities"</span><span style="color: #dd22dd;">]</span> &gt; threshold<span style="color: #000000;">)</span>.astype<span style="color: #000000;">(</span><span style="color: #8f0075;">int</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">confusion_matrix_threshold</span> = confusion_matrix_calculator<span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">"Output"</span><span style="color: #dd22dd;">]</span>,
+                                                             data<span style="color: #dd22dd;">[</span>column_name<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">tpr</span> = true_pos_rate<span style="color: #000000;">(</span>confusion_matrix_threshold<span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">fpr</span> = false_pos_rate<span style="color: #000000;">(</span>confusion_matrix_threshold<span style="color: #000000;">)</span>
+    roc_points.append<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>fpr, tpr<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">roc_points</span> = np.array<span style="color: #000000;">(</span>roc_points<span style="color: #000000;">)</span>
+plt.figure<span style="color: #000000;">()</span>
+plt.scatter<span style="color: #000000;">(</span>x=roc_points<span style="color: #dd22dd;">[</span>:,0<span style="color: #dd22dd;">]</span>, y=roc_points<span style="color: #dd22dd;">[</span>:,1<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+plt.xlabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"False Positive Rate"</span><span style="color: #000000;">)</span>
+plt.ylabel<span style="color: #000000;">(</span><span style="color: #3548cf;">"True Positive Rate"</span><span style="color: #000000;">)</span>
+plt.title<span style="color: #000000;">(</span><span style="color: #3548cf;">"ROC Curve"</span><span style="color: #000000;">)</span>
+roc_points
+</pre>
+</div>
+
+<pre class="example">
+array([[1.        , 1.        ],
+       [0.5       , 1.        ],
+       [0.5       , 0.83333333],
+       [0.25      , 0.83333333],
+       [0.        , 0.83333333],
+       [0.        , 0.        ]])
+</pre>
+
+
+<div id="org0ad3856" class="figure">
+<p><img src="./.ob-jupyter/e704da1873c15c18c892a6046f533ad398a1a1b4.png" alt="e704da1873c15c18c892a6046f533ad398a1a1b4.png" />
+</p>
+</div>
+<p>
+The area is then the sum of the two rectangles, both with \( \text{Width} = 0.5 \) but one with  \( \text{Height} = 0.83333333 \) and another with \( \text{Height} = 1 \).
+This sum is then \[ \text{AUC} = (0.5)(0.83333333) + (0.5)(1) = ​0.916666665 \] 
+</p>
+</div>
+</div>
+<div id="outline-container-org0412479" class="outline-3">
+<h3 id="org0412479"><span class="section-number-3">1.3.</span> Evaluation Metrics</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #005e8b;">data</span><span style="color: #000000;">[</span><span style="color: #3548cf;">"Threshold 0.5"</span><span style="color: #000000;">]</span> = <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">"Probabilities"</span><span style="color: #dd22dd;">]</span> &gt;= 0.5<span style="color: #000000;">)</span>.astype<span style="color: #000000;">(</span><span style="color: #8f0075;">int</span><span style="color: #000000;">)</span>
+<span style="color: #005e8b;">y_true</span>, <span style="color: #005e8b;">y_pred</span> = <span style="color: #3548cf;">"Output"</span>, <span style="color: #3548cf;">"Threshold 0.5"</span>
+data<span style="color: #000000;">[</span><span style="color: #dd22dd;">[</span>y_true, y_pred<span style="color: #dd22dd;">]</span><span style="color: #000000;">]</span>
+</pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">&#xa0;</th>
+<th scope="col" class="org-right">Output</th>
+<th scope="col" class="org-right">Threshold 0.5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-orgb0e9076" class="outline-4">
+<h4 id="orgb0e9076"><span class="section-number-4">1.3.1.</span> Accuracy</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_true<span style="color: #dd22dd;">]</span> == data<span style="color: #dd22dd;">[</span>y_pred<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / data.shape<span style="color: #000000;">[</span>0<span style="color: #000000;">]</span>
+</pre>
+</div>
+
+<pre class="example">
+0.8
+</pre>
+</div>
+</div>
+<div id="outline-container-orgf0d0d22" class="outline-4">
+<h4 id="orgf0d0d22"><span class="section-number-4">1.3.2.</span> Precision</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == 1<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == data<span style="color: #008899;">[</span>y_true<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_pred<span style="color: #dd22dd;">]</span> == 1<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span>
+</pre>
+</div>
+
+<pre class="example">
+0.8333333333333334
+</pre>
+</div>
+</div>
+<div id="outline-container-org37aff3e" class="outline-4">
+<h4 id="org37aff3e"><span class="section-number-4">1.3.3.</span> Recall</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == 1<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == data<span style="color: #008899;">[</span>y_true<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_true<span style="color: #dd22dd;">]</span> == 1<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span>
+</pre>
+</div>
+
+<pre class="example">
+0.8333333333333334
+</pre>
+</div>
+</div>
+<div id="outline-container-org9411a37" class="outline-4">
+<h4 id="org9411a37"><span class="section-number-4">1.3.4.</span> Specificity</h4>
+<div class="outline-text-4" id="text-1-3-4">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == 0<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == data<span style="color: #008899;">[</span>y_true<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_true<span style="color: #dd22dd;">]</span> == 0<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span>
+
+</pre>
+</div>
+
+<pre class="example">
+0.75
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge7dbfde" class="outline-3">
+<h3 id="orge7dbfde"><span class="section-number-3">1.4.</span> Cross Validation Implementation</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Executable in <b><a href="https://colab.research.google.com/drive/1eai6j9RLQPYS07Y289NLTJ80pkeuCwEr?usp=sharing">Colab</a></b>. Printed here for completeness of PDF.
+</p>
+</div>
+<div id="outline-container-org16ce559" class="outline-4">
+<h4 id="org16ce559"><span class="section-number-4">1.4.1.</span> A</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #531ab6;">def</span> <span style="color: #721045;">calculate_accuracy</span><span style="color: #000000;">(</span>y_true, y_pred<span style="color: #000000;">)</span>:
+  <span style="color: #2a5045;">'''</span>
+<span style="color: #2a5045;">  Question 4a</span>
+<span style="color: #2a5045;">  '''</span>
+  <span style="color: #531ab6;">return</span> 100 * <span style="color: #000000;">(</span>y_true == y_pred<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / y_true.shape
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc68e98c" class="outline-4">
+<h4 id="orgc68e98c"><span class="section-number-4">1.4.2.</span> B</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #531ab6;">def</span> <span style="color: #721045;">run_k_fold_cross_validation</span><span style="color: #000000;">(</span>X, y, k=10<span style="color: #000000;">)</span>:
+  <span style="color: #2a5045;">'''</span>
+<span style="color: #2a5045;">  Question 4b.</span>
+<span style="color: #2a5045;">  '''</span>
+  <span style="color: #005e8b;">slice_size</span> = <span style="color: #8f0075;">int</span><span style="color: #000000;">(</span>X.shape<span style="color: #dd22dd;">[</span>0<span style="color: #dd22dd;">]</span> / k<span style="color: #000000;">)</span>
+
+
+  <span style="color: #005e8b;">accuracies</span> = <span style="color: #000000;">[]</span>
+  <span style="color: #531ab6;">for</span> i <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #000000;">(</span>k<span style="color: #000000;">)</span>:
+    <span style="color: #005e8b;">X_1</span>, <span style="color: #005e8b;">X_validation</span>, <span style="color: #005e8b;">X_2</span> = np.split<span style="color: #000000;">(</span>X, <span style="color: #dd22dd;">[</span>slice_size*i, slice_size*<span style="color: #008899;">(</span>i+1<span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">y_1</span>, <span style="color: #005e8b;">y_validation</span>, <span style="color: #005e8b;">y_2</span> = np.split<span style="color: #000000;">(</span>y, <span style="color: #dd22dd;">[</span>slice_size*i, slice_size*<span style="color: #008899;">(</span>i+1<span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">X_train</span> = np.concatenate<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>X_1, X_2<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">y_train</span> = np.concatenate<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>y_1, y_2<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+    <span style="color: #005e8b;">prediction</span> = make_predictions<span style="color: #000000;">(</span>train_model<span style="color: #dd22dd;">(</span>X_train,y_train<span style="color: #dd22dd;">)</span>, X_validation<span style="color: #000000;">)</span>
+    accuracies.append<span style="color: #000000;">(</span>calculate_accuracy<span style="color: #dd22dd;">(</span>y_validation, prediction<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+
+  <span style="color: #531ab6;">return</span> np.mean<span style="color: #000000;">(</span>accuracies<span style="color: #000000;">)</span>, np.std<span style="color: #000000;">(</span>accuracies<span style="color: #000000;">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org06e9de6" class="outline-2">
+<h2 id="org06e9de6"><span class="section-number-2">2.</span> Homework 2 Python Machine Learning Libraries</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+For this homework we are performing regression on the 1990 California Housing Market Data. We are allowed to use any packages we wish. The requirement seems to be that we must use the given (downsampled) training and testing data for the model.
+</p>
+
+<p>
+In order to tune hyperparameters easier and to help systematize the comparison of multiple models, I will use pipelines. The order is this:
+</p>
+
+<ul class="org-ul">
+<li>Define a model sequentially using <code>Sklearn.pipeline.Pipeline</code>. Each model will have a standardization step to scale the inputs, then a regression step to define the fitting of the model. The standardization is important for the models to treat the penalties the same on every feature.</li>
+<li>Define the search space of the hyperparameters of the model. Some models like <code>LinearRegression</code> do not have hyperparameters, in which case the search space is empty. Some models like <code>Ridge</code> do have hyperparameters and the search space is chosen arbitrarily.</li>
+<li>Search through the parameter space in <code>param_grid</code> using cross-validation with the <code>GridSearchCV</code> method in the <code>sklearn.model_selection</code> module.</li>
+<li>Return the model selected by the grid search.</li>
+</ul>
+
+<p>
+Here is the model definition and MSE for standard linear regression.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_regression_model</span><span style="color: #000000;">()</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define and return the machine learning model.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Import Relevant Libraries, </span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">These imports will be used in selecting the hyperparameters</span>
+  <span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+  <span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> model_selection
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is the main model used</span>
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> linear_model
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define a pipeline for the data</span>
+  <span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>, <span style="color: #595959;"># </span><span style="color: #595959;">First we scale the features</span>
+                   <span style="color: #008899;">(</span><span style="color: #3548cf;">'Regression'</span>, linear_model.LinearRegression<span style="color: #972500;">()</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">Then we do regression</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define the search area of hyperparameters</span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is empty due to LinearRegression not having hyperparameters</span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">This code is currently here to make other models more 'plug-and-play'</span>
+  <span style="color: #005e8b;">param_grid</span> = <span style="color: #000000;">{}</span>
+  <span style="color: #005e8b;">grid</span> = model_selection.GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid=param_grid, cv=3, verbose=-1<span style="color: #000000;">)</span>
+  <span style="color: #531ab6;">return</span> grid
+</pre>
+</div>
+
+<pre class="example" id="org609928c">
+Mean Squared Error:  0.5551574201817491
+</pre>
+
+<p>
+Here is the model definition and MSE for standard Ridge. This is linear regression with l2 regularization. The idea is to penalize the model from overfitting by incorporating the coefficients into the loss function. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_regression_model</span><span style="color: #000000;">()</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define and return the machine learning model.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Import Relevant Libraries, </span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">These imports will be used in selecting the hyperparameters</span>
+  <span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+  <span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> model_selection
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is the main model used</span>
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> linear_model
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define a pipeline for the data</span>
+  <span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>, <span style="color: #595959;"># </span><span style="color: #595959;">First we scale the features</span>
+                   <span style="color: #008899;">(</span><span style="color: #3548cf;">'Regression'</span>, linear_model.Ridge<span style="color: #972500;">(</span>alpha=0<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">Then we do regression</span>
+  
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define the search area of the alpha hyperparameter to Ridge</span>
+  <span style="color: #005e8b;">param_grid</span> = <span style="color: #8f0075;">dict</span><span style="color: #000000;">(</span>Regression__alpha=np.linspace<span style="color: #dd22dd;">(</span>0,10,1000<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Perform Cross Validation to find the right hyperparameters</span>
+  <span style="color: #005e8b;">grid</span> = model_selection.GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid=param_grid, cv=3, verbose=-1<span style="color: #000000;">)</span>
+  <span style="color: #531ab6;">return</span> grid
+</pre>
+</div>
+
+<pre class="example" id="org413e8d8">
+Mean Squared Error:  0.5551574201817491
+</pre>
+
+<p>
+Oddly enough, this model found the right value of <code>alpha</code> to be \( 0 \). Meaning it reduced down to using standard linear regression. Here is my next attempt at using the <code>Lasso</code> model.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_regression_model</span><span style="color: #000000;">()</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define and return the machine learning model.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Import Relevant Libraries, </span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">These imports will be used in selecting the hyperparameters</span>
+  <span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+  <span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> model_selection
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is the main model used</span>
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> linear_model
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define a pipeline for the data</span>
+  <span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>, <span style="color: #595959;"># </span><span style="color: #595959;">First we scale the features</span>
+                   <span style="color: #008899;">(</span><span style="color: #3548cf;">'Regression'</span>, linear_model.Lasso<span style="color: #972500;">(</span>alpha=0.01<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">Then we do regression</span>
+  
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define the search area of the alpha hyperparameter</span>
+  <span style="color: #005e8b;">param_grid</span> = <span style="color: #8f0075;">dict</span><span style="color: #000000;">(</span>Regression__alpha=np.linspace<span style="color: #dd22dd;">(</span>0.01,10,1000<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Perform Cross Validation to find the right hyperparameters</span>
+  <span style="color: #005e8b;">grid</span> = model_selection.GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid=param_grid, cv=3, verbose=-1<span style="color: #000000;">)</span>
+  <span style="color: #531ab6;">return</span> grid
+</pre>
+</div>
+
+<pre class="example" id="org58ec565">
+Mean Squared Error:  0.6857290908739428
+</pre>
+
+<p>
+The error is higher, which is actually expected. <code>Lasso</code> tries to make its model very interpretable by making its coefficients sparse. Meaning there are more constraints on the internal parameters and less fitting. Here is my attempt using Bayesian ARD Regression. Because of the number of hyperparameters, I could not search through the space as thoroughly as I wished without exhausting all of the available RAM. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_regression_model</span><span style="color: #000000;">()</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define and return the machine learning model.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Import Relevant Libraries, </span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">These imports will be used in selecting the hyperparameters</span>
+  <span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+  <span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> model_selection
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is the main model used</span>
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> linear_model
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define a pipeline for the data</span>
+  <span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>, <span style="color: #595959;"># </span><span style="color: #595959;">First we scale the features</span>
+                   <span style="color: #008899;">(</span><span style="color: #3548cf;">'Regression'</span>, linear_model.ARDRegression<span style="color: #972500;">(</span>alpha_1=0.01, alpha_2=0.01,
+                                                             lambda_1 = 0.01, lambda_2 = 0.01<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">Then we do regression</span>
+  
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define the search area of the alpha hyperparameter to Ridge</span>
+  <span style="color: #005e8b;">param_grid</span> = <span style="color: #8f0075;">dict</span><span style="color: #000000;">(</span>Regression__alpha_1=np.linspace<span style="color: #dd22dd;">(</span>0.01,10,10<span style="color: #dd22dd;">)</span>,
+                    Regression__alpha_2=np.linspace<span style="color: #dd22dd;">(</span>0.01,10,10<span style="color: #dd22dd;">)</span>,
+                    Regression__lambda_1=np.linspace<span style="color: #dd22dd;">(</span>0.01,10,10<span style="color: #dd22dd;">)</span>,
+                    Regression__lambda_2=np.linspace<span style="color: #dd22dd;">(</span>0.01,10,10<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Perform Cross Validation to find the right hyperparameters</span>
+  <span style="color: #005e8b;">grid</span> = model_selection.GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid=param_grid, cv=3, verbose=-1<span style="color: #000000;">)</span>
+  <span style="color: #531ab6;">return</span> grid
+</pre>
+</div>
+
+<pre class="example" id="org49a8904">
+Mean Squared Error:  0.5594360369293698
+</pre>
+
+<p>
+The next model is the RANSAC algorithm. This algorithm uses a base estimator (Linear Regression in this case) and iterates to try and be robust to outliers. In the housing market, some houses can have prices that soar above the rest of the market which may skew some metrics. This is why most real estate companies and governments report on the median (resistant to outliers) house prices rather than the mean (not resistant to outliers).
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_regression_model</span><span style="color: #000000;">()</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define and return the machine learning model.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Import Relevant Libraries, </span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">These imports will be used in selecting the hyperparameters</span>
+  <span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+  <span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> model_selection
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is the main model used</span>
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> linear_model
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define a pipeline for the data</span>
+  <span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>, <span style="color: #595959;"># </span><span style="color: #595959;">First we scale the features</span>
+                   <span style="color: #008899;">(</span><span style="color: #3548cf;">'Regression'</span>, linear_model.RANSACRegressor<span style="color: #972500;">()</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">Then we do regression</span>
+  
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define the search area of the alpha hyperparameter to Ridge</span>
+  <span style="color: #005e8b;">param_grid</span> = <span style="color: #8f0075;">dict</span><span style="color: #000000;">(</span>Regression__loss=<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">'absolute_error'</span>, <span style="color: #3548cf;">'squared_error'</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Perform Cross Validation to find the right hyperparameters</span>
+  <span style="color: #005e8b;">grid</span> = model_selection.GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid=param_grid, cv=3, verbose=-1<span style="color: #000000;">)</span>
+  <span style="color: #531ab6;">return</span> grid
+</pre>
+</div>
+
+<pre class="example" id="org0299574">
+Mean Squared Error:  0.6165044886559775
+</pre>
+
+<p>
+I had high hopes for this one. But it had worse error than Linear Regression. This next attempt uses support vector machines.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_regression_model</span><span style="color: #000000;">()</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define and return the machine learning model.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Import Relevant Libraries, </span>
+  <span style="color: #595959;"># </span><span style="color: #595959;">These imports will be used in selecting the hyperparameters</span>
+  <span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+  <span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> model_selection
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">This is the main model used</span>
+  <span style="color: #531ab6;">from</span> sklearn <span style="color: #531ab6;">import</span> svm
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define a pipeline for the data</span>
+  <span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span><span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>, <span style="color: #595959;"># </span><span style="color: #595959;">First we scale the features</span>
+                   <span style="color: #008899;">(</span><span style="color: #3548cf;">'Regression'</span>, svm.SVR<span style="color: #972500;">(</span>cache_size=2000<span style="color: #972500;">)</span><span style="color: #008899;">)</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span> <span style="color: #595959;"># </span><span style="color: #595959;">Then we do regression</span>
+  
+  <span style="color: #595959;"># </span><span style="color: #595959;">Define the search area of the alpha hyperparameter to Ridge</span>
+  <span style="color: #005e8b;">param_grid</span> = <span style="color: #8f0075;">dict</span><span style="color: #000000;">(</span>Regression__kernel=<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">'linear'</span>, <span style="color: #3548cf;">'poly'</span>, <span style="color: #3548cf;">'rbf'</span>, <span style="color: #3548cf;">'sigmoid'</span><span style="color: #dd22dd;">]</span>,
+                    Regression__gamma=np.linspace<span style="color: #dd22dd;">(</span>0.01, 1, 10<span style="color: #dd22dd;">)</span>,
+                    Regression__C=np.linspace<span style="color: #dd22dd;">(</span>0.01, 2, 10<span style="color: #dd22dd;">)</span>,
+                    Regression__epsilon=np.linspace<span style="color: #dd22dd;">(</span>0.01, 2, 10<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+  <span style="color: #595959;"># </span><span style="color: #595959;">Perform Cross Validation to find the right hyperparameters</span>
+  <span style="color: #005e8b;">grid</span> = model_selection.GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid=param_grid, cv=3, verbose=-1, n_jobs=-1<span style="color: #000000;">)</span>
+  <span style="color: #531ab6;">return</span> grid
+</pre>
+</div>
+
+<p>
+Now, as is, the code does not run. The <code>SVR</code> model has a quadratic time complexity and has a lot of hyperparameters compared to the other models we have studied. However, the model does come with some time-tested defaults. This gives us the least mean squared error, and is my best performing model.
+</p>
+
+<pre class="example" id="org11a597d">
+Mean Squared Error:  0.34088671241221274
+</pre>
+
+<p>
+This model is saved in <b><a href="https://colab.research.google.com/drive/1vKYM_aTCluU_AAa2i-VApn_pDw53herQ?usp=sharing">Colab</a></b>. I believe that this model performed well due to the radial basis function kernel. The model tends to believe that points close to a training example will have a similar value. This agrees with my intuition about housing prices. Houses nearby each other will have similar property value. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgaa17d48" class="outline-2">
+<h2 id="orgaa17d48"><span class="section-number-2">3.</span> Homework 3 Supervised Learning Algorithms</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org8445d42" class="outline-3">
+<h3 id="org8445d42"><span class="section-number-3">3.1.</span> Question 1: Regularization</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The first parameter set:
+</p>
+
+<p>
+\[ \begin{bmatrix} 0.42 & 2.85 & 11.21 \end{bmatrix} \]
+</p>
+
+<p>
+Has larger values overall than the second parameter set
+</p>
+
+<p>
+\[ \begin{bmatrix} 98.22 & -42.11 & 12.92 \end{bmatrix} \]
+</p>
+
+<p>
+Hence the first parameter set is likely to correspond to \( \lambda = 1 \) and the second would correspond to \( \lambda = 0 \).
+</p>
+</div>
+</div>
+<div id="outline-container-org8d97eff" class="outline-3">
+<h3 id="org8d97eff"><span class="section-number-3">3.2.</span> Question 2: K-Nearest Neighbors</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Let us plot these points
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #531ab6;">import</span> matplotlib.pyplot <span style="color: #531ab6;">as</span> plt
+
+<span style="color: #005e8b;">points</span> = <span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>5*x, 5*y<span style="color: #dd22dd;">)</span>
+          <span style="color: #531ab6;">for</span> x <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #dd22dd;">(</span>3<span style="color: #dd22dd;">)</span>
+          <span style="color: #531ab6;">for</span> y <span style="color: #531ab6;">in</span> <span style="color: #8f0075;">range</span><span style="color: #dd22dd;">(</span>3<span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">colors</span> = <span style="color: #000000;">(</span>1, 1, 0, 1, 1, 0, 0, 0, 0<span style="color: #000000;">)</span>
+
+plt.figure<span style="color: #000000;">()</span>
+plt.scatter<span style="color: #000000;">(</span>*<span style="color: #8f0075;">zip</span><span style="color: #dd22dd;">(</span>*points<span style="color: #dd22dd;">)</span>, c=colors<span style="color: #000000;">)</span>
+plt.scatter<span style="color: #000000;">(</span>x=6, y=6, c=<span style="color: #3548cf;">'red'</span><span style="color: #000000;">)</span>
+plt.savefig<span style="color: #000000;">(</span><span style="color: #3548cf;">"Plot.png"</span><span style="color: #000000;">)</span>
+plt.close<span style="color: #000000;">(</span><span style="color: #3548cf;">'all'</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<div id="org02e0968" class="figure">
+<p><img src="Plot.png" alt="Plot.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-org19d1a9c" class="outline-4">
+<h4 id="org19d1a9c"><span class="section-number-4">3.2.1.</span> A</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+When \( k = 1 \) the red point \( (6,6) \) is close to class \( 1 \) (color yellow). 
+</p>
+</div>
+</div>
+<div id="outline-container-orgcee70f0" class="outline-4">
+<h4 id="orgcee70f0"><span class="section-number-4">3.2.2.</span> B</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+When \( k = 3 \) the red point \( (6,6) \) has one neighbor of class \( 1 \) (color yellow) and two neighbors of class \( 0 \) (color purple). Hence it is classified as class \( 0 \).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge5fbd9e" class="outline-3">
+<h3 id="orge5fbd9e"><span class="section-number-3">3.3.</span> Question 3: Decision Trees</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Here we wish to use information gain to predict if a self-driving airplane will crash. We have four boolean variables, hence we may calculate the information gain on specifying <code>Yes</code> or <code>No</code>. I will use the following abbreviations to make the formulae fit on the page. I will also place the information gain here for easy reference. In the following calculations I will only compute the conditional entropy.
+</p>
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Boolean Variable</th>
+<th scope="col" class="org-left">Abbreviation</th>
+<th scope="col" class="org-right">Information Gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Foggy?</td>
+<td class="org-left">F</td>
+<td class="org-right">0.459</td>
+</tr>
+
+<tr>
+<td class="org-left">Excess Gasoline?</td>
+<td class="org-left">G</td>
+<td class="org-right">0.252</td>
+</tr>
+
+<tr>
+<td class="org-left">Runway Too Close?</td>
+<td class="org-left">C</td>
+<td class="org-right">0.044</td>
+</tr>
+
+<tr>
+<td class="org-left">Plane Too High?</td>
+<td class="org-left">H</td>
+<td class="org-right">0.252</td>
+</tr>
+
+<tr>
+<td class="org-left">Crash?</td>
+<td class="org-left">W (for Wreck)</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+First, let us calculate the entropy of a crash.
+</p>
+
+\begin{align}
+H(\text{W})
+&= - \left[ \mathbb{P}(\text{W}) \log_2(\mathbb{P}(\text{W})) + \mathbb{P}(\lnot \text{W}) \log_2(\mathbb{P}(\lnot \text{W})) \right] \tag{Def Entropy} \\
+&= - \left[  \frac{4}{6} \log_2\left( \frac{4}{6} \right) + \frac{2}{6} \log_2 \left(\frac{2}{6} \right) \right] \tag{Calculate Probabilities} \\
+&= 0.918 \tag{Calculate}
+\end{align}
+
+<p>
+The decision of information gain will be whichever feature has the lowest conditional entropy.
+</p>
+</div>
+<ol class="org-ol">
+<li><a id="org2a786b4"></a>Foggy?<br />
+<div class="outline-text-5" id="text-3-3-0-1">
+\begin{align}
+H(\text{W} \mid \text{F})
+&= - \mathbb{P} \left( \text{F} \right) \left[ \mathbb{P}(\text{W} \mid \text{F}) \log_2(\mathbb{P}(\text{W} \mid \text{F})) + \mathbb{P}(\lnot \text{W} \mid \text{F}) \log_2(\mathbb{P}(\lnot \text{W} \mid \text{F})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{3}{6} \right] \left[ \frac{3}{3} \log_2\left( \frac{3}{3} \right) + \frac{0}{3} \log_2 \left(\frac{0}{3} \right) \right] \tag{Calculate Probabilities} \\
+&= 0 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H(\text{W} \mid \lnot \text{F})
+&= - \mathbb{P}\left( \lnot \text{F} \right) \left[ \mathbb{P}(\text{W} \mid \lnot \text{F}) \log_2(\mathbb{P}(\text{W} \mid \lnot \text{F})) + \mathbb{P}(\lnot \text{W} \mid \lnot \text{F}) \log_2(\mathbb{P}(\lnot \text{W} \mid \lnot \text{F})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{3}{6} \right] \left[ \frac{1}{3} \log_2\left( \frac{1}{3} \right) + \frac{2}{3} \log_2 \left(\frac{2}{3} \right) \right] \tag{Calculate Probabilities} \\
+&= 0.459147917027 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H_{\text{Total}}(\text{W} \mid \text{F})
+&= 0.459147917027 \tag{Sum}
+\end{align}
+</div>
+</li>
+<li><a id="orgbe43de4"></a>Excess Gasoline?<br />
+<div class="outline-text-5" id="text-3-3-0-2">
+\begin{align}
+H(\text{W} \mid \text{G})
+&= - \mathbb{P} \left( \text{G} \right) \left[ \mathbb{P}(\text{W} \mid \text{G}) \log_2(\mathbb{P}(\text{W} \mid \text{G})) + \mathbb{P}(\lnot \text{W} \mid \text{G}) \log_2(\mathbb{P}(\lnot \text{W} \mid \text{G})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{4}{6} \right] \left[ \frac{2}{4} \log_2\left( \frac{2}{4} \right) + \frac{2}{4} \log_2 \left(\frac{2}{4} \right) \right] \tag{Calculate Probabilities} \\
+&= 0.6666 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H(\text{W} \mid \lnot \text{G})
+&= - \mathbb{P}\left( \lnot \text{G} \right) \left[ \mathbb{P}(\text{W} \mid \lnot \text{G}) \log_2(\mathbb{P}(\text{W} \mid \lnot \text{G})) + \mathbb{P}(\lnot \text{W} \mid \lnot \text{G}) \log_2(\mathbb{P}(\lnot \text{W} \mid \lnot \text{G})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{2}{6} \right] \left[ \frac{2}{2} \log_2\left( \frac{2}{2} \right) + \frac{0}{2} \log_2 \left(\frac{0}{2} \right) \right] \tag{Calculate Probabilities} \\
+&= 0 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H_{\text{Total}}(\text{W} \mid \text{G})
+&= 0.666 \tag{Sum}
+\end{align}
+</div>
+</li>
+<li><a id="orgb2419e5"></a>Runway Too Close?<br />
+<div class="outline-text-5" id="text-3-3-0-3">
+\begin{align}
+H(\text{W} \mid \text{C})
+&= - \mathbb{P} \left( \text{C} \right) \left[ \mathbb{P}(\text{W} \mid \text{C}) \log_2(\mathbb{P}(\text{W} \mid \text{C})) + \mathbb{P}(\lnot \text{W} \mid \text{C}) \log_2(\mathbb{P}(\lnot \text{W} \mid \text{C})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{4}{6} \right] \left[ \frac{3}{4} \log_2\left( \frac{3}{4} \right) + \frac{1}{4} \log_2 \left(\frac{1}{4} \right) \right] \tag{Calculate Probabilities} \\
+&= 0.5408 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H(\text{W} \mid \lnot \text{C})
+&= - \mathbb{P}\left( \lnot \text{C} \right) \left[ \mathbb{P}(\text{W} \mid \lnot \text{C}) \log_2(\mathbb{P}(\text{W} \mid \lnot \text{C})) + \mathbb{P}(\lnot \text{W} \mid \lnot \text{C}) \log_2(\mathbb{P}(\lnot \text{W} \mid \lnot \text{C})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{2}{6} \right] \left[ \frac{1}{2} \log_2\left( \frac{1}{2} \right) + \frac{1}{2} \log_2 \left(\frac{1}{2} \right) \right] \tag{Calculate Probabilities} \\
+&= 0.333 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H_{\text{Total}}(\text{W} \mid \text{C})
+&= 0.8741 \tag{Sum}
+\end{align}
+</div>
+</li>
+<li><a id="org0efa68d"></a>Plane Too High?<br />
+<div class="outline-text-5" id="text-3-3-0-4">
+\begin{align}
+H(\text{W} \mid \text{H})
+&= - \mathbb{P} \left( \text{H} \right) \left[ \mathbb{P}(\text{W} \mid \text{H}) \log_2(\mathbb{P}(\text{W} \mid \text{H})) + \mathbb{P}(\lnot \text{W} \mid \text{H}) \log_2(\mathbb{P}(\lnot \text{W} \mid \text{H})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{4}{6} \right] \left[ \frac{2}{4} \log_2\left( \frac{2}{4} \right) + \frac{2}{4} \log_2 \left(\frac{2}{4} \right) \right] \tag{Calculate Probabilities} \\
+&= 0.6666 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H(\text{W} \mid \lnot \text{H})
+&= - \mathbb{P}\left( \lnot \text{H} \right) \left[ \mathbb{P}(\text{W} \mid \lnot \text{H}) \log_2(\mathbb{P}(\text{W} \mid \lnot \text{H})) + \mathbb{P}(\lnot \text{W} \mid \lnot \text{H}) \log_2(\mathbb{P}(\lnot \text{W} \mid \lnot \text{H})) \right] \tag{Def Entropy} \\
+&= - \left[ \frac{2}{6} \right] \left[ \frac{2}{2} \log_2\left( \frac{2}{2} \right) + \frac{0}{2} \log_2 \left(\frac{0}{2} \right) \right] \tag{Calculate Probabilities} \\
+&= 0 \tag{Calculate}
+\end{align}
+
+\begin{align}
+H_{\text{Total}}(\text{W} \mid \text{H})
+&= 0.6666 \tag{Sum}
+\end{align}
+
+
+<p>
+The feature with the lowest conditional entropy (hence largest information gain) was <code>Foggy?</code>. Hence we will split the dataset into one with <code>Foggy?</code> being <code>True</code> and one with <code>Foggy?</code> being <code>False</code>. Note That the dataset where <code>Foggy?</code> being <code>True</code> has <code>Crash?</code> being <code>True</code> always. Hence, for the first split, if <code>Foggy?</code> is <code>True</code> predict <code>True</code>.
+</p>
+
+<p>
+DataFrame Where <code>Foggy?</code> is <code>False</code>:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Excess Gasoline?</th>
+<th scope="col" class="org-left">Runway Too Close?</th>
+<th scope="col" class="org-left">Plane Too High?</th>
+<th scope="col" class="org-left">Crash?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">No</td>
+<td class="org-left">Yes</td>
+<td class="org-left">No</td>
+<td class="org-left">Yes</td>
+</tr>
+
+<tr>
+<td class="org-left">Yes</td>
+<td class="org-left">No</td>
+<td class="org-left">Yes</td>
+<td class="org-left">No</td>
+</tr>
+
+<tr>
+<td class="org-left">Yes</td>
+<td class="org-left">Yes</td>
+<td class="org-left">Yes</td>
+<td class="org-left">No</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Here we note that both <code>Excess Gasoline?</code> and <code>Plane Too High?</code> have the opposite truth value compared to <code>Crash?</code>. Our next decision is to predict the opposite of <code>Excess Gasoline?</code>.
+</p>
+
+<p>
+Our final decision tree is:
+</p>
+
+<p>
+Ask if <code>Foggy?</code> is <code>True</code>
+</p>
+<ul class="org-ul">
+<li>If Yes, predict <code>True</code></li>
+<li>If No, predict the opposite of <code>Excess Gasoline?</code></li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+<div id="outline-container-orge0f7c99" class="outline-3">
+<h3 id="orge0f7c99"><span class="section-number-3">3.4.</span> Question 4: Support Vector Machines</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+\[ y = -\frac{7}{5}x + 7 \]
+</p>
+</div>
+</div>
+<div id="outline-container-orgd601105" class="outline-3">
+<h3 id="orgd601105"><span class="section-number-3">3.5.</span> Question 5: Naive Bayes Implementation</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Answer in <b><a href="https://colab.research.google.com/drive/1jFcR61BPeFqWRPNUD_I7YjVQKogA805q?usp=sharing">Colab</a></b>.
+</p>
+
+<p>
+Small note, we do not smooth all classes? I understand that if we do smoothing on all the classes, then we do not get a valid probability. However, in the case of three classes (spam, maybe spam, not spam) do we only smooth spam and maybe spam?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb473667" class="outline-2">
+<h2 id="orgb473667"><span class="section-number-2">4.</span> Homework 4 Practical Issues</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org0522438" class="outline-3">
+<h3 id="org0522438"><span class="section-number-3">4.1.</span> Question 1: Recommendation Systems</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Because we have a small number of user ratings, the only recommendation system that does not depend on the ratings are content-based recommendations.
+</p>
+</div>
+</div>
+<div id="outline-container-org844e81c" class="outline-3">
+<h3 id="org844e81c"><span class="section-number-3">4.2.</span> Question 2: Effect of Tuning Parameters</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><p>
+More
+</p>
+
+<p>
+Higher values of &lambda; lead to higher penalties for weights. This means lower values of weights. In the specific case of L1 regularization, the geometry of the loss function (being concentric diamonds) leads to many features being zero.
+</p></li>
+<li><p>
+More
+</p>
+
+<p>
+Higher values of &lambda; lead to higher penalties for weights. This means lower values of weights.
+</p></li>
+<li><p>
+More
+</p>
+
+<p>
+If we only include something based on a threshold, then increasing the threshold leads to less features included. This will result in less overfitting.
+</p></li>
+<li><p>
+Less
+</p>
+
+<p>
+Decision trees are universal function approximators. If \( n \) tends to infinity, then the decision tree will learn a very complex decision boundary. 
+</p></li>
+<li><p>
+Less
+</p>
+
+<p>
+Boosting uses a number of weak learners in order to create an overall strong learner. The more iterations of boosting, the stronger the learner. This can create overfitting.
+</p></li>
+<li><p>
+Less
+</p>
+
+<p>
+Taking more principle components will result in more dimensions. Without looking at the variance along the direction, these dimensions could explain little about the data and we could fit to the noise in the unimportant feature space.
+</p></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23a2ea5" class="outline-3">
+<h3 id="org23a2ea5"><span class="section-number-3">4.3.</span> Question 3: Unsupervised Learning</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Given the dataset 1,4,9,16,25. Because the data are just real numbers we only need to look that the distances from one point to the next. In the higher dimensional case we would need a matrix. <br />
+</p>
+
+<p>
+At the beginning each point is its own cluster. <br />
+</p>
+
+<p>
+Step 1:
+Clusters are {1},{4},{9},{16},{25}. The distances are 3,5,7,9. The two closest clusters is {1} and {4}. <br />
+</p>
+
+<p>
+Step 2:
+Clusters are {1,4} (with centroid mean 3),{9},{16},{25}. The distances are 6,7,9. The two closest clusters are {1,4} and {9}. <br />
+</p>
+
+<p>
+Step 3:
+Clusters are {1,4,9} (with centroid mean 4.66),{16},{25}. The distances are 11,9. The two closest clusters are {16} and {25}. <br />
+</p>
+
+<p>
+When we have two clusters, they will be {1,4,9} and {16,25}.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeca37c2" class="outline-3">
+<h3 id="orgeca37c2"><span class="section-number-3">4.4.</span> Question 4: Dimensionality Reduction</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+I will attempt to do as much of the formula on the notes as I can.
+</p>
+
+<p>
+Consider the following dataset,
+</p>
+
+<table id="org5a67ac3" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Sample</th>
+<th scope="col" class="org-right">\( x_1 \)</th>
+<th scope="col" class="org-right">\( x_2 \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-right">4</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-left">C</td>
+<td class="org-right">5</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">D</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Firstly, normalize each feature using the formula:
+</p>
+
+<p>
+\[ \frac{x_i - \overline{x_{i}}}{N} \]
+</p>
+
+<p>
+The means are:
+\( \overline{x_1} = 3, \overline{x_2} = 2 \) 
+</p>
+
+<p>
+This results in the following table:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Sample</th>
+<th scope="col" class="org-right">\( x_1 \)</th>
+<th scope="col" class="org-right">\( x_2 \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-right">0.25</td>
+<td class="org-right">-0.25</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-right">-0.25</td>
+<td class="org-right">0.25</td>
+</tr>
+
+<tr>
+<td class="org-left">C</td>
+<td class="org-right">0.5</td>
+<td class="org-right">0.5</td>
+</tr>
+
+<tr>
+<td class="org-left">D</td>
+<td class="org-right">-0.5</td>
+<td class="org-right">-0.5</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Then, by computing \( X^T X \) we get.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-right">\( x_1 \)</th>
+<th scope="col" class="org-right">\( x_2 \)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">\( x_1 \)</td>
+<td class="org-right">0.625</td>
+<td class="org-right">0.375</td>
+</tr>
+
+<tr>
+<td class="org-left">\( x_2 \)</td>
+<td class="org-right">0.375</td>
+<td class="org-right">0.625</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The eigenvalues and eigenvectors are:
+</p>
+
+<p>
+\[ \lambda_{{1,2}} = 0.25, 1; v_{{1,2}} = \begin{bmatrix} \frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} \end{bmatrix}, \begin{bmatrix}\frac{\sqrt{2}}{2} \\ \frac{\sqrt{2}}{2} \end{bmatrix} \]
+The eigenvector with the largest eigenvalue is the second one with eigenvalue 1. This makes \( v_2 \) our first principal component.
+</p>
+
+<p>
+According to the notes, we may project the data onto PC space by multiplying the eigenvector transpose (shape (1 x 2)) on the right to the original data (shape (4,2)). This matrix multiplication is not defined.
+</p>
+
+<p>
+There is a formula for vector projection however,
+</p>
+
+<p>
+\[ \text{Proj}_v(x) = \frac{x \cdot v}{v \cdot v} v  \]
+</p>
+
+<p>
+We may use this row wise (and generate the following absolutely disgusting code)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python3"><span style="color: #005e8b;">projected_data</span> = pd.DataFrame<span style="color: #000000;">(</span><span style="color: #8f0075;">list</span><span style="color: #dd22dd;">(</span>data.<span style="color: #8f0075;">apply</span><span style="color: #008899;">(</span><span style="color: #531ab6;">lambda</span> row: <span style="color: #8f0075;">list</span><span style="color: #972500;">(</span>
+    row.dot<span style="color: #808000;">(</span>vectors<span style="color: #531ab6;">[</span>1<span style="color: #531ab6;">]</span><span style="color: #808000;">)</span> * vectors<span style="color: #808000;">[</span>1<span style="color: #808000;">]</span><span style="color: #972500;">)</span>, axis=1<span style="color: #008899;">)</span>.to_numpy<span style="color: #008899;">()</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+</pre>
+</div>
+
+<p>
+This creates the following two plots.
+</p>
+
+
+<div id="orgb7dd762" class="figure">
+<p><img src="file:///home/zjabbar/code/practice/python/plot.png" alt="plot.png" />
+</p>
+</div>
+
+
+<div id="orgaa2e251" class="figure">
+<p><img src="file:///home/zjabbar/code/practice/python/plot_2.png" alt="plot_2.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3d9c38" class="outline-3">
+<h3 id="orgc3d9c38"><span class="section-number-3">4.5.</span> Question 5: Feature Engineering</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Code in <b><a href="https://colab.research.google.com/drive/1w-_0FKtkxwXbXs4deazHSu7daB6McYi0?usp=sharing">Colab</a></b>.
+</p>
+
+<p>
+The baseline F1 is F1 score:  0.8046371386935974
+My F1 score: F1 score:  0.8250481965351555
+</p>
+
+<p>
+There are many methods of feature engineering. My main approach is to combine principal component analysis and discriminant analysis in a pipeline in <code>SKlearn</code>. <code>sklearn.pipeline.Pipeline</code> is a sequence of transformations composed with one another. These transformations tend to have many different hyperparameters to change the end result.  <code>sklearn.model_selection.GridSearchCV</code> is a brute force method of plugging in many different hyperparameters and performing cross validation to see what is the best result. I chose a 4-Fold cross validation due to the training testing split being 25%, but perhaps that is just gaming the system. Here is a code block to find the best hyperparameters for a pipeline I used.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">from</span> sklearn.pipeline <span style="color: #531ab6;">import</span> Pipeline
+<span style="color: #531ab6;">from</span> sklearn.model_selection <span style="color: #531ab6;">import</span> GridSearchCV
+
+<span style="color: #531ab6;">from</span> sklearn.preprocessing <span style="color: #531ab6;">import</span> StandardScaler
+<span style="color: #531ab6;">from</span> sklearn.decomposition <span style="color: #531ab6;">import</span> KernelPCA
+<span style="color: #531ab6;">from</span> sklearn.discriminant_analysis <span style="color: #531ab6;">import</span> LinearDiscriminantAnalysis
+
+<span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>,
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'pca'</span>, KernelPCA<span style="color: #972500;">()</span><span style="color: #008899;">)</span>,
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'lda'</span>, LinearDiscriminantAnalysis<span style="color: #972500;">(</span>n_components=5<span style="color: #972500;">)</span><span style="color: #008899;">)</span>,
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'regression'</span>, LogisticRegression<span style="color: #972500;">(</span>random_state=0<span style="color: #972500;">)</span><span style="color: #008899;">)</span>
+<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">param_grid</span> = <span style="color: #000000;">{</span>
+    <span style="color: #3548cf;">'pca__n_components'</span>: <span style="color: #8f0075;">range</span><span style="color: #dd22dd;">(</span>100,400,50<span style="color: #dd22dd;">)</span>,
+    <span style="color: #3548cf;">'pca__kernel'</span>: <span style="color: #dd22dd;">[</span><span style="color: #3548cf;">'linear'</span>, <span style="color: #3548cf;">'poly'</span>, <span style="color: #3548cf;">'rbf'</span>, <span style="color: #3548cf;">'sigmoid'</span>, <span style="color: #3548cf;">'cosine'</span><span style="color: #dd22dd;">]</span>,
+    <span style="color: #3548cf;">'pca__gamma'</span>: np.arange<span style="color: #dd22dd;">(</span>0.01, 2, 0.01<span style="color: #dd22dd;">)</span>,
+<span style="color: #000000;">}</span>
+
+<span style="color: #005e8b;">search</span> = GridSearchCV<span style="color: #000000;">(</span>pipe, param_grid, cv=4, n_jobs=-1<span style="color: #000000;">)</span>.fit<span style="color: #000000;">(</span>X,y<span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>search.best_score_<span style="color: #000000;">)</span>
+search.best_estimator_
+</pre>
+</div>
+<p>
+Accuracy: 0.8090062111801243
+</p>
+
+<p>
+I have done a similar search over other pipelines but they had lower F1 Scores.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #005e8b;">pipe</span> = Pipeline<span style="color: #000000;">(</span><span style="color: #dd22dd;">[</span>
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'scaler'</span>, StandardScaler<span style="color: #972500;">()</span><span style="color: #008899;">)</span>,
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'pca'</span>, PCA<span style="color: #972500;">()</span><span style="color: #008899;">)</span>,
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'lda'</span>, LinearDiscriminantAnalysis<span style="color: #972500;">()</span><span style="color: #008899;">)</span>,
+    <span style="color: #008899;">(</span><span style="color: #3548cf;">'regression'</span>, LogisticRegression<span style="color: #972500;">(</span>random_state=0, max_iter=1000<span style="color: #972500;">)</span><span style="color: #008899;">)</span>
+<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+
+<span style="color: #005e8b;">param_grid</span> = <span style="color: #000000;">{</span>
+    <span style="color: #3548cf;">'pca__n_components'</span>: <span style="color: #8f0075;">range</span><span style="color: #dd22dd;">(</span>20,400<span style="color: #dd22dd;">)</span>,
+    <span style="color: #3548cf;">'pca__whiten'</span>: <span style="color: #dd22dd;">[</span><span style="color: #0000b0;">True</span>, <span style="color: #0000b0;">False</span><span style="color: #dd22dd;">]</span>,
+    <span style="color: #3548cf;">'lda__n_components'</span>: <span style="color: #8f0075;">range</span><span style="color: #dd22dd;">(</span>2,6<span style="color: #dd22dd;">)</span>,
+<span style="color: #000000;">}</span>
+</pre>
+</div>
+<p>
+Accuracy: 0.813664596273292
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc55f709" class="outline-2">
+<h2 id="orgc55f709"><span class="section-number-2">5.</span> Final Project Presentation</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org0a026db" class="outline-3">
+<h3 id="org0a026db"><span class="section-number-3">5.1.</span> UH Manoa Net Zero Goal</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<div id="orgde789d8" class="figure">
+<p><img src="media/ige.png" alt="ige.png" width="800" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org535dc7c" class="outline-3">
+<h3 id="org535dc7c"><span class="section-number-3">5.2.</span> How Close?</h3>
+<div class="outline-text-3" id="text-5-2">
+
+<div id="orgc44d21a" class="figure">
+<p><img src="media/net_zero.png" alt="net_zero.png" width="750" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf048735" class="outline-3">
+<h3 id="orgf048735"><span class="section-number-3">5.3.</span> Costs</h3>
+<div class="outline-text-3" id="text-5-3">
+
+<div id="org49bc728" class="figure">
+<p><img src="media/bill.png" alt="bill.png" width="1000" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org62d1c42" class="outline-3">
+<h3 id="org62d1c42"><span class="section-number-3">5.4.</span> Power Prediction - Peaks</h3>
+<div class="outline-text-3" id="text-5-4">
+
+<div id="org39543f2" class="figure">
+<p><img src="media/peaks.png" alt="peaks.png" width="750" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa758cf" class="outline-3">
+<h3 id="orgaa758cf"><span class="section-number-3">5.5.</span> Power Prediction - Solar</h3>
+<div class="outline-text-3" id="text-5-5">
+
+<div id="org600afa2" class="figure">
+<p><img src="media/solar.png" alt="solar.png" width="750" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1b8b098" class="outline-3">
+<h3 id="org1b8b098"><span class="section-number-3">5.6.</span> The Dataset</h3>
+<div class="outline-text-3" id="text-5-6">
+
+<div id="orge9b37ae" class="figure">
+<p><img src="media/kw.png" alt="kw.png" width="750" />
+</p>
+</div>
+
+<div id="org2038d93" class="figure">
+<p><img src="media/data.png" alt="data.png" width="750" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org80d96ad" class="outline-3">
+<h3 id="org80d96ad"><span class="section-number-3">5.7.</span> Generating Predictions</h3>
+<div class="outline-text-3" id="text-5-7">
+
+<div id="org3656dcc" class="figure">
+<p><img src="media/predictions.png" alt="predictions.png" width="1200" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org39e4cf7" class="outline-3">
+<h3 id="org39e4cf7"><span class="section-number-3">5.8.</span> Thank You!</h3>
+</div>
+</div>
+<div id="outline-container-org5d5fd56" class="outline-2">
+<h2 id="org5d5fd56"><span class="section-number-2">6.</span> Homework 5</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org884c538" class="outline-3">
+<h3 id="org884c538"><span class="section-number-3">6.1.</span> Problem 1: Practice Final Exam Questions</h3>
+<div class="outline-text-3" id="text-6-1">
+<ol class="org-ol">
+<li>C</li>
+<li>B</li>
+<li>A</li>
+<li>A</li>
+<li>D</li>
+<li>D</li>
+<li>B</li>
+<li>B</li>
+<li>D</li>
+<li>C</li>
+<li>C</li>
+<li>A</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6e42ffc" class="outline-3">
+<h3 id="org6e42ffc"><span class="section-number-3">6.2.</span> Problem 2: Neural Network Output</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Starting with the leftmost layer.
+</p>
+
+<p>
+We have inputs:
+</p>
+\begin{align*}
+\begin{bmatrix}
+4 \\
+-2
+\end{bmatrix}
+\end{align*}
+
+<p>
+The next layer is given by:
+</p>
+\begin{align*}
+\begin{bmatrix}
+\relu(4 \cdot 1 + -2 \cdot 3) \\
+\relu(4 \cdot -2 + -2 \cdot -1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+\relu(-2) \\
+\relu(-6)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix} 
+\end{align*}
+
+<p>
+Similarly, the next layer is given by:
+</p>
+\begin{align*}
+\begin{bmatrix}
+\relu(0 \cdot -2 + 0 \cdot 1) \\
+\relu(0 \cdot -2 + 0 \cdot 2)
+\end{bmatrix}
+=
+\begin{bmatrix}
+\relu(0) \\
+\relu(0)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix} 
+\end{align*}
+
+<p>
+The output layer is given by:
+</p>
+
+<p>
+\[ S(0 \cdot 5 + 0 \cdot 4) = S(0) = \frac{1}{1 + e^{-0}} = \frac{1}{2} \]
+</p>
+</div>
+</div>
+<div id="outline-container-org17f23d7" class="outline-3">
+<h3 id="org17f23d7"><span class="section-number-3">6.3.</span> Problem 3: Convolutional Neural Network</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+First, we get the activation maps. These are 2x2 matrices and there are two of them.
+</p>
+
+<p>
+Activation map from the first kernel:
+</p>
+
+\begin{bmatrix}
+675 & 0 \\
+1008 & 230
+\end{bmatrix}
+
+<p>
+Activation map from the second kernel:
+</p>
+\begin{bmatrix}
+-506 & 0 \\
+-17 & 252
+\end{bmatrix}
+
+
+<p>
+Max Pooling:
+The input is of shape 2x2 and we are using a 2x2 window. This results in a single scalar for each activation map. 
+The max of the first activation map is 1008
+The max of the second activation map is 252
+</p>
+
+<p>
+Rely Activation Layer:
+The top node is \( 1 \cdot 1008 + 1 \cdot 252 = 1260 \) 
+The bottom node is \( (-2) \cdot 1008 + (-2) \cdot 252 = -2520 \) 
+</p>
+
+<p>
+Output Layer:
+The output layer is \( S(0.005 \cdot 1260 + -0.8 \cdot (-2520)) = S(2022.3) \simeq 1 \)
+</p>
+</div>
+</div>
+<div id="outline-container-orgae2baf6" class="outline-3">
+<h3 id="orgae2baf6"><span class="section-number-3">6.4.</span> Problem 4: TensorFlow / Keras Implementation</h3>
+<div class="outline-text-3" id="text-6-4">
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_neural_network</span><span style="color: #000000;">(</span>X_train, y_train<span style="color: #000000;">)</span>:
+  <span style="color: #2a5045;">"""</span>
+<span style="color: #2a5045;">  Define, train, and return the neural network.</span>
+
+<span style="color: #2a5045;">  You may replace this code with any TensorFlow model that you wish.</span>
+<span style="color: #2a5045;">  """</span>
+
+  <span style="color: #005e8b;">model</span> = models.Sequential<span style="color: #000000;">()</span>
+  model.add<span style="color: #000000;">(</span>layers.Conv2D<span style="color: #dd22dd;">(</span>32, <span style="color: #008899;">(</span>5, 5<span style="color: #008899;">)</span>, activation=<span style="color: #3548cf;">'swish'</span>, input_shape=<span style="color: #008899;">(</span>64, 64, 3<span style="color: #008899;">)</span>, padding=<span style="color: #3548cf;">'same'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+  model.add<span style="color: #000000;">(</span>layers.MaxPooling2D<span style="color: #dd22dd;">(</span><span style="color: #008899;">(</span>2, 2<span style="color: #008899;">)</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+  model.add<span style="color: #000000;">(</span>layers.Conv2D<span style="color: #dd22dd;">(</span>64, <span style="color: #008899;">(</span>5, 5<span style="color: #008899;">)</span>, activation=<span style="color: #3548cf;">'swish'</span>, padding=<span style="color: #3548cf;">'same'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+  model.add<span style="color: #000000;">(</span>layers.Flatten<span style="color: #dd22dd;">()</span><span style="color: #000000;">)</span>
+  model.add<span style="color: #000000;">(</span>layers.Dense<span style="color: #dd22dd;">(</span>64, activation=<span style="color: #3548cf;">'relu'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+  model.add<span style="color: #000000;">(</span>layers.Dense<span style="color: #dd22dd;">(</span>40, activation=<span style="color: #3548cf;">'softmax'</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>
+
+  model.<span style="color: #8f0075;">compile</span><span style="color: #000000;">(</span>optimizer=<span style="color: #3548cf;">'adam'</span>,
+              loss=tf.keras.losses.CategoricalCrossentropy<span style="color: #dd22dd;">(</span>from_logits=<span style="color: #0000b0;">False</span><span style="color: #dd22dd;">)</span>,
+              metrics=<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">'accuracy'</span><span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>
+  
+  model.fit<span style="color: #000000;">(</span>X_train, y_train, 
+            epochs=25<span style="color: #000000;">)</span>
+
+  <span style="color: #531ab6;">return</span> model
+</pre>
+</div>
+
+<p>
+Solution in <a href="https://colab.research.google.com/drive/1V-nA1kIqNlLrIwyAfQmOPsTT708Y9oPb?usp=sharing">*Colab</a>*.
+F1 score:  0.8860360195360195
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd101237" class="outline-2">
+<h2 id="orgd101237"><span class="section-number-2">7.</span> Final Project Paper</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org0e5a7f6" class="outline-3">
+<h3 id="org0e5a7f6"><span class="section-number-3">7.1.</span> Problem Introduction</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+In 2015, house bill 1509 was signed into law establishing a collective goal for The University of Hawaii "to become net-zero with respect to energy use, producing as much (renewable) energy as the system consumes across all campuses by January 1, 2035.". The University's plans are manifold, but fall into three main areas: energy management, efficiency and generation, and social initiatives. The scope of this paper is within the energy management side, to "continue to improve metering and submetering to provide detailed energy tracking.".
+</p>
+
+<p>
+Tracking and predicting power consumption has many uses for the University. Firstly, we must measure what we aim to reduce. The power demanded on a given day is a random vector. Just because the power demanded was high on a day does not necessarily entail that Manoa is on the wrong track for meeting net zero goals. Deviation from a believable prediction is more indicative of an anomaly than an absolute amount. Second, the University of Hawaii is billed based on the amount of energy used during a month and importantly also based on the largest peak demand in a year. If we have an accurate method of predicting the power demand, we might have a better time predicting when the peak demand will occur and will have a chance at mitigating the peak. 
+</p>
+
+<p>
+The goal of this paper is to propose a model which may forecast future power usage given an electrical meter time series. The algorithm proposed is a deep LSTM RNN architecture using weather and calendar data.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd943a19" class="outline-3">
+<h3 id="orgd943a19"><span class="section-number-3">7.2.</span> Related Work</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+The power a building demands is based on the number of electrical devices and how much power they draw. For most devices, we do not expect user to constantly turn the devices on and off. We also expect that the devices tend to be activated in response to an external factor rather than being completely scheduled according to the time of day. This makes a model which only takes in the time of day and returns a point prediction of the amount of power drawn hard to justify. 
+</p>
+
+<p>
+Instead, when one turns on their computer, laundry machine, or ventilation system, we expect the amount of power drawn to be similar to the amount of power drawn in the past point in time by continuity. Much of the research into power prediction factors this inductive bias into their model.
+</p>
+
+<p>
+Sachin et al. analyzes short and long term energy consumption time series data using three models, ARIMA, RNN, and LSTM. All of these models use a recursive approach using historical data to predict the next output, then by chaining the outputs we can forecast longer timescales. ARIMA is different from RNN and LSTM models as it does not require auto differentiation. ARIMA is a more interpretable model and is simpler which makes it a common baseline to test other models versus. Notably, Sachin et. al. finds that ARIMA works better for short scale forecasts than RNN and LSTM models, but the opposite is true on longer scale forecasting problems.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc9e8f2e" class="outline-3">
+<h3 id="orgc9e8f2e"><span class="section-number-3">7.3.</span> Dataset</h3>
+<div class="outline-text-3" id="text-7-3">
+<p>
+Prior to 2019, all electrical meters were read manually by maintenance once a month whenever the team had the time to visit the meter. By funding from Elemental Excelerator, the University of Hawaii was able to hire Blue Pillar to install a digital metering system. For a while, data was requested from Blue Pillar and manually sent to ERDL via DropBox. Starting this year January 21 was when I was able to get access to the API and automatically download data for ERDL. 
+</p>
+
+<p>
+The data from Blue Pillar can be separated into data tables for a given unit and metadata tables. Here is one row from the historical output by BluePillar:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><code>SiteId</code></td>
+<td class="org-left"><code>17abfe2a-3ae5-471b-965c-3e88e42f28d8</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SiteName</code></td>
+<td class="org-left"><code>UNIVERSITY OF HAWAII AT MANOA</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>TagId</code></td>
+<td class="org-left"><code>99784f9d-b44d-413a-90a4-0cee5dcdb33c</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SiteDateTime</code></td>
+<td class="org-left"><code>2022-12-19 01:30:00</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>DateTimeUtc</code></td>
+<td class="org-left"><code>2022-12-19 11:30:00</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Mean</code></td>
+<td class="org-left"><code>157798.52920000005</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Min</code></td>
+<td class="org-left"><code>157798.32</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Max</code></td>
+<td class="org-left"><code>157798.74</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Median</code></td>
+<td class="org-left"><code>0</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Sample</code></td>
+<td class="org-left"><code>157798</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>StDev</code></td>
+<td class="org-left"><code>0.010360180170754884</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SampleSize</code></td>
+<td class="org-left"><code>900</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>ActualSampleSize</code></td>
+<td class="org-left"><code>432</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Quality</code></td>
+<td class="org-left"><code>t</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>MinTsUtc</code></td>
+<td class="org-left"><code>2023-01-10 11:26:47.41</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>MaxTsUtc</code></td>
+<td class="org-left"><code>2023-01-10 11:26:47.41</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SampleTsUtc</code></td>
+<td class="org-left"><code>2023-01-10 11:26:47.41</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+We are also able to pull a metadata table of all possible historical data selections. Here is one example row.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><code>Id</code></td>
+<td class="org-left"><code>009adfb4-d0d4-478d-b8ff-d9d3f2a97427</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Name</code></td>
+<td class="org-left"><code>kW</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Entity</code></td>
+<td class="org-left"><code>HALE_HALAWAI_MAIN_MTR</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SiteName</code></td>
+<td class="org-left"><code>UNIVERSITY OF HAWAII AT MANOA</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>SiteId</code></td>
+<td class="org-left"><code>17ABFE2A-3AE5-471B-965C-3E88E42F28D8</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Building</code></td>
+<td class="org-left"><code>HALE HALAWAI</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Floor</code></td>
+<td class="org-left"><code>BASEMENT</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Room</code></td>
+<td class="org-left"><code>ELECTRICAL ROOM</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>DataType</code></td>
+<td class="org-left"><code>analog</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Filter_Id</code></td>
+<td class="org-left"><code>d9f52bf2-dcc7-4bbd-a981-6596556f848d</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>Filter_Name</code></td>
+<td class="org-left"><code>AllkW</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>building_id</code></td>
+<td class="org-left"><code>1260037276</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orge538e96" class="outline-3">
+<h3 id="orge538e96"><span class="section-number-3">7.4.</span> Extra Features</h3>
+<div class="outline-text-3" id="text-7-4">
+<p>
+The data in the previous section is the one we would like to forecast. However, because we are given the date and time in which a reading occurs, we may use extra data to aid in our forecasting. We will include calendar metadata, such as what kind of day (holiday, school day, weekend) for a timestamp. We also have weather readings from the FROG buildings on campus. These include the temperature, global horizontal irradiance, and humidity.  
+</p>
+</div>
+</div>
+<div id="outline-container-org2168e6e" class="outline-3">
+<h3 id="org2168e6e"><span class="section-number-3">7.5.</span> Features and Preprocessing</h3>
+<div class="outline-text-3" id="text-7-5">
+</div>
+<div id="outline-container-orgc352417" class="outline-4">
+<h4 id="orgc352417"><span class="section-number-4">7.5.1.</span> Original Shape Structure</h4>
+<div class="outline-text-4" id="text-7-5-1">
+<p>
+After removing much of the metadata related to the location of POST (<code>SiteID</code>, <code>FilterId</code>, etc) we are given a time series of the amount of demand (in kilowatt) at a time and date (down sampled to be in hourly resolution).
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Datetime</th>
+<th scope="col" class="org-left">KW</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>2022-08-01 00:00:00</code></td>
+<td class="org-left"><code>1400.001</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The rows are taken only on days in which all the meters give full data. Sometimes one or more meters associated with POST will disconnect from the network and will flatline. This will not result in an accurate reading for the proper level of demand for POST. We choose to omit the results here.
+</p>
+</div>
+</div>
+<div id="outline-container-orga1cae4f" class="outline-4">
+<h4 id="orga1cae4f"><span class="section-number-4">7.5.2.</span> Date and Time Engineering</h4>
+<div class="outline-text-4" id="text-7-5-2">
+<p>
+Date and time data are stored as <code>pd.Datetime</code> objects in Python and are not easily comparable in tensor form. One way to engineer dates and times is to assign a number like the Linux Epoch, but that will not convey our domain knowledge of the seasonality of yearly, monthly, and weekly trends. By the law of trichotomy, a single real number cannot be used to represent a cyclic pattern. Hence, given a <code>pd.Datetime</code> object, we represent its progress throughout the year and week by using two numbers which are the coordinates of a path along a circle. That is,
+</p>
+
+<p>
+\[ \text{Date \& Time} \mapsto \text{Day of Week} \mapsto (\sin(\text{Day of Week}), \cos(\text{Day of Week})) \]
+</p>
+
+<p>
+For example,
+</p>
+
+<p>
+\[ \text{2022-06-22} \to \text{Monday} = 0 \to (\cos(0), \sin(0)) = (1,0) \]
+</p>
+
+<p>
+We will construct the same measure similarly for how far along the year we are.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdde1684" class="outline-4">
+<h4 id="orgdde1684"><span class="section-number-4">7.5.3.</span> Categorical Data</h4>
+<div class="outline-text-4" id="text-7-5-3">
+<p>
+Domain knowledge indicates that holidays would have a different power demand behavior than school days. Hence, the model is also fed information of what type the current day is and what the next days type will be. The model would not know if one week has a three day weekend for example.
+</p>
+
+<p>
+To represent categorical data, a standard approach is to use one-hot encoding. We will input the current day type and the next day type as inputs.
+</p>
+</div>
+</div>
+<div id="outline-container-org061860f" class="outline-4">
+<h4 id="org061860f"><span class="section-number-4">7.5.4.</span> Temperature Data</h4>
+<div class="outline-text-4" id="text-7-5-4">
+<p>
+The FROG buildings on campus have sensors relating to weather data. This includes:
+</p>
+
+<ul class="org-ul">
+<li>Temperature</li>
+<li>Humidity</li>
+<li>Global Horizontal Irradiance</li>
+</ul>
+
+<p>
+These will be included into the table.
+</p>
+</div>
+</div>
+<div id="outline-container-orgac00491" class="outline-4">
+<h4 id="orgac00491"><span class="section-number-4">7.5.5.</span> Standardization</h4>
+<div class="outline-text-4" id="text-7-5-5">
+<p>
+We will standardize all of our input features according to the following:
+</p>
+
+<p>
+\[ \text{Normalized Feature} = \frac{\text{Feature}- \mu}{\sigma} \]
+</p>
+
+
+<p>
+Where \( \mu \) is the mean of the training dataset and \( \sigma \) is the standard deviation from the training dataset. It is important to use the training dataset statistics for the test and validation data to make sure none of their features get leaked into the training / feature engineering pipeline.
+</p>
+</div>
+</div>
+<div id="outline-container-org40dc060" class="outline-4">
+<h4 id="org40dc060"><span class="section-number-4">7.5.6.</span> Final Dataset</h4>
+<div class="outline-text-4" id="text-7-5-6">
+<p>
+By appending all of the features we are left with the following dataset.
+</p>
+
+
+<div id="orgba55298" class="figure">
+<p><img src="media/post_power_dataframe_all_features.png" alt="post_power_dataframe_all_features.png" />
+</p>
+</div>
+
+<p>
+After preprocessing the dataframe looked like this
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org10d1368" class="outline-3">
+<h3 id="org10d1368"><span class="section-number-3">7.6.</span> Models Considered</h3>
+<div class="outline-text-3" id="text-7-6">
+<p>
+This paper aims to further analyze the results in Sachin et. al. by considering different LSTM architectures. Rather than building one layer with 100 units, we look at the performance of nested hidden layers (each with 100 units) and of one large shallow LSTM layer. As a baseline and with further inspiration from Sachin et. al, we compare the LSTM architectures to the SARIMAX model. 
+</p>
+</div>
+</div>
+<div id="outline-container-org97cb940" class="outline-3">
+<h3 id="org97cb940"><span class="section-number-3">7.7.</span> Data Split</h3>
+<div class="outline-text-3" id="text-7-7">
+<p>
+We split the data into train, validation, test with proportions 90 / 5 / 5. The goal is to forecast data in the future, we take the last 10 percent as the data to measure the effectiveness of the model. This is in contrast to an approach which takes the last week of each month as validation and testing data. The training data is in quite large proportion compared to the test and validation data due to the need to include all types of day types into the training set. A lot of papers use a split of 75 or 80 percent for training, however this results in <code>NA</code> values during the normalization <code>day_type</code> for the finals column. In the future, when we collect more data this issue can be avoided.
+</p>
+</div>
+</div>
+<div id="outline-container-org8d55f95" class="outline-3">
+<h3 id="org8d55f95"><span class="section-number-3">7.8.</span> Hyperparameter Search Space &amp; Optimization</h3>
+<div class="outline-text-3" id="text-7-8">
+</div>
+<div id="outline-container-org0f8d54b" class="outline-4">
+<h4 id="org0f8d54b"><span class="section-number-4">7.8.1.</span> SARIMAX</h4>
+<div class="outline-text-4" id="text-7-8-1">
+<p>
+The SARIMAX model depends on the order and seasonal order hyperparameters. These are tuples \( \text{Order} = (p,q,r), \text{Seasonal Order} = (P,Q,R,s) \) which we choose to keep \( s = 12 \) and let \( p,q,r,P,Q,R \) range over the values \( {0,1} \). In order to find the best orders, we run a for loop through every combination and pick out which order reduces the validation dataset mean squared error.
+</p>
+</div>
+</div>
+<div id="outline-container-org2c298f6" class="outline-4">
+<h4 id="org2c298f6"><span class="section-number-4">7.8.2.</span> LSTM - Deep &amp; Broad</h4>
+<div class="outline-text-4" id="text-7-8-2">
+<p>
+LSTM is a layer architecture in a larger artificial neural network. This paper explores the effectiveness of stacking multiple layers as opposed to a larger single layer. The hyper parameter for the deep architecture is the number of hidden layers. Where each hidden layer is composed of an LSTM layer with 100 units followed by a batch normalization layer. The broad LSTM model has the number of units in the first hidden LSTM layer. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd126232" class="outline-3">
+<h3 id="orgd126232"><span class="section-number-3">7.9.</span> Evaluation on Test Set</h3>
+<div class="outline-text-3" id="text-7-9">
+<p>
+The SARIMAX model has the mean squared error on the test set as: \( 3.6651201716716453 \). 
+We may summarize the LSTM models in the following two tables.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">LSTM Number Hidden Layers</th>
+<th scope="col" class="org-right">Test MSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0.689027</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0.743700</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">0.910402</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">1.654828</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">0.929098</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">0.800219</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">0.987502</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-right">1.141009</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-right">0.827337</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-right">0.744342</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-right">0.696265</td>
+</tr>
+</tbody>
+</table>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">LSTM Units - Broad</th>
+<th scope="col" class="org-right">Test MSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">100</td>
+<td class="org-right">1.337295</td>
+</tr>
+
+<tr>
+<td class="org-right">200</td>
+<td class="org-right">1.516799</td>
+</tr>
+
+<tr>
+<td class="org-right">300</td>
+<td class="org-right">1.576121</td>
+</tr>
+
+<tr>
+<td class="org-right">400</td>
+<td class="org-right">1.362951</td>
+</tr>
+
+<tr>
+<td class="org-right">500</td>
+<td class="org-right">1.738935</td>
+</tr>
+
+<tr>
+<td class="org-right">600</td>
+<td class="org-right">1.279818</td>
+</tr>
+
+<tr>
+<td class="org-right">700</td>
+<td class="org-right">1.248263</td>
+</tr>
+
+<tr>
+<td class="org-right">800</td>
+<td class="org-right">3.402421</td>
+</tr>
+
+<tr>
+<td class="org-right">900</td>
+<td class="org-right">2.102972</td>
+</tr>
+
+<tr>
+<td class="org-right">1000</td>
+<td class="org-right">1.793419</td>
+</tr>
+
+<tr>
+<td class="org-right">1100</td>
+<td class="org-right">1.217969</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgdb4b895" class="outline-3">
+<h3 id="orgdb4b895"><span class="section-number-3">7.10.</span> Explanation on Differences Between Train / Test Datasets</h3>
+<div class="outline-text-3" id="text-7-10">
+<p>
+In the LSTM models, the loss on the training and validation datasets would go below \( 0.05 \) . However, the training data would have a mean squared error score larger than \( 1 \). I believe this is due to the training set being farther away temporally than the validation dataset. Also we do not have a lot of data to justify many annual trends in the data. Had the training dataset been larger, the model could have had the capability to predict more accurately what would happen in the testing dataset. When looking at the training history, there is an upward drift of the validation loss while the training loss tends to zero. This is indicative of an overfitting regime.
+</p>
+</div>
+</div>
+<div id="outline-container-org000ef5b" class="outline-3">
+<h3 id="org000ef5b"><span class="section-number-3">7.11.</span> Discussion</h3>
+<div class="outline-text-3" id="text-7-11">
+<p>
+In this paper, we have found several models based on the LSTM architecture which can beat out SARIMAX, a standard time series regression model. There is a lot of room for improvement and future work. As with most ANN architectures, many knobs and dials may be changed to see what sticks.
+</p>
+
+<p>
+Vijayaprabakaran et. al. compared different activation functions for the LSTM network. They find that the <code>swish</code> activation function \( \text{swish}(x) = x \cdot \text{sigmoid}(x) \) outperforms the hyperbolic tangent activation function on all of the datasets tested. In trying to use the <code>swish</code> activation function, the model outputs <code>NAN</code> loss, indicative of exploding gradients. Introducing L1, L2 regularization, decreasing the learning rate, and using gradient clipping did not stop the model from eventually reporting <code>NAN</code> during training.
+</p>
+
+<p>
+There has been a lot of missing data or data that has been thrown out due to creating shape restrictions. Because a future goal of the University is to create a dashboard using the predictions, a future improvement is to handle missing values differently. One approach to missing values is to smooth out the data using an exponential moving average. Another approach is to reconstruct the missing data using the other buildings which hopefully do have their true data being reported. We may impute missing values by placing a value of <code>-1</code> for the missing features. 
+</p>
+
+<p>
+The features could have also been engineered differently. Rather than using one-hot encoding, one may also try another encoding technique like label encoding. The weather data could also be more precise in regards to the building one wishes to forecast on by using ArcGIS data given the specific coordinates rather than using one building model the weather for another building across campus.
+</p>
+
+<p>
+We may also re-attempt this process given some extra time to collect more data. Many trends are periodic with respect to the year. Having multiple years worth of data could help the model pick out the trends.
+</p>
+</div>
+</div>
+<div id="outline-container-org8467d53" class="outline-3">
+<h3 id="org8467d53"><span class="section-number-3">7.12.</span> References</h3>
+<div class="outline-text-3" id="text-7-12">
+<p>
+A Bill for an act - capitol.hawaii.gov. (n.d.).
+<a href="https://www.capitol.hawaii.gov/sessions/session2023/bills/HB1509_CD1_.pdf">https://www.capitol.hawaii.gov/sessions/session2023/bills/HB1509_CD1_.pdf</a> <br />
+</p>
+
+<p>
+Sachin, M. M., Baby, M. P., &amp; Ponraj, A. S. (2020, December). Analysis of energy consumption using RNN-LSTM and ARIMA Model. In Journal of Physics: Conference Series (Vol. 1716, No. 1, p. 012048). IOP Publishing. <br />
+</p>
+
+<p>
+Vijayaprabakaran, K., &amp; Sathiyamurthy, K. (2022). Towards activation function search for long short-term model network: A differential evolution based approach. Journal of King Saud University-Computer and Information Sciences, 34(6), 2637-2650.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
