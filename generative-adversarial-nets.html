@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:18 -->
+<!-- 2024-10-03 Thu 14:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Generative Adversarial Nets</title>
@@ -219,8 +219,8 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Generative Adversarial Nets</h1>
-<div id="outline-container-orgac5e766" class="outline-2">
-<h2 id="orgac5e766"><span class="section-number-2">1.</span> Probability Background</h2>
+<div id="outline-container-orged81a1b" class="outline-2">
+<h2 id="orged81a1b"><span class="section-number-2">1.</span> Probability Background</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 What is expected:
@@ -249,8 +249,8 @@ We also assume that logarithms are base 2.
 </p>
 </div>
 </div>
-<div id="outline-container-org404bfb2" class="outline-2">
-<h2 id="org404bfb2"><span class="section-number-2">2.</span> Surprise</h2>
+<div id="outline-container-org3170241" class="outline-2">
+<h2 id="org3170241"><span class="section-number-2">2.</span> Surprise</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 The notion of surprise is intuitive but rigorous.
@@ -264,8 +264,8 @@ Claude Shannon (Father of Information Theory)
 We define a new function \( S \colon \mathcal{F} \to \mathbb{R} \) (called "surprise") based on the probabilities of events.
 </p>
 </div>
-<div id="outline-container-orge0b521c" class="outline-3">
-<h3 id="orge0b521c"><span class="section-number-3">2.1.</span> Functional Form of Surprise</h3>
+<div id="outline-container-orgdd77250" class="outline-3">
+<h3 id="orgdd77250"><span class="section-number-3">2.1.</span> Functional Form of Surprise</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>Certain Events are Unsurprising
@@ -279,8 +279,8 @@ We define a new function \( S \colon \mathcal{F} \to \mathbb{R} \) (called "surp
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf2ea27d" class="outline-3">
-<h3 id="orgf2ea27d"><span class="section-number-3">2.2.</span> Analytic Form of Surprise</h3>
+<div id="outline-container-org95bd04c" class="outline-3">
+<h3 id="org95bd04c"><span class="section-number-3">2.2.</span> Analytic Form of Surprise</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 \[ S(A) = - \log(\mathbb{P}(A)) \]
@@ -302,15 +302,15 @@ ax.set_xlabel<span style="color: #000000;">(</span><span style="color: #3548cf;"
 </div>
 
 
-<div id="orga42c9b0" class="figure">
+<div id="org3f584fb" class="figure">
 <p><img src="./.ob-jupyter/27087ce19c785e037ebc02239116d62762e76d2f.png" alt="27087ce19c785e037ebc02239116d62762e76d2f.png" />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org2620efc" class="outline-2">
-<h2 id="org2620efc"><span class="section-number-2">3.</span> Entropy</h2>
+<div id="outline-container-org5958fef" class="outline-2">
+<h2 id="org5958fef"><span class="section-number-2">3.</span> Entropy</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Entropy is the <b>expected surprise</b>
@@ -321,15 +321,15 @@ Entropy is the <b>expected surprise</b>
 </p>
 </div>
 </div>
-<div id="outline-container-orgfd04f2b" class="outline-2">
-<h2 id="orgfd04f2b"><span class="section-number-2">4.</span> Cross Entropy</h2>
+<div id="outline-container-org2222f44" class="outline-2">
+<h2 id="org2222f44"><span class="section-number-2">4.</span> Cross Entropy</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Now we start getting into a comparison of models.
 </p>
 </div>
-<div id="outline-container-orgdcc225f" class="outline-3">
-<h3 id="orgdcc225f"><span class="section-number-3">4.1.</span> Coin Flip Experiment</h3>
+<div id="outline-container-orgc9ee44d" class="outline-3">
+<h3 id="orgc9ee44d"><span class="section-number-3">4.1.</span> Coin Flip Experiment</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Suppose we are given a coin which we thought was fair, but was actually weighted.
@@ -365,16 +365,16 @@ If we had the "correct" belief, then the surprise would be really low
 </p>
 </div>
 </div>
-<div id="outline-container-org81e0ed5" class="outline-3">
-<h3 id="org81e0ed5"><span class="section-number-3">4.2.</span> Cross Entropy Definition</h3>
+<div id="outline-container-orga17f7b0" class="outline-3">
+<h3 id="orga17f7b0"><span class="section-number-3">4.2.</span> Cross Entropy Definition</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 We define cross entropy to be the average surprise one experiences for distribution \( p \) under belief \( q \).
 </p>
 </div>
 </div>
-<div id="outline-container-org2381f4e" class="outline-3">
-<h3 id="org2381f4e"><span class="section-number-3">4.3.</span> Cross Entropy Formula</h3>
+<div id="outline-container-orgbccee39" class="outline-3">
+<h3 id="orgbccee39"><span class="section-number-3">4.3.</span> Cross Entropy Formula</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Probabilities come from \( p_{X} \)
@@ -383,8 +383,8 @@ Surprises come from \( q_{X} \)
 </p>
 </div>
 </div>
-<div id="outline-container-orgbe19fac" class="outline-3">
-<h3 id="orgbe19fac"><span class="section-number-3">4.4.</span> Cross Entropy Properties</h3>
+<div id="outline-container-org6c6c721" class="outline-3">
+<h3 id="org6c6c721"><span class="section-number-3">4.4.</span> Cross Entropy Properties</h3>
 <div class="outline-text-3" id="text-4-4">
 <ol class="org-ol">
 <li>Cross Entropy is Larger than Entropy (Gibbs' Inequality)
@@ -401,15 +401,15 @@ Surprises come from \( q_{X} \)
 </div>
 </div>
 </div>
-<div id="outline-container-org11f7b63" class="outline-2">
-<h2 id="org11f7b63"><span class="section-number-2">5.</span> KL-Divergence</h2>
+<div id="outline-container-org0f67b6c" class="outline-2">
+<h2 id="org0f67b6c"><span class="section-number-2">5.</span> KL-Divergence</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Can we quantify and isolate the amount of surprise which comes from the choice of model?
 </p>
 </div>
-<div id="outline-container-org86b26c6" class="outline-3">
-<h3 id="org86b26c6"><span class="section-number-3">5.1.</span> KL Divergence Formula</h3>
+<div id="outline-container-org5699e22" class="outline-3">
+<h3 id="org5699e22"><span class="section-number-3">5.1.</span> KL Divergence Formula</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Kullback-Leibler (KL) Divergence is
@@ -423,8 +423,8 @@ D_{\text{KL}}(p \| q) &= \text{Cross-Entropy}(p,q) - \text{Entropy}(p) \\
 </div>
 </div>
 </div>
-<div id="outline-container-orga9c8d29" class="outline-2">
-<h2 id="orga9c8d29"><span class="section-number-2">6.</span> Adversarial Learning Problem</h2>
+<div id="outline-container-org27607e6" class="outline-2">
+<h2 id="org27607e6"><span class="section-number-2">6.</span> Adversarial Learning Problem</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <b>Given</b>: A set of data \( x \).
@@ -438,8 +438,8 @@ Let
 <li>\( G \colon \text{shape}(\text{hyperparameter}) \to \text{shape}(x) \)</li>
 </ul>
 </div>
-<div id="outline-container-org7b71072" class="outline-3">
-<h3 id="org7b71072"><span class="section-number-3">6.1.</span> Diagram</h3>
+<div id="outline-container-org18ceb0b" class="outline-3">
+<h3 id="org18ceb0b"><span class="section-number-3">6.1.</span> Diagram</h3>
 <div class="outline-text-3" id="text-6-1">
 \begin{align*}
 \begin{xy}
@@ -452,8 +452,8 @@ Let
 \end{align*}
 </div>
 </div>
-<div id="outline-container-org7e0b34c" class="outline-3">
-<h3 id="org7e0b34c"><span class="section-number-3">6.2.</span> Goal</h3>
+<div id="outline-container-org3abe995" class="outline-3">
+<h3 id="org3abe995"><span class="section-number-3">6.2.</span> Goal</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li>\( D \) wants to be a good classifier
@@ -474,8 +474,8 @@ We do note however, that during optimization, the entropy of the experiment is a
 </p>
 </div>
 </div>
-<div id="outline-container-org0fbad89" class="outline-3">
-<h3 id="org0fbad89"><span class="section-number-3">6.3.</span> Recall Cross Entropy</h3>
+<div id="outline-container-org45b13e1" class="outline-3">
+<h3 id="org45b13e1"><span class="section-number-3">6.3.</span> Recall Cross Entropy</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 We can get a nicer form of cross entropy in this binary classification case.
@@ -507,8 +507,8 @@ In other words, \( \mathbb{P}(y = 1) = y \).
 </p>
 </div>
 </div>
-<div id="outline-container-org96465e9" class="outline-3">
-<h3 id="org96465e9"><span class="section-number-3">6.4.</span> Substitution</h3>
+<div id="outline-container-org330f1ac" class="outline-3">
+<h3 id="org330f1ac"><span class="section-number-3">6.4.</span> Substitution</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 The structure of the input data changes depending on the output.
@@ -552,8 +552,8 @@ The structure of the input data changes depending on the output.
 </div>
 </div>
 </div>
-<div id="outline-container-orga6a62c6" class="outline-2">
-<h2 id="orga6a62c6"><span class="section-number-2">7.</span> Optimal Discriminator</h2>
+<div id="outline-container-orga11a8ae" class="outline-2">
+<h2 id="orga11a8ae"><span class="section-number-2">7.</span> Optimal Discriminator</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Let us first deal with
@@ -614,8 +614,8 @@ By substituting the our variables we see that,
 </p>
 </div>
 </div>
-<div id="outline-container-orga588f65" class="outline-2">
-<h2 id="orga588f65"><span class="section-number-2">8.</span> Optimal Generator</h2>
+<div id="outline-container-orga52dc23" class="outline-2">
+<h2 id="orga52dc23"><span class="section-number-2">8.</span> Optimal Generator</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 By substituting the optimal discriminator into the minimax game we get the following formula

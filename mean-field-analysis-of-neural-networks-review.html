@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:18 -->
+<!-- 2024-10-03 Thu 14:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mean Field Analysis of Neural Networks Review</title>
@@ -219,28 +219,28 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Mean Field Analysis of Neural Networks Review</h1>
-<div id="outline-container-org2954da6" class="outline-2">
-<h2 id="org2954da6"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> List</h2>
+<div id="outline-container-org8d7a81e" class="outline-2">
+<h2 id="org8d7a81e"><span class="section-number-2">1.</span> <span class="todo TODO">TODO</span> List</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgf235879" class="outline-3">
-<h3 id="orgf235879"><span class="section-number-3">1.1.</span> Plot Model Performance Training and Test Loss as a function of SGD iterations</h3>
+<div id="outline-container-org839f553" class="outline-3">
+<h3 id="org839f553"><span class="section-number-3">1.1.</span> Plot Model Performance Training and Test Loss as a function of SGD iterations</h3>
 </div>
 
-<div id="outline-container-org22f6aa8" class="outline-3">
-<h3 id="org22f6aa8"><span class="section-number-3">1.2.</span> Plot Model Performance with same SGD iteration but as a function of neurons</h3>
+<div id="outline-container-org6ec9f4c" class="outline-3">
+<h3 id="org6ec9f4c"><span class="section-number-3">1.2.</span> Plot Model Performance with same SGD iteration but as a function of neurons</h3>
 </div>
 
-<div id="outline-container-org9db0fe8" class="outline-3">
-<h3 id="org9db0fe8"><span class="section-number-3">1.3.</span> Plot Histogram of Model weights</h3>
+<div id="outline-container-org2d588d7" class="outline-3">
+<h3 id="org2d588d7"><span class="section-number-3">1.3.</span> Plot Histogram of Model weights</h3>
 </div>
 
-<div id="outline-container-org5d18c3b" class="outline-3">
-<h3 id="org5d18c3b"><span class="section-number-3">1.4.</span> Read about different Scalings</h3>
+<div id="outline-container-orgda59bda" class="outline-3">
+<h3 id="orgda59bda"><span class="section-number-3">1.4.</span> Read about different Scalings</h3>
 </div>
 </div>
-<div id="outline-container-org6e44983" class="outline-2">
-<h2 id="org6e44983"><span class="section-number-2">2.</span> Intuition / Motivation of Problem</h2>
+<div id="outline-container-org8fee8f5" class="outline-2">
+<h2 id="org8fee8f5"><span class="section-number-2">2.</span> Intuition / Motivation of Problem</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> torch
@@ -323,12 +323,12 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </pre>
 </div>
 </div>
-<div id="outline-container-orgb0dd77a" class="outline-3">
-<h3 id="orgb0dd77a"><span class="section-number-3">2.1.</span> 3 Layer 128 Neurons</h3>
+<div id="outline-container-orgbd7b5fe" class="outline-3">
+<h3 id="orgbd7b5fe"><span class="section-number-3">2.1.</span> 3 Layer 128 Neurons</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgbdb91f1" class="outline-4">
-<h4 id="orgbdb91f1"><span class="section-number-4">2.1.1.</span> <span class="done DONE">DONE</span> Initialization 1</h4>
+<div id="outline-container-orga621254" class="outline-4">
+<h4 id="orga621254"><span class="section-number-4">2.1.1.</span> <span class="done DONE">DONE</span> Initialization 1</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> torch
@@ -407,7 +407,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgdbc0c5e" class="figure">
+<div id="org0679de3" class="figure">
 <p><img src="./.ob-jupyter/565c69171a4714fc85d14e668cd0ae78fa2950b6.png" alt="565c69171a4714fc85d14e668cd0ae78fa2950b6.png" />
 </p>
 </div>
@@ -416,7 +416,7 @@ Epoch 1, Loss: 2.3078696727752686
 </pre>
 
 
-<div id="org0ca3b94" class="figure">
+<div id="org5b5d753" class="figure">
 <p><img src="./.ob-jupyter/caf203d0d51b5aca48269cea807e2b019deff0d8.png" alt="caf203d0d51b5aca48269cea807e2b019deff0d8.png" />
 </p>
 </div>
@@ -425,7 +425,7 @@ Epoch 2, Loss: 2.291422128677368
 </pre>
 
 
-<div id="orgb5e9f4b" class="figure">
+<div id="org7f501f1" class="figure">
 <p><img src="./.ob-jupyter/bd83c69110000eb06125c329fca67748b29f52c8.png" alt="bd83c69110000eb06125c329fca67748b29f52c8.png" />
 </p>
 </div>
@@ -434,7 +434,7 @@ Epoch 3, Loss: 2.300224542617798
 </pre>
 
 
-<div id="org048fb54" class="figure">
+<div id="org35315d3" class="figure">
 <p><img src="./.ob-jupyter/27630ad3b824246960bd37edfbe938d8b7ffd717.png" alt="27630ad3b824246960bd37edfbe938d8b7ffd717.png" />
 </p>
 </div>
@@ -443,7 +443,7 @@ Epoch 4, Loss: 2.285484790802002
 </pre>
 
 
-<div id="orgc8851db" class="figure">
+<div id="orga217366" class="figure">
 <p><img src="./.ob-jupyter/4f3d0bbaf549d3a28cd03820750ea5c8c856633d.png" alt="4f3d0bbaf549d3a28cd03820750ea5c8c856633d.png" />
 </p>
 </div>
@@ -452,7 +452,7 @@ Epoch 5, Loss: 2.2888987064361572
 </pre>
 
 
-<div id="org4746d16" class="figure">
+<div id="org3e92edb" class="figure">
 <p><img src="./.ob-jupyter/44c4de5b3edbff93c0724692ab781b0ffaa022da.png" alt="44c4de5b3edbff93c0724692ab781b0ffaa022da.png" />
 </p>
 </div>
@@ -461,7 +461,7 @@ Epoch 6, Loss: 2.283215284347534
 </pre>
 
 
-<div id="orgbe749de" class="figure">
+<div id="orgc97626f" class="figure">
 <p><img src="./.ob-jupyter/216fe71d3cf95bfbdedc3aba66f8903709a0b756.png" alt="216fe71d3cf95bfbdedc3aba66f8903709a0b756.png" />
 </p>
 </div>
@@ -470,7 +470,7 @@ Epoch 7, Loss: 2.2855021953582764
 </pre>
 
 
-<div id="org48ef268" class="figure">
+<div id="org572f2a9" class="figure">
 <p><img src="./.ob-jupyter/c988977d7f1d9695ff692ef6210589d3875b7c04.png" alt="c988977d7f1d9695ff692ef6210589d3875b7c04.png" />
 </p>
 </div>
@@ -479,7 +479,7 @@ Epoch 8, Loss: 2.276198625564575
 </pre>
 
 
-<div id="org7c21a95" class="figure">
+<div id="org560608e" class="figure">
 <p><img src="./.ob-jupyter/f0994372cbc0f108889137c0b5804142ca5830f9.png" alt="f0994372cbc0f108889137c0b5804142ca5830f9.png" />
 </p>
 </div>
@@ -488,7 +488,7 @@ Epoch 9, Loss: 2.2443416118621826
 </pre>
 
 
-<div id="org33824e0" class="figure">
+<div id="org990e04f" class="figure">
 <p><img src="./.ob-jupyter/92bb9009e46c9bd55619d94078a764d724f0e11d.png" alt="92bb9009e46c9bd55619d94078a764d724f0e11d.png" />
 </p>
 </div>
@@ -497,7 +497,7 @@ Epoch 10, Loss: 2.1926913261413574
 </pre>
 
 
-<div id="org8cab684" class="figure">
+<div id="orgba9f903" class="figure">
 <p><img src="./.ob-jupyter/1d80f9d4f4be555c54b8d555a8325359f6795dbe.png" alt="1d80f9d4f4be555c54b8d555a8325359f6795dbe.png" />
 </p>
 </div>
@@ -506,7 +506,7 @@ Epoch 11, Loss: 2.040389060974121
 </pre>
 
 
-<div id="org40e37e8" class="figure">
+<div id="org21f48b6" class="figure">
 <p><img src="./.ob-jupyter/e3b33d9a94e1548acf14d110a77afa1ce108c748.png" alt="e3b33d9a94e1548acf14d110a77afa1ce108c748.png" />
 </p>
 </div>
@@ -515,7 +515,7 @@ Epoch 12, Loss: 1.7373534440994263
 </pre>
 
 
-<div id="org9018fc8" class="figure">
+<div id="org01d12b6" class="figure">
 <p><img src="./.ob-jupyter/e55125989d93219feeb3c131457debece68942c0.png" alt="e55125989d93219feeb3c131457debece68942c0.png" />
 </p>
 </div>
@@ -524,7 +524,7 @@ Epoch 13, Loss: 1.5835962295532227
 </pre>
 
 
-<div id="org8ac3979" class="figure">
+<div id="org1294ac7" class="figure">
 <p><img src="./.ob-jupyter/c35fc8e0b415fc6abc8d281452cb7ad9587be122.png" alt="c35fc8e0b415fc6abc8d281452cb7ad9587be122.png" />
 </p>
 </div>
@@ -533,7 +533,7 @@ Epoch 14, Loss: 1.2558506727218628
 </pre>
 
 
-<div id="org31ab0f6" class="figure">
+<div id="orgd7c4a16" class="figure">
 <p><img src="./.ob-jupyter/e601bfd61a08589a6efa5286fb2f6384ee2edd90.png" alt="e601bfd61a08589a6efa5286fb2f6384ee2edd90.png" />
 </p>
 </div>
@@ -542,7 +542,7 @@ Epoch 15, Loss: 1.0134446620941162
 </pre>
 
 
-<div id="org2483f3a" class="figure">
+<div id="org62ee08e" class="figure">
 <p><img src="./.ob-jupyter/f7e4e4be2d5a76c5043636c92ebf3fc03ca9efd0.png" alt="f7e4e4be2d5a76c5043636c92ebf3fc03ca9efd0.png" />
 </p>
 </div>
@@ -551,7 +551,7 @@ Epoch 16, Loss: 0.9287149310112
 </pre>
 
 
-<div id="orgbc954a3" class="figure">
+<div id="org1b0a8c7" class="figure">
 <p><img src="./.ob-jupyter/293227ccb7d2da452e720fc540ddd2ca8ccbf3ab.png" alt="293227ccb7d2da452e720fc540ddd2ca8ccbf3ab.png" />
 </p>
 </div>
@@ -560,7 +560,7 @@ Epoch 17, Loss: 0.9402747750282288
 </pre>
 
 
-<div id="org37f7962" class="figure">
+<div id="orgfa6ecae" class="figure">
 <p><img src="./.ob-jupyter/61f9e8d152906e9a1d4b59688b8f7e38555e85e6.png" alt="61f9e8d152906e9a1d4b59688b8f7e38555e85e6.png" />
 </p>
 </div>
@@ -569,7 +569,7 @@ Epoch 18, Loss: 0.754228413105011
 </pre>
 
 
-<div id="org4559ddd" class="figure">
+<div id="org7806064" class="figure">
 <p><img src="./.ob-jupyter/64cc8c8272c7751881397151c58d3c677b2bc51b.png" alt="64cc8c8272c7751881397151c58d3c677b2bc51b.png" />
 </p>
 </div>
@@ -578,7 +578,7 @@ Epoch 19, Loss: 0.6900477409362793
 </pre>
 
 
-<div id="orge49ee0a" class="figure">
+<div id="orgd6dbce7" class="figure">
 <p><img src="./.ob-jupyter/9079fb9437b98ee20f2050e214da7ae8f33a67b4.png" alt="9079fb9437b98ee20f2050e214da7ae8f33a67b4.png" />
 </p>
 </div>
@@ -587,7 +587,7 @@ Epoch 20, Loss: 0.6121166348457336
 </pre>
 
 
-<div id="org7bf1d62" class="figure">
+<div id="orgcadd1be" class="figure">
 <p><img src="./.ob-jupyter/988e116b0bad28bdef1959bb509d281ef3ba4044.png" alt="988e116b0bad28bdef1959bb509d281ef3ba4044.png" />
 </p>
 </div>
@@ -596,7 +596,7 @@ Epoch 21, Loss: 0.8453538417816162
 </pre>
 
 
-<div id="org540ea70" class="figure">
+<div id="org066b0bf" class="figure">
 <p><img src="./.ob-jupyter/f4257453fae2d3336917778af7e86768fe8bcd33.png" alt="f4257453fae2d3336917778af7e86768fe8bcd33.png" />
 </p>
 </div>
@@ -605,7 +605,7 @@ Epoch 22, Loss: 0.4835546910762787
 </pre>
 
 
-<div id="org478b975" class="figure">
+<div id="orgd9dd186" class="figure">
 <p><img src="./.ob-jupyter/8d1b18c41e95c105fa1ab9cd03c4cfb40f043a31.png" alt="8d1b18c41e95c105fa1ab9cd03c4cfb40f043a31.png" />
 </p>
 </div>
@@ -614,7 +614,7 @@ Epoch 23, Loss: 0.47057580947875977
 </pre>
 
 
-<div id="org64917e5" class="figure">
+<div id="orge648ebd" class="figure">
 <p><img src="./.ob-jupyter/5a480fca7bbb205758f766959638dd387149aa20.png" alt="5a480fca7bbb205758f766959638dd387149aa20.png" />
 </p>
 </div>
@@ -623,7 +623,7 @@ Epoch 24, Loss: 0.5682224631309509
 </pre>
 
 
-<div id="orge758667" class="figure">
+<div id="org194cc7c" class="figure">
 <p><img src="./.ob-jupyter/a110566affe74bb99d8f84ff1f48f604ec9ab73b.png" alt="a110566affe74bb99d8f84ff1f48f604ec9ab73b.png" />
 </p>
 </div>
@@ -632,7 +632,7 @@ Epoch 25, Loss: 0.36390092968940735
 </pre>
 
 
-<div id="orgdc04082" class="figure">
+<div id="orgb4fd2be" class="figure">
 <p><img src="./.ob-jupyter/5dec4cbc57a2b6bb5c5ea2a1ab466486cb9b8b4f.png" alt="5dec4cbc57a2b6bb5c5ea2a1ab466486cb9b8b4f.png" />
 </p>
 </div>
@@ -641,7 +641,7 @@ Epoch 26, Loss: 0.4967745542526245
 </pre>
 
 
-<div id="org76feb29" class="figure">
+<div id="org8433775" class="figure">
 <p><img src="./.ob-jupyter/05ce988665811dea88641ecd69d597f7366d55b7.png" alt="05ce988665811dea88641ecd69d597f7366d55b7.png" />
 </p>
 </div>
@@ -650,7 +650,7 @@ Epoch 27, Loss: 0.34841158986091614
 </pre>
 
 
-<div id="org3457614" class="figure">
+<div id="orgd5886c6" class="figure">
 <p><img src="./.ob-jupyter/ac9637566cee1db66bae9e531abee5b7adf926a4.png" alt="ac9637566cee1db66bae9e531abee5b7adf926a4.png" />
 </p>
 </div>
@@ -659,7 +659,7 @@ Epoch 28, Loss: 0.3732123076915741
 </pre>
 
 
-<div id="org385a92d" class="figure">
+<div id="orgae68f68" class="figure">
 <p><img src="./.ob-jupyter/f3ff3719c88768851c6fd1903b9a7e9db9f65b24.png" alt="f3ff3719c88768851c6fd1903b9a7e9db9f65b24.png" />
 </p>
 </div>
@@ -668,7 +668,7 @@ Epoch 29, Loss: 0.38130906224250793
 </pre>
 
 
-<div id="org70515f3" class="figure">
+<div id="org62c00a2" class="figure">
 <p><img src="./.ob-jupyter/048c2940eda5d2e9ed71cc95b241e09995379991.png" alt="048c2940eda5d2e9ed71cc95b241e09995379991.png" />
 </p>
 </div>
@@ -677,7 +677,7 @@ Epoch 30, Loss: 0.354348748922348
 </pre>
 
 
-<div id="org7dbefeb" class="figure">
+<div id="orga990a1c" class="figure">
 <p><img src="./.ob-jupyter/d756ec83f900360b7046709d0b9737b2484488a0.png" alt="d756ec83f900360b7046709d0b9737b2484488a0.png" />
 </p>
 </div>
@@ -686,7 +686,7 @@ Epoch 31, Loss: 0.3233436644077301
 </pre>
 
 
-<div id="org65e4482" class="figure">
+<div id="org3879020" class="figure">
 <p><img src="./.ob-jupyter/a799205954fb592a6de9dfc67b63b4b82cd0d051.png" alt="a799205954fb592a6de9dfc67b63b4b82cd0d051.png" />
 </p>
 </div>
@@ -695,7 +695,7 @@ Epoch 32, Loss: 0.3101452887058258
 </pre>
 
 
-<div id="org975d066" class="figure">
+<div id="orgffd1681" class="figure">
 <p><img src="./.ob-jupyter/f9faf99a236375bba17706c4abeeef868d0b45a7.png" alt="f9faf99a236375bba17706c4abeeef868d0b45a7.png" />
 </p>
 </div>
@@ -704,7 +704,7 @@ Epoch 33, Loss: 0.29405736923217773
 </pre>
 
 
-<div id="org272b757" class="figure">
+<div id="orgf5ff97e" class="figure">
 <p><img src="./.ob-jupyter/906ae8c4ef61d522ace4c9e4043d9aec2ff2cfb2.png" alt="906ae8c4ef61d522ace4c9e4043d9aec2ff2cfb2.png" />
 </p>
 </div>
@@ -713,7 +713,7 @@ Epoch 34, Loss: 0.3791450262069702
 </pre>
 
 
-<div id="org4edbdb6" class="figure">
+<div id="orgf8d25dc" class="figure">
 <p><img src="./.ob-jupyter/7d7d1b104fb186e1b15b68b017ced43f2a8f1206.png" alt="7d7d1b104fb186e1b15b68b017ced43f2a8f1206.png" />
 </p>
 </div>
@@ -722,7 +722,7 @@ Epoch 35, Loss: 0.33774372935295105
 </pre>
 
 
-<div id="org4306976" class="figure">
+<div id="org07781e9" class="figure">
 <p><img src="./.ob-jupyter/243e0f4aaa03943849f8de43c1c47182d558b639.png" alt="243e0f4aaa03943849f8de43c1c47182d558b639.png" />
 </p>
 </div>
@@ -731,7 +731,7 @@ Epoch 36, Loss: 0.39602819085121155
 </pre>
 
 
-<div id="org2902453" class="figure">
+<div id="orgdd5078a" class="figure">
 <p><img src="./.ob-jupyter/49fcf168e9d4e684ccfbbb12a9c4a327bc3a401a.png" alt="49fcf168e9d4e684ccfbbb12a9c4a327bc3a401a.png" />
 </p>
 </div>
@@ -740,7 +740,7 @@ Epoch 37, Loss: 0.5321682095527649
 </pre>
 
 
-<div id="org074692c" class="figure">
+<div id="org25d61f5" class="figure">
 <p><img src="./.ob-jupyter/f915a2c272154e65056724706e182b6df1a36e0f.png" alt="f915a2c272154e65056724706e182b6df1a36e0f.png" />
 </p>
 </div>
@@ -749,7 +749,7 @@ Epoch 38, Loss: 0.24547946453094482
 </pre>
 
 
-<div id="org15c4dbf" class="figure">
+<div id="orgfc8dcbe" class="figure">
 <p><img src="./.ob-jupyter/1d7d09540784d8fc027ba06ddd4c4faf26ba891e.png" alt="1d7d09540784d8fc027ba06ddd4c4faf26ba891e.png" />
 </p>
 </div>
@@ -758,7 +758,7 @@ Epoch 39, Loss: 0.39200475811958313
 </pre>
 
 
-<div id="org9c52da8" class="figure">
+<div id="org8081d74" class="figure">
 <p><img src="./.ob-jupyter/0004bb6cfa1f84ff488000d0fec52f69093f3fc3.png" alt="0004bb6cfa1f84ff488000d0fec52f69093f3fc3.png" />
 </p>
 </div>
@@ -767,7 +767,7 @@ Epoch 40, Loss: 0.47377943992614746
 </pre>
 
 
-<div id="org7a3b9c4" class="figure">
+<div id="org42c0bf8" class="figure">
 <p><img src="./.ob-jupyter/7fd02502b93699b0a2ccc390a7423f1e6675c8c9.png" alt="7fd02502b93699b0a2ccc390a7423f1e6675c8c9.png" />
 </p>
 </div>
@@ -776,7 +776,7 @@ Epoch 41, Loss: 0.5222976207733154
 </pre>
 
 
-<div id="org341fa20" class="figure">
+<div id="org77a7633" class="figure">
 <p><img src="./.ob-jupyter/c08c1a89ea3656b7e6de5b92a1f3faa03b9e9ce9.png" alt="c08c1a89ea3656b7e6de5b92a1f3faa03b9e9ce9.png" />
 </p>
 </div>
@@ -785,7 +785,7 @@ Epoch 42, Loss: 0.22054296731948853
 </pre>
 
 
-<div id="orgf5ecbf4" class="figure">
+<div id="org0f1a1bc" class="figure">
 <p><img src="./.ob-jupyter/e5d7746dd42ceee2132351a8a507286c5fb5bb43.png" alt="e5d7746dd42ceee2132351a8a507286c5fb5bb43.png" />
 </p>
 </div>
@@ -794,7 +794,7 @@ Epoch 43, Loss: 0.4093993008136749
 </pre>
 
 
-<div id="org07dcd53" class="figure">
+<div id="org4d5f761" class="figure">
 <p><img src="./.ob-jupyter/abd746c2b2480e50a95e789fe1e8072ef66f78fd.png" alt="abd746c2b2480e50a95e789fe1e8072ef66f78fd.png" />
 </p>
 </div>
@@ -803,7 +803,7 @@ Epoch 44, Loss: 0.2442048341035843
 </pre>
 
 
-<div id="org0e6c310" class="figure">
+<div id="orge761978" class="figure">
 <p><img src="./.ob-jupyter/f4a3cd702f058ba6b4c69dc5337bffdfad544de1.png" alt="f4a3cd702f058ba6b4c69dc5337bffdfad544de1.png" />
 </p>
 </div>
@@ -812,7 +812,7 @@ Epoch 45, Loss: 0.2746380865573883
 </pre>
 
 
-<div id="orgb7904a8" class="figure">
+<div id="org29609f2" class="figure">
 <p><img src="./.ob-jupyter/648ee281826382a767c5200130bfa55982f378b6.png" alt="648ee281826382a767c5200130bfa55982f378b6.png" />
 </p>
 </div>
@@ -821,7 +821,7 @@ Epoch 46, Loss: 0.3785521984100342
 </pre>
 
 
-<div id="orgc3f0482" class="figure">
+<div id="orgb559599" class="figure">
 <p><img src="./.ob-jupyter/b36d27c24309702134464d628d703f87c0f35a32.png" alt="b36d27c24309702134464d628d703f87c0f35a32.png" />
 </p>
 </div>
@@ -830,7 +830,7 @@ Epoch 47, Loss: 0.27123016119003296
 </pre>
 
 
-<div id="org0866fc5" class="figure">
+<div id="orgd7ddcee" class="figure">
 <p><img src="./.ob-jupyter/31b0312a0b2e1abd1446e6dec065c7197b5e0afc.png" alt="31b0312a0b2e1abd1446e6dec065c7197b5e0afc.png" />
 </p>
 </div>
@@ -839,7 +839,7 @@ Epoch 48, Loss: 0.14650079607963562
 </pre>
 
 
-<div id="orgb3652c6" class="figure">
+<div id="org9f24f11" class="figure">
 <p><img src="./.ob-jupyter/242f1cb4fc2a83aa61fe3fbfe37e8a2e8c3fcc1d.png" alt="242f1cb4fc2a83aa61fe3fbfe37e8a2e8c3fcc1d.png" />
 </p>
 </div>
@@ -848,7 +848,7 @@ Epoch 49, Loss: 0.13213397562503815
 </pre>
 
 
-<div id="org701338e" class="figure">
+<div id="org2c9b899" class="figure">
 <p><img src="./.ob-jupyter/67f07356f753e13be30a5033d23d5ebf03536b0a.png" alt="67f07356f753e13be30a5033d23d5ebf03536b0a.png" />
 </p>
 </div>
@@ -857,7 +857,7 @@ Epoch 50, Loss: 0.22143115103244781
 </pre>
 
 
-<div id="org766ef7f" class="figure">
+<div id="org65392c8" class="figure">
 <p><img src="./.ob-jupyter/408ddbd0fab66b7e1ec3c34b0837f4d377eae8fa.png" alt="408ddbd0fab66b7e1ec3c34b0837f4d377eae8fa.png" />
 </p>
 </div>
@@ -866,7 +866,7 @@ Epoch 51, Loss: 0.17998461425304413
 </pre>
 
 
-<div id="org95ef19c" class="figure">
+<div id="org76c3468" class="figure">
 <p><img src="./.ob-jupyter/437020e7ce4566ffd4acbfce5b9fe84811227f43.png" alt="437020e7ce4566ffd4acbfce5b9fe84811227f43.png" />
 </p>
 </div>
@@ -875,7 +875,7 @@ Epoch 52, Loss: 0.15385738015174866
 </pre>
 
 
-<div id="orgba3fc0e" class="figure">
+<div id="org745fa44" class="figure">
 <p><img src="./.ob-jupyter/401e1d5da36dde606db46033122908b23eb55a37.png" alt="401e1d5da36dde606db46033122908b23eb55a37.png" />
 </p>
 </div>
@@ -884,7 +884,7 @@ Epoch 53, Loss: 0.23202376067638397
 </pre>
 
 
-<div id="org18fa2ae" class="figure">
+<div id="org7d24eeb" class="figure">
 <p><img src="./.ob-jupyter/d1428f77182b7a8e3c32dff8624962fafa959190.png" alt="d1428f77182b7a8e3c32dff8624962fafa959190.png" />
 </p>
 </div>
@@ -893,7 +893,7 @@ Epoch 54, Loss: 0.1866399049758911
 </pre>
 
 
-<div id="org13e7b21" class="figure">
+<div id="org429293d" class="figure">
 <p><img src="./.ob-jupyter/6fa45fa2f14d82a33aee5a98d7afb9d2760cda1a.png" alt="6fa45fa2f14d82a33aee5a98d7afb9d2760cda1a.png" />
 </p>
 </div>
@@ -902,7 +902,7 @@ Epoch 55, Loss: 0.2170058935880661
 </pre>
 
 
-<div id="orgaeedde6" class="figure">
+<div id="orgacd4f46" class="figure">
 <p><img src="./.ob-jupyter/4ab99dc84d384d8688f4d113229b240d8381e0a9.png" alt="4ab99dc84d384d8688f4d113229b240d8381e0a9.png" />
 </p>
 </div>
@@ -911,7 +911,7 @@ Epoch 56, Loss: 0.12580864131450653
 </pre>
 
 
-<div id="orgfce5818" class="figure">
+<div id="org48b02e2" class="figure">
 <p><img src="./.ob-jupyter/7a0bcefb8bcc9c19452e61d11304072365295f95.png" alt="7a0bcefb8bcc9c19452e61d11304072365295f95.png" />
 </p>
 </div>
@@ -920,7 +920,7 @@ Epoch 57, Loss: 0.22474472224712372
 </pre>
 
 
-<div id="org284ec76" class="figure">
+<div id="org4f27102" class="figure">
 <p><img src="./.ob-jupyter/3cdde024177784e5f70a8af6dff028d3dc16442e.png" alt="3cdde024177784e5f70a8af6dff028d3dc16442e.png" />
 </p>
 </div>
@@ -929,7 +929,7 @@ Epoch 58, Loss: 0.11792764812707901
 </pre>
 
 
-<div id="org7299b76" class="figure">
+<div id="org949211b" class="figure">
 <p><img src="./.ob-jupyter/d9ea5f47811421d62fb333c8af21e9eb458684d6.png" alt="d9ea5f47811421d62fb333c8af21e9eb458684d6.png" />
 </p>
 </div>
@@ -938,7 +938,7 @@ Epoch 59, Loss: 0.10734958201646805
 </pre>
 
 
-<div id="orgab35a04" class="figure">
+<div id="org20ef8f3" class="figure">
 <p><img src="./.ob-jupyter/ab681a55a26c21ff0acfc10dea2a4eed4a6e354c.png" alt="ab681a55a26c21ff0acfc10dea2a4eed4a6e354c.png" />
 </p>
 </div>
@@ -947,7 +947,7 @@ Epoch 60, Loss: 0.11728920787572861
 </pre>
 
 
-<div id="orgcd49bea" class="figure">
+<div id="org075cc21" class="figure">
 <p><img src="./.ob-jupyter/a18b619432fbf7915a99da438c6c49bcd441946d.png" alt="a18b619432fbf7915a99da438c6c49bcd441946d.png" />
 </p>
 </div>
@@ -956,7 +956,7 @@ Epoch 61, Loss: 0.1717362403869629
 </pre>
 
 
-<div id="org4dfc929" class="figure">
+<div id="org6dc15cb" class="figure">
 <p><img src="./.ob-jupyter/090bbb73ede2d1f4381f477111d7e3f07f62480c.png" alt="090bbb73ede2d1f4381f477111d7e3f07f62480c.png" />
 </p>
 </div>
@@ -965,7 +965,7 @@ Epoch 62, Loss: 0.28059032559394836
 </pre>
 
 
-<div id="org79914d3" class="figure">
+<div id="orge9ad72d" class="figure">
 <p><img src="./.ob-jupyter/c25649791e564a7cdaf32b0266e81d4c08b5d415.png" alt="c25649791e564a7cdaf32b0266e81d4c08b5d415.png" />
 </p>
 </div>
@@ -974,7 +974,7 @@ Epoch 63, Loss: 0.14648835361003876
 </pre>
 
 
-<div id="org434450f" class="figure">
+<div id="org32594ff" class="figure">
 <p><img src="./.ob-jupyter/48b91b2a3d39464f936ac854a519361042670fa4.png" alt="48b91b2a3d39464f936ac854a519361042670fa4.png" />
 </p>
 </div>
@@ -983,7 +983,7 @@ Epoch 64, Loss: 0.4252641201019287
 </pre>
 
 
-<div id="org6ddd843" class="figure">
+<div id="orgc7a856a" class="figure">
 <p><img src="./.ob-jupyter/4ab7eb9b011d5962fbc37f9db5bb43a4dea0aa1e.png" alt="4ab7eb9b011d5962fbc37f9db5bb43a4dea0aa1e.png" />
 </p>
 </div>
@@ -992,7 +992,7 @@ Epoch 65, Loss: 0.11454359441995621
 </pre>
 
 
-<div id="org15b7cc3" class="figure">
+<div id="orgd8d6926" class="figure">
 <p><img src="./.ob-jupyter/aa0841ccca7af5cc4daa7e99c3125193b0272559.png" alt="aa0841ccca7af5cc4daa7e99c3125193b0272559.png" />
 </p>
 </div>
@@ -1001,7 +1001,7 @@ Epoch 66, Loss: 0.30044999718666077
 </pre>
 
 
-<div id="orge7e4b47" class="figure">
+<div id="org7ff0426" class="figure">
 <p><img src="./.ob-jupyter/3debd1627c35e5b25466f662487beef7bb744dfa.png" alt="3debd1627c35e5b25466f662487beef7bb744dfa.png" />
 </p>
 </div>
@@ -1010,7 +1010,7 @@ Epoch 67, Loss: 0.20920330286026
 </pre>
 
 
-<div id="org2202669" class="figure">
+<div id="orgcfce310" class="figure">
 <p><img src="./.ob-jupyter/23f9a28bd051a80614744fae752239722509d76b.png" alt="23f9a28bd051a80614744fae752239722509d76b.png" />
 </p>
 </div>
@@ -1019,7 +1019,7 @@ Epoch 68, Loss: 0.09689810872077942
 </pre>
 
 
-<div id="org369fd25" class="figure">
+<div id="orgca7511e" class="figure">
 <p><img src="./.ob-jupyter/9c80fc036bdb66af3eec825651aeba0c8b5ce732.png" alt="9c80fc036bdb66af3eec825651aeba0c8b5ce732.png" />
 </p>
 </div>
@@ -1028,7 +1028,7 @@ Epoch 69, Loss: 0.21189147233963013
 </pre>
 
 
-<div id="org6815ada" class="figure">
+<div id="org8d42c05" class="figure">
 <p><img src="./.ob-jupyter/3c89ca71f5dc4ff912219549637d5d7126f4b879.png" alt="3c89ca71f5dc4ff912219549637d5d7126f4b879.png" />
 </p>
 </div>
@@ -1037,7 +1037,7 @@ Epoch 70, Loss: 0.12376383692026138
 </pre>
 
 
-<div id="orgd3600b5" class="figure">
+<div id="orgb4f37de" class="figure">
 <p><img src="./.ob-jupyter/423eb25fe8e5aa2efbb3dcbf36954807277a1d88.png" alt="423eb25fe8e5aa2efbb3dcbf36954807277a1d88.png" />
 </p>
 </div>
@@ -1046,7 +1046,7 @@ Epoch 71, Loss: 0.10320442169904709
 </pre>
 
 
-<div id="org0b63a76" class="figure">
+<div id="org831a7e4" class="figure">
 <p><img src="./.ob-jupyter/295ea3da78c91d31405f28653ae22fab0dcada93.png" alt="295ea3da78c91d31405f28653ae22fab0dcada93.png" />
 </p>
 </div>
@@ -1055,7 +1055,7 @@ Epoch 72, Loss: 0.1560615450143814
 </pre>
 
 
-<div id="orgd8a96be" class="figure">
+<div id="org774738a" class="figure">
 <p><img src="./.ob-jupyter/07c95b03c7bdf88ffe7a6dddb411d9f1862ad791.png" alt="07c95b03c7bdf88ffe7a6dddb411d9f1862ad791.png" />
 </p>
 </div>
@@ -1064,7 +1064,7 @@ Epoch 73, Loss: 0.11476748436689377
 </pre>
 
 
-<div id="org185ba5e" class="figure">
+<div id="org3f6f81a" class="figure">
 <p><img src="./.ob-jupyter/47baa1ff59e01c244ea4ba866ed89e6454951285.png" alt="47baa1ff59e01c244ea4ba866ed89e6454951285.png" />
 </p>
 </div>
@@ -1073,7 +1073,7 @@ Epoch 74, Loss: 0.1459258794784546
 </pre>
 
 
-<div id="orge80afa4" class="figure">
+<div id="org24a68cf" class="figure">
 <p><img src="./.ob-jupyter/676eb6bc77b33650d9c347fd98631896860b8eba.png" alt="676eb6bc77b33650d9c347fd98631896860b8eba.png" />
 </p>
 </div>
@@ -1082,7 +1082,7 @@ Epoch 75, Loss: 0.1488148421049118
 </pre>
 
 
-<div id="org83296e6" class="figure">
+<div id="org39f8e09" class="figure">
 <p><img src="./.ob-jupyter/bb9b82abbc06bae1159d073fbb792dacb75710e4.png" alt="bb9b82abbc06bae1159d073fbb792dacb75710e4.png" />
 </p>
 </div>
@@ -1091,7 +1091,7 @@ Epoch 76, Loss: 0.1751343160867691
 </pre>
 
 
-<div id="orga6013a5" class="figure">
+<div id="orgd6bb3f4" class="figure">
 <p><img src="./.ob-jupyter/3211366998fa45cab9365678a28d2117d265b7c0.png" alt="3211366998fa45cab9365678a28d2117d265b7c0.png" />
 </p>
 </div>
@@ -1100,7 +1100,7 @@ Epoch 77, Loss: 0.10351305454969406
 </pre>
 
 
-<div id="org146cf91" class="figure">
+<div id="orgd4d551d" class="figure">
 <p><img src="./.ob-jupyter/5dd3a896039604e315513dd81b505e69c903ddd3.png" alt="5dd3a896039604e315513dd81b505e69c903ddd3.png" />
 </p>
 </div>
@@ -1109,7 +1109,7 @@ Epoch 78, Loss: 0.13436515629291534
 </pre>
 
 
-<div id="org0d9c372" class="figure">
+<div id="org75b3a9d" class="figure">
 <p><img src="./.ob-jupyter/7b07b480b767ab9ffe53340325fbd152b49f6bbe.png" alt="7b07b480b767ab9ffe53340325fbd152b49f6bbe.png" />
 </p>
 </div>
@@ -1118,7 +1118,7 @@ Epoch 79, Loss: 0.05224045738577843
 </pre>
 
 
-<div id="org679e880" class="figure">
+<div id="org90bebed" class="figure">
 <p><img src="./.ob-jupyter/4d7ecd9af0071c54e7816ec5ae1618aaaf1ba941.png" alt="4d7ecd9af0071c54e7816ec5ae1618aaaf1ba941.png" />
 </p>
 </div>
@@ -1127,7 +1127,7 @@ Epoch 80, Loss: 0.12379950284957886
 </pre>
 
 
-<div id="orga2df601" class="figure">
+<div id="orgdcace3f" class="figure">
 <p><img src="./.ob-jupyter/de5f4bc1e1b06d3ee3c461601f96b26176d9bf66.png" alt="de5f4bc1e1b06d3ee3c461601f96b26176d9bf66.png" />
 </p>
 </div>
@@ -1136,7 +1136,7 @@ Epoch 81, Loss: 0.09641330689191818
 </pre>
 
 
-<div id="org58ade70" class="figure">
+<div id="org3f2a22b" class="figure">
 <p><img src="./.ob-jupyter/446842c10fa2b4aaf7f6971283615bf73d35b954.png" alt="446842c10fa2b4aaf7f6971283615bf73d35b954.png" />
 </p>
 </div>
@@ -1145,7 +1145,7 @@ Epoch 82, Loss: 0.061189886182546616
 </pre>
 
 
-<div id="org441d280" class="figure">
+<div id="org14b57c8" class="figure">
 <p><img src="./.ob-jupyter/e01472a22a7f239f54782458b8ba846c0084d369.png" alt="e01472a22a7f239f54782458b8ba846c0084d369.png" />
 </p>
 </div>
@@ -1154,7 +1154,7 @@ Epoch 83, Loss: 0.0773191824555397
 </pre>
 
 
-<div id="orgf2a6983" class="figure">
+<div id="org1569c33" class="figure">
 <p><img src="./.ob-jupyter/61211732436d3bb3cb6312dec4f3460148395086.png" alt="61211732436d3bb3cb6312dec4f3460148395086.png" />
 </p>
 </div>
@@ -1163,7 +1163,7 @@ Epoch 84, Loss: 0.06494055688381195
 </pre>
 
 
-<div id="org2c518a8" class="figure">
+<div id="org9d9e326" class="figure">
 <p><img src="./.ob-jupyter/99d252a059e19d3bb4485ba5ea53a5e7a276df3e.png" alt="99d252a059e19d3bb4485ba5ea53a5e7a276df3e.png" />
 </p>
 </div>
@@ -1172,7 +1172,7 @@ Epoch 85, Loss: 0.15761306881904602
 </pre>
 
 
-<div id="org1799059" class="figure">
+<div id="orgc1adc77" class="figure">
 <p><img src="./.ob-jupyter/227504664730a214c2a208292d632889d8097db4.png" alt="227504664730a214c2a208292d632889d8097db4.png" />
 </p>
 </div>
@@ -1181,7 +1181,7 @@ Epoch 86, Loss: 0.07646659761667252
 </pre>
 
 
-<div id="org896f65b" class="figure">
+<div id="orgc090fb6" class="figure">
 <p><img src="./.ob-jupyter/ece7f4c474fde078aaae8ae3bc4f74ba185bccff.png" alt="ece7f4c474fde078aaae8ae3bc4f74ba185bccff.png" />
 </p>
 </div>
@@ -1190,7 +1190,7 @@ Epoch 87, Loss: 0.08346181362867355
 </pre>
 
 
-<div id="org2bdf1eb" class="figure">
+<div id="org27a8997" class="figure">
 <p><img src="./.ob-jupyter/8308056ba81963f828341f0383cb793069ee2241.png" alt="8308056ba81963f828341f0383cb793069ee2241.png" />
 </p>
 </div>
@@ -1199,7 +1199,7 @@ Epoch 88, Loss: 0.057207170873880386
 </pre>
 
 
-<div id="org761f0b0" class="figure">
+<div id="org38b211a" class="figure">
 <p><img src="./.ob-jupyter/c165eea6696f860fe1601d593360e606a09cc776.png" alt="c165eea6696f860fe1601d593360e606a09cc776.png" />
 </p>
 </div>
@@ -1208,7 +1208,7 @@ Epoch 89, Loss: 0.03770401328802109
 </pre>
 
 
-<div id="org4824007" class="figure">
+<div id="orgba8cf90" class="figure">
 <p><img src="./.ob-jupyter/fd134267fc8b66f392fd4f224ce73e16e6288145.png" alt="fd134267fc8b66f392fd4f224ce73e16e6288145.png" />
 </p>
 </div>
@@ -1217,7 +1217,7 @@ Epoch 90, Loss: 0.14383292198181152
 </pre>
 
 
-<div id="org27d8a1c" class="figure">
+<div id="org21850db" class="figure">
 <p><img src="./.ob-jupyter/d8212f0381c072f4dc5894e78e5ea3916441c600.png" alt="d8212f0381c072f4dc5894e78e5ea3916441c600.png" />
 </p>
 </div>
@@ -1226,7 +1226,7 @@ Epoch 91, Loss: 0.09692437201738358
 </pre>
 
 
-<div id="org36fe7a5" class="figure">
+<div id="org4688ca4" class="figure">
 <p><img src="./.ob-jupyter/7eedc091bf7ead11dc15e6537b1d74d5430b98b9.png" alt="7eedc091bf7ead11dc15e6537b1d74d5430b98b9.png" />
 </p>
 </div>
@@ -1235,7 +1235,7 @@ Epoch 92, Loss: 0.07983925938606262
 </pre>
 
 
-<div id="org032a5a2" class="figure">
+<div id="org5463b47" class="figure">
 <p><img src="./.ob-jupyter/c3efb434a8d6952ce8c06adebbbeb689ac63d7bf.png" alt="c3efb434a8d6952ce8c06adebbbeb689ac63d7bf.png" />
 </p>
 </div>
@@ -1244,7 +1244,7 @@ Epoch 93, Loss: 0.06481090933084488
 </pre>
 
 
-<div id="org10dde92" class="figure">
+<div id="org11fc0fa" class="figure">
 <p><img src="./.ob-jupyter/3606694f2dda6b537ed3fe974ac4931449f1d278.png" alt="3606694f2dda6b537ed3fe974ac4931449f1d278.png" />
 </p>
 </div>
@@ -1253,7 +1253,7 @@ Epoch 94, Loss: 0.0778236836194992
 </pre>
 
 
-<div id="orgf71ae81" class="figure">
+<div id="orga87bbff" class="figure">
 <p><img src="./.ob-jupyter/cbc864602977fc12dfb6ee5db9a889fd29165655.png" alt="cbc864602977fc12dfb6ee5db9a889fd29165655.png" />
 </p>
 </div>
@@ -1262,7 +1262,7 @@ Epoch 95, Loss: 0.06882669776678085
 </pre>
 
 
-<div id="org7273949" class="figure">
+<div id="orgac7408e" class="figure">
 <p><img src="./.ob-jupyter/ee530628ff556a12194d694b4d7cbdc9d22d5b0d.png" alt="ee530628ff556a12194d694b4d7cbdc9d22d5b0d.png" />
 </p>
 </div>
@@ -1271,7 +1271,7 @@ Epoch 96, Loss: 0.0475856252014637
 </pre>
 
 
-<div id="org6a54ff1" class="figure">
+<div id="orgb857def" class="figure">
 <p><img src="./.ob-jupyter/5084b5696c87a0d4a6a31f1ea4e99986f43abe67.png" alt="5084b5696c87a0d4a6a31f1ea4e99986f43abe67.png" />
 </p>
 </div>
@@ -1280,7 +1280,7 @@ Epoch 97, Loss: 0.09465021640062332
 </pre>
 
 
-<div id="org16e86c6" class="figure">
+<div id="org0ec1657" class="figure">
 <p><img src="./.ob-jupyter/330e8122c48fe0c8bca7e6c4326dc36f05405e9e.png" alt="330e8122c48fe0c8bca7e6c4326dc36f05405e9e.png" />
 </p>
 </div>
@@ -1289,7 +1289,7 @@ Epoch 98, Loss: 0.1396171599626541
 </pre>
 
 
-<div id="org4d2a3fe" class="figure">
+<div id="org59fa554" class="figure">
 <p><img src="./.ob-jupyter/6046e773a05504efc4cb0ca02cf19bc3bea3b72c.png" alt="6046e773a05504efc4cb0ca02cf19bc3bea3b72c.png" />
 </p>
 </div>
@@ -1298,7 +1298,7 @@ Epoch 99, Loss: 0.22794313728809357
 </pre>
 
 
-<div id="org15c8375" class="figure">
+<div id="org5b49c58" class="figure">
 <p><img src="./.ob-jupyter/7c7a8fb73f1c4ea4d26fab3cf696af61b284d8cd.png" alt="7c7a8fb73f1c4ea4d26fab3cf696af61b284d8cd.png" />
 </p>
 </div>
@@ -1307,14 +1307,14 @@ Epoch 100, Loss: 0.06968068331480026
 </pre>
 
 
-<div id="orgca50eab" class="figure">
+<div id="orga672259" class="figure">
 <p><img src="./.ob-jupyter/3775982fc1e6dc359bcb12a0e3eb49bcc58363f0.png" alt="3775982fc1e6dc359bcb12a0e3eb49bcc58363f0.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org2392ab6" class="outline-4">
-<h4 id="org2392ab6"><span class="section-number-4">2.1.2.</span> <span class="done WAITING">WAITING</span> Initialization Normal with 0 Bias</h4>
+<div id="outline-container-org9384b1e" class="outline-4">
+<h4 id="org9384b1e"><span class="section-number-4">2.1.2.</span> <span class="done WAITING">WAITING</span> Initialization Normal with 0 Bias</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> torch
@@ -1399,7 +1399,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgb91bdb9" class="figure">
+<div id="org4454708" class="figure">
 <p><img src="./.ob-jupyter/517c218e9baf5ef9e8e43a8c92b0e700d7f7a858.png" alt="517c218e9baf5ef9e8e43a8c92b0e700d7f7a858.png" />
 </p>
 </div>
@@ -1408,7 +1408,7 @@ Epoch 1, Loss: 2.243140459060669
 </pre>
 
 
-<div id="org9017cd6" class="figure">
+<div id="orgc8c009a" class="figure">
 <p><img src="./.ob-jupyter/1bb37760f33c11381a38c89f8db38507e726e44a.png" alt="1bb37760f33c11381a38c89f8db38507e726e44a.png" />
 </p>
 </div>
@@ -1417,7 +1417,7 @@ Epoch 2, Loss: 2.178248167037964
 </pre>
 
 
-<div id="org1fa6640" class="figure">
+<div id="org6dbb1a5" class="figure">
 <p><img src="./.ob-jupyter/d9e75bfc2a0793a6b47c9b6f1a46e5d9e577ade7.png" alt="d9e75bfc2a0793a6b47c9b6f1a46e5d9e577ade7.png" />
 </p>
 </div>
@@ -1426,7 +1426,7 @@ Epoch 3, Loss: 1.886781096458435
 </pre>
 
 
-<div id="org35842cc" class="figure">
+<div id="orgd15c81a" class="figure">
 <p><img src="./.ob-jupyter/be71f43285b7715a1ed48ee06598f27d629eb2e7.png" alt="be71f43285b7715a1ed48ee06598f27d629eb2e7.png" />
 </p>
 </div>
@@ -1435,7 +1435,7 @@ Epoch 4, Loss: 1.5410761833190918
 </pre>
 
 
-<div id="orgcb67dbd" class="figure">
+<div id="org892ca32" class="figure">
 <p><img src="./.ob-jupyter/0d280097e313fc21780a044ed13c98ece7655e5c.png" alt="0d280097e313fc21780a044ed13c98ece7655e5c.png" />
 </p>
 </div>
@@ -1444,7 +1444,7 @@ Epoch 5, Loss: 1.1767771244049072
 </pre>
 
 
-<div id="org065e29c" class="figure">
+<div id="orga0c0db5" class="figure">
 <p><img src="./.ob-jupyter/4ddb0d4fc7923c4bde4550361a1a31595bdb0213.png" alt="4ddb0d4fc7923c4bde4550361a1a31595bdb0213.png" />
 </p>
 </div>
@@ -1453,7 +1453,7 @@ Epoch 6, Loss: 0.906932532787323
 </pre>
 
 
-<div id="org779be18" class="figure">
+<div id="org0f5e20a" class="figure">
 <p><img src="./.ob-jupyter/fc577c09ba07a8e0bb5b5ddd545fe1692a1dd1c3.png" alt="fc577c09ba07a8e0bb5b5ddd545fe1692a1dd1c3.png" />
 </p>
 </div>
@@ -1462,7 +1462,7 @@ Epoch 7, Loss: 0.7335243225097656
 </pre>
 
 
-<div id="org4fae8bc" class="figure">
+<div id="orgb57797a" class="figure">
 <p><img src="./.ob-jupyter/7dc2157398d91c309c5e0419cefb74cd06a183f3.png" alt="7dc2157398d91c309c5e0419cefb74cd06a183f3.png" />
 </p>
 </div>
@@ -1471,7 +1471,7 @@ Epoch 8, Loss: 0.8196816444396973
 </pre>
 
 
-<div id="orgd7e66f7" class="figure">
+<div id="orgfa5683e" class="figure">
 <p><img src="./.ob-jupyter/0cdaf68531fc674e11ddd4e2b46b38980e48907f.png" alt="0cdaf68531fc674e11ddd4e2b46b38980e48907f.png" />
 </p>
 </div>
@@ -1480,7 +1480,7 @@ Epoch 9, Loss: 0.5901268124580383
 </pre>
 
 
-<div id="orgf927a39" class="figure">
+<div id="org08b3619" class="figure">
 <p><img src="./.ob-jupyter/baccb20d8b2b474e309db8f5d442f5c8612f78f8.png" alt="baccb20d8b2b474e309db8f5d442f5c8612f78f8.png" />
 </p>
 </div>
@@ -1489,7 +1489,7 @@ Epoch 10, Loss: 0.500286340713501
 </pre>
 
 
-<div id="orgbbd46a7" class="figure">
+<div id="orged36916" class="figure">
 <p><img src="./.ob-jupyter/c5ad9c793e26c1f8aed892f46418bb6e2653a8ae.png" alt="c5ad9c793e26c1f8aed892f46418bb6e2653a8ae.png" />
 </p>
 </div>
@@ -1498,7 +1498,7 @@ Epoch 11, Loss: 0.5042247176170349
 </pre>
 
 
-<div id="org4ca785f" class="figure">
+<div id="orgd6a8dd7" class="figure">
 <p><img src="./.ob-jupyter/da75b14a4e65192437807be0c92826cc1839a8ea.png" alt="da75b14a4e65192437807be0c92826cc1839a8ea.png" />
 </p>
 </div>
@@ -1507,7 +1507,7 @@ Epoch 12, Loss: 0.3072202801704407
 </pre>
 
 
-<div id="org352c5ca" class="figure">
+<div id="org544d269" class="figure">
 <p><img src="./.ob-jupyter/c77ecaa5ed78ef364a76bb398153505d3574bf5e.png" alt="c77ecaa5ed78ef364a76bb398153505d3574bf5e.png" />
 </p>
 </div>
@@ -1516,7 +1516,7 @@ Epoch 13, Loss: 0.6142950654029846
 </pre>
 
 
-<div id="org95c4ce0" class="figure">
+<div id="orgf92e7ff" class="figure">
 <p><img src="./.ob-jupyter/0a552a8f10f92443bfa3780b5781c2a2e1a2c60e.png" alt="0a552a8f10f92443bfa3780b5781c2a2e1a2c60e.png" />
 </p>
 </div>
@@ -1525,7 +1525,7 @@ Epoch 14, Loss: 0.3469279110431671
 </pre>
 
 
-<div id="orgbc01e59" class="figure">
+<div id="org1dc7b96" class="figure">
 <p><img src="./.ob-jupyter/c40ea2c9814ba8ec6c0a78bcc45d080497fbc52c.png" alt="c40ea2c9814ba8ec6c0a78bcc45d080497fbc52c.png" />
 </p>
 </div>
@@ -1534,7 +1534,7 @@ Epoch 15, Loss: 0.26291847229003906
 </pre>
 
 
-<div id="orgcdbad58" class="figure">
+<div id="orgf6ec393" class="figure">
 <p><img src="./.ob-jupyter/b0dd1f4e04f5d2285c45dee68196eba3e557a066.png" alt="b0dd1f4e04f5d2285c45dee68196eba3e557a066.png" />
 </p>
 </div>
@@ -1543,7 +1543,7 @@ Epoch 16, Loss: 0.27780410647392273
 </pre>
 
 
-<div id="org26893a9" class="figure">
+<div id="org9ceca90" class="figure">
 <p><img src="./.ob-jupyter/a8136e64b2eff474ecbd7a36fc12bd12191985b3.png" alt="a8136e64b2eff474ecbd7a36fc12bd12191985b3.png" />
 </p>
 </div>
@@ -1552,7 +1552,7 @@ Epoch 17, Loss: 0.43214061856269836
 </pre>
 
 
-<div id="orgc72ef3b" class="figure">
+<div id="orgded97dc" class="figure">
 <p><img src="./.ob-jupyter/c424904c6a5106f6b1d7201599d1d6446a97cf7a.png" alt="c424904c6a5106f6b1d7201599d1d6446a97cf7a.png" />
 </p>
 </div>
@@ -1561,7 +1561,7 @@ Epoch 18, Loss: 0.30986008048057556
 </pre>
 
 
-<div id="org4af5548" class="figure">
+<div id="orge6ace47" class="figure">
 <p><img src="./.ob-jupyter/f879c90509bfd4f2c39d77b0180839b5126c7266.png" alt="f879c90509bfd4f2c39d77b0180839b5126c7266.png" />
 </p>
 </div>
@@ -1570,7 +1570,7 @@ Epoch 19, Loss: 0.4180997908115387
 </pre>
 
 
-<div id="orgfef2db8" class="figure">
+<div id="org292c030" class="figure">
 <p><img src="./.ob-jupyter/b642cdd29ca4bd214bd22666d28bbd1f28ec6951.png" alt="b642cdd29ca4bd214bd22666d28bbd1f28ec6951.png" />
 </p>
 </div>
@@ -1579,7 +1579,7 @@ Epoch 20, Loss: 0.3627864420413971
 </pre>
 
 
-<div id="org14f07d7" class="figure">
+<div id="orgbdaa656" class="figure">
 <p><img src="./.ob-jupyter/1d4b7cb551ba9e5b9930ded0781ae6c615ab7919.png" alt="1d4b7cb551ba9e5b9930ded0781ae6c615ab7919.png" />
 </p>
 </div>
@@ -1588,7 +1588,7 @@ Epoch 21, Loss: 0.33999601006507874
 </pre>
 
 
-<div id="org9a81e06" class="figure">
+<div id="org298b4dd" class="figure">
 <p><img src="./.ob-jupyter/06feb40b0270261b72f72c19b94b5f9dd22900af.png" alt="06feb40b0270261b72f72c19b94b5f9dd22900af.png" />
 </p>
 </div>
@@ -1597,7 +1597,7 @@ Epoch 22, Loss: 0.1783614307641983
 </pre>
 
 
-<div id="orgd8d8a7e" class="figure">
+<div id="org44d2d5c" class="figure">
 <p><img src="./.ob-jupyter/308c5c43373bbc27f21cb27dc97f5e9dde37a3bf.png" alt="308c5c43373bbc27f21cb27dc97f5e9dde37a3bf.png" />
 </p>
 </div>
@@ -1606,7 +1606,7 @@ Epoch 23, Loss: 0.38329899311065674
 </pre>
 
 
-<div id="org3313b71" class="figure">
+<div id="org554724f" class="figure">
 <p><img src="./.ob-jupyter/2b9ea833c5390c9f149b5455f8be631a67398638.png" alt="2b9ea833c5390c9f149b5455f8be631a67398638.png" />
 </p>
 </div>
@@ -1615,7 +1615,7 @@ Epoch 24, Loss: 0.36371365189552307
 </pre>
 
 
-<div id="org1873006" class="figure">
+<div id="orga99907e" class="figure">
 <p><img src="./.ob-jupyter/70c3357e134224116da0e0bdffbb25d4277eefb5.png" alt="70c3357e134224116da0e0bdffbb25d4277eefb5.png" />
 </p>
 </div>
@@ -1624,7 +1624,7 @@ Epoch 25, Loss: 0.16481803357601166
 </pre>
 
 
-<div id="org3a16e6d" class="figure">
+<div id="orgf020775" class="figure">
 <p><img src="./.ob-jupyter/c4addd75f98dbb0ac4d2a14c4b91c6f17e4e9050.png" alt="c4addd75f98dbb0ac4d2a14c4b91c6f17e4e9050.png" />
 </p>
 </div>
@@ -1633,7 +1633,7 @@ Epoch 26, Loss: 0.3388056755065918
 </pre>
 
 
-<div id="org9194672" class="figure">
+<div id="org9f3d671" class="figure">
 <p><img src="./.ob-jupyter/ac18f6de89b9f4aea33c8e835767f19667de15b9.png" alt="ac18f6de89b9f4aea33c8e835767f19667de15b9.png" />
 </p>
 </div>
@@ -1642,7 +1642,7 @@ Epoch 27, Loss: 0.23921765387058258
 </pre>
 
 
-<div id="org2e6ee65" class="figure">
+<div id="orgcd900a6" class="figure">
 <p><img src="./.ob-jupyter/ccfd2c780c192f0e0a1a017e9db597613f7b388d.png" alt="ccfd2c780c192f0e0a1a017e9db597613f7b388d.png" />
 </p>
 </div>
@@ -1651,7 +1651,7 @@ Epoch 28, Loss: 0.13831645250320435
 </pre>
 
 
-<div id="org05ba536" class="figure">
+<div id="orgf69184d" class="figure">
 <p><img src="./.ob-jupyter/818da78ce988efb756ddaec73867a1dad1961e5f.png" alt="818da78ce988efb756ddaec73867a1dad1961e5f.png" />
 </p>
 </div>
@@ -1660,7 +1660,7 @@ Epoch 29, Loss: 0.33213913440704346
 </pre>
 
 
-<div id="org8a71630" class="figure">
+<div id="org766792b" class="figure">
 <p><img src="./.ob-jupyter/16d665db781dd87a42a1054cbdab1faaa6db209c.png" alt="16d665db781dd87a42a1054cbdab1faaa6db209c.png" />
 </p>
 </div>
@@ -1669,7 +1669,7 @@ Epoch 30, Loss: 0.18167275190353394
 </pre>
 
 
-<div id="org3911fd9" class="figure">
+<div id="orgdb43181" class="figure">
 <p><img src="./.ob-jupyter/e864152f91f7c370c28921c24a7254c7a2e7ff15.png" alt="e864152f91f7c370c28921c24a7254c7a2e7ff15.png" />
 </p>
 </div>
@@ -1678,7 +1678,7 @@ Epoch 31, Loss: 0.24784862995147705
 </pre>
 
 
-<div id="orgc4ad783" class="figure">
+<div id="orge4414a8" class="figure">
 <p><img src="./.ob-jupyter/e108953e7eb619b321538d364378b34704f0446d.png" alt="e108953e7eb619b321538d364378b34704f0446d.png" />
 </p>
 </div>
@@ -1687,7 +1687,7 @@ Epoch 32, Loss: 0.1568192094564438
 </pre>
 
 
-<div id="org9f2e0b1" class="figure">
+<div id="orgb82fb67" class="figure">
 <p><img src="./.ob-jupyter/379aaacbe99212d7a28d3eb5c33563ef0bb0cf37.png" alt="379aaacbe99212d7a28d3eb5c33563ef0bb0cf37.png" />
 </p>
 </div>
@@ -1696,7 +1696,7 @@ Epoch 33, Loss: 0.33296921849250793
 </pre>
 
 
-<div id="orgc5989e9" class="figure">
+<div id="org68a710c" class="figure">
 <p><img src="./.ob-jupyter/81d2f9574bef59a1e425cb463678a1fb36bc260b.png" alt="81d2f9574bef59a1e425cb463678a1fb36bc260b.png" />
 </p>
 </div>
@@ -1705,7 +1705,7 @@ Epoch 34, Loss: 0.14033427834510803
 </pre>
 
 
-<div id="org7fd4b2f" class="figure">
+<div id="org16b6b7e" class="figure">
 <p><img src="./.ob-jupyter/29d3f3cb76f9b0fd381b138cde3fae171ceb0b59.png" alt="29d3f3cb76f9b0fd381b138cde3fae171ceb0b59.png" />
 </p>
 </div>
@@ -1714,7 +1714,7 @@ Epoch 35, Loss: 0.2000270038843155
 </pre>
 
 
-<div id="org7ea23cd" class="figure">
+<div id="org5c0145a" class="figure">
 <p><img src="./.ob-jupyter/2aa4f8441b29669f6270e84d74304fa6efde658c.png" alt="2aa4f8441b29669f6270e84d74304fa6efde658c.png" />
 </p>
 </div>
@@ -1723,7 +1723,7 @@ Epoch 36, Loss: 0.26879453659057617
 </pre>
 
 
-<div id="org6f9303a" class="figure">
+<div id="org28dadf1" class="figure">
 <p><img src="./.ob-jupyter/8ff5ad06748e914830663048a518244f405cd220.png" alt="8ff5ad06748e914830663048a518244f405cd220.png" />
 </p>
 </div>
@@ -1732,7 +1732,7 @@ Epoch 37, Loss: 0.3742542266845703
 </pre>
 
 
-<div id="org89af0a7" class="figure">
+<div id="orgc03f89f" class="figure">
 <p><img src="./.ob-jupyter/edff8f1ac9e158cf583b4917536e688a3fd790d2.png" alt="edff8f1ac9e158cf583b4917536e688a3fd790d2.png" />
 </p>
 </div>
@@ -1741,7 +1741,7 @@ Epoch 38, Loss: 0.15526171028614044
 </pre>
 
 
-<div id="org8607492" class="figure">
+<div id="org29efe9a" class="figure">
 <p><img src="./.ob-jupyter/8775a4a9c038bc66c7988d8aa187f315b1104674.png" alt="8775a4a9c038bc66c7988d8aa187f315b1104674.png" />
 </p>
 </div>
@@ -1750,7 +1750,7 @@ Epoch 39, Loss: 0.13358378410339355
 </pre>
 
 
-<div id="org8981e46" class="figure">
+<div id="org9981f72" class="figure">
 <p><img src="./.ob-jupyter/37cafe9f997879ba884fd37f5877788303dc6aae.png" alt="37cafe9f997879ba884fd37f5877788303dc6aae.png" />
 </p>
 </div>
@@ -1759,7 +1759,7 @@ Epoch 40, Loss: 0.12863579392433167
 </pre>
 
 
-<div id="org565fc88" class="figure">
+<div id="org760071c" class="figure">
 <p><img src="./.ob-jupyter/064649a97beb6c58877cb7fcd507469143034d84.png" alt="064649a97beb6c58877cb7fcd507469143034d84.png" />
 </p>
 </div>
@@ -1768,7 +1768,7 @@ Epoch 41, Loss: 0.2640365660190582
 </pre>
 
 
-<div id="org2839e2d" class="figure">
+<div id="org8fe9afb" class="figure">
 <p><img src="./.ob-jupyter/0ef910f7ad4bd0092862ecad4354689049718f63.png" alt="0ef910f7ad4bd0092862ecad4354689049718f63.png" />
 </p>
 </div>
@@ -1777,7 +1777,7 @@ Epoch 42, Loss: 0.19071394205093384
 </pre>
 
 
-<div id="orga943fc2" class="figure">
+<div id="orgc3bbc1d" class="figure">
 <p><img src="./.ob-jupyter/8d74241f189ed36b03c7c760176a69db0fcd8903.png" alt="8d74241f189ed36b03c7c760176a69db0fcd8903.png" />
 </p>
 </div>
@@ -1786,7 +1786,7 @@ Epoch 43, Loss: 0.18808774650096893
 </pre>
 
 
-<div id="orgce00725" class="figure">
+<div id="org5c1d165" class="figure">
 <p><img src="./.ob-jupyter/c3c7e5bbedea0decf7c35fdfecb41155188ae3d3.png" alt="c3c7e5bbedea0decf7c35fdfecb41155188ae3d3.png" />
 </p>
 </div>
@@ -1795,14 +1795,14 @@ Epoch 44, Loss: 0.17353232204914093
 </pre>
 
 
-<div id="org9a7ae04" class="figure">
+<div id="orgc9d9176" class="figure">
 <p><img src="./.ob-jupyter/f1fa4fe42e5d7761cb370001a722dd542b9a8296.png" alt="f1fa4fe42e5d7761cb370001a722dd542b9a8296.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6a481fb" class="outline-4">
-<h4 id="org6a481fb"><span class="section-number-4">2.1.3.</span> <span class="todo TODO">TODO</span> Initialization Uniform Weights</h4>
+<div id="outline-container-org5aaa15a" class="outline-4">
+<h4 id="org5aaa15a"><span class="section-number-4">2.1.3.</span> <span class="todo TODO">TODO</span> Initialization Uniform Weights</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> torch
@@ -1887,7 +1887,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgd96959d" class="figure">
+<div id="org7c6c44f" class="figure">
 <p><img src="./.ob-jupyter/517c218e9baf5ef9e8e43a8c92b0e700d7f7a858.png" alt="517c218e9baf5ef9e8e43a8c92b0e700d7f7a858.png" />
 </p>
 </div>
@@ -1896,7 +1896,7 @@ Epoch 1, Loss: 2.243140459060669
 </pre>
 
 
-<div id="orgbdb77b6" class="figure">
+<div id="org08cbb34" class="figure">
 <p><img src="./.ob-jupyter/1bb37760f33c11381a38c89f8db38507e726e44a.png" alt="1bb37760f33c11381a38c89f8db38507e726e44a.png" />
 </p>
 </div>
@@ -1905,7 +1905,7 @@ Epoch 2, Loss: 2.178248167037964
 </pre>
 
 
-<div id="org62c3550" class="figure">
+<div id="orgd18badc" class="figure">
 <p><img src="./.ob-jupyter/d9e75bfc2a0793a6b47c9b6f1a46e5d9e577ade7.png" alt="d9e75bfc2a0793a6b47c9b6f1a46e5d9e577ade7.png" />
 </p>
 </div>
@@ -1914,7 +1914,7 @@ Epoch 3, Loss: 1.886781096458435
 </pre>
 
 
-<div id="org7cc0724" class="figure">
+<div id="orgebc55a2" class="figure">
 <p><img src="./.ob-jupyter/be71f43285b7715a1ed48ee06598f27d629eb2e7.png" alt="be71f43285b7715a1ed48ee06598f27d629eb2e7.png" />
 </p>
 </div>
@@ -1923,7 +1923,7 @@ Epoch 4, Loss: 1.5410761833190918
 </pre>
 
 
-<div id="org9ca8e67" class="figure">
+<div id="org98f22e3" class="figure">
 <p><img src="./.ob-jupyter/0d280097e313fc21780a044ed13c98ece7655e5c.png" alt="0d280097e313fc21780a044ed13c98ece7655e5c.png" />
 </p>
 </div>
@@ -1932,7 +1932,7 @@ Epoch 5, Loss: 1.1767771244049072
 </pre>
 
 
-<div id="org1fe3518" class="figure">
+<div id="orgbe65bd1" class="figure">
 <p><img src="./.ob-jupyter/4ddb0d4fc7923c4bde4550361a1a31595bdb0213.png" alt="4ddb0d4fc7923c4bde4550361a1a31595bdb0213.png" />
 </p>
 </div>
@@ -1941,7 +1941,7 @@ Epoch 6, Loss: 0.906932532787323
 </pre>
 
 
-<div id="org250b2d5" class="figure">
+<div id="org6b23aea" class="figure">
 <p><img src="./.ob-jupyter/fc577c09ba07a8e0bb5b5ddd545fe1692a1dd1c3.png" alt="fc577c09ba07a8e0bb5b5ddd545fe1692a1dd1c3.png" />
 </p>
 </div>
@@ -1950,7 +1950,7 @@ Epoch 7, Loss: 0.7335243225097656
 </pre>
 
 
-<div id="org906f107" class="figure">
+<div id="org2233fd1" class="figure">
 <p><img src="./.ob-jupyter/7dc2157398d91c309c5e0419cefb74cd06a183f3.png" alt="7dc2157398d91c309c5e0419cefb74cd06a183f3.png" />
 </p>
 </div>
@@ -1959,7 +1959,7 @@ Epoch 8, Loss: 0.8196816444396973
 </pre>
 
 
-<div id="orgfdb5979" class="figure">
+<div id="org1b4736a" class="figure">
 <p><img src="./.ob-jupyter/0cdaf68531fc674e11ddd4e2b46b38980e48907f.png" alt="0cdaf68531fc674e11ddd4e2b46b38980e48907f.png" />
 </p>
 </div>
@@ -1968,7 +1968,7 @@ Epoch 9, Loss: 0.5901268124580383
 </pre>
 
 
-<div id="orgee4a67b" class="figure">
+<div id="org5208a9f" class="figure">
 <p><img src="./.ob-jupyter/baccb20d8b2b474e309db8f5d442f5c8612f78f8.png" alt="baccb20d8b2b474e309db8f5d442f5c8612f78f8.png" />
 </p>
 </div>
@@ -1977,7 +1977,7 @@ Epoch 10, Loss: 0.500286340713501
 </pre>
 
 
-<div id="org8f04151" class="figure">
+<div id="org8c75943" class="figure">
 <p><img src="./.ob-jupyter/c5ad9c793e26c1f8aed892f46418bb6e2653a8ae.png" alt="c5ad9c793e26c1f8aed892f46418bb6e2653a8ae.png" />
 </p>
 </div>
@@ -1986,7 +1986,7 @@ Epoch 11, Loss: 0.5042247176170349
 </pre>
 
 
-<div id="orge4f39ad" class="figure">
+<div id="org65bd11b" class="figure">
 <p><img src="./.ob-jupyter/da75b14a4e65192437807be0c92826cc1839a8ea.png" alt="da75b14a4e65192437807be0c92826cc1839a8ea.png" />
 </p>
 </div>
@@ -1995,7 +1995,7 @@ Epoch 12, Loss: 0.3072202801704407
 </pre>
 
 
-<div id="org6838ef5" class="figure">
+<div id="org1dce7a6" class="figure">
 <p><img src="./.ob-jupyter/c77ecaa5ed78ef364a76bb398153505d3574bf5e.png" alt="c77ecaa5ed78ef364a76bb398153505d3574bf5e.png" />
 </p>
 </div>
@@ -2004,7 +2004,7 @@ Epoch 13, Loss: 0.6142950654029846
 </pre>
 
 
-<div id="orga02b831" class="figure">
+<div id="orgae0edad" class="figure">
 <p><img src="./.ob-jupyter/0a552a8f10f92443bfa3780b5781c2a2e1a2c60e.png" alt="0a552a8f10f92443bfa3780b5781c2a2e1a2c60e.png" />
 </p>
 </div>
@@ -2013,7 +2013,7 @@ Epoch 14, Loss: 0.3469279110431671
 </pre>
 
 
-<div id="orga77bb70" class="figure">
+<div id="orga0356a6" class="figure">
 <p><img src="./.ob-jupyter/c40ea2c9814ba8ec6c0a78bcc45d080497fbc52c.png" alt="c40ea2c9814ba8ec6c0a78bcc45d080497fbc52c.png" />
 </p>
 </div>
@@ -2022,7 +2022,7 @@ Epoch 15, Loss: 0.26291847229003906
 </pre>
 
 
-<div id="orgd1c6d35" class="figure">
+<div id="orgaf691cd" class="figure">
 <p><img src="./.ob-jupyter/b0dd1f4e04f5d2285c45dee68196eba3e557a066.png" alt="b0dd1f4e04f5d2285c45dee68196eba3e557a066.png" />
 </p>
 </div>
@@ -2031,14 +2031,14 @@ Epoch 16, Loss: 0.27780410647392273
 </pre>
 
 
-<div id="org309f5dc" class="figure">
+<div id="org504fa70" class="figure">
 <p><img src="./.ob-jupyter/a8136e64b2eff474ecbd7a36fc12bd12191985b3.png" alt="a8136e64b2eff474ecbd7a36fc12bd12191985b3.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6f29676" class="outline-4">
-<h4 id="org6f29676"><span class="section-number-4">2.1.4.</span> <span class="todo TODO">TODO</span> Initialization 0 Weights</h4>
+<div id="outline-container-org5e51d16" class="outline-4">
+<h4 id="org5e51d16"><span class="section-number-4">2.1.4.</span> <span class="todo TODO">TODO</span> Initialization 0 Weights</h4>
 <div class="outline-text-4" id="text-2-1-4">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> torch
@@ -2123,7 +2123,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgba34912" class="figure">
+<div id="orgdb0b063" class="figure">
 <p><img src="./.ob-jupyter/517c218e9baf5ef9e8e43a8c92b0e700d7f7a858.png" alt="517c218e9baf5ef9e8e43a8c92b0e700d7f7a858.png" />
 </p>
 </div>
@@ -2132,7 +2132,7 @@ Epoch 1, Loss: 2.243140459060669
 </pre>
 
 
-<div id="org0e39cb8" class="figure">
+<div id="orgd9d080c" class="figure">
 <p><img src="./.ob-jupyter/1bb37760f33c11381a38c89f8db38507e726e44a.png" alt="1bb37760f33c11381a38c89f8db38507e726e44a.png" />
 </p>
 </div>
@@ -2141,7 +2141,7 @@ Epoch 2, Loss: 2.178248167037964
 </pre>
 
 
-<div id="org374a5da" class="figure">
+<div id="orge7f8efb" class="figure">
 <p><img src="./.ob-jupyter/d9e75bfc2a0793a6b47c9b6f1a46e5d9e577ade7.png" alt="d9e75bfc2a0793a6b47c9b6f1a46e5d9e577ade7.png" />
 </p>
 </div>
@@ -2150,7 +2150,7 @@ Epoch 3, Loss: 1.886781096458435
 </pre>
 
 
-<div id="orga7cef53" class="figure">
+<div id="org7d54468" class="figure">
 <p><img src="./.ob-jupyter/be71f43285b7715a1ed48ee06598f27d629eb2e7.png" alt="be71f43285b7715a1ed48ee06598f27d629eb2e7.png" />
 </p>
 </div>
@@ -2159,7 +2159,7 @@ Epoch 4, Loss: 1.5410761833190918
 </pre>
 
 
-<div id="org05e1c40" class="figure">
+<div id="org86768bc" class="figure">
 <p><img src="./.ob-jupyter/0d280097e313fc21780a044ed13c98ece7655e5c.png" alt="0d280097e313fc21780a044ed13c98ece7655e5c.png" />
 </p>
 </div>
@@ -2168,7 +2168,7 @@ Epoch 5, Loss: 1.1767771244049072
 </pre>
 
 
-<div id="org75336e9" class="figure">
+<div id="orgd5a7449" class="figure">
 <p><img src="./.ob-jupyter/4ddb0d4fc7923c4bde4550361a1a31595bdb0213.png" alt="4ddb0d4fc7923c4bde4550361a1a31595bdb0213.png" />
 </p>
 </div>
@@ -2177,7 +2177,7 @@ Epoch 6, Loss: 0.906932532787323
 </pre>
 
 
-<div id="org9459561" class="figure">
+<div id="org2720a37" class="figure">
 <p><img src="./.ob-jupyter/fc577c09ba07a8e0bb5b5ddd545fe1692a1dd1c3.png" alt="fc577c09ba07a8e0bb5b5ddd545fe1692a1dd1c3.png" />
 </p>
 </div>
@@ -2186,7 +2186,7 @@ Epoch 7, Loss: 0.7335243225097656
 </pre>
 
 
-<div id="org931e965" class="figure">
+<div id="orgf698e52" class="figure">
 <p><img src="./.ob-jupyter/7dc2157398d91c309c5e0419cefb74cd06a183f3.png" alt="7dc2157398d91c309c5e0419cefb74cd06a183f3.png" />
 </p>
 </div>
@@ -2195,7 +2195,7 @@ Epoch 8, Loss: 0.8196816444396973
 </pre>
 
 
-<div id="org1fb9f33" class="figure">
+<div id="orga69919c" class="figure">
 <p><img src="./.ob-jupyter/0cdaf68531fc674e11ddd4e2b46b38980e48907f.png" alt="0cdaf68531fc674e11ddd4e2b46b38980e48907f.png" />
 </p>
 </div>
@@ -2204,7 +2204,7 @@ Epoch 9, Loss: 0.5901268124580383
 </pre>
 
 
-<div id="org42fee17" class="figure">
+<div id="orgb11ad7b" class="figure">
 <p><img src="./.ob-jupyter/baccb20d8b2b474e309db8f5d442f5c8612f78f8.png" alt="baccb20d8b2b474e309db8f5d442f5c8612f78f8.png" />
 </p>
 </div>
@@ -2213,7 +2213,7 @@ Epoch 10, Loss: 0.500286340713501
 </pre>
 
 
-<div id="org9564bbf" class="figure">
+<div id="org5f7c94d" class="figure">
 <p><img src="./.ob-jupyter/c5ad9c793e26c1f8aed892f46418bb6e2653a8ae.png" alt="c5ad9c793e26c1f8aed892f46418bb6e2653a8ae.png" />
 </p>
 </div>
@@ -2222,7 +2222,7 @@ Epoch 11, Loss: 0.5042247176170349
 </pre>
 
 
-<div id="org161befc" class="figure">
+<div id="org0637f01" class="figure">
 <p><img src="./.ob-jupyter/da75b14a4e65192437807be0c92826cc1839a8ea.png" alt="da75b14a4e65192437807be0c92826cc1839a8ea.png" />
 </p>
 </div>
@@ -2231,7 +2231,7 @@ Epoch 12, Loss: 0.3072202801704407
 </pre>
 
 
-<div id="org0998375" class="figure">
+<div id="orgb594169" class="figure">
 <p><img src="./.ob-jupyter/c77ecaa5ed78ef364a76bb398153505d3574bf5e.png" alt="c77ecaa5ed78ef364a76bb398153505d3574bf5e.png" />
 </p>
 </div>
@@ -2240,7 +2240,7 @@ Epoch 13, Loss: 0.6142950654029846
 </pre>
 
 
-<div id="org50951d4" class="figure">
+<div id="org2d2c26d" class="figure">
 <p><img src="./.ob-jupyter/0a552a8f10f92443bfa3780b5781c2a2e1a2c60e.png" alt="0a552a8f10f92443bfa3780b5781c2a2e1a2c60e.png" />
 </p>
 </div>
@@ -2249,7 +2249,7 @@ Epoch 14, Loss: 0.3469279110431671
 </pre>
 
 
-<div id="orgbe4bb1a" class="figure">
+<div id="orgf9e1611" class="figure">
 <p><img src="./.ob-jupyter/c40ea2c9814ba8ec6c0a78bcc45d080497fbc52c.png" alt="c40ea2c9814ba8ec6c0a78bcc45d080497fbc52c.png" />
 </p>
 </div>
@@ -2258,7 +2258,7 @@ Epoch 15, Loss: 0.26291847229003906
 </pre>
 
 
-<div id="orgfcc675d" class="figure">
+<div id="org1ac91fa" class="figure">
 <p><img src="./.ob-jupyter/b0dd1f4e04f5d2285c45dee68196eba3e557a066.png" alt="b0dd1f4e04f5d2285c45dee68196eba3e557a066.png" />
 </p>
 </div>
@@ -2267,19 +2267,19 @@ Epoch 16, Loss: 0.27780410647392273
 </pre>
 
 
-<div id="orgdb56567" class="figure">
+<div id="org2ec263e" class="figure">
 <p><img src="./.ob-jupyter/a8136e64b2eff474ecbd7a36fc12bd12191985b3.png" alt="a8136e64b2eff474ecbd7a36fc12bd12191985b3.png" />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org30ceb75" class="outline-3">
-<h3 id="org30ceb75"><span class="section-number-3">2.2.</span> 3 Layer 64 Neurons</h3>
+<div id="outline-container-org14a96f7" class="outline-3">
+<h3 id="org14a96f7"><span class="section-number-3">2.2.</span> 3 Layer 64 Neurons</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-orgede8afb" class="outline-4">
-<h4 id="orgede8afb"><span class="section-number-4">2.2.1.</span> Normal Distribution (0,1)</h4>
+<div id="outline-container-org3496f2f" class="outline-4">
+<h4 id="org3496f2f"><span class="section-number-4">2.2.1.</span> Normal Distribution (0,1)</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #595959;"># </span><span style="color: #595959;">Define the neural network model</span>
@@ -2304,7 +2304,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgeafd5a9" class="figure">
+<div id="org2300dcb" class="figure">
 <p><img src="./.ob-jupyter/8e7b93460fbc23df16a2ad726298dd3ccfc57bf3.png" alt="8e7b93460fbc23df16a2ad726298dd3ccfc57bf3.png" />
 </p>
 </div>
@@ -2313,7 +2313,7 @@ Epoch 1, Loss: 1.7374809980392456
 </pre>
 
 
-<div id="org5a2cfab" class="figure">
+<div id="org55723c7" class="figure">
 <p><img src="./.ob-jupyter/9e923a21d47154453ff1106a7b784ff782317356.png" alt="9e923a21d47154453ff1106a7b784ff782317356.png" />
 </p>
 </div>
@@ -2322,7 +2322,7 @@ Epoch 2, Loss: 1.1774097681045532
 </pre>
 
 
-<div id="org2b087d1" class="figure">
+<div id="org892afd9" class="figure">
 <p><img src="./.ob-jupyter/a75028cde959c9692902bcb09e0028ce36eb47e0.png" alt="a75028cde959c9692902bcb09e0028ce36eb47e0.png" />
 </p>
 </div>
@@ -2331,7 +2331,7 @@ Epoch 3, Loss: 0.9354411959648132
 </pre>
 
 
-<div id="org20ebc51" class="figure">
+<div id="org165ff8a" class="figure">
 <p><img src="./.ob-jupyter/39dd3a312f9e22227bacc77640ea538a13dd4c35.png" alt="39dd3a312f9e22227bacc77640ea538a13dd4c35.png" />
 </p>
 </div>
@@ -2340,7 +2340,7 @@ Epoch 4, Loss: 0.7064132690429688
 </pre>
 
 
-<div id="org99c0c5a" class="figure">
+<div id="orgd1916a6" class="figure">
 <p><img src="./.ob-jupyter/420864f938cc740e9dda2f5147a2926bc894f1f3.png" alt="420864f938cc740e9dda2f5147a2926bc894f1f3.png" />
 </p>
 </div>
@@ -2349,7 +2349,7 @@ Epoch 5, Loss: 0.7849247455596924
 </pre>
 
 
-<div id="org4bef6b2" class="figure">
+<div id="org46070e3" class="figure">
 <p><img src="./.ob-jupyter/68532a103c6202477ab2d9b552523e2a5fb07938.png" alt="68532a103c6202477ab2d9b552523e2a5fb07938.png" />
 </p>
 </div>
@@ -2358,7 +2358,7 @@ Epoch 6, Loss: 0.6170485615730286
 </pre>
 
 
-<div id="org1b5adb4" class="figure">
+<div id="org24c9c2c" class="figure">
 <p><img src="./.ob-jupyter/b9bc9ccf1ec281c1796f2de1111788880d59122f.png" alt="b9bc9ccf1ec281c1796f2de1111788880d59122f.png" />
 </p>
 </div>
@@ -2367,7 +2367,7 @@ Epoch 7, Loss: 0.671164333820343
 </pre>
 
 
-<div id="org068f055" class="figure">
+<div id="orgb92b8b2" class="figure">
 <p><img src="./.ob-jupyter/08d25a93490794e113476f7a5e20e1febe2b5d9c.png" alt="08d25a93490794e113476f7a5e20e1febe2b5d9c.png" />
 </p>
 </div>
@@ -2376,7 +2376,7 @@ Epoch 8, Loss: 0.7070703506469727
 </pre>
 
 
-<div id="org2c74a06" class="figure">
+<div id="org674f971" class="figure">
 <p><img src="./.ob-jupyter/64b59f4dc1f5e62ac594ff00fd58f951848735b7.png" alt="64b59f4dc1f5e62ac594ff00fd58f951848735b7.png" />
 </p>
 </div>
@@ -2385,7 +2385,7 @@ Epoch 9, Loss: 0.6183724999427795
 </pre>
 
 
-<div id="org35940f0" class="figure">
+<div id="orgeae0e8c" class="figure">
 <p><img src="./.ob-jupyter/0484201c7b1273bc7e1cfbb9758f29f9253075f1.png" alt="0484201c7b1273bc7e1cfbb9758f29f9253075f1.png" />
 </p>
 </div>
@@ -2394,7 +2394,7 @@ Epoch 10, Loss: 0.5834630131721497
 </pre>
 
 
-<div id="org1451f77" class="figure">
+<div id="org4a74cd0" class="figure">
 <p><img src="./.ob-jupyter/696ec0da3ae7bd48cc87b537a4fef1c7a304bd25.png" alt="696ec0da3ae7bd48cc87b537a4fef1c7a304bd25.png" />
 </p>
 </div>
@@ -2403,7 +2403,7 @@ Epoch 11, Loss: 0.6377518773078918
 </pre>
 
 
-<div id="orgb25fbc8" class="figure">
+<div id="org8e19297" class="figure">
 <p><img src="./.ob-jupyter/8e35c4010ba11295acff758bee5baaf1a9729502.png" alt="8e35c4010ba11295acff758bee5baaf1a9729502.png" />
 </p>
 </div>
@@ -2412,7 +2412,7 @@ Epoch 12, Loss: 0.4866362512111664
 </pre>
 
 
-<div id="orgbb6ba02" class="figure">
+<div id="org81131e8" class="figure">
 <p><img src="./.ob-jupyter/1e8e74a2833646dc2875db605c3d253b8a3f9727.png" alt="1e8e74a2833646dc2875db605c3d253b8a3f9727.png" />
 </p>
 </div>
@@ -2421,7 +2421,7 @@ Epoch 13, Loss: 0.5534214973449707
 </pre>
 
 
-<div id="org73b6129" class="figure">
+<div id="orge628b14" class="figure">
 <p><img src="./.ob-jupyter/56a8290099e733cea81554e45f829a82d7f2f6dd.png" alt="56a8290099e733cea81554e45f829a82d7f2f6dd.png" />
 </p>
 </div>
@@ -2430,7 +2430,7 @@ Epoch 14, Loss: 0.33660563826560974
 </pre>
 
 
-<div id="orgfeb733e" class="figure">
+<div id="orgb2214ab" class="figure">
 <p><img src="./.ob-jupyter/cf929bbb27e800f1bedac0c155390fd1e76f8080.png" alt="cf929bbb27e800f1bedac0c155390fd1e76f8080.png" />
 </p>
 </div>
@@ -2439,7 +2439,7 @@ Epoch 15, Loss: 0.47805359959602356
 </pre>
 
 
-<div id="org1d06caf" class="figure">
+<div id="org9ed9aae" class="figure">
 <p><img src="./.ob-jupyter/e9f147dee6b4bfbcc0c83c48f1513e41513b221f.png" alt="e9f147dee6b4bfbcc0c83c48f1513e41513b221f.png" />
 </p>
 </div>
@@ -2448,7 +2448,7 @@ Epoch 16, Loss: 0.48472437262535095
 </pre>
 
 
-<div id="org49a6fc2" class="figure">
+<div id="org2e6851e" class="figure">
 <p><img src="./.ob-jupyter/fe9bb62328c87d2334769152888768d153ae6b94.png" alt="fe9bb62328c87d2334769152888768d153ae6b94.png" />
 </p>
 </div>
@@ -2457,7 +2457,7 @@ Epoch 17, Loss: 0.4368095397949219
 </pre>
 
 
-<div id="orgb86a177" class="figure">
+<div id="orgdf8a820" class="figure">
 <p><img src="./.ob-jupyter/d523e51504e096495de23134bd0338c7e71d619b.png" alt="d523e51504e096495de23134bd0338c7e71d619b.png" />
 </p>
 </div>
@@ -2466,7 +2466,7 @@ Epoch 18, Loss: 0.46487340331077576
 </pre>
 
 
-<div id="org86da3b3" class="figure">
+<div id="org6f24cf8" class="figure">
 <p><img src="./.ob-jupyter/0acfde7335d39c03cfc82ce07ea5548aaf895a66.png" alt="0acfde7335d39c03cfc82ce07ea5548aaf895a66.png" />
 </p>
 </div>
@@ -2475,7 +2475,7 @@ Epoch 19, Loss: 0.5110486149787903
 </pre>
 
 
-<div id="orge8b8ffe" class="figure">
+<div id="orgc9a478c" class="figure">
 <p><img src="./.ob-jupyter/735620d18e01ef3a36c315c4c90d65d5c98a6ab9.png" alt="735620d18e01ef3a36c315c4c90d65d5c98a6ab9.png" />
 </p>
 </div>
@@ -2484,7 +2484,7 @@ Epoch 20, Loss: 0.5361409187316895
 </pre>
 
 
-<div id="orge5835e8" class="figure">
+<div id="org6978a28" class="figure">
 <p><img src="./.ob-jupyter/980253215a1d71270a024df92acdd10fe0adf266.png" alt="980253215a1d71270a024df92acdd10fe0adf266.png" />
 </p>
 </div>
@@ -2493,7 +2493,7 @@ Epoch 21, Loss: 0.5355967879295349
 </pre>
 
 
-<div id="orga8f2de5" class="figure">
+<div id="org3a3f0af" class="figure">
 <p><img src="./.ob-jupyter/39e59e982ed624d1871a42305809969879d1401f.png" alt="39e59e982ed624d1871a42305809969879d1401f.png" />
 </p>
 </div>
@@ -2502,7 +2502,7 @@ Epoch 22, Loss: 0.36756324768066406
 </pre>
 
 
-<div id="org344f9ed" class="figure">
+<div id="orgab22efc" class="figure">
 <p><img src="./.ob-jupyter/da44593f70f0763bc82c7817bb4ac122fad90468.png" alt="da44593f70f0763bc82c7817bb4ac122fad90468.png" />
 </p>
 </div>
@@ -2511,7 +2511,7 @@ Epoch 23, Loss: 0.49373146891593933
 </pre>
 
 
-<div id="org1dddb7e" class="figure">
+<div id="org6e12034" class="figure">
 <p><img src="./.ob-jupyter/c5f442aa4abb7b90ff0174b705a82b77c4f58333.png" alt="c5f442aa4abb7b90ff0174b705a82b77c4f58333.png" />
 </p>
 </div>
@@ -2520,7 +2520,7 @@ Epoch 24, Loss: 0.36973071098327637
 </pre>
 
 
-<div id="org5f8c094" class="figure">
+<div id="org31a7197" class="figure">
 <p><img src="./.ob-jupyter/9f539513cba0f0e054b85e4f27c5c9bb1f91961d.png" alt="9f539513cba0f0e054b85e4f27c5c9bb1f91961d.png" />
 </p>
 </div>
@@ -2529,7 +2529,7 @@ Epoch 25, Loss: 0.46977075934410095
 </pre>
 
 
-<div id="org5031ebb" class="figure">
+<div id="org0a88dfc" class="figure">
 <p><img src="./.ob-jupyter/3fd7c9069e64f58941072e31d1639d1bb21dc7b5.png" alt="3fd7c9069e64f58941072e31d1639d1bb21dc7b5.png" />
 </p>
 </div>
@@ -2538,8 +2538,8 @@ Epoch 25, Loss: 0.46977075934410095
 </pre>
 </div>
 </div>
-<div id="outline-container-org84bf401" class="outline-4">
-<h4 id="org84bf401"><span class="section-number-4">2.2.2.</span> Uniform [0,1]</h4>
+<div id="outline-container-org7b1971b" class="outline-4">
+<h4 id="org7b1971b"><span class="section-number-4">2.2.2.</span> Uniform [0,1]</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #595959;"># </span><span style="color: #595959;">Define the neural network model</span>
@@ -2564,7 +2564,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgefb96ba" class="figure">
+<div id="orga3ff0ce" class="figure">
 <p><img src="./.ob-jupyter/43818bb8fed0d2d8d01865cbc35c55a5730e9d90.png" alt="43818bb8fed0d2d8d01865cbc35c55a5730e9d90.png" />
 </p>
 </div>
@@ -2573,7 +2573,7 @@ Epoch 1, Loss: 2.2895634174346924
 </pre>
 
 
-<div id="org9fcc24b" class="figure">
+<div id="org919bb6e" class="figure">
 <p><img src="./.ob-jupyter/327febc2ed85cfdd104f895c5844d609d302ebe2.png" alt="327febc2ed85cfdd104f895c5844d609d302ebe2.png" />
 </p>
 </div>
@@ -2582,7 +2582,7 @@ Epoch 2, Loss: 2.292506217956543
 </pre>
 
 
-<div id="org87f23d1" class="figure">
+<div id="org956d1e2" class="figure">
 <p><img src="./.ob-jupyter/1993f7f80baf65953445602c6c8e1dfffe6d645b.png" alt="1993f7f80baf65953445602c6c8e1dfffe6d645b.png" />
 </p>
 </div>
@@ -2591,7 +2591,7 @@ Epoch 3, Loss: 2.320305585861206
 </pre>
 
 
-<div id="org8f9bf2f" class="figure">
+<div id="org0e4a043" class="figure">
 <p><img src="./.ob-jupyter/7e514794ba0e1b577545d2eb1c07accd8ba2a8ee.png" alt="7e514794ba0e1b577545d2eb1c07accd8ba2a8ee.png" />
 </p>
 </div>
@@ -2600,7 +2600,7 @@ Epoch 4, Loss: 2.30061936378479
 </pre>
 
 
-<div id="org178b18d" class="figure">
+<div id="org5407911" class="figure">
 <p><img src="./.ob-jupyter/81f038ec07a78fb4a6001971c62fd500d8ddd716.png" alt="81f038ec07a78fb4a6001971c62fd500d8ddd716.png" />
 </p>
 </div>
@@ -2609,7 +2609,7 @@ Epoch 5, Loss: 2.3356828689575195
 </pre>
 
 
-<div id="orgcde8387" class="figure">
+<div id="org3dc7def" class="figure">
 <p><img src="./.ob-jupyter/74c73dc133a2abeb111bbbb820f95120235cbd09.png" alt="74c73dc133a2abeb111bbbb820f95120235cbd09.png" />
 </p>
 </div>
@@ -2618,7 +2618,7 @@ Epoch 6, Loss: 2.284691095352173
 </pre>
 
 
-<div id="org1fa40cc" class="figure">
+<div id="org3e85ce9" class="figure">
 <p><img src="./.ob-jupyter/03a1a56f7e827ad3eea262cd139fb9e989019fdc.png" alt="03a1a56f7e827ad3eea262cd139fb9e989019fdc.png" />
 </p>
 </div>
@@ -2627,7 +2627,7 @@ Epoch 7, Loss: 2.3002583980560303
 </pre>
 
 
-<div id="orgb9cd062" class="figure">
+<div id="org6ffd415" class="figure">
 <p><img src="./.ob-jupyter/50c4db28e448d54a158b1a9c703e7fcb8185d3ff.png" alt="50c4db28e448d54a158b1a9c703e7fcb8185d3ff.png" />
 </p>
 </div>
@@ -2636,7 +2636,7 @@ Epoch 8, Loss: 2.297882080078125
 </pre>
 
 
-<div id="orgfd03ac7" class="figure">
+<div id="org3a1f4ee" class="figure">
 <p><img src="./.ob-jupyter/c8ed4ff045676630e0d958c73d7899ded19e0807.png" alt="c8ed4ff045676630e0d958c73d7899ded19e0807.png" />
 </p>
 </div>
@@ -2645,7 +2645,7 @@ Epoch 9, Loss: 2.303570032119751
 </pre>
 
 
-<div id="org4c99ece" class="figure">
+<div id="orgf9cdcf4" class="figure">
 <p><img src="./.ob-jupyter/7c69f8fdb33aeac893186c62695a1f228c7dc102.png" alt="7c69f8fdb33aeac893186c62695a1f228c7dc102.png" />
 </p>
 </div>
@@ -2654,7 +2654,7 @@ Epoch 10, Loss: 2.287445306777954
 </pre>
 
 
-<div id="orgfeddeb3" class="figure">
+<div id="org7ccba0c" class="figure">
 <p><img src="./.ob-jupyter/a479c1e197313595180a1e4ceb8ef3576af2983e.png" alt="a479c1e197313595180a1e4ceb8ef3576af2983e.png" />
 </p>
 </div>
@@ -2663,7 +2663,7 @@ Epoch 11, Loss: 2.3249855041503906
 </pre>
 
 
-<div id="org481a2f3" class="figure">
+<div id="org3018f11" class="figure">
 <p><img src="./.ob-jupyter/cbefff6daaf0bbb1fe3ebcebaed688819788b949.png" alt="cbefff6daaf0bbb1fe3ebcebaed688819788b949.png" />
 </p>
 </div>
@@ -2672,7 +2672,7 @@ Epoch 12, Loss: 2.3124051094055176
 </pre>
 
 
-<div id="orga7d185f" class="figure">
+<div id="org314a660" class="figure">
 <p><img src="./.ob-jupyter/ac7a8c195e2a62f486e555942ce947bb067ef770.png" alt="ac7a8c195e2a62f486e555942ce947bb067ef770.png" />
 </p>
 </div>
@@ -2681,7 +2681,7 @@ Epoch 13, Loss: 2.3211677074432373
 </pre>
 
 
-<div id="org1d50653" class="figure">
+<div id="org5153c7f" class="figure">
 <p><img src="./.ob-jupyter/712e4fa7c6265026a3c78c511d1c9112b314c3c6.png" alt="712e4fa7c6265026a3c78c511d1c9112b314c3c6.png" />
 </p>
 </div>
@@ -2690,7 +2690,7 @@ Epoch 14, Loss: 2.3177366256713867
 </pre>
 
 
-<div id="orgdf40101" class="figure">
+<div id="orgba33a63" class="figure">
 <p><img src="./.ob-jupyter/3ed4721c221e71e6e36b7cf0ab8627aabe74b4db.png" alt="3ed4721c221e71e6e36b7cf0ab8627aabe74b4db.png" />
 </p>
 </div>
@@ -2699,7 +2699,7 @@ Epoch 15, Loss: 2.30816912651062
 </pre>
 
 
-<div id="org2ad9301" class="figure">
+<div id="org797febc" class="figure">
 <p><img src="./.ob-jupyter/aefa917f2a390d64aa1ae3918814b16b503528cb.png" alt="aefa917f2a390d64aa1ae3918814b16b503528cb.png" />
 </p>
 </div>
@@ -2708,7 +2708,7 @@ Epoch 16, Loss: 2.2896058559417725
 </pre>
 
 
-<div id="org6b83d32" class="figure">
+<div id="org2b941b0" class="figure">
 <p><img src="./.ob-jupyter/bda744b48427b492a19a983d92f78344463369fd.png" alt="bda744b48427b492a19a983d92f78344463369fd.png" />
 </p>
 </div>
@@ -2717,7 +2717,7 @@ Epoch 17, Loss: 2.3232648372650146
 </pre>
 
 
-<div id="orgd2d92c2" class="figure">
+<div id="org6854236" class="figure">
 <p><img src="./.ob-jupyter/94abb12c5fe9967321b0eb5be1beb094bbc30e04.png" alt="94abb12c5fe9967321b0eb5be1beb094bbc30e04.png" />
 </p>
 </div>
@@ -2726,7 +2726,7 @@ Epoch 18, Loss: 2.309356451034546
 </pre>
 
 
-<div id="org364c654" class="figure">
+<div id="org2e9cb04" class="figure">
 <p><img src="./.ob-jupyter/e5891fef6b0dee88ba3185518c08a572f0189a62.png" alt="e5891fef6b0dee88ba3185518c08a572f0189a62.png" />
 </p>
 </div>
@@ -2735,7 +2735,7 @@ Epoch 19, Loss: 2.33986496925354
 </pre>
 
 
-<div id="org1a0bbeb" class="figure">
+<div id="org995bdbb" class="figure">
 <p><img src="./.ob-jupyter/0188dbee929f1fd6f4170d3974d8fcf18f87cf59.png" alt="0188dbee929f1fd6f4170d3974d8fcf18f87cf59.png" />
 </p>
 </div>
@@ -2744,7 +2744,7 @@ Epoch 20, Loss: 2.3159825801849365
 </pre>
 
 
-<div id="org45fceaa" class="figure">
+<div id="orgfd6555c" class="figure">
 <p><img src="./.ob-jupyter/47fd39c9a1a24640d52ef9bb9437bbedf91d9d33.png" alt="47fd39c9a1a24640d52ef9bb9437bbedf91d9d33.png" />
 </p>
 </div>
@@ -2753,7 +2753,7 @@ Epoch 21, Loss: 2.3211779594421387
 </pre>
 
 
-<div id="org4b3dbef" class="figure">
+<div id="org0e55266" class="figure">
 <p><img src="./.ob-jupyter/3165156804bff80fce545a4f84fd862503a6b21e.png" alt="3165156804bff80fce545a4f84fd862503a6b21e.png" />
 </p>
 </div>
@@ -2762,7 +2762,7 @@ Epoch 22, Loss: 2.303123950958252
 </pre>
 
 
-<div id="orgd3face9" class="figure">
+<div id="org2888bc8" class="figure">
 <p><img src="./.ob-jupyter/17e5f8a3da2d8e60d86646b5d0141fd02c090ba1.png" alt="17e5f8a3da2d8e60d86646b5d0141fd02c090ba1.png" />
 </p>
 </div>
@@ -2771,7 +2771,7 @@ Epoch 23, Loss: 2.359586477279663
 </pre>
 
 
-<div id="org2252113" class="figure">
+<div id="orgbaf17c2" class="figure">
 <p><img src="./.ob-jupyter/0c45265a349c058382ac50ed91bac3cc938739b4.png" alt="0c45265a349c058382ac50ed91bac3cc938739b4.png" />
 </p>
 </div>
@@ -2780,7 +2780,7 @@ Epoch 24, Loss: 2.296290874481201
 </pre>
 
 
-<div id="org0a8bec2" class="figure">
+<div id="orga44bb70" class="figure">
 <p><img src="./.ob-jupyter/f088719e80f420719fa44d42a061baccddfa830e.png" alt="f088719e80f420719fa44d42a061baccddfa830e.png" />
 </p>
 </div>
@@ -2789,7 +2789,7 @@ Epoch 25, Loss: 2.316251039505005
 </pre>
 
 
-<div id="org768bebb" class="figure">
+<div id="orgcea149e" class="figure">
 <p><img src="./.ob-jupyter/3b8f78a6abe9d92fcbf5825d72d349f6822f9f8d.png" alt="3b8f78a6abe9d92fcbf5825d72d349f6822f9f8d.png" />
 </p>
 </div>
@@ -2798,8 +2798,8 @@ Epoch 25, Loss: 2.316251039505005
 </pre>
 </div>
 </div>
-<div id="outline-container-org8693c60" class="outline-4">
-<h4 id="org8693c60"><span class="section-number-4">2.2.3.</span> Zeros</h4>
+<div id="outline-container-orgc0278eb" class="outline-4">
+<h4 id="orgc0278eb"><span class="section-number-4">2.2.3.</span> Zeros</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #595959;"># </span><span style="color: #595959;">Define the neural network model</span>
@@ -2824,7 +2824,7 @@ create_and_train_model<span style="color: #000000;">(</span>n_layers=3, neurons_
 </div>
 
 
-<div id="orgd90b9a2" class="figure">
+<div id="org24c7f24" class="figure">
 <p><img src="./.ob-jupyter/e87a22b777ac26a2a42827706b8ce3ff76e167a1.png" alt="e87a22b777ac26a2a42827706b8ce3ff76e167a1.png" />
 </p>
 </div>
@@ -2833,7 +2833,7 @@ Epoch 1, Loss: 2.294684410095215
 </pre>
 
 
-<div id="org98d3a52" class="figure">
+<div id="orgf76e775" class="figure">
 <p><img src="./.ob-jupyter/dc10190baae90a23b1bab58ebae525059412bc72.png" alt="dc10190baae90a23b1bab58ebae525059412bc72.png" />
 </p>
 </div>
@@ -2842,7 +2842,7 @@ Epoch 2, Loss: 2.311328411102295
 </pre>
 
 
-<div id="org8bef21c" class="figure">
+<div id="org404f578" class="figure">
 <p><img src="./.ob-jupyter/0de5223c9933cff886245fa2eee410496da19f4f.png" alt="0de5223c9933cff886245fa2eee410496da19f4f.png" />
 </p>
 </div>
@@ -2851,7 +2851,7 @@ Epoch 3, Loss: 2.2964327335357666
 </pre>
 
 
-<div id="org2a89f65" class="figure">
+<div id="org3f841d0" class="figure">
 <p><img src="./.ob-jupyter/bca0fae45f86fa00799375b074f901ada18e8c60.png" alt="bca0fae45f86fa00799375b074f901ada18e8c60.png" />
 </p>
 </div>
@@ -2860,7 +2860,7 @@ Epoch 4, Loss: 2.320838689804077
 </pre>
 
 
-<div id="orge78e245" class="figure">
+<div id="org34e5eb3" class="figure">
 <p><img src="./.ob-jupyter/df7d358b561634986a0a1c5ac8a434ffbb076988.png" alt="df7d358b561634986a0a1c5ac8a434ffbb076988.png" />
 </p>
 </div>
@@ -2869,7 +2869,7 @@ Epoch 5, Loss: 2.2916862964630127
 </pre>
 
 
-<div id="org9204291" class="figure">
+<div id="orgaa0f076" class="figure">
 <p><img src="./.ob-jupyter/4b657f915b1790bf501f1030183a522f0dbf8061.png" alt="4b657f915b1790bf501f1030183a522f0dbf8061.png" />
 </p>
 </div>
@@ -2878,7 +2878,7 @@ Epoch 6, Loss: 2.302931547164917
 </pre>
 
 
-<div id="org30b860f" class="figure">
+<div id="org66bd0c9" class="figure">
 <p><img src="./.ob-jupyter/b11af733269e3973962d2136f6c9840867a66bc1.png" alt="b11af733269e3973962d2136f6c9840867a66bc1.png" />
 </p>
 </div>
@@ -2887,7 +2887,7 @@ Epoch 7, Loss: 2.3088455200195312
 </pre>
 
 
-<div id="orgf9fcff5" class="figure">
+<div id="org2e7a3ca" class="figure">
 <p><img src="./.ob-jupyter/c2c9ce66d20fbf341a7c2843d9877ed49bd4417f.png" alt="c2c9ce66d20fbf341a7c2843d9877ed49bd4417f.png" />
 </p>
 </div>
@@ -2896,7 +2896,7 @@ Epoch 8, Loss: 2.302312135696411
 </pre>
 
 
-<div id="org3599a02" class="figure">
+<div id="org91cba25" class="figure">
 <p><img src="./.ob-jupyter/5c2ff112754a629493df387c9fb427b5a1fa756c.png" alt="5c2ff112754a629493df387c9fb427b5a1fa756c.png" />
 </p>
 </div>
@@ -2905,7 +2905,7 @@ Epoch 9, Loss: 2.3111631870269775
 </pre>
 
 
-<div id="org5288d10" class="figure">
+<div id="orgf5c091c" class="figure">
 <p><img src="./.ob-jupyter/99d1d3ff0bae9060c3e1ed725a682a63f8136aa2.png" alt="99d1d3ff0bae9060c3e1ed725a682a63f8136aa2.png" />
 </p>
 </div>
@@ -2914,7 +2914,7 @@ Epoch 10, Loss: 2.281331777572632
 </pre>
 
 
-<div id="orgb65088d" class="figure">
+<div id="orgb33c71f" class="figure">
 <p><img src="./.ob-jupyter/3bd675987e7966a0a60adb042c9a3f4b11322aa7.png" alt="3bd675987e7966a0a60adb042c9a3f4b11322aa7.png" />
 </p>
 </div>
@@ -2923,7 +2923,7 @@ Epoch 11, Loss: 2.3043408393859863
 </pre>
 
 
-<div id="org7e957e1" class="figure">
+<div id="org65eb49f" class="figure">
 <p><img src="./.ob-jupyter/68c08ef0f199742931581306d9d01dd250d70cd5.png" alt="68c08ef0f199742931581306d9d01dd250d70cd5.png" />
 </p>
 </div>
@@ -2932,7 +2932,7 @@ Epoch 12, Loss: 2.3050715923309326
 </pre>
 
 
-<div id="org373ce4b" class="figure">
+<div id="orgc331772" class="figure">
 <p><img src="./.ob-jupyter/f5de2a727563a4934a7b0a20a75c949d95307e54.png" alt="f5de2a727563a4934a7b0a20a75c949d95307e54.png" />
 </p>
 </div>
@@ -2941,7 +2941,7 @@ Epoch 13, Loss: 2.295111894607544
 </pre>
 
 
-<div id="org21e7dc4" class="figure">
+<div id="orge6a2ff6" class="figure">
 <p><img src="./.ob-jupyter/1ab37d350d73aa506ef9c7bdbea6b4d8fda68ced.png" alt="1ab37d350d73aa506ef9c7bdbea6b4d8fda68ced.png" />
 </p>
 </div>
@@ -2950,7 +2950,7 @@ Epoch 14, Loss: 2.3030707836151123
 </pre>
 
 
-<div id="org9abe198" class="figure">
+<div id="org2293309" class="figure">
 <p><img src="./.ob-jupyter/6df63f5b1d6c0df24861cbf1fdeaebe18d015757.png" alt="6df63f5b1d6c0df24861cbf1fdeaebe18d015757.png" />
 </p>
 </div>
@@ -2959,7 +2959,7 @@ Epoch 15, Loss: 2.284855604171753
 </pre>
 
 
-<div id="orgd213f39" class="figure">
+<div id="org1bb247d" class="figure">
 <p><img src="./.ob-jupyter/1b4bfc1677bc716cb177382e07b3d7f9fb71f335.png" alt="1b4bfc1677bc716cb177382e07b3d7f9fb71f335.png" />
 </p>
 </div>
@@ -2968,7 +2968,7 @@ Epoch 16, Loss: 2.3004000186920166
 </pre>
 
 
-<div id="orgf878864" class="figure">
+<div id="org5308ff0" class="figure">
 <p><img src="./.ob-jupyter/0519182cacca4acc2fd042f629836f92b4487afe.png" alt="0519182cacca4acc2fd042f629836f92b4487afe.png" />
 </p>
 </div>
@@ -2977,7 +2977,7 @@ Epoch 17, Loss: 2.308497667312622
 </pre>
 
 
-<div id="org2e38e67" class="figure">
+<div id="orgb2630aa" class="figure">
 <p><img src="./.ob-jupyter/ebb8dd8e75c36996551de499303ac426b5332a1a.png" alt="ebb8dd8e75c36996551de499303ac426b5332a1a.png" />
 </p>
 </div>
@@ -2986,7 +2986,7 @@ Epoch 18, Loss: 2.306018829345703
 </pre>
 
 
-<div id="org885f8ba" class="figure">
+<div id="org97b2b5f" class="figure">
 <p><img src="./.ob-jupyter/adb0a0e5cd68934637298c0b6a909333386f5957.png" alt="adb0a0e5cd68934637298c0b6a909333386f5957.png" />
 </p>
 </div>
@@ -2995,7 +2995,7 @@ Epoch 19, Loss: 2.3032310009002686
 </pre>
 
 
-<div id="org8b4cef9" class="figure">
+<div id="org66c2834" class="figure">
 <p><img src="./.ob-jupyter/447d8d059e471be36b8d81231d939670ea7b7248.png" alt="447d8d059e471be36b8d81231d939670ea7b7248.png" />
 </p>
 </div>
@@ -3004,7 +3004,7 @@ Epoch 20, Loss: 2.2975432872772217
 </pre>
 
 
-<div id="org2d32749" class="figure">
+<div id="org109b20e" class="figure">
 <p><img src="./.ob-jupyter/4efe0e598c29a8227a91f2e3fd0e0cb3778862ce.png" alt="4efe0e598c29a8227a91f2e3fd0e0cb3778862ce.png" />
 </p>
 </div>
@@ -3013,7 +3013,7 @@ Epoch 21, Loss: 2.301711320877075
 </pre>
 
 
-<div id="orgc730a63" class="figure">
+<div id="org6edd721" class="figure">
 <p><img src="./.ob-jupyter/5ce64ec9f029a1902a6f4bde9083e43d20126ebb.png" alt="5ce64ec9f029a1902a6f4bde9083e43d20126ebb.png" />
 </p>
 </div>
@@ -3022,7 +3022,7 @@ Epoch 22, Loss: 2.302415609359741
 </pre>
 
 
-<div id="orgae73b71" class="figure">
+<div id="org3c91ebc" class="figure">
 <p><img src="./.ob-jupyter/6fd6dc75b968829142d0a998d8f137a2c34d20a1.png" alt="6fd6dc75b968829142d0a998d8f137a2c34d20a1.png" />
 </p>
 </div>
@@ -3031,7 +3031,7 @@ Epoch 23, Loss: 2.2926647663116455
 </pre>
 
 
-<div id="orgf70a483" class="figure">
+<div id="orgc678550" class="figure">
 <p><img src="./.ob-jupyter/ff4e110da8de287ae5fe66757a6f02abfd55eacf.png" alt="ff4e110da8de287ae5fe66757a6f02abfd55eacf.png" />
 </p>
 </div>
@@ -3040,7 +3040,7 @@ Epoch 24, Loss: 2.3220808506011963
 </pre>
 
 
-<div id="org2731161" class="figure">
+<div id="orgf9703e6" class="figure">
 <p><img src="./.ob-jupyter/f7201087b8407dc1ceb7d11636f676d0273e303e.png" alt="f7201087b8407dc1ceb7d11636f676d0273e303e.png" />
 </p>
 </div>
@@ -3049,7 +3049,7 @@ Epoch 25, Loss: 2.2965810298919678
 </pre>
 
 
-<div id="orgebd2ecf" class="figure">
+<div id="org6036adb" class="figure">
 <p><img src="./.ob-jupyter/7c5e0a99a36a5cbe7f86f5ddd9b51a0b1320bc58.png" alt="7c5e0a99a36a5cbe7f86f5ddd9b51a0b1320bc58.png" />
 </p>
 </div>
@@ -3060,26 +3060,26 @@ Epoch 25, Loss: 2.2965810298919678
 </div>
 </div>
 </div>
-<div id="outline-container-org549ff91" class="outline-2">
-<h2 id="org549ff91"><span class="section-number-2">3.</span> Definitions</h2>
+<div id="outline-container-orga29a242" class="outline-2">
+<h2 id="orga29a242"><span class="section-number-2">3.</span> Definitions</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgc95a7a1" class="outline-3">
-<h3 id="orgc95a7a1"><span class="section-number-3">3.1.</span> Neural Network</h3>
+<div id="outline-container-org07b8fbd" class="outline-3">
+<h3 id="org07b8fbd"><span class="section-number-3">3.1.</span> Neural Network</h3>
 </div>
 
 
 
-<div id="outline-container-orgaff30ee" class="outline-3">
-<h3 id="orgaff30ee"><span class="section-number-3">3.2.</span> Two Layer MF Network</h3>
+<div id="outline-container-orgfe92435" class="outline-3">
+<h3 id="orgfe92435"><span class="section-number-3">3.2.</span> Two Layer MF Network</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 \[ \hat{\mathbf{y}}_{2-\text{layer}}(x ; W) = \frac{1}{n} \sum_{i = 1}^{n} w_{2,i}\sigma(\left\langle w_{1,i}, x \right\rangle) \]
 </p>
 </div>
 </div>
-<div id="outline-container-org963931f" class="outline-3">
-<h3 id="org963931f"><span class="section-number-3">3.3.</span> Infinite Width Representation of Two Layer Neural Network</h3>
+<div id="outline-container-org257efc5" class="outline-3">
+<h3 id="org257efc5"><span class="section-number-3">3.3.</span> Infinite Width Representation of Two Layer Neural Network</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Rather than use an average sum,
@@ -3091,8 +3091,8 @@ Use an average integral
 </p>
 </div>
 </div>
-<div id="outline-container-org43aee27" class="outline-3">
-<h3 id="org43aee27"><span class="section-number-3">3.4.</span> Number of Layers in a Neural Network</h3>
+<div id="outline-container-orga64ea41" class="outline-3">
+<h3 id="orga64ea41"><span class="section-number-3">3.4.</span> Number of Layers in a Neural Network</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 This number has been defined in two separate ways, either:
@@ -3111,20 +3111,20 @@ The number of weight matrices
 </ul>
 </div>
 </div>
-<div id="outline-container-org8b1d273" class="outline-3">
-<h3 id="org8b1d273"><span class="section-number-3">3.5.</span> Mean Field Limit</h3>
+<div id="outline-container-orgc0683c5" class="outline-3">
+<h3 id="orgc0683c5"><span class="section-number-3">3.5.</span> Mean Field Limit</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 The Mean Field Limit of a Neural Network is the limit of the emperical measure of the neural network parameters.
 </p>
 </div>
 </div>
-<div id="outline-container-org747072b" class="outline-3">
-<h3 id="org747072b"><span class="section-number-3">3.6.</span> Mean Field Deterministic Partial Differential Equations</h3>
+<div id="outline-container-orgfe888a0" class="outline-3">
+<h3 id="orgfe888a0"><span class="section-number-3">3.6.</span> Mean Field Deterministic Partial Differential Equations</h3>
 </div>
 </div>
-<div id="outline-container-org1e3b280" class="outline-2">
-<h2 id="org1e3b280"><span class="section-number-2">4.</span> Regimes</h2>
+<div id="outline-container-orgbc03ce1" class="outline-2">
+<h2 id="orgbc03ce1"><span class="section-number-2">4.</span> Regimes</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 We care about the following parameters,
@@ -3188,8 +3188,8 @@ Each data point is visited once
 MF-Scalled networks perform feature learning due to nonlinear dynamics and weights moving away from initialization</li>
 </ul>
 </div>
-<div id="outline-container-org15b9276" class="outline-3">
-<h3 id="org15b9276"><span class="section-number-3">4.1.</span> Papers</h3>
+<div id="outline-container-org91fc31f" class="outline-3">
+<h3 id="org91fc31f"><span class="section-number-3">4.1.</span> Papers</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 <b>Emperical Work on MF Multilayer</b>
@@ -3232,8 +3232,8 @@ Eugene A Golikov, Dynamically stable infinite-width limits of neural classifiers
 </div>
 </div>
 </div>
-<div id="outline-container-org73f39a8" class="outline-2">
-<h2 id="org73f39a8"><span class="section-number-2">5.</span> MF Model Performance</h2>
+<div id="outline-container-org1e1ae4f" class="outline-2">
+<h2 id="org1e1ae4f"><span class="section-number-2">5.</span> MF Model Performance</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Ngu19 - Phan-Minh Nguyen, Mean field limit of the learning dynamics of multilayer neural networks, arXiv preprint
@@ -3241,8 +3241,8 @@ arXiv:1902.02880 (2019).
 </p>
 </div>
 </div>
-<div id="outline-container-org24e3e31" class="outline-2">
-<h2 id="org24e3e31"><span class="section-number-2">6.</span> Mean Field Analysis</h2>
+<div id="outline-container-org5f96f39" class="outline-2">
+<h2 id="org5f96f39"><span class="section-number-2">6.</span> Mean Field Analysis</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Mean-field theory studies the behavior of high-dimensional random models by employing a simpler model that approximated the original by averaging over degrees of freedom. In many papers, a common parameter to scale is the learning rate (hence the SGD iterations).
@@ -3296,28 +3296,28 @@ Mean-field theory studies the behavior of high-dimensional random models by empl
 Law of Large Numbers (Scaling \( 1 / N \))
 </p>
 </div>
-<div id="outline-container-org2cc7fd6" class="outline-3">
-<h3 id="org2cc7fd6"><span class="section-number-3">6.1.</span> \( 1 / N \)</h3>
+<div id="outline-container-org283bc69" class="outline-3">
+<h3 id="org283bc69"><span class="section-number-3">6.1.</span> \( 1 / N \)</h3>
 </div>
 
-<div id="outline-container-orgf3e75f7" class="outline-3">
-<h3 id="orgf3e75f7"><span class="section-number-3">6.2.</span> \( 1 / \sqrt{N} \)</h3>
+<div id="outline-container-orgdb12944" class="outline-3">
+<h3 id="orgdb12944"><span class="section-number-3">6.2.</span> \( 1 / \sqrt{N} \)</h3>
 </div>
 </div>
-<div id="outline-container-org7a975f8" class="outline-2">
-<h2 id="org7a975f8"><span class="section-number-2">7.</span> Neuronal Embedding</h2>
-</div>
-
-<div id="outline-container-orgbce1e92" class="outline-2">
-<h2 id="orgbce1e92"><span class="section-number-2">8.</span> IID Initialization Cause Strong Degeneracy Effects</h2>
+<div id="outline-container-orgcd59de6" class="outline-2">
+<h2 id="orgcd59de6"><span class="section-number-2">7.</span> Neuronal Embedding</h2>
 </div>
 
-<div id="outline-container-orga151729" class="outline-2">
-<h2 id="orga151729"><span class="section-number-2">9.</span> Global Convergence</h2>
+<div id="outline-container-orgafc4400" class="outline-2">
+<h2 id="orgafc4400"><span class="section-number-2">8.</span> IID Initialization Cause Strong Degeneracy Effects</h2>
 </div>
 
-<div id="outline-container-orgb488154" class="outline-2">
-<h2 id="orgb488154"><span class="section-number-2">10.</span> References</h2>
+<div id="outline-container-org9a66839" class="outline-2">
+<h2 id="org9a66839"><span class="section-number-2">9.</span> Global Convergence</h2>
+</div>
+
+<div id="outline-container-org2f94b74" class="outline-2">
+<h2 id="org2f94b74"><span class="section-number-2">10.</span> References</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 (Cedric Gerbelot and Emanuele Troiani and Francesca Mignacco and Florent Krzakala and Lenka Zdeborova, 2023)

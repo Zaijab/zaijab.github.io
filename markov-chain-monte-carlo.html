@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:18 -->
+<!-- 2024-10-03 Thu 14:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Markov Chain Monte Carlo</title>
@@ -219,8 +219,8 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Markov Chain Monte Carlo</h1>
-<div id="outline-container-org53e2e92" class="outline-2">
-<h2 id="org53e2e92"><span class="section-number-2">1.</span> Problem Statement</h2>
+<div id="outline-container-org63c8e5e" class="outline-2">
+<h2 id="org63c8e5e"><span class="section-number-2">1.</span> Problem Statement</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Given
@@ -245,8 +245,8 @@ Answer
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf67613d" class="outline-2">
-<h2 id="orgf67613d"><span class="section-number-2">2.</span> Algorithm</h2>
+<div id="outline-container-orga09dd82" class="outline-2">
+<h2 id="orga09dd82"><span class="section-number-2">2.</span> Algorithm</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Select an initial value for \( x \), call it \( x_0 \).
@@ -277,8 +277,8 @@ If \( u > \alpha \) then reject the new choice of \( x^* \). Meaning \( x_i = x 
 </p>
 </div>
 </div>
-<div id="outline-container-org03f2b15" class="outline-2">
-<h2 id="org03f2b15"><span class="section-number-2">3.</span> Implementation</h2>
+<div id="outline-container-orge0ed70c" class="outline-2">
+<h2 id="orge0ed70c"><span class="section-number-2">3.</span> Implementation</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Tested on \[ f(x) = e^{\frac{-x^2}{2}} \]
@@ -312,27 +312,27 @@ plt.plot<span style="color: #000000;">(</span>np.arange<span style="color: #dd22
 </div>
 
 
-<div id="orga40ffc2" class="figure">
+<div id="org7324db9" class="figure">
 <p><img src="./.ob-jupyter/7ad8711e28d01db4a501ad1aab6914592929ded4.png" alt="7ad8711e28d01db4a501ad1aab6914592929ded4.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6d8c5d2" class="outline-2">
-<h2 id="org6d8c5d2"><span class="section-number-2">4.</span> Proof</h2>
+<div id="outline-container-orgf49e7c3" class="outline-2">
+<h2 id="orgf49e7c3"><span class="section-number-2">4.</span> Proof</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org6ad49e0" class="outline-3">
-<h3 id="org6ad49e0"><span class="section-number-3">4.1.</span> Aperiodic and Irreducible</h3>
+<div id="outline-container-org1595f6f" class="outline-3">
+<h3 id="org1595f6f"><span class="section-number-3">4.1.</span> Aperiodic and Irreducible</h3>
 <div class="outline-text-3" id="text-4-1">
-<div class="THEOREM" id="org1edd49b">
+<div class="THEOREM" id="org3645e4d">
 <p>
 An irreducible, aperiodic Markov chain has a unique stationary distribution if it exists.
 </p>
 
 </div>
 
-<div class="PROOF" id="org29cb8a1">
+<div class="PROOF" id="org067e504">
 <p>
 In the book, Theorem 4.3.3.
 </p>
@@ -340,10 +340,10 @@ In the book, Theorem 4.3.3.
 </div>
 </div>
 </div>
-<div id="outline-container-org7d05370" class="outline-3">
-<h3 id="org7d05370"><span class="section-number-3">4.2.</span> Detailed Balance</h3>
+<div id="outline-container-org0dd98aa" class="outline-3">
+<h3 id="org0dd98aa"><span class="section-number-3">4.2.</span> Detailed Balance</h3>
 <div class="outline-text-3" id="text-4-2">
-<div class="DEFINITION" id="org630db79">
+<div class="DEFINITION" id="org456aca5">
 <p>
 Suppose we have a Markov Chain with:
 </p>
@@ -366,7 +366,7 @@ Then \( \pi_i \) satisfies detailed balance with respect to the Markov Chain.
 
 </div>
 
-<div class="THEOREM" id="org55eb336">
+<div class="THEOREM" id="org4f4bdf5">
 <p>
 Suppose we have a Markov Chain with:
 </p>
@@ -381,7 +381,7 @@ Then \( \pi \) is a stationary distribution of the Markov Chain.
 
 </div>
 
-<div class="PROOF" id="orgf5c094f">
+<div class="PROOF" id="org461f238">
 \begin{align*}
 \forall j, \sum_{i} \pi_i P_{ij} = \sum_{i} \pi_j P_{ji} = \pi_j \sum_{i} P_{ji} = \pi_{j}
 \end{align*}
@@ -389,10 +389,10 @@ Then \( \pi \) is a stationary distribution of the Markov Chain.
 </div>
 </div>
 </div>
-<div id="outline-container-org4aff64f" class="outline-3">
-<h3 id="org4aff64f"><span class="section-number-3">4.3.</span> Proof</h3>
+<div id="outline-container-orgaef61ea" class="outline-3">
+<h3 id="orgaef61ea"><span class="section-number-3">4.3.</span> Proof</h3>
 <div class="outline-text-3" id="text-4-3">
-<div class="PROOF" id="orgeb5fc77">
+<div class="PROOF" id="org22de51a">
 <p>
 Let
 </p>
@@ -431,15 +431,15 @@ Thus, the Markov chain will converge to its unique stationary distribution \( \p
 </div>
 </div>
 </div>
-<div id="outline-container-org7d94f33" class="outline-2">
-<h2 id="org7d94f33"><span class="section-number-2">5.</span> Applications</h2>
+<div id="outline-container-org4fec9dd" class="outline-2">
+<h2 id="org4fec9dd"><span class="section-number-2">5.</span> Applications</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Monte Carlo Markov Chain has many applications.
 </p>
 </div>
-<div id="outline-container-org3a12be5" class="outline-3">
-<h3 id="org3a12be5"><span class="section-number-3">5.1.</span> Bayesian Inference</h3>
+<div id="outline-container-org5bc2628" class="outline-3">
+<h3 id="org5bc2628"><span class="section-number-3">5.1.</span> Bayesian Inference</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Suppose we would like to know how likely parameters \( \theta \) are in a model to data \( X \).
@@ -458,7 +458,7 @@ That is, suppose we are given data from some experiment, and the histogram looks
 </div>
 
 
-<div id="orge194880" class="figure">
+<div id="orgd5903d3" class="figure">
 <p><img src="./.ob-jupyter/0cef4b2d75734729f0e44393017fa22ab5a8bc95.png" alt="0cef4b2d75734729f0e44393017fa22ab5a8bc95.png" />
 </p>
 </div>
@@ -525,12 +525,12 @@ This approach allows for parameter estimation in models. My time with 'Ike Wai w
 </p>
 </div>
 </div>
-<div id="outline-container-org5ee6493" class="outline-3">
-<h3 id="org5ee6493"><span class="section-number-3">5.2.</span> Numerical Integration - How to calculate expectation and variance using Markov Chains</h3>
+<div id="outline-container-org7c29f05" class="outline-3">
+<h3 id="org7c29f05"><span class="section-number-3">5.2.</span> Numerical Integration - How to calculate expectation and variance using Markov Chains</h3>
 <div class="outline-text-3" id="text-5-2">
 </div>
-<div id="outline-container-orged16ac8" class="outline-4">
-<h4 id="orged16ac8"><span class="section-number-4">5.2.1.</span> Monte Carlo Integration</h4>
+<div id="outline-container-orga488416" class="outline-4">
+<h4 id="orga488416"><span class="section-number-4">5.2.1.</span> Monte Carlo Integration</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <p>
 One way to calculate an integral
@@ -585,8 +585,8 @@ Note the bounds of integration, we only proved this for a bounded domain of inte
 </p>
 </div>
 </div>
-<div id="outline-container-org196bd8f" class="outline-4">
-<h4 id="org196bd8f"><span class="section-number-4">5.2.2.</span> MCMC Integration</h4>
+<div id="outline-container-orgc74eec2" class="outline-4">
+<h4 id="orgc74eec2"><span class="section-number-4">5.2.2.</span> MCMC Integration</h4>
 <div class="outline-text-4" id="text-5-2-2">
 <p>
 Suppose we had an absolutely integrable function \( f \in L^1(\mathbb{R}) \).
@@ -662,15 +662,15 @@ np.mean<span style="color: #000000;">(</span>np.vectorize<span style="color: #dd
 </pre>
 
 
-<div id="orgf82b299" class="figure">
+<div id="orgb7c677a" class="figure">
 <p><img src="./.ob-jupyter/14fe7f583716aa4dd8e1e78669d42951caabe2ae.png" alt="14fe7f583716aa4dd8e1e78669d42951caabe2ae.png" />
 </p>
 </div>
 </div>
 </div>
 </div>
-<div id="outline-container-org700cce2" class="outline-3">
-<h3 id="org700cce2"><span class="section-number-3">5.3.</span> Sampling Points on a Cow</h3>
+<div id="outline-container-org34b0d4a" class="outline-3">
+<h3 id="org34b0d4a"><span class="section-number-3">5.3.</span> Sampling Points on a Cow</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 Here is a non-standard use of MCMC to sample points on a 3D model of a Cow.
@@ -690,8 +690,8 @@ Where \( ||d|| \) is the shortest distance from a point in \( \mathbb{R}^3 \) to
 </p>
 </div>
 </div>
-<div id="outline-container-orga72709a" class="outline-3">
-<h3 id="orga72709a"><span class="section-number-3">5.4.</span> Speeding Up Theorem Proving</h3>
+<div id="outline-container-orgb1f7606" class="outline-3">
+<h3 id="orgb1f7606"><span class="section-number-3">5.4.</span> Speeding Up Theorem Proving</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Here is a paper <a href="https://link.springer.com/chapter/10.1007/978-3-031-10769-6_33">Bayesian Ranking for Strategy Scheduling in Automated Theorem Provers</a>.
@@ -699,8 +699,8 @@ Here is a paper <a href="https://link.springer.com/chapter/10.1007/978-3-031-107
 </div>
 </div>
 </div>
-<div id="outline-container-org3340ddf" class="outline-2">
-<h2 id="org3340ddf"><span class="section-number-2">6.</span> References</h2>
+<div id="outline-container-orgdec417f" class="outline-2">
+<h2 id="orgdec417f"><span class="section-number-2">6.</span> References</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Ross, S. M. (1996). Stochastic processes. India: Wiley.

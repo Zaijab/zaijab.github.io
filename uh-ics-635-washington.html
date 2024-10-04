@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:18 -->
+<!-- 2024-10-03 Thu 14:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>UH ICS 635 Washington</title>
@@ -222,12 +222,12 @@
 <p>
 Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-e56ea4c5c6de">University of Hawaii at Manoa</a>.
 </p>
-<div id="outline-container-org5d9a2e8" class="outline-2">
-<h2 id="org5d9a2e8"><span class="section-number-2">1.</span> Homework 1 Machine Learning Introduction</h2>
+<div id="outline-container-org0e861b0" class="outline-2">
+<h2 id="org0e861b0"><span class="section-number-2">1.</span> Homework 1 Machine Learning Introduction</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga01e875" class="outline-3">
-<h3 id="orga01e875"><span class="section-number-3">1.1.</span> Model Classes</h3>
+<div id="outline-container-org3d40202" class="outline-3">
+<h3 id="org3d40202"><span class="section-number-3">1.1.</span> Model Classes</h3>
 <div class="outline-text-3" id="text-1-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -272,15 +272,15 @@ Class at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4920-bdf6-
 </table>
 </div>
 </div>
-<div id="outline-container-org51a44f8" class="outline-3">
-<h3 id="org51a44f8"><span class="section-number-3">1.2.</span> AUROC Curve</h3>
+<div id="outline-container-org95e571c" class="outline-3">
+<h3 id="org95e571c"><span class="section-number-3">1.2.</span> AUROC Curve</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 I don't know how much Python we are allowed to use in this problem specifically.
 I tried to avoid using Scikit-Learn's Confusion Matrix and ROC functions as to not trivialize the problem.
 </p>
 
-<table id="orgeae8f02" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org5d577c5" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -417,7 +417,7 @@ array([[1.        , 1.        ],
 </pre>
 
 
-<div id="org45ffdcd" class="figure">
+<div id="org2a20769" class="figure">
 <p><img src="./.ob-jupyter/e704da1873c15c18c892a6046f533ad398a1a1b4.png" alt="e704da1873c15c18c892a6046f533ad398a1a1b4.png" />
 </p>
 </div>
@@ -427,8 +427,8 @@ This sum is then \[ \text{AUC} = (0.5)(0.83333333) + (0.5)(1) = ​0.916666665 \
 </p>
 </div>
 </div>
-<div id="outline-container-org0db8bc0" class="outline-3">
-<h3 id="org0db8bc0"><span class="section-number-3">1.3.</span> Evaluation Metrics</h3>
+<div id="outline-container-org40f85db" class="outline-3">
+<h3 id="org40f85db"><span class="section-number-3">1.3.</span> Evaluation Metrics</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #005e8b;">data</span><span style="color: #000000;">[</span><span style="color: #3548cf;">"Threshold 0.5"</span><span style="color: #000000;">]</span> = <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span><span style="color: #3548cf;">"Probabilities"</span><span style="color: #dd22dd;">]</span> &gt;= 0.5<span style="color: #000000;">)</span>.astype<span style="color: #000000;">(</span><span style="color: #8f0075;">int</span><span style="color: #000000;">)</span>
@@ -517,8 +517,8 @@ data<span style="color: #000000;">[</span><span style="color: #dd22dd;">[</span>
 </tbody>
 </table>
 </div>
-<div id="outline-container-org06c632e" class="outline-4">
-<h4 id="org06c632e"><span class="section-number-4">1.3.1.</span> Accuracy</h4>
+<div id="outline-container-org8a0bb00" class="outline-4">
+<h4 id="org8a0bb00"><span class="section-number-4">1.3.1.</span> Accuracy</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_true<span style="color: #dd22dd;">]</span> == data<span style="color: #dd22dd;">[</span>y_pred<span style="color: #dd22dd;">]</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / data.shape<span style="color: #000000;">[</span>0<span style="color: #000000;">]</span>
@@ -530,8 +530,8 @@ data<span style="color: #000000;">[</span><span style="color: #dd22dd;">[</span>
 </pre>
 </div>
 </div>
-<div id="outline-container-org99f87e0" class="outline-4">
-<h4 id="org99f87e0"><span class="section-number-4">1.3.2.</span> Precision</h4>
+<div id="outline-container-orga79126d" class="outline-4">
+<h4 id="orga79126d"><span class="section-number-4">1.3.2.</span> Precision</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == 1<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == data<span style="color: #008899;">[</span>y_true<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_pred<span style="color: #dd22dd;">]</span> == 1<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span>
@@ -543,8 +543,8 @@ data<span style="color: #000000;">[</span><span style="color: #dd22dd;">[</span>
 </pre>
 </div>
 </div>
-<div id="outline-container-org1cff17c" class="outline-4">
-<h4 id="org1cff17c"><span class="section-number-4">1.3.3.</span> Recall</h4>
+<div id="outline-container-org63189c6" class="outline-4">
+<h4 id="org63189c6"><span class="section-number-4">1.3.3.</span> Recall</h4>
 <div class="outline-text-4" id="text-1-3-3">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == 1<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == data<span style="color: #008899;">[</span>y_true<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_true<span style="color: #dd22dd;">]</span> == 1<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span>
@@ -556,8 +556,8 @@ data<span style="color: #000000;">[</span><span style="color: #dd22dd;">[</span>
 </pre>
 </div>
 </div>
-<div id="outline-container-orgee65047" class="outline-4">
-<h4 id="orgee65047"><span class="section-number-4">1.3.4.</span> Specificity</h4>
+<div id="outline-container-orgf6d44ed" class="outline-4">
+<h4 id="orgf6d44ed"><span class="section-number-4">1.3.4.</span> Specificity</h4>
 <div class="outline-text-4" id="text-1-3-4">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #000000;">(</span><span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == 0<span style="color: #dd22dd;">)</span> &amp; <span style="color: #dd22dd;">(</span>data<span style="color: #008899;">[</span>y_pred<span style="color: #008899;">]</span> == data<span style="color: #008899;">[</span>y_true<span style="color: #008899;">]</span><span style="color: #dd22dd;">)</span><span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span> / <span style="color: #000000;">(</span>data<span style="color: #dd22dd;">[</span>y_true<span style="color: #dd22dd;">]</span> == 0<span style="color: #000000;">)</span>.<span style="color: #8f0075;">sum</span><span style="color: #000000;">()</span>
@@ -571,15 +571,15 @@ data<span style="color: #000000;">[</span><span style="color: #dd22dd;">[</span>
 </div>
 </div>
 </div>
-<div id="outline-container-org28a06d4" class="outline-3">
-<h3 id="org28a06d4"><span class="section-number-3">1.4.</span> Cross Validation Implementation</h3>
+<div id="outline-container-orge802967" class="outline-3">
+<h3 id="orge802967"><span class="section-number-3">1.4.</span> Cross Validation Implementation</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Executable in <b><a href="https://colab.research.google.com/drive/1eai6j9RLQPYS07Y289NLTJ80pkeuCwEr?usp=sharing">Colab</a></b>. Printed here for completeness of PDF.
 </p>
 </div>
-<div id="outline-container-org9525070" class="outline-4">
-<h4 id="org9525070"><span class="section-number-4">1.4.1.</span> A</h4>
+<div id="outline-container-orgbe09df7" class="outline-4">
+<h4 id="orgbe09df7"><span class="section-number-4">1.4.1.</span> A</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #531ab6;">def</span> <span style="color: #721045;">calculate_accuracy</span><span style="color: #000000;">(</span>y_true, y_pred<span style="color: #000000;">)</span>:
@@ -591,8 +591,8 @@ Executable in <b><a href="https://colab.research.google.com/drive/1eai6j9RLQPYS0
 </div>
 </div>
 </div>
-<div id="outline-container-org62a19fb" class="outline-4">
-<h4 id="org62a19fb"><span class="section-number-4">1.4.2.</span> B</h4>
+<div id="outline-container-org798d125" class="outline-4">
+<h4 id="org798d125"><span class="section-number-4">1.4.2.</span> B</h4>
 <div class="outline-text-4" id="text-1-4-2">
 <div class="org-src-container">
 <pre class="src src-python3"><span style="color: #531ab6;">def</span> <span style="color: #721045;">run_k_fold_cross_validation</span><span style="color: #000000;">(</span>X, y, k=10<span style="color: #000000;">)</span>:
@@ -619,8 +619,8 @@ Executable in <b><a href="https://colab.research.google.com/drive/1eai6j9RLQPYS0
 </div>
 </div>
 </div>
-<div id="outline-container-orged28f75" class="outline-2">
-<h2 id="orged28f75"><span class="section-number-2">2.</span> Homework 2 Python Machine Learning Libraries</h2>
+<div id="outline-container-orgb02fe6c" class="outline-2">
+<h2 id="orgb02fe6c"><span class="section-number-2">2.</span> Homework 2 Python Machine Learning Libraries</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 For this homework we are performing regression on the 1990 California Housing Market Data. We are allowed to use any packages we wish. The requirement seems to be that we must use the given (downsampled) training and testing data for the model.
@@ -669,7 +669,7 @@ Here is the model definition and MSE for standard linear regression.
 </pre>
 </div>
 
-<pre class="example" id="org41517bf">
+<pre class="example" id="orgfb16f11">
 Mean Squared Error:  0.5551574201817491
 </pre>
 
@@ -705,7 +705,7 @@ Here is the model definition and MSE for standard Ridge. This is linear regressi
 </pre>
 </div>
 
-<pre class="example" id="orgc5dba90">
+<pre class="example" id="org54d31dc">
 Mean Squared Error:  0.5551574201817491
 </pre>
 
@@ -741,7 +741,7 @@ Oddly enough, this model found the right value of <code>alpha</code> to be \( 0 
 </pre>
 </div>
 
-<pre class="example" id="orgdcfb29d">
+<pre class="example" id="org457e84f">
 Mean Squared Error:  0.6857290908739428
 </pre>
 
@@ -781,7 +781,7 @@ The error is higher, which is actually expected. <code>Lasso</code> tries to mak
 </pre>
 </div>
 
-<pre class="example" id="org86fd6bd">
+<pre class="example" id="org7e7b136">
 Mean Squared Error:  0.5594360369293698
 </pre>
 
@@ -817,7 +817,7 @@ The next model is the RANSAC algorithm. This algorithm uses a base estimator (Li
 </pre>
 </div>
 
-<pre class="example" id="orga0dfcc9">
+<pre class="example" id="org7cb203d">
 Mean Squared Error:  0.6165044886559775
 </pre>
 
@@ -860,7 +860,7 @@ I had high hopes for this one. But it had worse error than Linear Regression. Th
 Now, as is, the code does not run. The <code>SVR</code> model has a quadratic time complexity and has a lot of hyperparameters compared to the other models we have studied. However, the model does come with some time-tested defaults. This gives us the least mean squared error, and is my best performing model.
 </p>
 
-<pre class="example" id="org51790e7">
+<pre class="example" id="orgc33dfc6">
 Mean Squared Error:  0.34088671241221274
 </pre>
 
@@ -869,12 +869,12 @@ This model is saved in <b><a href="https://colab.research.google.com/drive/1vKYM
 </p>
 </div>
 </div>
-<div id="outline-container-org3403e9a" class="outline-2">
-<h2 id="org3403e9a"><span class="section-number-2">3.</span> Homework 3 Supervised Learning Algorithms</h2>
+<div id="outline-container-org11db950" class="outline-2">
+<h2 id="org11db950"><span class="section-number-2">3.</span> Homework 3 Supervised Learning Algorithms</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org643f2b1" class="outline-3">
-<h3 id="org643f2b1"><span class="section-number-3">3.1.</span> Question 1: Regularization</h3>
+<div id="outline-container-orga262744" class="outline-3">
+<h3 id="orga262744"><span class="section-number-3">3.1.</span> Question 1: Regularization</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The first parameter set:
@@ -897,8 +897,8 @@ Hence the first parameter set is likely to correspond to \( \lambda = 1 \) and t
 </p>
 </div>
 </div>
-<div id="outline-container-org3b9e928" class="outline-3">
-<h3 id="org3b9e928"><span class="section-number-3">3.2.</span> Question 2: K-Nearest Neighbors</h3>
+<div id="outline-container-org50df167" class="outline-3">
+<h3 id="org50df167"><span class="section-number-3">3.2.</span> Question 2: K-Nearest Neighbors</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Let us plot these points
@@ -921,21 +921,21 @@ plt.close<span style="color: #000000;">(</span><span style="color: #3548cf;">'al
 </pre>
 </div>
 
-<div id="orge73fc12" class="figure">
+<div id="org59f040f" class="figure">
 <p><img src="Plot.png" alt="Plot.png" />
 </p>
 </div>
 </div>
-<div id="outline-container-org285de06" class="outline-4">
-<h4 id="org285de06"><span class="section-number-4">3.2.1.</span> A</h4>
+<div id="outline-container-orgaa9d869" class="outline-4">
+<h4 id="orgaa9d869"><span class="section-number-4">3.2.1.</span> A</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 When \( k = 1 \) the red point \( (6,6) \) is close to class \( 1 \) (color yellow). 
 </p>
 </div>
 </div>
-<div id="outline-container-org37b4d88" class="outline-4">
-<h4 id="org37b4d88"><span class="section-number-4">3.2.2.</span> B</h4>
+<div id="outline-container-org90ac4f4" class="outline-4">
+<h4 id="org90ac4f4"><span class="section-number-4">3.2.2.</span> B</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 When \( k = 3 \) the red point \( (6,6) \) has one neighbor of class \( 1 \) (color yellow) and two neighbors of class \( 0 \) (color purple). Hence it is classified as class \( 0 \).
@@ -943,8 +943,8 @@ When \( k = 3 \) the red point \( (6,6) \) has one neighbor of class \( 1 \) (co
 </div>
 </div>
 </div>
-<div id="outline-container-org417b7a2" class="outline-3">
-<h3 id="org417b7a2"><span class="section-number-3">3.3.</span> Question 3: Decision Trees</h3>
+<div id="outline-container-orgd3ded02" class="outline-3">
+<h3 id="orgd3ded02"><span class="section-number-3">3.3.</span> Question 3: Decision Trees</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Here we wish to use information gain to predict if a self-driving airplane will crash. We have four boolean variables, hence we may calculate the information gain on specifying <code>Yes</code> or <code>No</code>. I will use the following abbreviations to make the formulae fit on the page. I will also place the information gain here for easy reference. In the following calculations I will only compute the conditional entropy.
@@ -1017,7 +1017,7 @@ The decision of information gain will be whichever feature has the lowest condit
 </p>
 </div>
 <ol class="org-ol">
-<li><a id="orgcffe82e"></a>Foggy?<br />
+<li><a id="org0376721"></a>Foggy?<br />
 <div class="outline-text-5" id="text-3-3-0-1">
 \begin{align}
 H(\text{W} \mid \text{F})
@@ -1039,7 +1039,7 @@ H_{\text{Total}}(\text{W} \mid \text{F})
 \end{align}
 </div>
 </li>
-<li><a id="org21f3243"></a>Excess Gasoline?<br />
+<li><a id="orge05ec08"></a>Excess Gasoline?<br />
 <div class="outline-text-5" id="text-3-3-0-2">
 \begin{align}
 H(\text{W} \mid \text{G})
@@ -1061,7 +1061,7 @@ H_{\text{Total}}(\text{W} \mid \text{G})
 \end{align}
 </div>
 </li>
-<li><a id="org5b65daa"></a>Runway Too Close?<br />
+<li><a id="org2e94234"></a>Runway Too Close?<br />
 <div class="outline-text-5" id="text-3-3-0-3">
 \begin{align}
 H(\text{W} \mid \text{C})
@@ -1083,7 +1083,7 @@ H_{\text{Total}}(\text{W} \mid \text{C})
 \end{align}
 </div>
 </li>
-<li><a id="orgae745f0"></a>Plane Too High?<br />
+<li><a id="org4b72087"></a>Plane Too High?<br />
 <div class="outline-text-5" id="text-3-3-0-4">
 \begin{align}
 H(\text{W} \mid \text{H})
@@ -1176,16 +1176,16 @@ Ask if <code>Foggy?</code> is <code>True</code>
 </li>
 </ol>
 </div>
-<div id="outline-container-org910a293" class="outline-3">
-<h3 id="org910a293"><span class="section-number-3">3.4.</span> Question 4: Support Vector Machines</h3>
+<div id="outline-container-orga0a73f7" class="outline-3">
+<h3 id="orga0a73f7"><span class="section-number-3">3.4.</span> Question 4: Support Vector Machines</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 \[ y = -\frac{7}{5}x + 7 \]
 </p>
 </div>
 </div>
-<div id="outline-container-org3cc59ee" class="outline-3">
-<h3 id="org3cc59ee"><span class="section-number-3">3.5.</span> Question 5: Naive Bayes Implementation</h3>
+<div id="outline-container-orgdcc8345" class="outline-3">
+<h3 id="orgdcc8345"><span class="section-number-3">3.5.</span> Question 5: Naive Bayes Implementation</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Answer in <b><a href="https://colab.research.google.com/drive/1jFcR61BPeFqWRPNUD_I7YjVQKogA805q?usp=sharing">Colab</a></b>.
@@ -1197,20 +1197,20 @@ Small note, we do not smooth all classes? I understand that if we do smoothing o
 </div>
 </div>
 </div>
-<div id="outline-container-orge49331e" class="outline-2">
-<h2 id="orge49331e"><span class="section-number-2">4.</span> Homework 4 Practical Issues</h2>
+<div id="outline-container-org8f98b28" class="outline-2">
+<h2 id="org8f98b28"><span class="section-number-2">4.</span> Homework 4 Practical Issues</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org6e73d6a" class="outline-3">
-<h3 id="org6e73d6a"><span class="section-number-3">4.1.</span> Question 1: Recommendation Systems</h3>
+<div id="outline-container-org12eb810" class="outline-3">
+<h3 id="org12eb810"><span class="section-number-3">4.1.</span> Question 1: Recommendation Systems</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Because we have a small number of user ratings, the only recommendation system that does not depend on the ratings are content-based recommendations.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb27f55a" class="outline-3">
-<h3 id="orgb27f55a"><span class="section-number-3">4.2.</span> Question 2: Effect of Tuning Parameters</h3>
+<div id="outline-container-org5654f55" class="outline-3">
+<h3 id="org5654f55"><span class="section-number-3">4.2.</span> Question 2: Effect of Tuning Parameters</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li><p>
@@ -1258,8 +1258,8 @@ Taking more principle components will result in more dimensions. Without looking
 </ul>
 </div>
 </div>
-<div id="outline-container-org9b5c97c" class="outline-3">
-<h3 id="org9b5c97c"><span class="section-number-3">4.3.</span> Question 3: Unsupervised Learning</h3>
+<div id="outline-container-org8040607" class="outline-3">
+<h3 id="org8040607"><span class="section-number-3">4.3.</span> Question 3: Unsupervised Learning</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Given the dataset 1,4,9,16,25. Because the data are just real numbers we only need to look that the distances from one point to the next. In the higher dimensional case we would need a matrix. <br />
@@ -1289,8 +1289,8 @@ When we have two clusters, they will be {1,4,9} and {16,25}.
 </p>
 </div>
 </div>
-<div id="outline-container-org0bdb209" class="outline-3">
-<h3 id="org0bdb209"><span class="section-number-3">4.4.</span> Question 4: Dimensionality Reduction</h3>
+<div id="outline-container-orgafdbc28" class="outline-3">
+<h3 id="orgafdbc28"><span class="section-number-3">4.4.</span> Question 4: Dimensionality Reduction</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 I will attempt to do as much of the formula on the notes as I can.
@@ -1300,7 +1300,7 @@ I will attempt to do as much of the formula on the notes as I can.
 Consider the following dataset,
 </p>
 
-<table id="org2a4e985" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgc08a05b" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
@@ -1476,20 +1476,20 @@ This creates the following two plots.
 </p>
 
 
-<div id="org530df42" class="figure">
+<div id="org3d2b9e0" class="figure">
 <p><img src="file:///home/zjabbar/code/practice/python/plot.png" alt="plot.png" />
 </p>
 </div>
 
 
-<div id="org843e90e" class="figure">
+<div id="orgad2ff8a" class="figure">
 <p><img src="file:///home/zjabbar/code/practice/python/plot_2.png" alt="plot_2.png" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org6a5f1a1" class="outline-3">
-<h3 id="org6a5f1a1"><span class="section-number-3">4.5.</span> Question 5: Feature Engineering</h3>
+<div id="outline-container-org08cb0d7" class="outline-3">
+<h3 id="org08cb0d7"><span class="section-number-3">4.5.</span> Question 5: Feature Engineering</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Code in <b><a href="https://colab.research.google.com/drive/1w-_0FKtkxwXbXs4deazHSu7daB6McYi0?usp=sharing">Colab</a></b>.
@@ -1559,95 +1559,95 @@ Accuracy: 0.813664596273292
 </div>
 </div>
 </div>
-<div id="outline-container-orgd4013f6" class="outline-2">
-<h2 id="orgd4013f6"><span class="section-number-2">5.</span> Final Project Presentation</h2>
+<div id="outline-container-org302c38a" class="outline-2">
+<h2 id="org302c38a"><span class="section-number-2">5.</span> Final Project Presentation</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org5a68847" class="outline-3">
-<h3 id="org5a68847"><span class="section-number-3">5.1.</span> UH Manoa Net Zero Goal</h3>
+<div id="outline-container-org451cef2" class="outline-3">
+<h3 id="org451cef2"><span class="section-number-3">5.1.</span> UH Manoa Net Zero Goal</h3>
 <div class="outline-text-3" id="text-5-1">
 
-<div id="org0663e43" class="figure">
+<div id="orgda7d1ce" class="figure">
 <p><img src="media/ige.png" alt="ige.png" width="800" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org3a568b0" class="outline-3">
-<h3 id="org3a568b0"><span class="section-number-3">5.2.</span> How Close?</h3>
+<div id="outline-container-org6701bda" class="outline-3">
+<h3 id="org6701bda"><span class="section-number-3">5.2.</span> How Close?</h3>
 <div class="outline-text-3" id="text-5-2">
 
-<div id="orgea0a3a7" class="figure">
+<div id="orgc7c8292" class="figure">
 <p><img src="media/net_zero.png" alt="net_zero.png" width="750" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org8fb15db" class="outline-3">
-<h3 id="org8fb15db"><span class="section-number-3">5.3.</span> Costs</h3>
+<div id="outline-container-orgeceae22" class="outline-3">
+<h3 id="orgeceae22"><span class="section-number-3">5.3.</span> Costs</h3>
 <div class="outline-text-3" id="text-5-3">
 
-<div id="org7895212" class="figure">
+<div id="orgba6d3aa" class="figure">
 <p><img src="media/bill.png" alt="bill.png" width="1000" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org554c625" class="outline-3">
-<h3 id="org554c625"><span class="section-number-3">5.4.</span> Power Prediction - Peaks</h3>
+<div id="outline-container-org110dacf" class="outline-3">
+<h3 id="org110dacf"><span class="section-number-3">5.4.</span> Power Prediction - Peaks</h3>
 <div class="outline-text-3" id="text-5-4">
 
-<div id="org43e7b34" class="figure">
+<div id="orgfdff4ee" class="figure">
 <p><img src="media/peaks.png" alt="peaks.png" width="750" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgda1152d" class="outline-3">
-<h3 id="orgda1152d"><span class="section-number-3">5.5.</span> Power Prediction - Solar</h3>
+<div id="outline-container-org32c10af" class="outline-3">
+<h3 id="org32c10af"><span class="section-number-3">5.5.</span> Power Prediction - Solar</h3>
 <div class="outline-text-3" id="text-5-5">
 
-<div id="org9701233" class="figure">
+<div id="orgb2c62c3" class="figure">
 <p><img src="media/solar.png" alt="solar.png" width="750" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org659faef" class="outline-3">
-<h3 id="org659faef"><span class="section-number-3">5.6.</span> The Dataset</h3>
+<div id="outline-container-orge10201d" class="outline-3">
+<h3 id="orge10201d"><span class="section-number-3">5.6.</span> The Dataset</h3>
 <div class="outline-text-3" id="text-5-6">
 
-<div id="org36c07fe" class="figure">
+<div id="org1d293f4" class="figure">
 <p><img src="media/kw.png" alt="kw.png" width="750" />
 </p>
 </div>
 
-<div id="org4880532" class="figure">
+<div id="orgb2a3c00" class="figure">
 <p><img src="media/data.png" alt="data.png" width="750" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org24e8bdf" class="outline-3">
-<h3 id="org24e8bdf"><span class="section-number-3">5.7.</span> Generating Predictions</h3>
+<div id="outline-container-org1c495e3" class="outline-3">
+<h3 id="org1c495e3"><span class="section-number-3">5.7.</span> Generating Predictions</h3>
 <div class="outline-text-3" id="text-5-7">
 
-<div id="org574e0ae" class="figure">
+<div id="org51e41fd" class="figure">
 <p><img src="media/predictions.png" alt="predictions.png" width="1200" />
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org041aa9f" class="outline-3">
-<h3 id="org041aa9f"><span class="section-number-3">5.8.</span> Thank You!</h3>
+<div id="outline-container-org05c58ea" class="outline-3">
+<h3 id="org05c58ea"><span class="section-number-3">5.8.</span> Thank You!</h3>
 </div>
 </div>
-<div id="outline-container-orgbc74aa6" class="outline-2">
-<h2 id="orgbc74aa6"><span class="section-number-2">6.</span> Homework 5</h2>
+<div id="outline-container-org17fcd78" class="outline-2">
+<h2 id="org17fcd78"><span class="section-number-2">6.</span> Homework 5</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgb77f0ad" class="outline-3">
-<h3 id="orgb77f0ad"><span class="section-number-3">6.1.</span> Problem 1: Practice Final Exam Questions</h3>
+<div id="outline-container-orgfee2903" class="outline-3">
+<h3 id="orgfee2903"><span class="section-number-3">6.1.</span> Problem 1: Practice Final Exam Questions</h3>
 <div class="outline-text-3" id="text-6-1">
 <ol class="org-ol">
 <li>C</li>
@@ -1665,8 +1665,8 @@ Accuracy: 0.813664596273292
 </ol>
 </div>
 </div>
-<div id="outline-container-org21965f4" class="outline-3">
-<h3 id="org21965f4"><span class="section-number-3">6.2.</span> Problem 2: Neural Network Output</h3>
+<div id="outline-container-org0e348d0" class="outline-3">
+<h3 id="org0e348d0"><span class="section-number-3">6.2.</span> Problem 2: Neural Network Output</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Starting with the leftmost layer.
@@ -1731,8 +1731,8 @@ The output layer is given by:
 </p>
 </div>
 </div>
-<div id="outline-container-org2636f14" class="outline-3">
-<h3 id="org2636f14"><span class="section-number-3">6.3.</span> Problem 3: Convolutional Neural Network</h3>
+<div id="outline-container-orgd402bf4" class="outline-3">
+<h3 id="orgd402bf4"><span class="section-number-3">6.3.</span> Problem 3: Convolutional Neural Network</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 First, we get the activation maps. These are 2x2 matrices and there are two of them.
@@ -1775,8 +1775,8 @@ The output layer is \( S(0.005 \cdot 1260 + -0.8 \cdot (-2520)) = S(2022.3) \sim
 </p>
 </div>
 </div>
-<div id="outline-container-org5a7188f" class="outline-3">
-<h3 id="org5a7188f"><span class="section-number-3">6.4.</span> Problem 4: TensorFlow / Keras Implementation</h3>
+<div id="outline-container-orgb8fe7b0" class="outline-3">
+<h3 id="orgb8fe7b0"><span class="section-number-3">6.4.</span> Problem 4: TensorFlow / Keras Implementation</h3>
 <div class="outline-text-3" id="text-6-4">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">get_neural_network</span><span style="color: #000000;">(</span>X_train, y_train<span style="color: #000000;">)</span>:
@@ -1812,12 +1812,12 @@ F1 score:  0.8860360195360195
 </div>
 </div>
 </div>
-<div id="outline-container-orge78ad75" class="outline-2">
-<h2 id="orge78ad75"><span class="section-number-2">7.</span> Final Project Paper</h2>
+<div id="outline-container-orgb40b7c4" class="outline-2">
+<h2 id="orgb40b7c4"><span class="section-number-2">7.</span> Final Project Paper</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org05c5439" class="outline-3">
-<h3 id="org05c5439"><span class="section-number-3">7.1.</span> Problem Introduction</h3>
+<div id="outline-container-org230c0cd" class="outline-3">
+<h3 id="org230c0cd"><span class="section-number-3">7.1.</span> Problem Introduction</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 In 2015, house bill 1509 was signed into law establishing a collective goal for The University of Hawaii "to become net-zero with respect to energy use, producing as much (renewable) energy as the system consumes across all campuses by January 1, 2035.". The University's plans are manifold, but fall into three main areas: energy management, efficiency and generation, and social initiatives. The scope of this paper is within the energy management side, to "continue to improve metering and submetering to provide detailed energy tracking.".
@@ -1832,8 +1832,8 @@ The goal of this paper is to propose a model which may forecast future power usa
 </p>
 </div>
 </div>
-<div id="outline-container-orgd226f61" class="outline-3">
-<h3 id="orgd226f61"><span class="section-number-3">7.2.</span> Related Work</h3>
+<div id="outline-container-org3546b11" class="outline-3">
+<h3 id="org3546b11"><span class="section-number-3">7.2.</span> Related Work</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 The power a building demands is based on the number of electrical devices and how much power they draw. For most devices, we do not expect user to constantly turn the devices on and off. We also expect that the devices tend to be activated in response to an external factor rather than being completely scheduled according to the time of day. This makes a model which only takes in the time of day and returns a point prediction of the amount of power drawn hard to justify. 
@@ -1848,8 +1848,8 @@ Sachin et al. analyzes short and long term energy consumption time series data u
 </p>
 </div>
 </div>
-<div id="outline-container-org36624ea" class="outline-3">
-<h3 id="org36624ea"><span class="section-number-3">7.3.</span> Dataset</h3>
+<div id="outline-container-org49e8347" class="outline-3">
+<h3 id="org49e8347"><span class="section-number-3">7.3.</span> Dataset</h3>
 <div class="outline-text-3" id="text-7-3">
 <p>
 Prior to 2019, all electrical meters were read manually by maintenance once a month whenever the team had the time to visit the meter. By funding from Elemental Excelerator, the University of Hawaii was able to hire Blue Pillar to install a digital metering system. For a while, data was requested from Blue Pillar and manually sent to ERDL via DropBox. Starting this year January 21 was when I was able to get access to the API and automatically download data for ERDL. 
@@ -2031,20 +2031,20 @@ We are also able to pull a metadata table of all possible historical data select
 </table>
 </div>
 </div>
-<div id="outline-container-org4fbdbed" class="outline-3">
-<h3 id="org4fbdbed"><span class="section-number-3">7.4.</span> Extra Features</h3>
+<div id="outline-container-org980f1c9" class="outline-3">
+<h3 id="org980f1c9"><span class="section-number-3">7.4.</span> Extra Features</h3>
 <div class="outline-text-3" id="text-7-4">
 <p>
 The data in the previous section is the one we would like to forecast. However, because we are given the date and time in which a reading occurs, we may use extra data to aid in our forecasting. We will include calendar metadata, such as what kind of day (holiday, school day, weekend) for a timestamp. We also have weather readings from the FROG buildings on campus. These include the temperature, global horizontal irradiance, and humidity.  
 </p>
 </div>
 </div>
-<div id="outline-container-org51b6893" class="outline-3">
-<h3 id="org51b6893"><span class="section-number-3">7.5.</span> Features and Preprocessing</h3>
+<div id="outline-container-org4907ff9" class="outline-3">
+<h3 id="org4907ff9"><span class="section-number-3">7.5.</span> Features and Preprocessing</h3>
 <div class="outline-text-3" id="text-7-5">
 </div>
-<div id="outline-container-orge2954c4" class="outline-4">
-<h4 id="orge2954c4"><span class="section-number-4">7.5.1.</span> Original Shape Structure</h4>
+<div id="outline-container-org1cb478f" class="outline-4">
+<h4 id="org1cb478f"><span class="section-number-4">7.5.1.</span> Original Shape Structure</h4>
 <div class="outline-text-4" id="text-7-5-1">
 <p>
 After removing much of the metadata related to the location of POST (<code>SiteID</code>, <code>FilterId</code>, etc) we are given a time series of the amount of demand (in kilowatt) at a time and date (down sampled to be in hourly resolution).
@@ -2077,8 +2077,8 @@ The rows are taken only on days in which all the meters give full data. Sometime
 </p>
 </div>
 </div>
-<div id="outline-container-orgcf78895" class="outline-4">
-<h4 id="orgcf78895"><span class="section-number-4">7.5.2.</span> Date and Time Engineering</h4>
+<div id="outline-container-org05776d2" class="outline-4">
+<h4 id="org05776d2"><span class="section-number-4">7.5.2.</span> Date and Time Engineering</h4>
 <div class="outline-text-4" id="text-7-5-2">
 <p>
 Date and time data are stored as <code>pd.Datetime</code> objects in Python and are not easily comparable in tensor form. One way to engineer dates and times is to assign a number like the Linux Epoch, but that will not convey our domain knowledge of the seasonality of yearly, monthly, and weekly trends. By the law of trichotomy, a single real number cannot be used to represent a cyclic pattern. Hence, given a <code>pd.Datetime</code> object, we represent its progress throughout the year and week by using two numbers which are the coordinates of a path along a circle. That is,
@@ -2101,8 +2101,8 @@ We will construct the same measure similarly for how far along the year we are.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf1f3d02" class="outline-4">
-<h4 id="orgf1f3d02"><span class="section-number-4">7.5.3.</span> Categorical Data</h4>
+<div id="outline-container-org43f8cda" class="outline-4">
+<h4 id="org43f8cda"><span class="section-number-4">7.5.3.</span> Categorical Data</h4>
 <div class="outline-text-4" id="text-7-5-3">
 <p>
 Domain knowledge indicates that holidays would have a different power demand behavior than school days. Hence, the model is also fed information of what type the current day is and what the next days type will be. The model would not know if one week has a three day weekend for example.
@@ -2113,8 +2113,8 @@ To represent categorical data, a standard approach is to use one-hot encoding. W
 </p>
 </div>
 </div>
-<div id="outline-container-org24c7092" class="outline-4">
-<h4 id="org24c7092"><span class="section-number-4">7.5.4.</span> Temperature Data</h4>
+<div id="outline-container-org7e4e939" class="outline-4">
+<h4 id="org7e4e939"><span class="section-number-4">7.5.4.</span> Temperature Data</h4>
 <div class="outline-text-4" id="text-7-5-4">
 <p>
 The FROG buildings on campus have sensors relating to weather data. This includes:
@@ -2131,8 +2131,8 @@ These will be included into the table.
 </p>
 </div>
 </div>
-<div id="outline-container-org170fcde" class="outline-4">
-<h4 id="org170fcde"><span class="section-number-4">7.5.5.</span> Standardization</h4>
+<div id="outline-container-orgd98bdf5" class="outline-4">
+<h4 id="orgd98bdf5"><span class="section-number-4">7.5.5.</span> Standardization</h4>
 <div class="outline-text-4" id="text-7-5-5">
 <p>
 We will standardize all of our input features according to the following:
@@ -2148,15 +2148,15 @@ Where \( \mu \) is the mean of the training dataset and \( \sigma \) is the stan
 </p>
 </div>
 </div>
-<div id="outline-container-orgf06fa88" class="outline-4">
-<h4 id="orgf06fa88"><span class="section-number-4">7.5.6.</span> Final Dataset</h4>
+<div id="outline-container-orgf6b97a5" class="outline-4">
+<h4 id="orgf6b97a5"><span class="section-number-4">7.5.6.</span> Final Dataset</h4>
 <div class="outline-text-4" id="text-7-5-6">
 <p>
 By appending all of the features we are left with the following dataset.
 </p>
 
 
-<div id="org469ac02" class="figure">
+<div id="org2129d69" class="figure">
 <p><img src="media/post_power_dataframe_all_features.png" alt="post_power_dataframe_all_features.png" />
 </p>
 </div>
@@ -2167,36 +2167,36 @@ After preprocessing the dataframe looked like this
 </div>
 </div>
 </div>
-<div id="outline-container-orgb5d06b0" class="outline-3">
-<h3 id="orgb5d06b0"><span class="section-number-3">7.6.</span> Models Considered</h3>
+<div id="outline-container-org674709e" class="outline-3">
+<h3 id="org674709e"><span class="section-number-3">7.6.</span> Models Considered</h3>
 <div class="outline-text-3" id="text-7-6">
 <p>
 This paper aims to further analyze the results in Sachin et. al. by considering different LSTM architectures. Rather than building one layer with 100 units, we look at the performance of nested hidden layers (each with 100 units) and of one large shallow LSTM layer. As a baseline and with further inspiration from Sachin et. al, we compare the LSTM architectures to the SARIMAX model. 
 </p>
 </div>
 </div>
-<div id="outline-container-orgaf12fe2" class="outline-3">
-<h3 id="orgaf12fe2"><span class="section-number-3">7.7.</span> Data Split</h3>
+<div id="outline-container-org8881d7e" class="outline-3">
+<h3 id="org8881d7e"><span class="section-number-3">7.7.</span> Data Split</h3>
 <div class="outline-text-3" id="text-7-7">
 <p>
 We split the data into train, validation, test with proportions 90 / 5 / 5. The goal is to forecast data in the future, we take the last 10 percent as the data to measure the effectiveness of the model. This is in contrast to an approach which takes the last week of each month as validation and testing data. The training data is in quite large proportion compared to the test and validation data due to the need to include all types of day types into the training set. A lot of papers use a split of 75 or 80 percent for training, however this results in <code>NA</code> values during the normalization <code>day_type</code> for the finals column. In the future, when we collect more data this issue can be avoided.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbc58483" class="outline-3">
-<h3 id="orgbc58483"><span class="section-number-3">7.8.</span> Hyperparameter Search Space &amp; Optimization</h3>
+<div id="outline-container-orgb56a1d9" class="outline-3">
+<h3 id="orgb56a1d9"><span class="section-number-3">7.8.</span> Hyperparameter Search Space &amp; Optimization</h3>
 <div class="outline-text-3" id="text-7-8">
 </div>
-<div id="outline-container-orgda3c7b7" class="outline-4">
-<h4 id="orgda3c7b7"><span class="section-number-4">7.8.1.</span> SARIMAX</h4>
+<div id="outline-container-org0585aac" class="outline-4">
+<h4 id="org0585aac"><span class="section-number-4">7.8.1.</span> SARIMAX</h4>
 <div class="outline-text-4" id="text-7-8-1">
 <p>
 The SARIMAX model depends on the order and seasonal order hyperparameters. These are tuples \( \text{Order} = (p,q,r), \text{Seasonal Order} = (P,Q,R,s) \) which we choose to keep \( s = 12 \) and let \( p,q,r,P,Q,R \) range over the values \( {0,1} \). In order to find the best orders, we run a for loop through every combination and pick out which order reduces the validation dataset mean squared error.
 </p>
 </div>
 </div>
-<div id="outline-container-orgad10ed7" class="outline-4">
-<h4 id="orgad10ed7"><span class="section-number-4">7.8.2.</span> LSTM - Deep &amp; Broad</h4>
+<div id="outline-container-org0b7f795" class="outline-4">
+<h4 id="org0b7f795"><span class="section-number-4">7.8.2.</span> LSTM - Deep &amp; Broad</h4>
 <div class="outline-text-4" id="text-7-8-2">
 <p>
 LSTM is a layer architecture in a larger artificial neural network. This paper explores the effectiveness of stacking multiple layers as opposed to a larger single layer. The hyper parameter for the deep architecture is the number of hidden layers. Where each hidden layer is composed of an LSTM layer with 100 units followed by a batch normalization layer. The broad LSTM model has the number of units in the first hidden LSTM layer. 
@@ -2204,8 +2204,8 @@ LSTM is a layer architecture in a larger artificial neural network. This paper e
 </div>
 </div>
 </div>
-<div id="outline-container-orgcf77639" class="outline-3">
-<h3 id="orgcf77639"><span class="section-number-3">7.9.</span> Evaluation on Test Set</h3>
+<div id="outline-container-org3565e1e" class="outline-3">
+<h3 id="org3565e1e"><span class="section-number-3">7.9.</span> Evaluation on Test Set</h3>
 <div class="outline-text-3" id="text-7-9">
 <p>
 The SARIMAX model has the mean squared error on the test set as: \( 3.6651201716716453 \). 
@@ -2357,16 +2357,16 @@ We may summarize the LSTM models in the following two tables.
 </table>
 </div>
 </div>
-<div id="outline-container-org81cb385" class="outline-3">
-<h3 id="org81cb385"><span class="section-number-3">7.10.</span> Explanation on Differences Between Train / Test Datasets</h3>
+<div id="outline-container-org50b89da" class="outline-3">
+<h3 id="org50b89da"><span class="section-number-3">7.10.</span> Explanation on Differences Between Train / Test Datasets</h3>
 <div class="outline-text-3" id="text-7-10">
 <p>
 In the LSTM models, the loss on the training and validation datasets would go below \( 0.05 \) . However, the training data would have a mean squared error score larger than \( 1 \). I believe this is due to the training set being farther away temporally than the validation dataset. Also we do not have a lot of data to justify many annual trends in the data. Had the training dataset been larger, the model could have had the capability to predict more accurately what would happen in the testing dataset. When looking at the training history, there is an upward drift of the validation loss while the training loss tends to zero. This is indicative of an overfitting regime.
 </p>
 </div>
 </div>
-<div id="outline-container-orgdbb5f90" class="outline-3">
-<h3 id="orgdbb5f90"><span class="section-number-3">7.11.</span> Discussion</h3>
+<div id="outline-container-org0b144e8" class="outline-3">
+<h3 id="org0b144e8"><span class="section-number-3">7.11.</span> Discussion</h3>
 <div class="outline-text-3" id="text-7-11">
 <p>
 In this paper, we have found several models based on the LSTM architecture which can beat out SARIMAX, a standard time series regression model. There is a lot of room for improvement and future work. As with most ANN architectures, many knobs and dials may be changed to see what sticks.
@@ -2389,8 +2389,8 @@ We may also re-attempt this process given some extra time to collect more data. 
 </p>
 </div>
 </div>
-<div id="outline-container-org074c576" class="outline-3">
-<h3 id="org074c576"><span class="section-number-3">7.12.</span> References</h3>
+<div id="outline-container-org326ac08" class="outline-3">
+<h3 id="org326ac08"><span class="section-number-3">7.12.</span> References</h3>
 <div class="outline-text-3" id="text-7-12">
 <p>
 A Bill for an act - capitol.hawaii.gov. (n.d.).

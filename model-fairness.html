@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:18 -->
+<!-- 2024-10-03 Thu 14:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Model Fairness</title>
@@ -219,8 +219,8 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">Model Fairness</h1>
-<div id="outline-container-org06bdcbd" class="outline-2">
-<h2 id="org06bdcbd"><span class="section-number-2">1.</span> Definitions of Fairness</h2>
+<div id="outline-container-orgbbabd02" class="outline-2">
+<h2 id="orgbbabd02"><span class="section-number-2">1.</span> Definitions of Fairness</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Consider a population about whom we want to make decisions.
@@ -231,8 +231,8 @@ Each person has a number of covariates which are known at decision time. We may 
 A binary decision \( d_i \) is made for each person.  
 </p>
 </div>
-<div id="outline-container-org7383977" class="outline-3">
-<h3 id="org7383977"><span class="section-number-3">1.1.</span> Statistical Parity</h3>
+<div id="outline-container-org4f1410c" class="outline-3">
+<h3 id="org4f1410c"><span class="section-number-3">1.1.</span> Statistical Parity</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Formula
@@ -244,59 +244,59 @@ Formula
 </div>
 </div>
 </div>
-<div id="outline-container-org029e2be" class="outline-2">
-<h2 id="org029e2be"><span class="section-number-2">2.</span> Code Structure</h2>
+<div id="outline-container-orgf675dbf" class="outline-2">
+<h2 id="orgf675dbf"><span class="section-number-2">2.</span> Code Structure</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Import -&gt; Visualize
        -&gt; Pre-process -&gt; Fit -&gt; Evaluate
 </p>
 </div>
-<div id="outline-container-org54949d0" class="outline-3">
-<h3 id="org54949d0"><span class="section-number-3">2.1.</span> Import Data</h3>
+<div id="outline-container-orgb3cba54" class="outline-3">
+<h3 id="orgb3cba54"><span class="section-number-3">2.1.</span> Import Data</h3>
 <div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-org096e9c7" class="outline-4">
-<h4 id="org096e9c7"><span class="section-number-4">2.1.1.</span> Diabetes Dataset</h4>
+<div id="outline-container-org4a02bcb" class="outline-4">
+<h4 id="org4a02bcb"><span class="section-number-4">2.1.1.</span> Diabetes Dataset</h4>
 </div>
 </div>
-<div id="outline-container-org8f311be" class="outline-3">
-<h3 id="org8f311be"><span class="section-number-3">2.2.</span> Pre process Data</h3>
+<div id="outline-container-org990b789" class="outline-3">
+<h3 id="org990b789"><span class="section-number-3">2.2.</span> Pre process Data</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-orga7b2b60" class="outline-4">
-<h4 id="orga7b2b60"><span class="section-number-4">2.2.1.</span> Diabetes Dataset</h4>
+<div id="outline-container-orgc05cb68" class="outline-4">
+<h4 id="orgc05cb68"><span class="section-number-4">2.2.1.</span> Diabetes Dataset</h4>
 <div class="outline-text-4" id="text-2-2-1">
 </div>
 <ol class="org-ol">
-<li><a id="org95d8378"></a>Remove NaN<br /></li>
+<li><a id="orga86d1b1"></a>Remove NaN<br /></li>
 
-<li><a id="org32523a7"></a><br /></li>
+<li><a id="org2fcc8ad"></a><br /></li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgaed4516" class="outline-3">
-<h3 id="orgaed4516"><span class="section-number-3">2.3.</span> Define Models</h3>
+<div id="outline-container-orge1e2285" class="outline-3">
+<h3 id="orge1e2285"><span class="section-number-3">2.3.</span> Define Models</h3>
 <div class="outline-text-3" id="text-2-3">
 </div>
-<div id="outline-container-org86dbebe" class="outline-4">
-<h4 id="org86dbebe"><span class="section-number-4">2.3.1.</span> Logistic Regression</h4>
+<div id="outline-container-org1bbf60d" class="outline-4">
+<h4 id="org1bbf60d"><span class="section-number-4">2.3.1.</span> Logistic Regression</h4>
 </div>
 
-<div id="outline-container-org55807cf" class="outline-4">
-<h4 id="org55807cf"><span class="section-number-4">2.3.2.</span> Decision Tree</h4>
+<div id="outline-container-orgbceacba" class="outline-4">
+<h4 id="orgbceacba"><span class="section-number-4">2.3.2.</span> Decision Tree</h4>
 </div>
 
-<div id="outline-container-org3023bd8" class="outline-4">
-<h4 id="org3023bd8"><span class="section-number-4">2.3.3.</span> Random Forest</h4>
+<div id="outline-container-org9ed904e" class="outline-4">
+<h4 id="org9ed904e"><span class="section-number-4">2.3.3.</span> Random Forest</h4>
 </div>
 </div>
-<div id="outline-container-orgbc9fbb5" class="outline-3">
-<h3 id="orgbc9fbb5"><span class="section-number-3">2.4.</span> Score</h3>
+<div id="outline-container-org89b6104" class="outline-3">
+<h3 id="org89b6104"><span class="section-number-3">2.4.</span> Score</h3>
 </div>
 </div>
-<div id="outline-container-orgc07f428" class="outline-2">
-<h2 id="orgc07f428"><span class="section-number-2">3.</span> Pipeline</h2>
+<div id="outline-container-org7ed836f" class="outline-2">
+<h2 id="org7ed836f"><span class="section-number-2">3.</span> Pipeline</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Import Data -&gt; Preprocess
