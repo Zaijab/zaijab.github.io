@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:26 -->
+<!-- 2024-10-09 Wed 14:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MATH 699 Gawlik Finite Element Exterior Calculus</title>
@@ -226,18 +226,18 @@ Reading course at <a href="university-of-hawaii-at-manoa.html#ID-2728f603-9489-4
 <p>
 <a href="file:///home/zjabbar/books/applied_math/Finite Element Exterior Calculus.pdf">FEEC Douglas Arnold</a>
 </p>
-<div id="outline-container-org6e48ceb" class="outline-2">
-<h2 id="org6e48ceb"><span class="section-number-2">1.</span> Presentation</h2>
+<div id="outline-container-org905291d" class="outline-2">
+<h2 id="org905291d"><span class="section-number-2">1.</span> Presentation</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgbdbea12" class="outline-3">
-<h3 id="orgbdbea12"><span class="section-number-3">1.1.</span> Motivating Problem</h3>
+<div id="outline-container-org6b283b8" class="outline-3">
+<h3 id="org6b283b8"><span class="section-number-3">1.1.</span> Motivating Problem</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Our problem setting is in the Lipschitz Polyhedral Domain \( \Omega \subseteq \mathbb{R}^{n} \) with its \( L^{2} \) de Rham complex (6.15) with domain complex (6.16) and Adjoint complex given by Theorem 6.5.
 </p>
 
-<div class="DEFINITION" id="orgf6f364c">
+<div class="DEFINITION" id="org3e36795">
 <p>
 \[ \begin{xy}
 \xymatrix{
@@ -254,7 +254,7 @@ Our problem setting is in the Lipschitz Polyhedral Domain \( \Omega \subseteq \m
 Recall that in \( \mathbb{R}^{3} \) this becomes the following:
 </p>
 
-<div class="DEFINITION" id="orgde298df">
+<div class="DEFINITION" id="orgedbb4e0">
 <p>
 \[ \begin{xy}
 \xymatrix{
@@ -271,7 +271,7 @@ Recall that in \( \mathbb{R}^{3} \) this becomes the following:
 For every \( k \) we may write down the mixed-Galerkin weak formulation of the Hodge-Laplace problem:
 </p>
 
-<div class="DEFINITION" id="org870f528">
+<div class="DEFINITION" id="orgcf4f69f">
 <p>
 Given \( f \in W^{k} \), find \( \sigma \in V^{k-1} \), \( u \in V^{k} \), and \( p \in \mathfrak{H}^{k} \) such that
 </p>
@@ -285,8 +285,8 @@ Given \( f \in W^{k} \), find \( \sigma \in V^{k-1} \), \( u \in V^{k} \), and \
 </div>
 </div>
 </div>
-<div id="outline-container-org0d5709d" class="outline-3">
-<h3 id="org0d5709d"><span class="section-number-3">1.2.</span> Motivating Solution</h3>
+<div id="outline-container-org015052b" class="outline-3">
+<h3 id="org015052b"><span class="section-number-3">1.2.</span> Motivating Solution</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Recall from section 5.2.2 that there were three assumptions used to guarantee that the mixed Galerkin method provides an accurate approximation of the true solution.
@@ -324,8 +324,8 @@ If we were dealing with continuous functions in the domain complex, one could wr
 </p>
 </div>
 </div>
-<div id="outline-container-org3c8eb12" class="outline-3">
-<h3 id="org3c8eb12"><span class="section-number-3">1.3.</span> Finite Element Space</h3>
+<div id="outline-container-org2c3afdb" class="outline-3">
+<h3 id="org2c3afdb"><span class="section-number-3">1.3.</span> Finite Element Space</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 We wish to define a finite element space. A finite element space consists of three parts:
@@ -348,14 +348,14 @@ Unisolvent means that for any set of numbers \( \{ a_{i} \in \mathbb{R} \}^{\dim
 </p>
 </div>
 </div>
-<div id="outline-container-orgf54cb65" class="outline-3">
-<h3 id="orgf54cb65"><span class="section-number-3">1.4.</span> Unisolvency</h3>
+<div id="outline-container-org260719c" class="outline-3">
+<h3 id="org260719c"><span class="section-number-3">1.4.</span> Unisolvency</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Unisolvent is a new word to me and is a big part of the final condition for finite element spaces. I will dive deeper into this definition.
 </p>
 
-<div class="DEFINITION" id="orgade357c">
+<div class="DEFINITION" id="orgafa320b">
 <p>
 A set of \( n \) functions, \( \{ f_{i} \}_{i = 1}^{n} \) is unisolvent (uniquely solvable) on a domain \( \Omega \) if the following matrix is invertible for any choice of \( n \) distinct points \( \left\{ x_{j} \right\}_{j = 1}^{n} \).  
 </p>
@@ -366,7 +366,7 @@ A set of \( n \) functions, \( \{ f_{i} \}_{i = 1}^{n} \) is unisolvent (uniquel
 
 </div>
 
-<div class="THEOREM" id="org39fcb35">
+<div class="THEOREM" id="orgf27d483">
 <p>
 Given \( n \) functions and \( n \) points, \( f_{i} \) and \( x_{j} \), the following are equivalent:
 </p>
@@ -385,14 +385,14 @@ Given \( n \) functions and \( n \) points, \( f_{i} \) and \( x_{j} \), the fol
 This last way of describing unisolvency tells us that the property has little to do with the actual collection of functions, instead it is a property of the vector space. This is because any two bases are related by an invertible matrix (the change of basis matrix). Hence, one basis is unisolvent if and only if any other basis is unisolvent.
 </p>
 
-<div class="THEOREM" id="org2ddef62">
+<div class="THEOREM" id="orgf4413dc">
 <p>
 \[ \psi_{i}(p) = p(x_{i}) \]
 </p>
 
 </div>
 
-<div class="THEOREM" id="org5f1487f">
+<div class="THEOREM" id="orgf3056a1">
 <p>
 Consider \( V([0,1]) = \left\{ ax^{2} + c \;\middle\vert\; a,c \in \mathbb{R} \right\} \). This space has dimension \( 2 \).
 </p>
@@ -403,7 +403,7 @@ This space is unisolvent on \( [0,1] \) but not on \( [-1,1] \).
 
 </div>
 
-<div class="THEOREM" id="org8eab4cb">
+<div class="THEOREM" id="org3a5b355">
 <p>
 Consider \( V([0,1]) = \left\{ ax^{2} + bx + c \;\middle\vert\; a,b,c \in \mathbb{R} \right\} \). This space has dimension \( 3 \).
 Consider the following three functionals,
@@ -442,8 +442,8 @@ We may fix this counter example by using the following three functionals,
 </div>
 </div>
 </div>
-<div id="outline-container-org03f4644" class="outline-3">
-<h3 id="org03f4644"><span class="section-number-3">1.5.</span> Shape Functions</h3>
+<div id="outline-container-org6bbb9ac" class="outline-3">
+<h3 id="org6bbb9ac"><span class="section-number-3">1.5.</span> Shape Functions</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 We will be using polynomials of degree less than \( r \) with inputs in \( \mathbb{R}^{n} \).
@@ -607,7 +607,7 @@ In total we have how many degrees of freedom?
 This is a general fact of these polynomial systems.
 </p>
 
-<div class="THEOREM" id="org64ae4f0">
+<div class="THEOREM" id="org941fec7">
 <p>
 The functionals,
 \[ u \mapsto \int_{f} (\tr_{f} u) q, q \in \mathcal{P}_{r - \dim(f) - 1}, f \in \Delta(T) \]
@@ -619,7 +619,7 @@ Form a basis for \( \mathcal{P}_{r}^{\ast}(T) \).
 
 </div>
 
-<div class="PROOF" id="orgc0429a5">
+<div class="PROOF" id="orgd47a76d">
 \begin{align}
 \sum_{d \geq k} \#\Delta_{d}(T) \dim(\mathcal{P}_{r - d - 1} \Lambda^{d}(T))
 &= \sum_{d \geq k} {n + 1 \choose d + 1} {r - d - 1 + d \choose r - d - 1 + k} {r - d - 1 + k \choose r - d - 1} \\
@@ -633,8 +633,8 @@ Form a basis for \( \mathcal{P}_{r}^{\ast}(T) \).
 </div>
 </div>
 </div>
-<div id="outline-container-org04c639e" class="outline-3">
-<h3 id="org04c639e"><span class="section-number-3">1.6.</span> Koszul Complex</h3>
+<div id="outline-container-orgf64d7e9" class="outline-3">
+<h3 id="orgf64d7e9"><span class="section-number-3">1.6.</span> Koszul Complex</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 For this complex we will use the affine structure of \( \mathbb{R}^{n} \) and identify points of the space with the vector field of the identity. 
@@ -713,14 +713,14 @@ In \( \mathbb{R}^{3} \),
 This gives us a better appreciation for the Koszul operator. Much in the same way that the differential of a function, \( d \), allows us to study \( \nabla \), \( \nabla \cdot \), \( \nabla \times \) depending on the context, we now have an operator which is multiplication by \( x \), curling by \( x \), or dotting by \( x \) in different contexts.
 </p>
 
-<div class="THEOREM" id="org3a4bf4e">
+<div class="THEOREM" id="org78390bf">
 <p>
 \[ \kappa(\omega \wedge \mu) = (\kappa \omega) \wedge \mu + (-1)^{k} \omega \wedge (\kappa \mu) \]
 </p>
 
 </div>
 
-<div class="PROOF" id="org8cc5c6f">
+<div class="PROOF" id="org284b547">
 \begin{align*}
 i_{v_1}(\omega\wedge\phi)(v_2,\dots,v_{k+l})
 &=(\omega\wedge\phi)(v_1,\dots,v_{k+l}) \\
@@ -733,7 +733,7 @@ i_{v_1}(\omega\wedge\phi)(v_2,\dots,v_{k+l})
 </div>
 
 
-<div class="THEOREM" id="org7310b55">
+<div class="THEOREM" id="org9c17020">
 <p>
 \[ \kappa(dx^{1} \wedge dx^{3}) = x_{1} dx^{3} - x_{3} dx^{1} \]
 </p>
@@ -753,14 +753,14 @@ Exterior differentiation, \( d \), decreases polynomial degree and increases for
 Hence, we can compose them to get back to the original space. The following theorem states that making a figure eight results in a scaled version of the identity.
 </p>
 
-<div class="THEOREM" id="orge044135">
+<div class="THEOREM" id="org021ad4c">
 <p>
 \[ (d \kappa + \kappa d) \omega = (k + r) \omega, \omega \in \mathcal{H}_{r}(\Lambda^{k}) \]
 </p>
 
 </div>
 
-<div class="PROOF" id="orga611e13">
+<div class="PROOF" id="orgca4586e">
 <p>
 By Induction on the form degree \( k \).
 </p>
@@ -834,7 +834,7 @@ Therefore,
 
 </div>
 
-<div class="PROOF" id="orgbb59baf">
+<div class="PROOF" id="org46e41ec">
 <p>
 By Cartan's Magic Formula,
 </p>
@@ -857,7 +857,7 @@ So \( \kappa d\omega + d \kappa \omega = \mathcal{L}_{\id}(\omega) = (r + k) \om
 
 </div>
 
-<div class="THEOREM" id="org01ffebb">
+<div class="THEOREM" id="orgf8d2cac">
 <p>
 The Polynomial de Rham and Koszul complexes are both exact.
 </p>
@@ -868,7 +868,7 @@ So if \( d \omega = 0 \) then \( \omega = d \eta \) for some \( \eta \).
 
 </div>
 
-<div class="PROOF" id="org47b58fc">
+<div class="PROOF" id="org88afece">
 <p>
 \[ \omega = (s + k)^{-1} (d \kappa + \kappa d) \omega = (s+k)^{-1} d \kappa \omega \]
 </p>
@@ -877,8 +877,8 @@ So if \( d \omega = 0 \) then \( \omega = d \eta \) for some \( \eta \).
 </div>
 </div>
 </div>
-<div id="outline-container-org02fc647" class="outline-2">
-<h2 id="org02fc647"><span class="section-number-2">2.</span> Simulations</h2>
+<div id="outline-container-org5dcb4a4" class="outline-2">
+<h2 id="org5dcb4a4"><span class="section-number-2">2.</span> Simulations</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 FENICS
@@ -889,8 +889,8 @@ FENICS
 </p>
 </div>
 </div>
-<div id="outline-container-org260efda" class="outline-2">
-<h2 id="org260efda"><span class="section-number-2">3.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orge12cc80" class="outline-2">
+<h2 id="orge12cc80"><span class="section-number-2">3.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Changed meeting time to twice (TR) a week for an hour.
@@ -898,56 +898,56 @@ Read chapters 1 and 2. Alan and Jack will present C2. Sam and I will present C3.
 </p>
 </div>
 </div>
-<div id="outline-container-org9422aca" class="outline-2">
-<h2 id="org9422aca"><span class="section-number-2">4.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgd61f6b3" class="outline-2">
+<h2 id="orgd61f6b3"><span class="section-number-2">4.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Basic Notions of Homological Algebra:
 </p>
 </div>
-<div id="outline-container-org819680b" class="outline-3">
-<h3 id="org819680b"><span class="section-number-3">4.1.</span> 2.1 Graded vector spaces, chain complexes, and differentials</h3>
+<div id="outline-container-orge306def" class="outline-3">
+<h3 id="orge306def"><span class="section-number-3">4.1.</span> 2.1 Graded vector spaces, chain complexes, and differentials</h3>
 </div>
 
 
 
-<div id="outline-container-org51be4c8" class="outline-3">
-<h3 id="org51be4c8"><span class="section-number-3">4.2.</span> 2.2</h3>
+<div id="outline-container-org08314bb" class="outline-3">
+<h3 id="org08314bb"><span class="section-number-3">4.2.</span> 2.2</h3>
 </div>
 
 
 
-<div id="outline-container-org18fe3db" class="outline-3">
-<h3 id="org18fe3db"><span class="section-number-3">4.3.</span> 2.3</h3>
+<div id="outline-container-orgb616fa2" class="outline-3">
+<h3 id="orgb616fa2"><span class="section-number-3">4.3.</span> 2.3</h3>
 </div>
 
-<div id="outline-container-org39a0680" class="outline-3">
-<h3 id="org39a0680"><span class="section-number-3">4.4.</span> 2.4</h3>
+<div id="outline-container-org45a9abc" class="outline-3">
+<h3 id="org45a9abc"><span class="section-number-3">4.4.</span> 2.4</h3>
 </div>
 
-<div id="outline-container-orga1501a6" class="outline-3">
-<h3 id="orga1501a6"><span class="section-number-3">4.5.</span> 2.5</h3>
+<div id="outline-container-org997a2a7" class="outline-3">
+<h3 id="org997a2a7"><span class="section-number-3">4.5.</span> 2.5</h3>
 </div>
 
-<div id="outline-container-org2bc2d97" class="outline-3">
-<h3 id="org2bc2d97"><span class="section-number-3">4.6.</span> 2.6</h3>
+<div id="outline-container-org21b6f50" class="outline-3">
+<h3 id="org21b6f50"><span class="section-number-3">4.6.</span> 2.6</h3>
 </div>
 </div>
-<div id="outline-container-org61cd0c7" class="outline-2">
-<h2 id="org61cd0c7"><span class="section-number-2">5.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgf428c2d" class="outline-2">
+<h2 id="orgf428c2d"><span class="section-number-2">5.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 </div>
-<div id="outline-container-org0938a07" class="outline-2">
-<h2 id="org0938a07"><span class="section-number-2">6.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-org82c5250" class="outline-2">
+<h2 id="org82c5250"><span class="section-number-2">6.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgb70845b" class="outline-3">
-<h3 id="orgb70845b"><span class="section-number-3">6.1.</span> Types of Operators</h3>
+<div id="outline-container-org5993111" class="outline-3">
+<h3 id="org5993111"><span class="section-number-3">6.1.</span> Types of Operators</h3>
 <div class="outline-text-3" id="text-6-1">
 </div>
-<div id="outline-container-orgecb7f74" class="outline-4">
-<h4 id="orgecb7f74"><span class="section-number-4">6.1.1.</span> Definition: Unbounded Operator</h4>
+<div id="outline-container-org2da8c80" class="outline-4">
+<h4 id="org2da8c80"><span class="section-number-4">6.1.1.</span> Definition: Unbounded Operator</h4>
 <div class="outline-text-4" id="text-6-1-1">
 <p>
 An <b>unbounded operator</b> between Hilbert spaces \( T \colon X \to Y \) is a partial linear function defined on a subspace \( D(T) \subseteq X \).
@@ -962,8 +962,8 @@ Every unbounded operator in this book will be densely defined, \( \overline{D(T)
 </p>
 </div>
 </div>
-<div id="outline-container-org848fc67" class="outline-4">
-<h4 id="org848fc67"><span class="section-number-4">6.1.2.</span> Definition: Equivalence of Unbounded Operators</h4>
+<div id="outline-container-orgbaf1805" class="outline-4">
+<h4 id="orgbaf1805"><span class="section-number-4">6.1.2.</span> Definition: Equivalence of Unbounded Operators</h4>
 <div class="outline-text-4" id="text-6-1-2">
 <p>
 Two unbounded operators \( T, S \) are equal if and only if
@@ -982,8 +982,8 @@ and
 </p>
 </div>
 </div>
-<div id="outline-container-org5aaa809" class="outline-4">
-<h4 id="org5aaa809"><span class="section-number-4">6.1.3.</span> Example: The Gradient</h4>
+<div id="outline-container-orgc7814bc" class="outline-4">
+<h4 id="orgc7814bc"><span class="section-number-4">6.1.3.</span> Example: The Gradient</h4>
 <div class="outline-text-4" id="text-6-1-3">
 <p>
 \[ X = L^{2}(\Omega), Y = L^{2}(\Omega) \]
@@ -1003,20 +1003,20 @@ We can also define it on the (again dense) subspace \( H^{1}_{0} \)
 </p>
 </div>
 </div>
-<div id="outline-container-org4934937" class="outline-4">
-<h4 id="org4934937"><span class="section-number-4">6.1.4.</span> Definition: Null Space of T</h4>
+<div id="outline-container-org8480157" class="outline-4">
+<h4 id="org8480157"><span class="section-number-4">6.1.4.</span> Definition: Null Space of T</h4>
 </div>
 
-<div id="outline-container-orge28531a" class="outline-4">
-<h4 id="orge28531a"><span class="section-number-4">6.1.5.</span> Definition: Range of T</h4>
+<div id="outline-container-org2d28d77" class="outline-4">
+<h4 id="org2d28d77"><span class="section-number-4">6.1.5.</span> Definition: Range of T</h4>
 </div>
 
-<div id="outline-container-org0928d0d" class="outline-4">
-<h4 id="org0928d0d"><span class="section-number-4">6.1.6.</span> Definition: Graph of T</h4>
+<div id="outline-container-orgdb2bda2" class="outline-4">
+<h4 id="orgdb2bda2"><span class="section-number-4">6.1.6.</span> Definition: Graph of T</h4>
 </div>
 
-<div id="outline-container-orgbf5b498" class="outline-4">
-<h4 id="orgbf5b498"><span class="section-number-4">6.1.7.</span> Definition: Graph Norm and Inner Product</h4>
+<div id="outline-container-org75d9e96" class="outline-4">
+<h4 id="org75d9e96"><span class="section-number-4">6.1.7.</span> Definition: Graph Norm and Inner Product</h4>
 <div class="outline-text-4" id="text-6-1-7">
 <p>
 \[ \left\langle v , w \right\rangle_{D(T)} := \left\langle v,w \right\rangle_{X} + \left\langle Tv, Tw \right\rangle_{Y} \]
@@ -1024,12 +1024,12 @@ We can also define it on the (again dense) subspace \( H^{1}_{0} \)
 </div>
 </div>
 </div>
-<div id="outline-container-orgf681027" class="outline-3">
-<h3 id="orgf681027"><span class="section-number-3">6.2.</span> Closed Operators</h3>
+<div id="outline-container-orge33c159" class="outline-3">
+<h3 id="orge33c159"><span class="section-number-3">6.2.</span> Closed Operators</h3>
 <div class="outline-text-3" id="text-6-2">
 </div>
-<div id="outline-container-org1744d01" class="outline-4">
-<h4 id="org1744d01"><span class="section-number-4">6.2.1.</span> Definition: Closed Operator</h4>
+<div id="outline-container-org0bd5f64" class="outline-4">
+<h4 id="org0bd5f64"><span class="section-number-4">6.2.1.</span> Definition: Closed Operator</h4>
 <div class="outline-text-4" id="text-6-2-1">
 <p>
 An operator \( T \) is closed if \( \Gamma(T) \) is a closed subset of \( X \times Y \).
@@ -1044,16 +1044,16 @@ Equivalently:
 </p>
 </div>
 </div>
-<div id="outline-container-orgfea0ffa" class="outline-4">
-<h4 id="orgfea0ffa"><span class="section-number-4">6.2.2.</span> Theorem: Unbounded operator is Closed iff Domain with Graph Norm is Hilbert Space</h4>
+<div id="outline-container-org7d440a0" class="outline-4">
+<h4 id="org7d440a0"><span class="section-number-4">6.2.2.</span> Theorem: Unbounded operator is Closed iff Domain with Graph Norm is Hilbert Space</h4>
 </div>
 </div>
-<div id="outline-container-org873142f" class="outline-3">
-<h3 id="org873142f"><span class="section-number-3">6.3.</span> Adjoint of an Unbounded Operator</h3>
+<div id="outline-container-org4f0f6d4" class="outline-3">
+<h3 id="org4f0f6d4"><span class="section-number-3">6.3.</span> Adjoint of an Unbounded Operator</h3>
 <div class="outline-text-3" id="text-6-3">
 </div>
-<div id="outline-container-orgabda672" class="outline-4">
-<h4 id="orgabda672"><span class="section-number-4">6.3.1.</span> Definition: Adjoint</h4>
+<div id="outline-container-orgc4910ca" class="outline-4">
+<h4 id="orgc4910ca"><span class="section-number-4">6.3.1.</span> Definition: Adjoint</h4>
 <div class="outline-text-4" id="text-6-3-1">
 <p>
 The adjoint of \( T \colon X \to Y \) is another function \( T^{\ast} \colon Y \to X \) such that
@@ -1064,8 +1064,8 @@ The adjoint of \( T \colon X \to Y \) is another function \( T^{\ast} \colon Y \
 </p>
 </div>
 </div>
-<div id="outline-container-org1f7c46e" class="outline-4">
-<h4 id="org1f7c46e"><span class="section-number-4">6.3.2.</span> Proposition: Orthogonal Complement of Graph is Rotated Graph of Adjoint</h4>
+<div id="outline-container-org86cc0ba" class="outline-4">
+<h4 id="org86cc0ba"><span class="section-number-4">6.3.2.</span> Proposition: Orthogonal Complement of Graph is Rotated Graph of Adjoint</h4>
 <div class="outline-text-4" id="text-6-3-2">
 <p>
 \[ \Gamma(T)^{\perp} = \tilde{\Gamma}(T^{\ast}) \]
@@ -1090,70 +1090,70 @@ That means for \( (v , Tv) \in \Gamma(T) \),
 </div>
 </div>
 </div>
-<div id="outline-container-orgf137ba5" class="outline-2">
-<h2 id="orgf137ba5"><span class="section-number-2">7.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-org54b44ea" class="outline-2">
+<h2 id="org54b44ea"><span class="section-number-2">7.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-7">
 </div>
 </div>
-<div id="outline-container-orgf9a4e09" class="outline-2">
-<h2 id="orgf9a4e09"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgb6f2916" class="outline-2">
+<h2 id="orgb6f2916"><span class="section-number-2">8.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-8">
 </div>
 </div>
-<div id="outline-container-org60d6329" class="outline-2">
-<h2 id="org60d6329"><span class="section-number-2">9.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgd34654c" class="outline-2">
+<h2 id="orgd34654c"><span class="section-number-2">9.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-9">
 </div>
 </div>
-<div id="outline-container-org72c9bb3" class="outline-2">
-<h2 id="org72c9bb3"><span class="section-number-2">10.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgbe6a3b7" class="outline-2">
+<h2 id="orgbe6a3b7"><span class="section-number-2">10.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-10">
 </div>
 </div>
-<div id="outline-container-org7177d91" class="outline-2">
-<h2 id="org7177d91"><span class="section-number-2">11.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgd05d7fe" class="outline-2">
+<h2 id="orgd05d7fe"><span class="section-number-2">11.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-11">
 </div>
 </div>
-<div id="outline-container-org6ce3772" class="outline-2">
-<h2 id="org6ce3772"><span class="section-number-2">12.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-org7a90e5e" class="outline-2">
+<h2 id="org7a90e5e"><span class="section-number-2">12.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-12">
 </div>
 </div>
-<div id="outline-container-orgf526f79" class="outline-2">
-<h2 id="orgf526f79"><span class="section-number-2">13.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-orgb6ca1e3" class="outline-2">
+<h2 id="orgb6ca1e3"><span class="section-number-2">13.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-13">
 </div>
 </div>
-<div id="outline-container-org38d0d50" class="outline-2">
-<h2 id="org38d0d50"><span class="section-number-2">14.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-org1f940e1" class="outline-2">
+<h2 id="org1f940e1"><span class="section-number-2">14.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-14">
 </div>
 </div>
-<div id="outline-container-orgd9c0ae8" class="outline-2">
-<h2 id="orgd9c0ae8"><span class="section-number-2">15.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-org81e7cd8" class="outline-2">
+<h2 id="org81e7cd8"><span class="section-number-2">15.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-15">
 </div>
 </div>
-<div id="outline-container-org8cebe40" class="outline-2">
-<h2 id="org8cebe40"><span class="section-number-2">16.</span> <span class="done DONE">DONE</span> MATH 699</h2>
+<div id="outline-container-org6c911b2" class="outline-2">
+<h2 id="org6c911b2"><span class="section-number-2">16.</span> <span class="done DONE">DONE</span> MATH 699</h2>
 <div class="outline-text-2" id="text-16">
 </div>
 </div>
-<div id="outline-container-org823b193" class="outline-2">
-<h2 id="org823b193"><span class="section-number-2">17.</span> <span class="done DONE">DONE</span> Hodge Decomposition</h2>
+<div id="outline-container-org00631dd" class="outline-2">
+<h2 id="org00631dd"><span class="section-number-2">17.</span> <span class="done DONE">DONE</span> Hodge Decomposition</h2>
 <div class="outline-text-2" id="text-17">
 </div>
-<div id="outline-container-org5ccf219" class="outline-3">
-<h3 id="org5ccf219"><span class="section-number-3">17.1.</span> Statement</h3>
+<div id="outline-container-org7e53a5d" class="outline-3">
+<h3 id="org7e53a5d"><span class="section-number-3">17.1.</span> Statement</h3>
 <div class="outline-text-3" id="text-17-1">
 <p>
 Every equivalence class in \( H^{k}(\Omega) \) contains one Harmonic form. 
 </p>
 </div>
 </div>
-<div id="outline-container-org8e21173" class="outline-3">
-<h3 id="org8e21173"><span class="section-number-3">17.2.</span> Solution</h3>
+<div id="outline-container-org0d0fb34" class="outline-3">
+<h3 id="org0d0fb34"><span class="section-number-3">17.2.</span> Solution</h3>
 <div class="outline-text-3" id="text-17-2">
 <p>
 \( \mathfrak{Z}^{k} = \mathcal{N}(d^{k}) \) 
@@ -1209,8 +1209,8 @@ This means, \( \mathcal{R}(\Delta) \subseteq (\mathfrak{H}^{k})^{\perp} \)
 </div>
 </div>
 </div>
-<div id="outline-container-org34b786a" class="outline-2">
-<h2 id="org34b786a"><span class="section-number-2">18.</span> <span class="done DONE">DONE</span> Hodge Laplacian in \( \mathbb{R}^{3} \)</h2>
+<div id="outline-container-org69c14f6" class="outline-2">
+<h2 id="org69c14f6"><span class="section-number-2">18.</span> <span class="done DONE">DONE</span> Hodge Laplacian in \( \mathbb{R}^{3} \)</h2>
 <div class="outline-text-2" id="text-18">
 <p>
 The de Rham complex for some open set \( \Omega \subseteq \mathbb{R}^{3} \) with Lipschitz boundary
@@ -1239,12 +1239,12 @@ The de Rham complex for some open set \( \Omega \subseteq \mathbb{R}^{3} \) with
 </p>
 </div>
 </div>
-<div id="outline-container-org2dd3dad" class="outline-2">
-<h2 id="org2dd3dad"><span class="section-number-2">19.</span> <span class="done DONE">DONE</span> Mixed Methods of Discretization</h2>
+<div id="outline-container-orgc22b2b6" class="outline-2">
+<h2 id="orgc22b2b6"><span class="section-number-2">19.</span> <span class="done DONE">DONE</span> Mixed Methods of Discretization</h2>
 <div class="outline-text-2" id="text-19">
 </div>
-<div id="outline-container-orgfc1868b" class="outline-3">
-<h3 id="orgfc1868b"><span class="section-number-3">19.1.</span> Mixed Weak Formulation</h3>
+<div id="outline-container-org5da225d" class="outline-3">
+<h3 id="org5da225d"><span class="section-number-3">19.1.</span> Mixed Weak Formulation</h3>
 <div class="outline-text-3" id="text-19-1">
 <p>
 <b>Given the Hilbert complexes</b>
@@ -1275,8 +1275,8 @@ Given \( f \in W^{k} \), find \( \sigma \in V^{k-1} \), \( u \in V^{k} \), and \
 \end{align}
 </div>
 </div>
-<div id="outline-container-orga7a290d" class="outline-3">
-<h3 id="orga7a290d"><span class="section-number-3">19.2.</span> Galerkin Method</h3>
+<div id="outline-container-org17f0a59" class="outline-3">
+<h3 id="org17f0a59"><span class="section-number-3">19.2.</span> Galerkin Method</h3>
 <div class="outline-text-3" id="text-19-2">
 <p>
 Galerkin Method looks at finite dimensional subspaces so that the linear equations produce systems of equations.
@@ -1371,14 +1371,14 @@ Given \( f \in W^{k} \), find \( \sigma_{h} \in V^{k-1}_{h} \), \( u_{h} \in V^{
 \end{align}
 </div>
 </div>
-<div id="outline-container-orgf2aaad1" class="outline-3">
-<h3 id="orgf2aaad1"><span class="section-number-3">19.3.</span> Gap Between \( \mathfrak{H} \) and \( \mathfrak{H}_{h} \)</h3>
+<div id="outline-container-orgb5a896f" class="outline-3">
+<h3 id="orgb5a896f"><span class="section-number-3">19.3.</span> Gap Between \( \mathfrak{H} \) and \( \mathfrak{H}_{h} \)</h3>
 <div class="outline-text-3" id="text-19-3">
 <p>
 From now on, assume anything with \( (\cdot)_{h} \) is a finite dimensional form of \( (\cdot) \) and that it satisfies the three nice properties in 5.2.2.  
 </p>
 
-<div class="THEOREM" id="org6a70de5">
+<div class="THEOREM" id="org9160cbd">
 <p>
 If \( \pi_{h} \) has satisfies the weak approximation property:
 </p>
@@ -1406,7 +1406,7 @@ This tells us that \( \mathfrak{H}^{k} \) and \( \mathfrak{H}^{k}_{h} \) are iso
 If \( \mathfrak{H}^{k} \) and \( \mathfrak{H}^{k}_{h} \) were not isomorphic (different dimensions) then the number of conditions would not match up to solve the problem.
 </p>
 
-<div class="PROOF" id="orgf5b986e">
+<div class="PROOF" id="org87ab165">
 <p>
 We know that projections are surjections, hence we need only show \( \pi_{h} \) is an injection.
 </p>
@@ -1455,7 +1455,7 @@ Thus \( \| q \| = 0 \).
 
 </div>
 
-<div class="THEOREM" id="orgc0f051f">
+<div class="THEOREM" id="org21723ce">
 <p>
 The "gap" between harmonic forms satisfies the following inequality:
 </p>
@@ -1471,7 +1471,7 @@ The "gap" between harmonic forms satisfies the following inequality:
 The <b>gap</b> can be calculated for two Hilbert spaces. It is \( 1 \) if they are orthogonal and \( 0 \) if they coincide. It's like a measure of the angle of two Hilbert spaces.  
 </p>
 
-<div class="PROOF" id="org7c79cae">
+<div class="PROOF" id="org99e5f40">
 <p>
 
 </p>
@@ -1521,8 +1521,8 @@ The gap is:
 </div>
 </div>
 </div>
-<div id="outline-container-orgf2763ed" class="outline-3">
-<h3 id="orgf2763ed"><span class="section-number-3">19.4.</span> The Discrete Poincaré Inequality and Stability</h3>
+<div id="outline-container-orgf1650dc" class="outline-3">
+<h3 id="orgf1650dc"><span class="section-number-3">19.4.</span> The Discrete Poincaré Inequality and Stability</h3>
 <div class="outline-text-3" id="text-19-4">
 <p>
 Last time we were given the stability estimate of the Hodge Laplacian problem for any closed Hilbert Complex. Writing this down in the discrete complex yields:
@@ -1533,7 +1533,7 @@ Last time we were given the stability estimate of the Hodge Laplacian problem fo
 </p>
 
 
-<div class="THEOREM" id="orgacd610a">
+<div class="THEOREM" id="org9a819bf">
 <p>
 Given a \( V \)-bounded cochain projection \( \pi_{h} \) onto finite dimensional subcomplex \( V_{h} \), then for any cochain orthogonal to the nullspace we have the Poincaré inequality
 </p>
@@ -1548,7 +1548,7 @@ Where \( c_{P} \) is the Poincaré constant (dependent on the problem formulatio
 
 </div>
 
-<div class="PROOF" id="orgc4d8517">
+<div class="PROOF" id="org494dcea">
 <p>
 Given \( v \in \mathfrak{Z}^{k, \perp}_{h} \cap V^{k}_{h} \), we have \( z \in \mathfrak{Z}^{k, \perp} \cap V^{k} \) such that \( dz = dv \).
 This is possible because \( dv \in \mathcal{R}(d) \simeq \mathcal{N}(d)^{\perp} \).
@@ -1592,7 +1592,7 @@ Thus,
 </div>
 
 
-<div class="THEOREM" id="orgdb2a578">
+<div class="THEOREM" id="org4683c34">
 <p>
 Given the same setup as previous, the inf-sup constant \( \gamma_{h} \) can be bounded below by a positive constant depending only on \( c_{P} \) and \( \| \pi_{h}^{k} \| \).
 </p>
@@ -1609,17 +1609,17 @@ The stability estimate
 </div>
 </div>
 </div>
-<div id="outline-container-orgd23f4e2" class="outline-3">
-<h3 id="orgd23f4e2"><span class="section-number-3">19.5.</span> Error Estimates</h3>
+<div id="outline-container-orgc8cb483" class="outline-3">
+<h3 id="orgc8cb483"><span class="section-number-3">19.5.</span> Error Estimates</h3>
 <div class="outline-text-3" id="text-19-5">
-<div class="THEOREM" id="org0db9ef5">
+<div class="THEOREM" id="orgefd0ddb">
 <p>
 
 </p>
 
 </div>
 
-<div class="THEOREM" id="org822b364">
+<div class="THEOREM" id="orgbc89bcb">
 <p>
 
 </p>
@@ -1628,93 +1628,93 @@ The stability estimate
 </div>
 </div>
 </div>
-<div id="outline-container-org19008e1" class="outline-2">
-<h2 id="org19008e1"><span class="section-number-2">20.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgae50d96" class="outline-2">
+<h2 id="orgae50d96"><span class="section-number-2">20.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-20">
 </div>
 </div>
-<div id="outline-container-orgbe07b95" class="outline-2">
-<h2 id="orgbe07b95"><span class="section-number-2">21.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgff0c869" class="outline-2">
+<h2 id="orgff0c869"><span class="section-number-2">21.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-21">
 </div>
 </div>
-<div id="outline-container-org1d30b00" class="outline-2">
-<h2 id="org1d30b00"><span class="section-number-2">22.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org8104e1f" class="outline-2">
+<h2 id="org8104e1f"><span class="section-number-2">22.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-22">
 </div>
 </div>
-<div id="outline-container-orga93f8c3" class="outline-2">
-<h2 id="orga93f8c3"><span class="section-number-2">23.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org3a61971" class="outline-2">
+<h2 id="org3a61971"><span class="section-number-2">23.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-23">
 </div>
 </div>
-<div id="outline-container-orgc9e8376" class="outline-2">
-<h2 id="orgc9e8376"><span class="section-number-2">24.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgf694ebf" class="outline-2">
+<h2 id="orgf694ebf"><span class="section-number-2">24.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-24">
 </div>
 </div>
-<div id="outline-container-org39592fa" class="outline-2">
-<h2 id="org39592fa"><span class="section-number-2">25.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org2c1599a" class="outline-2">
+<h2 id="org2c1599a"><span class="section-number-2">25.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-25">
 </div>
 </div>
-<div id="outline-container-org3b56f5b" class="outline-2">
-<h2 id="org3b56f5b"><span class="section-number-2">26.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgc996411" class="outline-2">
+<h2 id="orgc996411"><span class="section-number-2">26.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-26">
 </div>
 </div>
-<div id="outline-container-org9d93547" class="outline-2">
-<h2 id="org9d93547"><span class="section-number-2">27.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgbd67edf" class="outline-2">
+<h2 id="orgbd67edf"><span class="section-number-2">27.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-27">
 </div>
 </div>
-<div id="outline-container-org43f4720" class="outline-2">
-<h2 id="org43f4720"><span class="section-number-2">28.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org60626aa" class="outline-2">
+<h2 id="org60626aa"><span class="section-number-2">28.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-28">
 </div>
 </div>
-<div id="outline-container-org188201f" class="outline-2">
-<h2 id="org188201f"><span class="section-number-2">29.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgb7012e3" class="outline-2">
+<h2 id="orgb7012e3"><span class="section-number-2">29.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-29">
 </div>
 </div>
-<div id="outline-container-orgad8c90b" class="outline-2">
-<h2 id="orgad8c90b"><span class="section-number-2">30.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orga9fc1e6" class="outline-2">
+<h2 id="orga9fc1e6"><span class="section-number-2">30.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-30">
 </div>
 </div>
-<div id="outline-container-orged52b51" class="outline-2">
-<h2 id="orged52b51"><span class="section-number-2">31.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org48ac1cf" class="outline-2">
+<h2 id="org48ac1cf"><span class="section-number-2">31.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-31">
 </div>
 </div>
-<div id="outline-container-orgd876fa8" class="outline-2">
-<h2 id="orgd876fa8"><span class="section-number-2">32.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-orgc53886e" class="outline-2">
+<h2 id="orgc53886e"><span class="section-number-2">32.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-32">
 </div>
 </div>
-<div id="outline-container-org10db5ce" class="outline-2">
-<h2 id="org10db5ce"><span class="section-number-2">33.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org5f404d1" class="outline-2">
+<h2 id="org5f404d1"><span class="section-number-2">33.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-33">
 </div>
 </div>
-<div id="outline-container-org7332688" class="outline-2">
-<h2 id="org7332688"><span class="section-number-2">34.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org02dc78b" class="outline-2">
+<h2 id="org02dc78b"><span class="section-number-2">34.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-34">
 </div>
 </div>
-<div id="outline-container-org0131af5" class="outline-2">
-<h2 id="org0131af5"><span class="section-number-2">35.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org3cef3ce" class="outline-2">
+<h2 id="org3cef3ce"><span class="section-number-2">35.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-35">
 </div>
 </div>
-<div id="outline-container-orgbd65c37" class="outline-2">
-<h2 id="orgbd65c37"><span class="section-number-2">36.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org1075c89" class="outline-2">
+<h2 id="org1075c89"><span class="section-number-2">36.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-36">
 </div>
 </div>
-<div id="outline-container-orge5f1fec" class="outline-2">
-<h2 id="orge5f1fec"><span class="section-number-2">37.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
+<div id="outline-container-org3794ebc" class="outline-2">
+<h2 id="org3794ebc"><span class="section-number-2">37.</span> <span class="todo TODO">TODO</span> MATH 699</h2>
 <div class="outline-text-2" id="text-37">
 </div>
 </div>

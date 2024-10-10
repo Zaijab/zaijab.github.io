@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:27 -->
+<!-- 2024-10-09 Wed 14:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Category Theory</title>
@@ -223,9 +223,13 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org6059f3d">Category</a></li>
-<li><a href="#org77a9605">Functor</a></li>
-<li><a href="#org70b28ec">Natural Transformation</a></li>
+<li><a href="#org56da4c6">Category</a></li>
+<li><a href="#org75e591b">Functor</a></li>
+<li><a href="#org10e0676">Natural Transformation</a>
+<ul>
+<li><a href="#org334d3e6">Example 1: Double Dual</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -234,11 +238,11 @@ MathJax Experiment.
 </p>
 
 <p>
-Setup using usual .
+Setup using usual <a href="notation.html#ID-ebb26ba4-7130-4734-af01-21f711dd4fdd">notation</a>.
 </p>
-<div id="outline-container-org6059f3d" class="outline-2">
-<h2 id="org6059f3d">Category</h2>
-<div class="outline-text-2" id="text-org6059f3d">
+<div id="outline-container-org56da4c6" class="outline-2">
+<h2 id="org56da4c6">Category</h2>
+<div class="outline-text-2" id="text-org56da4c6">
 <p>
 A <b>category</b> \( \mathcal{C} \) consists of three mathematical entities:
 </p>
@@ -274,9 +278,9 @@ The \( \hom \) set satisfies the following properties:
 </p>
 </div>
 </div>
-<div id="outline-container-org77a9605" class="outline-2">
-<h2 id="org77a9605">Functor</h2>
-<div class="outline-text-2" id="text-org77a9605">
+<div id="outline-container-org75e591b" class="outline-2">
+<h2 id="org75e591b">Functor</h2>
+<div class="outline-text-2" id="text-org75e591b">
 <p>
 A <b>functor</b> \( \mathcal{F} \) from a category \( \mathcal{C} \) to \( \mathcal{D} \) denoted \( \mathcal{F} \colon \mathcal{C} \to \mathcal{D} \)
 </p>
@@ -292,9 +296,9 @@ is a map \( \text{ob}(\mathcal{C}) \to \text{ob}(\mathcal{D}) \) and \( \hom(A, 
 </ul>
 </div>
 </div>
-<div id="outline-container-org70b28ec" class="outline-2">
-<h2 id="org70b28ec">Natural Transformation</h2>
-<div class="outline-text-2" id="text-org70b28ec">
+<div id="outline-container-org10e0676" class="outline-2">
+<h2 id="org10e0676">Natural Transformation</h2>
+<div class="outline-text-2" id="text-org10e0676">
 <p>
 A <b>natural transformation</b> between two functors \( \mathcal{F} \) and \( \mathcal{G} \) is a system of morphisms
 </p>
@@ -309,6 +313,9 @@ A <b>natural transformation</b> between two functors \( \mathcal{F} \) and \( \m
 \mathcal{F}(Y) \ar[r]^{\eta(Y)} & \mathcal{G}(Y)
 } \end{xy} \]
 </p>
+</div>
+<div id="outline-container-org334d3e6" class="outline-3">
+<h3 id="org334d3e6">Example 1: Double Dual</h3>
 </div>
 </div>
 </div>

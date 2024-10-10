@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:27 -->
+<!-- 2024-10-09 Wed 14:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Diet</title>
@@ -231,7 +231,7 @@ Lunch: Pork Belly = 52
 
 <p>
 150g protein -
-   4 eggs = 4 * 6.3 = 
+   4 eggs = 4 * 6.3
    1 Cup milk = 8.32
    1 steak 24.6 * 2.75
    Protein Powder 30g
@@ -244,13 +244,22 @@ Calories: Current Bodyweight (140) x 10-12 = 1400 - 1680
 </p>
 
 <div class="org-src-container">
-<pre class="src src-jupyter-python"><span style="color: #595959;">#</span><span style="color: #595959;">4*6.3 + 8.32 + 24.6 * 2.75 + 30 + 26.7</span>
-150 - <span style="color: #000000;">(</span>18+8.32+78<span style="color: #000000;">)</span>
+<pre class="src src-python"><span style="color: #595959;">#</span><span style="color: #595959;">4*6.3 + 8.32 + 24.6 * 2.75 + 30 + 26.7</span>
+<span style="color: #005e8b;">powder</span> = 30
+<span style="color: #005e8b;">breakfast</span> = 4*6.3 + 8.32 + 2*2
+<span style="color: #005e8b;">lunch</span> = 0
+<span style="color: #005e8b;">dinner</span> = 0
+
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>f<span style="color: #3548cf;">'Breakfast </span>{breakfast}<span style="color: #3548cf;">'</span><span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>f<span style="color: #3548cf;">'Total </span>{powder + breakfast}<span style="color: #3548cf;">'</span><span style="color: #000000;">)</span>
+<span style="color: #8f0075;">print</span><span style="color: #000000;">(</span>f<span style="color: #3548cf;">'Necessary </span>{140 * 0.7}<span style="color: #3548cf;">'</span><span style="color: #000000;">)</span>
 </pre>
 </div>
 
 <pre class="example">
-45.68000000000001
+Breakfast 37.519999999999996
+Total 67.52
+Necessary 98.0
 </pre>
 
 

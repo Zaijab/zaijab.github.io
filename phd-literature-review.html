@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:27 -->
+<!-- 2024-10-09 Wed 14:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>PhD Literature Review</title>
@@ -222,8 +222,12 @@
 <p>
 My current work with Andrey Papov.
 </p>
-<div id="outline-container-org7f5dfb4" class="outline-2">
-<h2 id="org7f5dfb4"><span class="section-number-2">1.</span> Useful References</h2>
+
+<p>
+(Michaelson, Kristen and Popov, Andrey A and Zanetti, Renato, 2023)
+</p>
+<div id="outline-container-org2923130" class="outline-2">
+<h2 id="org2923130"><span class="section-number-2">1.</span> Useful References</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -253,20 +257,20 @@ My current work with Andrey Papov.
 </table>
 </div>
 </div>
-<div id="outline-container-orgcaef46d" class="outline-2">
-<h2 id="orgcaef46d"><span class="section-number-2">2.</span> 2024/08/29 - Brunton Data Driven Book Chapter</h2>
+<div id="outline-container-orgac0b5e1" class="outline-2">
+<h2 id="orgac0b5e1"><span class="section-number-2">2.</span> 2024/08/29 - Brunton Data Driven Book Chapter</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org7c0db6d" class="outline-3">
-<h3 id="org7c0db6d"><span class="section-number-3">2.1.</span> <span class="todo TODO">TODO</span> For This Time</h3>
+<div id="outline-container-org42b18fc" class="outline-3">
+<h3 id="org42b18fc"><span class="section-number-3">2.1.</span> <span class="todo TODO">TODO</span> For This Time</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Choose a reading from (Brunton, Steven L and Kutz, J Nathan, 2022) and talk about it.
 </p>
 </div>
 </div>
-<div id="outline-container-org3b66343" class="outline-3">
-<h3 id="org3b66343"><span class="section-number-3">2.2.</span> Work Done</h3>
+<div id="outline-container-org970e129" class="outline-3">
+<h3 id="org970e129"><span class="section-number-3">2.2.</span> Work Done</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 I read chapter 12, Reduced-order models, of Data Driven book (Brunton, Steven L and Kutz, J Nathan, 2022).
@@ -369,8 +373,8 @@ array([[6.91587004]])
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd120af1" class="outline-3">
-<h3 id="orgd120af1"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> For Next Time</h3>
+<div id="outline-container-orgec12714" class="outline-3">
+<h3 id="orgec12714"><span class="section-number-3">2.3.</span> <span class="todo TODO">TODO</span> For Next Time</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Goodfellow ML GANS
@@ -384,8 +388,8 @@ Figure out why gan discriminator can be discarded (it will have accuracy of 1/2)
 </div>
 </div>
 </div>
-<div id="outline-container-org978f8fa" class="outline-2">
-<h2 id="org978f8fa"><span class="section-number-2">3.</span> 2024/09/05 - GANs and the Useless Discriminator</h2>
+<div id="outline-container-orge619c8e" class="outline-2">
+<h2 id="orge619c8e"><span class="section-number-2">3.</span> 2024/09/05 - GANs and the Useless Discriminator</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Using information from Ian Goodfellow:
@@ -396,8 +400,8 @@ Using information from Ian Goodfellow:
 (Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua, 2014) - Original GAN Paper
 </p>
 </div>
-<div id="outline-container-orgb199d5a" class="outline-3">
-<h3 id="orgb199d5a"><span class="section-number-3">3.1.</span> Problem Statement</h3>
+<div id="outline-container-org2c9a5ff" class="outline-3">
+<h3 id="org2c9a5ff"><span class="section-number-3">3.1.</span> Problem Statement</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Suppose we have i.i.d. random variables \( X_{i} \) hailing from some distribution with density \( p_{X} \).
@@ -461,22 +465,22 @@ The loss will be
 </p>
 </div>
 </div>
-<div id="outline-container-org88e08a7" class="outline-3">
-<h3 id="org88e08a7"><span class="section-number-3">3.2.</span> GAN Proof</h3>
+<div id="outline-container-orgfb5f708" class="outline-3">
+<h3 id="orgfb5f708"><span class="section-number-3">3.2.</span> GAN Proof</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 To learn the generator's distribution \( p_{g} \) over data \( x \), we define a prior on input noise variables \( p_{z}(z) \), then represent a mapping to data space as \( G(z; \theta_{g}) \), where \( G \) is a differentiable function represented by a multilayer perceptron with parameters \( \theta_{g} \).
 </p>
 </div>
 </div>
-<div id="outline-container-orga1c0a5c" class="outline-3">
-<h3 id="orga1c0a5c"><span class="section-number-3">3.3.</span> GAN Proof</h3>
+<div id="outline-container-org06b057a" class="outline-3">
+<h3 id="org06b057a"><span class="section-number-3">3.3.</span> GAN Proof</h3>
 </div>
 
 
 
-<div id="outline-container-orgf3e7bfb" class="outline-3">
-<h3 id="orgf3e7bfb"><span class="section-number-3">3.4.</span> Problem Statement</h3>
+<div id="outline-container-org609c30f" class="outline-3">
+<h3 id="org609c30f"><span class="section-number-3">3.4.</span> Problem Statement</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Let
@@ -531,12 +535,12 @@ We now have the following minimax game,
 </p>
 </div>
 </div>
-<div id="outline-container-org21280ff" class="outline-3">
-<h3 id="org21280ff"><span class="section-number-3">3.5.</span> Loss Derivation</h3>
+<div id="outline-container-org79823e2" class="outline-3">
+<h3 id="org79823e2"><span class="section-number-3">3.5.</span> Loss Derivation</h3>
 </div>
 
-<div id="outline-container-org573916e" class="outline-3">
-<h3 id="org573916e"><span class="section-number-3">3.6.</span> GAN Proof</h3>
+<div id="outline-container-org0ccfcbe" class="outline-3">
+<h3 id="org0ccfcbe"><span class="section-number-3">3.6.</span> GAN Proof</h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 Theorem 1: For \( G \) fixed, the optimal discriminator \( D \) is
@@ -609,8 +613,8 @@ By substituting the our variables we see that,
 </p>
 </div>
 </div>
-<div id="outline-container-org362423d" class="outline-3">
-<h3 id="org362423d"><span class="section-number-3">3.7.</span> Theorem 1</h3>
+<div id="outline-container-org9fd3410" class="outline-3">
+<h3 id="org9fd3410"><span class="section-number-3">3.7.</span> Theorem 1</h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 We may now ask the question of what the minimal \( G \) looks like within the minimax problem given the optimal \( D \). First, introduce some notation,
@@ -640,8 +644,8 @@ C(G)
 \end{align*}
 </div>
 </div>
-<div id="outline-container-orgc0f8c73" class="outline-3">
-<h3 id="orgc0f8c73"><span class="section-number-3">3.8.</span> Literature Review</h3>
+<div id="outline-container-org143eff3" class="outline-3">
+<h3 id="org143eff3"><span class="section-number-3">3.8.</span> Literature Review</h3>
 <div class="outline-text-3" id="text-3-8">
 <p>
 Sundials Time integration
@@ -657,8 +661,8 @@ VODE
 </div>
 </div>
 </div>
-<div id="outline-container-orgd98987f" class="outline-2">
-<h2 id="orgd98987f"><span class="section-number-2">4.</span> 2024/09/12 - Generating Points on Lorenz Butterfly via GAN</h2>
+<div id="outline-container-orga6600ad" class="outline-2">
+<h2 id="orga6600ad"><span class="section-number-2">4.</span> 2024/09/12 - Generating Points on Lorenz Butterfly via GAN</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Need to see 5k batches to somewhat compare results.
@@ -677,20 +681,20 @@ Need to see 5k batches to somewhat compare results.
 </pre>
 </div>
 </div>
-<div id="outline-container-orgf0aef36" class="outline-3">
-<h3 id="orgf0aef36"><span class="section-number-3">4.1.</span> <span class="todo TODO">TODO</span> Implement Ball</h3>
+<div id="outline-container-org4f3a5a7" class="outline-3">
+<h3 id="org4f3a5a7"><span class="section-number-3">4.1.</span> <span class="todo TODO">TODO</span> Implement Ball</h3>
 </div>
 
-<div id="outline-container-org04331e0" class="outline-3">
-<h3 id="org04331e0"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> Readings  ADAM-W, Data Assimilation, Jaynes Probability</h3>
+<div id="outline-container-orgc28ebdc" class="outline-3">
+<h3 id="orgc28ebdc"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> Readings  ADAM-W, Data Assimilation, Jaynes Probability</h3>
 </div>
 
-<div id="outline-container-org55f6c20" class="outline-3">
-<h3 id="org55f6c20"><span class="section-number-3">4.3.</span> <span class="todo TODO">TODO</span> FUSION RIO 2025 deadline march 1st</h3>
+<div id="outline-container-org2335713" class="outline-3">
+<h3 id="org2335713"><span class="section-number-3">4.3.</span> <span class="todo TODO">TODO</span> FUSION RIO 2025 deadline march 1st</h3>
 </div>
 
-<div id="outline-container-orge7f6d99" class="outline-3">
-<h3 id="orge7f6d99"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> Change ADAM Optimizer Parameters</h3>
+<div id="outline-container-org4b1161f" class="outline-3">
+<h3 id="org4b1161f"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> Change ADAM Optimizer Parameters</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 beta<sub>1</sub> = 0.1
@@ -698,36 +702,36 @@ beta<sub>2</sub> = 0.99, 0.95
 </p>
 </div>
 </div>
-<div id="outline-container-org4902f5b" class="outline-3">
-<h3 id="org4902f5b"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> Implement Ikeda Map</h3>
+<div id="outline-container-org64b953f" class="outline-3">
+<h3 id="org64b953f"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> Implement Ikeda Map</h3>
 </div>
 
-<div id="outline-container-org9110b4f" class="outline-3">
-<h3 id="org9110b4f"><span class="section-number-3">4.6.</span> <span class="done DONE">DONE</span> Implement CyclicalLearningRate</h3>
+<div id="outline-container-org0d78f65" class="outline-3">
+<h3 id="org0d78f65"><span class="section-number-3">4.6.</span> <span class="done DONE">DONE</span> Implement CyclicalLearningRate</h3>
 </div>
 
-<div id="outline-container-orge63cdad" class="outline-3">
-<h3 id="orge63cdad"><span class="section-number-3">4.7.</span> <span class="done DONE">DONE</span> Make new data for every batch</h3>
+<div id="outline-container-orgb753347" class="outline-3">
+<h3 id="orgb753347"><span class="section-number-3">4.7.</span> <span class="done DONE">DONE</span> Make new data for every batch</h3>
 </div>
 
-<div id="outline-container-org26bbefa" class="outline-3">
-<h3 id="org26bbefa"><span class="section-number-3">4.8.</span> <span class="done DONE">DONE</span> Make noise<sub>dim</sub> larger (&gt; 5)</h3>
+<div id="outline-container-org54c6f44" class="outline-3">
+<h3 id="org54c6f44"><span class="section-number-3">4.8.</span> <span class="done DONE">DONE</span> Make noise<sub>dim</sub> larger (&gt; 5)</h3>
 </div>
 
-<div id="outline-container-org538fe2d" class="outline-3">
-<h3 id="org538fe2d"><span class="section-number-3">4.9.</span> <span class="done DONE">DONE</span> Ask hadari about "staple", ask about roles of cooperating faculty (meetings?)</h3>
+<div id="outline-container-orgec9ee02" class="outline-3">
+<h3 id="orgec9ee02"><span class="section-number-3">4.9.</span> <span class="done DONE">DONE</span> Ask hadari about "staple", ask about roles of cooperating faculty (meetings?)</h3>
 </div>
 </div>
-<div id="outline-container-org034dd73" class="outline-2">
-<h2 id="org034dd73"><span class="section-number-2">5.</span> 2024/09/19 - Data Assimilation Overview</h2>
+<div id="outline-container-org8d34ac9" class="outline-2">
+<h2 id="org8d34ac9"><span class="section-number-2">5.</span> 2024/09/19 - Data Assimilation Overview</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Went over some references to read about data assimilation
 </p>
 </div>
 </div>
-<div id="outline-container-org8e542d0" class="outline-2">
-<h2 id="org8e542d0"><span class="section-number-2">6.</span> 2024/09/24 - Data Assimilation Gatekeeping</h2>
+<div id="outline-container-orgb837a23" class="outline-2">
+<h2 id="orgb837a23"><span class="section-number-2">6.</span> 2024/09/24 - Data Assimilation Gatekeeping</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Kritka U Washington Former student of brunton and kutz
@@ -762,16 +766,16 @@ Post &alpha; Prior x Measurement (Gaussian-ish)
 </p>
 </div>
 </div>
-<div id="outline-container-org055146e" class="outline-2">
-<h2 id="org055146e"><span class="section-number-2">7.</span> 2024/10/03 -</h2>
+<div id="outline-container-orgb042e0a" class="outline-2">
+<h2 id="orgb042e0a"><span class="section-number-2">7.</span> 2024/10/03 -</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org94fdddb" class="outline-3">
-<h3 id="org94fdddb"><span class="section-number-3">7.1.</span> GAN with Invertibility</h3>
+<div id="outline-container-orga1f2a58" class="outline-3">
+<h3 id="orga1f2a58"><span class="section-number-3">7.1.</span> GAN with Invertibility</h3>
 </div>
 
-<div id="outline-container-orge777d59" class="outline-3">
-<h3 id="orge777d59"><span class="section-number-3">7.2.</span> Data Assimilation</h3>
+<div id="outline-container-orgb9a3fd6" class="outline-3">
+<h3 id="orgb9a3fd6"><span class="section-number-3">7.2.</span> Data Assimilation</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 Implement Lorenz 63
@@ -779,8 +783,8 @@ Call the measurement map the projection onto the 1st coordinate.
 Try to implement filter. Linear filter is implemented already.
 </p>
 </div>
-<div id="outline-container-orga77a47f" class="outline-4">
-<h4 id="orga77a47f"><span class="section-number-4">7.2.1.</span> Preamble</h4>
+<div id="outline-container-org9c8908f" class="outline-4">
+<h4 id="org9c8908f"><span class="section-number-4">7.2.1.</span> Preamble</h4>
 <div class="outline-text-4" id="text-7-2-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> pandas <span style="color: #531ab6;">as</span> pd
@@ -793,8 +797,8 @@ Try to implement filter. Linear filter is implemented already.
 </div>
 </div>
 </div>
-<div id="outline-container-orgb90d3d5" class="outline-4">
-<h4 id="orgb90d3d5"><span class="section-number-4">7.2.2.</span> Full Model - Lorenz63</h4>
+<div id="outline-container-org8cb1097" class="outline-4">
+<h4 id="org8cb1097"><span class="section-number-4">7.2.2.</span> Full Model - Lorenz63</h4>
 <div class="outline-text-4" id="text-7-2-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python">sp.init_printing<span style="color: #000000;">()</span>
@@ -933,8 +937,8 @@ _lorenz_jacobian
 </p>
 </div>
 </div>
-<div id="outline-container-orge7898b4" class="outline-4">
-<h4 id="orge7898b4"><span class="section-number-4">7.2.3.</span> Measurement</h4>
+<div id="outline-container-org3355099" class="outline-4">
+<h4 id="org3355099"><span class="section-number-4">7.2.3.</span> Measurement</h4>
 <div class="outline-text-4" id="text-7-2-3">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #005e8b;">lorenz_params</span> = <span style="color: #000000;">(</span>8/3, 28, 10<span style="color: #000000;">)</span>
@@ -1038,7 +1042,7 @@ _lorenz_jacobian
 (10, 10)
 </pre>
 
-<pre class="example" id="orgbb5b5ce">
+<pre class="example" id="org53241f2">
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
 Cell In [37], line 40
@@ -1054,8 +1058,8 @@ ValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with
 </pre>
 </div>
 </div>
-<div id="outline-container-org1567a14" class="outline-4">
-<h4 id="org1567a14"><span class="section-number-4">7.2.4.</span> SNEES (Some Statistical Measure)</h4>
+<div id="outline-container-org2f3e265" class="outline-4">
+<h4 id="org2f3e265"><span class="section-number-4">7.2.4.</span> SNEES (Some Statistical Measure)</h4>
 <div class="outline-text-4" id="text-7-2-4">
 <p>
 Calc Root mean square error
@@ -1088,6 +1092,10 @@ Get a better GAN then send as final draft
 Cartan for beginners
 Lee trilogy
 o neil diff geo
+</p>
+
+<p>
+Hello Brah
 </p>
 </div>
 </div>

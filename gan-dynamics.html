@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-03 Thu 14:27 -->
+<!-- 2024-10-09 Wed 14:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>GAN Dynamics</title>
@@ -218,8 +218,8 @@
 <body>
 <div id="content" class="content">
 <h1 class="title">GAN Dynamics</h1>
-<div id="outline-container-org6bde0cf" class="outline-2">
-<h2 id="org6bde0cf"><span class="section-number-2">1.</span> Preamble</h2>
+<div id="outline-container-orgeccd2b7" class="outline-2">
+<h2 id="orgeccd2b7"><span class="section-number-2">1.</span> Preamble</h2>
 <div class="outline-text-2" id="text-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> numpy <span style="color: #531ab6;">as</span> np
@@ -234,12 +234,12 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orge20cf3b" class="outline-2">
-<h2 id="orge20cf3b"><span class="section-number-2">2.</span> Datasets</h2>
+<div id="outline-container-org105d9f7" class="outline-2">
+<h2 id="org105d9f7"><span class="section-number-2">2.</span> Datasets</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgeee1e78" class="outline-3">
-<h3 id="orgeee1e78"><span class="section-number-3">2.1.</span> Lorenz</h3>
+<div id="outline-container-org6642c90" class="outline-3">
+<h3 id="org6642c90"><span class="section-number-3">2.1.</span> Lorenz</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python">sp.init_printing<span style="color: #000000;">()</span>
@@ -392,8 +392,8 @@ _lorenz_jacobian
 </div>
 </div>
 </div>
-<div id="outline-container-org215c7ea" class="outline-3">
-<h3 id="org215c7ea"><span class="section-number-3">2.2.</span> Ikeda</h3>
+<div id="outline-container-orgf2417c8" class="outline-3">
+<h3 id="orgf2417c8"><span class="section-number-3">2.2.</span> Ikeda</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">ikeda_attractor_generator</span><span style="color: #000000;">(</span>batch_size, batches<span style="color: #000000;">)</span>:
@@ -439,16 +439,16 @@ _lorenz_jacobian
 </pre>
 </div>
 </div>
-<div id="outline-container-org01daa49" class="outline-3">
-<h3 id="org01daa49"><span class="section-number-3">2.3.</span> Plotting</h3>
+<div id="outline-container-orgf5ebe7b" class="outline-3">
+<h3 id="orgf5ebe7b"><span class="section-number-3">2.3.</span> Plotting</h3>
 </div>
 </div>
-<div id="outline-container-org8980fad" class="outline-2">
-<h2 id="org8980fad"><span class="section-number-2">3.</span> GAN</h2>
+<div id="outline-container-orgdd326d7" class="outline-2">
+<h2 id="orgdd326d7"><span class="section-number-2">3.</span> GAN</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org0461caa" class="outline-3">
-<h3 id="org0461caa"><span class="section-number-3">3.1.</span> Generator</h3>
+<div id="outline-container-orgae3a140" class="outline-3">
+<h3 id="orgae3a140"><span class="section-number-3">3.1.</span> Generator</h3>
 <div class="outline-text-3" id="text-3-1">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">import</span> tensorflow <span style="color: #531ab6;">as</span> tf
@@ -542,8 +542,8 @@ _lorenz_jacobian
 </div>
 </div>
 </div>
-<div id="outline-container-org0caf5e0" class="outline-3">
-<h3 id="org0caf5e0"><span class="section-number-3">3.2.</span> Discriminator</h3>
+<div id="outline-container-org3e61009" class="outline-3">
+<h3 id="org3e61009"><span class="section-number-3">3.2.</span> Discriminator</h3>
 <div class="outline-text-3" id="text-3-2">
 <div class="org-src-container">
 <pre class="src src-jupyter-python">
@@ -568,8 +568,8 @@ _lorenz_jacobian
 </div>
 </div>
 </div>
-<div id="outline-container-orgea3ce2b" class="outline-3">
-<h3 id="orgea3ce2b"><span class="section-number-3">3.3.</span> GAN Training</h3>
+<div id="outline-container-org84224af" class="outline-3">
+<h3 id="org84224af"><span class="section-number-3">3.3.</span> GAN Training</h3>
 <div class="outline-text-3" id="text-3-3">
 <div class="org-src-container">
 <pre class="src src-jupyter-python"><span style="color: #531ab6;">def</span> <span style="color: #721045;">ikeda_attractor_gan_pipeline</span><span style="color: #000000;">()</span>:
@@ -689,7 +689,7 @@ _lorenz_jacobian
 </pre>
 
 
-<div id="org5fb88af" class="figure">
+<div id="org1f52cc4" class="figure">
 <p><img src="./.ob-jupyter/9659dfbc204a3368a3c7e972bb0b7b842ada0c09.png" alt="9659dfbc204a3368a3c7e972bb0b7b842ada0c09.png" />
 </p>
 </div>
@@ -697,7 +697,7 @@ _lorenz_jacobian
 664it [12:02,  1.09s/it]
 </pre>
 
-<pre class="example" id="org9e18a52">
+<pre class="example" id="orgc304a33">
 ---------------------------------------------------------------------------
 KeyboardInterrupt                         Traceback (most recent call last)
 Cell In [19], line 109
